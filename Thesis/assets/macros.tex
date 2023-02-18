@@ -1,0 +1,158 @@
+%%% Tento soubor obsahuje definice různých užitečných maker a~prostředí %%%
+%%% Další makra připisujte sem, ať nepřekáží v~ostatních souborech.     %%%
+
+%%% Drobné úpravy stylu
+
+% Tato makra přesvědčují mírně ošklivým trikem LaTeX, aby hlavičky kapitol
+% sázel příčetněji a~nevynechával nad nimi spoustu místa. Směle ignorujte.
+%\makeatletter
+%\def\@makechapterhead#1{
+%  {\parindent \z@ \raggedright \normalfont
+%   \Huge\bfseries \thechapter. #1
+%   \par\nobreak
+%   \vskip 20\p@
+%}}
+%\def\@makeschapterhead#1{
+%  {\parindent \z@ \raggedright \normalfont
+%   \Huge\bfseries #1
+%   \par\nobreak
+%   \vskip 20\p@
+%}}
+%\makeatother
+
+\setlength{\parskip}{0.3em}
+
+% Toto makro definuje kapitolu, která není očíslovaná, ale je uvedena v~obsahu.
+\def\chapwithtoc#1{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+% Trochu volnější nastavení dělení slov, než je default.
+\lefthyphenmin=2
+\righthyphenmin=2
+
+% Zapne černé "slimáky" na koncích řádků, které přetekly, abychom si
+% jich lépe všimli.
+\overfullrule=1mm
+
+%%% Makra pro definice, věty, tvrzení, příklady, ... (vyžaduje baliček amsthm)
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Věta}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Tvrzení}
+\newtheorem{corollary}[theorem]{Důsledek}
+\newtheorem*{proposition*}{Tvrzení}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definice}
+\newtheorem{example}[theorem]{Příklad}
+\newtheorem{remark}[theorem]{Poznámka}
+\newtheorem{convention}[theorem]{Úmluva}
+\newtheorem{denoting}[theorem]{Značení}
+
+%%% Prostředí pro důkazy
+
+\renewenvironment{proof}[1][]{
+  \par\medskip\noindent
+  \textit{\ifthenelse{\equal{#1}{}}
+  {Důkaz}
+  {#1}}.
+}{
+\hspace*{\fill}$\qedsymbol$\par\medskip
+}
+\newenvironment{solution}{
+  \par\medskip\noindent
+  \textit{Řešení}.
+}{
+\hspace*{\fill}$\qedsymbol$\par\medskip
+}
+
+%%% Prostředí pro sazbu kódu, případně vstupu/výstupu počítačových
+%%% programů. (Vyžaduje balíček fancyvrb -- fancy verbatim.)
+
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
+
+%%% Prostor reálných čísel, přirozených čísel, ...
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+%%% Užitečné operátory pro statistiku a~pravděpodobnost
+\DeclareMathOperator{\pr}{\textsf{P}}
+\DeclareMathOperator{\E}{\textsf{E}\,}
+\DeclareMathOperator{\var}{\textrm{var}}
+\DeclareMathOperator{\sd}{\textrm{sd}}
+
+%%% Goniometrické a cyklometrické funkce
+\DeclareMathOperator{\cotg}{cotg}
+\DeclareMathOperator{\arccotg}{arccotg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\tg}{tg}
+
+%%% Příkaz pro transpozici vektoru/matice
+\newcommand{\T}[1]{#1^\top}
+
+%%% Vychytávky pro matematiku
+\newcommand{\goto}{\rightarrow}
+\newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+\newcommand{\maon}[1]{o(n^{#1})}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
+\newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+
+\newcommand{\napprox}{\not\approx}
+\newcommand{\norm}[1]{|| #1 ||}
+\newcommand{\dotprod}[2]{\left(#1|#2\right)}
+\newcommand{\compl}[1]{#1^\complement}
+\newcommand{\map}[3]{#1:#2 \rightarrow #3}
+\newcommand{\mapto}[3]{#1:#2 \mapsto #3}
+\newcommand{\powset}[1]{\mathcal{P}\left(#1\right)}
+\newcommand{\solutions}[1]{\left[K=\left\{#1\right\}\right]}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\admid}{\;\middle\vert\;}
+\newcommand{\sizeof}[1]{\left|#1\right|}
+\newcommand{\dx}[1][]{
+   \ifthenelse{\equal{#1}{}}%
+      {\ensuremath{\,\mathrm{d}x}}%
+      {\ensuremath{\,\mathrm{d}#1}}%
+} % diferenciál
+
+\newcommand{\ZF}{\textsf{ZF}} % Zermelova-Fraenkelova teorie množin
+\newcommand{\PA}{\textsf{PA}} % Peanova aritmetika
+
+% Čítače
+\newcommand{\createcnt}[2][0]{\newcounter{#2}\setcounter{#2}{#1}}
+\newcommand{\printcnt}[1]{\arabic{#1}}
+\newcommand{\printnstepcnt}[1]{\stepcounter{#1}\arabic{#1}}
+
+%%% Vychytávky pro tabulky
+\newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+
+% Celá jména
+\newcommand{\name}[1]{\mbox{\textsc{#1}}}
+
+% Logické operátory
+\renewcommand{\implies}{\Rightarrow}
+\renewcommand{\impliedby}{\Leftarrow}
+\renewcommand{\iff}{\Leftrightarrow}
+
+% Cesty
+\newcommand{\chapterpath}[1]{components/ch#1}
+\newcommand{\sectionpath}[1]{components/ch#1/sections}
+\newcommand{\literaturepath}{components/literature}
+\newcommand{\appendixpath}{components/appendix}
+
+% TODO
+\newcommand{\todo}[1]{\textcolor{red}{(\noindent TODO: #1.)}}
+
+% Rightsided note
+\newcommand{\rightnote}[1]{\hspace*{\fill} $\triangleleft$ \textit{#1}}
+
+% Images
+\newcommand{\fullhd}{0.2}
+\newcommand{\normalipe}{0.8}
