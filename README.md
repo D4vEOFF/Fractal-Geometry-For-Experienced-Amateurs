@@ -1,2 +1,18 @@
-# Diploma-Thesis
-Diplomová práce s názvem: Fraktální geometrie pro (zdatné) amatéry. Psáno na MFF UK, KDM; program Učitelství matematiky a informatiky pro střední školy.
+# Obsah
+
+# Základní informace
+- **Název**: Fraktální geometrie pro (zdatné) amatéry
+- **Téma**: Fraktály
+- **Autor**: David Weber
+- **Studijní obor**: Učitelství matematiky pro střední školy se sdruženým studiem Učitelství informatiky pro střední školy
+- **Vedoucí práce**: RNDr. Martin Rmoutil, Ph.D.
+- **Škola**: Univerzita Karlova
+- **Katedra**: Katedra didaktiky matematiky
+- **Rok**: 2023/2024
+- **Psáno v**: TeX (PDFLaTeX)
+
+# Abstrakt (abstract)
+TODO: doplnit abstrakt (CZ/EN)
+
+# Obsah práce
+TODO: doplnit obsah práce
