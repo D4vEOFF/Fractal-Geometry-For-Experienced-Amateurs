@@ -62,9 +62,11 @@
 }{
 \hspace*{\fill}$\qedsymbol$\par\medskip
 }
-\newenvironment{solution}{
+\newenvironment{solution}[1][]{
   \par\medskip\noindent
-  \textit{Řešení}.
+  \textit{\ifthenelse{\equal{#1}{}}
+  {Řešení}
+  {#1}}.
 }{
 \hspace*{\fill}$\qedsymbol$\par\medskip
 }
