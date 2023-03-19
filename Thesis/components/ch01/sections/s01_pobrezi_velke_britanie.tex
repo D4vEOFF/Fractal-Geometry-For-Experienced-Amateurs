@@ -22,13 +22,33 @@ Nyní by nás mohlo napadnout, že pro zmenšující se $\varepsilon$, tj. $\var
 \begin{equation}\label{eq:aproximace_limita}
     L=\lim_{\varepsilon\to0}{\ell(\varepsilon)}.
 \end{equation}
-Jenže, bohužel, rovnost \eqref{eq:aproximace_limita} ve skutečnosti neplatí. Proč? Je třeba si uvědomit, že zde pracujeme s \emph{mapou}, která má určité \emph{měřítko}. Pokud bychom měli pobřeží na mapě s měřítkem $1\,:\,100\;000$ ($\varepsilon=10^5$), uvidíme méně detailů, než kdybychom jej zkoumali na mapě s měřítkem $1\,:\,10\;00$ ($\varepsilon=10^3$). (Viz obrázek \ref{fig:pobrezi_zoom}.)\par
+Jenže, bohužel, rovnost \eqref{eq:aproximace_limita} ve skutečnosti neplatí. Proč? Je třeba si uvědomit, že zde pracujeme s \emph{mapou}, která má určité \emph{měřítko}. Pokud bychom měli pobřeží na mapě s měřítkem $1\,:\,100\;000$ ($\varepsilon=10^5$), uvidíme méně detailů, než kdybychom jej zkoumali na mapě s měřítkem $1\,:\,1\;000$ ($\varepsilon=10^3$). (Viz obrázek \ref{fig:pobrezi_zoom}.)\par
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01_pobrezi_zoom.pdf}
     \caption{Část pobřeží od bodu $A$ v menším měřítku.}
     \label{fig:pobrezi_zoom}
 \end{figure}
-Nově odhalené detaily (menší poloostrůvky apod.) zde přispívají k celkové délce pobřeží $\ell(\varepsilon)$. Postupným zmenšováním měřítka mapy bychom tak odhalili další detaily. Naše původní idea tak selhává, neboť pro $\varepsilon\to0$ hodnota $\ell(\varepsilon)$ poroste nade všechny meze, tj. $\lim_{\varepsilon\to0}{\ell(\varepsilon)}=\infty$.
-
-\todo{Porovnání s Eukleidovskou geometrií}
+Nově odhalené detaily (menší poloostrůvky apod.) zde přispívají k celkové délce pobřeží $\ell(\varepsilon)$. Postupným zmenšováním měřítka mapy bychom tak odhalili další detaily. Naše původní idea tak selhává, neboť pro $\varepsilon\to0$ hodnota $\ell(\varepsilon)$ poroste nade všechny meze, tj. $\lim_{\varepsilon\to0}{\ell(\varepsilon)}=\infty$.\par
+Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za Eukleidovskou geometrií, tento problém zde nenastává. Např. kružnice v eukleidovské rovině $\mathbb{E}_2$ změnou měřítka žádné další detaily křivky neobjevíme (podobně u jiných geometrických útvarů, viz obrázky \ref{subfig:kruznice} a \ref{subfig:kruznice_zoom}). 
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{\subfigwidth}
+        \centering
+        \includegraphics[scale=\normalipe]{ch01_kruznice.pdf}
+        \caption{Kružnice v menším měřítku.}
+        \label{subfig:kruznice}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}{\subfigwidth}
+        \centering
+        \includegraphics[scale=\normalipe]{ch01_kruznice_zoom.pdf}
+        \caption{Část kružnice ve větším měřítku.}
+        \label{subfig:kruznice_zoom}
+    \end{subfigure}
+\end{figure}
+Díky tomu můžeme v případě počítání obvodu kružnice použít např. Archimédovu metodu (tj. postupnou aproximaci obvodu pomocí $n$-úhelníků). V konečném důsledku tak obdržíme limitu
+\begin{equation*}
+    O=\lim_{n\to\infty}{2\pi\cdot r\cdot\sin{\dfrac{\pi}{n}}},
+\end{equation*}
+která konverguje k $2\pi r$, kde $r$ je poloměr kružnice.\par
