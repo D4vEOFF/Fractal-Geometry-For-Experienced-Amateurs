@@ -15,3 +15,8 @@
 ## 4. 4. 2023
 - Opravena sekce *"Jak dlouhé je pobřeží Velké Británie?"* v kapitole č. 1
 - Rozepsána sekce *"Soběpodobnost"* v kapitole č. 1
+
+## 5. 4. 2023
+- Dokončena podsekce *"Kochova křivka"*
+- Rozepsána sekce *"Kochova vločka"*
+- Změněno číslování iterací u Kochovy křivky a vločky (nově od nuly)
