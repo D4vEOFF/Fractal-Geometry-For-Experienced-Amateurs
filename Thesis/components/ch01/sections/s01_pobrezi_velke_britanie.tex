@@ -48,7 +48,8 @@ Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidov
         \label{subfig:kruznice_zoom}
     \end{subfigure}
 \end{figure}
-Díky tomu můžeme v případě počítání obvodu kružnice použít např. Archimédovu metodu. Máme-li kružnici o poloměru $r>0$, pak jí můžeme vepsat libovolný pravidelný $n$-úhelník (viz obrázek \ref{subfig:archimedova_metoda}).
+Díky tomu můžeme v případě počítání obvodu kružnice použít např. Archimédovu metodu.\par
+Máme-li kružnici o poloměru $r>0$, pak jí můžeme vepsat libovolný pravidelný $n$-úhelník (viz obrázek \ref{subfig:archimedova_metoda}).
 \begin{figure}[h]
     \centering
     \begin{subfigure}{\subfigwidth}
@@ -67,9 +68,9 @@ Díky tomu můžeme v případě počítání obvodu kružnice použít např. A
     \caption{Princip Archimédovy metody.}
     \label{fig:princip_archimedovy_metody}
 \end{figure}
-Obvod pravidelného $n$-úhelníku is označíme $O_n$ a délku jeho strany $x$ (viz obrázek \ref{subfig:archimedova_metoda_cast_nuhelniku}). Užitím elementární goniometrie lze vypočítat délku strany
+Obvod pravidelného $n$-úhelníku is označíme $O_n$ a délku jeho strany $x$ (viz obrázek \ref{subfig:archimedova_metoda_cast_nuhelniku}). Tu jsme schopni stanovit užitím elementární goniometrie, tj.
 \begin{equation*}
-    x=2r\cdot\sin{\dfrac{\pi}{n}}
+    x=2r\cdot\sin{\dfrac{\pi}{n}},
 \end{equation*}
 a tedy obvod
 \begin{equation*}
@@ -84,5 +85,6 @@ Pro rostoucí $n$ bude obvod pravidelného $n$-úhelníku stále lépe aproximov
 \end{figure}
 Limitním přechodem (tj. pro $n\to\infty$) tak můžeme odvodit vzorec pro obvod kružnice:
 \begin{align*}
-    O&=\lim_{n\to\infty}{2rn\cdot\sin{\dfrac{\pi}{n}}}=2r\cdot\lim_{n\to\infty}{n\cdot\sin{\dfrac{\pi}{n}}}=2\pi r\cdot\lim_{n\to\infty}{\cdot\dfrac{\sin{\dfrac{\pi}{n}}}{\dfrac{\pi}{n}}}=2\pi r
+    O&=\lim_{n\to\infty}{2rn\cdot\sin{\dfrac{\pi}{n}}}=2r\cdot\lim_{n\to\infty}{n\cdot\sin{\dfrac{\pi}{n}}}=2\pi r\cdot\lim_{n\to\infty}{\cdot\dfrac{\sin{\dfrac{\pi}{n}}}{\dfrac{\pi}{n}}}=2\pi r.
 \end{align*}
+Idea aproximace pomocí ``zjemňování'' zde skutečně funguje a délka ve standardním pojetí tak dává smysl, jak bychom mohli očekávat. Křivka, kterou tvoří pobřeží, má však oproti kružnici jiný geometrický charakter. Délka pobřeží $\infty$, k níž Mandelbrot došel, tak dává smysl \emph{z geometrického pohledu}, avšak není moc užitečný.

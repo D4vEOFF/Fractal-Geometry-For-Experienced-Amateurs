@@ -5,20 +5,20 @@
 
 % Tato makra přesvědčují mírně ošklivým trikem LaTeX, aby hlavičky kapitol
 % sázel příčetněji a~nevynechával nad nimi spoustu místa. Směle ignorujte.
-%\makeatletter
-%\def\@makechapterhead#1{
+% \makeatletter
+% \def\@makechapterhead#1{
 %  {\parindent \z@ \raggedright \normalfont
 %   \Huge\bfseries \thechapter. #1
 %   \par\nobreak
 %   \vskip 20\p@
-%}}
-%\def\@makeschapterhead#1{
+% }}
+% \def\@makeschapterhead#1{
 %  {\parindent \z@ \raggedright \normalfont
 %   \Huge\bfseries #1
 %   \par\nobreak
 %   \vskip 20\p@
-%}}
-%\makeatother
+% }}
+% \makeatother
 
 \setlength{\parskip}{0.3em}
 
@@ -156,6 +156,8 @@
 \newcommand{\rightnote}[1]{\hspace*{\fill} $\triangleleft$ \textit{#1}}
 
 % Images
-\newcommand{\subfigwidth}{6cm}
-\newcommand{\fullhd}{0.2}
-\newcommand{\normalipe}{0.8}
+\newcommand{\subfigwidth}{6cm}        % šířka okénka pro "podobrázky"
+\newcommand{\wrappedfigwidth}{6cm}
+\newcommand{\fullhd}{0.2}             % měřítko původního Full HD obrázku
+\newcommand{\normalipe}{0.8}          % standardní měřítko IPE obrázku
+\newcommand{\fractalscale}{0.3}       % měřítko obrázku softwarem vygenerovaného fraktálu
