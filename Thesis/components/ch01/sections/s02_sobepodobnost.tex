@@ -29,10 +29,11 @@ Zkusme se nyní podívat na délku křivky. V první iteraci začínáme s úse�
 \end{equation*}
 Posloupnost $\{\ell_n\}_{n=1}^{\infty}$ je geometrická s kvocientem $4/3>1$, a tedy její limita je $\infty$. Kochova křivka má tak nekonečnou délku.
 
-\todo{Doplnit Cantorovo diskontinuum}
+\subsection{Sierpińského trojúhelník}\label{subsec:sierpinskeho_trojuhelnik}
+
 
 \subsection{Kochova vločka}\label{subsec:kochova_vlocka}
-Rozšiřující variantou Kochovy křivky je tzv. \emph{Kochova vločka}, která se skládá ze tří Kochových křivek. Rozdíl je zde v tom, že začínáme s rovnostranným trojúhelníkem o straně délky $1$. Na každou ze stran aplikujeme stejný proces, jako předtím, tj. odebereme prostřední třetinu, nahradíme ji dvěma na sebe navazujícími úsečkami délek $1/3$ a opakujeme pro každou nově vzniklou úsečku (viz obrázky \ref{fig:kochova_vlocka_dve_iterace} a \ref{fig:kochova_krivka_5iterace}).
+Rozšiřující variantou Kochovy křivky \ref{subsec:kochova_krivka} je tzv. \emph{Kochova vločka}, která se skládá ze tří Kochových křivek. Rozdíl je zde v tom, že začínáme s rovnostranným trojúhelníkem o straně délky $1$. Na každou ze stran aplikujeme stejný proces, jako předtím, tj. odebereme prostřední třetinu, nahradíme ji dvěma na sebe navazujícími úsečkami délek $1/3$ a opakujeme pro každou nově vzniklou úsečku (viz obrázky \ref{fig:kochova_vlocka_dve_iterace} a \ref{fig:kochova_krivka_5iterace}).
 \begin{figure}[h]
     \centering
     \begin{subfigure}{\subfigwidth}
@@ -65,10 +66,17 @@ a celkový obsah obrazce tedy bude
 \begin{equation*}
     S_1=\dfrac{\sqrt{3}}{4}+3\cdot\dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3}\right)^2.
 \end{equation*}
-V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich bude $3\cdot 4^n$ (při výpočtu však musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají ``na úsečkách'' z předešlé iterace, nikoliv té aktuální). Délka úseček, a tedy i stran nově vzniklých rovnostranných trojúhelníků, je $(1/3)^n$. Celkový obsah nově vzniklých trojúhelníků je tak
-\begin{equation*}\label{eq:obsah_novych_trojuhelniku}
+V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich bude $3\cdot 4^n$ (při výpočtu však musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají ``na úsečkách'' z předešlé iterace, nikoliv té aktuální, viz obrázek \ref{fig:kochova_vlocka_2iterace_nove_trojuhelniky}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=\fractalscale]{ch01_kochova_vlocka_2iterace_nove_trojuhelniky.pdf}
+    \caption{Nově vzniklé trojúhelníky v druhé iteraci.}
+    \label{fig:kochova_vlocka_2iterace_nove_trojuhelniky}
+\end{figure}
+Délka úseček, a tedy i stran nově vzniklých rovnostranných trojúhelníků, je $(1/3)^n$. Celkový obsah nově vzniklých trojúhelníků je tak
+\begin{equation}\label{eq:obsah_novych_trojuhelniku}
     3\cdot 4^{n-1}\cdot\dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3^n}\right)^2.
-\end{equation*}
+\end{equation}
 Pro další výpočet bude pro nás výhodné si výraz \eqref{eq:obsah_novych_trojuhelniku} upravit.
 \begin{equation*}
     3\cdot 4^{n-1}\cdot\dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3^n}\right)^2=\dfrac{3\sqrt{3}}{4^2}\cdot \dfrac{4^n}{3^{2n}}=\dfrac{3\sqrt{3}}{16}\left(\dfrac{4}{9}\right)^n.
@@ -77,13 +85,17 @@ Celkový obsah obrazce po $n$ iteracích lze tak vypočítat součtem obsahů v�
 \begin{equation*}
     S_n=\sum_{k=1}^n{S_k}=\overbrace{\dfrac{\sqrt{3}}{4}}^{S_0}+\sum_{k=1}^n{\dfrac{3\sqrt{3}}{16}\left(\dfrac{4}{9}\right)^k}.
 \end{equation*}
-Suma na pravé straně představuje geometrickou řadu s kvocientem $4/9$. Úpravou tedy dále získáme
-\begin{equation*}\label{eq:kochova_vlocka_obsah_n_iteraci}
-    \dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{16}\sum_{k=1}^n{\left(\dfrac{4}{9}\right)^k}=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{16}\cdot\dfrac{1-\left(\dfrac{4}{9}\right)^n}{1-\dfrac{4}{9}}=\dfrac{\sqrt{3}}{4}+\dfrac{3}{20}\left(1-\left(\dfrac{4}{9}\right)^n\right)
+Suma na pravé straně představuje geometrickou řadu s kvocientem $4/9$. Zde si vzpomeňme na vzorec pro její součet. Pro konečnou geometrickou posloupnost $\{g_k\}_{k=1}^\infty$ a kvocientem $q\neq 1$ platí
+\begin{equation*}
+    \sum_{k=0}^{n}{g_k}=g_1\cdot\dfrac{1-q^n}{1-q}.
 \end{equation*}
+Úpravou tedy dále získáme
+\begin{equation}\label{eq:kochova_vlocka_obsah_n_iteraci}
+    \dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{16}\sum_{k=1}^n{\left(\dfrac{4}{9}\right)^k}=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{16}\cdot\dfrac{4}{9}\cdot\dfrac{1-\left(\dfrac{4}{9}\right)^n}{1-\dfrac{4}{9}}=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{20}\left(1-\left(\dfrac{4}{9}\right)^n\right)
+\end{equation}
 Můžeme si všimnout, že výraz \eqref{eq:kochova_vlocka_obsah_n_iteraci} bude tentokrát již konečné číslo, neboť limitním přechodem pro $n\to\infty$ se výraz $(4/9)^n$ bude blížit nule. Celkově tedy máme
 \begin{align*}
-    S&=\lim_{n\to\infty}S_n=\lim_{n\to\infty}\left(\dfrac{\sqrt{3}}{4}+\dfrac{3}{20}\left(1-\left(\dfrac{4}{9}\right)^n\right)\right)=\dfrac{\sqrt{3}}{4}+\dfrac{3}{20}\left(1-\lim_{n\to\infty}\left(\dfrac{4}{9}\right)^n\right)\\
-    &=\dfrac{\sqrt{3}}{4}+\dfrac{3}{20}=\dfrac{2\sqrt{3}}{5}.
+    S&=\lim_{n\to\infty}S_n=\lim_{n\to\infty}\left(\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{20}\left(1-\left(\dfrac{4}{9}\right)^n\right)\right)=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{20}\left(1-\lim_{n\to\infty}\left(\dfrac{4}{9}\right)^n\right)\\
+    &=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{20}=\dfrac{2\sqrt{3}}{5}.
 \end{align*}
 Byl to delší výpočet, nicméně jsme zjistili, že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)}, ale obsah má \emph{konečný}.
