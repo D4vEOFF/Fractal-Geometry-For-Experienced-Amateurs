@@ -30,7 +30,9 @@ Zkusme se nyní podívat na délku křivky. V první iteraci začínáme s úse�
 Posloupnost $\{\ell_n\}_{n=1}^{\infty}$ je geometrická s kvocientem $4/3>1$, a tedy její limita je $\infty$. Kochova křivka má tak nekonečnou délku.
 
 \subsection{Sierpińského trojúhelník}\label{subsec:sierpinskeho_trojuhelnik}
-
+Přesuneme nyní k plošným útvarům, neboť i zde lze sledovat některé zajímavé vlastnosti. Jedním z představitelů je tzv. \emph{Sierpińského trojúhelník}, který objevil roku \emph{1914} \todo{zkontrolovat rok} polský matematik \name{Wacław~Sierpiński} \mbox{(1882--1969)}. \citep[str. 61]{Peitgen2004} Na začátku (v nulté iteraci) začínáme s rovnostranným trojúhelníkem se stranou délky $1$ (též lze začít s obecnou délkou $\ell_0$). V něm sestrojíme střední příčky (tj. spojnice středů stran trojúhelníka), které společně utvoří strany rovnostranného trojúhelníka čtvrtinového obsahu původního trojúhelníka (to vychází z faktu, že střední příčka v libovolném trojúhelníku má délku rovnou polovině délky strany, s níž je rovnoběžná). Obsah nově vzniklého trojúhelníku odebereme a postup opakujeme pro zbývající trojici trojúhelníků v původním obrazci (viz obrázek \todo{doplnit odkaz}).\par
+\todo{doplnit obrázek}\par
+Zkusme se opět podívat, jak je to s obvodem obrazce. Každá ze středních příček, které vzniknou v další iteraci, má poloviční délku vůči délce strany $l$ původního trojúhelníku.
 
 \subsection{Kochova vločka}\label{subsec:kochova_vlocka}
 Rozšiřující variantou Kochovy křivky \ref{subsec:kochova_krivka} je tzv. \emph{Kochova vločka}, která se skládá ze tří Kochových křivek. Rozdíl je zde v tom, že začínáme s rovnostranným trojúhelníkem o straně délky $1$. Na každou ze stran aplikujeme stejný proces, jako předtím, tj. odebereme prostřední třetinu, nahradíme ji dvěma na sebe navazujícími úsečkami délek $1/3$ a opakujeme pro každou nově vzniklou úsečku (viz obrázky \ref{fig:kochova_vlocka_dve_iterace} a \ref{fig:kochova_krivka_5iterace}).
@@ -54,7 +56,7 @@ Rozšiřující variantou Kochovy křivky \ref{subsec:kochova_krivka} je tzv. \e
     \caption{Čtvrtá iterace Kochovy vločky.}
     \label{fig:kochova_krivka_5iterace}
 \end{figure}
-Podíváme-li se na obvod, nejspíše nás již nepřekvapí, že i zde je nekonečný\footnote{Obvod Kochovy křivky po $n$-té iteraci je $o_n=3\cdot(4/3)^{n}$.} (už z principu, že každá strana původního rovnostranného trojúhelníka představuje samostatnou Kochovu křivku). Obsah vzniklého útvaru je však již zajímavější. Lze snadno odvodit, že obsah rovnostranného trojúhelníku o straně délky $a$ je
+Podíváme-li se na obvod, nejspíše nás nepřekvapí, že ten je i zde nekonečný\footnote{Obvod Kochovy křivky po $n$-té iteraci je $o_n=3\cdot(4/3)^{n}$.} (už z principu, že každá strana původního rovnostranného trojúhelníka představuje samostatnou Kochovu křivku). Obsah vzniklého útvaru je však již zajímavější. Lze snadno odvodit, že obsah rovnostranného trojúhelníku o straně délky $a$ je
 \begin{equation*}
     \dfrac{\sqrt{3}}{4}a^2
 \end{equation*}
