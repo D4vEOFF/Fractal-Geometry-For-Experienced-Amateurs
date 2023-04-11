@@ -4,7 +4,7 @@ Mandelbrot si uvědomil, že struktura pobřeží se charakterově vymyká útva
 Ve fraktální geometrii se pro tento úkaz uchytil termín \emph{soběpodobnost} (angl. \emph{self-similarity}). Útvar nazýváme soběpodobným, \textbf{pokud se sám sobě podobný v libovolném měřítku} \citep[str. 220]{Voracova2022} nebo pokud \textbf{část útvaru je podobná jeho celku}. Zmíněná podoba může být míněna přibližně (např. v případě pobřeží je nejspíše jasné, že žádné z jeho detailů nesdílejí společné rysy přesně), ale v dalších částech si předvedeme soběpodobnost \emph{přímou}.
 
 \subsection{Kochova křivka}\label{subsec:kochova_krivka}
-Jak jsme si již uvedli, za otce fraktální geometrie je považován Mandelbrot, avšak mnoho fraktálních křivek bylo známo již dříve (čtenář promine, že jsme zatím blíže nespecifikovali termín ``fraktální'', jeho význam pro nás však zatím nebude stěžejní). Jako první se podíváme na jednu z nejznámějších, kterou objevil roku \emph{1904} švédský matematik \name{Helge~von~Koch} \mbox{(1870--1924)}, dnes známou pod názvem \emph{Kochova křivka}. \citep[str. 61]{Peitgen2004} Na začátku vezmeme úsečku délky $1$. Vyjmeme prostřední (tj. druhou) třetinu a nahradíme ji dvěma úsečkami délky $1/3$, tak, aby na sebe navazovaly v krajních bodech. Tento proces následně opakujeme pro nově vzniklé úsečky. Obecně u úsečky délky $l$ nahradíme její prostřední třetinu dvojicí úseček délek $l/3$ (viz obrázek \ref{fig:kochova_vlocka_5iteraci}).
+Jak jsme si již uvedli, za otce fraktální geometrie je považován Mandelbrot, avšak mnoho fraktálních křivek bylo známo již dříve (čtenář promine, že jsme blíže nespecifikovali termín ``fraktální'', jeho význam pro nás však zatím nebude stěžejní). Jako první se podíváme na jednu z nejznámějších, kterou objevil roku \emph{1904} švédský matematik \name{Helge~von~Koch} \mbox{(1870--1924)}, dnes známou pod názvem \emph{Kochova křivka}. \citep[str. 61]{Peitgen2004} Na začátku vezmeme úsečku délky $1$. Vyjmeme prostřední (tj. druhou) třetinu a nahradíme ji dvěma úsečkami délky $1/3$, tak, aby na sebe navazovaly v krajních bodech. Tento proces následně opakujeme pro nově vzniklé úsečky. Obecně u úsečky délky $l$ nahradíme její prostřední třetinu dvojicí úseček délek $l/3$ (viz obrázek \ref{fig:kochova_vlocka_5iteraci}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\fractalscale]{ch01_kochova_krivka_0iterace.pdf}\\\qquad\\
@@ -27,10 +27,10 @@ Zkusme se nyní podívat na délku křivky. V první iteraci začínáme s úse�
 \begin{equation*}
     \left(\dfrac{4}{3}\right)^{n}.
 \end{equation*}
-Posloupnost $\{\ell_n\}_{n=1}^{\infty}$ je geometrická s kvocientem $q=4/3>1$, a tedy její limita je $\infty$. Kochova křivka má tak nekonečnou délku.
+Posloupnost $\{\ell_n\}_{n=1}^{\infty}$ je geometrická s kvocientem $q=4/3>1$, a tedy její limita je $\infty$. Kochova křivka má tak \emph{nekonečnou délku}.
 
 \subsection{Sierpińského trojúhelník}\label{subsec:sierpinskeho_trojuhelnik}
-Přesuneme nyní k plošným útvarům, neboť i zde lze sledovat některé zajímavé vlastnosti. Jedním z představitelů je tzv. \emph{Sierpińského trojúhelník}, který objevil roku \emph{1914} \todo{zkontrolovat rok} polský matematik \name{Wacław~Sierpiński} \mbox{(1882--1969)}. \citep[str. 61]{Peitgen2004} Na začátku (v nulté iteraci) začínáme s rovnostranným trojúhelníkem se stranou délky $1$ (též lze začít s obecnou délkou $\ell_0$). V něm sestrojíme střední příčky (tj. spojnice středů stran trojúhelníka), které společně utvoří strany rovnostranného trojúhelníka čtvrtinového obsahu původního trojúhelníka (to vychází z faktu, že střední příčka v libovolném trojúhelníku má délku rovnou polovině délky strany, s níž je rovnoběžná). Obsah nově vzniklého trojúhelníku odebereme a postup opakujeme pro zbývající trojici trojúhelníků v původním obrazci (viz obrázek \todo{doplnit odkaz}).\par
+Přesuneme nyní k plošným útvarům, neboť i zde lze sledovat některé zajímavé vlastnosti. Jedním z představitelů je tzv. \emph{Sierpińského trojúhelník}, který objevil roku \emph{1916} polský matematik \name{Wacław~Sierpiński} \mbox{(1882--1969)}. \citep[str. 61]{Peitgen2004} Na začátku (v nulté iteraci) začínáme s rovnostranným trojúhelníkem se stranou délky $1$ (též lze začít s obecnou délkou $\ell_0$). V něm sestrojíme střední příčky (tj. spojnice středů stran trojúhelníka), které společně utvoří strany rovnostranného trojúhelníka čtvrtinového obsahu původního trojúhelníka (to vychází z faktu, že střední příčka v libovolném trojúhelníku má délku rovnou polovině délky strany, s níž je rovnoběžná). Obsah nově vzniklého trojúhelníku odebereme a postup opakujeme pro zbývající trojici trojúhelníků v původním obrazci (viz obrázek \todo{doplnit odkaz}).\par
 \todo{doplnit obrázek}\par
 I zde si lze všimnout, že po nekonečně mnoha iteracích budou menší trojúhelníky přesnými kopiemi původního obrazce. Zkusme se opět podívat, jak je to s obvodem obrazce. Každá ze středních příček, které vzniknou v další iteraci, má poloviční délku vůči délce strany $l$ původního trojúhelníku. Obvod obrazce se tak zvětší o $3l/2$. Počet trojúhelníků poroste exponenciálně, neboť v každé iteraci odstraněním jednoho trojúhelníku vzniknou tři nové, tj. obvod se po $k$-té iteraci zvětší o $3^k\cdot(1/2)^k=(3/2)^k$ (na začátku pro $k=0$ je obvod $3$). Obvod obrazce $O_n$ po $n$ iteracích bude roven součtu přírůstků přes všechny iterace, tj.
 \begin{equation}\label{eq:obvod_sierpinskeho_trojuhelniku_niteraci}
@@ -40,12 +40,15 @@ I zde si lze všimnout, že po nekonečně mnoha iteracích budou menší trojú
 \begin{theorem}[Součet geomerické řady]\label{thm:soucet_geometricke_rady}
     Nechť je dána geometrická posloupnost $\{g_k\}_{k=1}^\infty$ s kvocientem $q\neq 1$. Pak pro součet prvních $n$ členů platí
     \begin{equation*}
-        \sum_{k=1}^{n}{g_k}=g_1\cdot\dfrac{1-q^n}{1-q}.
+        \sum_{k=1}^{n}{g_k}=g_1\dfrac{1-q^n}{1-q}.
     \end{equation*}
 \end{theorem}
+\begin{proof}
+    Důkaz vzorce zde vynecháme, nicméně čtenář si jej může snadno ověřit např. indukcí podle $n$. 
+\end{proof}
 Celkově tak po aplikaci vzorce z \ref{thm:soucet_geometricke_rady} v rovnosti \ref{eq:obvod_sierpinskeho_trojuhelniku_niteraci} dostaneme po jednoduché úpravě
 \begin{equation*}
-    O_n=3+\sum_{k=1}^n{\left(\dfrac{3}{2}\right)^k}=3+\dfrac{3}{2}\cdot\dfrac{\left(\dfrac{3}{2}\right)^n-1}{\dfrac{3}{2}-1}=3+3\cdot\left(\left(\dfrac{3}{2}\right)^n-1\right)=3\cdot\left(\dfrac{3}{2}\right)^n.
+    O_n=3+\sum_{k=1}^n{\left(\dfrac{3}{2}\right)^k}=3+\dfrac{3}{2}\cdot\dfrac{\left(\dfrac{3}{2}\right)^n-1}{\dfrac{3}{2}-1}=3+3\left(\left(\dfrac{3}{2}\right)^n-1\right)=3\left(\dfrac{3}{2}\right)^n.
 \end{equation*}
 Posloupnost $\{O_n\}_{n=0}^\infty$ je opět geometrická s kvocientem $q=3/2>1$, tzn. její limita je opět $\infty$. Obvod Sierpińského trojúhelníku tedy roste nade všechny meze. (Výpočet jsme si mohli též zjednodušit uvědoměním si, že obvod obrazce roste s faktorem $3/2$ a vzorec pro $O_n$ jsme tak mohli určit ihned.)\par
 Podívejme se nyní na obsah útvaru. Zde si již výpočet trochu usnadníme. Po každé iteraci se jeho obsah zmenší na $3/4$ obsahu původního obrazce. Lze snadno odvodit, že obsah rovnostranného trojúhelníku o straně délky $a$ je
