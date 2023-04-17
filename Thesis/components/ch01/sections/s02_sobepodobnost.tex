@@ -46,7 +46,7 @@ I zde si lze všimnout, že po nekonečně mnoha iteracích budou menší trojú
 \begin{proof}
     Důkaz vzorce zde vynecháme, nicméně čtenář si jej může snadno ověřit např. indukcí podle $n$. 
 \end{proof}
-Celkově tak po aplikaci vzorce z \ref{thm:soucet_geometricke_rady} v rovnosti \ref{eq:obvod_sierpinskeho_trojuhelniku_niteraci} dostaneme po jednoduché úpravě
+Celkově tak po aplikaci vzorce z \ref{thm:soucet_geometricke_rady} v rovnosti \eqref{eq:obvod_sierpinskeho_trojuhelniku_niteraci} dostaneme po jednoduché úpravě
 \begin{equation*}
     O_n=3+\sum_{k=1}^n{\left(\dfrac{3}{2}\right)^k}=3+\dfrac{3}{2}\cdot\dfrac{\left(\dfrac{3}{2}\right)^n-1}{\dfrac{3}{2}-1}=3+3\left(\left(\dfrac{3}{2}\right)^n-1\right)=3\left(\dfrac{3}{2}\right)^n.
 \end{equation*}
@@ -59,7 +59,7 @@ Na začátku je obsah útvaru $S_0=\sqrt{3}/4$. Tj. celkově po $n$-iteracích b
 \begin{equation}\label{eq:obsah_sierpinskeho_trojuhelniku}
     \dfrac{\sqrt{3}}{4}\left(\dfrac{3}{4}\right)^n
 \end{equation}
-Výraz \ref{eq:obsah_sierpinskeho_trojuhelniku} má pro $n\to\infty$ limitu nulovou, tedy zatímco Sierpińského trojúhelník má \emph{nekonečný obvod}, jeho obsah je však naopak \emph{nulový}.
+Výraz \eqref{eq:obsah_sierpinskeho_trojuhelniku} má pro $n\to\infty$ limitu nulovou, tedy zatímco Sierpińského trojúhelník má \emph{nekonečný obvod}, jeho obsah je však naopak \emph{nulový}.
 
 \subsection{Kochova vločka}\label{subsec:kochova_vlocka}
 Rozšiřující variantou Kochovy křivky \ref{subsec:kochova_krivka} je tzv. \emph{Kochova vločka}, která se skládá ze tří Kochových křivek. Rozdíl je zde v tom, že začínáme s rovnostranným trojúhelníkem o straně délky $1$. Na každou ze stran aplikujeme stejný proces, jako předtím, tj. odebereme prostřední třetinu, nahradíme ji dvěma na sebe navazujícími úsečkami délek $1/3$ a opakujeme pro každou nově vzniklou úsečku (viz obrázky \ref{fig:kochova_vlocka_dve_iterace} a \ref{fig:kochova_krivka_5iterace}).
