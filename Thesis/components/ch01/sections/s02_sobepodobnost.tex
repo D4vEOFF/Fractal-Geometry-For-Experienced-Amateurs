@@ -120,3 +120,14 @@ Můžeme si všimnout, že výraz \eqref{eq:kochova_vlocka_obsah_n_iteraci} bude
     &=\dfrac{\sqrt{3}}{4}+\dfrac{3\sqrt{3}}{20}=\dfrac{2\sqrt{3}}{5}.
 \end{align*}
 Byl to delší výpočet, nicméně jsme zjistili, že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)}, ale obsah má \emph{konečný}.
+
+\subsection{Cantorovo diskontinuum}\label{subsec:cantorovo_diskontinuum}
+Podívejme se ještě na jeden typ fraktálního objektu, kterým je tzv. \emph{Cantorovo diskontinuum}\footnote{Též se mu říká \emph{Cantorova množina} (angl. \emph{"Cantor set"}). Dvourozměrnou variantou je pak tzv. \emph{Cantorův prach} (angl. \emph{"Cantor dust"}).} Myšlenka je zde velmi jednoduchá: začínáme s úsečkou délky $1$ (nultá iterace) a následně odebereme prostřední třetinu, čímž vznikne první iterace. V dalších iteracích postupujeme analogicky pro vzniklé úsečky (viz obrázek \ref{fig:cantorovo_diskontinuum}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=\normalipe]{ch01_cantorova_mnozina.pdf}
+    \caption{0. až 4. iterace Cantorova diskontinua.}
+    \label{fig:cantorovo_diskontinuum}
+\end{figure}
+
+Stejně jako u předešlých fraktálů nás i zde bude zajímat limitní chování. Lze očekávat, že postupným odebíráním zbudou úsečky nulové délky. O tom se lze přesvědčit např. tak, že spočítáme limitu celkových délek všech odebraných úseků. V první iteraci odebereme úsečku délky $1/3$, v druhé iteraci odebereme dvě celkové délky $2\cdot(1/3)^2=2/9$, ve třetí vyjmeme čtyři celkové délky $4\cdot(1/3)^3=4/27$, atd. Obecně počet odebraných úseků roste s mocninou dvojky, jejichž délky klesají s mocninou trojky. Označíme-li tedy délku zbylých úseků $\ell_n$ po $n$ iteracích a $\overline{\ell_n}$ délku odebraných úseků \todo{doplnit}
