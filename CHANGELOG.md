@@ -1,5 +1,11 @@
 # Záznam změn
 
+## 12. 3. 2023
+- Přepsána sekce *"Kochova vločka"*
+
+## 31. 10. 2023
+- Přidána podsekce *"Cantorovo diskontinuum"*
+
 ## 10. 4. 2023
 - Přidána podsekce *"Sierpińského trojúhelník"*
 
