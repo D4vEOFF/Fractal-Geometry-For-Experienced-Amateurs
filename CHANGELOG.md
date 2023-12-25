@@ -1,6 +1,9 @@
 # Záznam změn
 
-## 12. 3. 2023
+## 25. 12. 2023
+- Rozepsána sekce *"Fraktální dimenze"*
+
+## 3. 12. 2023
 - Přepsána sekce *"Kochova vločka"*
 
 ## 31. 10. 2023
