@@ -61,15 +61,15 @@ Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{N�
 (Převzato z \cite[str. 93]{Zelinka2006}.) Výraz $1/\varepsilon$ zde představuje faktor podobnosti jako původní $k$ (samotné $\varepsilon$ tak hraje roli měřítka), avšak největší rozdíl zde představuje zkoumání ``limitního chování'' daného výrazu.
 \begin{example}[Fraktální dimenze úsečky]\label{ex:fraktalni-dimenze-usecka}
     Začněme asi nejednodušším příkladem výpočtu fraktální dimenze, a to u úsečky. Představme si, že úsečku \emph{jednotkové délky} rozdělíme na $N(\varepsilon)=n$ shodných dílů. Pak měřítko libovolného dílu je
-    \[\varepsilon=\dfrac{1}{n}.\]
+    \[\varepsilon=\dfrac{1}{n}=n^{-1}.\]
     (Zde je dobré si uvědomit, že pro $n\to\infty$, tedy zjemňování dělení úsečky, platí, že $\varepsilon\to 0^+$.) Fraktální dimenzi úsečky vypočteme z definice jako
     \[d_k=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N(\varepsilon)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n}}}=1.\]
 \end{example}
 \begin{example}[Fraktální dimenze čtverce]\label{ex:fraktalni-dimenze-ctverec}
     Podobně, jako v příkladu \ref{ex:fraktalni-dimenze-usecka} výše, můžeme stanovit i fraktální dimenzi čtverce. Uvažujme tedy čtverec o jednotkovém obsahu, který rozdělíme $N(\varepsilon)$ shodných útvarů. Přitom víme, že obsah mění kvadraticky vůči délce strany. Měřítko nového čtverce tak bude
-    \[\varepsilon=\dfrac{1}{\sqrt{n}}=\dfrac{1}{n^{1/2}}\]
+    \[\varepsilon=\sqrt{\dfrac{1}{n}}=n^{-1/2}\]
     a fraktální dimenze vychází
     \[d_k=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n^{1/2}}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\dfrac{1}{2}\ln{n}}}=2.\]
 \end{example}
-Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze rovna $d$.\par
+Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.\par
 Co kdybychom však zkusili podobnou myšlenku aplikovat i na \emph{fraktální objekty}? 
