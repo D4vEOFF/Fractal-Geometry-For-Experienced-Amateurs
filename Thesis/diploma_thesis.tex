@@ -72,22 +72,22 @@
 
 %% Titulní strana a~různé povinné informační strany
 \begin{document}
-\include{components/titlepage.tex}
+\include{titlepage.tex}
 
 %%% Strana s automaticky generovaným obsahem bakalářské práce
 
 \tableofcontents
 
 %%% Jednotlivé kapitoly práce jsou pro přehlednost uloženy v~samostatných souborech
-\include{\chapterpath{00}/ch00_predmluva.tex}
-\include{\chapterpath{01}/ch01_uvod_do_fraktalu.tex}
-\include{\chapterpath{02}/ch02_teorie_miry.tex}
-\include{\chapterpath{03}/ch03_klasifikace_fraktalu.tex}
-\include{\chapterpath{04}/ch04_generovani_fraktalu.tex}
-\include{\chapterpath{05}/ch05_fraktaly_v_praxi.tex}
+\include{00-predmluva/ch00_predmluva}
+\include{01-uvod/ch01_uvod_do_fraktalu}
+\include{02-mira/ch02_teorie_miry}
+\include{03-klasifikace-fraktalu/ch03_klasifikace_fraktalu}
+\include{04-generovani-fraktalu/ch04_generovani_fraktalu}
+\include{05-fraktaly-v-praxi/ch05_fraktaly_v_praxi}
 
 %%% Seznam použité literatury
-\include{\literaturepath/literature.tex}
+\include{99-literatura/literatura.tex}
 
 %%% Obrázky v~bakalářské práci
 %%% (pokud jich je malé množství, obvykle není třeba seznam uvádět)
