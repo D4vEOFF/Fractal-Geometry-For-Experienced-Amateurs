@@ -1,4 +1,7 @@
 \section{Fraktální dimenze}\label{sec:fraktalni_dimenze}
+
+\subsection{Chápání konceptu dimenze}\label{subsec:koncept-dimenze}
+
 Výčet útvarů v sekci \ref{sec:sobepodobnost} splňoval zásadní vlastnost, a to sice, že všechny z nich byly \emph{soběpodobné}. V eukleidovské geometrii lze však u mnohých základních objektů pozorovat stejnou vlastnost. Např. čtverec lze určitě prohlásit v jistém smyslu za soběpodobný, neboť jej lze rozdělit na podobné útvary (viz obrázek \ref{fig:sobepodobnost-ctverce}).
 \begin{figure}[h]
     \centering
@@ -43,18 +46,17 @@ kde $N(k)$ je počet nových útvarů v závislosti na faktoru $k$ a $d$ je dime
 (Obecně lze volit jakýkoliv přípustný základ logaritmů, tj $d=\log_b{N(k)}/\log_b{k}$ pro $b\in\R^+\setminus\set{1}$.)
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|c|c|}
-    \hline
+    \begin{tabular}{r|cc}
     Útvar    & $N(k)$ & $d=\log_3{N(k)}/\log_3{k}$ \\ \hline
-    Úsečka   & $3$      & $1$                          \\ \hline
-    Čtverec  & $9$      & $2$                          \\ \hline
-    Krychle  & $27$     & $3$                          \\ \hline
-    Teserakt\footnote{Čtyřrozměrná krychle} & $81$     & $4$                          \\ \hline
+    Úsečka   & $3$      & $1$                          \\
+    Čtverec  & $9$      & $2$                          \\
+    Krychle  & $27$     & $3$                          \\
+    Teserakt & $81$     & $4$                          \\
     \end{tabular}
     \label{table:eukleides-dimenze}
 \end{table}
 Dimenze v tomto pojetí skutečně dává dobrý smysl. Pro ``klasické'' geometrické objekty vychází dimenze vždy celočíselně.\par
-Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{Někdy se též nazývá \emph{Kolmogorovova dimenze} nebo \emph{Hausdoffova-Besičovičova dimenze}. Je pojmenována po německém matematikovi \name{Felixi Hausdorffovi} (1869--1942) a ruských matematicích \name{Andreji Kolmogorovovi} (1903--1987) a \name{Abramovi Besičovičovi} (1891--1970).}, která je pro útvar definována jako
+Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{Někdy se též nazývá \emph{Kolmogorovova dimenze} nebo \emph{Hausdoffova-Besičovičova dimenze}. Je pojmenována po německém matematikovi \name{Felixi Hausdorffovi} (1869--1942) a ruských matematicích \name{Andreji Kolmogorovovi} (1903--1987) a \name{Abramovi Besičovičovi} (1891--1970).}. Existuje více způsobů její definice. Jeden z nich, kterého se dále budeme držet, je následující:
 \begin{equation}\label{eq:fraktalni-dimenze}
     d_k=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N(\varepsilon)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}.
 \end{equation}
@@ -71,5 +73,46 @@ Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{N�
     a fraktální dimenze vychází
     \[d_k=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n^{1/2}}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\dfrac{1}{2}\ln{n}}}=2.\]
 \end{example}
-Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.\par
-Co kdybychom však zkusili podobnou myšlenku aplikovat i na \emph{fraktální objekty}? 
+Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.
+\todo{Jak to bude s fraktální dimenzí rovnostranného trojúhelníku?}
+
+\subsection{Dimenze fraktálů}\label{subsec:dimenze-fraktalu}
+
+Co kdybychom však zkusili podobnou myšlenku aplikovat i na \emph{fraktální objekty}? Zkusme to. Pro připomenutí jednotlivých křivek a výsledků k nim si dovoluji čtenáře opětovně odkázat na sekci \ref{sec:sobepodobnost}, kde jsou podrobněji rozebrány.
+\begin{itemize}
+    \item \textbf{Kochova křivka.} V každé iteraci nahrazujeme každou úsečku čtyřmi novými. Kompletní Kochova křivka tak obsahuje právě \emph{čtyři} kopie sebe sama zmenšených na třetinu, tj. v $n$-té iteraci je $N(\varepsilon)=4^n$, jak jsme již odvodili (viz podsekce \ref{subsec:kochova_krivka}).\footnote{Lze však zvolit i jiné dělení. Např. lze na Kochovu křivku nahlížet, že obsahuje \emph{16 kopií} sebe sama zmenšených na \emph{devítinu}.} Měřítko nové křivky je tak $\varepsilon=(1/3)^n$.
+    \begin{equation}\label{eq:kochova-krivka-dimenze}
+        d_k=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N(\varepsilon)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{3^n}}}=\dfrac{\ln{4}}{\ln{3}}\approx 1{,}2618595\dots
+    \end{equation}
+    \item \textbf{Kochova vločka.} Začínáme s rovnostranným trojúhelníkem o straně délky $1$, na jehož stranách postupně vznikne Kochova křivka. V $n$-té iteraci je obvod Kochovy vločky $o_n$ roven $3\cdot 4^n$, tj. i $N(\varepsilon)=3\cdot 4^n$, kde měřítko\footnote{Měřítko se ve srovnání s Kochovou křivkou liší v mocnině, neboť délku nových úseků porovnáváme s obvodem celého trojúhelníku, nikoliv pouze délkou jedné jeho strany. Nicméně ve výpočtu bych se mohli omezit i jen na jednu ze stran, výpočet by byl tak zcela identický, jako u Kochovy křivky.} nově vzniklých úseček je $\varepsilon=(1/3)^{n+1}$. Není těžké se přesvědčit, že fraktální dimenze vychází stejně, jako u Kochovy křivky:
+    \begin{equation}\label{eq:kochova-vlocka-dimenze}
+        d_k=\lim_{n\to\infty}{\dfrac{\ln{3\cdot 4^n}}{\ln{3^{n+1}}}}=\dfrac{\ln{4^n}\overbrace{\left(1+\dfrac{\ln{3}}{\ln{4^n}}\right)}^{\to 1}}{\ln{3^n}\underbrace{\left(1+\dfrac{\ln{3}}{\ln{3^n}}\right)}_{\to 1}}=\dfrac{\ln{4}}{\ln{3}}
+    \end{equation}
+    \item \textbf{Sierpińského trojúhelník.} V každé iteraci vynecháme prostřední trojúhelník, čímž vznikne \emph{trojice} nových trojúhelníků s \emph{polovičním} měřítkem. Tzn. $N(\varepsilon)=3^n$ pro $\varepsilon=(1/2)^n$, a tedy
+    \begin{equation}\label{eq:sierpinskeho-trojuhelnik-dimenze}
+        d_k=\lim_{n\to\infty}{\dfrac{\ln{3^n}}{\ln{2^{n}}}}=\dfrac{\ln{3}}{\ln{2}}\approx 1{,}5849625\dots
+    \end{equation}
+    \item \textbf{Cantorovo diskontinuum.} Vždy vyjmeme prostřední třetinu úsečky, čímž obdržíme \emph{dvojici} úseček \emph{třetinové} délky, tj. $N(\varepsilon)=2^n$ pro $\varepsilon=(1/3)^n$. Fraktální dimenze tak vychází
+    \begin{equation}\label{eq:cantorovo-diskontinuum-dimenze}
+        d_k=\lim_{n\to\infty}{\dfrac{\ln{2^n}}{\ln{3^n}}}=\dfrac{\ln{2}}{\ln{3}}\approx 0{,}6309297\dots
+    \end{equation}
+\end{itemize}
+Udělejme si nyní menší souhrn a porovnání dosavadně získaných výsledků (viz tabulka \ref{table:fraktaly-eukleides-dimenze}).
+\begin{table}[h]
+    \centering
+    \begin{tabular}{r|ccc}
+        Útvar                    & $\varepsilon$ & $N(\varepsilon)$ & $d_k$              \\ \hline
+        Úsečka                   & $n^{-1}$      & $n$              & 1                  \\
+        Čtverec                  & $n^{-1/2}$    & $n$              & 2                  \\
+        Krychle                  & $n^{-1/3}$    & $n$              & 3                  \\
+        Teserakt                 & $n^{-1/4}$    & $n$              & 4                  \\
+        $d$-rozměrná krychle     & $n^{-1/d}$    & $n$              & $d$                \\
+        Kochova křivka           & $(1/3)^n$     & $4^n$            & $1{,}2618595\dots$ \\
+        Kochova vločka           & $(1/3)^{n+1}$ & $3\cdot 4^n$     & $1{,}2618595\dots$ \\
+        Sierpińského trojúhelník & $(1/2)^n$     & $3^n$            & $1{,}5849625\dots$ \\
+        Cantorovo diskontinuum   & $(1/3)^n$     & $2^n$            & $0{,}6309297\dots$ \\
+    \end{tabular}
+    \caption{Porovnání fraktálních dimenzí $d_k$ různých objektů.}
+    \label{table:fraktaly-eukleides-dimenze}
+\end{table}
+Můžeme si všimnout, že zatímco u ``klasických'' objektů vychází fraktální dimenze \emph{celočíselná}, u fraktálů vychází \emph{neceločíselně}, ba dokonce i iracionálně.
