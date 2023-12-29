@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 29. 12. 2023
+- Dokončena podsekce *"Dimenze fraktálních objektů"*
+
 ## 25. 12. 2023
 - Rozepsána sekce *"Fraktální dimenze"*
 
