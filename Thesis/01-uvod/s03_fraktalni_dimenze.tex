@@ -83,7 +83,7 @@ Zkusme se nyní odprostit od krychle k trochu jinému útvaru.
         \caption{Trojúhelník $T$ rozdělený na trojúhelníky $T_1,\dots,T_4$.}
         \label{fig:trojuhelnik-sobepodobnost}
     \end{figure}
-    Délka každé střední příčky odpovídá polovině délky strany, s níž je rovnoběžná, tedy obsah každého z nich je \emph{čtvrtina obsahu původního} trojúhelníku $T$. Pokud obecně trojúhelník $T$ rozdělíme takto na obecně $N(\varepsilon)=4^n$ pro nějaké $n\in\N$ shodných částí, pak měřítko každé z nich bude $\varepsilon=(1/2)^n$. Fraktální dimenze tak výchází:
+    Délka každé střední příčky odpovídá polovině délky strany, s níž je rovnoběžná, tedy obsah každého z nich je \emph{čtvrtina obsahu původního} trojúhelníku $T$. Pokud obecně trojúhelník $T$ rozdělíme\footnote{Výpočet bychom mohli i zde provést ve stejném duchu jako úsečky, čtverce nebo krychle. Počet částí, na než rozdělíme trojúhelník, označíme $N(\varepsilon)=n$, přičemž měřítko pak bude $\varepsilon=n^{-1/2}$.} takto na obecně $N(\varepsilon)=4^n$ pro nějaké $n\in\N$ shodných částí, pak měřítko každé z nich bude $\varepsilon=(1/2)^n$. Fraktální dimenze tak výchází:
     \[d_k=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{2^n}}}=\lim_{n\to\infty}{\dfrac{2n\ln{2}}{n\ln{2}}}=2.\]
 \end{example}
 
@@ -95,7 +95,7 @@ Co kdybychom však zkusili podobnou myšlenku aplikovat i na \emph{fraktální o
     \begin{equation}\label{eq:kochova-krivka-dimenze}
         d_k=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N(\varepsilon)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{3^n}}}=\dfrac{\ln{4}}{\ln{3}}\approx 1{,}2618595\dots
     \end{equation}
-    \item \textbf{Kochova vločka.} Začínáme s rovnostranným trojúhelníkem o straně délky $1$, na jehož stranách postupně vznikne Kochova křivka. V $n$-té iteraci je obvod Kochovy vločky $o_n$ roven $3\cdot 4^n$, tj. i $N(\varepsilon)=3\cdot 4^n$, kde měřítko\footnote{Měřítko se ve srovnání s Kochovou křivkou liší v mocnině, neboť délku nových úseků porovnáváme s obvodem celého trojúhelníku, nikoliv pouze délkou jedné jeho strany. Nicméně ve výpočtu bych se mohli omezit i jen na jednu ze stran, výpočet by byl tak zcela identický, jako u Kochovy křivky.} nově vzniklých úseček je $\varepsilon=(1/3)^{n+1}$. Není těžké se přesvědčit, že fraktální dimenze vychází stejně, jako u Kochovy křivky:
+    \item \textbf{Kochova vločka.} Začínáme s rovnostranným trojúhelníkem o straně délky $1$, na jehož stranách postupně vznikne Kochova křivka. V $n$-té iteraci je obvod Kochovy vločky $o_n$ roven $3\cdot 4^n$, tj. i $N(\varepsilon)=3\cdot 4^n$, kde měřítko\footnote{Měřítko se ve srovnání s Kochovou křivkou liší v mocnině, neboť délku nových úseků porovnáváme s obvodem celého trojúhelníku, nikoliv pouze délkou jedné jeho strany. Nicméně ve výpočtu bych se mohli omezit i jen na jednu ze stran, výpočet by byl tak zcela identický, jako u Kochovy křivky.} nově vzniklých úseček je $\varepsilon=1/3\cdot(1/3)^n=(1/3)^{n+1}$. Není těžké se přesvědčit, že fraktální dimenze vychází stejně, jako u Kochovy křivky:
     \begin{equation}\label{eq:kochova-vlocka-dimenze}
         d_k=\lim_{n\to\infty}{\dfrac{\ln{3\cdot 4^n}}{\ln{3^{n+1}}}}=\dfrac{\ln{4^n}\overbrace{\left(1+\dfrac{\ln{3}}{\ln{4^n}}\right)}^{\to 1}}{\ln{3^n}\underbrace{\left(1+\dfrac{\ln{3}}{\ln{3^n}}\right)}_{\to 1}}=\dfrac{\ln{4}}{\ln{3}}
     \end{equation}
