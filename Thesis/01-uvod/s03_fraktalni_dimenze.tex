@@ -68,13 +68,24 @@ Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{N�
     \[d_k=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N(\varepsilon)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n}}}=1.\]
 \end{example}
 \begin{example}[Fraktální dimenze čtverce]\label{ex:fraktalni-dimenze-ctverec}
-    Podobně, jako v příkladu \ref{ex:fraktalni-dimenze-usecka} výše, můžeme stanovit i fraktální dimenzi čtverce. Uvažujme tedy čtverec o jednotkovém obsahu, který rozdělíme $N(\varepsilon)$ shodných útvarů. Přitom víme, že obsah mění kvadraticky vůči délce strany. Měřítko nového čtverce tak bude
+    Podobně, jako v příkladu \ref{ex:fraktalni-dimenze-usecka} výše, můžeme stanovit i fraktální dimenzi čtverce. Uvažujme tedy čtverec o jednotkovém obsahu, který rozdělíme $N(\varepsilon)=n$ shodných útvarů. Přitom víme, že obsah mění kvadraticky vůči délce strany. Měřítko nového čtverce tak bude
     \[\varepsilon=\sqrt{\dfrac{1}{n}}=n^{-1/2}\]
     a fraktální dimenze vychází
     \[d_k=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n^{1/2}}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\dfrac{1}{2}\ln{n}}}=2.\]
 \end{example}
-Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.
-\todo{Jak to bude s fraktální dimenzí rovnostranného trojúhelníku?}
+Pro krychli bude výpočet naprosto analogický (viz příklad \ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.\par
+Zkusme se nyní odprostit od krychle k trochu jinému útvaru.
+\begin{example}[Fraktální dimenze trojúhelníku]\label{ex:fraktalni-dimenze-trojuhelnik}
+    Podívejme se, jak to dopadne s fraktální dimenzí \emph{obecného trojúhelníku}. Každý trojúhelník $T$ lze rozdělit na čtveřici \emph{vzájemně shodných trojúhelníků $T_1,\dots,T_4$}, které vzniknou sestrojením středních příček v původním trojúhelníku (viz obrázek \ref{fig:trojuhelnik-sobepodobnost}).
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=\normalipe]{ch01_trojuhelnik_sobepodobnost.pdf}
+        \caption{Trojúhelník $T$ rozdělený na trojúhelníky $T_1,\dots,T_4$.}
+        \label{fig:trojuhelnik-sobepodobnost}
+    \end{figure}
+    Délka každé střední příčky odpovídá polovině délky strany, s níž je rovnoběžná, tedy obsah každého z nich je \emph{čtvrtina obsahu původního} trojúhelníku $T$. Pokud obecně trojúhelník $T$ rozdělíme takto na obecně $N(\varepsilon)=4^n$ pro nějaké $n\in\N$ shodných částí, pak měřítko každé z nich bude $\varepsilon=(1/2)^n$. Fraktální dimenze tak výchází:
+    \[d_k=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{2^n}}}=\lim_{n\to\infty}{\dfrac{2n\ln{2}}{n\ln{2}}}=2.\]
+\end{example}
 
 \subsection{Dimenze fraktálů}\label{subsec:dimenze-fraktalu}
 
@@ -107,6 +118,7 @@ Udělejme si nyní menší souhrn a porovnání dosavadně získaných výsledk�
         Krychle                  & $n^{-1/3}$    & $n$              & 3                  \\
         Teserakt                 & $n^{-1/4}$    & $n$              & 4                  \\
         $d$-rozměrná krychle     & $n^{-1/d}$    & $n$              & $d$                \\
+        Obecný trojůhelník       & $(1/2)^n$     & $4^n$            & 2                  \\
         Kochova křivka           & $(1/3)^n$     & $4^n$            & $1{,}2618595\dots$ \\
         Kochova vločka           & $(1/3)^{n+1}$ & $3\cdot 4^n$     & $1{,}2618595\dots$ \\
         Sierpińského trojúhelník & $(1/2)^n$     & $3^n$            & $1{,}5849625\dots$ \\
