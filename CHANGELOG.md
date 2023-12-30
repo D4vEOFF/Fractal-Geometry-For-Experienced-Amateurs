@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 30. 12. 2023
+- Upravena podsekce *"Chápání konceptu dimenze"*
+
 ## 29. 12. 2023
 - Dokončena podsekce *"Dimenze fraktálních objektů"*
 
