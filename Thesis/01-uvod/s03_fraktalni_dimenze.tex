@@ -101,11 +101,11 @@ Co kdybychom však zkusili podobnou myšlenku aplikovat i na \emph{fraktální o
     \begin{equation}\label{eq:kochova-vlocka-dimenze}
         \dimB{F_{KS}}=\lim_{n\to\infty}{\dfrac{\ln{3\cdot 4^n}}{\ln{3^{n+1}}}}=\dfrac{\ln{4^n}\overbrace{\left(1+\dfrac{\ln{3}}{\ln{4^n}}\right)}^{\to 1}}{\ln{3^n}\underbrace{\left(1+\dfrac{\ln{3}}{\ln{3^n}}\right)}_{\to 1}}=\dfrac{\ln{4}}{\ln{3}}
     \end{equation}
+    \todo{Jak to bude s varinatou výpočtu pro plochu?}
     \item \textbf{Sierpińského trojúhelník $F_{ST}$.} V každé iteraci vynecháme prostřední trojúhelník, čímž vznikne \emph{trojice} nových trojúhelníků s \emph{polovičním} měřítkem. Tzn. $N_\varepsilon(F_{ST})=3^n$ pro $\varepsilon=(1/2)^n$, a tedy
     \begin{equation}\label{eq:sierpinskeho-trojuhelnik-dimenze}
         \dimB{F_{ST}}=\lim_{n\to\infty}{\dfrac{\ln{3^n}}{\ln{2^{n}}}}=\dfrac{\ln{3}}{\ln{2}}\approx 1{,}5849625\dots
     \end{equation}
-    \todo{Jak to bude s varinatou výpočtu pro plochu?}
     \item \textbf{Cantorovo diskontinuum $F_{CD}$.} Vždy vyjmeme prostřední třetinu úsečky, čímž obdržíme \emph{dvojici} úseček \emph{třetinové} délky, tj. $N_\varepsilon(F_{CD})=2^n$ pro $\varepsilon=(1/3)^n$. Fraktální dimenze tak vychází
     \begin{equation}\label{eq:cantorovo-diskontinuum-dimenze}
         \dimB{F_{CD}}=\lim_{n\to\infty}{\dfrac{\ln{2^n}}{\ln{3^n}}}=\dfrac{\ln{2}}{\ln{3}}\approx 0{,}6309297\dots
