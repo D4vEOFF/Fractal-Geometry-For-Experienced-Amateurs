@@ -1,5 +1,10 @@
 # Záznam změn
 
+## 2. 1. 2024
+- Změněno označení fraktální dimenze v podsekci *"Chápání konceptu dimenze"*
+- Dokončena podsekce *"Topologická dimenze"*
+- Přidána sekce *"Co je to fraktál?"*
+
 ## 30. 12. 2023
 - Upravena podsekce *"Chápání konceptu dimenze"*
 
