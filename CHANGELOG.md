@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 9. 1. 2024
+- Doplněny chybějící reference v sekci *"Fraktální dimenze"*
+
 ## 2. 1. 2024
 - Změněno označení fraktální dimenze v podsekci *"Chápání konceptu dimenze"*
 - Dokončena podsekce *"Topologická dimenze"*
