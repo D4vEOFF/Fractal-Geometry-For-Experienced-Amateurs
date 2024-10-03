@@ -1,4 +1,4 @@
-FILE=diploma_thesis
+FILE=diploma-thesis
 
 all: pdf clean
 

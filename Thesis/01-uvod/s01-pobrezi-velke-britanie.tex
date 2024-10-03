@@ -2,7 +2,7 @@
 Položme si na začátek trochu jinou otázku, kterou si z počátku položil i Benoît Mandelbrot: \emph{Jaká je podstata tvaru pobřeží?} Ta se stala podstatnou v jeho práci \emph{"How Long Is the Coast of Britain?"}. Uvažme část pobřeží s počátečním a koncovým bodem (viz obrázek \ref{fig:pobrezi}).
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=\normalipe]{ch01_pobrezi.pdf}
+    \includegraphics[scale=\normalipe]{ch01-pobrezi.pdf}
     \caption{Příklad mapy pobřeží se spojnicí bodů $A$ a $B$.}
     \label{fig:pobrezi}
 \end{figure}
@@ -14,7 +14,7 @@ Mějme zadané libovolné $\varepsilon>0$. Podél pobřeží začneme umisťovat
 \end{equation*}
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=\normalipe]{ch01_pobrezi_aproximace.pdf}
+    \includegraphics[scale=\normalipe]{ch01-pobrezi-aproximace.pdf}
     \caption{Odhad délky pobřeží, kde $n=10$ při zvoleném $\varepsilon$.}
     \label{fig:pobrezi_aproximace}
 \end{figure}
@@ -25,7 +25,7 @@ Nyní by nás mohlo napadnout, že pro zmenšující se $\varepsilon$, tj. $\var
 Jenže, bohužel, limita \eqref{eq:aproximace_limita} ve skutečnosti bude rovna $\infty$. Proč? Je třeba si uvědomit, že zde pracujeme s \emph{mapou} pobřeží, která má určité \emph{měřítko}. Pokud bychom měli pobřeží na mapě s měřítkem $1\,:\,100\;000$, uvidíme méně detailů, než kdybychom jej zkoumali na mapě s měřítkem $1\,:\,1\;000$. (Viz obrázek \ref{fig:pobrezi_zoom}.)\par
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=\normalipe]{ch01_pobrezi_zoom.pdf}
+    \includegraphics[scale=\normalipe]{ch01-pobrezi-zoom.pdf}
     \caption{Část pobřeží od bodu $A$ v menším měřítku.}
     \label{fig:pobrezi_zoom}
 \end{figure}
@@ -35,14 +35,14 @@ Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidov
     \centering
     \begin{subfigure}{\subfigwidth}
         \centering
-        \includegraphics[scale=\normalipe]{ch01_kruznice.pdf}
+        \includegraphics[scale=\normalipe]{ch01-kruznice.pdf}
         \caption{Kružnice v menším měřítku.}
         \label{subfig:kruznice}
     \end{subfigure}
     \quad
     \begin{subfigure}{\subfigwidth}
         \centering
-        \includegraphics[scale=\normalipe]{ch01_kruznice_zoom.pdf}
+        \includegraphics[scale=\normalipe]{ch01-kruznice-zoom.pdf}
         \caption{Část kružnice ve větším měřítku.}
         \label{subfig:kruznice_zoom}
     \end{subfigure}
@@ -53,14 +53,14 @@ Máme-li kružnici o poloměru $r>0$, pak jí můžeme vepsat libovolný pravide
     \centering
     \begin{subfigure}{\subfigwidth}
         \centering
-        \includegraphics[scale=\normalipe]{ch01_archimedova_metoda.pdf}
+        \includegraphics[scale=\normalipe]{ch01-archimedova-metoda.pdf}
         \caption{Pravidelný osmiúhelník vepsaný kružnici.}
         \label{subfig:archimedova_metoda}
     \end{subfigure}
     \quad
     \begin{subfigure}{\subfigwidth}
         \centering
-        \includegraphics[scale=\normalipe]{ch01_archimedova_metoda_cast_nuhelniku.pdf}
+        \includegraphics[scale=\normalipe]{ch01-archimedova-metoda-cast-nuhelniku.pdf}
         \caption{Část vepsaného pravidelného $n$-úhelníku.}
         \label{subfig:archimedova_metoda_cast_nuhelniku}
     \end{subfigure}
@@ -78,7 +78,7 @@ a tedy obvod
 Pro rostoucí $n$ bude obvod pravidelného $n$-úhelníku stále lépe aproximovat obvod původní kružnice (viz obrázek \ref{fig:archimedova_metoda_presnejsi}).
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=\normalipe]{ch01_pobrezi_aproximace_presnejsi.pdf}
+    \includegraphics[scale=\normalipe]{ch01-pobrezi-aproximace-presnejsi.pdf}
     \caption{Aproximace obvodu kružnice pomocí pravidelného šestnáctiúhelníku.}
     \label{fig:archimedova_metoda_presnejsi}
 \end{figure}
