@@ -1,23 +1,12 @@
-TEXCOMPILER = pdflatex
-BIBCOMPILER = bibtex
+FILE=diploma_thesis
 
-DOCNAME = diploma_thesis
+all: pdf clean
 
-.PHONY: all compile clean compile-no-bibtex
-
-all: compile clean
-
-all-no-bibtex: compile-no-bibtex clean
-
-compile: ${DOCNAME}.tex
-	${TEXCOMPILER} ${DOCNAME}.tex
-	${BIBCOMPILER} ./components/literature/literature
-	${TEXCOMPILER} ${DOCNAME}.tex
-	${TEXCOMPILER} ${DOCNAME}.tex
-
-compile-no-bibtex:
-	${TEXCOMPILER} ${DOCNAME}.tex
-	${TEXCOMPILER} ${DOCNAME}.tex
+pdf:
+	"pdflatex.exe" $(FILE).tex
+	"pdflatex.exe" $(FILE).tex
+	"bibtex.exe" $(FILE)
+	"pdflatex.exe" $(FILE).tex
 
 clean:
-	find . -type f -name '*.(aux|dvi|aux|toc|lof|lot|out|bbl|blg|xmpi|synctex.gz)' -delete
+	for /r %%i in (*.aux *.log *.bbl *.blg *.toc *.lof *.lot *.out *.gz) do del "%%i"
