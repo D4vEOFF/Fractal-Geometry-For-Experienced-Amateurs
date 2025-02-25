@@ -1,7 +1,6 @@
 - Obrázek 1.15 .. vyřešit zarovnání obrázků
-- Doplnit informaci, že je-li A  podmn. B, pak dim A <= dim B (dimenze je monotónní množinavá funkce) + info k výpočtu dimenze kruhu
-- Opravit na Bezikovič
-- Lineárně algebraická dimeze = dimenze celého prostoru
+- Doplnit informaci, že je-li A  podmn. B, pak dim A <= dim B (dimenze je monotónní množinová funkce) + info k výpočtu dimenze kruhu
+- Lineárně algebraická dimenze = dimenze celého prostoru
 - opravit "...ve většině STANDARDNÍCH případů splývají"
 - refinement = zjemnění
 - smazat "LIBOVOLNÝMI ot. mn."
