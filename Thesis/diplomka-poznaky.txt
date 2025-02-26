@@ -1,10 +1,6 @@
 - Obrázek 1.15 .. vyřešit zarovnání obrázků
 - Doplnit informaci, že je-li A  podmn. B, pak dim A <= dim B (dimenze je monotónní množinová funkce) + info k výpočtu dimenze kruhu
 - Lineárně algebraická dimenze = dimenze celého prostoru
-- opravit "...ve většině STANDARDNÍCH případů splývají"
-- refinement = zjemnění
-- smazat "LIBOVOLNÝMI ot. mn."
-- vysvětlit pokrytí a zjemnění
 - překreslit obrázek u topologické dimenze (čtverec), str. 19 
 
 Dimenze: kniha Ryszard Engelking: General Topology

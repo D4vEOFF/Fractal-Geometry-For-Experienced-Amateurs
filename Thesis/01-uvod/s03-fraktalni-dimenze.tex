@@ -57,12 +57,12 @@ Toto je jeden z možných způsobů, jak lze chápat koncept dimenze. Jednoducho
     \caption{Hodnoty dimenze $d$ pro různé útvary.}
     \label{table:eukleides-dimenze}
 \end{table}
-Dimenze v tomto pojetí skutečně dává dobrý smysl. Pro ``klasické'' geometrické objekty vychází dimenze vždy celočíselně.\par
+Dimenze v tomto pojetí skutečně dává dobrý smysl. Pro "klasické" geometrické objekty vychází dimenze vždy celočíselně.\par
 Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\footnote{Někdy se též nazývá \emph{Kolmogorovova dimenze} nebo \emph{Hausdoffova-Besikovičova dimenze}. Je pojmenována po německém matematikovi \name{Felixi Hausdorffovi} (1869--1942) a ruských matematicích \name{Andreji Kolmogorovovi} (1903--1987) a \name{Abramovi Besikovičovi} (1891--1970).}. Existuje více způsobů její definice. Jedna z nich, které se dále budeme držet, se v anglicky psané literatuře nazývá \emph{"box-counting dimension"}, odkud plyne i značení $\dimB$. Pro útvar $F$ (formálně vzato množinu bodů) definujeme 
 \begin{equation}\label{eq:fraktalni-dimenze}
     \dimB{F}=\lim_{\varepsilon\to 0^+}{\dfrac{\ln{N_\varepsilon(F)}}{\ln{\left(\dfrac{1}{\varepsilon}\right)}}}.
 \end{equation}
-(Převzato z \cite[str. 93]{Zelinka2006} a \cite[str. 28]{Falconer2014}.) Výraz $1/\varepsilon$ zde představuje faktor podobnosti jako původní $k$ (samotné $\varepsilon$ tak hraje roli měřítka), avšak největší rozdíl zde představuje zkoumání ``limitního chování'' daného výrazu.
+(Převzato z \cite[str. 93]{Zelinka2006} a \cite[str. 28]{Falconer2014}.) Výraz $1/\varepsilon$ zde představuje faktor podobnosti jako původní $k$ (samotné $\varepsilon$ tak hraje roli měřítka), avšak největší rozdíl zde představuje zkoumání "limitního chování" daného výrazu.
 \begin{example}[Fraktální dimenze úsečky]\label{ex:fraktalni-dimenze-usecka}
     Začněme asi nejednodušším příkladem výpočtu fraktální dimenze, a to u úsečky (označme $\ell$). Představme si, že úsečku \emph{jednotkové délky} rozdělíme na $N_\varepsilon(\ell)=n$ shodných dílů. Pak měřítko libovolného dílu je
     \[\varepsilon=\dfrac{1}{n}=n^{-1}.\]
@@ -131,33 +131,35 @@ Udělejme si nyní menší souhrn a porovnání dosavadně získaných výsledk�
     \caption{Porovnání fraktálních dimenzí $d_k$ různých objektů.}
     \label{table:fraktaly-eukleides-dimenze}
 \end{table}
-Můžeme si všimnout, že zatímco u ``klasických'' objektů vychází fraktální dimenze \emph{celočíselná}, u (zmíněných) fraktálů vychází \emph{neceločíselně}, ba dokonce i iracionálně.
+Můžeme si všimnout, že zatímco u "klasických" objektů vychází fraktální dimenze \emph{celočíselná}, u (zmíněných) fraktálů vychází \emph{neceločíselně}, ba dokonce i iracionálně.
 
 \subsection{Topologická dimenze}\label{subsec:topologicka-dimenze}
 
-Výsledky z předešlé části \ref{subsec:dimenze-fraktalu} se můžou zdát poněkud překvapující. Jak je vůbec možné, že dimenze nemusí vycházet nutně celočíselná? Ač se to možná zdá jako nesmyslný výsledek, je třeba si uvědomit, jak vlastně koncept dimenze chápeme. Na jednu stranu na ni lze nahlížet jako na mocninu ``s níž se zvyšuje'' obsah/objem tělesa. Naopak čtenář znalý lineární algebry si možná vzpomene, že v této matematické disciplíně se na dimenzi nahlíží jako na \emph{mohutnost libovolné báze daného vektorového prostoru}, která naopak vychází vždy pouze celočíselně, avšak nelze s ní dobře pracovat právě např. u objektů, jako jsou fraktály. \todo{Ověřit}
+Výsledky z předešlé části \ref{subsec:dimenze-fraktalu} se můžou zdát poněkud překvapující. Jak je vůbec možné, že dimenze nemusí vycházet nutně celočíselná? Ač se to možná zdá jako nesmyslný výsledek, je třeba si uvědomit, jak vlastně koncept dimenze chápeme. Na jednu stranu na ni lze nahlížet jako na mocninu "s níž se zvyšuje" obsah/objem tělesa. Naopak čtenář znalý lineární algebry si možná vzpomene, že v této matematické disciplíně se na dimenzi nahlíží jako na \emph{mohutnost libovolné báze daného vektorového (pod)prostoru}, která naopak vychází vždy pouze celočíselně, avšak nelze s ní dobře zachytit hlubší detail geometrie u objektů, jako jsou právě fraktály.
 
-Tím se dostáváme ještě k jednomu typu dimenzí, a to tzv. \emph{topologické dimenze}. Ty totiž daleko více odpovídají našemu intuitivnímu chápání tohoto pojmu, neboť se vždy jedná o celé číslo, jak ho známe ze školní geometrie. Existuje více topologických dimenzí\footnote{Jiným příkladem takové dimenze je \emph{induktivní dimenze}.}, které si, co do definice, obecně nejsou ekvivalentní, ačkoliv ve většině případů splývají. My se zde pro ilustraci podíváme na tzv. \emph{Lebesgueovu pokrývací dimenzi} (dále jen již ``topologickou dimenzi'') pojmenovanou po francouzském matematikovi \name{Henri Lebesgueovi} (1875--1941). Myšlenka definice je založena na pokrývání objektu (formálně vzato \emph{množiny bodů}) tzv. \emph{otevřenými množinami}.\footnote{Otevřená množina je zobecnění pojmu otevřeného intervalu reálných čísel. Neformálně řečeno je to taková množina $X$, kde pro každý její bod $x\in X$ patří do této množiny i nějaké $\varepsilon$-okolí tohoto bodu (patří do ní i body, které jsou ``dostatečně blízko'').} Formální definici si zde v rámci zachování jednoduchosti odpustíme, avšak pro hlubší matematický základ si dovolím čtenáře odkázat např. na knihu \cite{Engelking1989}.
+Tím se dostáváme ještě k jednomu typu dimenzí, a to tzv. \emph{topologické dimenze}. Ty totiž daleko více odpovídají našemu intuitivnímu chápání tohoto pojmu, neboť se vždy jedná o celé číslo, jak ho známe ze školní geometrie. Existuje více topologických dimenzí\footnote{Jiným příkladem takové dimenze je \emph{induktivní dimenze}.}, které si, co do definice, obecně nejsou ekvivalentní, ačkoliv ve většině standardních případů splývají. My se zde pro ilustraci podíváme na tzv. \emph{Lebesgueovu pokrývací dimenzi} (dále jen již "topologickou dimenzi") pojmenovanou po francouzském matematikovi \name{Henri Lebesgueovi} (1875--1941). Myšlenka definice je založena na pokrývání objektu (formálně vzato \emph{množiny bodů}) tzv. \emph{otevřenými množinami}.\footnote{Otevřená množina je zobecnění pojmu otevřeného intervalu reálných čísel. Neformálně řečeno je to taková množina $X$, kde pro každý její bod $x\in X$ patří do této množiny i nějaké $\varepsilon$-okolí tohoto bodu (patří do ní i body, které jsou "dostatečně blízko").} Formální definici si zde v rámci zachování jednoduchosti odpustíme, avšak pro hlubší matematický základ si dovolím čtenáře odkázat např. na knihu \cite{Engelking1989}.
 
-Obecně množina $X$ má topologickou dimenzi $n$, pokud danou množinu nelze pokrýt\footnote{Formálněji to znamená, že $A_1,\dots,A_n$ jsou otevřené množiny, takové, že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} lib. otevřenými množinami, tak, že pro každé podpokrytí $\mathcal{U}$ \todo{Jak přeložit slovo "refinement"?} tohoto pokrytí platí, že každý jeho bod $x$ je obsažen v průniku nejvýše $n+1$ množin $\mathcal{U}$.
+Obecně množina $X$ má topologickou dimenzi $\dimL{X}=n$, pokud $n$ je nejmenší číslo, takové, že pro každé pokrytí otevřenými množinami\footnote{Formálněji to znamená, že $A_1,\dots,A_n$ jsou otevřené množiny, takové, že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} $\mathcal{U}$ existuje zjemnění\footnote{Zjemněním pokrytí $\mathcal{U}$ nazýváme takové (pod)pokrytí $\mathcal{U}^\prime$ množiny $X$, kde každá množina $A_i^\prime\in\mathcal{U}^\prime$ je \emph{podmnožinou} nějaké množiny $A_j$ původního pokrytí $\mathcal{U}$.} $\mathcal{U}^\prime$, v němž každý bod $x\in X$ leží v průniku nejvýše $n+1$ množin pokrytí $\mathcal{U}$.
 
-Tuto ideu si zkusmíme přiblížit na příkladu topologické dimenze úsečky (viz obrázek \ref{fig:usecka-podpokryti}).
+% Obecně množina $X$ má topologickou dimenzi $\dimL{X}=n$, pokud danou množinu nelze pokrýt\footnote{Formálněji to znamená, že $A_1,\dots,A_n$ jsou otevřené množiny, takové, že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} lib. otevřenými množinami, tak, že pro každé zjemnění $\mathcal{U}$ tohoto pokrytí platí, že každý jeho bod $x$ je obsažen v průniku nejvýše $n+1$ množin $\mathcal{U}$.
+
+Tuto ideu si zkusmíme přiblížit na příkladu topologické dimenze úsečky (viz obrázek \ref{fig:usecka-zjemneni}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-usecka-pokryti-1.pdf}\\\qquad\\
     \includegraphics[scale=\normalipe]{ch01-usecka-pokryti-2.pdf}\\\qquad\\
     \includegraphics[scale=\normalipe]{ch01-usecka-pokryti-3.pdf}\\\qquad\\
     \caption{Různé možnosti (pod)pokrytí úsečky.}
-    \label{fig:usecka-podpokryti}
+    \label{fig:usecka-zjemneni}
 \end{figure}
-Pro libovolné pokrytí lze ukázat, že každý bod je obsažen v průniku maximálně \emph{dvou množin}, tedy topologická dimenze úsečky je $1$. Podobně např. pro čtverec lze dojít k závěru, že pro každé podpokrytí nějakého pokrytí je každý jeho bod obsažen v průniku maximálně \emph{tří množin}, tedy jeho topologická dimenze je 2, jak bychom očekávali (viz obrázek \ref{fig:ctverec-podpokryti}).
+Pro libovolné pokrytí lze ukázat, že každý bod je obsažen v průniku maximálně \emph{dvou množin}, tedy topologická dimenze úsečky je $1$. Podobně např. pro čtverec lze dojít k závěru, že pro každé podpokrytí nějakého pokrytí je každý jeho bod obsažen v průniku maximálně \emph{tří množin}, tedy jeho topologická dimenze je 2, jak bychom očekávali (viz obrázek \ref{fig:ctverec-zjemneni}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-ctverec-pokryti.pdf}
     \caption{Možné (pod)pokrytí čtverce.}
-    \label{fig:ctverec-podpokryti}
+    \label{fig:ctverec-zjemneni}
 \end{figure}
-Jak jsme se již přesvědčili v příkladech \ref{ex:fraktalni-dimenze-usecka}, \ref{ex:fraktalni-dimenze-ctverec} a \ref{ex:fraktalni-dimenze-trojuhelnik}, pro ``standardní'' útvary je fraktální dimenze celočíselná (ač jsou i další, které jsme neuvedli), zatímco v podsekci \ref{subsec:dimenze-fraktalu} jsme zjistili, že u fraktální dimenze fraktálů tomu tak již nutně být nemusí. Přitom však topologická dimenze fraktálních útvarů je (a dokonce musí být) celočíselná (viz tabulka \ref{table:fraktalni-topologicka-dimenze}).
+Jak jsme se již přesvědčili v příkladech \ref{ex:fraktalni-dimenze-usecka}, \ref{ex:fraktalni-dimenze-ctverec} a \ref{ex:fraktalni-dimenze-trojuhelnik}, pro "standardní" útvary je fraktální dimenze celočíselná (ač jsou i další, které jsme neuvedli), zatímco v podsekci \ref{subsec:dimenze-fraktalu} jsme zjistili, že u fraktální dimenze fraktálů tomu tak již nutně být nemusí. Přitom však topologická dimenze fraktálních útvarů je (a dokonce musí být) celočíselná (viz tabulka \ref{table:fraktalni-topologicka-dimenze}).
 \begin{table}[h]
     \centering
     \begin{tabular}{r|cc}

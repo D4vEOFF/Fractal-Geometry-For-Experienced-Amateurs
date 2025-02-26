@@ -4,7 +4,7 @@ Mandelbrot si uvědomil, že struktura pobřeží se charakterově vymyká útva
 Ve fraktální geometrii se pro tento úkaz uchytil termín \emph{soběpodobnost} (angl. \emph{self-similarity}). Útvar nazýváme soběpodobným, \textbf{pokud se sám sobě podobný v libovolném měřítku} \citep[str. 220]{Voracova2022} nebo pokud \textbf{část útvaru je podobná jeho celku}. Zmíněná podoba může být míněna přibližně (např. v případě pobřeží je nejspíše jasné, že žádné z jeho detailů nesdílejí společné rysy přesně), ale v dalších částech si předvedeme soběpodobnost \emph{přímou}.
 
 \subsection{Kochova křivka}\label{subsec:kochova_krivka}
-Jak jsme si již uvedli, za otce fraktální geometrie je považován Mandelbrot, avšak mnoho fraktálních křivek bylo známo již dříve (čtenář promine, že jsme blíže nespecifikovali termín ``fraktální'', jeho přesný význam pro nás však zatím nebude stěžejní). Jako první se podíváme na jednu z nejznámějších, kterou objevil roku \emph{1904} švédský matematik \name{Helge~von~Koch} \mbox{(1870--1924)}, dnes známou pod názvem \emph{Kochova křivka}. \citep[str. 61]{Peitgen2004} Na začátku vezmeme úsečku délky $1$. Vyjmeme prostřední (tj. druhou) třetinu a nahradíme ji dvěma úsečkami délky $1/3$, tak, aby na sebe navazovaly v krajních bodech. Tento proces následně opakujeme pro nově vzniklé úsečky. Obecně u úsečky délky $l$ nahradíme její prostřední třetinu dvojicí úseček délek $l/3$ (viz obrázek \ref{fig:kochova_vlocka_5iteraci}).
+Jak jsme si již uvedli, za otce fraktální geometrie je považován Mandelbrot, avšak mnoho fraktálních křivek bylo známo již dříve (čtenář promine, že jsme blíže nespecifikovali termín "fraktální", jeho přesný význam pro nás však zatím nebude stěžejní). Jako první se podíváme na jednu z nejznámějších, kterou objevil roku \emph{1904} švédský matematik \name{Helge~von~Koch} \mbox{(1870--1924)}, dnes známou pod názvem \emph{Kochova křivka}. \citep[str. 61]{Peitgen2004} Na začátku vezmeme úsečku délky $1$. Vyjmeme prostřední (tj. druhou) třetinu a nahradíme ji dvěma úsečkami délky $1/3$, tak, aby na sebe navazovaly v krajních bodech. Tento proces následně opakujeme pro nově vzniklé úsečky. Obecně u úsečky délky $l$ nahradíme její prostřední třetinu dvojicí úseček délek $l/3$ (viz obrázek \ref{fig:kochova_vlocka_5iteraci}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\fractalscale]{ch01-kochova-krivka-0iterace.pdf}\\\qquad\\
@@ -20,7 +20,7 @@ V první řadě si můžeme všimnout, že v každé další iteraci jsou nově 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-kochova-krivka-podobnost.pdf}
-    \caption{První iterace Kochovy křivky ``uvnitř'' druhé v menším měřítku.}
+    \caption{První iterace Kochovy křivky "uvnitř" druhé v menším měřítku.}
     \label{fig:kochova_krivka_podobnost}
 \end{figure}
 Zkusme se nyní podívat na délku křivky. V první iteraci začínáme s úsečkou délky\footnote{Mohli bychom také začít s obecnou délkou $\ell_0$, ale ta by se však při výpočtu projevila pouze jako konstantní násobek.} $1$, která se v druhé iteraci změní na křivku délky $4/3$. Není těžké si rozmyslet, že obecně v $n$-té iteraci bude délka křivky $\ell_n$ rovna
@@ -91,7 +91,7 @@ Obsah vzniklého útvaru je však již zajímavější. Pro zjednodušení výpo
     \caption{Rozdělení první iterace Kochovy vločky.}
     \label{fig:kochova_vlocka_rozdeleni}
 \end{figure}
-Výsledný obsah se tedy pokusíme vyjádřit relativně vůči \emph{obsahům daných trojúhelníků}, na něž jsme obrazec rozdělili, a pak jej pouze přepočítáme. Jejich obsah si označme $\Delta$. Tedy obsah Sierpińského trojúhelníku v nulté iteraci lze vyjádřit jako $S_0=9\Delta$. Po první iteraci vzniknou na každé ze strany 3 nové trojúhelníky o obsahu $1/9\cdot\Delta$. V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich tedy bude $3\cdot 4^{n}$. (Při výpočtu musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají ``na úsečkách'' z předešlé iterace, nikoliv té aktuální.)\par
+Výsledný obsah se tedy pokusíme vyjádřit relativně vůči \emph{obsahům daných trojúhelníků}, na něž jsme obrazec rozdělili, a pak jej pouze přepočítáme. Jejich obsah si označme $\Delta$. Tedy obsah Sierpińského trojúhelníku v nulté iteraci lze vyjádřit jako $S_0=9\Delta$. Po první iteraci vzniknou na každé ze strany 3 nové trojúhelníky o obsahu $1/9\cdot\Delta$. V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich tedy bude $3\cdot 4^{n}$. (Při výpočtu musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají "na úsečkách" z předešlé iterace, nikoliv té aktuální.)\par
 Zaměřme se nyní pouze trojúhelníky, které vznikly v aktuální iteraci (viz obrázek \ref{fig:kochova_vlocka_2iterace_nove_trojuhelniky}). Součet jejich obsahů nám dává \emph{přírůstek obsahu} v obecné $n$-té iteraci. Označíme-li tento přírůstek $B_n$, pak platí
 \[B_n=\underbrace{3\cdot 4^{n-1}}_{\text{počet úseček}}\cdot\overbrace{\left(\dfrac{1}{9}\right)^{n-1}\Delta}^{\text{obsah nových troj.}}=3\cdot\left(\dfrac{4}{9}\right)^{n-1}\Delta,\]
 kde $n\geqslant 1$.
@@ -124,7 +124,7 @@ Byl to trochu delší výpočet, nicméně jsme zjistili, že Kochova vločka m�
 % \begin{equation*}
 %     S_1=\dfrac{\sqrt{3}}{4}+3\cdot\dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3}\right)^2.
 % \end{equation*}
-% V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich bude $3\cdot 4^n$ (při výpočtu však musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají ``na úsečkách'' z předešlé iterace, nikoliv té aktuální, viz obrázek \ref{fig:kochova_vlocka_2iterace_nove_trojuhelniky}).
+% V každé další iteraci vzniknou z jedné úsečky 4 nové. Obecně po $n$ iteracích jich bude $3\cdot 4^n$ (při výpočtu však musíme počítat s o jedna nižší mocninou, neboť trojúhelníky vznikají "na úsečkách" z předešlé iterace, nikoliv té aktuální, viz obrázek \ref{fig:kochova_vlocka_2iterace_nove_trojuhelniky}).
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[scale=\fractalscale]{ch01-kochova-vlocka-2iterace-nove-trojuhelniky.pdf}
