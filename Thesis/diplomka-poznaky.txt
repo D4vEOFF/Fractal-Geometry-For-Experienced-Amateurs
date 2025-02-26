@@ -3,4 +3,6 @@
 - Lineárně algebraická dimenze = dimenze celého prostoru
 - překreslit obrázek u topologické dimenze (čtverec), str. 19 
 
+- Přidat obsahu Kochovy vločky i variantu výpočtu pomocí sestavení rekurentní rovnice.
+
 Dimenze: kniha Ryszard Engelking: General Topology
