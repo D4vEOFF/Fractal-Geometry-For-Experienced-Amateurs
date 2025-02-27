@@ -1,5 +1,16 @@
 # Záznam změn
 
+## 27. 2. 2025
+- Rozšířena sekce *"Pojem sigma-algebra a její vlastnosti"*
+- Přidána sekce *"Míra"*.
+
+## 26. 2. 2025
+- Přidány úvodní odstavce kapitoly č. 2 (*Teorie míry*)
+- Přidána sekce *"Pojem sigma-algebra a její vlastnosti"*
+
+## 25. 2. 2025
+- Upraveno vysvětlení topologické dimenze (Lebesgueova pokrývací dimenze)
+
 ## 9. 1. 2024
 - Doplněny chybějící reference v sekci *"Fraktální dimenze"*
 
