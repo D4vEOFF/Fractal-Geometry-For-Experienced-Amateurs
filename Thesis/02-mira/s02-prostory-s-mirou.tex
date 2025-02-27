@@ -7,17 +7,18 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
 \subsection{$\sigma$-algebra}\label{subsec:sigma-algebra}
 
 \begin{definition}[$\sigma$-algebra]\label{def:sigma-algebra}
-    Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je $\sigma$-algebra na množině $X$, pokud:
+    Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra} na množině $X$, pokud:
     \begin{enumerate}[label=(\roman*)]
         \item\label{def:sigma-algebra-podm1} $X\in\mathcal{A}$,
         \item\label{def:sigma-algebra-podm2} $\forall A\in X: A\in\mathcal{A}\implies X\setminus A\in\mathcal{A}$,
-        \item\label{def:sigma-algebra-podm3} $\forall i\in\N: A_i\in\mathcal{A}\implies\bigcup_{i=1}^\infty A_i\in\mathcal{A}$.
+        \item\label{def:sigma-algebra-podm3} pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcup_{i=1}^\infty A_i\in\mathcal{A}$.
     \end{enumerate}
 \end{definition}
 
 \begin{example}
+    Jednoduché příklady $\sigma$-algeber:
     \begin{itemize}
-        \item Triviálními příklady $\sigma$-algeber jsou množiny $\emptyset$, $\powset{X}$ a $\set{\emptyset,X}$ pro libovolnou množinu $X$.
+        \item Triviálními příklady $\sigma$-algeber jsou množiny $\emptyset$, $\powset{X}$ a~$\set{\emptyset,X}$ pro libovolnou množinu $X$.
         \item Pro konečnou množinu $X=\set{a,b,c,d}$ je jednou možnou $\sigma$-algebrou systém množin
         \[\Sigma=\set{\emptyset,\set{a,b},\set{c,d},\set{a,b,c,d}}.\]
     \end{itemize}
@@ -29,9 +30,10 @@ Než vyslovíme něco dalšího o~$\sigma$-algebrách a jejich významu, podív�
     Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Pak platí:
     \begin{enumerate}[label=(\roman*)]
         \item $\emptyset\in\mathcal{A}$,
-        \item $\forall i\in\N: A_i\in\mathcal{A}\implies\bigcap_{i=1}^\infty A_i\in\mathcal{A}$,
-        \item $\forall i\leqslant n: A_i\in\mathcal{A}\implies\bigcup_{i=1}^n A_i\in\mathcal{A}\land\bigcap_{i=1}^n A_i\in\mathcal{A}$ pro $n\in\N$,
-        \item $A,B\in\mathcal{A}\implies A\setminus B\in\mathcal{A}$.
+        \item pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcap_{i=1}^\infty A_i\in\mathcal{A}$,
+        \item pro všechny množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ platí
+        \[\bigcup_{i=1}^n A_i\in\mathcal{A}\land\bigcap_{i=1}^n A_i\in\mathcal{A}\],
+        \item $\forall A,B\in\mathcal{A}\implies A\setminus B\in\mathcal{A}$.
     \end{enumerate}
 \end{theorem}
 
@@ -40,9 +42,9 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
     Mějme $\sigma$-algebru $\mathcal{A}$ na množině $X$.
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Z podmínky \ref{def:sigma-algebra-podm1} definice \ref{def:sigma-algebra} víme, že $X\in\mathcal{A}$ a z podmínky \ref{def:sigma-algebra-podm2} tedy plyne $X\setminus X=\emptyset\in\mathcal{A}$.
-        \item Mějme množiny $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$. Společně s~využitím De Morganových zákonů plyne následující:
+        \item Mějme množiny $A_1,A_2,\ldots\in\mathcal{A}$. Společně s~využitím De Morganových zákonů plyne následující:
         \[\bigcap\limits_{i=1}^\infty A_i=\overbrace{X\setminus\underbrace{\bigcup\limits_{i=1}^\infty \overbrace{(X\setminus A_i)}^{\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm2}}}}_{\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm3}}}}^\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm2}}\in\mathcal{A}.\]
-        \item Nechť jsou dány množiny $A_1,A_2,\dots,A_n$, kde $A_i\in\mathcal{A}$ pro každé $i\leqslant n$. Když pro každé $j>n$ položíme $A_j=\emptyset$, pak platí
+        \item Nechť jsou dány množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$. Když pro každé $j>n$ položíme $A_j=\emptyset$, pak platí
         \[\bigcup\limits_{i=1}^n A_i=\bigcup\limits_{i=1}^\infty A_i\in\mathcal{A}\]
         a podobně pro $\bigcap_{i=1}^n A_i\in\mathcal{A}$ podle předešlého bodu.
         \item Pro libovolné množiny $A,B\in\mathcal{A}$ platí
@@ -52,13 +54,25 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
 
 \subsection{Míra}\label{subsec:mira}
 
-V tuto chvíli máme již vše potřebné k~zavedení pojmu míra, resp. \emph{prostor s~mírou}.
+V tuto chvíli máme již vše potřebné k~zavedení pojmu míra, resp. prostor s~mírou.
 \begin{definition}[Prostor s~mírou]\label{def:prostor-s-mirou}
-    Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá míra na $\mathcal{A}$, pokud platí:
+    Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra} na $\mathcal{A}$, pokud platí:
     \begin{enumerate}[label=(\roman*)]
         \item $\mu(\emptyset)=0$,
-        \item pro množiny $A_1,A_2,\dots$ po dvou disjunktní, kde $A_i\in\mathcal{A}$ pro všechna $i\in\N$, platí:
-        \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\text{\rightnote{$\sigma$-aditivita}}\]
+        \item pro množiny $A_1,A_2,\ldots\in\mathcal{A}$ po dvou disjunktní je
+        \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\mathrightnote{$\sigma$-aditivita}\]
     \end{enumerate}
-    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme prostor s~mírou.
+    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}.
 \end{definition}
+
+Vzhledem k tomu, co míra reprezentuje (tj. zobecnění délky, obsahu, objemu), jsou tyto požadavky intuitivně dosti smysluplné.
+
+\begin{example}
+    Příklady prostorů s mírou:
+    \begin{itemize}
+        \item Asi pro nás nejtypičtější způsob, jak měřit "velikost" množiny, je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s mírou $(X,\powset{X},\mu)$, kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}.
+        \item Zobrazení přiřazující náhodnému jevu pravděpodobnost je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a $\mathcal{F}\subseteq\powset{\Omega}$, pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
+        \[\mathsf{P}(A)=\dfrac{|A|}{|\Omega|}\]
+        je mírou na $\mathcal{F}$. Speciálně $\mathsf{P}(\Omega)=1$.
+    \end{itemize}
+\end{example}
