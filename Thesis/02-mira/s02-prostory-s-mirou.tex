@@ -1,6 +1,6 @@
-\section{Prostory s mírou}\label{sec:prostory-s-mirou}
+\section{Prostory s~mírou}\label{sec:prostory-s-mirou}
 
-Jak již bylo zmíněno v úvodu, klíčovým pojmem v této kapitole (a pro studium fraktálů obecně) je takzvaná \emph{míra}. Ta pro nás představuje obecný způsob, jak můžeme množinám přiřadit v jistém smyslu "velikost". Konkrétněji, byť vágně, lze říci, že sestává-li množina z konečného nebo spočetného množství "rozumných" částí, pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny, kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
+Jak již bylo zmíněno v~úvodu, klíčovým pojmem v~této kapitole (a pro studium fraktálů obecně) je takzvaná \emph{míra}. Ta pro nás představuje obecný způsob, jak můžeme množinám přiřadit v~jistém smyslu "velikost". Konkrétněji, byť vágně, lze říci, že sestává-li množina z konečného nebo spočetného množství "rozumných" částí, pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny, kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
 
 Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě jiný pojem, a to tzv. \emph{$\sigma$-algebru}.
 
@@ -24,7 +24,7 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
     Sami se zkuste přesvědčit, že všechny zmíněné příklady vyhovují definici \ref{def:sigma-algebra}.
 \end{example}
 
-Než vyslovíme něco dalšího o $\sigma$-algebrách a jejich významu, podíváme se seznam některých vesměs jednoduchých pozorováních zformulovaných níže v tvrzení \ref{thm:sigma-algebra-vlastnosti}.
+Než vyslovíme něco dalšího o~$\sigma$-algebrách a jejich významu, podíváme se seznam některých vesměs jednoduchých pozorováních zformulovaných níže v~tvrzení \ref{thm:sigma-algebra-vlastnosti}.
 \begin{theorem}[Vlastnosti $\sigma$-algebry]\label{thm:sigma-algebra-vlastnosti}
     Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Pak platí:
     \begin{enumerate}[label=(\roman*)]
@@ -40,7 +40,7 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
     Mějme $\sigma$-algebru $\mathcal{A}$ na množině $X$.
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Z podmínky \ref{def:sigma-algebra-podm1} definice \ref{def:sigma-algebra} víme, že $X\in\mathcal{A}$ a z podmínky \ref{def:sigma-algebra-podm2} tedy plyne $X\setminus X=\emptyset\in\mathcal{A}$.
-        \item Mějme množiny $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$. Společně s využitím De Morganových zákonů plyne následující:
+        \item Mějme množiny $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$. Společně s~využitím De Morganových zákonů plyne následující:
         \[\bigcap\limits_{i=1}^\infty A_i=\overbrace{X\setminus\underbrace{\bigcup\limits_{i=1}^\infty \overbrace{(X\setminus A_i)}^{\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm2}}}}_{\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm3}}}}^\text{$\in\mathcal{A}$ podle \ref{def:sigma-algebra-podm2}}\in\mathcal{A}.\]
         \item Nechť jsou dány množiny $A_1,A_2,\dots,A_n$, kde $A_i\in\mathcal{A}$ pro každé $i\leqslant n$. Když pro každé $j>n$ položíme $A_j=\emptyset$, pak platí
         \[\bigcup\limits_{i=1}^n A_i=\bigcup\limits_{i=1}^\infty A_i\in\mathcal{A}\]
@@ -52,13 +52,13 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
 
 \subsection{Míra}\label{subsec:mira}
 
-V tuto chvíli máme již vše potřebné k zavedení pojmu míra, resp. \emph{prostor s mírou}.
-\begin{definition}[Prostor s mírou]\label{def:prostor-s-mirou}
+V tuto chvíli máme již vše potřebné k~zavedení pojmu míra, resp. \emph{prostor s~mírou}.
+\begin{definition}[Prostor s~mírou]\label{def:prostor-s-mirou}
     Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá míra na $\mathcal{A}$, pokud platí:
     \begin{enumerate}[label=(\roman*)]
         \item $\mu(\emptyset)=0$,
         \item pro množiny $A_1,A_2,\dots$ po dvou disjunktní, kde $A_i\in\mathcal{A}$ pro všechna $i\in\N$, platí:
         \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\text{\rightnote{$\sigma$-aditivita}}\]
     \end{enumerate}
-    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme prostor s mírou.
+    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme prostor s~mírou.
 \end{definition}
