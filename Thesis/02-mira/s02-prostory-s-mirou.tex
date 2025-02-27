@@ -4,7 +4,7 @@ Jak již bylo zmíněno v úvodu, klíčovým pojmem v této kapitole (a pro stu
 
 Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě jiný pojem, a to tzv. \emph{$\sigma$-algebru}.
 
-\subsection{Pojem $\sigma$-algebra a její vlastnosti}\label{subsec:sigma-algebra}
+\subsection{$\sigma$-algebra}\label{subsec:sigma-algebra}
 
 \begin{definition}[$\sigma$-algebra]\label{def:sigma-algebra}
     Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je $\sigma$-algebra na množině $X$, pokud:
@@ -50,3 +50,15 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
     \end{enumerate}
 \end{proof}
 
+\subsection{Míra}\label{subsec:mira}
+
+V tuto chvíli máme již vše potřebné k zavedení pojmu míra, resp. \emph{prostor s mírou}.
+\begin{definition}[Prostor s mírou]\label{def:prostor-s-mirou}
+    Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá míra na $\mathcal{A}$, pokud platí:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\mu(\emptyset)=0$,
+        \item pro množiny $A_1,A_2,\dots$ po dvou disjunktní, kde $A_i\in\mathcal{A}$ pro všechna $i\in\N$, platí:
+        \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\text{\rightnote{$\sigma$-aditivita}}\]
+    \end{enumerate}
+    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme prostor s mírou.
+\end{definition}
