@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import subprocess
 import sys
 import os
@@ -17,7 +18,6 @@ def compile_latex(main_file):
     run_command(["pdflatex", main_file], "prvního běhu pdflatex")
     
     # Spuštění bibtexu (zpracuje bibliografii)
-    # Odebere příponu .tex pro bibtex
     base_name = os.path.splitext(main_file)[0]
     run_command(["bibtex", base_name], "běhu bibtex")
     
@@ -29,7 +29,28 @@ def compile_latex(main_file):
     
     print("Kompilace proběhla úspěšně.")
 
+def cleanup_aux_files():
+    """Odstraní všechny pomocné soubory vytvořené během kompilace i z podsložek."""
+    # Seznam přípon pomocných souborů, které se mají odstranit
+    extensions = [
+        ".aux", ".log", ".bbl", ".blg", ".toc",
+        ".lof", ".lot", ".out", ".fls", ".fdb_latexmk",
+        ".synctex.gz", ".idx", ".ilg", ".ind", ".xmpi"
+    ]
+    
+    for root, dirs, files in os.walk("."):
+        for filename in files:
+            for ext in extensions:
+                if filename.endswith(ext):
+                    filepath = os.path.join(root, filename)
+                    try:
+                        os.remove(filepath)
+                        print(f"Odstraněn soubor: {filepath}")
+                    except Exception as e:
+                        print(f"Chyba při odstraňování souboru {filepath}: {e}")
+
 if __name__ == "__main__":
+    # Pokud není zadán argument, použije se výchozí název "thesis.tex".
     if len(sys.argv) > 1:
         main_file = sys.argv[1]
     else:
@@ -40,3 +61,4 @@ if __name__ == "__main__":
         sys.exit(1)
     
     compile_latex(main_file)
+    cleanup_aux_files()
