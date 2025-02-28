@@ -9,11 +9,12 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
 \begin{definition}[$\sigma$-algebra]\label{def:sigma-algebra}
     Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra} na množině $X$, pokud:
     \begin{enumerate}[label=(\roman*)]
-        \item\label{def:sigma-algebra-podm1} $X\in\mathcal{A}$,
-        \item\label{def:sigma-algebra-podm2} $\forall A\in X: A\in\mathcal{A}\implies X\setminus A\in\mathcal{A}$,
-        \item\label{def:sigma-algebra-podm3} pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcup_{i=1}^\infty A_i\in\mathcal{A}$.
+        \item\label{def:sigma-algebra-podm1} $X\in\mathcal{A}$.
+        \item\label{def:sigma-algebra-podm2} Pro každou množinu $A\in\mathcal{A}$ platí $X\setminus A\in\mathcal{A}$.
+        \item\label{def:sigma-algebra-podm3} Pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcup_{i=1}^\infty A_i\in\mathcal{A}$.
     \end{enumerate}
 \end{definition}
+\todo{Psát na konci každého bodu v definici/větě \textbf{tečku}, \textbf{čárku} nebo \textbf{středník}?}
 
 \begin{example}
     Jednoduché příklady $\sigma$-algeber:
@@ -29,11 +30,11 @@ Než vyslovíme něco dalšího o~$\sigma$-algebrách a jejich významu, podív�
 \begin{theorem}[Vlastnosti $\sigma$-algebry]\label{thm:sigma-algebra-vlastnosti}
     Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Pak platí:
     \begin{enumerate}[label=(\roman*)]
-        \item $\emptyset\in\mathcal{A}$,
-        \item pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcap_{i=1}^\infty A_i\in\mathcal{A}$,
-        \item pro všechny množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ platí
-        \[\bigcup_{i=1}^n A_i\in\mathcal{A}\land\bigcap_{i=1}^n A_i\in\mathcal{A}\],
-        \item $\forall A,B\in\mathcal{A}\implies A\setminus B\in\mathcal{A}$.
+        \item $\emptyset\in\mathcal{A}$.
+        \item Pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcap_{i=1}^\infty A_i\in\mathcal{A}$.
+        \item Pro všechny množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ platí
+        \[\bigcup_{i=1}^n A_i\in\mathcal{A}\land\bigcap_{i=1}^n A_i\in\mathcal{A}.\]
+        \item Jsou-li $A,B\in\mathcal{A}$ pak $A\setminus B\in\mathcal{A}$.
     \end{enumerate}
 \end{theorem}
 
@@ -79,3 +80,40 @@ Vzhledem k tomu, co míra reprezentuje (tj. zobecnění délky, obsahu, objemu),
 \end{example}
 
 Ve všech případech zobrazení $\mu$ v příkladu \ref{ex:mira} se lze snadno přesvědčit, že se jedná o míru, tedy že splňuje podmínky \ref{def:mira-podm1} a \ref{def:mira-podm2} uvedené v definici \ref{def:prostor-s-mirou} výše.
+
+Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
+\begin{theorem}[Vlastnosti míry]\label{thm:mira-vlastnosti}
+    Nechť $\mu$ je míra na $\sigma$-algebře $\mathcal{A}$. Pak platí následující:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{thm:mira-konecne-sjednoceni} Jsou-li množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ po dvou disjunktní, pak
+        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^{n}\mu(A_i).\]
+        \item\label{thm:mira-monotonie} Pokud $A,B\in\mathcal{A}$ a $A\subseteq B$, pak
+        \[\mu(A)\leqslant\mu(B).\mathrightnote{monotonie míry}\]
+        Navíc pokud $\mu(A)<\infty$, pak $\mu(B\setminus A)=\mu(B)-\mu(A)$.
+        \item Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je neroustoucí posloupnost množin, tj. taková, že $A_i\subseteq A_{i+1}$ pro každé $i\in\N$, pak
+        \[\lim_{i\to\infty}\mu(A_i)=\mu\left(\bigcup_{i=1}^\infty A_i\right).\]
+        \item Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je neklesající posloupnost množin, tj. taková, že $A_i\supseteq  A_{i+1}$ pro každé $i\in\N$, a navíc $\mu(A_1)<\infty$, pak
+        \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcap_{j=1}^\infty A_j\right).\]
+        \item\label{thm:mira-sigma-subaditivita} Pokud $A_1,A_2,\ldots\in\mathcal{A}$, pak
+        \[\mu\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\mu(A_i).\mathrightnote{$\sigma$-subaditivita}\]
+    \end{enumerate}
+\end{theorem}
+
+Poslední vlastnost \ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-subaditivita}. Oproti $\sigma$-aditivitě se liší tím, že u množin $A_1,A_2,\dots$ se nepožaduje, aby byly po dvou disjunktní, tzn. mohou se "překrývat". Je však intuitivně nejspíše jasné, že součtem měr všech těchto množin určitě nemůžeme získat míru větší než je míra jejich sjednocení (dané "překryvy" započítáváme v sumě vícekrát). Podobně i monotonie dává intuitivně smysl, neboť část větší množiny jistě nemůže mít větší míru než celek. Na formální stránku věci se podíváme nyní.
+\begin{proof}
+    V důkazu využijeme některé vlastnosti $\sigma$-algebry z věty \ref{thm:sigma-algebra-vlastnosti}.
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item Pokud pro každé $j>n$ položíme $A_j=\emptyset$, pak z definice míry plyne
+        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\mu\left(\bigcup_{i=1}^\infty A_i\right)\stackrel{\ref{def:mira-podm2}}{=}\sum_{i=1}^{\infty}\mu(A_i)\stackrel{\ref{def:mira-podm1}}{=}\sum_{i=1}^{n}\mu(A_i).\]
+        \item Nechť jsou dány $A,B\in\mathcal{A}$, takové, že $A\subseteq B$. Pak $B=A\cup(B\setminus A)$, přičemž $A$ a $B\setminus A$ jsou disjunktní. Tedy podle bodu \ref{def:mira-podm2} lze psát $\mu(B)=\mu(A)+\mu(B\setminus A)\geqslant\mu(A)$, protože $\mu(B\setminus A)\geqslant 0$.
+        \item Mějme nerostoucí posloupnost množin $A_1,A_2,\ldots\in\mathcal{A}$ (viz obrázek \ref{fig:nekl-posl-mnozin}).
+        \begin{figure}[h]
+            \centering
+            \includegraphics{ch02-neklesajici-posl-mnozin.pdf}
+            \caption{Neklesající posloupnost množin $A_1,A_2,\ldots$}
+            \label{fig:nekl-posl-mnozin}
+        \end{figure}
+        Definujeme posloupnost množin $B_1,B_2,\ldots$ následovně:
+        \[B_1=A_1,\;B_2=A_2\setminus A_1,\;\forall i\geqslant 2: B_i=A_i\setminus A_{i-1}.\]
+    \end{enumerate}
+\end{proof}
