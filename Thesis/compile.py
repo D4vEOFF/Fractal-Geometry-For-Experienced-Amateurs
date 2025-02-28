@@ -2,6 +2,7 @@
 import subprocess
 import sys
 import os
+import argparse
 
 def run_command(command, description):
     """Spustí daný příkaz a při chybě vypíše chybovou hlášku."""
@@ -50,15 +51,21 @@ def cleanup_aux_files():
                         print(f"Chyba při odstraňování souboru {filepath}: {e}")
 
 if __name__ == "__main__":
-    # Pokud není zadán argument, použije se výchozí název "thesis.tex".
-    if len(sys.argv) > 1:
-        main_file = sys.argv[1]
-    else:
-        main_file = "diploma-thesis.tex"
+    parser = argparse.ArgumentParser(
+        description="Kompilace LaTeX dokumentu s využitím bibtexu. Pomocné soubory se smažou pouze pokud je zadán parametr --clear."
+    )
+    parser.add_argument("main_file", nargs="?", default="diploma-thesis.tex",
+                        help="Hlavní LaTeX soubor (výchozí: diploma-thesis.tex)")
+    parser.add_argument("--clear", action="store_true",
+                        help="Pokud je zadán, smaže pomocné soubory po kompilaci.")
     
-    if not os.path.exists(main_file):
-        print(f"Chyba: Soubor {main_file} nebyl nalezen.")
+    args = parser.parse_args()
+    
+    if not os.path.exists(args.main_file):
+        print(f"Chyba: Soubor {args.main_file} nebyl nalezen.")
         sys.exit(1)
     
-    compile_latex(main_file)
-    cleanup_aux_files()
+    compile_latex(args.main_file)
+    
+    if args.clear:
+        cleanup_aux_files()
