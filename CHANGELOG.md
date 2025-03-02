@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 2. 3. 2025
+- Dokončena sekce *"Prostory s mírou"*
+- Navržena struktura kapitoly 2 (*Teorie míry*)
+
 ## 27. 2. 2025
 - Rozšířena sekce *"Pojem sigma-algebra a její vlastnosti"*
 - Přidána sekce *"Míra"*.
