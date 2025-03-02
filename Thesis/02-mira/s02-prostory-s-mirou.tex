@@ -85,14 +85,14 @@ Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
 \begin{theorem}[Vlastnosti míry]\label{thm:mira-vlastnosti}
     Nechť $\mu$ je míra na $\sigma$-algebře $\mathcal{A}$. Pak platí následující:
     \begin{enumerate}[label=(\roman*)]
-        \item\label{thm:mira-konecne-sjednoceni} Jsou-li množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ po dvou disjunktní, pak
-        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^{n}\mu(A_i).\]
+        \item\label{thm:mira-aditivita} Jsou-li množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ po dvou disjunktní, pak
+        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^{n}\mu(A_i).\mathrightnote{aditivita}\]
         \item\label{thm:mira-monotonie} Pokud $A,B\in\mathcal{A}$ a $A\subseteq B$, pak
         \[\mu(A)\leqslant\mu(B).\mathrightnote{monotonie míry}\]
         Navíc pokud $\mu(A)<\infty$, pak $\mu(B\setminus A)=\mu(B)-\mu(A)$.
-        \item Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je neroustoucí posloupnost množin, tj. taková, že $A_i\subseteq A_{i+1}$ pro každé $i\in\N$, pak
+        \item\label{thm:mira-nekl-posl} Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je neklesající posloupnost množin, tj. taková, že $A_i\subseteq A_{i+1}$ pro každé $i\in\N$, pak
         \[\lim_{i\to\infty}\mu(A_i)=\mu\left(\bigcup_{i=1}^\infty A_i\right).\]
-        \item Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je neklesající posloupnost množin, tj. taková, že $A_i\supseteq  A_{i+1}$ pro každé $i\in\N$, a navíc $\mu(A_1)<\infty$, pak
+        \item\label{thm:mira-nerost-posl} Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je nerostoucí posloupnost množin, tj. taková, že $A_i\supseteq  A_{i+1}$ pro každé $i\in\N$, a navíc $\mu(A_1)<\infty$, pak
         \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcap_{j=1}^\infty A_j\right).\]
         \item\label{thm:mira-sigma-subaditivita} Pokud $A_1,A_2,\ldots\in\mathcal{A}$, pak
         \[\mu\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\mu(A_i).\mathrightnote{$\sigma$-subaditivita}\]
@@ -104,16 +104,41 @@ Poslední vlastnost \ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
     V důkazu využijeme některé vlastnosti $\sigma$-algebry z věty \ref{thm:sigma-algebra-vlastnosti}.
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Pokud pro každé $j>n$ položíme $A_j=\emptyset$, pak z definice míry plyne
-        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\mu\left(\bigcup_{i=1}^\infty A_i\right)\stackrel{\ref{def:mira-podm2}}{=}\sum_{i=1}^{\infty}\mu(A_i)\stackrel{\ref{def:mira-podm1}}{=}\sum_{i=1}^{n}\mu(A_i).\]
+        \[\mu\left(\bigcup_{i=1}^n A_i\right)=\mu\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^{\infty}\mu(A_i)=\sum_{i=1}^{n}\mu(A_i).\]
         \item Nechť jsou dány $A,B\in\mathcal{A}$, takové, že $A\subseteq B$. Pak $B=A\cup(B\setminus A)$, přičemž $A$ a $B\setminus A$ jsou disjunktní. Tedy podle bodu \ref{def:mira-podm2} lze psát $\mu(B)=\mu(A)+\mu(B\setminus A)\geqslant\mu(A)$, protože $\mu(B\setminus A)\geqslant 0$.
-        \item Mějme nerostoucí posloupnost množin $A_1,A_2,\ldots\in\mathcal{A}$ (viz obrázek \ref{fig:nekl-posl-mnozin}).
-        \begin{figure}[h]
-            \centering
-            \includegraphics{ch02-neklesajici-posl-mnozin.pdf}
-            \caption{Neklesající posloupnost množin $A_1,A_2,\ldots$}
-            \label{fig:nekl-posl-mnozin}
-        \end{figure}
+        \item Mějme neklesající posloupnost množin $A_1,A_2,\ldots\in\mathcal{A}$ (viz obrázek \ref{fig:nekl-posl-mnozin}).
         Definujeme posloupnost množin $B_1,B_2,\ldots$ následovně:
         \[B_1=A_1,\;B_2=A_2\setminus A_1,\;\forall i\geqslant 2: B_i=A_i\setminus A_{i-1}.\]
+        Je zjevné, že množiny $B_1,B_2,\dots$ jsou po dvou disjunktní a zároveň\\$\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty A_i$. Libovolnou množinu $A_n$ lze totiž zapsat jako
+        \[A_n=\bigcup_{i=1}^n B_i=\bigcup_{i=1}^n (A_i\setminus A_{i-1}).\] 
+        Podle již dokázaného bodu \ref{thm:mira-aditivita} (aditivita míry) tedy pro každé $n$ platí $\mu(A_n)=\sum_{i=1}^{n}\mu(B_i)$.
+        Celkově
+        \[\mu\left(\bigcup_{i=1}^\infty A_i\right)=\mu\left(\bigcup_{i=1}^\infty B_i\right)=\sum_{i=1}^{\infty}\mu(B_i)=\lim_{n\to\infty}\sum_{i=1}^{n}\mu(B_i)=\lim_{n\to\infty}\mu(A_n).\]
+        \item Nechť je dána nerostoucí posloupnost množin $A_1,A_2,\ldots\in\mathcal{A}$ (viz obrázek \ref{fig:nerost-posl-mnozin}). Podobně jako v předešlém bodě, i zde definujeme novou posloupnost množin $B_1,B_2,\ldots$ takto:
+        \[\forall i\in\N: B_i=A_1\setminus A_i.\]
+        Zde si můžeme všimnout, že pro každé $i$ platí $B_i\subseteq B_{i+1}$ a splňuje tak předpoklad předešlého bodu \ref{thm:mira-nekl-posl}. Dále si též lze všimnout, že dle De Morganových zákonů můžeme psát
+        \[\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty(A_1\setminus A_i)=A_1\setminus\bigcap_{i=1}^\infty A_i.\]
+        Výraz $\lim_{n\to\infty}B_n$ lze rozepsat dvěma způsoby:
+        \begin{align*}
+            \lim\limits_{j\to\infty}B_j&\stackrel{\ref{thm:mira-nekl-posl}}{=}\mu\left(\bigcup\limits_{i=1}^\infty B_i\right)=\mu\left(A_1\setminus\bigcap\limits_{i=1}^\infty A_i\right)\stackrel{\ref{thm:mira-monotonie}}{=}\mu(A_1)-\mu\left(\bigcap\limits_{i=1}^\infty A_i\right),\\
+            \lim\limits_{j\to\infty}B_j&=\lim_{j\to\infty}(A_1\setminus A_j)\stackrel{\ref{thm:mira-monotonie}}{=}\lim_{j\to\infty}(\mu(A_1)-\mu(A_j))=\mu(A_1)-\lim_{j\to\infty}\mu(A_j).
+        \end{align*}
+        Porovnáním obou rovností lze vidět, že
+        \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcap\limits_{i=1}^\infty A_i\right).\]
     \end{enumerate}
+    \begin{figure}[h]
+        \centering
+        \begin{subfigure}{0.45\textwidth}
+            \includegraphics{ch02-neklesajici-posl-mnozin.pdf}
+            \caption{Neklesající posloupnost množin}
+            \label{fig:nekl-posl-mnozin}
+        \end{subfigure}
+        \qquad
+        \begin{subfigure}{0.45\textwidth}
+            \includegraphics{ch02-nerostouci-posl-mnozin.pdf}
+            \caption{Nerostoucí posloupnost množin}
+            \label{fig:nerost-posl-mnozin}
+        \end{subfigure}
+        \caption{Ilustrace k důkazu věty \ref{thm:mira-vlastnosti}}
+    \end{figure}
 \end{proof}
