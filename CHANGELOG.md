@@ -5,7 +5,7 @@
 - Navržena struktura kapitoly 2 (*Teorie míry*)
 
 ## 27. 2. 2025
-- Rozšířena sekce *"Pojem sigma-algebra a její vlastnosti"*
+- Rozšířena sekce *"Pojem sigma-algebra"*
 - Přidána sekce *"Míra"*.
 
 ## 26. 2. 2025
