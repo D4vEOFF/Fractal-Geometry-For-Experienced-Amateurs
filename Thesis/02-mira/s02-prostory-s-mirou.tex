@@ -7,7 +7,7 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
 \subsection{$\sigma$-algebra}\label{subsec:sigma-algebra}
 
 \begin{definition}[$\sigma$-algebra]\label{def:sigma-algebra}
-    Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra} na množině $X$, pokud:
+    Nechť $X$ je libovolná množina a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra}\index{teorie míry!$\sigma$-algebra} na množině $X$, pokud:
     \begin{enumerate}[label=(\roman*)]
         \item\label{def:sigma-algebra-podm1} $X\in\mathcal{A}$.
         \item\label{def:sigma-algebra-podm2} Pro každou množinu $A\in\mathcal{A}$ platí $X\setminus A\in\mathcal{A}$.
@@ -57,13 +57,13 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
 
 V tuto chvíli máme již vše potřebné k~zavedení pojmu míra, resp. prostor s~mírou.
 \begin{definition}[Prostor s~mírou]\label{def:prostor-s-mirou}
-    Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra} na $\mathcal{A}$, pokud platí:
+    Nechť $\mathcal{A}$ je $\sigma$-algebra na množině $X$. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra}\index{teorie míry!míra} na $\mathcal{A}$, pokud platí:
     \begin{enumerate}[label=(\roman*)]
         \item\label{def:mira-podm1} $\mu(\emptyset)=0$,
         \item\label{def:mira-podm2} pro množiny $A_1,A_2,\ldots\in\mathcal{A}$ po dvou disjunktní je
         \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\mathrightnote{$\sigma$-aditivita}\]
     \end{enumerate}
-    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}.
+    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}\index{teorie míry!prostor s mírou}.
 \end{definition}
 
 Vzhledem k tomu, co míra reprezentuje (tj. zobecnění délky, obsahu, objemu), jsou tyto požadavky intuitivně dosti smysluplné.
@@ -71,7 +71,7 @@ Vzhledem k tomu, co míra reprezentuje (tj. zobecnění délky, obsahu, objemu),
 \begin{example}\label{ex:mira}
     Příklady prostorů s mírou:
     \begin{itemize}
-        \item Asi pro nás nejtypičtější způsob, jak měřit "velikost" množiny, je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s mírou $(X,\powset{X},\mu)$, kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}.
+        \item Asi pro nás nejtypičtější způsob, jak měřit "velikost" množiny, je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s mírou $(X,\powset{X},\mu)$, kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}\index{teorie míry!aritmetická míra}.
         \item Máme libovolnou množinu $X$ a $\sigma$-algebru $\mathcal{A}$. Zvolme si pevně $a\in X$. Míru libovolné množiny $A\in\mathcal{A}$ lze definovat jako $\mu(A)=\chi_A(a)$, kde $\chi_A$ je charakteristická funkce množiny $A$.
         \item Zobrazení přiřazující náhodnému jevu pravděpodobnost je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a $\mathcal{F}\subseteq\powset{\Omega}$, pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
         \[\mathsf{P}(A)=\dfrac{|A|}{|\Omega|}\]
@@ -145,4 +145,8 @@ Poslední vlastnost \ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
         \end{subfigure}
         \caption{Ilustrace k důkazu věty \ref{thm:mira-vlastnosti}}
     \end{figure}
+    (Převzato z \citep[str. 19]{Netuka2016})
 \end{proof}
+\begin{remark}
+    Předpoklad $\mu(A_1)<\infty$ ve větě \ref{thm:mira-vlastnosti} v bodě \ref{thm:mira-nerost-posl} nelze vynechat. Jednoduchý protipříklad si uvedeme v sekci \ref{sec:lebesgueova-mira}.
+\end{remark}
