@@ -1,7 +1,11 @@
 # Záznam změn
 
-## 2. 3. 2025
+## 3. 3. 2025
 - Dokončena sekce *"Prostory s mírou"*
+- Rozšířen index slov
+
+## 2. 3. 2025
+- Rozšířena sekce *"Prostory s mírou"*
 - Navržena struktura kapitoly 2 (*Teorie míry*)
 
 ## 27. 2. 2025
