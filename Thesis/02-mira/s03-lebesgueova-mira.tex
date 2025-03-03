@@ -1,8 +1,29 @@
 \section{Lebesgueova míra}\label{sec:lebesgueova-mira}
 
-V předešlé sekci \ref{sec:prostory-s-mirou} jsme se povídali o pojmu \emph{míra} obecně a podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí spočetných sjednocení útvarů, jejichž "velikost" umíme jednoduše určit. V dalším textu se omezíme pouze na množinu $\R^n$.
+\todo{Doplnit zmínku o Jordanově-Peanově obsahu}
 
-Na zmíněné myšlence je postavena definice tzv. \emph{$d$-rozměrné Lebesgueovy míry}, kdy obecnou množinu budeme pokrývat pomocí \emph{kvádrů}. Připomeňme, že obecně $n$-rozměrným kvádrem $I$ rozumíme kartézský součin \emph{intervalů} $\langle a_1,b_1\rangle,\langle a_2,b_2\rangle,\ldots,\langle a_d,b_d\rangle\subseteq\R^n$, tj.
-\[I=\prod_{i=1}^{d}\langle a_i,b_i\rangle=\langle a_1,b_1\rangle\times\langle a_2,b_2\rangle\times\dots\times\langle a_d,b_d\rangle\]
+V předešlé sekci \ref{sec:prostory-s-mirou} jsme se povídali o pojmu \emph{míra} obecně a podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů}, jejichž "velikost" umíme jednoduše určit. V dalším textu se omezíme pouze na množinu $\R^n$.
+
+Na zmíněné myšlence je postavena definice tzv. \emph{$n$-rozměrné Lebesgueovy míry}, kdy obecnou množinu budeme pokrývat pomocí \emph{kvádrů}. Připomeňme, že obecně \mbox{$n$-rozměrným} kvádrem $I$ rozumíme kartézský součin \emph{intervalů}
+\[\langle a_1,b_1\rangle,\ldots,\langle a_n,b_n\rangle\subseteq\R,\]
+tj.
+\[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle=\langle a_1,b_1\rangle\times\langle a_2,b_2\rangle\times\dots\times\langle a_n,b_n\rangle\]
 a jeho objem definujeme jako
-\[\vol^n(I)=\prod_{i=1}^{d}(b_i-a_i).\]
+\[\vol^n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
+Nyní si definujeme tzv. \emph{vnější Lebesgueovu míru}.
+\begin{definition}[Vnější Lebesgueova míra]\label{def:vnejsi-lebegueova-mira}
+    Nechť $A\subseteq\R^n$. Pak vnější $n$-rozměr\-nou Lebesgueovou mírou\index{vnější $n$-rozměrná Lebesgueova míra} $A$ je
+    \[\lambda_n^*(A)=\inf\set{\sum_{j=1}^{\infty}\vol^n(I_j)\;\middle|\;\text{$I_j$ je kvádr}\land A\subseteq\bigcup_{i=1}^\infty I_j}.\]
+\end{definition}
+Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o "velikosti" dané množiny.  Lze ihned vidět, že pro libovolnou množinu $A\subseteq\R^n$ je $\lambda_n^*(A)\in\R_0^+$, protože $\vol^n(I_j)\geqslant0$ pro každé $j$.
+\begin{example}
+    Ukažme si některé příklady výpočtů vnější Lebesgueovy míry z definice (viz \ref{def:vnejsi-lebegueova-mira}), tedy budeme hledat příslušné pokrytí dané množiny.
+    \begin{itemize}
+        \item Pro prázdnou množinu $\emptyset$ je $\lambda_n^*(\emptyset)=0$, neboť $\emptyset\subseteq\emptyset$ (tedy prázdná množina je pokrytím sebe sama) a $\vol^n(\emptyset)=0$.
+        \item Mějme libovolnou konečnou množinu $A=\set{x_1,x_2,\dots,x_n}\subseteq\R^n$. Pro každé $x_j$ stačí položit $I_j=\set{x_j}$ pro každé $1\leqslant j\leqslant n$, což je degenerovaný interval, jehož objem $\vol^n(I_j)=0$.
+        \item Pro libovolnou spočetnou množinu $A=\set{x_i\mid i\in\N}\subseteq\R^n$ je $\lambda_n^*(A)=0$. Pokrytí volíme stejně jako v předešlém bodě. Tedy např. pro $\Q\subset\R$ je $\lambda_1^*(\Q)=0$, neboť $\Q$ je spočetná.
+        \item Pro množinu reálných čísel $\R$ je $\lambda_1^*(\R)=\infty$, avšak pro 
+        \[A=\set{(x,0)\mid x\in\R}\subset\R^2\]
+        (reálná osa v $\R^2$) je $\lambda_2^*(A)=0$.
+    \end{itemize}
+\end{example}
