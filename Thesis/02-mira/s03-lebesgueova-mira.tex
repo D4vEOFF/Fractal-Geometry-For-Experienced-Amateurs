@@ -4,7 +4,7 @@
 
 V předešlé sekci \ref{sec:prostory-s-mirou} jsme se povídali o pojmu \emph{míra} obecně a podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů}, jejichž "velikost" umíme jednoduše určit. V dalším textu se omezíme pouze na množinu $\R^n$.
 
-Na zmíněné myšlence je postavena definice tzv. \emph{$n$-rozměrné Lebesgueovy míry}, kdy obecnou množinu budeme pokrývat pomocí \emph{kvádrů}. Připomeňme, že obecně \mbox{$n$-rozměrným} kvádrem\index{$n$-rouzměrný kvádr} $I$ rozumíme kartézský součin \emph{intervalů}
+Na zmíněné myšlence je postavena definice tzv. \emph{$n$-rozměrné Lebesgueovy míry}, kdy obecnou množinu budeme pokrývat pomocí \emph{kvádrů}. Připomeňme, že obecně \mbox{$n$-rozměrným} kvádrem\index{$n$-rozměrný kvádr} $I$ rozumíme kartézský součin \emph{intervalů}
 \[\langle a_1,b_1\rangle,\ldots,\langle a_n,b_n\rangle\subseteq\R,\]
 tj.
 \[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle=\langle a_1,b_1\rangle\times\langle a_2,b_2\rangle\times\dots\times\langle a_n,b_n\rangle\]
@@ -15,7 +15,7 @@ Nyní si definujeme tzv. \emph{vnější Lebesgueovu míru}.
     Nechť $A\subseteq\R^n$. Pak vnější $n$-rozměr\-nou Lebesgueovou mírou\index{vnější $n$-rozměrná Lebesgueova míra} $A$ je
     \[\lambda_n^*(A)=\inf\set{\sum_{j=1}^{\infty}\vol^n(I_j)\;\middle|\;\text{$I_j$ je kvádr}\land A\subseteq\bigcup_{i=1}^\infty I_j}.\]
 \end{definition}
-Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o "velikosti" dané množiny.  Lze ihned vidět, že pro libovolnou množinu $A\subseteq\R^n$ je $\lambda_n^*(A)\in\R_0^+$, protože $\vol^n(I_j)\geqslant0$ pro každé $j$.
+Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o "velikosti" dané množiny.  Lze ihned vidět, že pro libovolnou množinu $A\subseteq\R^n$ je $\lambda_n^*(A)\in\R_0^+$, protože $\vol^n(I_j)\geqslant0$ pro každé $j\in\N$.
 \begin{example}\label{ex:lebegueova-mira-trivialni-priklady}
     Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z definice (viz \ref{def:vnejsi-lebegueova-mira}), tedy budeme hledat příslušné pokrytí dané množiny.
     \begin{itemize}
@@ -56,6 +56,11 @@ Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o "velikost
     \end{itemize}
     Z platnosti obou nerovností tedy máme, že $\lambda_1^*(I)=b-a$.
 \end{example}
+\begin{remark}
+    Vraťme se na chvíli k větě \ref{thm:mira-vlastnosti} o vlastnostech míry, konkrétně bod \ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$, tzn. $\lambda_n^*(A_j)=\lambda_n^*(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme, že
+    \[\bigcap_{i=1}^\infty A_i=\emptyset,\]
+    nicméně lze vidět, že zatímco $\lim_{j\to\infty}\mu(A_j)=\infty$, tak $\mu(\bigcap_{i=1}^\infty A_i)=0$.
+\end{remark}
 
 Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a \ref{ex:lebegueova-mira-delka-intervalu} můžeme vidět, že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V případě intervalu odpovídá jeho délce, v případě diskrétní množiny je nulová a podobně např. pro obdélník lze ukázat, že odpovídá jeho obsahu, popř. pro kvádr jeho objemu.
 
@@ -63,9 +68,13 @@ Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle, kdy js
 
 Bohužel pro libovolně zvolenou množinu $X$ a $\sigma$-algebru $\mathcal{A}$ v případě vnější Lebesgueovy míry obecně neplatí vlastnost aditivity, tedy existují množiny $A,B\in\mathcal{A}$, takové, že
 \[\lambda_n^*(A\cup B)\neq\lambda_n^*(A)+\lambda_n^*(B).\]
-Příklad takových množin využívá např. takzvaná \emph{Vitaliho konstrukce}, se kterou přišel italský matematik \name{Giuseppe Vitali} (1875--1932) roku 1905, využívající invariance vnější Lebesgueovy míry vůči posunutí, tzn. $\lambda_n^*(x+A)=\lambda_n^*(A)$. \cite{OConnor2025} V rámci tohoto textu se jí zde zabývat nebudeme, avšak pro zájemce doporučuji zdroje \citep[str. 3]{Lukes2013} a \cite{Verner2025}, kde je tato konstrukce podrobněji rozepsána.
+Příklad takových množin využívá např. takzvaná \emph{Vitaliho konstrukce}\index{Vitaliho konstrukce}, se kterou přišel italský matematik \name{Giuseppe Vitali} (1875--1932) roku 1905, využívající invariance vnější Lebesgueovy míry vůči posunutí, tzn. $\lambda_n^*(x+A)=\lambda_n^*(A)$. \cite{OConnor2025} V rámci tohoto textu se jí zde zabývat nebudeme, avšak pro zájemce doporučuji zdroje \citep[str. 3]{Lukes2013} a \cite{Verner2025}, kde je tato konstrukce podrobněji rozepsána.
 
-Je tedy potřeba se omezit na takové množiny, kde je $\lambda_n^*$ aditivní.
-% \begin{definition}[Lebesgueovská měřitelnost]
-    
-% \end{definition}
+Je tedy potřeba se omezit na takové množiny, kde je $\lambda_n^*$ aditivní. Existuje více způsobů, jak lze charakterizovat takové množiny, avšak my si zde uvedeme způsob, se kterým přišel řecký matematik \name{Constantin Carathéodory} (1873--1950).
+\begin{definition}[Lebesgueovská měřitelnost]\label{def:lebesgueovska-meritelnost}
+    Množinu $A\subseteq\R^n$ nazveme (lebesgueovsky) měřitelnou\index{lebesgueovsky měřitelná množina}, pokud pro každou množinu $G$ platí
+    \[\lambda_n^*(G)=\lambda_n^*(A\cap G)+\lambda_n^*(A\setminus G).\]
+    Systém všech měřitelných množin v $R^n$ značíme $\mathcal{L}^n$.  Pokud $A\in\mathcal{L}^n$, pak číslo $\lambda_n(A)=\lambda_n^*$ nazýváme $n$-rozměrnou Lebesgueovou mírou\index{$n$-rozměrná Lebesgueova míra} množiny $A$.
+\end{definition}
+
+\todo{Musí být $G$ omezená (viz porovnání knih \emph{Real Analysis} a \emph{Measure and integral})?}

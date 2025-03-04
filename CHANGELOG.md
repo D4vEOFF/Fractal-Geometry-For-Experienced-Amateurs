@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 4. 3. 2025
+- Rošířena sekce *"Lebesgueova míra"*
+
 ## 3. 3. 2025
 - Dokončena sekce *"Prostory s mírou"*
 - Rozšířen index slov
