@@ -1,8 +1,8 @@
 %%% Hlavní soubor. Zde se definují základní parametry a~odkazuje se na ostatní části. %%%
 
 %% Verze pro jednostranný tisk:
-% Okraje: levý 40mm, pravý 25mm, horní a~dolní 25mm
-% (ale pozor, LaTeX si sám přidává 1in)
+% Okraje: levý 40mm,~pravý 25mm,~horní a~dolní 25mm
+% (ale pozor,~LaTeX si sám přidává 1in)
 \setlength\textwidth{145mm}
 \setlength\textheight{247mm}
 \setlength\oddsidemargin{15mm}
@@ -10,7 +10,7 @@
 \setlength\topmargin{0mm}
 \setlength\headsep{0mm}
 \setlength\headheight{0mm}
-% \openright zařídí, aby následující text začínal na pravé straně knihy
+% \openright zařídí,~aby následující text začínal na pravé straně knihy
 \let\openright=\clearpage
 
 %% Pokud tiskneme oboustranně:
@@ -36,9 +36,9 @@
 \usepackage{textcomp}
 \usepackage{imakeidx}		% Index
 %% Nastavení indexu
-\makeindex[columns=2, title=Index]
+\makeindex[columns=2,title=Index]
 
-%% Použité kódování znaků: obvykle latin2, cp1250 nebo utf8:
+%% Použité kódování znaků: obvykle latin2,~cp1250 nebo utf8:
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \MakeOuterQuote{"}
@@ -46,16 +46,16 @@
 %%% Další užitečné balíčky (jsou součástí běžných distribucí LaTeXu)
 \usepackage{amsmath}        % rozšíření pro sazbu matematiky
 \usepackage{amsfonts}       % matematické fonty
-\usepackage{amsthm}         % sazba vět, definic apod.
+\usepackage{amsthm}         % sazba vět,~definic apod.
 \usepackage{amssymb}
 \usepackage{bbding}         % balíček s~nejrůznějšími symboly
-			    % (čtverečky, hvězdičky, tužtičky, nůžtičky, ...)
+			    % (čtverečky,~hvězdičky,~tužtičky,~nůžtičky,~...)
 \usepackage{bm}             % tučné symboly (příkaz \bm)
 \usepackage{graphicx}       % vkládání obrázků
 \usepackage{fancyvrb}       % vylepšené prostředí pro strojové písmo
 \usepackage{indentfirst}    % zavede odsazení 1. odstavce kapitoly
 \usepackage[numbers]{natbib}         % zajištuje možnost odkazovat na literaturu
-			    % stylem AUTOR (ROK), resp. AUTOR [ČÍSLO]
+			    % stylem AUTOR (ROK),~resp. AUTOR [ČÍSLO]
 \usepackage[nottoc]{tocbibind} % zajistí přidání seznamu literatury,
                             % obrázků a~tabulek do obsahu
 % \usepackage{icomma}         % inteligetní čárka v~matematickém módu

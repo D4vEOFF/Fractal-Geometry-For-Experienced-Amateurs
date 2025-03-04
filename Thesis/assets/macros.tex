@@ -1,10 +1,10 @@
 %%% Tento soubor obsahuje definice různých užitečných maker a~prostředí %%%
-%%% Další makra připisujte sem, ať nepřekáží v~ostatních souborech.     %%%
+%%% Další makra připisujte sem,~ať nepřekáží v~ostatních souborech.     %%%
 
 %%% Drobné úpravy stylu
 
-% Tato makra přesvědčují mírně ošklivým trikem LaTeX, aby hlavičky kapitol
-% sázel příčetněji a~nevynechával nad nimi spoustu místa. Směle ignorujte.
+% Tato makra přesvědčují mírně ošklivým trikem LaTeX,~aby hlavičky kapitol
+% sázel příčetněji a~nevynechával nad~nimi spoustu místa. Směle ignorujte.
 % \makeatletter
 % \def\@makechapterhead#1{
 %  {\parindent \z@ \raggedright \normalfont
@@ -23,21 +23,21 @@
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0em}
 
-% Toto makro definuje kapitolu, která není očíslovaná, ale je uvedena v~obsahu.
+% Toto makro definuje kapitolu,~která není očíslovaná,~ale je uvedena v~obsahu.
 \def\chapwithtoc#1{
 \chapter*{#1}
 \addcontentsline{toc}{chapter}{#1}
 }
 
-% Trochu volnější nastavení dělení slov, než je default.
+% Trochu volnější nastavení dělení slov,~než je default.
 \lefthyphenmin=2
 \righthyphenmin=2
 
-% Zapne černé "slimáky" na koncích řádků, které přetekly, abychom si
+% Zapne černé "slimáky" na koncích řádků,~které přetekly,~abychom si
 % jich lépe všimli.
 \overfullrule=1mm
 
-%%% Makra pro definice, věty, tvrzení, příklady, ... (vyžaduje baliček amsthm)
+%%% Makra pro definice,~věty,~tvrzení,~příklady,~... (vyžaduje baliček amsthm)
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Věta}[section]
@@ -72,12 +72,12 @@
 \hspace*{\fill}$\qedsymbol$\par\medskip
 }
 
-%%% Prostředí pro sazbu kódu, případně vstupu/výstupu počítačových
+%%% Prostředí pro sazbu kódu,~případně vstupu/výstupu počítačových
 %%% programů. (Vyžaduje balíček fancyvrb -- fancy verbatim.)
 
-\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small,~frame=single}
 
-%%% Prostor reálných čísel, přirozených čísel, ...
+%%% Prostor reálných čísel,~přirozených čísel,~...
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
