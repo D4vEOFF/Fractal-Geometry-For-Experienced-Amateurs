@@ -9,72 +9,67 @@ Na zmíněné myšlence je postavena definice tzv. \emph{$n$-rozměrné Lebesgue
 tj.
 \[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle=\langle a_1,b_1\rangle\times\langle a_2,b_2\rangle\times\dots\times\langle a_n,b_n\rangle\]
 a jeho objem\index{kvádr!objem kvádru} definujeme jako
-\[\vol^n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
+\[\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
+Lze nejspíše ihned vidět, že objem kvádru $\vol_n(I)$ je \emph{aditivní} i \textit{subaditivní}.
+
 Nyní si definujeme tzv. \emph{vnější Lebesgueovu míru}.
 \begin{definition}[Vnější Lebesgueova míra]\label{def:vnejsi-lebegueova-mira}
     Nechť $A\subseteq\R^n$. Pak vnější $n$-rozměr\-nou Lebesgueovou mírou\index{vnější $n$-rozměrná Lebesgueova míra} $A$ je
-    \[\lambda_n^*(A)=\inf\set{\sum_{j=1}^{\infty}\vol^n(I_j)\;\middle|\;\text{$I_j$ je kvádr}\land A\subseteq\bigcup_{i=1}^\infty I_j}.\]
+    \[\lambda_n^*(A)=\inf\set{\sum_{j=1}^{\infty}\vol_n(I_j)\;\middle|\;\text{$I_j$ je kvádr}\land A\subseteq\bigcup_{i=1}^\infty I_j}.\]
 \end{definition}
-Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o~"velikosti" dané množiny.  Lze ihned vidět,~že pro libovolnou množinu $A\subseteq\R^n$ je $\lambda_n^*(A)\in\R_0^+$,~protože $\vol^n(I_j)\geqslant0$ pro každé $j\in\N$.
+Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o~"velikosti" dané množiny.  Lze ihned vidět,~že pro libovolnou množinu $A\subseteq\R^n$ je $\lambda_n^*(A)\in\R_0^+$,~protože $\vol_n(I_j)\geqslant0$ pro každé $j\in\N$.
 \begin{example}\label{ex:lebegueova-mira-trivialni-priklady}
     Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z definice (viz \ref{def:vnejsi-lebegueova-mira}),~tedy budeme hledat příslušné pokrytí dané množiny.
     \begin{itemize}
-        \item Pro prázdnou množinu $\emptyset$ je $\lambda_n^*(\emptyset)=0$,~neboť $\emptyset\subseteq\emptyset$ (tedy prázdná množina je pokrytím sebe sama) a $\vol^n(\emptyset)=0$.
-        \item Mějme libovolnou konečnou množinu $A=\set{x_1,x_2,\dots,x_n}\subseteq\R^n$. Pro každé $x_j$ stačí položit $I_j=\set{x_j}$ pro každé $1\leqslant j\leqslant n$,~což je degenerovaný interval,~jehož objem $\vol^n(I_j)=0$.
+        \item Pro prázdnou množinu $\emptyset$ je $\lambda_n^*(\emptyset)=0$,~neboť $\emptyset\subseteq\emptyset$ (tedy prázdná množina je pokrytím sebe sama) a $\vol_n(\emptyset)=0$.
+        \item Mějme libovolnou konečnou množinu $A=\set{x_1,x_2,\dots,x_n}\subseteq\R^n$. Pro každé $x_j$ stačí položit $I_j=\set{x_j}$ pro každé $1\leqslant j\leqslant n$,~což je degenerovaný interval,~jehož objem $\vol_n(I_j)=0$.
         \item Pro libovolnou spočetnou množinu $A=\set{x_i\mid i\in\N}\subseteq\R^n$ je $\lambda_n^*(A)=0$. Pokrytí volíme stejně jako v~předešlém bodě. Tedy např. pro $\Q\subset\R$ je $\lambda_1^*(\Q)=0$,~neboť $\Q$ je spočetná.
         \item Pro množinu reálných čísel $\R$ je $\lambda_1^*(\R)=\infty$,~avšak pro 
         \[A=\set{(x,0)\mid x\in\R}\subset\R^2\]
         (reálná osa v~$\R^2$) je $\lambda_2^*(A)=0$.
     \end{itemize}
 \end{example}
-\begin{example}[Výpočet vnější Lebesgueovy míry intervalu]\label{ex:lebegueova-mira-delka-intervalu}
-    Jako poslední si ukážeme,~že vnější Lebesgueova míra v~případě intervalu (ať už otevřeného,~nebo uzavřeného) skutečně koresponduje s~jeho délkou,~tedy pro $I=(a,b)\subset\R$ je $\lambda_1^*(I)=b-a$. Zde je potřeba ukázat dvojici nerovností: $\lambda_1^*(I)\leqslant b-a$ a $\lambda_1^*(I)\geqslant b-a$.
-
-    Zde je potřeba dávat pozor na to,~že pokrytí,~které hledáme,~musí být spočetné. Začneme první nerovností.
-
+\begin{example}[Výpočet vnější Lebesgueovy míry kvádru]\label{ex:lebegueova-mira-objem-kvadru}
+    Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jako objemu,~tzn. pro kvádr $I=\prod_{i=1}^{n}\langle a_i,b_i\rangle$ je
+    \[\lambda_n^*(I)=\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
+    Ukážeme zvlášť,~že $\lambda_n^*(I)\leqslant \prod_{i=1}^{n}(b_i-a_i)$ a $\lambda_n^*(I)\geqslant\prod_{i=1}^{n}(b_i-a_i)$.
     \begin{itemize}
-        \item \textbf{Důkaz $\lambda_1^*(I)\geqslant b-a$.} Nechť je dána posloupnost intervalů $J_1,J_2,\ldots$,~taková,~že $I\subseteq\bigcup_{i=1}^\infty J_i$. Protože $(a,b)$ je otevřený interval,~existuje interval $I^\prime=\langle a+\varepsilon,b-\varepsilon\rangle\subset(a,b)$ pro libovolné $\varepsilon>0$.
-        
-        Nechť je tedy dáno $\varepsilon>0$. Protože však interval $\langle a+\varepsilon,b-\varepsilon\rangle$ je kompaktní množina a navíc
-        \[\langle a+\varepsilon,b-\varepsilon\rangle\subset(a,b)\subseteq\bigcup_{i=1}^\infty J_i\]
-        lze podle Heineho-Borelovy věty (viz \todo{doplnit odkaz}) vybrat z pokrytí $J_1,J_2,\ldots$ konečné podporytí,~tzn. existuje konečná posloupnost množin $J_1^\prime,J_2^\prime,\ldots,J_n^\prime$,~taková,~že
-        \[I^\prime\subseteq\bigcup_{i=1}^\infty J_i^\prime.\]
-        Z tohoto pokrytí si nyní vybereme pouze takové intervaly $J_i^\prime$,~které mají neprázdný průnik s~$I$,~tedy
-        \[J_i^\prime\cap I\neq\emptyset.\]
-        Tyto intervaly si označíme $K_1,K_2,\ldots,K_m$,~kde $m\leqslant n$. Není těžké si rozmyslet,~že $K_1,K_2,\ldots,K_m$ tvoří opět pokrytí $I^\prime$ a navíc jejich sjednocení tvoří interval,~tj.
-        \[\bigcup_{i=1}^m K_i=(L,R)\supset I^\prime.\]
-        Zároveň víme,~že $L\leqslant a+\varepsilon$ a $R\geqslant b-\varepsilon$. Z toto tedy plyne,~že
-        \[\vol^1((L,R))=\sum_{i=1}^{m}\vol^1(K_i)=L-R\geqslant (b-\varepsilon)-(a+\varepsilon)=b-a-2\varepsilon.\]
-        Celkově máme
+        \item \textbf{Důkaz $\lambda_n^*(I)\leqslant \prod_{i=1}^{n}(b_i-a_i)$.} Zvolme pokrytí $\mathcal{I}=\set{I_1,I_2,\ldots}$ kvádru $I$,~tzn. $I\subseteq\bigcup_{i=1}^\infty I_i$,~tak,~aby
+        \[\sum_{i=1}^{\infty}\vol_n(I_i)\leqslant(1+\varepsilon)\lambda_n^*(I).\]
+        pro nějaké $\varepsilon>0$. Nyní si zvolíme nové kvádry\footnote{Formálně $\mathcal{I}$ tvoří zjemnění pokrytí $\mathcal{J}$} $\mathcal{J}=\set{J_1,J_2,\ldots}$ tak,~aby pro každé $i\in\N$ platilo
+        \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
+        To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
+        \[J_i=\prod_{j=1}^{n}\left\langle a_j\sqrt[n]{1+\varepsilon},b_j\sqrt[n]{1+\varepsilon}\right\rangle.\]
+        Protože však $I$ je uzavřená a omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        \[I\subseteq\bigcup_{i=1}^m J_i.\]
+        Celkově tedy dostáváme
         \begin{align*}
-            \sum_{i=1}^{\infty}\vol^1(J_i)&\geqslant\sum_{i=1}^{n}\vol^1(J_i^\prime)\geqslant\sum_{i=1}^{m}\vol^1(K_i)\geqslant\vol^1((L,R))\\
-            &=R-L\geqslant (b-\varepsilon)-(a+\varepsilon)=b-a-2\varepsilon.
+            \vol_n(I)&\leqslant\sum_{i=1}^{m}\vol_n(J_i)\leqslant(1+\varepsilon)\sum_{i=1}^{m}\vol_n(I_i)\leqslant(1+\varepsilon)\sum_{i=1}^{\infty}\vol_n(I_i)\\
+            &\leqslant (1+\varepsilon)^2\lambda_n^*(I)
         \end{align*}
-        Tím je dokázána nerovnost $\lambda_1^*(I)\geqslant b-a$.
-        \item \textbf{Důkaz $\lambda_1^*(I)\leqslant b-a$.} Oproti předešlému výpočtu je důkaz této části velmi snadný. Samotný interval $I=(a,b)$ tvoří totiž pokrytí sebe samotného,~tzn.
-        \[\lambda_1^*(I)\leqslant\vol^1((a,b))=b-a.\]
+        pro každé $\varepsilon>0$,~což jsme chtěli.
+        \item \textbf{Důkaz $\lambda_n^*(I)\geqslant \prod_{i=1}^{n}(b_i-a_i)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s nulovým objemem.
     \end{itemize}
-    Z platnosti obou nerovností tedy máme,~že $\lambda_1^*(I)=b-a$.
+    Z kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
+    \[\lambda_n^*(I)=\prod_{i=1}^{n}(b_i-a_i).\]
 \end{example}
 \begin{remark}
-    Vraťme se na chvíli k~větě \ref{thm:mira-vlastnosti} o~vlastnostech míry,~konkrétně bod \ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$,~tzn. $\lambda_n^*(A_j)=\lambda_n^*(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme,~že
+    Vraťme se na chvíli ještě k~větě \ref{thm:mira-vlastnosti} o~vlastnostech míry,~konkrétně bod \ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$,~tzn. $\lambda_n^*(A_j)=\lambda_n^*(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme,~že
     \[\bigcap_{i=1}^\infty A_i=\emptyset,\]
-    nicméně lze vidět,~že zatímco $\lim_{j\to\infty}\mu(A_j)=\infty$,~tak $\mu(\bigcap_{i=1}^\infty A_i)=0$.
+    nicméně lze vidět,~že zatímco $\lim_{j\to\infty}\mu(A_j)=\infty$,~tak $\mu\left(\bigcap_{i=1}^\infty A_i\right)=0$.
 \end{remark}
 
-Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a \ref{ex:lebegueova-mira-delka-intervalu} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a podobně např. pro obdélník lze ukázat,~že odpovídá jeho obsahu,~popř. pro kvádr jeho objemu.
+Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a \ref{ex:lebegueova-mira-objem-kvadru} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a podobně např.~pro obdélník odpovídá jeho obsahu,~pro kvádr jeho objemu, atd.
 
-Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle,~kdy jsme zavedli pojem vnější Lebesgueovy míry (opět viz definice \ref{def:vnejsi-lebegueova-mira}) namítat,~co nás opravňuje nazývat zobrazení $\lambda_n^*$ mírou,~tj. ve smyslu definice \ref{def:prostor-s-mirou}. Jak víme,~že splňuje podmínku $\sigma$-aditivity? Na tuto otázku odpověď není zcela přímočará a vlastně není ani jednoduchá.
+Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle,~kdy jsme zavedli pojem vnější Lebesgueovy míry (opět viz definice \ref{def:vnejsi-lebegueova-mira}) namítat,~co nás opravňuje nazývat zobrazení $\lambda_n^*$ mírou,~tj. ve smyslu definice \ref{def:prostor-s-mirou}. Jak víme,~že splňuje podmínku $\sigma$-aditivity? Odpověď na tuto otázku není zcela přímočará a vlastně není ani jednoduchá.
 
 Bohužel pro libovolně zvolenou množinu $X$ a $\sigma$-algebru $\mathcal{A}$ v~případě vnější Lebesgueovy míry obecně neplatí vlastnost aditivity,~tedy existují množiny $A,B\in\mathcal{A}$,~takové,~že
 \[\lambda_n^*(A\cup B)\neq\lambda_n^*(A)+\lambda_n^*(B).\]
-Příklad takových množin využívá např. takzvaná \emph{Vitaliho konstrukce}\index{Vitaliho konstrukce},~se kterou přišel italský matematik \name{Giuseppe Vitali} (1875--1932) roku 1905,~využívající invariance vnější Lebesgueovy míry vůči posunutí,~tzn. $\lambda_n^*(x+A)=\lambda_n^*(A)$. \cite{OConnor2025} V~rámci tohoto textu se jí zde zabývat nebudeme,~avšak pro zájemce doporučuji zdroje \citep[str. 3]{Lukes2013} a \cite{Verner2025},~kde je tato konstrukce podrobněji rozepsána.
+Příklad takové množiny využívá např. takzvaná \emph{Vitaliho konstrukce}\index{Vitaliho konstrukce},~se kterou přišel italský matematik \name{Giuseppe Vitali} (1875--1932) roku 1905,~využívající invariance vnější Lebesgueovy míry vůči posunutí,~tzn. $\lambda_n^*(x+A)=\lambda_n^*(A)$. \cite{OConnor2025} V~rámci tohoto textu se jí zde zabývat nebudeme,~avšak pro zájemce doporučuji zdroje \citep[str. 3]{Lukes2013} a \cite{Verner2025},~kde je tato konstrukce podrobněji rozepsána.
 
 Je tedy potřeba se omezit na takové množiny,~kde je $\lambda_n^*$ aditivní. Existuje více způsobů,~jak lze charakterizovat takové množiny,~avšak my si zde uvedeme způsob,~se kterým přišel řecký matematik \name{Constantin Carathéodory} (1873--1950).
 \begin{definition}[Lebesgueovská měřitelnost]\label{def:lebesgueovska-meritelnost}
     Množinu $A\subseteq\R^n$ nazveme (lebesgueovsky) měřitelnou\index{lebesgueovsky měřitelná množina},~pokud pro každou množinu $G$ platí
     \[\lambda_n^*(G)=\lambda_n^*(G\cap A)+\lambda_n^*(G\setminus A).\]
-    Systém všech měřitelných množin v~$R^n$ značíme $\mathcal{L}^n$.  Pokud $A\in\mathcal{L}^n$,~pak číslo $\lambda_n(A)=\lambda_n^*$ nazýváme $n$-rozměrnou Lebesgueovou mírou\index{$n$-rozměrná Lebesgueova míra} množiny $A$.
+    Systém všech měřitelných množin v~$\R^n$ značíme $\mathcal{L}^n$.  Pokud $A\in\mathcal{L}^n$,~pak číslo $\lambda_n(A)=\lambda_n^*(A)$ nazýváme $n$-rozměrnou Lebesgueovou mírou\index{$n$-rozměrná Lebesgueova míra} množiny $A$.
 \end{definition}
-
-\todo{Musí být $G$ omezená (viz porovnání knih \emph{Real Analysis} a \emph{Measure and integral})?}
