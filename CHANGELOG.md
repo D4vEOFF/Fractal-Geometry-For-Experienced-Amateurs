@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 6. 3. 2025
+- Upraven výpočet vnější Lebesgueovy míry intervalu na vnější LM kvádru
+- Změněna pozice indexu ve značení objemu kvádru
+
 ## 4. 3. 2025
 - Rošířena sekce *"Lebesgueova míra"*
 
