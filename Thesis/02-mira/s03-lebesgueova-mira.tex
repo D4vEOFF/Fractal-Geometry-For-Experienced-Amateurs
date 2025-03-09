@@ -10,7 +10,7 @@ tj.
 \[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle=\langle a_1,b_1\rangle\times\langle a_2,b_2\rangle\times\dots\times\langle a_n,b_n\rangle\]
 a jeho objem\index{kvádr!objem kvádru} definujeme jako
 \[\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
-Lze nejspíše ihned vidět, že objem kvádru $\vol_n(I)$ je \emph{aditivní} i \textit{subaditivní}.
+Lze nejspíše ihned vidět,~že objem kvádru $\vol_n(I)$ je \emph{aditivní} i~\textit{subaditivní}.
 
 \todo{Přidat definici kvádru a~jeho objemu do sekce do značením}
 
@@ -32,9 +32,9 @@ Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o~"velikost
         (reálná osa v~$\R^2$) je $\lambda_2^*(A)=0$.
     \end{itemize}
 \end{example}
-Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jeho objemu.
+Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jeho objemu.
 \begin{proposition}\label{prop:lebegueova-mira-objem-kvadru}
-    Je-li $I\subset\R^n$ kvádr, pak $\lambda_n^*(I)=\vol_n(I)$.
+    Je-li $I\subset\R^n$ kvádr,~pak $\lambda_n^*(I)=\vol_n(I)$.
 \end{proposition}
 \begin{proof}
     Ukážeme zvlášť,~že $\lambda_n^*(I)\leqslant\vol_n(I)$ a~$\lambda_n^*(I)\geqslant\vol_n(I)$.
@@ -53,13 +53,13 @@ Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru o
             &\leqslant (1+\varepsilon)^2\lambda_n^*(I)
         \end{align*}
         pro každé $\varepsilon>0$,~což jsme chtěli.
-        \item \textbf{Důkaz $\lambda_n^*(I)\geqslant\vol_n(I)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s nulovým objemem.
+        \item \textbf{Důkaz $\lambda_n^*(I)\geqslant\vol_n(I)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s~nulovým objemem.
     \end{itemize}
     Z kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
     \[\lambda_n^*(I)=\vol_n(I).\]
 \end{proof}
 % \begin{example}[Výpočet vnější Lebesgueovy míry kvádru]\label{ex:lebegueova-mira-objem-kvadru}
-%     Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jeho objemu,~tzn. pro kvádr $I=\prod_{i=1}^{n}\langle a_i,b_i\rangle$ je
+%     Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jeho objemu,~tzn. pro kvádr $I=\prod_{i=1}^{n}\langle a_i,b_i\rangle$ je
 %     \[\lambda_n^*(I)=\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
 %     \begin{itemize}
 %         \item \textbf{Důkaz $\lambda_n^*(I)\leqslant \prod_{i=1}^{n}(b_i-a_i)$.} Zvolme pokrytí $\mathcal{I}=\set{I_1,I_2,\ldots}$ kvádru $I$,~tzn. $I\subseteq\bigcup_{i=1}^\infty I_i$,~tak,~aby
@@ -76,7 +76,7 @@ Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru o
 %             &\leqslant (1+\varepsilon)^2\lambda_n^*(I)
 %         \end{align*}
 %         pro každé $\varepsilon>0$,~což jsme chtěli.
-%         \item \textbf{Důkaz $\lambda_n^*(I)\geqslant \prod_{i=1}^{n}(b_i-a_i)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s nulovým objemem.
+%         \item \textbf{Důkaz $\lambda_n^*(I)\geqslant \prod_{i=1}^{n}(b_i-a_i)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s~nulovým objemem.
 %     \end{itemize}
 %     Z kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
 %     \[\lambda_n^*(I)=\prod_{i=1}^{n}(b_i-a_i).\]
@@ -87,7 +87,7 @@ Jako poslední si ukážeme,~že v případě kvádru $n$-rozměrného kvádru o
     nicméně lze vidět,~že zatímco $\lim_{j\to\infty}\mu(A_j)=\infty$,~tak $\mu\left(\bigcap_{i=1}^\infty A_i\right)=0$.
 \end{remark}
 
-Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a~\ref{prop:lebegueova-mira-objem-kvadru} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a~podobně např.~pro obdélník odpovídá jeho obsahu,~pro kvádr jeho objemu, atd.
+Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a~\ref{prop:lebegueova-mira-objem-kvadru} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a~podobně např.~pro obdélník odpovídá jeho obsahu,~pro kvádr jeho objemu,~atd.
 
 Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle,~kdy jsme zavedli pojem vnější Lebesgueovy míry (opět viz definice \ref{def:vnejsi-lebegueova-mira}) namítat,~co nás opravňuje nazývat zobrazení $\lambda_n^*$ mírou,~tj. ve smyslu definice \ref{def:prostor-s-mirou}. Jak víme,~že splňuje podmínku $\sigma$-aditivity? Odpověď na tuto otázku není zcela přímočará a~vlastně není ani jednoduchá.
 
@@ -101,7 +101,7 @@ Je tedy potřeba se omezit na takové množiny,~kde je $\lambda_n^*$ aditivní. 
     \[\lambda_n^*(G)=\lambda_n^*(G\cap A)+\lambda_n^*(G\setminus A).\]
     Systém všech měřitelných množin v~$\R^n$ značíme $\mathcal{L}^n$.  Pokud $A\in\mathcal{L}^n$,~pak číslo $\lambda_n(A)=\lambda_n^*(A)$ nazýváme $n$-rozměrnou Lebesgueovou mírou\index{$n$-rozměrná Lebesgueova míra} množiny $A$.
 \end{definition}
-Podmínka v definici \ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká, že množina $A$ je lebesgueovsky měřitelná, když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek \ref{fig:caratheodoryho-kriterium}).
+Podmínka v~definici \ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká,~že množina $A$ je lebesgueovsky měřitelná,~když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek \ref{fig:caratheodoryho-kriterium}).
 \begin{figure}[h]
     \centering
     \includegraphics{ch02-caratheodoryho-kriterium.pdf}
@@ -113,7 +113,7 @@ O systému $\mathcal{L}^n$ a Lebesgueově míře $\lambda_n$ lze dokázat násle
     Platí:
     \begin{enumerate}[label=(\roman*)]
         \item $(\R^n,\mathcal{L}^n)$ je měřitelný prostor.
-        \item $(\R^n,\mathcal{L}^n,\lambda_n)$ je prostor s mírou.
+        \item $(\R^n,\mathcal{L}^n,\lambda_n)$ je prostor s~mírou.
     \end{enumerate}
 \end{theorem}
-Čtenář doufám promine, že formální důkaz v případě tohoto tvrzení zcela vynecháme, nicméně "zvídavec" jej může nalézt např. v knize \citep[str. 347]{Royden2010}, kde jsou příslušné formální záležitosti rozepsány.
+Čtenář snad promine,~že formální důkaz v~případě tohoto tvrzení v~zájmu zachování stručnosti textu zcela vynecháme,~nicméně "zvídavec" jej může nalézt např. v~knize \citep[str. 347]{Royden2010},~kde jsou příslušné záležitosti rozepsány.
