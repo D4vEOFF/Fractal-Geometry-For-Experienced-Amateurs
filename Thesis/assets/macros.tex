@@ -102,6 +102,9 @@
 \DeclareMathOperator{\dimH}{dim_H}  % Hausdorffova dimenze
 
 \DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diam}{diam}
+\newcommand{\upperdimB}{\ensuremath{\overline{\dim}_B}}
+\newcommand{\lowerdimB}{\ensuremath{\underline{\dim}_B}}
 
 %%% Příkaz pro transpozici vektoru/matice
 \newcommand{\T}[1]{#1^\top}
@@ -153,7 +156,8 @@
 \renewcommand{\iff}{\Longleftrightarrow}
 
 % Metrické prostory
-\newcommand{\interior}[1]{#1^O}
+\newcommand{\interior}[1]{\ensuremath{#1^O}}
+\newcommand{\boundary}[1]{\ensuremath{\partial #1}}
 
 % Cesty
 \newcommand{\chapterpath}[1]{components/ch#1}

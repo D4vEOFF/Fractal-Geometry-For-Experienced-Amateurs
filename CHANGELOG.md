@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 9. 3. 2025
+- Rozšířena sekce *"Box-counting dimenze"*
+
 ## 6. 3. 2025
 - Upraven výpočet vnější Lebesgueovy míry intervalu na vnější LM kvádru
 - Změněna pozice indexu ve značení objemu kvádru
