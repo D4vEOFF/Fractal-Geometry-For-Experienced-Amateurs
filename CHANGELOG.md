@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 10. 3. 2025
+- Rozšířena sekce *"Box-counting dimenze"*
+
 ## 9. 3. 2025
 - Rozšířena sekce *"Box-counting dimenze"*
 
