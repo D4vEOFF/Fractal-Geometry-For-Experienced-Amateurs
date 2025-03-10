@@ -63,8 +63,62 @@ Pojďme si větu \ref{thm:ekvivalentni-def-box-counting-dimenze} nyní trochu ro
     \item Body \ref{thm:pokryti-delta-uz-koulemi} a \ref{thm:pokryti-delta-dis-ot-koulemi} říkájí, že $N_\delta(F)$ je rovno \emph{nejmenšímu počtu uzavřených koulí o poloměru $\delta$, které pokrývají $F$}, resp. \emph{nejvyšší počet disjunktních otevřených koulí, které mají střed v $F$}.
     \item Podobně body \ref{thm:pokryti-delta-kvadry} a \ref{thm:pokryti-delta-sit} tvrdí, že $N_\delta(F)$ lze ekvivalentně definovat jako pokrytí kvádry o stranách délky $\delta$, resp. počet všech kvádrů z $\delta$-sítě, které mají s $F$ neprázdný průnik.
 \end{itemize}
-\todo{Doplnit obrázek pro ilustraci věty}
+Pro představu viz obrázek \ref{fig:ilustrace-definic-bc-dimenze}.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze.pdf}
+        \caption{Množina $B=\bigcup_{i=1}^4 B_i$}
+        \label{subfig:bc-dimenze-pokryvana-mnozina}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze-delta-pokryti.pdf}
+        \caption{$\delta$-pokrytí množiny $B$ (viz definice \ref{def:box-counting-dimenze})}
+        \label{subfig:bc-dimenze-delta-pokryti}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze-pokryti-uz-koule.pdf}
+        \caption{Pokrytí uzavřenými koulemi (viz bod \ref{thm:pokryti-delta-uz-koulemi})}
+        \label{subfig:bc-dimenze-uz-koule}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze-pokryti-kvadry.pdf}
+        \caption{Pokrytí pomocí kvádrů (viz bod \ref{thm:pokryti-delta-kvadry})}
+        \label{subfig:bc-dimenze-kvadry}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze-pokryti-delta-sit.pdf}
+        \caption{$\delta$-síť (viz bod \ref{thm:pokryti-delta-sit})}
+        \label{subfig:bc-dimenze-delta-sit}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics{ch02-bc-dimenze-pokryti-ot-koule.pdf}
+        \caption{Pokrytí otevřenými po dvou disjunktními koulemi (viz bod \ref{thm:pokryti-delta-dis-ot-koulemi})}
+        \label{subfig:bc-dimenze-ot-koule}
+    \end{subfigure}
+    \caption{Ilustrace věty \ref{thm:ekvivalentni-def-box-counting-dimenze} (Inspirováno \citep[str. 29]{Falconer2014})}
+    \label{fig:ilustrace-definic-bc-dimenze}
+\end{figure}
 
-Zároveň body \ref{thm:pokryti-delta-kvadry} a \ref{thm:pokryti-delta-sit} nám dávají dobré opodstatnění názvu tohoto typu dimenze, neboť zkoumáme pokrývání daného obrazce "kostkami". Při aproximacích box-counting dimenze obrazce $F\subset\R^2$ tak lze pracovat s mřížkou čtverců o libovolné straně $\delta>0$, kdy $N_\delta(F)$ stanovíme jako počet čtverců, které se překrývají se zkoumaným obrazcem $F$.
-
-\todo{Doplnit obrázek z Wikipedie a text z Falconera str. 31.}
+Zároveň body \ref{thm:pokryti-delta-kvadry} a \ref{thm:pokryti-delta-sit} nám dávají dobré opodstatnění názvu tohoto typu dimenze, neboť v podstatě zkoumáme pokrývání daného obrazce "kostkami". Při aproximacích box-counting dimenze obrazce $F\subset\R^2$ tak lze pracovat s mřížkou čtverců o libovolné straně $\delta>0$, kdy $N_\delta(F)$ stanovíme jako počet čtverců, které se překrývají se zkoumaným obrazcem $F$. Když se tedy zpět vrátíme k otázce rozebírané v úvodu tohoto textu týkající se délky pobřeží (viz kapitola \ref{chapter:uvod_do_fraktalu}), lze jeho "fráktálnost" do jisté míry vyjádřit právě popsaným způsobem (viz obrázek \ref{fig:aproximace-delky-pobrezi-vb}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Great_Britain_Box.pdf}
+    \caption{Aproximace box-counting dimenze pobřeží Velké Británie. Převzato z Wikipedia Commons, \url{https://en.wikipedia.org/wiki/Minkowski\%E2\%80\%93Bouligand\_dimension\#/media/File:Great\_Britain\_Box.svg}. Viz též \url{https://en.wikipedia.org/wiki/Minkowski\%E2\%80\%93Bouligand\_dimension}.}
+    \label{fig:aproximace-delky-pobrezi-vb}
+\end{figure}
+Nyní se opět vrátíme k fraktálům a výpočtům jejich dimenze, čemuž jsme se věnovali již v sekci \ref{sec:fraktalni_dimenze} kapitoly \ref{chapter:uvod_do_fraktalu}, konkrétně \ref{subsec:dimenze-fraktalu}. Tentokrát však budeme postupovat přímo podle definice box-counting dimenze \ref{def:box-counting-dimenze}, tedy budeme zvlášť zkoumat horní a dolní box-counting dimenzi.
+\begin{example}[Cantorovo diskontinuum]\label{ex:cantorovo-diskontinuum}
+    Již jsme měli možnost se přesvědčit, že Cantorovo diskontinuum, označme $F$, má box-counting dimenzi $\ln{2}/\ln{3}$. Zkusme nyní výpočet zopakovat, avšak vzlášť vypočítáme $\lowerdimB{F}$ a $\upperdimB{F}$ podíváme se, zda se shodují.
+\end{example}
