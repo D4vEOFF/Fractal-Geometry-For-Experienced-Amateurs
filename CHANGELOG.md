@@ -1,5 +1,11 @@
 # Záznam změn
 
+## 11. 3. 2025
+- Rozšířena sekce *"Box-counting dimenze"*
+- Sekce *"Box-counting dimenze"* rozdělena do dvou podsekcí
+  - *"Definice a výpočet"*
+  - *"Vlastnosti"*
+
 ## 10. 3. 2025
 - Rozšířena sekce *"Box-counting dimenze"*
 
