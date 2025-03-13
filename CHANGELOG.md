@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 13. 3. 2025
+- Přidána kapitola *"Hausdorffův metrický prostor"*
+
 ## 12. 3. 2025
 - Dokončena sekce *"Box-counting dimenze"*
 
