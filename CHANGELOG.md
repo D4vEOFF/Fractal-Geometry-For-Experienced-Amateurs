@@ -1,6 +1,7 @@
 # Záznam změn
 
 ## 13. 3. 2025
+- Rozšířena sekce *"Hausdorffova míra a Hausdorffova dimenze"*
 - Přidána kapitola *"Hausdorffův metrický prostor"*
 
 ## 12. 3. 2025
