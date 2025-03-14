@@ -277,21 +277,21 @@ Poslední bod \ref{thm:stabilita-bc-dimenze} tvrzení \ref{thm:vlastnosti-bc-dim
     \end{align*}
 \end{proof}
 
-Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{lipschitzovské zobrazení} a \emph{bilipschitzovská zobrazení}\index{bilipschitzovské zobrazení}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\rho_X)$ a $(Y,\rho_Y)$,~že existuje konstanta $K>0$ a pro každé $x,y\in X$ platí
-\[\rho_Y(f(x),f(y))\leqslant K\rho_X(x,y).\]
+Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{lipschitzovské zobrazení} a \emph{bilipschitzovská zobrazení}\index{bilipschitzovské zobrazení}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\rho_1)$ a $(Y,\rho_2)$,~že existuje konstanta $K>0$, taková, že pro každé $x,y\in X$ platí
+\[\rho_2(f(x),f(y))\leqslant K\rho_1(x,y).\]
 Pokud navíc platí,~že existují konstanty $K_1,K_2>0$,~takové,~že platí
-\[K_1\rho_X(x,y)\leqslant\rho_Y(f(x),f(y))\leqslant K_2\rho_X(x,y),\]
+\[K_1\rho_1(x,y)\leqslant\rho_2(f(x),f(y))\leqslant K_2\rho_1(x,y),\]
 pak $f$ nazýváme bilipschitzovské.
 
 Než se však podíváme na samotný vztah box-counting dimenze a lipschitzovských,~resp. bilipschitzovských zobrazení,~dokážeme si jedno jednoduché\linebreak{}lemma,~které později využijeme.
 \begin{lemma}\label{lem:lipschitzovska-zobrazeni-a-bijekce}
-    Nechť $(X,\rho_X),(Y,\rho_Y)$ jsou metrické prostory a zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f^\prime}{X}{f(X)}$ je bijekce.
+    Nechť $(X,\rho_1),(Y,\rho_2)$ jsou metrické prostory a zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f^\prime}{X}{f(X)}$ je bijekce.
 \end{lemma}
 \begin{proof}
     Podle předpokladu je $f$ bilipschitzovské zobrazení,~tedy i~$f^\prime$ je bilipschitzovské,~tedy existují pro konstanty $K_1,K_2>0$,~takové,~že
-    \[K_1\rho_X(x,y)\leqslant\rho_Y(f^\prime(x),f^\prime(y))\leqslant K_2\rho_X(x,y),\;x,y\in X.\]
-    Surjektivita zobrazení $f^\prime$ je zřejmá z~její definice. Pro spor předpokládejme,~že $f^\prime$ není injektivní,~tedy existují $x,y\in X$,~taková,~že $f^\prime(x)=f^\prime(y)$. Pak
-    \[0<K_1\rho_X(x,y)\leqslant\rho_Y(f^\prime(x),f^\prime(y))=0,\]
+    \[K_1\rho_1(x,y)\leqslant\rho_2(f^\prime(x),f^\prime(y))\leqslant K_2\rho_1(x,y),\;x,y\in X.\]
+    Surjektivita zobrazení $f^\prime$ je zřejmá z~její definice. Pro spor předpokládejme,~že $f^\prime$ není injektivní,~tedy existují $x,y\in X$,~taková,~že $x\neq y$ a $f^\prime(x)=f^\prime(y)$. Pak
+    \[0<K_1\rho_1(x,y)\leqslant\rho_2(f^\prime(x),f^\prime(y))=0,\]
     což je spor.
 \end{proof}
 
