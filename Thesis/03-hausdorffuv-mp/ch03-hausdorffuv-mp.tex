@@ -1,28 +1,35 @@
 \chapter{Hausdorffův metrický prostor}\label{chapter:hausdorffuv-mp}
 
-V této kratší kapitole se podíváme na některé výsledky související s tzv. \emph{Hausdorffovým metrickým prostorem}, s nímž ještě dále setkáme. Pro připomenutí záležitostí ohledně metrických prostorů celkově doporučuji čtenáři se podívat do sekce \ref{sec:zakladni-pojmy-a-znaceni} v kapitole \ref{chapter:teorie-miry}. Pokud by čtenáře zajímaly další podrobnosti, doporučuji se podívat do knihy \citep[str. 71]{Edgar2008}.
+V této kratší kapitole se podíváme na některé výsledky související s~tzv. \emph{Hausdorffovým metrickým prostorem},~s nímž ještě dále setkáme. Pro připomenutí záležitostí ohledně metrických prostorů celkově doporučuji čtenáři se podívat do sekce \ref{sec:zakladni-pojmy-a-znaceni} v~kapitole \ref{chapter:teorie-miry}. Pokud by čtenáře zajímaly další podrobnosti,~doporučuji se podívat do knihy \citep[str. 71]{Edgar2008}.
 
 \section{Hausdorffova metrika}\label{sec:hausdorffova-metrika}
 
 Jako první se podíváme na tzv. \emph{Hausdorffovu metriku}\index{Hausdorffova metrika}.
 \begin{definition}[Hausdorffova metrika]\label{def:hausdorffova-metrika}
-    Hausdorffovou metrikou (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmet}{\powset{X}}{\langle0,\infty\rangle}$, kde pro každé $A,B\in\powset{X}$ platí
+    Hausdorffovou metrikou (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmet}{\powset{X}}{\langle0,\infty\rangle}$,~kde pro každé $A,B\in\powset{X}$ platí
     \[\hausdorffmet(A,B)=\inf\set{\delta>0\;\middle|\;A\subseteq B_\delta\;,\;B\subseteq A_\delta}.\]
 \end{definition}
 \todo{Doplnit obrázek}
-Podobně jako v případě Lebesgueovy míry (viz sekce \ref{sec:lebesgueova-mira}, definice \ref{def:lebesgueovska-meritelnost}) se i zde nabízí stejná otázka: \emph{Co nás opravňuje nazývat Hausdorffovu metriku metrikou?} Odpovědí je, že zatím nic, neboť tato definice sama o sobě neimplikuje, že $\hausdorffmet$ je metrika. V definici povolujeme totiž případ, kdy $\hausdorffmet(A,B)=\infty$ a pro příklady takových množin netřeba chodit daleko. Např. v $\R$, když budeme počítat Hausdorffovu metriku množin $\set{0}$ a $\langle 0,\infty)$, zjistíme, že $\hausdorffmet(\set{0},\langle 0,\infty))=\infty$. Podobně budeme-li počítat $\hausdorffmet(\emptyset,\set{0})$, dojdeme ke stejnému výsledku. Ovšem i v případě některých neprázdných omezených množin si lze všimnout nesrovnalostí. Např. pro množiny $(0,1)$ a $(0,1\rangle$ je Hausdorffova metrika nulová, přestože dané množiny nejsou stejné.
+Podobně jako v~případě Lebesgueovy míry (viz sekce \ref{sec:lebesgueova-mira},~definice \ref{def:lebesgueovska-meritelnost}) se i~zde nabízí stejná otázka: \emph{Co nás opravňuje nazývat\linebreak{}Hausdorffovu metriku metrikou?} Odpovědí je,~že zatím nic,~neboť tato definice sama o~sobě neimplikuje,~že $\hausdorffmet$ je metrika. V~definici povolujeme totiž případ,~kdy $\hausdorffmet(A,B)=\infty$ a pro příklady takových množin netřeba chodit daleko. Např. v~$\R$,~když budeme počítat Hausdorffovu metriku množin $\set{0}$ a $\langle 0,\infty)$,~zjistíme,~že $\hausdorffmet(\set{0},\langle 0,\infty))=\infty$. Podobně budeme-li počítat $\hausdorffmet(\emptyset,\set{0})$,~dojdeme ke stejnému výsledku. Ovšem i~v případě některých neprázdných omezených množin si lze všimnout nesrovnalostí. Např. pro množiny $(0,1)$ a $(0,1\rangle$ je Hausdorffova metrika nulová,~přestože dané množiny nejsou stejné.
 
-Pokud se však omezíme jen na některé množiny, bude $\hausdorffmet$ skutečně metrikou ve smyslu definice \todo{doplnit odkaz}. Proto se dále zaměříme pouze na takové podmnožiny $X\subseteq\R^n$, které jsou \emph{neprázdné} a \emph{kompaktní}.
+Pokud se však omezíme jen na některé množiny,~bude $\hausdorffmet$ skutečně metrikou ve smyslu definice \todo{doplnit odkaz}. Proto se dále zaměříme pouze na takové podmnožiny $X\subseteq\R^n$,~které jsou \emph{neprázdné} a \emph{kompaktní}.
 \begin{definition}[Hyperprostor]\label{def:hyperprostor}
     Systém všech neprázdných kompaktních podmnožin množiny $X$ nazýváme \emph{hyperprostor} a značíme jej $\mathbb{H}(X)$.
 \end{definition}
 \begin{theorem}\label{thm:hausdorffova-metrika-je-metrika}
-    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmet$ je metrikou na $\mathbb{H}(X)$.
+    Nechť $(X,\varrho)$ je metrický prostor,~kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmet$ je metrikou na $\mathbb{H}(X)$.
 \end{theorem}
 \begin{proof}
-    Zjevně pro každé $A,B\in\mathbb{H}(X)$ platí $\hausdorffmet(A,B)\geqslant 0$ a $\hausdorffmet(A,B)=\hausdorffmet(B,A)$. Z kompaktnosti množin $A,B$ plyne (viz věta \todo{doplnit odkaz}), že $A,B$ jsou omezené množiny, tedy $\hausdorffmet(A,B)<\infty$.
+    Zjevně pro každé $A,B\in\mathbb{H}(X)$ platí $\hausdorffmet(A,B)\geqslant 0$ a $\hausdorffmet(A,B)=\hausdorffmet(B,A)$. Z~kompaktnosti množin $A,B$ plyne (viz věta \todo{doplnit odkaz}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmet(A,B)<\infty$.
     
-    Pro $A=B$ platí, že pro každé $\delta>0$ je splňeno $A\subseteq B_\delta$ a zároveň $B\subseteq A_\delta$, tzn. $\hausdorffmet(A,B)=0$. Opačná implikace také platí. Předpokládejme, že množiny $A,B$ splňují $\hausdorffmet(A,B)=0$. Pokud $x\in A$, pak pro každé $\delta>0$ platí, že $x\in B_\delta$, tzn. $\varrho(x,B)=0$, a z uzavřenosti $B$ plyne $x\in B$. Tedy $A=B$.
+    Pro $A=B$ platí,~že pro každé $\delta>0$ je splňeno $A\subseteq B_\delta$ a zároveň $B\subseteq A_\delta$,~tzn. $\hausdorffmet(A,B)=0$. Opačná implikace také platí. Předpokládejme,~že množiny $A,B$ splňují $\hausdorffmet(A,B)=0$. Pokud $x\in A$,~pak pro každé $\delta>0$ platí,~že $x\in B_\delta$,~tzn. $\varrho(x,B)=0$,~a z~uzavřenosti $B$ plyne $x\in B$. Tedy $A\subseteq B$ a analogicky platí i~$B\subseteq A$,~tzn. $A=B$.
 
-    Jako poslední je třeba ukázat platnost trojúhelníkové nerovnosti. 
+    Jako poslední je třeba ukázat platnost trojúhelníkové nerovnosti. Mějme množiny $A,B,C\in\mathbb{H}(X)$ a $\varepsilon>0$. Pro libovolné $x\in A$ existuje $y\in B$,~takové,~že
+    \[\varrho(x,y)<\hausdorffmet(A,B)+\varepsilon.\]
+    Podobně pro $y$ existuje $z\in C$,~takové,~že
+    \[\varrho(y,z)<\hausdorffmet(B,C)+\varepsilon.\]
+    Z~toho plyne
+    \[\varrho(x,z)\leqslant\varrho(x,y)+\varrho(y,z)<\hausdorffmet(A,B)+\hausdorffmet(B,C)+2\varepsilon,\]
+    kde pravou stranu nerovnosti označme $\delta$. To znamená,~že $A\subseteq C_\delta$ a zároveň $C\subseteq A_\delta$. Tudíž
+    \[\hausdorffmet(A,C)\leqslant\hausdorffmet(A,B)+\hausdorffmet(B,C)+2\varepsilon.\]
 \end{proof}
