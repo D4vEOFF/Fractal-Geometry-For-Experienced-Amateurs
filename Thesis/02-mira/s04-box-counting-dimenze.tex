@@ -23,7 +23,7 @@ Logaritmováním a úpravou výrazu \eqref{eq:odhad-n-delta} dostaneme:
 Když porovnáme výsledek v~\eqref{eq:odvozeni-box-counting-dimenze} s~rovností \eqref{eq:fraktalni-dimenze} z~minulé kapitoly,~můžeme si všimnout,~že zde navíc figuruje člen $\ln{c}/\ln{\delta}$. Když však uvážíme limitu daného výrazu pro $\delta\to 0$,~dostaneme původní vzorec,~který jsme již viděli,~tj.
 \[\lim_{\delta\to 0}\left(\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}+\dfrac{\ln{c}}{\ln{\delta}}\right)=\lim_{\delta\to 0}\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}+\lim_{\delta\to 0}\dfrac{\ln{c}}{\ln{\delta}}=\lim_{\delta\to 0}\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}.\]
 % \begin{definition}[$\delta$-pokrytí]\label{def:delta-pokryti}
-%     Nechť $(X,\rho)$ je metrický prostor,~$F\subseteq X$ a $\delta>0$. Jestliže $\mathcal{F}=\set{F_1,F_2,\ldots}\subseteq\powset{X}$ je pokrytí $F$ a zároveň $\diam{F_j}\leqslant\delta$ pro každé $j$,~pak $\mathcal{F}$ nazýváme $\delta$-pokrytí\index{$\delta$-pokrytí} množiny $F$.
+%     Nechť $(X,\varrho)$ je metrický prostor,~$F\subseteq X$ a $\delta>0$. Jestliže $\mathcal{F}=\set{F_1,F_2,\ldots}\subseteq\powset{X}$ je pokrytí $F$ a zároveň $\diam{F_j}\leqslant\delta$ pro každé $j$,~pak $\mathcal{F}$ nazýváme $\delta$-pokrytí\index{$\delta$-pokrytí} množiny $F$.
 % \end{definition}
 Předchozí úvahu můžeme shrnout do následující definice.
 \begin{definition}[Box-counting dimenze]\label{def:box-counting-dimenze}
@@ -148,8 +148,8 @@ Podobně bychom postupovali pro rovinné obrazce.
 \begin{remark}
     Obecně množina $F$ skládající se z~$m$ disjunktních kopií sebe samotné v~měřítku $r$ má dimenzi $\dimB{F}=-\ln{m}/\ln{r}$.
 \end{remark}
-Nyní se podíváme ještě na jedno možné pojetí box-counting dimenze. Připomeňme,~že $\delta$-okolím množiny $F$ v~metrickém prostoru $(X,\rho)$ rozumíme
-\[F_\delta=\set{x\in X\mid\exists y\in X: \rho(x,y)<\delta}.\]
+Nyní se podíváme ještě na jedno možné pojetí box-counting dimenze. Připomeňme,~že $\delta$-okolím množiny $F$ v~metrickém prostoru $(X,\varrho)$ rozumíme
+\[F_\delta=\set{x\in X\mid\exists y\in X: \varrho(x,y)<\delta}.\]
 Budeme nyní sledovat,~jak "rychle" se mění objem $F_\delta$ pro $\delta\to 0$. A~se zmínkou objemu nám zde do hry opět vstupuje Lebesgueova míra $\lambda_n$,~o níž jsme si povídali v~sekci \ref{sec:lebesgueova-mira}. Podívejme se nejdříve na několik příkladů.
 \begin{itemize}
     \item Pro úsečku $u\subset\R^3$ o~délce $\ell$ lze objem jejího $\delta$-okolí stanovit jako
@@ -171,7 +171,7 @@ Poslední člen bude v~limitě opět nulový.
 
 Lze ukázat,~že $s$ není v~tomto případě nic jiného,~než již námi zkoumaná\linebreak{}box-counting dimenze. To si shrneme a dokážeme ve větě \ref{thm:bc-dimenze-lebesgueova-mira}.
 \begin{theorem}\label{thm:bc-dimenze-lebesgueova-mira}
-    Nechť $F\in\mathcal{L}^n$ je uzavřená a omezená. Pak platí: 
+    Nechť $F\in\mathcal{L}(\R^n)$ je uzavřená a omezená. Pak platí: 
     \begin{enumerate}[label=(\roman*)]
         \item $\lowerdimB{F}=n-\liminf\limits_{\delta\to 0}\dfrac{\ln{\lambda_n(F_\delta)}}{\ln{\delta}}$,
         \item $\upperdimB{F}=n-\limsup\limits_{\delta\to 0}\dfrac{\ln{\lambda_n(F_\delta)}}{\ln{\delta}}$.
@@ -180,15 +180,15 @@ Lze ukázat,~že $s$ není v~tomto případě nic jiného,~než již námi zkoum
 \begin{proof}
     V~rámci důkazu využijeme větu \ref{thm:ekvivalentni-def-box-counting-dimenze}.
 
-    Mějme $F\in\mathcal{L}^n$ omezenou a uzavřenou. Označme $v_n$ objem jednotkové koule $K_1(x)$\footnote{Objem koule v~$\R^n$ lze vyjádřit vztahem
+    Mějme $F\in\mathcal{L}(\R^n)$ omezenou a uzavřenou. Označme $v_n$ objem jednotkové koule $K_1(x)$\footnote{Objem koule v~$\R^n$ lze vyjádřit vztahem
     \[V_n(r)=\dfrac{\pi^{n/2}}{\Gamma\left(\frac{n}{2}+1\right)}r^n,\]
     kde $\Gamma$ je tzv. \emph{gamma funkce}. Se vzorcem však dále v~textu pracovat nebudeme.
     } v~$\R^n$ pro $x\in\R^n$ libovolné. Dále mějmě pokrytí
     \[\mathcal{K}=\set{K_\delta^1(x_1),K_\delta^2(x_2),\ldots,K_\delta^{N_\delta(F)}(x_{N_\delta(F)})}\]
     množiny $F$,~kde $0<\delta<1$ a $x_j\in F$ pro každé $1\leqslant j\leqslant N_\delta(F)$. Pak lze zvolit pokrytí
     \[\mathcal{K}^\prime=\set{K_{2\delta}^1(x_1),K_{2\delta}^2(x_2),\ldots,K_{2\delta}^{N_\delta(F)}(x_{N_\delta(F)})},\]
-    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí,~že $\mathcal{K}$ je i~pokrytím $F_\delta$. Pro libovolné $x\in F_\delta$ existuje totiž $y\in F$,~takové,~$\rho(x,y)<\delta$. Tedy pro dané $y$ existuje nějaká koule $K_\ell(x_\ell)\in\mathcal{K}$,~taková,~že $y\in K_\ell(x_\ell)$,~což znamená,~že
-    \[\rho(x_\ell,y)\leqslant\rho(x_\ell,x)+\rho(x,y)\leqslant\delta+\delta=2\delta.\]
+    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí,~že $\mathcal{K}$ je i~pokrytím $F_\delta$. Pro libovolné $x\in F_\delta$ existuje totiž $y\in F$,~takové,~$\varrho(x,y)<\delta$. Tedy pro dané $y$ existuje nějaká koule $K_\ell(x_\ell)\in\mathcal{K}$,~taková,~že $y\in K_\ell(x_\ell)$,~což znamená,~že
+    \[\varrho(x_\ell,y)\leqslant\varrho(x_\ell,x)+\varrho(x,y)\leqslant\delta+\delta=2\delta.\]
     Tzn.~míru $F$ lze zhora odhadnout jako
     \[\lambda_n(F_\delta)\leqslant N_\delta(F)v_n(2\delta)^n.\]
     Úpravou získáme:
@@ -277,28 +277,28 @@ Poslední bod \ref{thm:stabilita-bc-dimenze} tvrzení \ref{thm:vlastnosti-bc-dim
     \end{align*}
 \end{proof}
 
-Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{lipschitzovské zobrazení} a \emph{bilipschitzovská zobrazení}\index{bilipschitzovské zobrazení}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\rho_1)$ a $(Y,\rho_2)$,~že existuje konstanta $K>0$, taková, že pro každé $x,y\in X$ platí
-\[\rho_2(f(x),f(y))\leqslant K\rho_1(x,y).\]
+Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{lipschitzovské zobrazení} a \emph{bilipschitzovská zobrazení}\index{bilipschitzovské zobrazení}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\varrho_1)$ a $(Y,\varrho_2)$,~že existuje konstanta $K>0$, taková, že pro každé $x,y\in X$ platí
+\[\varrho_2(f(x),f(y))\leqslant K\varrho_1(x,y).\]
 Pokud navíc platí,~že existují konstanty $K_1,K_2>0$,~takové,~že platí
-\[K_1\rho_1(x,y)\leqslant\rho_2(f(x),f(y))\leqslant K_2\rho_1(x,y),\]
+\[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y),\]
 pak $f$ nazýváme bilipschitzovské.
 
 Než se však podíváme na samotný vztah box-counting dimenze a lipschitzovských,~resp. bilipschitzovských zobrazení,~dokážeme si jedno jednoduché\linebreak{}lemma,~které později využijeme.
 \begin{lemma}\label{lem:lipschitzovska-zobrazeni-a-bijekce}
-    Nechť $(X,\rho_1),(Y,\rho_2)$ jsou metrické prostory a zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f^\prime}{X}{f(X)}$ je bijekce.
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f^\prime}{X}{f(X)}$ je bijekce.
 \end{lemma}
 \begin{proof}
     Podle předpokladu je $f$ bilipschitzovské zobrazení,~tedy i~$f^\prime$ je bilipschitzovské,~tedy existují pro konstanty $K_1,K_2>0$,~takové,~že
-    \[K_1\rho_1(x,y)\leqslant\rho_2(f^\prime(x),f^\prime(y))\leqslant K_2\rho_1(x,y),\;x,y\in X.\]
+    \[K_1\varrho_1(x,y)\leqslant\varrho_2(f^\prime(x),f^\prime(y))\leqslant K_2\varrho_1(x,y),\;x,y\in X.\]
     Surjektivita zobrazení $f^\prime$ je zřejmá z~její definice. Pro spor předpokládejme,~že $f^\prime$ není injektivní,~tedy existují $x,y\in X$,~taková,~že $x\neq y$ a $f^\prime(x)=f^\prime(y)$. Pak
-    \[0<K_1\rho_1(x,y)\leqslant\rho_2(f^\prime(x),f^\prime(y))=0,\]
+    \[0<K_1\varrho_1(x,y)\leqslant\varrho_2(f^\prime(x),f^\prime(y))=0,\]
     což je spor.
 \end{proof}
 
 V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na prostor $\R^n$.
 
 \begin{theorem}\label{thm:bc-dimenze-bi-lipschitzovska-zobrazeni}
-    Nechť jsou dány metrické prostory $(\R^n,\rho_n)$ a $(\R^m,\rho_m)$,~zobrazení $\mapping{f}{\R^n}{\R^m}$ a $F\subseteq\R^n$. Platí:
+    Nechť jsou dány metrické prostory $(\R^n,\varrho_n)$ a $(\R^m,\varrho_m)$,~zobrazení $\mapping{f}{\R^n}{\R^m}$ a $F\subseteq\R^n$. Platí:
     \begin{enumerate}[label=(\roman*)]
         \item\label{thm:bc-dimenze-lipschitz} Je-li $f$ lipschitzovské,~pak
         \[\lowerdimB{f(F)}\leqslant\lowerdimB{F}\;\text{a}\;\upperdimB{f(F)}\leqslant\upperdimB{F}.\]
@@ -307,12 +307,12 @@ V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na pr
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Máme tedy metrické prostory $(\R^n,\rho_n)$,~$(\R^m,\rho_m)$,~zobrazení $\mapping{f}{\R^n}{\R^m}$ a $F\subseteq\R^n$.
+    Máme tedy metrické prostory $(\R^n,\varrho_n)$,~$(\R^m,\varrho_m)$,~zobrazení $\mapping{f}{\R^n}{\R^m}$ a $F\subseteq\R^n$.
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Jako první si všimneme,~že je-li $\mathcal{F}=\set{F_1,F_2,\ldots}$ $\delta$-pokrytí,~množiny $F$,~kde $\delta>0$,~pak je jím i~systém
         \[\mathcal{F}^\prime=\set{F\cap F_1,F\cap F_2,\ldots}.\]
         Podle předpokladu je $f$ lipschitzovské,~tzn. pro každé $x,y\in\R^n$ je
-        \[\rho_m(f(x),f(y))\leqslant K\rho_n(x,y),\;K>0.\]
+        \[\varrho_m(f(x),f(y))\leqslant K\varrho_n(x,y),\;K>0.\]
         Speciálně tak platí i~$\diam(f(F\cap F_i))\leqslant K\diam(F\cap F_i)$ pro každé $i$,~a tedy
         \[\diam(f(F\cap F_i))\leqslant K\diam(F\cap F_i)\leqslant K\diam{F_i}\leqslant K\delta.\]
         Z~toho plyne,~že $\mathcal{G}=\set{f(F\cap F_1),f(F\cap F_2),\ldots}$ tvoří $K\delta$-pokrytí množiny $f(F)$. Tedy máme,~že $N_{K\delta}(f(F))\leqslant N_\delta(F)$. Po úpravě
@@ -325,9 +325,9 @@ V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na pr
         \end{align*}
         Nerovnost pro $\lowerdimB{f(F)}$ obdržíme analogicky.
         \item Je-li $f$ bilipschitzovské,~pak podle lemmatu \ref{lem:lipschitzovska-zobrazeni-a-bijekce} je $\mapping{g}{\R^n}{f(\R^n)}$ bijekce a existuje inverzní zobrazení $\mapping{g^{-1}}{f(\R^n)}{\R^n}$. Volme $u,v\in f(\R^n)$ libovolně a položme $x=g^{-1}(u),y=g^{-1}(v)$. Pak
-        \[K_1\rho_n(x,y)=K_1\rho_n(g^{-1}(u),g^{-1}(v))\leqslant\rho_m(g(g^{-1}(u)),g(g^{-1}(v)))=\rho_m(u,v),\]
+        \[K_1\varrho_n(x,y)=K_1\varrho_n(g^{-1}(u),g^{-1}(v))\leqslant\varrho_m(g(g^{-1}(u)),g(g^{-1}(v)))=\varrho_m(u,v),\]
         neboli
-        \[\rho_n(g^{-1}(u),g^{-1}(v))\leqslant\dfrac{1}{K_1}\rho_m(u,v),\]
+        \[\varrho_n(g^{-1}(u),g^{-1}(v))\leqslant\dfrac{1}{K_1}\varrho_m(u,v),\]
         přičemž $K_1,K_2$ jsou konstanty z~definice. Tzn.~$g^{-1}$ je lipschitzovské.
 
         Podle bodu \ref{thm:bc-dimenze-lipschitz} tedy platí
