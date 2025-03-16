@@ -4,6 +4,8 @@
 - Změněm název kapitoly 2 na *"Teorie míry a dimenze"*
 - Upraven úvodní odstavec druh kapitoly *"Teorie míry a dimenze"*
 - Doplněn obrázek k vlastnostem míry (bod (v)) v sekci *"Míra"*
+- Změněno označení bodů seznamu v definici míry na abecední.
+- Upraven formát dokumentu pro oboustranný tisk
 
 ## 14. 3. 2025
 - Rozšířena sekce *"Hausdorffova metrika"*

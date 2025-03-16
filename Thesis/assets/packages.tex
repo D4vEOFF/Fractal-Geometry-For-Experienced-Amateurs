@@ -3,26 +3,26 @@
 %% Verze pro jednostranný tisk:
 % Okraje: levý 40mm,~pravý 25mm,~horní a~dolní 25mm
 % (ale pozor,~LaTeX si sám přidává 1in)
-\setlength\textwidth{145mm}
-\setlength\textheight{247mm}
-\setlength\oddsidemargin{15mm}
-\setlength\evensidemargin{15mm}
-\setlength\topmargin{0mm}
-\setlength\headsep{0mm}
-\setlength\headheight{0mm}
-% \openright zařídí,~aby následující text začínal na pravé straně knihy
-\let\openright=\clearpage
-
-%% Pokud tiskneme oboustranně:
-% \documentclass[12pt,a4paper,twoside,openright]{report}
 % \setlength\textwidth{145mm}
 % \setlength\textheight{247mm}
-% \setlength\oddsidemargin{14.2mm}
-% \setlength\evensidemargin{0mm}
+% \setlength\oddsidemargin{15mm}
+% \setlength\evensidemargin{15mm}
 % \setlength\topmargin{0mm}
 % \setlength\headsep{0mm}
 % \setlength\headheight{0mm}
-% \let\openright=\cleardoublepage
+% % \openright zařídí,~aby následující text začínal na pravé straně knihy
+% \let\openright=\clearpage
+
+%% Pokud tiskneme oboustranně:
+\documentclass[12pt,a4paper,twoside,openright]{report}
+\setlength\textwidth{145mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{14.2mm}
+\setlength\evensidemargin{0mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+\let\openright=\cleardoublepage
 
 \usepackage[pdfa,colorlinks=false,urlcolor=black,bookmarksopen=true]{hyperref} 	% Záložky v~souboru
 
