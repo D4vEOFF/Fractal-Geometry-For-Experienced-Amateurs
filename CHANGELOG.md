@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 16. 3. 2025
+- Změněm název kapitoly 2 na *"Teorie míry a dimenze"*
+
 ## 14. 3. 2025
 - Rozšířena sekce *"Hausdorffova metrika"*
 
