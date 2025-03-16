@@ -3,6 +3,7 @@
 ## 16. 3. 2025
 - Změněm název kapitoly 2 na *"Teorie míry a dimenze"*
 - Upraven úvodní odstavec druh kapitoly *"Teorie míry a dimenze"*
+- Doplněn obrázek k vlastnostem míry (bod (v)) v sekci *"Míra"*
 
 ## 14. 3. 2025
 - Rozšířena sekce *"Hausdorffova metrika"*
