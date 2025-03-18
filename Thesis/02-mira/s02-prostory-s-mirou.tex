@@ -58,13 +58,13 @@ Z tohoto tvrzení je již lépe vidět,~proč jsou pro nás $\sigma$-algebry tak
 
 V tuto chvíli máme již vše potřebné k~zavedení pojmu míra,~resp. prostor s~mírou.
 \begin{definition}[Prostor s~mírou]\label{def:prostor-s-mirou}
-    Nechť $(X,\mathcal{A})$ je měřitelný prostor. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra}\index{prostor s~mírou!míra} na $\mathcal{A}$,~pokud platí:
+    Nechť $(X,\mathcal{A})$ je měřitelný prostor. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra}\index{prostor s mírou!míra} na $\mathcal{A}$,~pokud platí:
     \begin{enumerate}[label=(\alph*)]
         \item\label{def:mira-podm1} $\mu(\emptyset)=0$,
         \item\label{def:mira-podm2} pro množiny $A_1,A_2,\ldots\in\mathcal{A}$ po dvou disjunktní je
         \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\mathrightnote{$\sigma$-aditivita}\]
     \end{enumerate}
-    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}\index{prostor s~mírou}.
+    Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}\index{prostor s mírou}.
 \end{definition}
 
 Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),~jsou tyto požadavky intuitivně dosti smysluplné.
@@ -72,7 +72,7 @@ Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),
 \begin{example}\label{ex:mira}
     Příklady prostorů s~mírou:
     \begin{itemize}
-        \item Asi pro nás nejtypičtější způsob,~jak měřit "velikost" množiny,~je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s~mírou $(X,\powset{X},\mu)$,~kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}\index{prostor s~mírou!aritmetická míra}.
+        \item Asi pro nás nejtypičtější způsob,~jak měřit "velikost" množiny,~je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s~mírou $(X,\powset{X},\mu)$,~kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}\index{prostor s mírou!aritmetická míra}.
         \item Máme libovolnou množinu $X$ a $\sigma$-algebru $\mathcal{A}$. Zvolme si pevně $x\in X$. Míru libovolné množiny $A\in\mathcal{A}$ lze definovat jako $\delta_x(A)=\chi_A(x)$,~kde $\chi_A$ je charakteristická funkce množiny $A$. Zobrazení $\delta_x$ je tzv. \emph{Diracova míra}.
         \item Zobrazení přiřazující náhodnému jevu pravděpodobnost je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a $\mathcal{F}\subseteq\powset{\Omega}$,~pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
         \[\mathsf{P}(A)=\dfrac{|A|}{|\Omega|}\]
@@ -80,6 +80,7 @@ Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),
     \end{itemize}
 \end{example}
 
+%%%%%
 Ve všech případech zobrazení $\mu$ v~příkladu \ref{ex:mira} se lze snadno přesvědčit,~že se jedná o~míru,~tedy že splňuje podmínky \ref{def:mira-podm1} a \ref{def:mira-podm2} uvedené v~definici \ref{def:prostor-s-mirou} výše.
 
 Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
@@ -144,6 +145,7 @@ Poslední vlastnost \ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
             \caption{Nerostoucí posloupnost množin}
             \label{fig:nerost-posl-mnozin}
         \end{subfigure}
+        %% Problém s PDF/A
         \begin{subfigure}{0.45\textwidth}
             \includegraphics{ch02-vlastnosti-miry-bod-v.pdf}
             \caption{Konstrukce množin $B_k$}
