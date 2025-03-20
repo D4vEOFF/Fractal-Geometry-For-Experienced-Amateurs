@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 20. 3. 2025
+- Upraven úvodní odstavec k alternativnímu pojetí box-counting dimenze
+- Opraveny drobné chyby.
+
 ## 16. 3. 2025
 - Změněm název kapitoly 2 na *"Teorie míry a dimenze"*
 - Upraven úvodní odstavec druh kapitoly *"Teorie míry a dimenze"*
