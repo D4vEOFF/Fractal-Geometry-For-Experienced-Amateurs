@@ -5,4 +5,9 @@
 
 - Přidat obsahu Kochovy vločky i variantu výpočtu pomocí sestavení rekurentní rovnice.
 
+- Přidat vztahy mezi dimenzemi (Hausdorff, box-counting)
+- "Věta 2.4.8. Nechť F ∈ L(Rn) " -> Obecně podmnožina R^n
+	- Přidat zmínku, že otevřené množiny jsou měřitelné.
+- Přidat zmínku o Borelovských množinách
+
 Dimenze: kniha Ryszard Engelking: General Topology

@@ -9,11 +9,11 @@ Podobně jako v~případě Lebesgueovy míry (viz sekce \ref{sec:lebesgueova-mir
 
 Pokud se však omezíme jen na některé množiny,~bude $\hausdorffmetric$ skutečně metrikou ve smyslu definice \todo{doplnit odkaz}. Proto se dále zaměříme pouze na takové podmnožiny $X$,~které jsou \emph{neprázdné} a \emph{kompaktní}.
 \begin{definition}[Hyperprostor]\label{def:hyperprostor}
-    Systém všech neprázdných kompaktních podmnožin množiny $X$ nazýváme \emph{hyperprostor}\index{hyperprostor} a značíme jej $\mathbb{H}(X)$.
+    Systém všech neprázdných kompaktních podmnožin množiny $X$ nazýváme \emph{hyperprostor}\index{hyperprostor} a značíme jej $\hyperspace(X)$.
 \end{definition}
-\todo{Je vhodné značení $\mathbb{H}(X)$,~nebo se v~české literatuře používá jiné?}
+\todo{Je vhodné značení $\hyperspace(X)$,~nebo se v~české literatuře používá jiné?}
 \begin{proposition}\label{prop:sjednoceni-kompaktnich-mnozin}
-    Nechť $A,B\in\mathbb{H}(X)$. Pak $A\cup B\in\mathbb{H}(X)$.
+    Nechť $A,B\in\hyperspace(X)$. Pak $A\cup B\in\hyperspace(X)$.
 \end{proposition}
 \begin{proof}
     Neprázdnost $A\cup B$ je zjevná. Sjednocení kompaktních množin je opět kompaktní. Máme-li totiž pokrytí $\mathcal{U}\supseteq A$ a $\mathcal{V}\supseteq B$,~pak z~kompaktnosti $A,B$ víme,~že z~každého z~nich z~nich lze vybrat konečné podpokrytí
@@ -23,18 +23,18 @@ Pokud se však omezíme jen na některé množiny,~bude $\hausdorffmetric$ skute
 \end{proof}
 Tvrzení \ref{prop:sjednoceni-kompaktnich-mnozin} lze opět rozšířit indukcí
 \begin{corollary}\label{cor:sjednoceni-n-kompaktnich-mnozin}
-    Pro $A_1,A_2,\ldots,A_n\in\mathbb{H}(X)$ platí $\bigcup_{i=1}^n A_i\in\mathbb{H}(X)$.
+    Pro $A_1,A_2,\ldots,A_n\in\hyperspace(X)$ platí $\bigcup_{i=1}^n A_i\in\hyperspace(X)$.
 \end{corollary}
 Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly $\langle0,1\rangle$ a $\langle2,3\rangle$ jsou uzavřené a omezené,~tedy (podle věty \todo{doplnit odkaz}) jsou kompaktní. Avšak jejich průnik je prázdný. Podobně pro rozdíl stačí uvážit $A\subseteq B$,~tzn. $A\setminus B=\emptyset$.
 \begin{theorem}\label{thm:hausdorffova-metrika-je-metrika}
-    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmetric$ je metrikou na $\mathbb{H}(X)$.
+    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmetric$ je metrikou na $\hyperspace(X)$.
 \end{theorem}
 \begin{proof}
-    Zjevně pro každé $A,B\in\mathbb{H}(X)$ z~definice platí $\hausdorffmetric(A,B)\geqslant 0$ a $\hausdorffmetric(A,B)=\hausdorffmetric(B,A)$. Z~kompaktnosti množin $A,B$ plyne (podle věty \todo{doplnit odkaz}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmetric(A,B)<\infty$.
+    Zjevně pro každé $A,B\in\hyperspace(X)$ z~definice platí $\hausdorffmetric(A,B)\geqslant 0$ a $\hausdorffmetric(A,B)=\hausdorffmetric(B,A)$. Z~kompaktnosti množin $A,B$ plyne (podle věty \todo{doplnit odkaz}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmetric(A,B)<\infty$.
     
     Pro $A=B$ platí,~že pro každé $\delta>0$ je splňeno $A\subseteq B_\delta$ a zároveň $B\subseteq A_\delta$,~tzn. $\hausdorffmetric(A,B)=0$. Opačná implikace také platí. Předpokládejme,~že množiny $A,B$ splňují $\hausdorffmetric(A,B)=0$. Pokud $x\in A$,~pak pro každé $\delta>0$ platí,~že $x\in B_\delta$,~tzn. $\varrho(x,B)=0$,~a z~uzavřenosti $B$ plyne $x\in B$. Tedy $A\subseteq B$ a analogicky platí i~$B\subseteq A$,~tzn. $A=B$.
 
-    Jako poslední je třeba ukázat platnost trojúhelníkové nerovnosti. Mějme množiny $A,B,C\in\mathbb{H}(X)$ a $\varepsilon>0$. Pro libovolné $x\in A$ existuje $y\in B$,~takové,~že
+    Jako poslední je třeba ukázat platnost trojúhelníkové nerovnosti. Mějme množiny $A,B,C\in\hyperspace(X)$ a $\varepsilon>0$. Pro libovolné $x\in A$ existuje $y\in B$,~takové,~že
     \[\varrho(x,y)<\hausdorffmetric(A,B)+\varepsilon.\]
     Podobně pro $y$ existuje $z\in C$,~takové,~že
     \[\varrho(y,z)<\hausdorffmetric(B,C)+\varepsilon.\]
@@ -46,12 +46,12 @@ Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly
 (Převzato z~\citep[str. 72]{Edgar2008}.)
 \todo{Je potřeba předpokládat, že $X\subseteq\R^n$? }
 \begin{definition}[Hausdorffův metrický prostor]\label{def:hausdorffuv-mp}
-    Metrický prostor $(\mathbb{H}(X),\hausdorffmetric)$~nazýváme \emph{Hausdorffův metrický prostor}\index{Hausdorffův metrický prostor} na metrickém prostoru $(X,\varrho)$.
+    Metrický prostor $(\hyperspace(X),\hausdorffmetric)$~nazýváme \emph{Hausdorffův metrický prostor}\index{Hausdorffův metrický prostor} na metrickém prostoru $(X,\varrho)$.
 \end{definition}
 Nyní si opět připomeňte něco z~terminologie metrických prostorů. Posloupnost $\set{x_n}_{n=1}^\infty$ v~metrickém prostoru $(X,\varrho)$,~se nazývá \emph{cauchyovská}\index{cauchyovská posloupnost},~pokud
 \[\forall\varepsilon>0\;\exists n,m\in\N: \varrho(x_n,x_m)<\varepsilon.\]
 Obecně neplatí,~že každá cauchyovská posloupnost je konvergentní,~avšak pokud v~$X$ všechny takové posloupnosti jsou konvergentní,~pak $(X,\varrho)$ nazýváme \emph{úplný metrický prostor}\index{metrický prostor!úplný metrický prostor}. O~Hausdorffově metrickém prostoru lze v~tomto ohledu dokázat následující tvrzení.
 \begin{theorem}[Úplnost HMP]\label{thm:uplnost-hmp}
-    Je-li $(X,\varrho)$ úplný metrický prostor,~pak $(\mathbb{H}(X),\hausdorffmetric)$ je také úplný metrický prostor.
+    Je-li $(X,\varrho)$ úplný metrický prostor,~pak $(\hyperspace(X),\hausdorffmetric)$ je také úplný metrický prostor.
 \end{theorem}
 Důkaz věty je už trochu delší,~nicméně lze jej nalézt opět např. v~knize \citep[str. 72]{Edgar2008}.

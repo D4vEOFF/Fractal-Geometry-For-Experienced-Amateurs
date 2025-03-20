@@ -1,0 +1,18 @@
+\section{Kompaktní množiny a konvergence}\label{sec:konvergence-hmp}
+
+\begin{theorem}\label{thm:konvergence-hmp}
+    Nechť $A_1,A_2,\ldots$ je nerostoucí posloupnost množin, kde $A_i\in\hyperspace(X)$ pro každé $i\in\N$. Pak posloupnost $A_1,A_2,\ldots$ konverguje k množině
+    \[A=\bigcap_{i=1}^\infty A_i\]
+    v Hausdorffově metrice.
+\end{theorem}
+
+V souvislosti s konvergencí v prostoru $(\hyperspace(X),\hausdorffmetric)$ nebude na škodu si připomenout jedno známé související tvrzení z matematické analýzy.
+\begin{theorem}[Cantorova]\label{thm:cantor}
+    Následující tvrzení jsou ekvivalentní:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{thm:cantor-uplnost} $(X,\varrho)$ je úplný metrický prostor.
+        \item\label{thm:cantor-nekl-posl-mnozin} Je-li $A_1,A_2,\ldots$ neklesající posloupnost uzavřených množin, kde $A_i\subseteq X$ pro každé $i\in\N$, takových, že $\diam{A_i}\to 0$, pak existuje $x\in X$ splňující
+        \[\bigcap_{i=1}^\infty A_i=\set{x}.\]
+    \end{enumerate}
+\end{theorem}
+Věta \ref{thm:cantor} je v podstatě rozšířením Cantorova principu vnořených intervalů v $\R$. Speciálně z toho vyplývá, že i v Hausdorffově metrickém prostoru platí podmínka \ref{thm:cantor-nekl-posl-mnozin}, neboť z věty \ref{thm:uplnost-hmp} víme, že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
