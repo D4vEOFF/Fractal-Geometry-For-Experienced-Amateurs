@@ -149,16 +149,16 @@ Podobně bychom postupovali pro rovinné obrazce.
     Obecně množina $F$ skládající se z~$m$ disjunktních kopií sebe samotné v~měřítku $r$ má dimenzi $\dimB{F}=-\ln{m}/\ln{r}$.
 \end{remark}
 Nyní se podíváme ještě na jedno možné pojetí box-counting dimenze. Připomeňme,~že $\delta$-okolím množiny $F$ v~metrickém prostoru $(X,\varrho)$ rozumíme
-\[F_\delta=\set{x\in X\mid\exists y\in X: \varrho(x,y)<\delta}.\]
-Budeme nyní sledovat,~jak "rychle" se mění objem $F_\delta$ pro $\delta\to 0$. A~se zmínkou objemu nám zde do hry opět vstupuje Lebesgueova míra $\lebesguemeasure{n}$,~o níž jsme si povídali v~sekci \ref{sec:lebesgueova-mira}. Podívejme se nejdříve na několik příkladů.
+\[(F)_\delta=\set{x\in X\mid\exists y\in X: \varrho(x,y)<\delta}.\]
+Budeme nyní sledovat,~jak "rychle" se mění objem $(F)_\delta$ pro $\delta\to 0$. A~se zmínkou objemu nám zde do hry opět vstupuje Lebesgueova míra $\lebesguemeasure{n}$,~o níž jsme si povídali v~sekci \ref{sec:lebesgueova-mira}. Podívejme se nejdříve na několik příkladů.
 \begin{itemize}
     \item Pro konečnou množinu $F=\set{x_1,x_2,\ldots,x_n}$ je
-    \[\lebesguemeasure{3}(F_\delta)\leqslant n\cdot\dfrac{4}{3}\pi\delta^3.\]
+    \[\lebesguemeasure{3}((F)_\delta)\leqslant n\cdot\dfrac{4}{3}\pi\delta^3.\]
     Pro $\delta\leqslant1/2\min\set{\varrho(x,y)\mid x,y\in F}$ nastává rovnost.
     \item Pro úsečku $u\subset\R^3$ o~délce $\ell$ lze objem jejího $\delta$-okolí stanovit jako
-    \[\lebesguemeasure{3}(u_\delta)=\dfrac{4}{3}\pi \delta^3+\pi\delta^2\ell.\]
+    \[\lebesguemeasure{3}((u)_\delta)=\dfrac{4}{3}\pi \delta^3+\pi\delta^2\ell.\]
     Pokud však uvážíme $\delta$ dostatečně malé,~lze první člen zanedbat a psát
-    \[\lebesguemeasure{3}(u_\delta)\approx\pi\ell\delta^2.\]
+    \[\lebesguemeasure{3}((u)_\delta)\approx\pi\ell\delta^2.\]
     \item V~případě neprázdného kvádru
     \[I=\set{(x,y,0)\mid x\in\langle a_1,b_1\rangle\,,\,y\in\langle a_2,b_2\rangle}\]
     je
@@ -174,7 +174,7 @@ Výsledky si srovnejme v tabulce \ref{table:odhady-lambda_3}.
 \begin{table}[h]
     \centering
     \begin{tabular}{r|c}
-    Útvar $F$                               & $\lebesguemeasure{3}(F_\delta)$       \\\hline
+    Útvar $F$                               & $\lebesguemeasure{3}((F)_\delta)$       \\\hline
     Konečná množina $\set{x_1,\ldots,x_n}$ & $\frac{4n}{3}\pi\delta^3=c_1\delta^3$   \\
     Úsečka $u$                             & $\pi\ell\delta^2=c_2\delta^2$           \\
     Kvádr $I$                              & $2(b_1-a_1)(a_2-b_2)\delta=c_3\delta^1$ \\
@@ -195,8 +195,8 @@ Lze ukázat,~že $s$ není v~tomto případě nic jiného,~než již námi zkoum
 \begin{theorem}\label{thm:bc-dimenze-lebesgueova-mira}
     Nechť $F\subseteq\R^n$. Pak platí: 
     \begin{enumerate}[label=(\roman*)]
-        \item $\lowerdimB{F}=n-\liminf\limits_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{n}(F_\delta)}}{\ln{\delta}}$,
-        \item $\upperdimB{F}=n-\limsup\limits_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{n}(F_\delta)}}{\ln{\delta}}$.
+        \item $\lowerdimB{F}=n-\liminf\limits_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{n}((F)_\delta)}}{\ln{\delta}}$,
+        \item $\upperdimB{F}=n-\limsup\limits_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{n}((F)_\delta)}}{\ln{\delta}}$.
     \end{enumerate}
 \end{theorem}
 \begin{proof}
@@ -209,38 +209,38 @@ Lze ukázat,~že $s$ není v~tomto případě nic jiného,~než již námi zkoum
     \[\mathcal{K}=\set{K_\delta^1(x_1),K_\delta^2(x_2),\ldots,K_\delta^{N_\delta(F)}(x_{N_\delta(F)})}\]
     množiny $F$,~kde $0<\delta<1$ a $x_j\in F$ pro každé $1\leqslant j\leqslant N_\delta(F)$. Pak lze zvolit pokrytí
     \[\mathcal{K}^\prime=\set{K_{2\delta}^1(x_1),K_{2\delta}^2(x_2),\ldots,K_{2\delta}^{N_\delta(F)}(x_{N_\delta(F)})},\]
-    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí,~že $\mathcal{K}$ je i~pokrytím $F_\delta$. Pro libovolné $x\in F_\delta$ existuje totiž $y\in F$,~takové,~$\varrho(x,y)<\delta$. Tedy pro dané $y$ existuje nějaká koule $K_\ell(x_\ell)\in\mathcal{K}$,~taková,~že $y\in K_\ell(x_\ell)$,~což znamená,~že
+    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí,~že $\mathcal{K}$ je i~pokrytím $(F)_\delta$. Pro libovolné $x\in (F)_\delta$ existuje totiž $y\in F$,~takové,~$\varrho(x,y)<\delta$. Tedy pro dané $y$ existuje nějaká koule $K_\ell(x_\ell)\in\mathcal{K}$,~taková,~že $y\in K_\ell(x_\ell)$,~což znamená,~že
     \[\varrho(x_\ell,y)\leqslant\varrho(x_\ell,x)+\varrho(x,y)\leqslant\delta+\delta=2\delta.\]
     Tzn.~míru $F$ lze zhora odhadnout jako
-    \[\lebesguemeasure{n}(F_\delta)\leqslant N_\delta(F)v_n(2\delta)^n.\]
+    \[\lebesguemeasure{n}((F)_\delta)\leqslant N_\delta(F)v_n(2\delta)^n.\]
     Úpravou získáme:
     \begin{align*}
-        \ln{\lebesguemeasure{n}(F_\delta)}&\leqslant n\ln{\delta}+\ln{N_\delta(F)}+\ln{2^nv_n}\\
-        \dfrac{\ln{\lebesguemeasure{n}(F_\delta)}}{-\ln\delta}&\leqslant -n+\dfrac{\ln{N_\delta(F)}}{-\ln\delta}+\dfrac{\ln{2^nv_n}}{-\ln\delta},
+        \ln{\lebesguemeasure{n}((F)_\delta)}&\leqslant n\ln{\delta}+\ln{N_\delta(F)}+\ln{2^nv_n}\\
+        \dfrac{\ln{\lebesguemeasure{n}((F)_\delta)}}{-\ln\delta}&\leqslant -n+\dfrac{\ln{N_\delta(F)}}{-\ln\delta}+\dfrac{\ln{2^nv_n}}{-\ln\delta},
     \end{align*}
     tedy v~limitě
-    \[\liminf_{\delta\to 0}\dfrac{\ln\lebesguemeasure{n}(F_\delta)}{-\ln\delta}\leqslant -n+\lowerdimB{F}.\]
+    \[\liminf_{\delta\to 0}\dfrac{\ln\lebesguemeasure{n}((F)_\delta)}{-\ln\delta}\leqslant -n+\lowerdimB{F}.\]
     K~odhadu $\upperdimB{F}$ lze dospět analogicky.
 
     Nyní uvažujme po dvou disjunktní otevřené koule $B_\delta^j(x_j)$,~kde $x_j\in F$ pro $1\leqslant j\leqslant N_\delta(F)$. Pak součtem jejich objemů získáme
-    \[N_\delta(F)v_n\delta^n\leqslant\lebesguemeasure{n}(F_\delta).\]
+    \[N_\delta(F)v_n\delta^n\leqslant\lebesguemeasure{n}((F)_\delta).\]
     Obdobnou úpravou této nerovnosti získáme požadovanou nerovnost.
 \end{proof}
 Zkusme si aplikaci věty ilustrovat opět na příkladu fraktálu.
 \begin{example}[Cantorovo diskontinuum potřetí]
-    Pro Cantorovo diskontinuum $C$ v~$k$-té iteraci lze odhadnout délku $C_\delta$ pro $3^{-k}\leqslant\delta\leqslant 3^{-k+1}$ jako
-    \[\lebesguemeasure{1}(C_\delta)\leqslant2^k\cdot 2\delta=2^{k+1}3^{-k+1}.\]
+    Pro Cantorovo diskontinuum $C$ v~$k$-té iteraci lze odhadnout délku $(C)_\delta$ pro $3^{-k}\leqslant\delta\leqslant 3^{-k+1}$ jako
+    \[\lebesguemeasure{1}((C)_\delta)\leqslant2^k\cdot 2\delta=2^{k+1}3^{-k+1}.\]
     Tedy podle věty \ref{thm:bc-dimenze-lebesgueova-mira}
     \begin{align*}
-        \upperdimB{C}&=n-\limsup_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}(C_\delta)}}{\ln{\delta}}\leqslant1-\limsup_{k\to\infty}\dfrac{\ln{2^{k+1}3^{-k+1}}}{\ln{3^{-k+1}}}\\
+        \upperdimB{C}&=n-\limsup_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\leqslant1-\limsup_{k\to\infty}\dfrac{\ln{2^{k+1}3^{-k+1}}}{\ln{3^{-k+1}}}\\
         &=\limsup_{k\to\infty}\dfrac{(k+1)\ln{2}}{(k-1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
     \end{align*}
 
     Podobně zvolíme-li $3^{-k-1}\leqslant\delta\leqslant 3^{-k}$,~pak
-    \[\lebesguemeasure{1}(C_\delta)\geqslant 2^{k+1}3^{-k-1}\]
+    \[\lebesguemeasure{1}((C)_\delta)\geqslant 2^{k+1}3^{-k-1}\]
     a tedy
     \begin{align*}
-        \lowerdimB{C}&=n-\liminf_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}(C_\delta)}}{\ln{\delta}}\geqslant 1-\liminf_{k\to\infty}\dfrac{\ln{2^{k+1}3^{-k-1}}}{\ln{3^{-k-1}}}\\
+        \lowerdimB{C}&=n-\liminf_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\geqslant 1-\liminf_{k\to\infty}\dfrac{\ln{2^{k+1}3^{-k-1}}}{\ln{3^{-k-1}}}\\
         &=\liminf_{k\to\infty}\dfrac{(k+1)\ln{2}}{(k+1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
     \end{align*}
 \end{example}

@@ -349,6 +349,6 @@ h
 </path>
 <text matrix="1 0 0 1 -3.736 -3.404" transformations="translations" pos="272 656" stroke="black" type="label" width="7.472" height="6.808" depth="0" valign="baseline" style="math">A</text>
 <text matrix="1 0 0 1 33.5851 56.4633" transformations="translations" pos="272 656" stroke="black" type="label" width="14.677" height="6.808" depth="2.49" valign="baseline" style="math">A_{i_0}</text>
-<text matrix="1 0 0 1 -78.4149 72.4633" transformations="translations" pos="272 656" stroke="black" type="label" width="11.734" height="6.812" depth="1.49" valign="baseline" style="math">A_\varepsilon</text>
+<text matrix="1 0 0 1 -78.4149 72.4633" transformations="translations" pos="272 656" stroke="black" type="label" width="11.734" height="6.812" depth="1.49" valign="baseline" style="math">(A)_\varepsilon</text>
 </page>
 </ipe>
