@@ -1,6 +1,6 @@
 \section{Základní pojmy a značení}\label{sec:zakladni-pojmy-a-znaceni}
 
-V tomto oddílu se v~krátkosti zaměříme na připomenutí některých pojmů a značení,~které budeme dále využívat. Související teorii týkající se mnoha záležitostí v~tomto případě vynecháme s~předpokladem,~že ji čtenář již zná. Pokud tomu však v~některých případech takto nebude,~lze tuto část textu považovat za výčet konceptů,~které pro zvládnutí nadcházející teorie budeme potřebovat.
+V tomto oddílu se v~krátkosti zaměříme na připomenutí některých pojmů a značení,~které budeme dále využívat. Související teorii týkající se mnoha záležitostí v~tomto případě vynecháme s~předpokladem,~že ji čtenář již zná. Pokud tomu však v~některých případech takto nebude,~lze tuto část textu považovat za výčet konceptů,~které pro zvládnutí nadcházející teorie budeme potřebovat. V tomto ohledu lze např. nahlédnout do knihy \cite{NetukaAnalyza2014}.
 
 Výklad v této kapitole a dále v kapitole \ref{chapter:hausdorffuv-mp} se bude točit především okolo tzv. \emph{metrických prostorů} (viz definice \ref{def:metricky-prostor}).
 \begin{definition}[Metrický prostor]\label{def:metricky-prostor}
@@ -13,26 +13,80 @@ Výklad v této kapitole a dále v kapitole \ref{chapter:hausdorffuv-mp} se bude
     \end{enumerate}
 \end{definition}
 
-\subsection{Limity v metrických prostorech}\label{subsec:limity-v-mp}
+\subsection{Metrické pojmy}\label{subsec:metricke-pojmy}
 
-S limitou posloupnosti a funkce jedné proměnné je čtenář nejspíše dobře seznámen. V kontextu metrických prostorů definujeme pojem limity následovně (viz definice \ref{def:limita-mp} a \ref{def:limsup-liminf-mp}).
+Začneme některými základními pojmy sousvisejícími s metrickými prostory.
+\begin{definition}[Otevřená/uzavřená koule]\label{def:koule-mp}
+    Nechť $(X,\varrho)$ je metrický prostor. Pak definujeme
+    \begin{itemize}
+        \item \emph{otevřenou kouli} se středem v bodě $x\in X$ o poloměru $r\geqslant 0$
+        \[B_r(x)=\set{y\in X\mid\varrho(y,x)<r},\]
+        \item resp. \emph{uzavřenou kouli} se středem v bodě $x\in X$ o poloměru $r\geqslant 0$
+        \[K_r(x)=\set{y\in X\mid\varrho(y,x)\leqslant r}.\]
+    \end{itemize}
+\end{definition}
+Např. v $\R$ představuje otevřená koule $B_r(x)$ otevřený interval $(x-r,x+r)$ a $K_r(x)=\langle x-r,x+r\rangle$. V $\R^2$ se jedná o standardní kruh (s hranicí, nebo bez ní). Nebo v případě prostoru spojitých funkcí $X=\mathcal{C}(\langle a,b\rangle)$ se pro libovolnou funkci $f\in X$ jedná o pás šířky $2r$ sestrojený okolo grafu funkce $f$.
+
+S otevřenými, resp. uzavřenými koulemi se pojí další terminologie.
+\begin{definition}[Otevřená, uzavřená a omezená množina]\label{def:otevrena-uzavrena-omezena-mnozina}
+     Množina $M$ v metrickém prostoru $(X,\varrho)$ se nazývá
+     \begin{itemize}
+        \item \emph{otevřená}, pokud pro každé $x\in M$ existuje $r>0$, takové, že $B_r(x)\subseteq M$.
+        \item \emph{uzavřená}, pokud její doplněk $X\setminus M$ je otevřená množina.
+        \item \emph{omezená}, pokud existuje $x\in X$ a $r>0$, takové, že $M\subseteq B_r(x)$.
+     \end{itemize}
+\end{definition}
+Uzavřenost a otevřenost množiny závisí na volbě konkrétního metrického prostoru. Např. interval $(a,b)$ je v $\R$ otevřená množina, avšak v $X=(a,b)$ je to uzavřená množina, neboť její doplněk $\emptyset$ je otevřený. Není těžké dokázat, že $\R^n$ je
+\[\diam{B_r(x)}=\diam{K_r(x)}=2r.\]
+\begin{definition}[Průměr množiny]\label{def:prumer-mnoziny}
+    Nechť $(X,\varrho)$ je metrický prostor. \emph{Průměr množiny $M\subseteq X$}, $M\neq\emptyset$ definujeme jako
+    \[\diam{M}=\sup\set{\varrho(x,y)\mid x,y\in M}.\]
+\end{definition}
+Intuitivně $\diam{B_r(x)}=\diam{K_r(x)}=2r$, což není těžké dokázat.
+\begin{definition}[Vzdálenost bodu od množiny, vzdálenost množin]\label{def:vzdalenost-bodu-od-mnoziny-vzdalenost-mnozin}
+    Nechť $(X,\varrho)$ je metrický prostor.
+    \begin{itemize}
+        \item \emph{Vzdáleností bodu $x\in X$ od množiny $M\subseteq X$} rozumíme
+        \[\varrho(x,M)=\inf\set{\varrho(x,y)\mid y\in X}.\]
+        \item \emph{Vzdáleností množin $M,N\subseteq X$} rozumíme
+        \[\varrho(M,N)=\inf\set{\varrho(x,y)\mid x\in M\;,\;y\in N}.\]
+    \end{itemize}
+\end{definition}
+
+\subsection{Limity posloupností a funkcí}\label{subsec:limity-posl-mp}
+
+S limitou posloupnosti a funkce jedné proměnné je čtenář nejspíše dobře seznámen. V kontextu metrických prostorů definujeme pojem limity následovně (viz definice \ref{def:limita-mp}).
 \begin{definition}[Limita posloupnosti]\label{def:limita-mp}
-    Mejme metrický prostor $(X,\varrho)$ a posloupnost $\set{x_n}_{n=1}^\infty$, kde $x_i\in X$ pro každé $i\in\N$. Pak posloupnost $\set{x_n}_{n=1}^\infty$ má limitu $x\in X$, píšeme $\lim_{n\to\infty}x_n=x$, nebo též $x_n\to x$, pokud
+    Mejme metrický prostor $(X,\varrho)$ a posloupnost $\set{x_n}_{n=1}^\infty$, kde $x_i\in X$ pro každé $i\in\N$. Pak posloupnost $\set{x_n}_{n=1}^\infty$ má limitu $x\in X$, píšeme
+    \[\lim_{n\to\infty}x_n=x,\]
+    nebo též $x_n\to x$, pokud
     \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n\geqslant n_0: \varrho(x_n,x)<\varepsilon.\]
 \end{definition}
+Limita posloupnosti je vždy určena jednoznačně (pokud existuje). Ve spojitosti s limitami pro nás bude dále relevantní i tzv. \emph{limes superior} a \emph{limes inferior}. Ty si však připomeneme mimo kontext metrických prostorů. Vystačíme si v reálných číslech.
 \begin{definition}[Limes superior, limes inferior]\label{def:limsup-liminf-mp}
-    Nechť je dán metrický prostor $(X,\varrho)$ a posloupnost $\set{x_n}_{n=1}^\infty$. Pak definujeme:
-    \begin{enumerate}[label=(\alph*)]
-        \item Limes superior $\limsup_{n\to\infty}=\set{x\in X\mid \exists n_1,n_2,\ldots\in\N: \lim_{k\to\infty}x_{n_k}=x}$.
-        \item Limes inferior $\limsup_{n\to\infty}=\lim_{n\to\infty}\inf\set{x_k\mid k\geqslant n}$.
-    \end{enumerate}
+    Mějme posloupnost $\set{x_n}_{n=1}^\infty$, kde $x_n\in\R$ pro každé $n\in\N$. Pak definujeme:
+    \begin{itemize}
+        \item Limes superior
+        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}\sup\set{x_k\mid k\geqslant n}.\]
+        \item Limes inferior
+        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}\inf\set{x_k\mid k\geqslant n}.\]
+    \end{itemize}
 \end{definition}
+Jinak lze definovat limes superior, resp. limes inferior jako supremum, resp. infimum hromadných bodů posloupnosti. Speciálně platí, že posloupnost $\set{x_n}_{n=1}^\infty$ má limitu $L$, právě tehdy, když
+\[\limsup_{n\to\infty}x_n=\liminf_{n\to\infty}x_n=L.\]
+
+Od posloupností se přesuneme k limitám funkcí.
+\begin{definition}[Limita funkce v bodě]\label{def:limita-fce-v-bode}
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ a funkce $\mapping{f}{X}{Y}$. Řekneme, že $f$ má limitu $y\in Y$ v bodě $x_0\in X$, píšeme
+    \[\lim_{x\to x_0}f(x)=y,\]
+    pokud
+    \[\forall \varepsilon >0\;\exists \delta >0\;\forall x\in X: x\in B_\delta(x_0)\setminus\set{x_0}\implies f(x)\in B_\varepsilon(y).\]
+\end{definition}
+
 
 \todo{Doplnit pojmy a značení podle dalšího textu
     \begin{itemize}
-        \item Limita funkce
-        \item Limes superior/inferior
-        \item Metrický prostor, úplný MP
+        \item Úplný MP
         \item Cauchyovská posloupnost
         \item Bodová a stejnoměrná konvergence
         \item vzdálenost bodu od množiny
@@ -40,7 +94,6 @@ S limitou posloupnosti a funkce jedné proměnné je čtenář nejspíše dobře
         \item Otevřená/uzavřená množina
         \item Kompaktní množina, věta o kompaktnosti v $\R^n$, věta o uzavřenosti kompaktní množiny.
         \item Kvádr a objem kvádru
-        \item Průměr množiny
         \item $\delta$-okolí množiny
         \item Pokrytí, zjemnění
         \item $\delta$-pokrytí
