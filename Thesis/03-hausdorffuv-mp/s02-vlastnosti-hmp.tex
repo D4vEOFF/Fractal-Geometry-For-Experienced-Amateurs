@@ -31,3 +31,18 @@ V souvislosti s konvergencí v prostoru $(\hyperspace(X),\hausdorffmetric)$ nebu
     \end{enumerate}
 \end{theorem}
 Věta \ref{thm:cantor} je v podstatě rozšířením Cantorova principu vnořených intervalů v $\R$. Speciálně z toho vyplývá, že i v Hausdorffově metrickém prostoru platí podmínka \ref{thm:cantor-nekl-posl-mnozin}, neboť z věty \ref{thm:uplnost-hmp} víme, že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
+
+\begin{theorem}\label{thm:stejnometrna-konvergence-hmp}
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $f_1,f_2,\ldots$, kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$, tvoří posloupnost funkcí stejnoměrně konvergující k $f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k $f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$.
+\end{theorem}
+\begin{proof}
+    Mějme $\varepsilon>0$. Ukážeme, že $\hausdorffmetric(f(X),f_i(X))<\varepsilon$ pro $i\geqslant i_0$. Funkce $f_1,f_2,\ldots$ konvergují k $f$ stejnoměrně, tzn.
+    \[\forall\varepsilon>0\;\exists i_0\in\N\;\forall i\geqslant i_0\;\forall x\in X:\varrho_2(f(x),f_i(x))<\varepsilon.\]
+    Tzn. pro každé $x\in X$ a $i\geqslant i_0$ platí
+    \[\varrho_2(f(x),f_i(X))\leqslant\varrho_2(f(x),f_i(x))<\varepsilon.\]
+    a též
+    \[\varrho_2(f_i(x),f(X))\leqslant\varrho_2(f_i(x),f(x))=\varrho_2(f(x),f_i(x))<\varepsilon.\]
+    Z toho vyplývá, že
+    \[f(X)\subseteq (f_i(X))_\varepsilon\;\text{a zároveň}\;f_i(X)\subseteq (f(X))_\varepsilon\]
+    neboli $\hausdorffmetric(f(X),f_i(X))<\varepsilon$.
+\end{proof}
