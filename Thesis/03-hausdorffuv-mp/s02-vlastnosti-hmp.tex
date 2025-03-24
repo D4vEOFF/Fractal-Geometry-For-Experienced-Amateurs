@@ -33,7 +33,7 @@ V souvislosti s konvergencí v prostoru $(\hyperspace(X),\hausdorffmetric)$ nebu
 Věta \ref{thm:cantor} je v podstatě rozšířením Cantorova principu vnořených intervalů v $\R$. Speciálně z toho vyplývá, že i v Hausdorffově metrickém prostoru platí podmínka \ref{thm:cantor-nekl-posl-mnozin}, neboť z věty \ref{thm:uplnost-hmp} víme, že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
 
 \begin{theorem}\label{thm:stejnometrna-konvergence-hmp}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $f_1,f_2,\ldots$, kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$, tvoří posloupnost funkcí stejnoměrně konvergující k $f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k $f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$.
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $f_1,f_2,\ldots$, kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$, tvoří posloupnost funkcí stejnoměrně konvergující k $f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k $f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$. (Převzato z \citep[str. 74]{Edgar2008})
 \end{theorem}
 \begin{proof}
     Mějme $\varepsilon>0$. Ukážeme, že $\hausdorffmetric(f(X),f_i(X))<\varepsilon$ pro $i\geqslant i_0$. Funkce $f_1,f_2,\ldots$ konvergují k $f$ stejnoměrně, tzn.
@@ -54,7 +54,7 @@ Věta \ref{thm:cantor} je v podstatě rozšířením Cantorova principu vnořen�
         0 & x \in [0,1),\\
         1 & x = 1.
         \end{cases}\]
-    Posloupnost konverguje k funkci $f$ pouze bodově, nikoliv však stejnoměrně. Pro celý interval je $f(X)=\set{0,1}$, nicméně
+    Posloupnost konverguje k funkci $f$ pouze bodově, nikoliv stejnoměrně. Pro celý interval je $f(X)=\set{0,1}$, nicméně
     \[\hausdorffmetric(\langle0,1\rangle,\set{0,1})=\dfrac{1}{2}.\]
     Tedy neplatí, že $f_n(X)\to f(X)$ v $(\hyperspace(\R),\hausdorffmetric)$.
 \end{remark}
