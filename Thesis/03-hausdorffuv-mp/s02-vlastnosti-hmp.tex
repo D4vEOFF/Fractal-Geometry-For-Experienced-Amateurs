@@ -46,3 +46,15 @@ Věta \ref{thm:cantor} je v podstatě rozšířením Cantorova principu vnořen�
     \[f(X)\subseteq (f_i(X))_\varepsilon\;\text{a zároveň}\;f_i(X)\subseteq (f(X))_\varepsilon\]
     neboli $\hausdorffmetric(f(X),f_i(X))<\varepsilon$.
 \end{proof}
+\begin{remark}
+    Předpoklad stejnoměrné konvergence ve větě \ref{thm:stejnometrna-konvergence-hmp} je důležitý. Mějme např. metrický prostor $X=\langle0,1\rangle$ se standardní eukleidovskou metrikou a definujme posloupnost funkcí
+    \[\mapping{f_n}{\langle0,1\rangle}{\R},\;f_n(x)=x^n.\]
+    Limitou je funkce $f$, přičemž
+    \[f(x) = \begin{cases}
+        0 & x \in [0,1),\\
+        1 & x = 1.
+        \end{cases}\]
+    Posloupnost konverguje k funkci $f$ pouze bodově, nikoliv však stejnoměrně. Pro celý interval je $f(X)=\set{0,1}$, nicméně
+    \[\hausdorffmetric(\langle0,1\rangle,\set{0,1})=\dfrac{1}{2}.\]
+    Tedy neplatí, že $f_n(X)\to f(X)$ v $(\hyperspace(\R),\hausdorffmetric)$.
+\end{remark}
