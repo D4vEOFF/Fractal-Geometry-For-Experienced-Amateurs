@@ -84,6 +84,19 @@ V textu též budeme hodně pracovat s pojmem $\delta$-okolí.
 \end{definition}
 Zde se zvlášť hodí zmínit, že $(M)_\delta$ je v prostoru $\R^n$, s nímž budeme často pracovat, otevřená množina.
 
+Jako poslední zde zmíníme termíny, které zejména využijeme v sekci věnující se tzv. Lebesgueově míře a posléze box-counting dimenzi (viz sekce \ref{sec:lebesgueova-mira} a \ref{sec:box-counting-dimenze}).
+\begin{definition}[Kvádr]\label{def:kvadr}
+    Kvádrem\index{kvádr} v $\R^n$ nazveme množinu
+    \[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle,\]
+    kde $a_i,b_i\in\R$ pro každé $i\in\N$. Objem kvádru\index{objem kvádru} $I$ definujeme jako
+    \[\vol_n(I)é\prod_{i=1}^{n}(b_i-a_i).\]
+\end{definition}
+\begin{definition}[$\delta$-mříž]\label{def:delta-mriz}
+    \emph{$\delta$-mříž}\index{$\delta$-mříž} v $\R^n$ názýváme množinu
+    \[\mathcal{Q}_\delta=\set{\prod_{i=1}^{n}\langle m_j\delta,(m_j+1)\delta\rangle\;\middle|\;m_1,\ldots,m_n\in\Z}.\]
+\end{definition}
+Definice \ref{def:delta-mriz} vlastně říká, že $\mathcal{Q}_\delta$ představuje rozdělení $\R^n$ na krychle o straně délky $\delta$ dotýkajících se pouze na hranici.
+
 \subsection{Limity posloupností}\label{subsec:limity-posl-mp}
 
 S limitou posloupnosti a funkce jedné proměnné je čtenář nejspíše dobře seznámen. V kontextu metrických prostorů definujeme pojem limity následovně (viz definice \ref{def:limita-mp}).
@@ -165,12 +178,45 @@ pouze bodově, nikoliv stejnoměrně, protože
 
 \subsection{Topologické pojmy}\label{subsec:topologicke-pojmy}
 
+Poměrně důležitým pojmem v teorii metrických prostorů jsou tzv. kompaktní množiny. S tím se pojí následující termíny (viz definice ).
+\begin{definition}[Pokrytí, $\delta$-pokrytí a zjemnění]\label{def:delta-pokryti-zjemneni}
+    Nechť je dán metrický prostor $(X,\varrho)$, $M\subseteq X$ a systém množin $\mathcal{U}=\set{U_1,U_2,\ldots}\subseteq\powset{X}$.
+    \begin{itemize}
+        \item $\mathcal{U}$ tvoří tzv. \emph{pokrytí}\index{pokrytí} množiny $M$, pokud
+        \[M\subseteq\bigcup_{i=1}^\infty U_i.\]
+        Navíc o pokrytí $\mathcal{U}$ říkáme, že je \emph{otevřené}\index{pokrytí!otevřené pokrytí}, pokud pro každé $i\in\N$ je množina $U_i$ otevřená.
+        \item Pokud existuje $\delta>0$, takové, že pro každé $i\in\N$ platí $\diam{U_i}<\delta$, pak $\mathcal{U}$ nazýváme \emph{$\delta$-pokrytím}\index{$\delta$-pokrytí}.
+        \item Platí-li pro systém $\mathcal{G}=\set{G_1,G_2,\ldots}\subseteq\powset{X}$, že
+        \[M\subseteq\bigcup_{i=1}^\infty G_i\subseteq\bigcup_{i=1}^\infty U_i,\]
+        pak $\mathcal{G}$ je tzv. \emph{podpokrytí}\index{podpokrytí} pokrytí $\mathcal{U}$.
+        \item Pokud pro každou $G\in\mathcal{G}$ existuje množina $U\in\mathcal{U}$, taková, že $G\subseteq U$, pak $\mathcal{G}$ nazýváme \emph{zjemněním}\index{zjemnění} pokrytí $\mathcal{U}$. 
+    \end{itemize}
+\end{definition}
+\begin{definition}[Kompaktní množina]\label{def:kompaktni-mnozina}
+    Nechť $(X,\varrho)$ je metrický prostor. Množinu $M\subseteq X$ nazveme \emph{kompaktní}\index{množina!kompaktní}, jestliže pro každé otevřené pokrytí $\mathcal{U}=\set{U_1,U_2,\ldots}$ existují indexy $n_1,\ldots,n_k\in\N$, takové, že
+    \[M\subseteq\bigcup_{i=1}^k U_{n_i}.\]
+\end{definition}
+Volněji řečeno, pro kompaktní množinu lze z jejího libovolného otevřeného pokrytí vybrat konečné podpokrytí. Dokazovat kompaktnost množiny z definice může být mnohdy nepraktické, nicméně vzhledem k tomu, že budeme často pracovat s prostorem $\R^n$, záležitost se nám v tomto ohledu značně zjednodušuje.
+\begin{theorem}[Heineho-Borelova]\label{thm:heine-borel}
+    Nechť $(R^n,\varrho)$ je metrický prostor a $M\subseteq\R^n$. Následující výroky jsou ekvivalentní:
+    \begin{enumerate}[label=(\roman*)]
+        \item Množina $M$ je kompaktní.
+        \item Množina $M$ je uzavřená a omezená.
+    \end{enumerate}
+\end{theorem}
+Důkaz věty lze nálézt např. v \citep[str. 166]{NetukaAnalyza2014}. Pro obecný metrický prostor Heineho-Borelova věta již neplatí. Např. v diskrétním metrickém prostoru je každá množina uzavřená i omezená (stačí zvolit $r>1$, tzn. $B_r(x)=X$). Nicméně uvážíme-li prostor $X=(0,1)$ s dikrétní metrikou $\varrho$, pak z otevřeného pokrytí
+\[(0,1)\subseteq\bigcup_{n=1}^\infty\left\langle\dfrac{1}{n+1},\dfrac{1}{n}\right)\]
+nelze vybrat žádné konečné, navzdory faktu, že interval $(0,1)$ je v $X$ uzavřený a omezený.
+
+\subsection{Lipschitzovská zobrazení}\label{subsec:lipschitzovska-zobrazeni}
+
+\begin{definition}[Lipschitzovské zobrazení]\label{def:lipschitzovske-zobrazeni}
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory. 
+\end{definition}
+
 \todo{Doplnit pojmy a značení podle dalšího textu
     \begin{itemize}
-        \item Kompaktní množina, věta o kompaktnosti v $\R^n$, věta o uzavřenosti kompaktní množiny.
         \item Kvádr a objem kvádru
-        \item Pokrytí, zjemnění
-        \item $\delta$-pokrytí
         \item $\delta$-mříž
         \item (bi-)lipschitzovské zobrazení
     \end{itemize}
