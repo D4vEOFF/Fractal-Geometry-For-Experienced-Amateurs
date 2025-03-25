@@ -204,20 +204,22 @@ Volněji řečeno, pro kompaktní množinu lze z jejího libovolného otevřené
         \item Množina $M$ je uzavřená a omezená.
     \end{enumerate}
 \end{theorem}
-Důkaz věty lze nálézt např. v \citep[str. 166]{NetukaAnalyza2014}. Pro obecný metrický prostor Heineho-Borelova věta již neplatí. Např. v diskrétním metrickém prostoru je každá množina uzavřená i omezená (stačí zvolit $r>1$, tzn. $B_r(x)=X$). Nicméně uvážíme-li prostor $X=(0,1)$ s dikrétní metrikou $\varrho$, pak z otevřeného pokrytí
+Důkaz věty lze nálézt např. v \citep[str. 166]{NetukaAnalyza2014}. Pro obecný metrický prostor toto tvrzení již neplatí. Např. v diskrétním metrickém prostoru je každá množina uzavřená i omezená (stačí zvolit $r>1$, tzn. $B_r(x)=X$). Nicméně uvážíme-li prostor $X=(0,1)$ s dikrétní metrikou $\varrho$, pak z otevřeného pokrytí
 \[(0,1)\subseteq\bigcup_{n=1}^\infty\left\langle\dfrac{1}{n+1},\dfrac{1}{n}\right)\]
 nelze vybrat žádné konečné, navzdory faktu, že interval $(0,1)$ je v $X$ uzavřený a omezený.
 
 \subsection{Lipschitzovská zobrazení}\label{subsec:lipschitzovska-zobrazeni}
 
-\begin{definition}[Lipschitzovské zobrazení]\label{def:lipschitzovske-zobrazeni}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory. 
-\end{definition}
-
-\todo{Doplnit pojmy a značení podle dalšího textu
+\begin{definition}[Lipschitzovské zobrazení]\label{def:bilipschitzovske-zobrazeni}
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory. Pak zobrazení $\mapping{f}{X}{Y}$ nazveme 
     \begin{itemize}
-        \item Kvádr a objem kvádru
-        \item $\delta$-mříž
-        \item (bi-)lipschitzovské zobrazení
+        \item \emph{lipschitzovské}\index{zobrazení!lipschitzovské}, pokud existuje konstanta $K>0$ taková, že pro každé $x,y\in X$ platí
+        \[\varrho_2(f(x),f(y))\leqslant K\varrho_1(x,y).\]
+        Navíc pokud lze volit $K<1$, pak $f$ nazýváme \emph{kontrakcí}\index{kontrakce}
+        \item \emph{bilipschitzovské}\index{zobrazení!bilipschitzovské}, pokud existují konstanty $K_1,K_2>0$ takové, že pro každé $x,y\in X$ platí
+        \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y).\]
     \end{itemize}
-}
+\end{definition}
+Je celkem zjevné, že lipschitzovská zobrazení jsou vždy spojitá. Pro každé $\varepsilon>0$ stačí zvolit kouli o poloměru $\varepsilon/K$, tedy
+\[\varrho_2(f(x_0),f(x))\leqslant K\varrho_1(x_0,x)\leqslant K\cdot\dfrac{\varepsilon}{K}=\varepsilon\]
+implikující spojitost $f$ v bodě $x_0$.
