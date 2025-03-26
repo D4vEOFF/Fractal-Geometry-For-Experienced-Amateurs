@@ -6,14 +6,14 @@ Tuto část tedy vnímejte spíše jako referenční, než rigorózní výklad.
 
 Výklad v této kapitole a dále v kapitole \ref{chapter:hausdorffuv-mp} se bude točit především okolo tzv. \emph{metrických prostorů} (viz definice \ref{def:metricky-prostor}).
 \begin{definition}[Metrický prostor]\label{def:metricky-prostor}
-    \emph{Metrickým prostorem}\index{metrický prostor} nazýváme uspořádanou dvojici $(X,\varrho)$, kde $X\neq\emptyset$ a $\mapping{\varrho}{X\times X}{\R_0^+}$ je zobrazení splňující:
+    \emph{Metrickým prostorem}\index{metrický prostor}\index{prostor!metrický} nazýváme uspořádanou dvojici $(X,\varrho)$, kde $X\neq\emptyset$ a $\mapping{\varrho}{X\times X}{\R_0^+}$ je zobrazení splňující:
     \begin{enumerate}[label=(\alph*)]
         \item $\forall x,y\in X: \varrho(x,y)=0\iff x=y$,
         \item $\forall x,y\in X: x\neq y\implies \varrho(x,y)>0$,
         \item $\forall x,y\in X: \varrho(x,y)=\varrho(y,x)$,\rightnote{symetrie}
         \item $\forall x,y,z\in X: \varrho(x,z)\leqslant\varrho(x,y)+\varrho(y,z)$.\rightnote{trojúhelníková nerovnost}
     \end{enumerate}
-    Zobrazení $\varrho$ nazýváme \emph{metrika}\index{metrický prostor!metrika}.
+    Zobrazení $\varrho$ nazýváme \emph{metrika}\index{metrika}.
 \end{definition}
 
 \subsection{Metrické pojmy}\label{subsec:metricke-pojmy}
@@ -187,7 +187,7 @@ Poměrně důležitým pojmem v teorii metrických prostorů jsou tzv. kompaktn�
     \begin{itemize}
         \item $\mathcal{U}$ tvoří tzv. \emph{pokrytí}\index{pokrytí} množiny $M$, pokud
         \[M\subseteq\bigcup_{i=1}^\infty U_i.\]
-        Navíc o pokrytí $\mathcal{U}$ říkáme, že je \emph{otevřené}\index{pokrytí!otevřené pokrytí}, pokud pro každé $i\in\N$ je množina $U_i$ otevřená.
+        Navíc o pokrytí $\mathcal{U}$ říkáme, že je \emph{otevřené}\index{pokrytí!otevřené}, pokud pro každé $i\in\N$ je množina $U_i$ otevřená.
         \item Pokud existuje $\delta>0$, takové, že pro každé $i\in\N$ platí $\diam{U_i}<\delta$, pak $\mathcal{U}$ nazýváme \emph{$\delta$-pokrytím}\index{$\delta$-pokrytí}.
         \item Platí-li pro systém $\mathcal{G}=\set{G_1,G_2,\ldots}\subseteq\powset{X}$, že
         \[M\subseteq\bigcup_{i=1}^\infty G_i\subseteq\bigcup_{i=1}^\infty U_i,\]
