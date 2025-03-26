@@ -2,6 +2,8 @@
 
 V tomto oddílu se v~krátkosti zaměříme na připomenutí některých pojmů a značení,~které budeme dále využívat. Související teorii týkající se mnoha záležitostí v~tomto případě vynecháme s~předpokladem,~že ji čtenář již zná. Pokud tomu však v~některých případech takto nebude,~lze tuto část textu považovat za výčet konceptů,~které pro zvládnutí nadcházející teorie budeme potřebovat. V tomto ohledu lze např. nahlédnout do knihy \cite{NetukaAnalyza2014}.
 
+Tuto část tedy vnímejte spíše jako referenční, než rigorózní výklad.
+
 Výklad v této kapitole a dále v kapitole \ref{chapter:hausdorffuv-mp} se bude točit především okolo tzv. \emph{metrických prostorů} (viz definice \ref{def:metricky-prostor}).
 \begin{definition}[Metrický prostor]\label{def:metricky-prostor}
     \emph{Metrickým prostorem}\index{metrický prostor} nazýváme uspořádanou dvojici $(X,\varrho)$, kde $X\neq\emptyset$ a $\mapping{\varrho}{X\times X}{\R_0^+}$ je zobrazení splňující:
@@ -26,7 +28,7 @@ Začneme některými základními pojmy sousvisejícími s metrickými prostory.
         \[K_r(x)=\set{y\in X\mid\varrho(y,x)\leqslant r}.\]
     \end{itemize}
 \end{definition}
-Např. v $\R$ představuje otevřená koule $B_r(x)$ otevřený interval $(x-r,x+r)$ a $K_r(x)=\langle x-r,x+r\rangle$. V $\R^2$ se jedná o standardní kruh (s hranicí, nebo bez ní). Nebo v případě prostoru spojitých funkcí $X=\mathcal{C}(\langle a,b\rangle)$ se pro libovolnou funkci $f\in X$ jedná o pás šířky $2r$ sestrojený okolo grafu funkce $f$.
+Např. v $\R$ představuje otevřená koule $B_r(x)$ otevřený interval $(x-r,x+r)$ a $K_r(x)=\langle x-r,x+r\rangle$. V $\R^2$ se jedná o standardní kruh (s hranicí, nebo bez ní). Nebo v případě prostoru spojitých funkcí $X=\continuousfuncspace(\langle a,b\rangle)$ se pro libovolnou funkci $f\in X$ jedná o pás šířky $2r$ sestrojený okolo grafu funkce $f$.
 
 S otevřenými, resp. uzavřenými koulemi se pojí další terminologie.
 \begin{definition}[Otevřená, uzavřená a omezená množina]\label{def:otevrena-uzavrena-omezena-mnozina}
@@ -158,9 +160,9 @@ Podobně i zde lze definovat limes superior a limes inferior. Omezíme se opět 
 
 V rámci posloupností se v matematické analýze často pracuje s posloupnostmi funkcí. K jejich limitám se váže dvojice důležitých termínů: \emph{bodová} a \emph{stejnoměrná konvergence}.
 \begin{definition}[Bodová a stejnoměrná konvergence]\label{def:bodova-stejnomerna-konvergence}
-    Nechť $\set{f_n}_{n=1}^\infty$ je posloupnost funkcí z metrického prostoru $(C(\langle a,b\rangle),\varrho)$, kde $\varrho$ je tzv. \emph{suprémová metrika}, tj. pro každou $f,g\in C(\langle a,b\rangle)$
+    Nechť $\set{f_n}_{n=1}^\infty$ je posloupnost funkcí z metrického prostoru $(\continuousfuncspace(\langle a,b\rangle),\varrho)$, kde $\varrho$ je tzv. \emph{suprémová metrika}, tj. pro každou $f,g\in \continuousfuncspace(\langle a,b\rangle)$
     \[\varrho(f,g)=\sup_{x\in\langle a,b\rangle}|f_n(x)-f(x)|,\]
-    přičemž $\set{f_n}_{n=1}^\infty$ konverguje k funkci $f\in C(\langle a,b\rangle)$.
+    přičemž $\set{f_n}_{n=1}^\infty$ konverguje k funkci $f\in \continuousfuncspace(\langle a,b\rangle)$.
     Pak říkáme, že posloupnost $\set{f_n}_{n=1}^\infty$ konverguje k $f$
     \begin{itemize}
         \item \emph{bodově}\index{konvergence!bodová}, pokud $\lim_{n\to\infty}f_n(x)=f(x)$.
@@ -198,7 +200,7 @@ Poměrně důležitým pojmem v teorii metrických prostorů jsou tzv. kompaktn�
 \end{definition}
 Volněji řečeno, pro kompaktní množinu lze z jejího libovolného otevřeného pokrytí vybrat konečné podpokrytí. Dokazovat kompaktnost množiny z definice může být mnohdy nepraktické, nicméně vzhledem k tomu, že budeme často pracovat s prostorem $\R^n$, záležitost se nám v tomto ohledu značně zjednodušuje.
 \begin{theorem}[Heineho-Borelova]\label{thm:heine-borel}
-    Nechť $(R^n,\varrho)$ je metrický prostor a $M\subseteq\R^n$. Následující výroky jsou ekvivalentní:
+    Nechť $(\R^n,\varrho)$ je metrický prostor a $M\subseteq\R^n$. Následující výroky jsou ekvivalentní:
     \begin{enumerate}[label=(\roman*)]
         \item Množina $M$ je kompaktní.
         \item Množina $M$ je uzavřená a omezená.
@@ -207,6 +209,8 @@ Volněji řečeno, pro kompaktní množinu lze z jejího libovolného otevřené
 Důkaz věty lze nálézt např. v \citep[str. 166]{NetukaAnalyza2014}. Pro obecný metrický prostor toto tvrzení již neplatí. Např. v diskrétním metrickém prostoru je každá množina uzavřená i omezená (stačí zvolit $r>1$, tzn. $B_r(x)=X$). Nicméně uvážíme-li prostor $X=(0,1)$ s dikrétní metrikou $\varrho$, pak z otevřeného pokrytí
 \[(0,1)\subseteq\bigcup_{n=1}^\infty\left\langle\dfrac{1}{n+1},\dfrac{1}{n}\right)\]
 nelze vybrat žádné konečné, navzdory faktu, že interval $(0,1)$ je v $X$ uzavřený a omezený.
+
+\todo{Jak je to s předpokladem pro metriku $\varrho$?}
 
 \subsection{Lipschitzovská zobrazení}\label{subsec:lipschitzovska-zobrazeni}
 
