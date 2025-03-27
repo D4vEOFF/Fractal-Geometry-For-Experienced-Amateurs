@@ -1,12 +1,12 @@
 \section{Jak dlouhé je pobřeží Velké Británie?}\label{sec:pobrezi_velke_britanie}
-Položme si na začátek trochu jinou otázku,~kterou si z počátku položil i~Benoît Mandelbrot: \emph{Jaká je podstata tvaru pobřeží?} Ta se stala podstatnou v~jeho práci \emph{"How Long Is the Coast of Britain?"}. Uvažme část pobřeží s~počátečním a koncovým bodem (viz obrázek \ref{fig:pobrezi}).
+Položme si na začátek trochu jinou otázku,~kterou si z~počátku položil i~Benoît Mandelbrot: \emph{Jaká je podstata tvaru pobřeží?} Ta se stala podstatnou v~jeho práci \emph{"How Long Is the Coast of Britain?"}. Uvažme část pobřeží s~počátečním a koncovým bodem (viz obrázek \ref{fig:pobrezi}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi.pdf}
     \caption{Příklad mapy pobřeží se spojnicí bodů $A$ a $B$.}
     \label{fig:pobrezi}
 \end{figure}
-Zjevně jeho délka je zdola omezena délkou spojnice koncových bodů $A$ a $B$,~nicméně typické pobřeží je velmi nepravidelné a klikaté,~a jeho skutečná délka je tak často mnohem delší. Existují různé metody,~které nám umožňují určit přesněji jeho délku. Několik z nich je popsáno v~knize \citep[str. 79]{Mandelbrot1983},~pro uvedení do problematiky si zde však vystačíme s~tou nejednodušší.\par
+Zjevně jeho délka je zdola omezena délkou spojnice koncových bodů $A$ a $B$,~nicméně typické pobřeží je velmi nepravidelné a klikaté,~a jeho skutečná délka je tak často mnohem delší. Existují různé metody,~které nám umožňují určit přesněji jeho délku. Několik z~nich je popsáno v~knize \citep[str. 79]{Mandelbrot1983},~pro uvedení do problematiky si zde však vystačíme s~tou nejednodušší.\par
 Předpokládejme,~že pobřeží,~které zkoumáme,~má pevné hranice (tj. zanedbáváme např. přílivy a odlivy nastávající během roku),~a dále jsme schopni rozlišovat libovolně krátké vzdálenosti.\par
 Mějme zadané libovolné $\varepsilon>0$. Podél pobřeží začneme umisťovat tyče tak,~že po každém umístění provedeme na mapě krok délky \textbf{nejvýše} $\varepsilon$,~přičemž začínáme v~bodě $A$ a postupujeme až k~bodu $B$ (popř. pokud měříme délku pobřeží ostrova,~pokračujeme dokud se nevrátíme tam,~kde jsme začali). Předpokládejme,~že jsme provedli celkově $n(\varepsilon)$ kroků (jejich počet je závislý na zvolené délce kroku). \emph{Přibližnou délku pobřeží} $\ell(\varepsilon)$ pak stanovíme jako
 \begin{equation*}
@@ -18,7 +18,7 @@ Mějme zadané libovolné $\varepsilon>0$. Podél pobřeží začneme umisťovat
     \caption{Odhad délky pobřeží,~kde $n=10$ při zvoleném $\varepsilon$.}
     \label{fig:pobrezi_aproximace}
 \end{figure}
-Nyní by nás mohlo napadnout,~že pro zmenšující se $\varepsilon$,~tj. $\varepsilon\to0^+$,~bude hodnota $\ell(\varepsilon)$ konvergovat ke skutečné délce pobřeží. Tzn. označíme-li skutečnou délku pobřeží $L$,~pak bychom mohli očekávat,~že platí
+Nyní by nás mohlo napadnout,~že pro zmenšující se $\varepsilon$,~tj. $\varepsilon\to0^+$,~bude hodnota $\ell(\varepsilon)$ konvergovat ke skutečné délce pobřeží. Tzn.~označíme-li skutečnou délku pobřeží $L$,~pak bychom mohli očekávat,~že platí
 \begin{equation}\label{eq:aproximace_limita}
     L=\lim_{\varepsilon\to0^+}{\ell(\varepsilon)}.
 \end{equation}

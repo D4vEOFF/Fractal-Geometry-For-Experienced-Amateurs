@@ -1,6 +1,6 @@
 \section{Lebesgueova míra}\label{sec:lebesgueova-mira}
 
-Jednimi z nejznámějších průkopníků v oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a italský matematik \name{Giuseppe Peano} (1958--1932), kteří ve svých publikacích popsali způsob měření "velikosti" množin, který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť, přičemž $S$ bude představovat součet obsahů všech čtverců síťě, které jsou obsaženy ve vnitřku množiny $M$ a $S^\prime$ je součeet obsahů všech čtverců sítě, které mají společný alespoň jeden bod s hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě, které obsahují body uzávěru množiny $M$. (Viz obrázek \ref{fig:jordan-peano-mira}.)
+Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a italský matematik \name{Giuseppe Peano} (1958--1932),~kteří ve svých publikacích popsali způsob měření "velikosti" množin,~který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť,~přičemž $S$ bude představovat součet obsahů všech čtverců síťě,~které jsou obsaženy ve vnitřku množiny $M$ a $S^\prime$ je součeet obsahů všech čtverců sítě,~které mají společný alespoň jeden bod s~hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě,~které obsahují body uzávěru množiny $M$. (Viz obrázek \ref{fig:jordan-peano-mira}.)
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.4\textwidth}
@@ -17,7 +17,7 @@ Jednimi z nejznámějších průkopníků v oblasti teorie míry byli francouzsk
     \caption{Vnitřní a vnější Jordanova-Peanova míra množiny $M$.}
     \label{fig:jordan-peano-mira}
 \end{figure}
-Při zjemňování čtvercové sítě konvergují součty $S$ a $S+S^\prime$ k limitám, které po řadě nazýváme \emph{vnitřní} a \emph{vnější Jordanova-Peanova míra}\index{Jordanova-Peanova míra}\index{Jordanova-Peanova míra!vnitřní}\index{Jordanova-Peanova míra!vnější}. Tato úvaha předložila základní předpoklady právě pro vznik teorie míry. \cite{Sarmanova1996}
+Při zjemňování čtvercové sítě konvergují součty $S$ a $S+S^\prime$ k~limitám,~které po řadě nazýváme \emph{vnitřní} a \emph{vnější Jordanova-Peanova míra}\index{Jordanova-Peanova míra}\index{Jordanova-Peanova míra!vnitřní}\index{Jordanova-Peanova míra!vnější}. Tato úvaha předložila základní předpoklady právě pro vznik teorie míry. \cite{Sarmanova1996}
 
 V předešlé sekci \ref{sec:prostory-s-mirou} jsme si povídali o~pojmu \emph{míra} obecně a~podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů},~jejichž "velikost" umíme jednoduše určit. V~dalším textu se omezíme pouze na množinu $\R^n$.
 
@@ -36,7 +36,7 @@ Nyní si definujeme tzv. \emph{vnější Lebesgueovu míru}.
 \end{definition}
 Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o~"velikosti" dané množiny.  Lze ihned vidět,~že pro libovolnou množinu $A\subseteq\R^n$ je $\lebesgueoutermeasure{n}(A)\in\R_0^+$,~protože $\vol_n(I_j)\geqslant0$ pro každé $j\in\N$.
 \begin{example}\label{ex:lebegueova-mira-trivialni-priklady}
-    Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z definice (viz \ref{def:vnejsi-lebegueova-mira}),~tedy budeme hledat příslušné pokrytí dané množiny.
+    Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z~definice (viz \ref{def:vnejsi-lebegueova-mira}),~tedy budeme hledat příslušné pokrytí dané množiny.
     \begin{itemize}
         \item Pro prázdnou množinu $\emptyset$ je $\lebesgueoutermeasure{n}(\emptyset)=0$,~neboť $\emptyset\subseteq\prod_{i=1}^{n}\langle0,0\rangle$ (prázdnou množinu lze pokrýt jakýmkoliv kvádrem nulového objemu) a
         \[\vol_n\left(\prod_{i=1}^{n}\langle0,0\rangle\right)=0.\]
@@ -60,7 +60,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
         \[J_i=\prod_{j=1}^{n}\left\langle a_j\sqrt[n]{1+\varepsilon},b_j\sqrt[n]{1+\varepsilon}\right\rangle.\]
-        Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
         \[I\subseteq\bigcup_{i=1}^m J_i.\]
         Celkově tedy dostáváme
         \begin{align*}
@@ -70,7 +70,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         pro každé $\varepsilon>0$,~což jsme chtěli.
         \item \textbf{Důkaz $\lebesgueoutermeasure{n}(I)\geqslant\vol_n(I)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s~nulovým objemem.
     \end{itemize}
-    Z kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
+    Z~kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
     \[\lebesgueoutermeasure{n}(I)=\vol_n(I).\]
 \end{proof}
 % \begin{example}[Výpočet vnější Lebesgueovy míry kvádru]\label{ex:lebegueova-mira-objem-kvadru}
@@ -83,7 +83,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
 %         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
 %         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
 %         \[J_i=\prod_{j=1}^{n}\left\langle a_j\sqrt[n]{1+\varepsilon},b_j\sqrt[n]{1+\varepsilon}\right\rangle.\]
-%         Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+%         Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
 %         \[I\subseteq\bigcup_{i=1}^m J_i.\]
 %         Celkově tedy dostáváme
 %         \begin{align*}
@@ -93,7 +93,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
 %         pro každé $\varepsilon>0$,~což jsme chtěli.
 %         \item \textbf{Důkaz $\lebesgueoutermeasure{n}(I)\geqslant \prod_{i=1}^{n}(b_i-a_i)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s~nulovým objemem.
 %     \end{itemize}
-%     Z kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
+%     Z~kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
 %     \[\lebesgueoutermeasure{n}(I)=\prod_{i=1}^{n}(b_i-a_i).\]
 % \end{example}
 \begin{remark}
@@ -116,7 +116,7 @@ Je tedy potřeba se omezit na takové množiny,~kde je $\lebesgueoutermeasure{n}
     \[\lebesgueoutermeasure{n}(G)=\lebesgueoutermeasure{n}(G\cap A)+\lebesgueoutermeasure{n}(G\setminus A).\]
     Systém všech měřitelných množin v~$\R^n$ značíme $\mathcal{L}(\R^n)$.  Pokud $A\in\mathcal{L}(\R^n)$,~pak číslo $\lebesguemeasure{n}(A)=\lebesgueoutermeasure{n}(A)$ nazýváme $n$-rozměrnou Lebesgueovou mírou\index{Lebesgueova míra!$n$-rozměrná Lebesgueova míra} množiny $A$.
 \end{definition}
-Podmínka v~definici \ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká,~že množina $A$ je lebesgueovsky měřitelná,~když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek \ref{fig:caratheodoryho-kriterium}). Zároveň je dobré podotknout, že kvádry, které figurují v definici vnější Lebesgueovy míry jsou měřitelné.
+Podmínka v~definici \ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká,~že množina $A$ je lebesgueovsky měřitelná,~když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek \ref{fig:caratheodoryho-kriterium}). Zároveň je dobré podotknout,~že kvádry,~které figurují v~definici vnější Lebesgueovy míry jsou měřitelné.
 \begin{figure}[h]
     \centering
     \includegraphics{ch02-caratheodoryho-kriterium.pdf}

@@ -121,7 +121,7 @@ Zároveň body \ref{thm:pokryti-delta-kvadry} a \ref{thm:pokryti-delta-sit} nám
 \end{figure}
 Nyní se opět vrátíme k~fraktálům a výpočtům jejich dimenze,~čemuž jsme se věnovali již v~sekci \ref{sec:fraktalni_dimenze} kapitoly \ref{chapter:uvod_do_fraktalu},~konkrétně \ref{subsec:dimenze-fraktalu}. Tentokrát však budeme postupovat přímo podle definice box-counting dimenze \ref{def:box-counting-dimenze},~tedy budeme zvlášť zkoumat horní a dolní box-counting dimenzi.
 \begin{example}[Cantorovo diskontinuum]\label{ex:cantorovo-diskontinuum}
-    Formálně můžeme popsat Cantorovo diskontinuum $C$ jako průnik množin $C_k$ pro $k=0,1,2,\ldots$, přičemž
+    Formálně můžeme popsat Cantorovo diskontinuum $C$ jako průnik množin $C_k$ pro $k=0,1,2,\ldots$,~přičemž
     \[C_k=\bigcup _{j=0}^{3^{k-1}-1}\left(\left\langle{\frac {3j+0}{3^{k}}},{\frac {3j+1}{3^{k}}}\right\rangle\cup \left\langle{\frac {3j+2}{3^{k}}},{\frac {3j+3}{3^{k}}}\right\rangle\right).\]
     $C_k$ tedy reprezentuje $k$-tou iteraci a~$C=\bigcap_{k=0}^\infty C_k$. Již jsme měli možnost se přesvědčit,~že tento fraktál má box-counting dimenzi $\ln{2}/\ln{3}$. Zkusme nyní výpočet zopakovat,~avšak vzlášť vypočítáme $\lowerdimB{C}$ a $\upperdimB{C}$ podíváme se,~zda se shodují.
 
@@ -170,7 +170,7 @@ Budeme nyní sledovat,~jak "rychle" se mění objem $(F)_\delta$ pro $\delta\to 
     \[\lebesguemeasure{3}((B_r(x))_\delta)=\dfrac{4}{3}\pi (r+\delta)^3=\dfrac{4}{3}\pi r^3+4\pi r^2\delta+4\pi r\delta^2+\dfrac{4}{3}\pi\delta^3\approx\dfrac{4}{3}\pi r^3.\]
     Změna objemu je v~tomto případě vzhledem k~původnímu objemu zanedbatelná.
 \end{itemize}
-Výsledky si srovnejme v tabulce \ref{table:odhady-lambda_3}.
+Výsledky si srovnejme v~tabulce \ref{table:odhady-lambda_3}.
 \begin{table}[h]
     \centering
     \begin{tabular}{r|c}
@@ -299,7 +299,7 @@ Poslední bod \ref{thm:stabilita-bc-dimenze} tvrzení \ref{thm:vlastnosti-bc-dim
     \end{align*}
 \end{proof}
 
-Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{zobrazení!lipschitzovské} a \emph{bilipschitzovská zobrazení}\index{zobrazení!bilipschitzovské}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\varrho_1)$ a $(Y,\varrho_2)$,~že existuje konstanta $K>0$, taková, že pro každé $x,y\in X$ platí
+Jako poslední se ještě nabízí otázka,~jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{zobrazení!lipschitzovské} a \emph{bilipschitzovská zobrazení}\index{zobrazení!bilipschitzovské}. Připomeňme,~že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\varrho_1)$ a $(Y,\varrho_2)$,~že existuje konstanta $K>0$,~taková,~že pro každé $x,y\in X$ platí
 \[\varrho_2(f(x),f(y))\leqslant K\varrho_1(x,y).\]
 Pokud navíc platí,~že existují konstanty $K_1,K_2>0$,~takové,~že platí
 \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y),\]
@@ -347,7 +347,10 @@ V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na pr
         \end{align*}
         Nerovnost pro $\lowerdimB{f(F)}$ obdržíme analogicky.
         \item Je-li $f$ bilipschitzovské,~pak podle lemmatu \ref{lem:lipschitzovska-zobrazeni-a-bijekce} je $\mapping{f}{\R^n}{f(\R^n)}$ bijekce a existuje inverzní zobrazení $\mapping{f^{-1}}{f(\R^n)}{\R^n}$. Volme $u,v\in f(\R^n)$ libovolně a položme $x=f^{-1}(u),y=f^{-1}(v)$. Pak
-        \[K_1\varrho_n(x,y)=K_1\varrho_n(f^{-1}(u),f^{-1}(v))\leqslant\varrho_m(f(f^{-1}(u)),f(f^{-1}(v)))=\varrho_m(u,v),\]
+        \begin{align*}
+            K_1\varrho_n(x,y)&=K_1\varrho_n(f^{-1}(u),f^{-1}(v))\leqslant\varrho_m(f(f^{-1}(u)),f(f^{-1}(v)))\\
+            &=\varrho_m(u,v),
+        \end{align*}
         neboli
         \[\varrho_n(f^{-1}(u),f^{-1}(v))\leqslant\dfrac{1}{K_1}\varrho_m(u,v),\]
         přičemž $K_1,K_2$ jsou konstanty z~definice. Tzn.~$f^{-1}$ je lipschitzovské.
