@@ -59,8 +59,8 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         pro nějaké $\varepsilon>0$. Nyní si zvolíme nové kvádry\footnote{Formálně $\mathcal{I}$ tvoří zjemnění pokrytí $\mathcal{J}$} $\mathcal{J}=\set{J_1,J_2,\ldots}$ tak,~aby pro každé $i\in\N$ platilo
         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
-        \[J_i=\prod_{j=1}^{n}\left\langle a_j\sqrt[n]{1+\varepsilon},b_j\sqrt[n]{1+\varepsilon}\right\rangle.\]
-        Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        \[J_i=\prod_{j=1}^{n}\left\langle x_j-r_j\sqrt[n]{1+\varepsilon},x_j+r_j\sqrt[n]{1+\varepsilon}\right\rangle,\]
+        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
         \[I\subseteq\bigcup_{i=1}^m J_i.\]
         Celkově tedy dostáváme
         \begin{align*}

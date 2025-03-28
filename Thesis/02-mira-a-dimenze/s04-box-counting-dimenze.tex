@@ -175,12 +175,12 @@ Budeme nyní sledovat,~jak "rychle" se mění objem $(F)_\delta$ pro $\delta\to 
 Výsledky si srovnejme v~tabulce \ref{table:odhady-lambda_3}.
 \begin{table}[h]
     \centering
-    \begin{tabular}{r|c}
-    Útvar $F$                               & $\lebesguemeasure{3}((F)_\delta)$       \\\hline
-    Konečná množina $\set{x_1,\ldots,x_n}$ & $\frac{4n}{3}\pi\delta^3=c_1\delta^3$   \\
-    Úsečka $u$                             & $\pi\ell\delta^2=c_2\delta^2$           \\
-    Kvádr $I$                              & $2(b_1-a_1)(a_2-b_2)\delta=c_3\delta^1$ \\
-    Koule $B_\delta(x)$                    & $\frac{4}{3}\pi r^3=c_4\delta^0$      
+    \begin{tabular}{r|D{=}{=}{-1}}
+    Útvar $F$                               & \multicolumn{1}{c}{$\lebesguemeasure{3}((F)_\delta)$}       \\\hline
+    Konečná množina $\set{x_1,\ldots,x_n}$     & \frac{4n}{3}\pi\delta^3=c_1\delta^3   \\
+    Úsečka $u$                             & \pi\ell\delta^2=c_2\delta^2           \\
+    Kvádr $I$                              & 2(b_1-a_1)(a_2-b_2)\delta=c_3\delta^1 \\
+    Koule $B_\delta(x)$                    & \frac{4}{3}\pi r^3=c_4\delta^0      
     \end{tabular}
     \caption{Odhady $\lebesguemeasure{3}$ pro vybrané útvary}
     \label{table:odhady-lambda_3}
@@ -254,7 +254,7 @@ V minulé podsekci \ref{subsec:definice-a-vypocet-bc-dimenze} jsme se bavili o~m
     Nechť jsou dány $F,G\subseteq\R^n$.
     \begin{enumerate}[label=(\roman*)]
         \item\label{thm:monotonie-bc-dimenze} Pokud $G\subseteq F$,~pak $\lowerdimB{G}\leqslant\lowerdimB{F}$ a $\upperdimB{G}\leqslant\upperdimB{F}$.\rightnote{monotonie}
-        \item\label{thm:rozsah-hodnot-bc-dimenze} Je-li $F\neq\emptyset$ omezená,~pak $0\leqslant\lowerdimB{F}\leqslant\upperdimB{F}\leqslant n$. \rightnote{rozsah hodnot}
+        \item\label{thm:rozsah-hodnot-bc-dimenze} Je-li $F\neq\emptyset$ omezená,~pak $0\leqslant\lowerdimB{F}\leqslant\upperdimB{F}\leqslant n$.\rightnote{rozsah hodnot}
         \item\label{thm:stabilita-bc-dimenze} $\upperdimB(F\cup G)=\max\set{\upperdimB{F},\upperdimB{G}}$.\rightnote{stabilita}
     \end{enumerate}
 \end{theorem}
