@@ -38,7 +38,7 @@ Jinými slovy, $\borelsigmaalgebra(X)$ je nejmenší $\sigma$-algebra generovan�
 \[\mathcal{A}=\bigcap_{\substack{\mathcal{F}\supseteq X\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
 Tento fakt se někdy značí $\mathcal{A}=\sigma(X)$.} všemi otevřenými množinami z $X$.
 
-Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$.
+Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejdříve si však dokážeme dvě pomocná lemmata.
 \begin{lemma}[$\sigma$-subaditivita Hausdorffovy míry]\label{lem:Hausdorffova-mira-subaditivita}
     Nechť jsou dány množiny $A_1,A_2,\ldots$, kde $A_i\subseteq\R^n$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
     \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i).\]
@@ -66,12 +66,17 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$.
         &=\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)+\varepsilon.
     \end{align*} 
 \end{proof}
+\begin{lemma}
+    % sigma-aditivita pro množiny s kladnými vzdálenostmi
+\end{lemma}
 \begin{theorem}\label{thm:hausdorffova-mira-je-mira}
-    $(\R^n,\borelsigmaalgebra(\R^n),\hausdorffmeasure{s})$ tvoří prostor s mírou.
+    Trojice $(\R^n,\borelsigmaalgebra(\R^n),\hausdorffmeasure{s})$, kde $s\geqslant 0$, tvoří prostor s mírou.
 \end{theorem}
 Věta \ref{thm:hausdorffova-mira-je-mira} říká, že omezíme-li se na $\sigma$-agebru borelovských množin, pak $\hausdorffmeasure{s}$ je skutečně mírou.
 \begin{proof}
     Fakt, že $\hausdorffmeasure{s}(\emptyset)=0$ je zjevný. Stačí zvolit pokrytí množinami s nulovým průměrem, tedy např. prázdnými množinami.
-\end{proof}
 
-\todo{Doplnit důkaz,~že Hausdorffova míra je mírou}
+    Pro druhou vlastnost uvažujme disjunktní množiny $A,B\subseteq\R^n$. bez újmy na obecnosti můžeme předpokládat, že $\hausdorffmeasure{s}(A\cup B)<\infty$, jinak je rovnost triviálně splněna. Ze $\sigma$-subaditivity $\hausdorffmeasure{s}$ (viz lemma \ref{lem:Hausdorffova-mira-subaditivita}) víme, že
+    \[\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
+    Pro důkaz opačné nerovnosti zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$
+\end{proof}
