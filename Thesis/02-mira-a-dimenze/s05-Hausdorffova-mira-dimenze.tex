@@ -66,13 +66,30 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
         &=\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)+\varepsilon.
     \end{align*} 
 \end{proof}
-\begin{lemma}
-    % sigma-aditivita pro množiny s kladnými vzdálenostmi
+\begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}
+    Nechť $(X,\varrho)$ je metrický prostor a $A,B\subseteq X$, takové, že pro jejich vzdálenost platí $\varrho(A,B)>0$. Pak pro každé $s\geqslant 0$ platí
+    \[\hausdorffmeasure{s}(A\cup B)=\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
+\end{lemma}
+\begin{proof}
+    Nerovnost $\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)$ je zřejmá ze $\sigma$-subaditivity Hausdorffovy míry (viz lemma \ref{lem:Hausdorffova-mira-subaditivita}).
+
+    Bez újmy na obecnosti předpokládejme, že $\hausdorffmeasure{s}(A\cup B)<\infty$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$, takové, že pro každé $\varepsilon>0$ je
+    \[\sum_{i=1}^{\infty}(\diam{F_i})\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.\]
+    Opět bez újmy na obecnosti lze předpokládat, že pro každé $i\in\N$ je $\diam{F_i}<\varrho(A,B)$. V opačném případě bychom $F_i$ pokryli množnami s menším průměrem. Z toho pak plyne, že každá z množin $F_i$ má neprázdný průnik s nejvýše jednou z množin $A,B$, tzn. z pokrytí $\mathcal{F}$ lze vybrat dvě disjunktní podpokrytí množiny $A$, resp. množiny $B$. Tedy celkově s užitím předchozího lemmatu \ref{lem:Hausdorffova-mira-subaditivita} máme
+    \begin{align*}
+        \hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)&\leqslant\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ A\cap F_i\neq\emptyset}}F_i\right)+\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ B\cap F_i\neq\emptyset}}F_i\right)\\
+        &\leqslant\sum_{\substack{i\in\N\\ A\cap F_i\neq\emptyset}}\hausdorffmeasure{s}(F_i)+\sum_{\substack{i\in\N\\ B\cap F_i\neq\emptyset}}\hausdorffmeasure{s}(F_i)\\
+        &\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(F_i)\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.
+    \end{align*}
+\end{proof}
+\begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-temer-disjunktni}
+    Nechť $(X,\varrho)$ je metrický prostor a $A,B\subseteq X$ jsou téměř disjunktní množiny o průměru nejvýše $\delta>0$. Pak pro každé $s\geqslant 0$ platí
+    \[\hausdorffmeasure{s}(A\cup B)=\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
 \end{lemma}
 \begin{theorem}\label{thm:hausdorffova-mira-je-mira}
     Trojice $(\R^n,\borelsigmaalgebra(\R^n),\hausdorffmeasure{s})$, kde $s\geqslant 0$, tvoří prostor s mírou.
 \end{theorem}
-Věta \ref{thm:hausdorffova-mira-je-mira} říká, že omezíme-li se na $\sigma$-agebru borelovských množin, pak $\hausdorffmeasure{s}$ je skutečně mírou.
+Věta \ref{thm:hausdorffova-mira-je-mira} říká, že omezíme-li se na $\sigma$-algebru borelovských množin, pak $\hausdorffmeasure{s}$ je skutečně mírou.
 \begin{proof}
     Fakt, že $\hausdorffmeasure{s}(\emptyset)=0$ je zjevný. Stačí zvolit pokrytí množinami s nulovým průměrem, tedy např. prázdnými množinami.
 
