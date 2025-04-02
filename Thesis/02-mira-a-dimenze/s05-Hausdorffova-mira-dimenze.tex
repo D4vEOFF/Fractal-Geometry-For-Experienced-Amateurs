@@ -39,6 +39,9 @@ Jinými slovy,~$\borelsigmaalgebra(X)$ je nejmenší $\sigma$-algebra generovan�
 Tento fakt se někdy značí $\mathcal{A}=\sigma(X)$.} všemi otevřenými množinami z~$X$.
 
 Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejdříve si však dokážeme dvě pomocná lemmata.
+\begin{remark}
+    V případě práce s množinou $\R^n$ a Hausdorffovou mírou $\hausdorffmeasure{s}(F)$, resp. $\hausdorffdeltameasure{s}{\delta}(F)$, budeme vždy předpokládat, že $F\in\borelsigmaalgebra(\R^n)$.
+\end{remark}
 \begin{lemma}[$\sigma$-subaditivita Hausdorffovy míry]\label{lem:Hausdorffova-mira-subaditivita}
     Nechť jsou dány množiny $A_1,A_2,\ldots$,~kde $A_i\subseteq\R^n$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
     \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i).\]
@@ -116,6 +119,10 @@ Nyní již můžeme zobrazení $\hausdorffmeasure{s}$ nazývat mírou oprávněn
     Není těžké si rozmyslet,~že $n$ je nejmenší počet množin o~průměru nejvýše $\delta$,~takových,~aby pokrývaly množinu $A$. Zároveň pro libovolné $\varepsilon>0$ je potřeba nejvýše $n$-koulí o~poloměru $\varepsilon/2$ se středy v~$x_i$ pro pokrytí $A$. Tzn.~$\hausdorffmeasure{0}(A)=|A|=n$.
 \end{example}
 
+V rámci tohoto textu jsme se již zabývali jiným typem míry a to tzv. \emph{lebesgueovou mírou} (viz sekce \ref{sec:lebesgueova-mira}). Ta pro nás hrála důležitou roli v jednom možném pojetí \emph{box-counting dimenze} (viz sekce \ref{sec:box-counting-dimenze}). Lze ukázat, že pro množinu $F\subseteq\R^n$ je
+\[\hausdorffmeasure{n}(F)=\dfrac{1}{v_n}\lebesguemeasure{n}(F),\]
+kde $v_n$ je objem (míra) jednotkové koule v $\R^n$. Čtenář snad promine, že tento fakt zde ponecháme bez důkazu. \citep[str. 45]{Falconer2014}
+
 \subsection{Hausdorffova dimenze}\label{subsec:hausdorffova-dimenze}
 
 Středobodem této sekce je tzv. \emph{Hausdorffova dimenze}\index{dimenze!Hausdorffova}. Na úvod si dokážeme jedno jednoduché tvrzení týkající se Hausdorffovy míry.
@@ -135,7 +142,7 @@ Středobodem této sekce je tzv. \emph{Hausdorffova dimenze}\index{dimenze!Hausd
 \end{proof}
 (Převzato z~\citep[str. 68]{Mattila1995}.)
 
-Z věty \ref{thm:hodnoty-hausdorffovy-miry} lze vidět,~že Hausdorffova míra dává smysl jen pro určitou hodnotu $s$. Pro "příliš velké" $s$ bude hodnota vždy $0$,~naopak pro "moc malé" $s$ bude hodnota rovna $\infty$ (viz obrázek \ref{fig:hausdorffova-dimenze-graf}).
+Z věty \ref{thm:hodnoty-hausdorffovy-miry} lze vidět,~že Hausdorffova míra dává smysl jen pro určitou hodnotu $s$. Pro "příliš velké" $s$ bude hodnota vždy $0$,~naopak pro "moc malé" $s$ bude jeho hodnota rovna $\infty$ (viz obrázek \ref{fig:hausdorffova-dimenze-graf}).
 \begin{figure}[h]
     \centering
     \includegraphics{ch02-hausdorffova-dimenze-graf.pdf}
@@ -147,4 +154,4 @@ Této kritické hodnotě $s$ říkáme \emph{Hausdorffova dimenze}\index{dimenze
     Nechť $F\subseteq\R^n$. Hausdorffovou dimenzí\footnote{Též někdy nazývaná \emph{Hausdorffova-Bezikovičova dimenze}\index{dimenze!Hausdorffova-Bezikovičkova}. }\index{dimenze!Hausdorffova} množiny $F$ nazveme hodnotu
     \[\dimH{F}=\inf\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=0}=\sup\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=\infty}.\]
 \end{definition}
-Hodnota $\hausdorffmeasure{s}(F)$ pro $s=\dimH{F}$ může být různá,~tzn. může platit,~že $\hausdorffmeasure{s}(F)=\infty$,~$\hausdorffmeasure{s}(F)=0$ a nebo se může jednat o~konečné číslo,~tj. $0<\hausdorffmeasure{s}(F)<\infty$.
+Hodnota $\hausdorffmeasure{s}(F)$ pro $s=\dimH{F}$ může být různá,~tzn. může platit,~že $\hausdorffmeasure{s}(F)=\infty$,~$\hausdorffmeasure{s}(F)=0$ a nebo se může jednat o~konečné nenulové číslo,~tj. $0<\hausdorffmeasure{s}(F)<\infty$.
