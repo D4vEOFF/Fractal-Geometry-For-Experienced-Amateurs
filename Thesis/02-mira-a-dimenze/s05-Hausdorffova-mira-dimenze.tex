@@ -12,7 +12,7 @@ Způsobů,~jak definovat dimenzi je celá řada. Zatím jsme společně prozkoum
 
 \begin{definition}\label{def:hd-mira-delta}
     Nechť je dána množina $F\subseteq\R^n$ a $s>0$. Pak pro každé $\delta>0$ definujeme zobrazení
-    \[\hausdorffdeltameasure{s}{\delta}(F)=\inf\set{\sum_{i=1}^{\infty}(\diam{F_i})^s\;\middle|\;F\subseteq\bigcup_{i=1}^\infty F_i\;,\;\diam{F_j}\leqslant\delta\;\text{pro}\;1\leqslant j\leqslant n}.\]
+    \[\hausdorffdeltameasure{s}{\delta}(F)=\inf\set{\sum_{i=1}^{\infty}(\diam{F_i})^s\;\middle|\;F\subseteq\bigcup_{i=1}^\infty F_i\;,\;\diam{F_j}\leqslant\delta\;\text{pro}\;j\in\N}.\]
 \end{definition}
 Na první pohled si lze všimnout,~že pro $0<\delta_1<\delta_2$ je $\hausdorffdeltameasure{s}{\delta_1}(F)\leqslant\hausdorffdeltameasure{s}{\delta_2}(F)$. Jinými slovy,~pro $\delta\to 0$ hodnota $\hausdorffdeltameasure{s}{\delta}(F)$ klesá. Toto není nikterak těžké si rozmyslet,~neboť pro $\delta_1<\delta_2$ existuje $\delta_1$-pokrytí $\mathcal{F}_1$,~takové,~že je podpokrytím $\delta_2$-pokrytí $\mathcal{F}_2$ množiny $F$,~tedy $\mathcal{F}_1\subseteq\mathcal{F}_2$. To znamená,~že
 \begin{align*}
@@ -67,14 +67,14 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
     \end{align*} 
 \end{proof}
 \begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}
-    Nechť $(X,\varrho)$ je metrický prostor a $A,B\subseteq X$, takové, že pro jejich vzdálenost platí $\varrho(A,B)>0$. Pak pro každé $s\geqslant 0$ platí
+    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$, a $A,B\subseteq X$, takové, že pro jejich vzdálenost platí $\varrho(A,B)>0$. Pak pro každé $s\geqslant 0$ platí
     \[\hausdorffmeasure{s}(A\cup B)=\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
 \end{lemma}
 \begin{proof}
     Nerovnost $\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)$ je zřejmá ze $\sigma$-subaditivity Hausdorffovy míry (viz lemma \ref{lem:Hausdorffova-mira-subaditivita}).
 
     Bez újmy na obecnosti předpokládejme, že $\hausdorffmeasure{s}(A\cup B)<\infty$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$, takové, že pro každé $\varepsilon>0$ je
-    \[\sum_{i=1}^{\infty}(\diam{F_i})\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.\]
+    \[\sum_{i=1}^{\infty}\hausdorffmeasure{s}(F_i)\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.\]
     Opět bez újmy na obecnosti lze předpokládat, že pro každé $i\in\N$ je $\diam{F_i}<\varrho(A,B)$. V opačném případě bychom $F_i$ pokryli množnami s menším průměrem. Z toho pak plyne, že každá z množin $F_i$ má neprázdný průnik s nejvýše jednou z množin $A,B$, tzn. z pokrytí $\mathcal{F}$ lze vybrat dvě disjunktní podpokrytí množiny $A$, resp. množiny $B$. Tedy celkově s užitím předchozího lemmatu \ref{lem:Hausdorffova-mira-subaditivita} máme
     \begin{align*}
         \hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)&\leqslant\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ A\cap F_i\neq\emptyset}}F_i\right)+\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ B\cap F_i\neq\emptyset}}F_i\right)\\
@@ -83,17 +83,68 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
     \end{align*}
 \end{proof}
 \begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-temer-disjunktni}
-    Nechť $(X,\varrho)$ je metrický prostor a $A,B\subseteq X$ jsou téměř disjunktní množiny o průměru nejvýše $\delta>0$. Pak pro každé $s\geqslant 0$ platí
-    \[\hausdorffmeasure{s}(A\cup B)=\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
+    Nechť $(X,\varrho)$ je metrický prostor a $A_1,A_2,\ldots$ jsou po dvou téměř disjunktní množiny o průměru nejvýše $\delta>0$, přičemž $A_i\subseteq X$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
+    \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i).\]
 \end{lemma}
+\begin{proof}
+    Ze $\sigma$-subaditivity víme, že platí $\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)$. Bez újmy na obecnosti předpokládejme, že $\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)<\infty$. Jako první položíme $N=\set{i\in\N\mid \interior{A_i}\neq\emptyset}$. Pak pro každou množinu $A_i$, kde $i\in N$, existuje množina $B_i$, taková, že $B_i\subseteq\interior{A_i}$ a zároveň
+    \[\hausdorffmeasure{s}(B_i)\geqslant\hausdorffmeasure{s}(A_i)-\dfrac{\varepsilon}{2^i}.\]
+    Pro každé $i,j\in N$ tedy platí, že $\varrho(B_i,B_j)>0$. Pro každé $n\in\N$ zároveň platí, že
+    \[\bigcup_{i=1}^\infty A_i\supseteq\bigcup_{\substack{j\in N\\j\leqslant n}}B_j.\]
+    Tedy podle lemmatu \ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost} je
+    \begin{align*}
+        \hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)&\geqslant\hausdorffmeasure{s}\left(\bigcup_{\substack{j\in N\\j\leqslant n}}B_i\right)=\sum_{\substack{i\in N\\i\geqslant n}}\hausdorffmeasure{s}(B_i)=\sum_{i=1}^{n}\hausdorffmeasure{s}(B_i)\\
+        &\geqslant\sum_{i=1}^{n}\left(\hausdorffmeasure{s}(A_i)-\dfrac{\varepsilon}{2^i}\right)=\sum_{i=1}^{n}\hausdorffmeasure{s}(A_i)-\varepsilon.
+    \end{align*}
+    U třetí rovnosti jsme přidali množiny s nulovou mírou. Pro $n\to\infty$ dostáváme
+    \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\geqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)-\varepsilon.\]
+\end{proof}
 \begin{theorem}\label{thm:hausdorffova-mira-je-mira}
     Trojice $(\R^n,\borelsigmaalgebra(\R^n),\hausdorffmeasure{s})$, kde $s\geqslant 0$, tvoří prostor s mírou.
 \end{theorem}
 Věta \ref{thm:hausdorffova-mira-je-mira} říká, že omezíme-li se na $\sigma$-algebru borelovských množin, pak $\hausdorffmeasure{s}$ je skutečně mírou.
 \begin{proof}
-    Fakt, že $\hausdorffmeasure{s}(\emptyset)=0$ je zjevný. Stačí zvolit pokrytí množinami s nulovým průměrem, tedy např. prázdnými množinami.
-
-    Pro druhou vlastnost uvažujme disjunktní množiny $A,B\subseteq\R^n$. bez újmy na obecnosti můžeme předpokládat, že $\hausdorffmeasure{s}(A\cup B)<\infty$, jinak je rovnost triviálně splněna. Ze $\sigma$-subaditivity $\hausdorffmeasure{s}$ (viz lemma \ref{lem:Hausdorffova-mira-subaditivita}) víme, že
-    \[\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
-    Pro důkaz opačné nerovnosti zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$
+    Fakt, že $\hausdorffmeasure{s}(\emptyset)=0$ je zjevný. Stačí zvolit pokrytí množinami s nulovým průměrem, tedy např. prázdnými množinami. Platnost druhé vlastnosti plyne z lemmatu \ref{lem:hausdorffova-mira-sigma-aditivita-temer-disjunktni}.
 \end{proof}
+
+Nyní již můžeme zobrazení $\hausdorffmeasure{s}$ nazývat mírou oprávněně. Pojďme se podívat na nějaké příklady.
+\begin{example}
+    Pro $s=0$ představuje zobrazení $\hausdorffmeasure{s}$ obyčejnou aritmetickou míru\index{míra!aritmetická}, tzn. pro konečnou množinu $A\subseteq\R^n$ je $\hausdorffmeasure{0}(A)=|A|$. Toto není těžké ukázat. Mějme množinu $A=\set{x_1,x_2,\ldots,x_n}$. Zvolíme-li
+    \[\delta<\dfrac{1}{2}\cdot\min\set{\varrho_e(x_i,x_j)\mid 1\leqslant i,j\leqslant n},\]
+    pak pro $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots,F_n}$ takové, že $x_i\in F_i$ pro každé $i$ máme
+    \[\sum_{i=1}^{n}(\diam{F_i})^0=\sum_{i=1}^{n}1=n.\]
+    Není těžké si rozmyslet, že $n$ je nejmenší počet množin o průměru nejvýše $\delta$, takových, aby pokrývaly množinu $A$. Zároveň pro libovolné $\varepsilon>0$ je potřeba nejvýše $n$-koulí o poloměru $\varepsilon/2$ se středy v $x_i$ pro pokrytí $A$. Tzn. $\hausdorffmeasure{0}(A)=|A|=n$.
+\end{example}
+
+\subsection{Hausdorffova dimenze}\label{subsec:hausdorffova-dimenze}
+
+Středobodem této sekce je tzv. \emph{Hausdorffova dimenze}\index{dimenze!Hausdorffova}. Na úvod si dokážeme jedno jednoduché tvrzení týkající se Hausdorffovy míry.
+\begin{theorem}\label{thm:hodnoty-hausdorffovy-miry}
+    Nechť $0\leqslant s<t<\infty$ a $F\subseteq X$. Pak platí:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{thm:hd-dimenze-konecna} $\hausdorffmeasure{s}(F)<\infty\implies\hausdorffmeasure{t}(F)=0$,
+        \item\label{thm:hd-dimenze-nekonecno} $\hausdorffmeasure{t}(F)>0\implies\hausdorffmeasure{s}(F)=\infty$.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    Mějme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$, takové, že
+    \[\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\hausdorffdeltameasure{s}{\delta}(F)+\varepsilon\;,\;\varepsilon>0.\]
+    Pak
+    \[\hausdorffdeltameasure{t}{\delta}(F)\leqslant\sum_{i=1}^{\infty}(\diam{F_i})^t\leqslant\delta^{t-s}\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\delta^{t-s}(\hausdorffdeltameasure{s}{\delta}(F)+\varepsilon).\]
+    Tzn. $\hausdorffdeltameasure{t}{\delta}(F)\leqslant\delta^{t-s}\hausdorffdeltameasure{s}{\delta}(F)$. Pro $\delta\to 0$ dostaneme body \ref{thm:hd-dimenze-konecna} a \ref{thm:hd-dimenze-nekonecno}.
+\end{proof}
+(Převzato z \citep[str. 68]{Mattila1995}.)
+
+Z věty \ref{thm:hodnoty-hausdorffovy-miry} lze vidět, že Hausdorffova míra dává smysl jen pro určitou hodnotu $s$. Pro "příliš velké" $s$ bude hodnota vždy $0$, naopak pro "moc malé" $s$ bude hodnota rovna $\infty$ (viz obrázek \ref{fig:hausdorffova-dimenze-graf}).
+\begin{figure}[h]
+    \centering
+    \includegraphics{ch02-hausdorffova-dimenze-graf.pdf}
+    \caption{Graf funkce $f(s)=\hausdorffmeasure{s}(F)$, kde $F\subseteq\R^n$.}
+    \label{fig:hausdorffova-dimenze-graf}
+\end{figure}
+Této kritické hodnotě $s$ říkáme \emph{Hausdorffova dimenze}\index{dimenze!Hausdorffova}.
+\begin{definition}[Hausdorffova dimenze]\label{def:hausdorffova-dimenze}
+    Nechť $F\subseteq\R^n$. Hausdorffovou dimenzí\index{dimenze!Hausdorffova} množiny $F$ nazveme hodnotu
+    \[\dimH{F}=\inf\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=0}=\sup\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=\infty}.\]
+\end{definition}
+Hodnota $\hausdorffmeasure{s}(F)$ pro $s=\dimH{F}$ může být různá, tzn. může platit, že $\hausdorffmeasure{s}(F)=\infty$, $\hausdorffmeasure{s}(F)=0$ a nebo se může jednat o konečné číslo, tj. $0<\hausdorffmeasure{s}(F)<\infty$.
