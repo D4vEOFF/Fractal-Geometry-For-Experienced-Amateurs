@@ -123,6 +123,24 @@ V rámci tohoto textu jsme se již zabývali jiným typem míry a to tzv. \emph{
 \[\hausdorffmeasure{n}(F)=\dfrac{1}{v_n}\lebesguemeasure{n}(F),\]
 kde $v_n$ je objem (míra) jednotkové koule v $\R^n$. Čtenář snad promine, že tento fakt zde ponecháme bez důkazu. \citep[str. 45]{Falconer2014}
 
+\subsection{Vlastnosti Hausdorffovy míry}\label{subsec:vlastnosti-hausdorffovy-miry}
+
+Na chvíli se ještě zastavíme u vlastností Hausdorffovy míry. Již jsme společně dokázali, že Hausdorffova míra je skutečně mírou, tzn. splňuje všechny základní vlastnosti, které jsme si představili ve větě \ref{thm:mira-vlastnosti} (viz sekce \ref{sec:prostory-s-mirou}). V tomto ohledu tedy netřeba již nic dalšího dokazovat. Nicméně podobně jako v případě \emph{box-counting dimenze} (viz podsekce \ref{subsec:vlastnosti-bc-dimenze}) se i zde podíváme, jak se Hausdorffova míra chová vůči \emph{lipschitzovským zobrazením}\index{zobrazení!lipschitzovské}.
+\begin{theorem}
+    Nechť $F\subseteq\R^n$ a zobrazení $\mapping{f}{F}{\R^n}$ je lipschitzovské\footnote{Tvrzení lze zformulovat obecněji pro tzv. \emph{hölderovská zobrazení}\index{zobrazení!hölderovské}, tedy zobrazení $f$ splnující
+    \[\varrho(f(x),f(y))\leqslant K(\varrho(x,y))^\alpha.\]
+    kde $\alpha>0$. Pak pro $F\subseteq\R^n$ platí
+    \[\hausdorffmeasure{s/\alpha}(f(F))\leqslant K^{s/\alpha}\hausdorffmeasure{s}(F).\]} s konstantou $K>0$. Pak pro každé $s\geqslant 0$ platí
+    \[\hausdorffmeasure{s}(f(F))\leqslant K^s\hausdorffmeasure{s}(F).\]
+\end{theorem}
+\begin{proof}
+    Nechť $\mathcal{F}=\set{F_1,F_2,\ldots}$ je $\delta$-pokrytí $F$. Pak
+    \[\diam(f(F\cap F_i))\leqslant K\diam(F\cap F_i)\leqslant K\diam{F_i},\]
+    což znamená, že $\mathcal{G}=\set{F\cap F_1,F\cap F_2,\ldots}$ je $K\delta$-pokrytí $f(F)$. Z toho plyne, že
+    \[\sum_{i=1}^{\infty}(\diam(F\cap F_i))^s\leqslant K^s\sum_{i=1}^{\infty}(\diam{F_i})^s\]
+    a tedy $\hausdorffdeltameasure{s}{K\delta}(f(F))\leqslant K^s\hausdorffdeltameasure{s}{\delta}(F)$. Pro $\delta\to 0$ máme požadovaný výsledek.
+\end{proof}
+
 \subsection{Hausdorffova dimenze}\label{subsec:hausdorffova-dimenze}
 
 Středobodem této sekce je tzv. \emph{Hausdorffova dimenze}\index{dimenze!Hausdorffova}. Na úvod si dokážeme jedno jednoduché tvrzení týkající se Hausdorffovy míry.
