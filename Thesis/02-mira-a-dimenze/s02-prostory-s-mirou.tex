@@ -61,7 +61,7 @@ V tuto chvíli máme již vše potřebné k~zavedení pojmu míra,~resp. prostor
     Nechť $(X,\mathcal{A})$ je měřitelný prostor. Zobrazení $\mapping{\mu}{\mathcal{A}}{\langle0,\infty\rangle}$ se nazývá \emph{míra}\index{míra} na $\mathcal{A}$,~pokud platí:
     \begin{enumerate}[label=(\alph*)]
         \item\label{def:mira-podm1} $\mu(\emptyset)=0$,
-        \item\label{def:mira-podm2} pro množiny $A_1,A_2,\ldots\in\mathcal{A}$ po dvou disjunktní je
+        \item\label{def:mira-podm2} pro množiny $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$, po dvou disjunktní je
         \[\mu\left(\bigcup\limits_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).\mathrightnote{$\sigma$-aditivita}\]
     \end{enumerate}
     Uspořádanou trojici $(X,\mathcal{A},\mu)$ nazýváme \emph{prostor s~mírou}\index{prostor!s mírou}\index{prostor s~mírou}.
@@ -80,7 +80,6 @@ Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),
     \end{itemize}
 \end{example}
 
-%%%%%
 Ve všech případech zobrazení $\mu$ v~příkladu \ref{ex:mira} se lze snadno přesvědčit,~že se jedná o~míru,~tedy že splňuje podmínky \ref{def:mira-podm1} a \ref{def:mira-podm2} uvedené v~definici \ref{def:prostor-s-mirou} výše.
 
 Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
@@ -94,7 +93,7 @@ Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
         Navíc pokud $\mu(A)<\infty$,~pak $\mu(B\setminus A)=\mu(B)-\mu(A)$.
         \item\label{thm:mira-nekl-posl} Pokud $A_1,A_2,\ldots$,~kde $A_i\in\mathcal{A}$ pro každé $i\in\N$,~je neklesající posloupnost množin\footnote{Posloupnost množin,~kde $A_i\subseteq A_{i+1}$ pro každé $i\in\N$.},~pak
         \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcup_{j=1}^\infty A_j\right).\]
-        \item\label{thm:mira-nerost-posl} Pokud $A_1,A_2,\ldots\in\mathcal{A}$ je nerostoucí posloupnost množin\footnote{$A_i\supseteq  A_{i+1}$ pro každé $i\in\N$.} a~navíc $\mu(A_1)<\infty$,~pak
+        \item\label{thm:mira-nerost-posl} Pokud $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$, je nerostoucí posloupnost množin\footnote{$A_i\supseteq  A_{i+1}$ pro každé $i\in\N$.} a~navíc $\mu(A_1)<\infty$,~pak
         \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcap_{j=1}^\infty A_j\right).\]
         \item\label{thm:mira-sigma-subaditivita} Pokud $A_1,A_2,\ldots$,~kde $A_i\in\mathcal{A}$ pro každé $i\in\N$,~pak
         \[\mu\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\mu(A_i).\mathrightnote{$\sigma$-subaditivita}\]
