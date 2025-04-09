@@ -123,11 +123,11 @@ V rámci tohoto textu jsme se již zabývali jiným typem míry a to tzv. \emph{
 \[\hausdorffmeasure{n}(F)=\dfrac{1}{v_n}\lebesguemeasure{n}(F),\]
 kde $v_n$ je objem (míra) jednotkové koule v $\R^n$. Čtenář snad promine, že tento fakt zde ponecháme bez důkazu. \citep[str. 45]{Falconer2014}
 
-\subsection{Vlastnosti Hausdorffovy míry}\label{subsec:vlastnosti-hausdorffovy-miry}
+\subsection{Stručně k vlastnostem Hausdorffovy míry}\label{subsec:vlastnosti-hausdorffovy-miry}
 
 Na chvíli se ještě zastavíme u vlastností Hausdorffovy míry. Již jsme společně dokázali, že Hausdorffova míra je skutečně mírou, tzn. splňuje všechny základní vlastnosti, které jsme si představili ve větě \ref{thm:mira-vlastnosti} (viz sekce \ref{sec:prostory-s-mirou}). V tomto ohledu tedy netřeba již nic dalšího dokazovat. Nicméně podobně jako v případě \emph{box-counting dimenze} (viz podsekce \ref{subsec:vlastnosti-bc-dimenze}) se i zde podíváme, jak se Hausdorffova míra chová vůči \emph{lipschitzovským zobrazením}\index{zobrazení!lipschitzovské}.
-\begin{theorem}
-    Nechť $F\subseteq\R^n$ a zobrazení $\mapping{f}{F}{\R^n}$ je lipschitzovské\footnote{Tvrzení lze zformulovat obecněji pro tzv. \emph{hölderovská zobrazení}\index{zobrazení!hölderovské}, tedy zobrazení $f$ splnující
+\begin{theorem}\label{thm:hd-dimenze-lipschitzovske-zobrazeni}
+    Nechť $F\subseteq\R^n$ v metrickém prostoru $(\R^n,\varrho)$ a zobrazení $\mapping{f}{F}{\R^n}$ je lipschitzovské\footnote{Tvrzení lze zformulovat obecněji pro tzv. \emph{hölderovská zobrazení}\index{zobrazení!hölderovské}, tedy zobrazení $f$ splnující
     \[\varrho(f(x),f(y))\leqslant K(\varrho(x,y))^\alpha.\]
     kde $\alpha>0$. Pak pro $F\subseteq\R^n$ platí
     \[\hausdorffmeasure{s/\alpha}(f(F))\leqslant K^{s/\alpha}\hausdorffmeasure{s}(F).\]
@@ -140,6 +140,20 @@ Na chvíli se ještě zastavíme u vlastností Hausdorffovy míry. Již jsme spo
     což znamená, že $\mathcal{G}=\set{F\cap F_1,F\cap F_2,\ldots}$ je $K\delta$-pokrytí $f(F)$. Z toho plyne, že
     \[\sum_{i=1}^{\infty}(\diam(F\cap F_i))^s\leqslant K^s\sum_{i=1}^{\infty}(\diam{F_i})^s\]
     a tedy $\hausdorffdeltameasure{s}{K\delta}(f(F))\leqslant K^s\hausdorffdeltameasure{s}{\delta}(F)$. Pro $\delta\to 0$ máme požadovaný výsledek.
+\end{proof}
+(Převzato z \citep[str. 46]{Falconer2014}.)
+
+Z toho speciálně plyne důsledek týkající se podobností.
+\begin{corollary}\label{cor:hd-dimenze-podobnost}
+    Nechť $F\subseteq\R^n$ v metrickém prostoru $(\R^n,\varrho)$ a zobrazení $\mapping{f}{F}{\R^n}$ je podobnost\index{podobnost}, tzn. existuje $K>0$ takové, že pro každé $x,y\in F$ platí
+    \[\varrho(f(x),f(y))=K\varrho(x,y).\]
+    Pak pro každé $s\geqslant 0$ platí
+    \[\hausdorffmeasure{s}(f(F))=K^s\hausdorffmeasure{s}(F).\]
+\end{corollary}
+\begin{proof}
+    K podobnosti $f$ existuje inverzní zobrazení $f^{-1}$ s koeficientem $L=1/K$. Z věty \ref{thm:hd-dimenze-lipschitzovske-zobrazeni} tedy plyne, že
+    \[\hausdorffmeasure{s}(F)=\hausdorffmeasure{s}(f^{-1}(f(F)))\leqslant\dfrac{1}{K^s}\hausdorffmeasure{s}(f(F))\]
+    nebo-li $\hausdorffmeasure{s}(f(F))\geqslant K^s\hausdorffmeasure{s}(F)$. Opačnou nerovnost získáme aplikací věty \ref{thm:hd-dimenze-lipschitzovske-zobrazeni} na zobrazení $f$.
 \end{proof}
 
 \subsection{Hausdorffova dimenze}\label{subsec:hausdorffova-dimenze}
@@ -174,3 +188,23 @@ Této kritické hodnotě $s$ říkáme \emph{Hausdorffova dimenze}\index{dimenze
     \[\dimH{F}=\inf\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=0}=\sup\set{s\geqslant 0\mid\hausdorffmeasure{s}(F)=\infty}.\]
 \end{definition}
 Hodnota $\hausdorffmeasure{s}(F)$ pro $s=\dimH{F}$ může být různá,~tzn. může platit,~že $\hausdorffmeasure{s}(F)=\infty$,~$\hausdorffmeasure{s}(F)=0$ a nebo se může jednat o~konečné nenulové číslo,~tj. $0<\hausdorffmeasure{s}(F)<\infty$.
+
+Nyní se podívejme na příklad výpočtu. Podobně, jako v případě box-counting dimenze, i zde budeme nezávisle určovat horní a dolní odhad.
+\begin{example}[Sierpińského trojúhelník]\label{ex:sierpinskeho-trojuhelnik-hd-dimenze}
+    V tomto případě se podíváme na dvě možnosti, jak dojít k výsledku. Celý Sierpińského trojúhelník si označme $S$ a obrazec po $k$-té iteraci si označíme $S_k$.
+    \begin{itemize}
+        \item V $k$-té iteraci, kde $k=0,1,2,\ldots$, vzniknou 3 nové trojúhelníky o obsahu $1/4$ obsahu původního trojúhelníka, tzn. jejich celkový počet je $t=3^k$. Uvažíme-li $\delta$-pokrytí
+        \[\mathcal{K}=\set{K_\delta^1(x_1),K_\delta^2(x_2),\ldots,K_\delta^t(x_t),\emptyset,\emptyset,\ldots}\]
+        kde $x_1,x_2,\ldots,x_t\in S_k$ a $\delta\leqslant 2^{-k}/2=2^{-k-1}$, pak
+        \[\hausdorffdeltameasure{s}{2^{-k}}(S_k)\leqslant\sum_{i=1}^{3^k}(2^{-k})^s=3^k2^{-ks}=1.\]
+        Pro $k\to\infty$ je $\hausdorffmeasure{s}(S)\leqslant 1$. Poslední rovnost nastává právě pro $s=\ln{3}/\ln{2}$.
+
+        Nyní ukážeme, že $\hausdorffmeasure{s}(S)\geqslant 1/2$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$, takové, že
+        \begin{equation}\label{eq:volba-delta-pokryti-F}
+            2^{-k-1}\leqslant\diam{F_i}<2^{-k},
+        \end{equation}
+        kde $i\in\N$. Lze si rozmyslet, že každá z množin $F_i$ má neprázdný průnik s nejvýše dvěma dílčími trojúhelníky. Zvolíme-li $j\leqslant k$, pak každá z množin $F_i$ má průnik maximálně s $3^{j-k}$ trojúhelníky v $j$-té iteraci, resp.
+        \[3^{j-k}=3^j2^{-ks}\leqslant2^j3^s(\diam{F_i})^s,\]
+        jak plyne z volby pokrytí $\mathcal{F}$ v \eqref{eq:volba-delta-pokryti-F}.
+    \end{itemize}
+\end{example}
