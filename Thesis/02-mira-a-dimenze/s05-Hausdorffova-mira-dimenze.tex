@@ -14,10 +14,10 @@ Způsobů,~jak definovat dimenzi je celá řada. Zatím jsme společně prozkoum
     Nechť je dána množina $F\subseteq\R^n$ a $s>0$. Pak pro každé $\delta>0$ definujeme zobrazení
     \[\hausdorffdeltameasure{s}{\delta}(F)=\inf\set{\sum_{i=1}^{\infty}(\diam{F_i})^s\;\middle|\;F\subseteq\bigcup_{i=1}^\infty F_i\;,\;\diam{F_j}\leqslant\delta\;\text{pro}\;j\in\N}.\]
 \end{definition}
-Na první pohled si lze všimnout,~že pro $0<\delta_1<\delta_2$ je $\hausdorffdeltameasure{s}{\delta_1}(F)\leqslant\hausdorffdeltameasure{s}{\delta_2}(F)$. Jinými slovy,~pro $\delta\to 0$ hodnota $\hausdorffdeltameasure{s}{\delta}(F)$ klesá. Toto není nikterak těžké si rozmyslet,~neboť pro $\delta_1<\delta_2$ existuje $\delta_1$-pokrytí $\mathcal{F}_1$,~takové,~že je podpokrytím $\delta_2$-pokrytí $\mathcal{F}_2$ množiny $F$,~tedy $\mathcal{F}_1\subseteq\mathcal{F}_2$. To znamená,~že
+Na první pohled si lze všimnout,~že pro $0<\delta_1<\delta_2$ je $\hausdorffdeltameasure{s}{\delta_1}(F)\geqslant\hausdorffdeltameasure{s}{\delta_2}(F)$. Jinými slovy, funkce $\delta\mapsto\hausdorffdeltameasure{s}{\delta}(M)$ je nerostoucí. Toto není nikterak těžké si rozmyslet,~neboť pro $\delta_1<\delta_2$ existuje $\delta_1$-pokrytí $\mathcal{F}_1$,~takové,~že je podpokrytím $\delta_2$-pokrytí $\mathcal{F}_2$ množiny $F$,~tedy $\mathcal{F}_1\subseteq\mathcal{F}_2$. To znamená,~že
 \begin{align*}
-    \hausdorffdeltameasure{s}{\delta_1}(F)&=\inf\set{\sum_{U\in\mathcal{F}_1}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_1$ je $\delta_1$-pokrytí}}\\
-    &\leqslant\inf\set{\sum_{U\in\mathcal{F}_2}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_2$ je $\delta_2$-pokrytí}}=\hausdorffdeltameasure{s}{\delta_2}(F).
+    \hausdorffdeltameasure{s}{\delta_1}(F)&=\inf\set{\sum_{U\in\mathcal{F}_1}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_1$ je $\delta_1$-pokrytí $\mathcal{F}$}}\\
+    &\geqslant\inf\set{\sum_{U\in\mathcal{F}_2}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_2$ je $\delta_2$-pokrytí $\mathcal{F}$}}=\hausdorffdeltameasure{s}{\delta_2}(F).
 \end{align*}
 Zároveň je z~definice \ref{def:hd-mira-delta} zjevné,~že $\mathcal{H}_\delta^s(F)\geqslant 0$.
 \begin{definition}[Hausdorffova míra]\label{def:hausdorffova-mira}
@@ -32,35 +32,32 @@ Bude dobré se přesvědčit,~že je Hausdorffova míra mírou ve smyslu definic
     \includegraphics[width=0.4\textwidth]{Emile-Borel.jpeg}
     \caption[Émile Borel,~1871--1956]{Émile Borel\footnote{Převzato z~\cite{OConnorBorel2025}},~1871--1956}
 \end{figure}
-Borelovské množiny hrají podstatnou roli v~tzv. \emph{Deskriptivní teorii množin}. Nebudeme si zde vykládat všechny souvislosti,~vystačíme si se základem. Takto nazýváme všechny množiny,~které lze získat operacemi spočetného sjednocení a průniku otevřených množin z~$X$. Označme systém takových množin jako $\mathcal{B}$. Na tomto základě pak definujeme tzv. \emph{$\sigma$-algebru borelovských množin na $X$}:
-\[\borelsigmaalgebra(X)=\bigcap_{\substack{\mathcal{F}\supseteq\mathcal{B}\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
+Borelovské množiny hrají podstatnou roli v~tzv. \emph{Deskriptivní teorii množin}. Nebudeme si zde vykládat všechny souvislosti,~vystačíme si se základem. Takto nazýváme všechny množiny,~které lze získat iteracemi operacemi spočetného sjednocení, průniku a doplňku otevřených množin z~$X$. Označme systém takových množin jako $\mathcal{G}$. Na tomto základě pak definujeme tzv. \emph{$\sigma$-algebru borelovských množin na $X$}:
+\[\borelsigmaalgebra(X)=\bigcap_{\substack{\mathcal{F}\supseteq\mathcal{G}\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
 Jinými slovy,~$\borelsigmaalgebra(X)$ je nejmenší $\sigma$-algebra generovaná\footnote{Obecně $\sigma$-algebra $\mathcal{A}$ je generovaná množinou $X$,~když
 \[\mathcal{A}=\bigcap_{\substack{\mathcal{F}\supseteq X\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
 Tento fakt se někdy značí $\mathcal{A}=\sigma(X)$.} všemi otevřenými množinami z~$X$.
 
 Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejdříve si však dokážeme dvě pomocná lemmata.
-\begin{remark}
-    V případě práce s množinou $\R^n$ a Hausdorffovou mírou $\hausdorffmeasure{s}(F)$, resp. $\hausdorffdeltameasure{s}{\delta}(F)$, budeme vždy předpokládat, že $F\in\borelsigmaalgebra(\R^n)$.
-\end{remark}
 \begin{lemma}[$\sigma$-subaditivita Hausdorffovy míry]\label{lem:Hausdorffova-mira-subaditivita}
-    Nechť jsou dány množiny $A_1,A_2,\ldots$,~kde $A_i\subseteq\R^n$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
+    Nechť jsou dány množiny $A_1,A_2,\ldots$,~kde $A_i\subseteq X$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
     \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i).\]
 \end{lemma}
 \begin{proof}
-    Nechť $s\geqslant 0$. Pro každé $i\in\N$ a $\delta>0$ mějme pokrytí
+    Nechť $s\geqslant 0$ a dále budiž dáno $\varepsilon>0$. Pro každé $i\in\N$ a $\delta>0$ mějme pokrytí
     \[\mathcal{F}_i=\set{F_{i,1},F_{i,2},\dots}\]
-    množiny $A_i$,~takové,~že pro každé $j\in\N$ a $\varepsilon$ platí
+    množiny $A_i$,~takové,~že platí
     \[\sum_{j=1}^{\infty}(\diam{F_{i,j}})^s\leqslant\hausdorffdeltameasure{s}{\delta}(A_i)+\dfrac{\varepsilon}{2^i}.\]
     Systém $\bigcup_{i=1}^\infty\mathcal{F}_i$ tedy tvoří $\delta$-pokrytí množiny $A=\bigcup_{i=1}^\infty A_i$. Celkově
     \begin{align*}
         \hausdorffdeltameasure{s}{\delta}\left(\bigcup_{i=1}^\infty A_i\right)&\leqslant\sum_{i,j\in\N}(\diam{F_{i,j}})^s=\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}(\diam{F_{i,j}})^s\leqslant\sum_{i=1}^{\infty}\left(\hausdorffdeltameasure{s}{\delta}(A_i)+\dfrac{\varepsilon}{2^i}\right)\\
         &=\sum_{i=1}^{\infty}\hausdorffdeltameasure{s}{\delta}(A_i)+\varepsilon.
     \end{align*}
-    Limitním přechodem $\delta\to 0$ a aplikací Leviho věty\footnote{\emph{Leviho věta o~záměně pořadí limity a lebesgueova integrálu} říká,~že je-li posloupnost nezáporných měřitelných funkcí $\set{f_n}_{n=1}^\infty$ neklesající,~tj.
+    Limitním přechodem $\delta\to 0$ a aplikací Leviho věty\footnote{\emph{Leviho věta o~záměně pořadí limity a Lebesgueova integrálu} říká,~že je-li posloupnost nezáporných měřitelných funkcí $\set{f_n}_{n=1}^\infty$ neklesající,~tj.
     \[f_1\leqslant f_2\leqslant\dots\]
     na prostoru $(X,\mathcal{A},\mu)$ a zároveň $\lim_{n\to\infty}f_n(x)=f(x)$ pro každé $x\in X$,~pak
     \[\lim_{n\to\infty}\int_X f_n\dx[\mu]=\int_X \lim_{n\to\infty}f_n\dx[\mu].\]
-    Zde je speciálně $\mu$ aritmetická míra $X=\N$,~a $f_n(i)$ lze volit např. $\hausdorffdeltameasure{s}{1/n}(A_i)$. Z~Heineho věty víme,~že
+    Zde je speciálně $\mu$ aritmetická míra, $X=\N$,~a $f_n(i)$ lze volit např. $\hausdorffdeltameasure{s}{1/n}(A_i)$. Z~Heineho věty víme,~že
     \[\lim_{n\to\infty}\hausdorffdeltameasure{s}{1/n}(A_i)=\lim_{\delta\to 0}\hausdorffdeltameasure{s}{\delta}(A_i)=\hausdorffmeasure{s}(A_i).\]
     }
     dostáváme
@@ -76,39 +73,63 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
 \begin{proof}
     Nerovnost $\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)$ je zřejmá ze $\sigma$-subaditivity Hausdorffovy míry (viz lemma \ref{lem:Hausdorffova-mira-subaditivita}).
 
-    Bez újmy na obecnosti předpokládejme,~že $\hausdorffmeasure{s}(A\cup B)<\infty$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$,~takové,~že pro každé $\varepsilon>0$ je
-    \[\sum_{i=1}^{\infty}\hausdorffmeasure{s}(F_i)\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.\]
-    Opět bez újmy na obecnosti lze předpokládat,~že pro každé $i\in\N$ je $\diam{F_i}<\varrho(A,B)$. V~opačném případě bychom $F_i$ pokryli množnami s~menším průměrem. Z~toho pak plyne,~že každá z~množin $F_i$ má neprázdný průnik s~nejvýše jednou z~množin $A,B$,~tzn. z~pokrytí $\mathcal{F}$ lze vybrat dvě disjunktní podpokrytí množiny $A$,~resp. množiny $B$. Tedy celkově s~užitím předchozího lemmatu \ref{lem:Hausdorffova-mira-subaditivita} máme
+    Bez újmy na obecnosti předpokládejme,~že $\hausdorffmeasure{s}(A\cup B)<\infty$. Mějme libovolné $\varepsilon>0$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$,~takové,~že
+    \[\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\hausdorffdeltameasure{s}{\delta}(A\cup B)+\varepsilon.\]
+    Opět bez újmy na obecnosti lze předpokládat,~že pro každé $i\in\N$ je $\diam{F_i}<\varrho(A,B)$. V~opačném případě bychom $F_i$ pokryli množnami s~menším průměrem. Z~toho pak plyne,~že každá z~množin $F_i$ má neprázdný průnik s~nejvýše jednou z~množin $A,B$,~tzn. z~pokrytí $\mathcal{F}$ lze vybrat dva disjunktní podsystémy $\mathcal{F}_A$ a~$\mathcal{F}_B$,~přičemž $\bigcup\mathcal{F}_A\supseteq A$ a $\bigcup\mathcal{F}_B\supseteq B$. Tedy celkově s~užitím předchozího lemmatu \ref{lem:Hausdorffova-mira-subaditivita} máme
     \begin{align*}
-        \hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)&\leqslant\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ A\cap F_i\neq\emptyset}}F_i\right)+\hausdorffmeasure{s}\left(\bigcup_{\substack{i\in\N\\ B\cap F_i\neq\emptyset}}F_i\right)\\
-        &\leqslant\sum_{\substack{i\in\N\\ A\cap F_i\neq\emptyset}}\hausdorffmeasure{s}(F_i)+\sum_{\substack{i\in\N\\ B\cap F_i\neq\emptyset}}\hausdorffmeasure{s}(F_i)\\
-        &\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(F_i)\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon.
+        \hausdorffdeltameasure{s}{\delta}(A)+\hausdorffdeltameasure{s}{\delta}(B)&\leqslant\hausdorffdeltameasure{s}{\delta}\left(\bigcup_{F\in\mathcal{F}_A}F\right)+\hausdorffdeltameasure{s}{\delta}\left(\bigcup_{F\in\mathcal{F}_B}F\right)\\
+        &\leqslant\sum_{F\in\mathcal{F}_A}(\diam{F})^s+\sum_{F\in\mathcal{F}_B}(\diam{F})^s\\
+        &\leqslant\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\hausdorffdeltameasure{s}{\delta}(A\cup B)+\varepsilon.
     \end{align*}
+    Pro $\delta\to 0$ dostáváme
+    \[\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)\leqslant\hausdorffmeasure{s}(A\cup B)+\varepsilon\]
 \end{proof}
-\begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-temer-disjunktni}
-    Nechť $(X,\varrho)$ je metrický prostor a $A_1,A_2,\ldots$ jsou po dvou téměř disjunktní množiny o~průměru nejvýše $\delta>0$,~přičemž $A_i\subseteq X$ pro každé $i\in\N$. Pak pro každé $s\geqslant 0$ platí
-    \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i).\]
-\end{lemma}
-\begin{proof}
-    Ze $\sigma$-subaditivity víme,~že platí $\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)$. Bez újmy na obecnosti předpokládejme,~že $\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)<\infty$. Jako první položíme $N=\set{i\in\N\mid \interior{A_i}\neq\emptyset}$. Pak pro každou množinu $A_i$,~kde $i\in N$,~existuje množina $B_i$,~taková,~že $B_i\subseteq\interior{A_i}$ a zároveň
-    \[\hausdorffmeasure{s}(B_i)\geqslant\hausdorffmeasure{s}(A_i)-\dfrac{\varepsilon}{2^i}.\]
-    Pro každé $i,j\in N$ tedy platí,~že $\varrho(B_i,B_j)>0$. Pro každé $n\in\N$ zároveň platí,~že
-    \[\bigcup_{i=1}^\infty A_i\supseteq\bigcup_{\substack{j\in N\\j\leqslant n}}B_j.\]
-    Tedy podle lemmatu \ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost} je
-    \begin{align*}
-        \hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)&\geqslant\hausdorffmeasure{s}\left(\bigcup_{\substack{j\in N\\j\leqslant n}}B_i\right)=\sum_{\substack{i\in N\\i\geqslant n}}\hausdorffmeasure{s}(B_i)=\sum_{i=1}^{n}\hausdorffmeasure{s}(B_i)\\
-        &\geqslant\sum_{i=1}^{n}\left(\hausdorffmeasure{s}(A_i)-\dfrac{\varepsilon}{2^i}\right)=\sum_{i=1}^{n}\hausdorffmeasure{s}(A_i)-\varepsilon.
-    \end{align*}
-    U~třetí rovnosti jsme přidali množiny s~nulovou mírou. Pro $n\to\infty$ dostáváme
-    \[\hausdorffmeasure{s}\left(\bigcup_{i=1}^\infty A_i\right)\geqslant\sum_{i=1}^{\infty}\hausdorffmeasure{s}(A_i)-\varepsilon.\]
-\end{proof}
-\begin{theorem}\label{thm:hausdorffova-mira-je-mira}
-    Trojice $(\R^n,\borelsigmaalgebra(\R^n),\hausdorffmeasure{s})$,~kde $s\geqslant 0$,~tvoří prostor s~mírou.
+
+\begin{definition}[Vnější míra]\label{def:vnejsi-mira}
+    Nechť $(X,\mathcal{A})$ je měřitelný prostor. Zobrazení $\mapping{\mu^*}{\mathcal{A}}{\langle0,\infty\rangle}$ nazveme \emph{vnější mírou}\index{míra!vnější} na $\mathcal{A}$, pokud platí:
+    \begin{enumerate}[label=(\alph*)]
+        \item\label{def:vnejsi-mira-prazdna-mnozina} $\mu^*(\emptyset)=0$,
+        \item\label{def:vnejsi-mira-monotonie} Pokud $A,B\in\mathcal{A}$ a $A\subseteq B$, pak $\mu^*(A)\leqslant\mu^*(B)$.
+        \item\label{def:vnejsi-mira-sigma-subaditivita} Je-li $A_1,A_2,\ldots$ posloupnost množin, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$, pak
+        \[\mu^*\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\mu^*(A_i).\]
+    \end{enumerate}
+\end{definition}
+
+Vnější míra představuje zobecnění toho, co jsme měli možnost vidět již v sekci \ref{sec:lebesgueova-mira} týkající Lebesgueovy míry\footnote{Jedná se slabší požadavek, tzn. každá míra je vnější mírou, opačné tvrzení však neplatí.}. Tu jsme definovali na základě tzv. \emph{vnější Lebesgueovy míry} (viz definice \ref{def:vnejsi-lebegueova-mira}), která sice sama o sobě míru nepředstavovala, nicméně při restrikci na "správný" systém množin jsme konstatovali, že se již jedná o míru. Lze se přesvědčit, že vnější Lebesgueova míra $\lebesgueoutermeasure{n}$ je vnější mírou ve smyslu definice \ref{def:vnejsi-mira} výše. Podobné pozorování lze učinit i pro Hausdorffovu míru $\hausdorffmeasure{s}$. Platnost podmínky \ref{def:vnejsi-mira-sigma-subaditivita} jsme dokázali v lemmatu \ref{lem:Hausdorffova-mira-subaditivita} a o platnosti \ref{def:vnejsi-mira-prazdna-mnozina} a \ref{def:vnejsi-mira-monotonie} se může čtenář velice snadno předvědčit. Tedy Hausdorffova míra na měřitelném prostoru $(X,\mathcal{A})$ je vnější mírou. Navíc pokud vnější míra $\mu^*$ splňuje závěr lemmatu \ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}, pak ji nazýváme \emph{metrickou vnější mírou}\index{míra!metrická}\index{míra!metrická vnější}.
+
+Carathéodoryho kritérium, které jsme si uváděli při zavádění \emph{lebesgueovské měřitelnosti}\index{měřitelnost!lebesgueovská} (viz definice \ref{def:lebesgueovska-meritelnost}). Ta jednoduše říkala, že rozdělením libovolné množiny $G$ pomocí pěvně zvolené množiny $A$ lze stanovit její míru jako součet měr dílčích částí, tzn. $G\cap A$ a $G\setminus A$. Tento koncept lze však rozšířit. Obecně jakákoliv množina je $\mu$-měřitelná, pokud splňuje Carathéodoryho kritérium.
+\begin{definition}\label{def:meritelnost}
+    Nechť $\mu$ je míra a $A\subseteq X$. Množina $A$ je $\mu$-měřitelná, pokud pro každé $G\subseteq X$ platí
+    \[\mu(G)=\mu(G\cap A)+\mu(G\setminus A).\]
+\end{definition}
+Speciálně nyní ukážeme platnost následujícího tvrzení \ref{thm:hs-meritelnost-borel-mnozin}.
+\begin{theorem}\label{thm:hs-meritelnost-borel-mnozin}
+    Nechť $(X,\varrho)$ je metrický prostor. Pak každá množina $A\in\borelsigmaalgebra(X)$ je $\hausdorffmeasure{s}$-měřitelná pro každé $s\geqslant 0$.
 \end{theorem}
-Věta \ref{thm:hausdorffova-mira-je-mira} říká,~že omezíme-li se na $\sigma$-algebru borelovských množin,~pak $\hausdorffmeasure{s}$ je skutečně mírou.
 \begin{proof}
-    Fakt,~že $\hausdorffmeasure{s}(\emptyset)=0$ je zjevný. Stačí zvolit pokrytí množinami s~nulovým průměrem,~tedy např. prázdnými množinami. Platnost druhé vlastnosti plyne z~lemmatu \ref{lem:hausdorffova-mira-sigma-aditivita-temer-disjunktni}.
+    Není těžké si rozmyslet, že $\borelsigmaalgebra(X)$ vyjma otevřených množin obsahuje též všechny uzavřené\footnote{Plyne z uzavřenosti na doplněk.}. Volme tedy uzavřenou množinu $A\in\borelsigmaalgebra(X)$, $G\subseteq X$ a $s\geqslant 0$. Ze $\sigma$-subaditivity plyne nerovnost
+    \[\hausdorffmeasure{s}(G)\leqslant\hausdorffmeasure{s}(G\cap A)+\hausdorffmeasure{s}(G\setminus A).\]
+    Pro důkaz opačné nerovnosti definujeme posloupnost množin $P_0,P_1,P_2,\ldots$ následovně:
+    \begin{align*}
+        P_0&=\set{x\in G\mid\varrho(x,A)\geqslant 1},\\
+        P_i&=\set{x\in G\;\middle|\;\dfrac{1}{i+1}\leqslant\varrho(x,A)\leqslant\dfrac{1}{i}}\;,\;i\geqslant 1.
+    \end{align*}
+    Pro libovolnou dvojici množin z podposloupnosti $P_0,P_2,P_4,\ldots$ platí, že jejich vzdálenosti jsou kladné. Z faktu, že $\hausdorffmeasure{s}$ je metrická (viz lemma \ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}) a monotonie plyne
+    \[\sum_{i=1}^{m}\hausdorffmeasure{s}(P_{2i})=\hausdorffmeasure{s}\left(\bigcup_{i=0}^m P_{2i}\right)\leqslant\hausdorffmeasure{s}(G)\]
+    pro všechna $m\in\N$. Podobně pro liché členy $\sum_{i=0}^{m}\hausdorffmeasure{s}(P_{2i+1})\leqslant\hausdorffmeasure{s}(G)$. Tzn. řada $\sum_{i=0}^{\infty}\hausdorffmeasure{s}(P_i)$ je konvergentní. Zároveň platí
+    \[\varrho\left(\bigcup_{i=0}^m P_i,G\cap A\right)>0,\]
+    pro každé $m\in\N$, tedy lze psát
+    \begin{align*}
+        \hausdorffmeasure{s}(G\setminus A)&\leqslant\hausdorffmeasure{s}\left(\bigcup_{i=0}^m P_i\right)+\hausdorffmeasure{s}\left(\bigcup_{i=m+1}^\infty P_i\right)\\
+        &\leqslant\hausdorffmeasure{s}(G)-\hausdorffmeasure{s}(G\cap A)+\sum_{i=m+1}^{\infty}\hausdorffmeasure{s}(P_i).
+    \end{align*}
+    Pro $m\to\infty$ dostáváme
+    \[\hausdorffmeasure{s}(G\setminus A)\leqslant\hausdorffmeasure{s}(G)-\hausdorffmeasure{s}(G\cap A)\]
+    z čehož již plyne požadovaná nerovnost.
 \end{proof}
+\begin{corollary}\label{cor:hausdorffova-mira-je-mira}
+    Trojice $(X,\borelsigmaalgebra(X),\hausdorffmeasure{s})$,~kde $X$ je libovolná množina a $s\geqslant 0$,~tvoří prostor s~mírou.
+\end{corollary}
 
 Nyní již můžeme zobrazení $\hausdorffmeasure{s}$ nazývat mírou oprávněně. Pojďme se podívat na nějaké příklady.
 \begin{example}
@@ -138,7 +159,7 @@ Na chvíli se ještě zastavíme u vlastností Hausdorffovy míry. Již jsme spo
     Nechť $\mathcal{F}=\set{F_1,F_2,\ldots}$ je $\delta$-pokrytí $F$. Pak
     \[\diam(f(F\cap F_i))\leqslant K\diam(F\cap F_i)\leqslant K\diam{F_i},\]
     což znamená, že $\mathcal{G}=\set{F\cap F_1,F\cap F_2,\ldots}$ je $K\delta$-pokrytí $f(F)$. Z toho plyne, že
-    \[\sum_{i=1}^{\infty}(\diam(F\cap F_i))^s\leqslant K^s\sum_{i=1}^{\infty}(\diam{F_i})^s\]
+    \[\sum_{i=1}^{\infty}(\diam(f(F\cap F_i)))^s\leqslant K^s\sum_{i=1}^{\infty}(\diam{F_i})^s\]
     a tedy $\hausdorffdeltameasure{s}{K\delta}(f(F))\leqslant K^s\hausdorffdeltameasure{s}{\delta}(F)$. Pro $\delta\to 0$ máme požadovaný výsledek.
 \end{proof}
 (Převzato z \citep[str. 46]{Falconer2014}.)
