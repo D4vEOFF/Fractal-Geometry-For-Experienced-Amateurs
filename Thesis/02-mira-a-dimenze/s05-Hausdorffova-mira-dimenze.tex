@@ -212,7 +212,7 @@ Hodnota $\hausdorffmeasure{s}(F)$ pro $s=\dimH{F}$ může být různá,~tzn. mů
 
 Nyní se podívejme na příklad výpočtu. Podobně, jako v případě box-counting dimenze, i zde budeme nezávisle určovat horní a dolní odhad.
 \begin{example}[Sierpińského trojúhelník]\label{ex:sierpinskeho-trojuhelnik-hd-dimenze}
-    V tomto případě se podíváme na dvě možnosti, jak dojít k výsledku. Celý Sierpińského trojúhelník si označme $S$ a obrazec po $k$-té iteraci si označíme $S_k$.
+    V tomto případě se podíváme na dvě možnosti, jak dojít k výsledku. Celý Sierpińského trojúhelník si označme $S$.
     \begin{itemize}
         \item V $k$-té iteraci, kde $k=0,1,2,\ldots$, vzniknou 3 nové trojúhelníky o obsahu $1/4$ obsahu původního trojúhelníka, tzn. jejich celkový počet je $t=3^k$. Uvažíme-li $\delta$-pokrytí
         \[\mathcal{K}=\set{K_\delta^1(x_1),K_\delta^2(x_2),\ldots,K_\delta^t(x_t),\emptyset,\emptyset,\ldots}\]
@@ -220,12 +220,28 @@ Nyní se podívejme na příklad výpočtu. Podobně, jako v případě box-coun
         \[\hausdorffdeltameasure{s}{2^{-k}}(S_k)\leqslant\sum_{i=1}^{3^k}(2^{-k})^s=3^k2^{-ks}=1.\]
         Pro $k\to\infty$ je $\hausdorffmeasure{s}(S)\leqslant 1$. Poslední rovnost nastává právě pro $s=\ln{3}/\ln{2}$.
 
-        Nyní ukážeme, že $\hausdorffmeasure{s}(S)\geqslant 1/2$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$, takové, že
+        Nyní ukážeme, že $\hausdorffmeasure{s}(S)\geqslant 3^{-s}=1/2$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$, takové, že
         \begin{equation}\label{eq:volba-delta-pokryti-F}
             2^{-k-1}\leqslant\diam{F_i}<2^{-k},
         \end{equation}
-        kde $i\in\N$. Lze si rozmyslet, že každá z množin $F_i$ má neprázdný průnik s nejvýše dvěma dílčími trojúhelníky. Zvolíme-li $j\leqslant k$, pak každá z množin $F_i$ má průnik maximálně s $3^{j-k}$ trojúhelníky v $j$-té iteraci, resp.
+        kde $i\in\N$. Lze si rozmyslet, že každá z množin $F_i$ má neprázdný průnik s nejvýše dvěma dílčími trojúhelníky. Zvolíme-li $j\geqslant k$, pak každá z množin $F_i$ má průnik maximálně s $3^{j-k}$ trojúhelníky v $j$-té iteraci, resp.
         \[3^{j-k}=3^j2^{-ks}\leqslant2^j3^s(\diam{F_i})^s,\]
-        jak plyne z volby pokrytí $\mathcal{F}$ v \eqref{eq:volba-delta-pokryti-F}.
+        jak plyne z volby pokrytí $\mathcal{F}$ v \eqref{eq:volba-delta-pokryti-F}. Pokud navíc pro každé $i\in\N$ platí, že
+        \[3^{-j-1}\leqslant\diam{F_i},\]
+        pak každá z množin $F_i$ má neprázdný průnik s nejvýše $3^j$ trojúhelníky. Tedy pro jejich počet platí
+        \[3^j\leqslant\sum_{i=1}^{\infty}3^j3^s(\diam{F_i})^s,\]
+        přičemž úpravou už získáme požadovanou nerovnost.
+        \item Druhá varianta výpočtu je sice méně rigorózní, avšak podstatně jednodušší. Sierpińského trojúhelník sestává ze tří kopií sebe samotného, přičemž každá z nich je obrazem původního obrazce $S$ v podobnosti s koeficientem $K=1/2$. Označme si dané části $S_1,S_2$ a $S_3$, tj. $S=S_1\cup S_2\cup S_3$. Tedy podle $\sigma$-aditivity Hausdorffovy míry a důsledku \ref{cor:hd-dimenze-podobnost} můžeme psát
+        \begin{align*}
+            \hausdorffmeasure{s}(S)&=\hausdorffmeasure{s}(S_1)+\hausdorffmeasure{s}(S_2)+\hausdorffmeasure{s}(S_3)\\
+            &=\left(\dfrac{1}{2}\right)^s\hausdorffmeasure{s}(S)+\left(\dfrac{1}{2}\right)^s\hausdorffmeasure{s}(S)+\left(\dfrac{1}{2}\right)^s\hausdorffmeasure{s}(S)\\
+            &=3\left(\dfrac{1}{2}\right)^s\hausdorffmeasure{s}(S).
+        \end{align*}
+        Budeme-li předpokládat, že $\hausdorffmeasure{s}(S)<\infty$ (jak jsme již viděli z předchozího výpočtu, jedná se o netriviální předpoklad) pro $s=\dimH{S}$, pak z rovnosti $1=3(1/2)^s$ lze dopočítat, že $s=\ln{3}/\ln{2}$.
     \end{itemize}
 \end{example}
+(Převzato a upraveno z \citep[str. 53]{Falconer2014}.)
+
+Myšlenku druhého výpočtu z příkladu \ref{ex:sierpinskeho-trojuhelnik-hd-dimenze} ještě rozvedeme v kapitole \ref{chapter:klasifikace-fraktalu}, konkrétně v sekci \ref{sec:ifs} věnované systémům iterovaných funkcí\index{systém iterovaných funkcí}.
+
+Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi, kterou jsme si představili v sekci \ref{sec:box-counting-dimenze}. 
