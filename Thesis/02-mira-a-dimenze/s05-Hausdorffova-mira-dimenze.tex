@@ -244,4 +244,18 @@ Nyní se podívejme na příklad výpočtu. Podobně, jako v případě box-coun
 
 Myšlenku druhého výpočtu z příkladu \ref{ex:sierpinskeho-trojuhelnik-hd-dimenze} ještě rozvedeme v kapitole \ref{chapter:klasifikace-fraktalu}, konkrétně v sekci \ref{sec:ifs} věnované systémům iterovaných funkcí\index{systém iterovaných funkcí}.
 
-Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi, kterou jsme si představili v sekci \ref{sec:box-counting-dimenze}. 
+Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi, kterou jsme si představili v sekci \ref{sec:box-counting-dimenze}. Vztah mezi nimi je docela jednoduchý a udává jej věta \ref{thm:bc-dimenze-vs-hd-dimenze}. Pro připomenutí doporučuji se opětovně podívat na definici \ref{def:box-counting-dimenze}
+\begin{theorem}\label{thm:bc-dimenze-vs-hd-dimenze}
+    Nechť $F\subseteq\R^n$ je neprázdná omezená množina. Pak platí
+    \[\dimH{F}\leqslant\lowerdimB{F}\leqslant\upperdimB{F}\]
+\end{theorem}
+\begin{proof}
+    Nechť platí $1<\hausdorffmeasure{s}(F)=\lim_{\delta\to 0}\hausdorffdeltameasure{s}{\delta}(F)$ pro $s\geqslant 0$. Zvolme $\delta>0$ takové, že platí
+    \[1<\hausdorffdeltameasure{s}{\delta}(F)\leqslant N_\delta(F)\delta^s.\]
+    Úpravou této nerovnosti dostaneme
+    \begin{align*}
+        0&<\ln{N_\delta(F)}+s\ln{\delta}\\
+        s&<\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}\\
+        s&\leqslant\lim_{\delta\to 0}\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}.
+    \end{align*}
+\end{proof}
