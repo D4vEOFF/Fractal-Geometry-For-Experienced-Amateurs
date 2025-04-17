@@ -1,6 +1,9 @@
 # Záznam změn
 
-## 10. 4. 2024
+## 17. 4. 2025
+- Dokončena sekce o *Hausdorffově míře a dimenzi*
+
+## 10. 4. 2025
 - Upravena sekce o *Hausdorffově míře a dimenzi* (opraveny chyby)
 
 ## 2. 4. 2025
