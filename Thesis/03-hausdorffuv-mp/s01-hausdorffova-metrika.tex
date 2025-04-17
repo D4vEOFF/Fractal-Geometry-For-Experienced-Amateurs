@@ -24,12 +24,12 @@ Tvrzení \ref{prop:sjednoceni-kompaktnich-mnozin} lze opět rozšířit indukcí
 \begin{corollary}\label{cor:sjednoceni-n-kompaktnich-mnozin}
     Pro $A_1,A_2,\ldots,A_n\in\hyperspace(X)$ platí $\bigcup_{i=1}^n A_i\in\hyperspace(X)$.
 \end{corollary}
-Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly $\langle0,1\rangle$ a $\langle2,3\rangle$ jsou uzavřené a omezené,~tedy (podle věty \todo{doplnit odkaz}) jsou kompaktní. Avšak jejich průnik je prázdný. Podobně pro rozdíl stačí uvážit $A\subseteq B$,~tzn. $A\setminus B=\emptyset$.
+Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly $\langle0,1\rangle$ a $\langle2,3\rangle$ jsou uzavřené a omezené,~tedy (podle Heineho-Borelovy věty \ref{thm:heine-borel}) jsou kompaktní. Avšak jejich průnik je prázdný. Podobně pro rozdíl stačí uvážit $A\subseteq B$,~tzn. $A\setminus B=\emptyset$.
 \begin{theorem}\label{thm:hausdorffova-metrika-je-metrika}
     Nechť $(X,\varrho)$ je metrický prostor,~kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmetric$ je metrikou na $\hyperspace(X)$.
 \end{theorem}
 \begin{proof}
-    Zjevně pro každé $A,B\in\hyperspace(X)$ z~definice platí $\hausdorffmetric(A,B)\geqslant 0$ a $\hausdorffmetric(A,B)=\hausdorffmetric(B,A)$. Z~kompaktnosti množin $A,B$ plyne (podle věty \todo{doplnit odkaz}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmetric(A,B)<\infty$.
+    Zjevně pro každé $A,B\in\hyperspace(X)$ z~definice platí $\hausdorffmetric(A,B)\geqslant 0$ a $\hausdorffmetric(A,B)=\hausdorffmetric(B,A)$. Z~kompaktnosti množin $A,B$ plyne (podle věty \ref{thm:kompakt-implikuje-omezenost}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmetric(A,B)<\infty$.
     
     Pro $A=B$ platí,~že pro každé $\delta>0$ je splňeno $A\subseteq (B)_\delta$ a zároveň $B\subseteq (A)_\delta$,~tzn. $\hausdorffmetric(A,B)=0$. Opačná implikace také platí. Předpokládejme,~že množiny $A,B$ splňují $\hausdorffmetric(A,B)=0$. Pokud $x\in A$,~pak pro každé $\delta>0$ platí,~že $x\in (B)_\delta$,~tzn. $\varrho(x,B)=0$,~a z~uzavřenosti $B$ plyne $x\in B$. Tedy $A\subseteq B$ a analogicky platí i~$B\subseteq A$,~tzn. $A=B$.
 

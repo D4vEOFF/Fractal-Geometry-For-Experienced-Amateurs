@@ -1,17 +1,3 @@
-- Obrázek 1.15 .. vyřešit zarovnání obrázků
-- Doplnit informaci, že je-li A  podmn. B, pak dim A <= dim B (dimenze je monotónní množinová funkce) + info k výpočtu dimenze kruhu
-- Lineárně algebraická dimenze = dimenze celého prostoru
-- překreslit obrázek u topologické dimenze (čtverec), str. 19 
-
 - Přidat obsahu Kochovy vločky i variantu výpočtu pomocí sestavení rekurentní rovnice.
-
-- Přidat vztahy mezi dimenzemi (Hausdorff, box-counting)
-- "Věta 2.4.8. Nechť F ∈ L(Rn) " -> Obecně podmnožina R^n
-	- Přidat zmínku, že otevřené množiny jsou měřitelné.
-- Přidat zmínku o Borelovských množinách
-
-- Přidat informaci o případu, že 0 < H^s(F) < 1
-. Přidat odkaz na literaturu (článek od Falconera)
-- Věta 3.1.5 -> doplnit odkaz na větu (a její znění)
 
 Dimenze: kniha Ryszard Engelking: General Topology
