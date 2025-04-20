@@ -50,6 +50,111 @@ Alan Turing dal základ dnešní teoretické informatice. Turingův stroj, co by
 
 V úvodu této sekce jsme si již trochu přiblížili historické pozadí teorie formálních jazyků a automatů (tou se již dále zabývat nebudeme, nicméně bylo by při nejmenším neslušné ji zde alespoň nezmínit vzhledem k její přímé souvislosti). Ačkoliv tento text si neklade za cíl seznámit čtenáře se všemi podrobnostmi, byly zmíněny určité termíny, jejichž význam bude dobré si objasnit, konkrétně
 \begin{itemize}
-    \item \emph{formální jazyk}\index{formální!jazyk}
-    \item a \emph{formální gramatika}.\index{formální!gramatika}
+    \item \emph{formální jazyk}\index{formální!jazyk}\index{jazyk}
+    \item a \emph{formální gramatika}.\index{formální!gramatika}\index{gramatika}
 \end{itemize}
+\begin{definition}\label{def:formalni-jazyk-etc}
+    Množinu symbolů (znaků)\index{symbol}\index{znak} $\Sigma$ nazýváme \emph{abeceda}\index{abeceda}.
+    \begin{itemize}
+        \item Libovolnou konečnou posloupnost znaků
+        \[w=a_1a_2\ldots a_n,\]
+        kde $a_i\in\Sigma$ pro každé $1\leqslant i\leqslant n$ nazýváme \emph{slovo}\index{slovo}
+        \item Prázdným slovem\index{prázdné slovo} nazýváme slovo neobsahující žádné znaky, značíme $\lambda$.
+        \item Délku slova\index{délka slova} $w$ značíme $|w|$, tzn.
+        \[|w|=|a_1a_2\ldots a_n|=n.\]
+        \item Množinu všech slov délky $n$ značíme $\Sigma^n$, tj.
+        \[\Sigma^n=\set{a_1a_2\ldots a_n\mid a_i\in\Sigma\;\text{pro každé $i\in\N$}}.\]
+        Speciálně $\Sigma^0=\set{\lambda}$.
+        \item Množinu všech slov v abecedě $\Sigma$ značíme $\Sigma^*$, tzn.
+        \[\Sigma^*=\bigcup_{n=1}^\infty\Sigma^n.\]
+        \item \emph{Formálním jazykem} (nebo zkráceně jen \emph{jazykem})\index{formální!jazyk}\index{jazyk} nazýváme libovolnou podmnožinu $L\subseteq\Sigma^*$.
+    \end{itemize}
+\end{definition}
+\begin{example}
+    Některé příklady abeced:
+    \begin{itemize}
+        \item $\Sigma=\set{0,1}$, tzv. \emph{binární abeceda}.
+        \[\set{0,1}^*=\set{\lambda,0,1,00,01,10,11,000,001,\ldots}\]
+        \item $\Sigma=\set{a,b,c,\ldots,z}$, tj. všechna písmena anglické abecedy.
+        \[\set{a,b,c,\ldots,z}^*=\set{a,b,c,\ldots,z,aa,ab,ac,\ldots}\]
+        \item Všechny znaky ASCII\footnote{Zkratka pro \emph{American Standard For Information Interchange}. Stanovuje 128-bitové znakové kódování. Podoktněme, že ne všechny znaky jsou nutně tisknutelné a mají čistě informativní charakter, avšak to nás zde z formálního hladiska trápit vůbec nemusí.} tvoří abecedu.
+    \end{itemize}
+\end{example}
+\begin{definition}[Operace se slovy]\label{def:operace-se-slovy}
+    Nechť $\Sigma$ je libovolná abeceda a mějme slova $u,v\in\Sigma^*$, kde $u=u_1u_2\ldots u_n$ a $v=v_1v_2\ldots v_m$. Pak definujeme následující operace:
+    \begin{itemize}
+        \item \emph{Zřetězení (konkantenace)}\index{zřetězení}\index{konkantenace} slov $u$ a $v$ je slovo
+        \[uv=u_1u_2\ldots u_nv_1v_2\ldots v_m.\]
+        Je celkem zjevné, že $|uv|=|u|+|v|=n+m$.
+        \item Nechť $n\in\N$. Pak definujeme induktivně:
+        \begin{align*}
+            u^0&=\lambda,\\
+            u^1&=u,\\
+            u^n&=u^{n-1}u.
+        \end{align*}
+        Slovo $u^n$ se nazývá \emph{$n$-tá mocnina slova}\index{mocnina slova} $u$.
+        \item \emph{Obráceným slovem $u$} rozumíme slovo $u^R=u_nu_{n-1}\ldots u_1$.
+    \end{itemize}
+\end{definition}
+\begin{remark}
+    Speciálně pro prázdné slovo $\lambda$ a libovolné slovo $u\in\Sigma^*$ platí $u\lambda=\lambda u=u$.
+\end{remark}
+Na základě definice \ref{def:operace-se-slovy} můžeme být nyní daleko konkrétnější při popisu některých slov a jazyků. Např.
+\[L=\set{0^n1^n\mid n\in\N}\]
+značí jazyk všech slov obsahující znaky $0$ a $1$ ve tvaru
+\[\lambda,01,0011,000111,\ldots\]
+O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo opírají o již zmínenou teorii automatů. V tomto ohledu si dovolíme však hodně záležitostí přeskočit. Jazyky lze popisovat několika různými způsoby, avšak nás bude zajímat popis pomocí formálních gramatik\index{formální!gramatika}\index{gramatika}.
+\begin{definition}[Formální gramatika]\label{def:formalni-gramatika}
+    \emph{Formální gramatikou} (zkráceně jen gramatikou \emph{gramatikou})\index{formální!gramatika}\index{gramatika} nazýváme uspořádanou čtveřici $G=(V,T,P,S)$, kde
+    \begin{itemize}
+        \item $V\neq\emptyset$ je množina \emph{neterminálů}\footnote{Anglicky \emph{variables}}\index{neterminál} (neterminálních symbolů)\index{neterminální symbol},
+        \item $T\neq\emptyset$ je množina \emph{terminálů}\index{terminál} (terminálních symbolů)\index{terminální symbol},
+        \item $S\in V$ je \emph{počáteční symbol},
+        \item a $P$ je množina přepisovacích \emph{pravidel}\footnote{Formálně vzato se jedná o uspořádanou dvojici $(\alpha,\omega)$.}\index{přepisovací pravidlo}\index{pravidlo} ve tvaru $\beta A\gamma\to\omega$ (čteme "řetězec $\alpha$ se přepíše na řetezec $\omega$"), kde $A\in T$ a $\beta,\gamma,\omega\in(V\cup T)^*$. Tzn. levá strana každého pravidla obsahuje alespoň jeden neterminál.
+    \end{itemize}
+\end{definition}
+\begin{definition}[Odvození slova]\label{def:odvozeni-slova}
+    Mějme gramatiku $G=(V,T,P,S)$. Říkáme, že
+    \begin{itemize}
+        \item $\alpha$ se \emph{přímo přepíše} na $\omega$, píšeme $\alpha\Rightarrow_G\omega$ nebo jen $\alpha\Rightarrow\omega$, jestliže
+        \[\exists\beta,\gamma,\eta,\nu\in(V\cup T)^*: \alpha=\eta\beta\nu,\omega=\eta\gamma\nu\land(\beta\to\gamma)\in P.\]
+        \item $\alpha$ se \emph{přepíše} na $\omega$, pokud
+        \[\exists\beta_1,\beta_2,\ldots,\beta_n\in(V\cup T)^*:\alpha=\beta_1\Rightarrow\beta_2\Rightarrow\dots\Rightarrow\beta_n=\omega.\]
+    \end{itemize}
+    Posloupnost $\beta_1,\ldots,\beta_n$ nazýváme odvozením\index{odvození slova}.
+\end{definition}
+Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečeno, popisuje, jak lze slova daného jazyka generovat. Pravidla z množiny $P$ lze aplikovat v libovolném pořadí.
+\begin{remark}
+    \begin{itemize}
+        \item Typicky platí, že pro neterminály používáme velká písmena abecedy $A,B,\ldots,Z$ a pro terminály naopak malá písmena $a,b,\ldots,z$, popř. i jiné symboly.
+        \item Pokud máme více pravidel ve tvaru $\alpha\to\omega_i$, tj. se shodnou levou stranou, pak pro jejich zápis volíme tuto kompaktnější variantu:
+        \[\alpha\to\omega_1\mid\omega_2\mid\dots\mid\omega_n.\]
+    \end{itemize}
+\end{remark}
+\begin{example}
+    Jazyk všech palindromů nad binární abecedou, tj.
+    \[L_\text{pal}=\set{w\in\set{0,1}^*\mid w=w^R}.\]
+    lze generovat gramatikou $G=\set{\set{S},\set{0,1},P,S}$, přičemž $P$ obsahuje následující pravidla:
+    \[S\to\lambda\mid 0\mid 1\mid 0S0\mid 1S1.\]
+    Kupříkladu slovo $w=011110$ lze odvodit takto:
+    \[S\Rightarrow 0S0\Rightarrow 01S10\Rightarrow011S110\Rightarrow011\lambda 110=011110.\]
+\end{example}
+Trochu praktičtěji zaměřený příklad nám poskytuje \ref{ex:syntax-analyza}. Gramatiky se typicky využívají (vyjma fraktální geometrie) např. v kompilátorech\index{kompilátor} různých programovacích jazyků v rámci tzv. \emph{syntaktické analýzy}\index{syntaktická analýza}, při níž se (jak název napovídá) kontroluje syntaktická správnost zápisu programu. Konkrétně se pro jednoduchost zaměříme pouze na matematické výrazy obsahující pouze operace \texttt{+} a \texttt{*} (násobení).
+\begin{example}\label{ex:syntax-analyza}
+    Mějme gramatiku $G=(V,T,P,S)$, kde
+    \[V=\set{E,I},T=\set{a,b,(,),+,*},S=E\]
+    a pravidla jsou následující:
+    \begin{align*}
+        E&\to I\mid E+E\mid E*E\mid (E)\\
+        I&\to a\mid b\mid Ia\mid Ib.
+    \end{align*}
+    V takto definované gramatice lze vygenerovat např. slovo
+    \[w=(a+b)+bb*(ab+bb)\]
+    následovně:
+    \begin{align*}
+        E&\Rightarrow E+E\Rightarrow(E)+E\Rightarrow(E)+E*E\Rightarrow(E)+E*(E)\\
+        &\Rightarrow(E+E)+E*(E)\Rightarrow(E+E)+E*(E+E)\\
+        &\Rightarrow^*(I+I)+I*(I+I)\Rightarrow^*(a+b)+Ib*(Ib+Ib)\\
+        &\Rightarrow^*(a+b)+bb*(ab+bb).
+    \end{align*}
+\end{example}
