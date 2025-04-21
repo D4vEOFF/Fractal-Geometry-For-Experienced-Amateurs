@@ -86,7 +86,7 @@ V té době se zabýval otázkou, kterou v roce 1928 položil známý německý 
     \caption[David Hilbert,~1862--1943]{David Hilbert\footnote{Převzato z~\cite{OConnorHilbert2025}},~1862--1943}
     \label{fig:david-hilbert}
 \end{figure}
-Alan Turing dal základ dnešní teoretické informatice. Turingův stroj, co by výpočetní model, stojí na samotném vrchlu hierarchie dalších výpočetních modelů\footnote{Mezi ně patří jmenovitě tzv. \textit{lineárně omezený automat}\index{automat!lineárně omezený}, \emph{zásobníkový automat}\index{automat!zásobníkový}, \emph{deterministický}\index{automat!deterministický} a \emph{nedeterministický konečný automat}\index{automat!nedeterministický}.}, které jsou však svoji výpočetní silou slabší.  Později pak americký matematik \name{Noam Chomsky} (1928--současnost) popsal celkem 4 základní třídy tzv. \emph{formálních jazyků}, které jsou dnes souhrně známé pod názvem \emph{Chomského hierarchie}\index{Chomského hierarchie}. Za formální jazyk považujeme určitou množinu slov (rětězců). Chomského hierarchie zařazuje každý jazyk do jedné ze tříd podle výočetního modelu, který jej přijímá, resp. typu tzv. \emph{formální gramatiky}, která slova z něj generuje. O gramatikách a obecně určitém základu teorie formálních jazyků si ještě budeme podrobněji povídat později. O hlubší související teorii se čtenář může více dozvědět např. v knize \cite{Motwani2003}.
+Alan Turing dal základ dnešní teoretické informatice. Turingův stroj, co by výpočetní model, stojí na samotném vrchlu hierarchie dalších výpočetních modelů\footnote{Mezi ně patří jmenovitě tzv. \textit{lineárně omezený automat}\index{automat!lineárně omezený}, \emph{zásobníkový automat}\index{automat!zásobníkový}, \emph{deterministický}\index{automat!deterministický} a \emph{nedeterministický konečný automat}\index{automat!nedeterministický}.}, které jsou však svoji výpočetní silou slabší.  Později pak americký matematik \name{Noam Chomsky} (1928--současnost) popsal celkem 4 základní třídy tzv. \emph{formálních jazyků}, které jsou dnes souhrně známé pod názvem \emph{Chomského hierarchie}\index{Chomského hierarchie}. Za formální jazyk považujeme určitou množinu slov (rětězců). Chomského hierarchie zařazuje každý jazyk do jedné ze tříd podle výpočetního modelu, který jej přijímá, resp. typu tzv. \emph{formální gramatiky}, která slova z něj generuje. O gramatikách a obecně určitém základu teorie formálních jazyků si ještě budeme podrobněji povídat později. O hlubší související teorii se čtenář může více dozvědět např. v knize \cite{Motwani2003}.
 
 \subsection{Odbočka k formálním jazykům a gramatikám}\label{subsec:formalni-jazyky-a-gramatiky}
 
@@ -154,7 +154,7 @@ O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo
         \item $V\neq\emptyset$ je množina \emph{neterminálů}\footnote{Anglicky \emph{variables}}\index{neterminál} (neterminálních symbolů)\index{neterminální symbol},
         \item $T\neq\emptyset$ je množina \emph{terminálů}\index{terminál} (terminálních symbolů)\index{terminální symbol},
         \item $S\in V$ je \emph{počáteční symbol},
-        \item a $P$ je množina přepisovacích \emph{pravidel}\footnote{Formálně vzato se jedná o uspořádanou dvojici $(\alpha,\omega)$.}\index{přepisovací pravidlo}\index{pravidlo} ve tvaru $\beta A\gamma\to\omega$ (čteme "řetězec $\alpha$ se přepíše na řetezec $\omega$"), kde $A\in T$ a $\beta,\gamma,\omega\in(V\cup T)^*$. Tzn. levá strana každého pravidla obsahuje alespoň jeden neterminál.
+        \item a $P$ je množina přepisovacích \emph{pravidel}\footnote{Formálně vzato se jedná o uspořádanou dvojici $(\alpha,\omega)$.}\index{přepisovací pravidlo}\index{pravidlo} ve tvaru $\beta A\gamma\to\omega$ (čteme "řetězec $\beta A\gamma$ se přepíše na řetezec $\omega$"), kde $A\in T$ a $\beta,\gamma,\omega\in(V\cup T)^*$. Tzn. levá strana každého pravidla obsahuje alespoň jeden neterminál.
     \end{itemize}
 \end{definition}
 \begin{definition}[Odvození slova]\label{def:odvozeni-slova}
@@ -162,7 +162,7 @@ O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo
     \begin{itemize}
         \item $\alpha$ se \emph{přímo přepíše} na $\omega$, píšeme $\alpha\Rightarrow_G\omega$ nebo jen $\alpha\Rightarrow\omega$, jestliže
         \[\exists\beta,\gamma,\eta,\nu\in(V\cup T)^*: \alpha=\eta\beta\nu,\omega=\eta\gamma\nu\land(\beta\to\gamma)\in P.\]
-        \item $\alpha$ se \emph{přepíše} na $\omega$, pokud
+        \item $\alpha$ se \emph{přepíše} na $\omega$, píšeme $\alpha\Rightarrow_G^*\omega$ nebo jen $\alpha\Rightarrow^*\omega$, pokud
         \[\exists\beta_1,\beta_2,\ldots,\beta_n\in(V\cup T)^*:\alpha=\beta_1\Rightarrow\beta_2\Rightarrow\dots\Rightarrow\beta_n=\omega.\]
     \end{itemize}
     Posloupnost $\beta_1,\ldots,\beta_n$ nazýváme odvozením\index{odvození slova}. Též říkáme, že gramatika $G$ generuje slovo $w$, pokud $S\Rightarrow^* w$.
