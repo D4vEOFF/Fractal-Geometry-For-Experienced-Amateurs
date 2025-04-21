@@ -33,6 +33,48 @@ Výpočet pak probíhá takto:
 \end{enumerate}
 \begin{figure}[h]
     \centering
+    \begin{tikzpicture}[>=Stealth, every node/.style={font=\sffamily},
+        box/.style={rectangle, draw=black, rounded corners, fill=yellow!30, inner sep=8pt},
+        smallbox/.style={rectangle, draw=black, fill=yellow!10, inner sep=4pt, minimum width=1cm, minimum height=1cm},
+        tapecell/.style={rectangle, draw=black, fill=yellow!10, minimum size=0.8cm},
+        head/.style={isosceles triangle, draw=black, fill=gray!30, shape border rotate=180, minimum width=0.8cm, minimum height=0.6cm},
+        callout/.style={draw=teal!80!black, fill=teal!20, rounded corners, font=\sffamily\small}
+      ]
+      % Control unit
+      \node[box] (ctrl) {\textbf{Řídící jednotka}
+        \begin{tikzpicture}[baseline]
+          \node[smallbox] (delta) {$\delta$};
+          \node[smallbox, right=1em of delta] (q) {$q$};
+        \end{tikzpicture}
+      };
+      % Transition function label
+      \node[callout, callout relative pointer={(0.5cm,-0.5cm)}] at (ctrl.west) {Přechodová funkce};
+      % Current state label
+      \node[callout, callout relative pointer={(-0.5cm,-0.5cm)}] at (ctrl.east) {Aktuální stav};
+      
+      % Head arrow
+      \node[head, below=2cm of ctrl] (head) {};
+      % Head movement arrows
+      \draw[<->] (head.east|-head) -- ++(1cm,0) node[midway, above] {};
+      \draw[<->] (head.west|-head) -- ++(-1cm,0) node[midway, above] {};
+      % Head label
+      \node[callout, callout relative pointer={(0,-0.5cm)}] at (head.north) {Čtecí a zapisovací hlava, která se může pohybovat oběma směry};
+      
+      % Tape cells
+      \matrix (tape) [matrix of nodes, nodes={tapecell}, row sep=0mm, column sep=0mm, below=1.5cm of head] {
+        $\dots$ & H & e & l & l & o & \_ & w & o & r & l & d & $\dots$ \\
+      };
+      % Tape annotations
+      \node[below=2mm of tape] {Neomezená páska};
+      \node[callout, callout relative pointer={(0,0.8cm)}] at (tape-1-7.south) {Prázdné políčko};
+      \node[callout, callout relative pointer={(0,0cm)}] at (tape-1-9.east) {Symboly páskové abecedy};
+      
+    \end{tikzpicture}
+    \caption{Znázornění Turingova stroje}
+    \label{fig:turinguv-stroj}
+\end{figure}
+\begin{figure}[h]
+    \centering
     \includegraphics[width=.4\textwidth]{Alan-Turing.jpeg}
     \caption[Alan Turing,~1871--1956]{Alan Turing\footnote{Převzato z~\cite{OConnorTuring2025}},~1912--1954}
     \label{fig:alan-turing}
@@ -67,6 +109,8 @@ V úvodu této sekce jsme si již trochu přiblížili historické pozadí teori
         Speciálně $\Sigma^0=\set{\lambda}$.
         \item Množinu všech slov v abecedě $\Sigma$ značíme $\Sigma^*$, tzn.
         \[\Sigma^*=\bigcup_{n=1}^\infty\Sigma^n.\]
+        \item Množinu všech neprázdných slov v abecedě $\Sigma$ značíme $\Sigma^+$, tzn.
+        \[\Sigma^+=\Sigma^*\setminus\set{\lambda}.\]
         \item \emph{Formálním jazykem} (nebo zkráceně jen \emph{jazykem})\index{formální!jazyk}\index{jazyk} nazýváme libovolnou podmnožinu $L\subseteq\Sigma^*$.
     \end{itemize}
 \end{definition}
@@ -121,7 +165,7 @@ O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo
         \item $\alpha$ se \emph{přepíše} na $\omega$, pokud
         \[\exists\beta_1,\beta_2,\ldots,\beta_n\in(V\cup T)^*:\alpha=\beta_1\Rightarrow\beta_2\Rightarrow\dots\Rightarrow\beta_n=\omega.\]
     \end{itemize}
-    Posloupnost $\beta_1,\ldots,\beta_n$ nazýváme odvozením\index{odvození slova}.
+    Posloupnost $\beta_1,\ldots,\beta_n$ nazýváme odvozením\index{odvození slova}. Též říkáme, že gramatika $G$ generuje slovo $w$, pokud $S\Rightarrow^* w$.
 \end{definition}
 Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečeno, popisuje, jak lze slova daného jazyka generovat. Pravidla z množiny $P$ lze aplikovat v libovolném pořadí.
 \begin{remark}
@@ -158,3 +202,33 @@ Trochu praktičtěji zaměřený příklad nám poskytuje \ref{ex:syntax-analyza
         &\Rightarrow^*(a+b)+bb*(ab+bb).
     \end{align*}
 \end{example}
+S podobným přístupem se lze setkat i např. v lingvistice. Čtenář si možná ze základní školy větný rozbor, v jehož rámci bylo úkolem určit pro zadanou větu její strukturu. Ve skutečnosti se nejedná o nic jiného, než využítí určité formální gramatiky $G=(V,T,P,S)$, jejíž pravidla v množině $P$ jsou dána gramatickými pravidly (nyní v lingvistickém slova smyslu) českého jazyka. Pro příklad viz obrázek\footnote{S, NP, VP, ADJP představují neterminály příslušné gramatiky a jednotlivá slova (Petr, četl, pěknou, knihu) její termínály. Významy: S \emph{(Sentence)}, NP \emph{(Noun Phrase)}, VP \emph{(Verb Phrase)}, ADJP \emph{(Adjective Phrase)}.} \ref{fig:syntax-strom-vety}.
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[
+        edge from parent/.style={draw, -latex},
+        level distance=1.5cm,
+        sibling distance=3cm
+      ]
+        \node {S}
+          child { node {NP}
+            child { node {Petr} }
+          }
+          child { node {VP}
+            child { node {\textit{četl}} }
+            child { node {NP}
+              child { node {ADJP}
+                child { node {\textit{pěknou}} }
+              }
+              child { node {knihu} }
+            }
+          };
+    \end{tikzpicture}
+    \caption{Příklad syntaktického stromu věty: \emph{"Petr četl pěknou knihu."}}
+    \label{fig:syntax-strom-vety}
+\end{figure}
+Zároveň zde můžeme vidět souvislost formální gramatiky s gramatikou v lingvistice.
+
+\subsection{Definice L-systému}\label{subsec:definice-lsystemu}
+
+V podsekci \ref{subsec:formalni-jazyky-a-gramatiky} jsme si udělali v podstatě "rychloúvod" do problematiky \emph{formálních jazyků} a \emph{gramatik}, kde jsme si především zavedli potřebné značenou terminologii a značení. L-systémy se v kontextu formálních gramatik mírně, avšak podstatně liší v tom, že pravidla jsou v jednom kroku aplikována paralelně. 
