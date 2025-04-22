@@ -33,53 +33,11 @@ Výpočet pak probíhá takto:
 \end{enumerate}
 \begin{figure}[h]
     \centering
-    \begin{tikzpicture}[>=Stealth, every node/.style={font=\sffamily},
-        box/.style={rectangle, draw=black, rounded corners, fill=yellow!30, inner sep=8pt},
-        smallbox/.style={rectangle, draw=black, fill=yellow!10, inner sep=4pt, minimum width=1cm, minimum height=1cm},
-        tapecell/.style={rectangle, draw=black, fill=yellow!10, minimum size=0.8cm},
-        head/.style={isosceles triangle, draw=black, fill=gray!30, shape border rotate=180, minimum width=0.8cm, minimum height=0.6cm},
-        callout/.style={draw=teal!80!black, fill=teal!20, rounded corners, font=\sffamily\small}
-      ]
-      % Control unit
-      \node[box] (ctrl) {\textbf{Řídící jednotka}
-        \begin{tikzpicture}[baseline]
-          \node[smallbox] (delta) {$\delta$};
-          \node[smallbox, right=1em of delta] (q) {$q$};
-        \end{tikzpicture}
-      };
-      % Transition function label
-      \node[callout, callout relative pointer={(0.5cm,-0.5cm)}] at (ctrl.west) {Přechodová funkce};
-      % Current state label
-      \node[callout, callout relative pointer={(-0.5cm,-0.5cm)}] at (ctrl.east) {Aktuální stav};
-      
-      % Head arrow
-      \node[head, below=2cm of ctrl] (head) {};
-      % Head movement arrows
-      \draw[<->] (head.east|-head) -- ++(1cm,0) node[midway, above] {};
-      \draw[<->] (head.west|-head) -- ++(-1cm,0) node[midway, above] {};
-      % Head label
-      \node[callout, callout relative pointer={(0,-0.5cm)}] at (head.north) {Čtecí a zapisovací hlava, která se může pohybovat oběma směry};
-      
-      % Tape cells
-      \matrix (tape) [matrix of nodes, nodes={tapecell}, row sep=0mm, column sep=0mm, below=1.5cm of head] {
-        $\dots$ & H & e & l & l & o & \_ & w & o & r & l & d & $\dots$ \\
-      };
-      % Tape annotations
-      \node[below=2mm of tape] {Neomezená páska};
-      \node[callout, callout relative pointer={(0,0.8cm)}] at (tape-1-7.south) {Prázdné políčko};
-      \node[callout, callout relative pointer={(0,0cm)}] at (tape-1-9.east) {Symboly páskové abecedy};
-      
-    \end{tikzpicture}
-    \caption{Znázornění Turingova stroje}
-    \label{fig:turinguv-stroj}
-\end{figure}
-\begin{figure}[h]
-    \centering
     \includegraphics[width=.4\textwidth]{Alan-Turing.jpeg}
     \caption[Alan Turing,~1871--1956]{Alan Turing\footnote{Převzato z~\cite{OConnorTuring2025}},~1912--1954}
     \label{fig:alan-turing}
 \end{figure}
-V té době se zabýval otázkou, kterou v roce 1928 položil známý německý matematik \name{David Hilbert} (1862--1943), jež je známá pod názvem \emph{"Entscheidungsproblem"}\index{Entscheidungsproblem}\footnote{Anglicky \emph{The Decision problem}\index{The Decision problem}, česky přeložitelné jako \emph{"rozhodovací problém"}. Zde však poznamenejme, že onem český termín se používá i v související teorii složitosti a vyčíslitelnosti, má však podstatně jiný význam.}. Problémem bylo, zda existuje algoritmus, který o každém tvrzení je schopný rozhodnout (v konečném čase), zda je či není pravdivé. Později Alan Turing tento problém přeformuloval takto: \emph{Existuje program, který o jiném programu na vstupu rozhodne, zda se zastaví, či nikoliv?} David Hilbert byl ve svých vizích optimistický, avšak nakonec Alan Turing dokázal, že \textbf{takový algoritmus nemůže existovat}. Způsob, jakým Turing došel onomu výsledku, byl v konečném důsledku vlastně až překvapivě jednoduchý a existuje pro něj velké množství popularizačních materiálů\footnote{Pokud by se chtěl čtenář dozvědět více o této problematice a teorii s ní související, doporučuji např. knihu \cite{Motwani2003}}.
+V té době se Turing zabýval otázkou, kterou v roce 1928 položil známý německý matematik \name{David Hilbert} (1862--1943), jež je známá pod názvem \emph{"Entscheidungsproblem"}\index{Entscheidungsproblem}\footnote{Anglicky \emph{The Decision problem}\index{The Decision problem}, česky přeložitelné jako \emph{"rozhodovací problém"}. Zde však poznamenejme, že onem český termín se používá i v související teorii složitosti a vyčíslitelnosti, má však podstatně jiný význam.}. Problémem bylo, zda existuje algoritmus, který o každém tvrzení je schopný rozhodnout (v konečném čase), zda je či není pravdivé. Později Alan Turing tento problém přeformuloval takto: \emph{Existuje program, který o jiném programu na vstupu rozhodne, zda se zastaví, či nikoliv?} David Hilbert byl ve svých vizích optimistický, avšak nakonec Alan Turing dokázal, že \textbf{takový algoritmus nemůže existovat}. Způsob, jakým Turing došel onomu výsledku, byl v konečném důsledku vlastně až překvapivě jednoduchý a existuje pro něj velké množství popularizačních materiálů\footnote{Pokud by se chtěl čtenář dozvědět více o této problematice a teorii s ní související, doporučuji např. knihu \cite{Motwani2003}}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=.4\textwidth]{David-Hilbert.jpg}
@@ -108,7 +66,7 @@ V úvodu této sekce jsme si již trochu přiblížili historické pozadí teori
         \[\Sigma^n=\set{a_1a_2\ldots a_n\mid a_i\in\Sigma\;\text{pro každé $i\in\N$}}.\]
         Speciálně $\Sigma^0=\set{\lambda}$.
         \item Množinu všech slov v abecedě $\Sigma$ značíme $\Sigma^*$, tzn.
-        \[\Sigma^*=\bigcup_{n=1}^\infty\Sigma^n.\]
+        \[\Sigma^*=\bigcup_{n=0}^\infty\Sigma^n.\]
         \item Množinu všech neprázdných slov v abecedě $\Sigma$ značíme $\Sigma^+$, tzn.
         \[\Sigma^+=\Sigma^*\setminus\set{\lambda}.\]
         \item \emph{Formálním jazykem} (nebo zkráceně jen \emph{jazykem})\index{formální!jazyk}\index{jazyk} nazýváme libovolnou podmnožinu $L\subseteq\Sigma^*$.
@@ -157,7 +115,7 @@ O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo
         \item a $P$ je množina přepisovacích \emph{pravidel}\footnote{Formálně vzato se jedná o uspořádanou dvojici $(\alpha,\omega)$.}\index{přepisovací pravidlo}\index{pravidlo} ve tvaru $\beta A\gamma\to\omega$ (čteme "řetězec $\beta A\gamma$ se přepíše na řetezec $\omega$"), kde $A\in T$ a $\beta,\gamma,\omega\in(V\cup T)^*$. Tzn. levá strana každého pravidla obsahuje alespoň jeden neterminál.
     \end{itemize}
 \end{definition}
-\begin{definition}[Odvození slova]\label{def:odvozeni-slova}
+\begin{definition}[Odvození slova v gramatice]\label{def:odvozeni-slova-v-gramatice}
     Mějme gramatiku $G=(V,T,P,S)$. Říkáme, že
     \begin{itemize}
         \item $\alpha$ se \emph{přímo přepíše} na $\omega$, píšeme $\alpha\Rightarrow_G\omega$ nebo jen $\alpha\Rightarrow\omega$, jestliže
@@ -202,7 +160,7 @@ Trochu praktičtěji zaměřený příklad nám poskytuje \ref{ex:syntax-analyza
         &\Rightarrow^*(a+b)+bb*(ab+bb).
     \end{align*}
 \end{example}
-S podobným přístupem se lze setkat i např. v lingvistice. Čtenář si možná ze základní školy větný rozbor, v jehož rámci bylo úkolem určit pro zadanou větu její strukturu. Ve skutečnosti se nejedná o nic jiného, než využítí určité formální gramatiky $G=(V,T,P,S)$, jejíž pravidla v množině $P$ jsou dána gramatickými pravidly (nyní v lingvistickém slova smyslu) českého jazyka. Pro příklad viz obrázek\footnote{S, NP, VP, ADJP představují neterminály příslušné gramatiky a jednotlivá slova (Petr, četl, pěknou, knihu) její termínály. Významy: S \emph{(Sentence)}, NP \emph{(Noun Phrase)}, VP \emph{(Verb Phrase)}, ADJP \emph{(Adjective Phrase)}.} \ref{fig:syntax-strom-vety}.
+S podobným přístupem se lze setkat i např. v lingvistice. Čtenář si možná ze základní školy vzpomíná na větný rozbor, v jehož rámci bylo úkolem určit pro zadanou větu její strukturu. Ve skutečnosti se nejedná o nic jiného, než využítí určité formální gramatiky $G=(V,T,P,S)$, jejíž pravidla v množině $P$ jsou dána gramatickými pravidly (nyní v lingvistickém slova smyslu) českého jazyka. Pro příklad viz obrázek\footnote{S, NP, VP, ADJP představují neterminály příslušné gramatiky a jednotlivá slova (Petr, četl, pěknou, knihu) její termínály. Významy: S \emph{(Sentence)}, NP \emph{(Noun Phrase)}, VP \emph{(Verb Phrase)}, ADJP \emph{(Adjective Phrase)}.} \ref{fig:syntax-strom-vety}.
 \begin{figure}[h]
     \centering
     \begin{tikzpicture}[
@@ -231,4 +189,20 @@ Zároveň zde můžeme vidět souvislost formální gramatiky s gramatikou v lin
 
 \subsection{Definice L-systému}\label{subsec:definice-lsystemu}
 
-V podsekci \ref{subsec:formalni-jazyky-a-gramatiky} jsme si udělali v podstatě "rychloúvod" do problematiky \emph{formálních jazyků} a \emph{gramatik}, kde jsme si především zavedli potřebné značenou terminologii a značení. L-systémy se v kontextu formálních gramatik mírně, avšak podstatně liší v tom, že pravidla jsou v jednom kroku aplikována paralelně. 
+V podsekci \ref{subsec:formalni-jazyky-a-gramatiky} jsme si udělali v podstatě "rychloúvod" do problematiky \emph{formálních jazyků} a \emph{gramatik}, kde jsme si především zavedli potřebné značenou terminologii a značení. L-systémy\index{L-systém} se v kontextu formálních gramatik mírně, avšak podstatně liší v tom, že pravidla jsou v jednom kroku aplikována paralelně.
+
+Základní idea vychází popisu fráktálů vychází z konceptu, který jsme si již představili v úvodní kapitole \ref{chapter:uvod_do_fraktalu}, a to \emph{soběpodobnosti}\index{soběpodobnost}. V každém dalším kroku jsme část útvaru nahradili jeho zmenšenou kopií. Nešlo by toto nějak zachytit pomocí postupného přepisování, jako tomu bylo v případě formálních gramtik? Ovšem, že ano. Jako první se tedy podíváme na definici L-systému.
+\begin{definition}[L-systém]\label{def:lsystem}
+    L-systémem\index{L-systém} nazveme uspořádanou trojici $G=(V,\omega,P)$, kde:
+    \begin{itemize}
+        \item $V$ je abeceda,
+        \item $\omega\in\Sigma^+$ je počáteční slovo zvané \emph{axiom}\index{axiom}
+        \item a $P$ je množina pravidel tvaru $a\to\omega$, kde $a\in V$ a $\omega\in V^*$. Navíc pro každé $a\in V$ platí $(a\to a)\in P$.
+    \end{itemize}
+\end{definition}
+Porovnejme na chvíli definici \ref{def:lsystem} s definicí formální gramatiky (viz definice \ref{def:formalni-gramatika}). U gramatik jsme rozlišovali tzv. neterminální a terminální symboly. U L-systému však tato dvajice druhů symbolů splývá, resp. nerozlišujeme mezi terminály a neterminály, neboť v jednom kroku přepisujeme všechny symboly. Dále začínáme rovnou s řetězcem symbolů $\omega\in V^+$. To lze v gramatice zařídit jednoduše tak, že zavedeme speciální neterminál $T$, který uvedeme jako počáteční, a pak přidáme pravidlo $T\to\omega$, přičemž $\omega$, ani žádná jiná pravidla neobsahují neterminál $T$. V tomto ohledu tedy můžeme vidět, že L-systém je z pohledu definice gramatiky pouze zvláštní případ.
+
+Jak už bylo uvedeno na začátku této podsekce, podstatný rozdíl oproti gramtikám nastává ve způsobu přepisování, resp. odvozování slov (pro připomenutí viz definice \ref{def:odvozeni-slova-v-gramatice}).
+\begin{definition}[Odvození slova v L-systému]\label{def:odvozeni-slova-v-lsystemu}
+    
+\end{definition}
