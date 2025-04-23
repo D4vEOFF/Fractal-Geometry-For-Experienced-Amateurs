@@ -15,24 +15,19 @@ def run_command(command, description):
 
 def compile_latex(main_file):
     """Kompiluje LaTeX dokument s využitím bibtexu."""
-    # První běh pdflatex (vytvoří .aux soubory)
     run_command(["pdflatex", main_file], "prvního běhu pdflatex")
     
-    # Spuštění bibtexu (zpracuje bibliografii)
     base_name = os.path.splitext(main_file)[0]
     run_command(["bibtex", base_name], "běhu bibtex")
     
-    # Druhý běh pdflatex (pro aktualizaci odkazů)
     run_command(["pdflatex", main_file], "druhého běhu pdflatex")
     
-    # Třetí běh pdflatex (pro definitivní sestavení)
     run_command(["pdflatex", main_file], "třetího běhu pdflatex")
     
     print("Kompilace proběhla úspěšně.")
 
 def cleanup_aux_files():
     """Odstraní všechny pomocné soubory vytvořené během kompilace i z podsložek."""
-    # Seznam přípon pomocných souborů, které se mají odstranit
     extensions = [
         ".aux", ".log", ".bbl", ".blg", ".toc",
         ".lof", ".lot", ".out", ".fls", ".fdb_latexmk",
