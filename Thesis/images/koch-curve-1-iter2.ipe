@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70218" creator="Ipe 7.2.28">
+<info created="D:20250423155017" modified="D:20250423155017"/>
+<ipestyle>
+<opacity name="10%" value="0.1"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<layout paper="208 209" origin="0 0" frame="208 209" crop="no"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<group layer="alpha" matrix="1 0 0 -1 -536 465">
+<path stroke="0" pen="3">
+550 451 m
+570 451 l
+</path>
+<path stroke="0" pen="3">
+570 451 m
+590 451 l
+</path>
+<path stroke="0" pen="3">
+590 451 m
+590 431 l
+</path>
+<path stroke="0" pen="3">
+590 431 m
+570 431 l
+</path>
+<path stroke="0" pen="3">
+570 431 m
+570 451 l
+</path>
+<path stroke="0" pen="3">
+570 451 m
+590 451 l
+</path>
+<path stroke="0" pen="3">
+590 451 m
+610 451 l
+</path>
+<path stroke="0" pen="3">
+610 451 m
+630 451 l
+</path>
+<path stroke="0" pen="3">
+630 451 m
+650 451 l
+</path>
+<path stroke="0" pen="3">
+650 451 m
+650 431 l
+</path>
+<path stroke="0" pen="3">
+650 431 m
+630 431 l
+</path>
+<path stroke="0" pen="3">
+630 431 m
+630 451 l
+</path>
+<path stroke="0" pen="3">
+630 451 m
+650 451 l
+</path>
+<path stroke="0" pen="3">
+650 451 m
+670 451 l
+</path>
+<path stroke="0" pen="3">
+670 451 m
+670 431 l
+</path>
+<path stroke="0" pen="3">
+670 431 m
+670 411 l
+</path>
+<path stroke="0" pen="3">
+670 411 m
+650 411 l
+</path>
+<path stroke="0" pen="3">
+650 411 m
+650 431 l
+</path>
+<path stroke="0" pen="3">
+650 431 m
+670 431 l
+</path>
+<path stroke="0" pen="3">
+670 431 m
+670 411 l
+</path>
+<path stroke="0" pen="3">
+670 411 m
+670 391 l
+</path>
+<path stroke="0" pen="3">
+670 391 m
+650 391 l
+</path>
+<path stroke="0" pen="3">
+650 391 m
+630 391 l
+</path>
+<path stroke="0" pen="3">
+630 391 m
+630 411 l
+</path>
+<path stroke="0" pen="3">
+630 411 m
+650 411 l
+</path>
+<path stroke="0" pen="3">
+650 411 m
+650 391 l
+</path>
+<path stroke="0" pen="3">
+650 391 m
+630 391 l
+</path>
+<path stroke="0" pen="3">
+630 391 m
+610 391 l
+</path>
+<path stroke="0" pen="3">
+610 391 m
+610 411 l
+</path>
+<path stroke="0" pen="3">
+610 411 m
+610 431 l
+</path>
+<path stroke="0" pen="3">
+610 431 m
+630 431 l
+</path>
+<path stroke="0" pen="3">
+630 431 m
+630 411 l
+</path>
+<path stroke="0" pen="3">
+630 411 m
+610 411 l
+</path>
+<path stroke="0" pen="3">
+610 411 m
+610 431 l
+</path>
+<path stroke="0" pen="3">
+610 431 m
+610 451 l
+</path>
+<path stroke="0" pen="3">
+610 451 m
+630 451 l
+</path>
+<path stroke="0" pen="3">
+630 451 m
+650 451 l
+</path>
+<path stroke="0" pen="3">
+650 451 m
+650 431 l
+</path>
+<path stroke="0" pen="3">
+650 431 m
+630 431 l
+</path>
+<path stroke="0" pen="3">
+630 431 m
+630 451 l
+</path>
+<path stroke="0" pen="3">
+630 451 m
+650 451 l
+</path>
+<path stroke="0" pen="3">
+650 451 m
+670 451 l
+</path>
+<path stroke="0" pen="3">
+670 451 m
+690 451 l
+</path>
+<path stroke="0" pen="3">
+690 451 m
+710 451 l
+</path>
+<path stroke="0" pen="3">
+710 451 m
+710 431 l
+</path>
+<path stroke="0" pen="3">
+710 431 m
+690 431 l
+</path>
+<path stroke="0" pen="3">
+690 431 m
+690 451 l
+</path>
+<path stroke="0" pen="3">
+690 451 m
+710 451 l
+</path>
+<path stroke="0" pen="3">
+710 451 m
+730 451 l
+</path>
+<path stroke="0" pen="3">
+730 451 m
+730 431 l
+</path>
+<path stroke="0" pen="3">
+730 431 m
+730 411 l
+</path>
+<path stroke="0" pen="3">
+730 411 m
+710 411 l
+</path>
+<path stroke="0" pen="3">
+710 411 m
+710 431 l
+</path>
+<path stroke="0" pen="3">
+710 431 m
+730 431 l
+</path>
+<path stroke="0" pen="3">
+730 431 m
+730 411 l
+</path>
+<path stroke="0" pen="3">
+730 411 m
+730 391 l
+</path>
+<path stroke="0" pen="3">
+730 391 m
+730 371 l
+</path>
+<path stroke="0" pen="3">
+730 371 m
+730 351 l
+</path>
+<path stroke="0" pen="3">
+730 351 m
+710 351 l
+</path>
+<path stroke="0" pen="3">
+710 351 m
+710 371 l
+</path>
+<path stroke="0" pen="3">
+710 371 m
+730 371 l
+</path>
+<path stroke="0" pen="3">
+730 371 m
+730 351 l
+</path>
+<path stroke="0" pen="3">
+730 351 m
+730 331 l
+</path>
+<path stroke="0" pen="3">
+730 331 m
+710 331 l
+</path>
+<path stroke="0" pen="3">
+710 331 m
+690 331 l
+</path>
+<path stroke="0" pen="3">
+690 331 m
+690 351 l
+</path>
+<path stroke="0" pen="3">
+690 351 m
+710 351 l
+</path>
+<path stroke="0" pen="3">
+710 351 m
+710 331 l
+</path>
+<path stroke="0" pen="3">
+710 331 m
+690 331 l
+</path>
+<path stroke="0" pen="3">
+690 331 m
+670 331 l
+</path>
+<path stroke="0" pen="3">
+670 331 m
+670 351 l
+</path>
+<path stroke="0" pen="3">
+670 351 m
+670 371 l
+</path>
+<path stroke="0" pen="3">
+670 371 m
+690 371 l
+</path>
+<path stroke="0" pen="3">
+690 371 m
+690 351 l
+</path>
+<path stroke="0" pen="3">
+690 351 m
+670 351 l
+</path>
+<path stroke="0" pen="3">
+670 351 m
+670 371 l
+</path>
+<path stroke="0" pen="3">
+670 371 m
+670 391 l
+</path>
+<path stroke="0" pen="3">
+670 391 m
+690 391 l
+</path>
+<path stroke="0" pen="3">
+690 391 m
+710 391 l
+</path>
+<path stroke="0" pen="3">
+710 391 m
+710 371 l
+</path>
+<path stroke="0" pen="3">
+710 371 m
+690 371 l
+</path>
+<path stroke="0" pen="3">
+690 371 m
+690 391 l
+</path>
+<path stroke="0" pen="3">
+690 391 m
+710 391 l
+</path>
+<path stroke="0" pen="3">
+710 391 m
+730 391 l
+</path>
+<path stroke="0" pen="3">
+730 391 m
+730 371 l
+</path>
+<path stroke="0" pen="3">
+730 371 m
+730 351 l
+</path>
+<path stroke="0" pen="3">
+730 351 m
+710 351 l
+</path>
+<path stroke="0" pen="3">
+710 351 m
+710 371 l
+</path>
+<path stroke="0" pen="3">
+710 371 m
+730 371 l
+</path>
+<path stroke="0" pen="3">
+730 371 m
+730 351 l
+</path>
+<path stroke="0" pen="3">
+730 351 m
+730 331 l
+</path>
+<path stroke="0" pen="3">
+730 331 m
+730 311 l
+</path>
+<path stroke="0" pen="3">
+730 311 m
+730 291 l
+</path>
+<path stroke="0" pen="3">
+730 291 m
+710 291 l
+</path>
+<path stroke="0" pen="3">
+710 291 m
+710 311 l
+</path>
+<path stroke="0" pen="3">
+710 311 m
+730 311 l
+</path>
+<path stroke="0" pen="3">
+730 311 m
+730 291 l
+</path>
+<path stroke="0" pen="3">
+730 291 m
+730 271 l
+</path>
+<path stroke="0" pen="3">
+730 271 m
+710 271 l
+</path>
+<path stroke="0" pen="3">
+710 271 m
+690 271 l
+</path>
+<path stroke="0" pen="3">
+690 271 m
+690 291 l
+</path>
+<path stroke="0" pen="3">
+690 291 m
+710 291 l
+</path>
+<path stroke="0" pen="3">
+710 291 m
+710 271 l
+</path>
+<path stroke="0" pen="3">
+710 271 m
+690 271 l
+</path>
+<path stroke="0" pen="3">
+690 271 m
+670 271 l
+</path>
+<path stroke="0" pen="3">
+670 271 m
+650 271 l
+</path>
+<path stroke="0" pen="3">
+650 271 m
+630 271 l
+</path>
+<path stroke="0" pen="3">
+630 271 m
+630 291 l
+</path>
+<path stroke="0" pen="3">
+630 291 m
+650 291 l
+</path>
+<path stroke="0" pen="3">
+650 291 m
+650 271 l
+</path>
+<path stroke="0" pen="3">
+650 271 m
+630 271 l
+</path>
+<path stroke="0" pen="3">
+630 271 m
+610 271 l
+</path>
+<path stroke="0" pen="3">
+610 271 m
+610 291 l
+</path>
+<path stroke="0" pen="3">
+610 291 m
+610 311 l
+</path>
+<path stroke="0" pen="3">
+610 311 m
+630 311 l
+</path>
+<path stroke="0" pen="3">
+630 311 m
+630 291 l
+</path>
+<path stroke="0" pen="3">
+630 291 m
+610 291 l
+</path>
+<path stroke="0" pen="3">
+610 291 m
+610 311 l
+</path>
+<path stroke="0" pen="3">
+610 311 m
+610 331 l
+</path>
+<path stroke="0" pen="3">
+610 331 m
+630 331 l
+</path>
+<path stroke="0" pen="3">
+630 331 m
+650 331 l
+</path>
+<path stroke="0" pen="3">
+650 331 m
+650 311 l
+</path>
+<path stroke="0" pen="3">
+650 311 m
+630 311 l
+</path>
+<path stroke="0" pen="3">
+630 311 m
+630 331 l
+</path>
+<path stroke="0" pen="3">
+630 331 m
+650 331 l
+</path>
+<path stroke="0" pen="3">
+650 331 m
+670 331 l
+</path>
+<path stroke="0" pen="3">
+670 331 m
+670 311 l
+</path>
+<path stroke="0" pen="3">
+670 311 m
+670 291 l
+</path>
+<path stroke="0" pen="3">
+670 291 m
+650 291 l
+</path>
+<path stroke="0" pen="3">
+650 291 m
+650 311 l
+</path>
+<path stroke="0" pen="3">
+650 311 m
+670 311 l
+</path>
+<path stroke="0" pen="3">
+670 311 m
+670 291 l
+</path>
+<path stroke="0" pen="3">
+670 291 m
+670 271 l
+</path>
+<path stroke="0" pen="3">
+670 271 m
+650 271 l
+</path>
+<path stroke="0" pen="3">
+650 271 m
+630 271 l
+</path>
+<path stroke="0" pen="3">
+630 271 m
+630 291 l
+</path>
+<path stroke="0" pen="3">
+630 291 m
+650 291 l
+</path>
+<path stroke="0" pen="3">
+650 291 m
+650 271 l
+</path>
+<path stroke="0" pen="3">
+650 271 m
+630 271 l
+</path>
+<path stroke="0" pen="3">
+630 271 m
+610 271 l
+</path>
+<path stroke="0" pen="3">
+610 271 m
+590 271 l
+</path>
+<path stroke="0" pen="3">
+590 271 m
+570 271 l
+</path>
+<path stroke="0" pen="3">
+570 271 m
+570 291 l
+</path>
+<path stroke="0" pen="3">
+570 291 m
+590 291 l
+</path>
+<path stroke="0" pen="3">
+590 291 m
+590 271 l
+</path>
+<path stroke="0" pen="3">
+590 271 m
+570 271 l
+</path>
+<path stroke="0" pen="3">
+570 271 m
+550 271 l
+</path>
+<path stroke="0" pen="3">
+550 271 m
+550 291 l
+</path>
+<path stroke="0" pen="3">
+550 291 m
+550 311 l
+</path>
+<path stroke="0" pen="3">
+550 311 m
+570 311 l
+</path>
+<path stroke="0" pen="3">
+570 311 m
+570 291 l
+</path>
+<path stroke="0" pen="3">
+570 291 m
+550 291 l
+</path>
+<path stroke="0" pen="3">
+550 291 m
+550 311 l
+</path>
+<path stroke="0" pen="3">
+550 311 m
+550 331 l
+</path>
+<path stroke="0" pen="3">
+550 331 m
+550 351 l
+</path>
+<path stroke="0" pen="3">
+550 351 m
+550 371 l
+</path>
+<path stroke="0" pen="3">
+550 371 m
+570 371 l
+</path>
+<path stroke="0" pen="3">
+570 371 m
+570 351 l
+</path>
+<path stroke="0" pen="3">
+570 351 m
+550 351 l
+</path>
+<path stroke="0" pen="3">
+550 351 m
+550 371 l
+</path>
+<path stroke="0" pen="3">
+550 371 m
+550 391 l
+</path>
+<path stroke="0" pen="3">
+550 391 m
+570 391 l
+</path>
+<path stroke="0" pen="3">
+570 391 m
+590 391 l
+</path>
+<path stroke="0" pen="3">
+590 391 m
+590 371 l
+</path>
+<path stroke="0" pen="3">
+590 371 m
+570 371 l
+</path>
+<path stroke="0" pen="3">
+570 371 m
+570 391 l
+</path>
+<path stroke="0" pen="3">
+570 391 m
+590 391 l
+</path>
+<path stroke="0" pen="3">
+590 391 m
+610 391 l
+</path>
+<path stroke="0" pen="3">
+610 391 m
+610 371 l
+</path>
+<path stroke="0" pen="3">
+610 371 m
+610 351 l
+</path>
+<path stroke="0" pen="3">
+610 351 m
+590 351 l
+</path>
+<path stroke="0" pen="3">
+590 351 m
+590 371 l
+</path>
+<path stroke="0" pen="3">
+590 371 m
+610 371 l
+</path>
+<path stroke="0" pen="3">
+610 371 m
+610 351 l
+</path>
+<path stroke="0" pen="3">
+610 351 m
+610 331 l
+</path>
+<path stroke="0" pen="3">
+610 331 m
+590 331 l
+</path>
+<path stroke="0" pen="3">
+590 331 m
+570 331 l
+</path>
+<path stroke="0" pen="3">
+570 331 m
+570 351 l
+</path>
+<path stroke="0" pen="3">
+570 351 m
+590 351 l
+</path>
+<path stroke="0" pen="3">
+590 351 m
+590 331 l
+</path>
+<path stroke="0" pen="3">
+590 331 m
+570 331 l
+</path>
+<path stroke="0" pen="3">
+570 331 m
+550 331 l
+</path>
+<path stroke="0" pen="3">
+550 331 m
+550 351 l
+</path>
+<path stroke="0" pen="3">
+550 351 m
+550 371 l
+</path>
+<path stroke="0" pen="3">
+550 371 m
+570 371 l
+</path>
+<path stroke="0" pen="3">
+570 371 m
+570 351 l
+</path>
+<path stroke="0" pen="3">
+570 351 m
+550 351 l
+</path>
+<path stroke="0" pen="3">
+550 351 m
+550 371 l
+</path>
+<path stroke="0" pen="3">
+550 371 m
+550 391 l
+</path>
+<path stroke="0" pen="3">
+550 391 m
+550 411 l
+</path>
+<path stroke="0" pen="3">
+550 411 m
+550 431 l
+</path>
+<path stroke="0" pen="3">
+550 431 m
+570 431 l
+</path>
+<path stroke="0" pen="3">
+570 431 m
+570 411 l
+</path>
+<path stroke="0" pen="3">
+570 411 m
+550 411 l
+</path>
+<path stroke="0" pen="3">
+550 411 m
+550 431 l
+</path>
+<path stroke="0" pen="3">
+550 431 m
+550 451 l
+</path>
+</group>
+</page>
+</ipe>
