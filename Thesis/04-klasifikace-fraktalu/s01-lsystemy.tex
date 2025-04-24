@@ -224,7 +224,7 @@ Dále lze L-systémy rozlišovat podle toho, zda pro každý řetězec $\alpha\i
 
 Pro neznalého čtenáře se může zdát zarážející, že zde pracujeme celou dobu s řetězci znaků a nikoliv s geometrickými útvary. Zde si ukážeme, jak interpretovat výsledné řetězce pomocí tzv. \emph{želví grafiky}\index{želní grafika}.
 
-Představme, že máme virtuální želvu v $\R^2$, jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$, kde $(x,y)$ jsou její pozice a $\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů, s níž budeme v rámci abecedy $V$ pracovat, které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka \ref{table:vyznam-symbolu-zelva}.
+Představme, že máme virtuální želvu v $\R^2$, jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$, kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a $\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů, s níž budeme v rámci abecedy $V$ pracovat, které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka \ref{table:vyznam-symbolu-zelva}.
 \begin{table}[h]
     \centering
     \begin{tabular}{lp{0.8\textwidth}}
@@ -271,7 +271,7 @@ Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro
     \caption{Interpretace vygenerovaných řetězců pro Kochovu křivku.}
     \label{fig:lsystem-kochova-krivka}
 \end{figure}
-Všimněte si, že právě onen rekurzivní "charakter" gramatik, resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce \ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s L-systémy kvůli modelování růstu a vývoje rostlin. Je ovšem nejsíše jasné, že růst rostlin není čistě deterministický proces a hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I takové případy lze modelovat. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a jejich L-systémů se můžete podívat v podsekci \ref{subsec:ukazky-fraktalu-lsystemy}.
+Všimněte si, že právě onen rekurzivní "charakter" gramatik, resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce \ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s L-systémy kvůli modelování růstu a vývoje rostlin. Je ovšem nejsíše jasné, že růst rostlin není čistě deterministický proces a hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický}, kde každému pravidlu přiřadíme pravděpodobnost aplikace v dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a jejich L-systémů se můžete podívat v podsekci \ref{subsec:ukazky-fraktalu-lsystemy}.
 
 V případě modelování rostlin se nám bude hodit zavést ještě dvojici symbolů. Mnohdy se nám stane, že se potřebujeme vrátit na určitou pozici, kde želva již stála. To by bylo možné vyřešit např. zpětným chodem želvy do původní pozice, nicméně velice špatně by se s tímto pracovalo v rámci L-systému. Nejdříve si vysvětlíme pojem tzv. \emph{zásobníku}\index{zásobník}.
 
@@ -307,11 +307,35 @@ Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení f
 Viz obrázek \ref{fig:fraktalni-strom}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{bracketed-ol-1-iter4.pdf}
-    \begin{center}
-        $n=4$
-    \end{center}
-    \caption{Fraktální strom}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.3\textwidth]{bracketed-ol-1-iter1.pdf}
+        \begin{center}
+            $n=1$
+        \end{center}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{bracketed-ol-1-iter2.pdf}
+        \begin{center}
+            $n=2$
+        \end{center}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{bracketed-ol-1-iter3.pdf}
+        \begin{center}
+            $n=3$
+        \end{center}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{bracketed-ol-1-iter4.pdf}
+        \begin{center}
+            $n=4$
+        \end{center}
+    \end{subfigure}
+    \caption{Fraktální strom pro $n=1,2,3,4$}
     \label{fig:fraktalni-strom}
 \end{figure}
 
@@ -319,25 +343,25 @@ Viz obrázek \ref{fig:fraktalni-strom}.
 
 Zde naleznete některé další ukázky fraktálů a jejich L-systémů. Všechny obrázky fraktálních útvarů, které jste zde viděli a ještě uvidíte jsou vygenerovány pomocí přiloženého programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}} k tomuto textu.
 
+Zároveň zde ještě dodejme, že někdy se též můžeme setkat se situací, kdy potřebujeme více než jeden neterminál, tedy kromě $F$ máme ještě jiné znaky. Obecně však platí, že jejich interpretace v želví grafice je stejná jako pro symbol $F$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter0.pdf}\qquad
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter1.pdf}\qquad\\
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter2.pdf}\qquad
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter3.pdf}\qquad\\
-    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter4.pdf}\qquad
+    \includegraphics[width=0.5\textwidth]{koch-curve-1-iter4.pdf}\qquad
     \begin{align*}
         \omega&=F-F-F-F\\
         F&\to FF-F-F-F-FF\\
         \delta&=\pi/2
     \end{align*}
 \end{figure}
-\newpage
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
     \includegraphics[width=0.3\textwidth]{lakes-and-islands-iter0.pdf}\qquad
-    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter1.pdf}\qquad\\
-    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter2.pdf}
+    \includegraphics[width=0.3\textwidth]{lakes-and-islands-iter1.pdf}\qquad\\
+    \includegraphics[width=0.5\textwidth]{lakes-and-islands-iter2.pdf}
     \begin{align*}
         \omega&=F+F+F+F\\
         F&\to F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF\\
@@ -346,11 +370,12 @@ Zde naleznete některé další ukázky fraktálů a jejich L-systémů. Všechn
     \end{align*}
 \end{figure}
 \newpage
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=0.6\textwidth]{bracketed-ol-2-iter4.pdf}
+        \includegraphics[width=0.5\textwidth]{bracketed-ol-2-iter4.pdf}
         \begin{align*}
             \omega&=F\\
             F&\to F[+F]F[-F]F\\
@@ -361,7 +386,7 @@ Zde naleznete některé další ukázky fraktálů a jejich L-systémů. Všechn
     \qquad
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{bracketed-ol-3-iter5.pdf}
+        \includegraphics[width=0.6\textwidth]{bracketed-ol-3-iter5.pdf}
         \begin{align*}
             \omega&=X\\
             X&\to F[+X][-X]FX\\
@@ -370,4 +395,15 @@ Zde naleznete některé další ukázky fraktálů a jejich L-systémů. Všechn
             n&=5
         \end{align*}
     \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fass-curve-1.pdf}
+    \begin{align*}
+        \omega&=L\\
+        L&\to L+R++R-L--LL-R+\\
+        R&\to -L+RR++R+L--L-R\\
+        \delta&=\pi/3\\
+        n&=4
+    \end{align*}
 \end{figure}

@@ -2,7 +2,7 @@
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70212" creator="svgtoipe 20240516">
 <ipestyle>
-<layout paper="326 326" frame="326 326" origin="0 0" crop="no"/>
+<layout paper="26 36" frame="26 36" origin="0 0" crop="no"/>
 <opacity name="10%" value="0.10"/>
 <opacity name="20%" value="0.20"/>
 <opacity name="30%" value="0.30"/>
@@ -15,18 +15,9 @@
 <pathstyle cap="0" join="0" fillrule="wind"/>
 </ipestyle>
 <page>
-<group matrix="1 0 0 -1 -478 523">
+<group matrix="1 0 0 -1 -628 378">
 <path stroke="0 0 0" pen="2">
-491 210 m 791 210 l
-</path>
-<path stroke="0 0 0" pen="2">
-791 210 m 791 510 l
-</path>
-<path stroke="0 0 0" pen="2">
-791 510 m 491 510 l
-</path>
-<path stroke="0 0 0" pen="2">
-491 510 m 491 210 l
+641 365 m 641 355 l
 </path>
 </group>
 </page>

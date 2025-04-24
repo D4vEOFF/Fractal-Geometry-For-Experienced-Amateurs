@@ -1,29 +1,33 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70218" creator="Ipe 7.2.28">
-<info created="D:20250424075121" modified="D:20250424075121"/>
+<ipe version="70212" creator="svgtoipe 20240516">
 <ipestyle>
-<opacity name="10%" value="0.1"/>
-<opacity name="20%" value="0.2"/>
-<opacity name="30%" value="0.3"/>
-<opacity name="40%" value="0.4"/>
-<opacity name="50%" value="0.5"/>
-<opacity name="60%" value="0.6"/>
-<opacity name="70%" value="0.7"/>
-<opacity name="80%" value="0.8"/>
-<opacity name="90%" value="0.9"/>
-<layout paper="66 66" origin="0 0" frame="66 66" crop="no"/>
+<layout paper="327 326" frame="327 326" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
 <pathstyle cap="0" join="0" fillrule="wind"/>
 </ipestyle>
 <page>
-<layer name="alpha"/>
-<view layers="alpha" active="alpha"/>
-<path layer="alpha" stroke="0" pen="2" join="1">
-13 13 m
-53 13 l
-53 53 l
-13 53 l
-h
+<group matrix="1 0 0 -1 -477 523">
+<path stroke="0 0 0" pen="2">
+491 510 m 791 510 l
 </path>
+<path stroke="0 0 0" pen="2">
+791 510 m 791 210 l
+</path>
+<path stroke="0 0 0" pen="2">
+791 210 m 491 210 l
+</path>
+<path stroke="0 0 0" pen="2">
+491 210 m 491 510 l
+</path>
+</group>
 </page>
 </ipe>

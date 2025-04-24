@@ -2,7 +2,7 @@
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70212" creator="svgtoipe 20240516">
 <ipestyle>
-<layout paper="527 527" frame="527 527" origin="0 0" crop="no"/>
+<layout paper="87 149" frame="87 149" origin="0 0" crop="no"/>
 <opacity name="10%" value="0.10"/>
 <opacity name="20%" value="0.20"/>
 <opacity name="30%" value="0.30"/>
@@ -15,222 +15,198 @@
 <pathstyle cap="0" join="0" fillrule="wind"/>
 </ipestyle>
 <page>
-<group matrix="1 0 0 -1 -377 623">
+<group matrix="1 0 0 -1 -597 435">
 <path stroke="0 0 0" pen="2">
-491 210 m 541 210 l
+652 422 m 652 412 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 260 m 591 260 l
+652 412 m 652 402 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 260 m 641 260 l
+652 402 m 644.929 394.929 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 260 m 641 310 l
+644.929 394.929 m 641.102 385.69 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 310 m 591 310 l
+641.102 385.69 m 641.102 375.69 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 310 m 541 310 l
+652 402 m 655.827 392.761 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 310 m 541 260 l
+655.827 392.761 m 655.827 382.761 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 210 m 591 210 l
+655.827 382.761 m 652 373.522 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 210 m 641 210 l
+652 402 m 652 392 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 160 m 691 160 l
+652 392 m 652 382 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 160 m 741 160 l
+652 382 m 644.929 374.929 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 160 m 741 110 l
+644.929 374.929 m 641.102 365.69 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 110 m 691 110 l
+641.102 365.69 m 641.102 355.69 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 110 m 641 110 l
+652 382 m 655.827 372.761 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 110 m 641 160 l
+655.827 372.761 m 655.827 362.761 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 210 m 691 210 l
+655.827 362.761 m 652 353.522 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 210 m 741 210 l
+652 382 m 644.929 374.929 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 210 m 791 210 l
+644.929 374.929 m 637.858 367.858 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 210 m 791 260 l
+637.858 367.858 m 627.858 367.858 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 260 m 741 310 l
+627.858 367.858 m 618.619 364.031 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 310 m 741 360 l
+618.619 364.031 m 611.548 356.96 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 360 m 691 360 l
+637.858 367.858 m 634.031 358.619 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 360 m 691 310 l
+634.031 358.619 m 626.96 351.548 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 310 m 691 260 l
+626.96 351.548 m 617.721 347.721 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 260 m 741 260 l
+637.858 367.858 m 634.031 358.619 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 260 m 791 310 l
+634.031 358.619 m 630.204 349.38 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 310 m 791 360 l
+630.204 349.38 m 620.965 345.553 l
 </path>
 <path stroke="0 0 0" pen="2">
-841 360 m 841 410 l
+620.965 345.553 m 613.894 338.482 l
 </path>
 <path stroke="0 0 0" pen="2">
-841 410 m 841 460 l
+613.894 338.482 m 610.067 329.244 l
 </path>
 <path stroke="0 0 0" pen="2">
-841 460 m 891 460 l
+630.204 349.38 m 630.204 339.38 l
 </path>
 <path stroke="0 0 0" pen="2">
-891 460 m 891 410 l
+630.204 339.38 m 626.377 330.141 l
 </path>
 <path stroke="0 0 0" pen="2">
-891 410 m 891 360 l
+626.377 330.141 m 619.306 323.07 l
 </path>
 <path stroke="0 0 0" pen="2">
-891 360 m 841 360 l
+630.204 349.38 m 630.204 339.38 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 360 m 791 410 l
+630.204 339.38 m 630.204 329.38 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 410 m 791 460 l
+630.204 329.38 m 623.133 322.309 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 460 m 791 510 l
+623.133 322.309 m 619.306 313.07 l
 </path>
 <path stroke="0 0 0" pen="2">
-791 510 m 741 510 l
+619.306 313.07 m 619.306 303.07 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 460 m 691 460 l
+630.204 329.38 m 634.031 320.141 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 460 m 641 460 l
+634.031 320.141 m 634.031 310.141 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 460 m 641 410 l
+634.031 310.141 m 630.204 300.903 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 410 m 691 410 l
+652 382 m 655.827 372.761 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 410 m 741 410 l
+655.827 372.761 m 659.654 363.522 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 410 m 741 460 l
+659.654 363.522 m 655.827 354.284 l
 </path>
 <path stroke="0 0 0" pen="2">
-741 510 m 691 510 l
+655.827 354.284 m 655.827 344.284 l
 </path>
 <path stroke="0 0 0" pen="2">
-691 510 m 641 510 l
+655.827 344.284 m 659.654 335.045 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 560 m 591 560 l
+659.654 363.522 m 666.725 356.451 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 560 m 541 560 l
+666.725 356.451 m 670.552 347.213 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 560 m 541 610 l
+670.552 347.213 m 670.552 337.213 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 610 m 591 610 l
+659.654 363.522 m 659.654 353.522 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 610 m 641 610 l
+659.654 353.522 m 659.654 343.522 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 610 m 641 560 l
+659.654 343.522 m 652.583 336.451 l
 </path>
 <path stroke="0 0 0" pen="2">
-641 510 m 591 510 l
+652.583 336.451 m 648.756 327.213 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 510 m 541 510 l
+648.756 327.213 m 648.756 317.213 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 510 m 491 510 l
+659.654 343.522 m 663.481 334.284 l
 </path>
 <path stroke="0 0 0" pen="2">
-491 510 m 491 460 l
+663.481 334.284 m 663.481 324.284 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 460 m 541 410 l
+663.481 324.284 m 659.654 315.045 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 410 m 541 360 l
+659.654 343.522 m 655.827 334.284 l
 </path>
 <path stroke="0 0 0" pen="2">
-541 360 m 591 360 l
+655.827 334.284 m 652 325.045 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 360 m 591 410 l
+652 325.045 m 642.761 321.218 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 410 m 591 460 l
+642.761 321.218 m 635.69 314.147 l
 </path>
 <path stroke="0 0 0" pen="2">
-591 460 m 541 460 l
+635.69 314.147 m 631.863 304.908 l
 </path>
 <path stroke="0 0 0" pen="2">
-491 460 m 491 410 l
+652 325.045 m 652 315.045 l
 </path>
 <path stroke="0 0 0" pen="2">
-491 410 m 491 360 l
+652 315.045 m 648.173 305.806 l
 </path>
 <path stroke="0 0 0" pen="2">
-441 360 m 441 310 l
-</path>
-<path stroke="0 0 0" pen="2">
-441 310 m 441 260 l
-</path>
-<path stroke="0 0 0" pen="2">
-441 260 m 391 260 l
-</path>
-<path stroke="0 0 0" pen="2">
-391 260 m 391 310 l
-</path>
-<path stroke="0 0 0" pen="2">
-391 310 m 391 360 l
-</path>
-<path stroke="0 0 0" pen="2">
-391 360 m 441 360 l
-</path>
-<path stroke="0 0 0" pen="2">
-491 360 m 491 310 l
-</path>
-<path stroke="0 0 0" pen="2">
-491 310 m 491 260 l
-</path>
-<path stroke="0 0 0" pen="2">
-491 260 m 491 210 l
+648.173 305.806 m 641.102 298.735 l
 </path>
 </group>
 </page>
