@@ -1,0 +1,1896 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="191 514" frame="191 514" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -545 617">
+<path stroke="0 0 0" pen="3">
+652 603 m 652 597 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 597 m 654.602 591.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 597 m 652 591 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 591 m 649.398 585.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 591 m 652 585 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 585 m 654.602 579.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 579.594 m 659.291 575.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 579.594 m 657.204 574.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 574.187 m 657.204 568.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 574.187 m 659.806 568.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 585 m 652 579 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 579 m 654.602 573.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 579 m 652 573 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 573 m 649.398 567.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 573 m 652 567 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 567 m 649.398 561.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 561.594 m 649.398 555.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 561.594 m 646.796 556.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 556.187 m 642.107 552.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 556.187 m 644.194 550.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 567 m 652 561 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 561 m 654.602 555.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 561 m 652 555 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 555 m 649.398 549.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 555 m 652 549 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 549 m 654.602 543.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 543.594 m 659.291 539.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 543.594 m 657.204 538.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 538.187 m 657.204 532.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 538.187 m 659.806 532.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 532.781 m 664.495 529.037 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 529.037 m 670.344 527.698 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 529.037 m 669.184 525.294 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 525.294 m 671.786 519.888 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 525.294 m 673.873 521.551 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 532.781 m 662.408 527.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 527.374 m 667.097 523.631 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 527.374 m 665.01 521.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 521.968 m 665.01 515.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 521.968 m 667.612 516.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 516.561 m 667.612 510.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 510.561 m 670.214 505.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 510.561 m 667.612 504.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 504.561 m 665.01 499.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 504.561 m 667.612 498.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 516.561 m 670.214 511.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 511.155 m 674.903 507.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 511.155 m 672.816 505.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 505.748 m 672.816 499.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 505.748 m 675.418 500.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 549 m 652 543 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 543 m 654.602 537.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 543 m 652 537 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 537 m 649.398 531.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 537 m 652 531 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 531 m 654.602 525.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 525.594 m 659.291 521.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 525.594 m 657.204 520.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 520.187 m 657.204 514.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 520.187 m 659.806 514.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 531 m 652 525 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 525 m 654.602 519.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 525 m 652 519 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 519 m 649.398 513.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 519 m 652 513 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 513 m 649.398 507.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 507.594 m 649.398 501.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 507.594 m 646.796 502.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 502.187 m 642.107 498.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 502.187 m 644.194 496.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 513 m 652 507 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 507 m 654.602 501.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 507 m 652 501 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 501 m 649.398 495.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 501 m 652 495 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 495 m 649.398 489.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 489.594 m 649.398 483.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 489.594 m 646.796 484.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 484.187 m 642.107 480.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 484.187 m 644.194 478.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 478.781 m 644.194 472.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 472.781 m 646.796 467.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 472.781 m 644.194 466.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 466.781 m 641.592 461.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 466.781 m 644.194 460.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 478.781 m 641.592 473.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 473.374 m 641.592 467.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 473.374 m 638.99 467.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 467.968 m 634.301 464.224 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 467.968 m 636.388 462.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 462.561 m 631.699 458.818 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 458.818 m 629.097 453.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 458.818 m 627.01 455.075 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 455.075 m 621.161 453.735 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 455.075 m 622.321 451.331 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 462.561 m 633.786 457.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 457.155 m 633.786 451.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 457.155 m 631.184 451.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 451.748 m 626.495 448.005 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 451.748 m 628.582 446.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 495 m 652 489 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 489 m 654.602 483.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 489 m 652 483 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 483 m 649.398 477.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 483 m 652 477 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 477 m 654.602 471.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 471.594 m 659.291 467.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 471.594 m 657.204 466.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 466.187 m 657.204 460.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 466.187 m 659.806 460.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 477 m 652 471 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 471 m 654.602 465.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 471 m 652 465 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 465 m 649.398 459.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 465 m 652 459 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 459 m 649.398 453.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 453.594 m 649.398 447.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 453.594 m 646.796 448.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 448.187 m 642.107 444.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 448.187 m 644.194 442.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 459 m 652 453 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 453 m 654.602 447.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 453 m 652 447 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 447 m 649.398 441.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 447 m 652 441 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 441 m 654.602 435.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 435.594 m 659.291 431.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 435.594 m 657.204 430.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 430.187 m 657.204 424.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 430.187 m 659.806 424.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 424.781 m 664.495 421.037 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 421.037 m 670.344 419.698 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 421.037 m 669.184 417.294 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 417.294 m 671.786 411.888 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 417.294 m 673.873 413.551 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 424.781 m 662.408 419.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 419.374 m 667.097 415.631 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 419.374 m 665.01 413.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 413.968 m 665.01 407.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 413.968 m 667.612 408.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 408.561 m 667.612 402.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 402.561 m 670.214 397.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 402.561 m 667.612 396.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 396.561 m 665.01 391.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 396.561 m 667.612 390.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 408.561 m 670.214 403.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 403.155 m 674.903 399.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 403.155 m 672.816 397.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 397.748 m 672.816 391.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 397.748 m 675.418 392.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+675.418 392.342 m 680.107 388.599 l
+</path>
+<path stroke="0 0 0" pen="3">
+680.107 388.599 m 685.955 387.259 l
+</path>
+<path stroke="0 0 0" pen="3">
+680.107 388.599 m 684.796 384.855 l
+</path>
+<path stroke="0 0 0" pen="3">
+684.796 384.855 m 687.398 379.449 l
+</path>
+<path stroke="0 0 0" pen="3">
+684.796 384.855 m 689.485 381.112 l
+</path>
+<path stroke="0 0 0" pen="3">
+689.485 381.112 m 695.334 379.773 l
+</path>
+<path stroke="0 0 0" pen="3">
+695.334 379.773 m 701.184 381.102 l
+</path>
+<path stroke="0 0 0" pen="3">
+695.334 379.773 m 701.182 378.433 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.182 378.433 m 705.871 374.69 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.182 378.433 m 707.031 377.094 l
+</path>
+<path stroke="0 0 0" pen="3">
+689.485 381.112 m 694.174 377.369 l
+</path>
+<path stroke="0 0 0" pen="3">
+694.174 377.369 m 700.023 376.029 l
+</path>
+<path stroke="0 0 0" pen="3">
+694.174 377.369 m 698.863 373.625 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.863 373.625 m 701.465 368.219 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.863 373.625 m 703.552 369.882 l
+</path>
+<path stroke="0 0 0" pen="3">
+703.552 369.882 m 706.154 364.476 l
+</path>
+<path stroke="0 0 0" pen="3">
+706.154 364.476 m 710.843 360.732 l
+</path>
+<path stroke="0 0 0" pen="3">
+706.154 364.476 m 708.756 359.069 l
+</path>
+<path stroke="0 0 0" pen="3">
+708.756 359.069 m 708.756 353.069 l
+</path>
+<path stroke="0 0 0" pen="3">
+708.756 359.069 m 711.358 353.663 l
+</path>
+<path stroke="0 0 0" pen="3">
+703.552 369.882 m 708.241 366.139 l
+</path>
+<path stroke="0 0 0" pen="3">
+708.241 366.139 m 714.09 364.799 l
+</path>
+<path stroke="0 0 0" pen="3">
+708.241 366.139 m 712.931 362.396 l
+</path>
+<path stroke="0 0 0" pen="3">
+712.931 362.396 m 715.533 356.989 l
+</path>
+<path stroke="0 0 0" pen="3">
+712.931 362.396 m 717.62 358.652 l
+</path>
+<path stroke="0 0 0" pen="3">
+675.418 392.342 m 678.02 386.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+678.02 386.935 m 682.709 383.192 l
+</path>
+<path stroke="0 0 0" pen="3">
+678.02 386.935 m 680.621 381.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+680.621 381.529 m 680.621 375.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+680.621 381.529 m 683.223 376.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+683.223 376.122 m 687.913 372.379 l
+</path>
+<path stroke="0 0 0" pen="3">
+687.913 372.379 m 693.761 371.04 l
+</path>
+<path stroke="0 0 0" pen="3">
+687.913 372.379 m 692.602 368.636 l
+</path>
+<path stroke="0 0 0" pen="3">
+692.602 368.636 m 695.204 363.229 l
+</path>
+<path stroke="0 0 0" pen="3">
+692.602 368.636 m 697.291 364.893 l
+</path>
+<path stroke="0 0 0" pen="3">
+683.223 376.122 m 685.825 370.716 l
+</path>
+<path stroke="0 0 0" pen="3">
+685.825 370.716 m 690.515 366.973 l
+</path>
+<path stroke="0 0 0" pen="3">
+685.825 370.716 m 688.427 365.31 l
+</path>
+<path stroke="0 0 0" pen="3">
+688.427 365.31 m 688.427 359.31 l
+</path>
+<path stroke="0 0 0" pen="3">
+688.427 365.31 m 691.029 359.903 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 359.903 m 691.029 353.903 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 353.903 m 693.631 348.497 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 353.903 m 691.029 347.903 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 347.903 m 688.427 342.497 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 347.903 m 691.029 341.903 l
+</path>
+<path stroke="0 0 0" pen="3">
+691.029 359.903 m 693.631 354.497 l
+</path>
+<path stroke="0 0 0" pen="3">
+693.631 354.497 m 698.32 350.753 l
+</path>
+<path stroke="0 0 0" pen="3">
+693.631 354.497 m 696.233 349.09 l
+</path>
+<path stroke="0 0 0" pen="3">
+696.233 349.09 m 696.233 343.09 l
+</path>
+<path stroke="0 0 0" pen="3">
+696.233 349.09 m 698.835 343.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 343.684 m 698.835 337.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 337.684 m 701.437 332.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 337.684 m 698.835 331.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 331.684 m 696.233 326.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 331.684 m 698.835 325.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 325.684 m 701.437 320.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.437 320.277 m 706.126 316.534 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.437 320.277 m 704.039 314.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+704.039 314.871 m 704.039 308.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+704.039 314.871 m 706.641 309.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 325.684 m 698.835 319.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 319.684 m 701.437 314.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 319.684 m 698.835 313.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 313.684 m 696.233 308.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 313.684 m 698.835 307.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 307.684 m 696.233 302.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+696.233 302.277 m 696.233 296.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+696.233 302.277 m 693.631 296.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+693.631 296.871 m 688.942 293.127 l
+</path>
+<path stroke="0 0 0" pen="3">
+693.631 296.871 m 691.029 291.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 307.684 m 698.835 301.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 301.684 m 701.437 296.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 301.684 m 698.835 295.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 295.684 m 696.233 290.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 295.684 m 698.835 289.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+698.835 343.684 m 701.437 338.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.437 338.277 m 706.126 334.534 l
+</path>
+<path stroke="0 0 0" pen="3">
+701.437 338.277 m 704.039 332.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+704.039 332.871 m 704.039 326.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+704.039 332.871 m 706.641 327.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+706.641 327.464 m 711.33 323.721 l
+</path>
+<path stroke="0 0 0" pen="3">
+711.33 323.721 m 717.179 322.382 l
+</path>
+<path stroke="0 0 0" pen="3">
+711.33 323.721 m 716.019 319.978 l
+</path>
+<path stroke="0 0 0" pen="3">
+716.019 319.978 m 718.621 314.571 l
+</path>
+<path stroke="0 0 0" pen="3">
+716.019 319.978 m 720.708 316.234 l
+</path>
+<path stroke="0 0 0" pen="3">
+706.641 327.464 m 709.243 322.058 l
+</path>
+<path stroke="0 0 0" pen="3">
+709.243 322.058 m 713.932 318.315 l
+</path>
+<path stroke="0 0 0" pen="3">
+709.243 322.058 m 711.845 316.651 l
+</path>
+<path stroke="0 0 0" pen="3">
+711.845 316.651 m 711.845 310.651 l
+</path>
+<path stroke="0 0 0" pen="3">
+711.845 316.651 m 714.447 311.245 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 311.245 m 714.447 305.245 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 305.245 m 717.049 299.838 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 305.245 m 714.447 299.245 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 299.245 m 711.845 293.838 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 299.245 m 714.447 293.245 l
+</path>
+<path stroke="0 0 0" pen="3">
+714.447 311.245 m 717.049 305.838 l
+</path>
+<path stroke="0 0 0" pen="3">
+717.049 305.838 m 721.738 302.095 l
+</path>
+<path stroke="0 0 0" pen="3">
+717.049 305.838 m 719.651 300.432 l
+</path>
+<path stroke="0 0 0" pen="3">
+719.651 300.432 m 719.651 294.432 l
+</path>
+<path stroke="0 0 0" pen="3">
+719.651 300.432 m 722.253 295.026 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 441 m 652 435 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 435 m 654.602 429.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 435 m 652 429 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 429 m 649.398 423.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 429 m 652 423 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 423 m 654.602 417.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 417.594 m 659.291 413.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 417.594 m 657.204 412.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 412.187 m 657.204 406.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 412.187 m 659.806 406.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 423 m 652 417 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 417 m 654.602 411.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 417 m 652 411 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 411 m 649.398 405.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 411 m 652 405 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 405 m 649.398 399.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 399.594 m 649.398 393.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 399.594 m 646.796 394.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 394.187 m 642.107 390.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 394.187 m 644.194 388.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 405 m 652 399 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 399 m 654.602 393.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 399 m 652 393 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 393 m 649.398 387.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 393 m 652 387 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 387 m 654.602 381.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 381.594 m 659.291 377.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 381.594 m 657.204 376.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 376.187 m 657.204 370.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 376.187 m 659.806 370.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 370.781 m 664.495 367.037 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 367.037 m 670.344 365.698 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 367.037 m 669.184 363.294 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 363.294 m 671.786 357.888 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 363.294 m 673.873 359.551 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 370.781 m 662.408 365.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 365.374 m 667.097 361.631 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 365.374 m 665.01 359.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 359.968 m 665.01 353.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 359.968 m 667.612 354.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 354.561 m 667.612 348.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 348.561 m 670.214 343.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 348.561 m 667.612 342.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 342.561 m 665.01 337.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 342.561 m 667.612 336.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 354.561 m 670.214 349.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 349.155 m 674.903 345.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 349.155 m 672.816 343.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 343.748 m 672.816 337.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 343.748 m 675.418 338.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 387 m 652 381 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 381 m 654.602 375.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 381 m 652 375 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 375 m 649.398 369.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 375 m 652 369 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 369 m 654.602 363.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 363.594 m 659.291 359.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 363.594 m 657.204 358.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 358.187 m 657.204 352.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 358.187 m 659.806 352.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 369 m 652 363 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 363 m 654.602 357.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 363 m 652 357 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 357 m 649.398 351.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 357 m 652 351 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 351 m 649.398 345.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 345.594 m 649.398 339.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 345.594 m 646.796 340.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 340.187 m 642.107 336.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 340.187 m 644.194 334.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 351 m 652 345 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 345 m 654.602 339.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 345 m 652 339 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 339 m 649.398 333.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 339 m 652 333 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 333 m 649.398 327.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 327.594 m 649.398 321.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 327.594 m 646.796 322.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 322.187 m 642.107 318.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 322.187 m 644.194 316.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 316.781 m 644.194 310.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 310.781 m 646.796 305.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 310.781 m 644.194 304.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 304.781 m 641.592 299.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 304.781 m 644.194 298.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 316.781 m 641.592 311.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 311.374 m 641.592 305.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 311.374 m 638.99 305.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 305.968 m 634.301 302.224 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 305.968 m 636.388 300.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 300.561 m 631.699 296.818 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 296.818 m 629.097 291.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 296.818 m 627.01 293.075 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 293.075 m 621.161 291.735 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 293.075 m 622.321 289.331 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 300.561 m 633.786 295.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 295.155 m 633.786 289.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 295.155 m 631.184 289.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 289.748 m 626.495 286.005 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 289.748 m 628.582 284.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 333 m 652 327 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 327 m 654.602 321.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 327 m 652 321 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 321 m 649.398 315.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 321 m 652 315 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 315 m 654.602 309.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 309.594 m 659.291 305.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 309.594 m 657.204 304.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 304.187 m 657.204 298.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 304.187 m 659.806 298.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 315 m 652 309 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 309 m 654.602 303.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 309 m 652 303 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 303 m 649.398 297.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 303 m 652 297 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 297 m 649.398 291.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 291.594 m 649.398 285.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 291.594 m 646.796 286.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 286.187 m 642.107 282.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 286.187 m 644.194 280.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 297 m 652 291 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 291 m 654.602 285.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 291 m 652 285 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 285 m 649.398 279.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 285 m 652 279 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 279 m 649.398 273.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 273.594 m 649.398 267.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 273.594 m 646.796 268.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 268.187 m 642.107 264.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 268.187 m 644.194 262.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 262.781 m 644.194 256.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 256.781 m 646.796 251.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 256.781 m 644.194 250.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 250.781 m 641.592 245.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 250.781 m 644.194 244.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 262.781 m 641.592 257.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 257.374 m 641.592 251.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 257.374 m 638.99 251.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 251.968 m 634.301 248.224 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 251.968 m 636.388 246.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 246.561 m 631.699 242.818 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 242.818 m 629.097 237.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 242.818 m 627.01 239.075 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 239.075 m 621.161 237.735 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 239.075 m 622.321 235.331 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 246.561 m 633.786 241.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 241.155 m 633.786 235.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 241.155 m 631.184 235.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 235.748 m 626.495 232.005 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 235.748 m 628.582 230.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 230.342 m 628.582 224.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 224.342 m 631.184 218.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 224.342 m 628.582 218.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 218.342 m 625.98 212.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 218.342 m 628.582 212.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 212.342 m 631.184 206.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 206.935 m 635.873 203.192 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 206.935 m 633.786 201.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 201.529 m 633.786 195.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 201.529 m 636.388 196.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 212.342 m 628.582 206.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 206.342 m 631.184 200.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 206.342 m 628.582 200.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 200.342 m 625.98 194.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 200.342 m 628.582 194.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 194.342 m 625.98 188.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+625.98 188.935 m 625.98 182.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+625.98 188.935 m 623.379 183.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+623.379 183.529 m 618.689 179.786 l
+</path>
+<path stroke="0 0 0" pen="3">
+623.379 183.529 m 620.777 178.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 194.342 m 628.582 188.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 188.342 m 631.184 182.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 188.342 m 628.582 182.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 182.342 m 625.98 176.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 182.342 m 628.582 176.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+628.582 230.342 m 625.98 224.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+625.98 224.935 m 625.98 218.935 l
+</path>
+<path stroke="0 0 0" pen="3">
+625.98 224.935 m 623.379 219.529 l
+</path>
+<path stroke="0 0 0" pen="3">
+623.379 219.529 m 618.689 215.786 l
+</path>
+<path stroke="0 0 0" pen="3">
+623.379 219.529 m 620.777 214.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 214.122 m 620.777 208.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 208.122 m 623.379 202.716 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 208.122 m 620.777 202.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 202.122 m 618.175 196.716 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 202.122 m 620.777 196.122 l
+</path>
+<path stroke="0 0 0" pen="3">
+620.777 214.122 m 618.175 208.716 l
+</path>
+<path stroke="0 0 0" pen="3">
+618.175 208.716 m 618.175 202.716 l
+</path>
+<path stroke="0 0 0" pen="3">
+618.175 208.716 m 615.573 203.31 l
+</path>
+<path stroke="0 0 0" pen="3">
+615.573 203.31 m 610.884 199.566 l
+</path>
+<path stroke="0 0 0" pen="3">
+615.573 203.31 m 612.971 197.903 l
+</path>
+<path stroke="0 0 0" pen="3">
+612.971 197.903 m 608.282 194.16 l
+</path>
+<path stroke="0 0 0" pen="3">
+608.282 194.16 m 605.68 188.753 l
+</path>
+<path stroke="0 0 0" pen="3">
+608.282 194.16 m 603.592 190.417 l
+</path>
+<path stroke="0 0 0" pen="3">
+603.592 190.417 m 597.744 189.077 l
+</path>
+<path stroke="0 0 0" pen="3">
+603.592 190.417 m 598.903 186.673 l
+</path>
+<path stroke="0 0 0" pen="3">
+612.971 197.903 m 610.369 192.497 l
+</path>
+<path stroke="0 0 0" pen="3">
+610.369 192.497 m 610.369 186.497 l
+</path>
+<path stroke="0 0 0" pen="3">
+610.369 192.497 m 607.767 187.09 l
+</path>
+<path stroke="0 0 0" pen="3">
+607.767 187.09 m 603.078 183.347 l
+</path>
+<path stroke="0 0 0" pen="3">
+607.767 187.09 m 605.165 181.684 l
+</path>
+<path stroke="0 0 0" pen="3">
+605.165 181.684 m 600.476 177.94 l
+</path>
+<path stroke="0 0 0" pen="3">
+600.476 177.94 m 597.874 172.534 l
+</path>
+<path stroke="0 0 0" pen="3">
+600.476 177.94 m 595.787 174.197 l
+</path>
+<path stroke="0 0 0" pen="3">
+595.787 174.197 m 589.938 172.858 l
+</path>
+<path stroke="0 0 0" pen="3">
+595.787 174.197 m 591.097 170.454 l
+</path>
+<path stroke="0 0 0" pen="3">
+591.097 170.454 m 588.495 165.047 l
+</path>
+<path stroke="0 0 0" pen="3">
+588.495 165.047 m 588.495 159.047 l
+</path>
+<path stroke="0 0 0" pen="3">
+588.495 165.047 m 585.894 159.641 l
+</path>
+<path stroke="0 0 0" pen="3">
+585.894 159.641 m 581.204 155.898 l
+</path>
+<path stroke="0 0 0" pen="3">
+585.894 159.641 m 583.292 154.234 l
+</path>
+<path stroke="0 0 0" pen="3">
+591.097 170.454 m 586.408 166.711 l
+</path>
+<path stroke="0 0 0" pen="3">
+586.408 166.711 m 583.806 161.304 l
+</path>
+<path stroke="0 0 0" pen="3">
+586.408 166.711 m 581.719 162.967 l
+</path>
+<path stroke="0 0 0" pen="3">
+581.719 162.967 m 575.871 161.628 l
+</path>
+<path stroke="0 0 0" pen="3">
+581.719 162.967 m 577.03 159.224 l
+</path>
+<path stroke="0 0 0" pen="3">
+577.03 159.224 m 571.182 157.885 l
+</path>
+<path stroke="0 0 0" pen="3">
+571.182 157.885 m 566.492 154.141 l
+</path>
+<path stroke="0 0 0" pen="3">
+571.182 157.885 m 565.333 156.545 l
+</path>
+<path stroke="0 0 0" pen="3">
+565.333 156.545 m 559.482 157.874 l
+</path>
+<path stroke="0 0 0" pen="3">
+565.333 156.545 m 559.484 155.206 l
+</path>
+<path stroke="0 0 0" pen="3">
+577.03 159.224 m 572.341 155.481 l
+</path>
+<path stroke="0 0 0" pen="3">
+572.341 155.481 m 569.739 150.074 l
+</path>
+<path stroke="0 0 0" pen="3">
+572.341 155.481 m 567.652 151.737 l
+</path>
+<path stroke="0 0 0" pen="3">
+567.652 151.737 m 561.803 150.398 l
+</path>
+<path stroke="0 0 0" pen="3">
+567.652 151.737 m 562.963 147.994 l
+</path>
+<path stroke="0 0 0" pen="3">
+605.165 181.684 m 602.563 176.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+602.563 176.277 m 602.563 170.277 l
+</path>
+<path stroke="0 0 0" pen="3">
+602.563 176.277 m 599.961 170.871 l
+</path>
+<path stroke="0 0 0" pen="3">
+599.961 170.871 m 595.272 167.127 l
+</path>
+<path stroke="0 0 0" pen="3">
+599.961 170.871 m 597.359 165.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 165.464 m 597.359 159.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 159.464 m 599.961 154.058 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 159.464 m 597.359 153.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 153.464 m 594.757 148.058 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 153.464 m 597.359 147.464 l
+</path>
+<path stroke="0 0 0" pen="3">
+597.359 165.464 m 594.757 160.058 l
+</path>
+<path stroke="0 0 0" pen="3">
+594.757 160.058 m 594.757 154.058 l
+</path>
+<path stroke="0 0 0" pen="3">
+594.757 160.058 m 592.155 154.651 l
+</path>
+<path stroke="0 0 0" pen="3">
+592.155 154.651 m 587.466 150.908 l
+</path>
+<path stroke="0 0 0" pen="3">
+592.155 154.651 m 589.553 149.245 l
+</path>
+<path stroke="0 0 0" pen="3">
+589.553 149.245 m 584.864 145.502 l
+</path>
+<path stroke="0 0 0" pen="3">
+584.864 145.502 m 582.262 140.095 l
+</path>
+<path stroke="0 0 0" pen="3">
+584.864 145.502 m 580.175 141.758 l
+</path>
+<path stroke="0 0 0" pen="3">
+580.175 141.758 m 574.326 140.419 l
+</path>
+<path stroke="0 0 0" pen="3">
+580.175 141.758 m 575.486 138.015 l
+</path>
+<path stroke="0 0 0" pen="3">
+589.553 149.245 m 586.951 143.838 l
+</path>
+<path stroke="0 0 0" pen="3">
+586.951 143.838 m 586.951 137.838 l
+</path>
+<path stroke="0 0 0" pen="3">
+586.951 143.838 m 584.349 138.432 l
+</path>
+<path stroke="0 0 0" pen="3">
+584.349 138.432 m 579.66 134.689 l
+</path>
+<path stroke="0 0 0" pen="3">
+584.349 138.432 m 581.747 133.026 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 279 m 652 273 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 273 m 654.602 267.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 273 m 652 267 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 267 m 649.398 261.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 267 m 652 261 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 261 m 654.602 255.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 255.594 m 659.291 251.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 255.594 m 657.204 250.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 250.187 m 657.204 244.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 250.187 m 659.806 244.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 261 m 652 255 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 255 m 654.602 249.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 255 m 652 249 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 249 m 649.398 243.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 249 m 652 243 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 243 m 649.398 237.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 237.594 m 649.398 231.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 237.594 m 646.796 232.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 232.187 m 642.107 228.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 232.187 m 644.194 226.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 243 m 652 237 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 237 m 654.602 231.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 237 m 652 231 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 231 m 649.398 225.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 231 m 652 225 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 225 m 654.602 219.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 219.594 m 659.291 215.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 219.594 m 657.204 214.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 214.187 m 657.204 208.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 214.187 m 659.806 208.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 208.781 m 664.495 205.037 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 205.037 m 670.344 203.698 l
+</path>
+<path stroke="0 0 0" pen="3">
+664.495 205.037 m 669.184 201.294 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 201.294 m 671.786 195.888 l
+</path>
+<path stroke="0 0 0" pen="3">
+669.184 201.294 m 673.873 197.551 l
+</path>
+<path stroke="0 0 0" pen="3">
+659.806 208.781 m 662.408 203.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 203.374 m 667.097 199.631 l
+</path>
+<path stroke="0 0 0" pen="3">
+662.408 203.374 m 665.01 197.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 197.968 m 665.01 191.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+665.01 197.968 m 667.612 192.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 192.561 m 667.612 186.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 186.561 m 670.214 181.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 186.561 m 667.612 180.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 180.561 m 665.01 175.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 180.561 m 667.612 174.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+667.612 192.561 m 670.214 187.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 187.155 m 674.903 183.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+670.214 187.155 m 672.816 181.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 181.748 m 672.816 175.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+672.816 181.748 m 675.418 176.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 225 m 652 219 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 219 m 654.602 213.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 219 m 652 213 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 213 m 649.398 207.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 213 m 652 207 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 207 m 654.602 201.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 201.594 m 659.291 197.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 201.594 m 657.204 196.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 196.187 m 657.204 190.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 196.187 m 659.806 190.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 207 m 652 201 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 201 m 654.602 195.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 201 m 652 195 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 195 m 649.398 189.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 195 m 652 189 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 189 m 649.398 183.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 183.594 m 649.398 177.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 183.594 m 646.796 178.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 178.187 m 642.107 174.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 178.187 m 644.194 172.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 189 m 652 183 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 183 m 654.602 177.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 183 m 652 177 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 177 m 649.398 171.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 177 m 652 171 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 171 m 649.398 165.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 165.594 m 649.398 159.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 165.594 m 646.796 160.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 160.187 m 642.107 156.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 160.187 m 644.194 154.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 154.781 m 644.194 148.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 148.781 m 646.796 143.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 148.781 m 644.194 142.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 142.781 m 641.592 137.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 142.781 m 644.194 136.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+644.194 154.781 m 641.592 149.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 149.374 m 641.592 143.374 l
+</path>
+<path stroke="0 0 0" pen="3">
+641.592 149.374 m 638.99 143.968 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 143.968 m 634.301 140.224 l
+</path>
+<path stroke="0 0 0" pen="3">
+638.99 143.968 m 636.388 138.561 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 138.561 m 631.699 134.818 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 134.818 m 629.097 129.411 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.699 134.818 m 627.01 131.075 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 131.075 m 621.161 129.735 l
+</path>
+<path stroke="0 0 0" pen="3">
+627.01 131.075 m 622.321 127.331 l
+</path>
+<path stroke="0 0 0" pen="3">
+636.388 138.561 m 633.786 133.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 133.155 m 633.786 127.155 l
+</path>
+<path stroke="0 0 0" pen="3">
+633.786 133.155 m 631.184 127.748 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 127.748 m 626.495 124.005 l
+</path>
+<path stroke="0 0 0" pen="3">
+631.184 127.748 m 628.582 122.342 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 171 m 652 165 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 165 m 654.602 159.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 165 m 652 159 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 159 m 649.398 153.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 159 m 652 153 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 153 m 654.602 147.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 147.594 m 659.291 143.85 l
+</path>
+<path stroke="0 0 0" pen="3">
+654.602 147.594 m 657.204 142.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 142.187 m 657.204 136.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+657.204 142.187 m 659.806 136.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 153 m 652 147 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 147 m 654.602 141.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 147 m 652 141 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 141 m 649.398 135.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 141 m 652 135 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 135 m 649.398 129.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 129.594 m 649.398 123.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+649.398 129.594 m 646.796 124.187 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 124.187 m 642.107 120.444 l
+</path>
+<path stroke="0 0 0" pen="3">
+646.796 124.187 m 644.194 118.781 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 135 m 652 129 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 129 m 654.602 123.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 129 m 652 123 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 123 m 649.398 117.594 l
+</path>
+<path stroke="0 0 0" pen="3">
+652 123 m 652 117 l
+</path>
+</group>
+</page>
+</ipe>

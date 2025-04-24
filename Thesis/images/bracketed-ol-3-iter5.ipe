@@ -1,0 +1,2682 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70218" creator="Ipe 7.2.28">
+<info created="D:20250424085914" modified="D:20250424085916"/>
+<ipestyle>
+<opacity name="10%" value="0.1"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<layout paper="330 656" origin="0 0" frame="330 656" crop="no"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 675 m
+641 665 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 665 m
+641 655 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 655 m
+641 645 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 645 m
+641 635 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 635 m
+641 625 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 625 m
+641 615 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 615 m
+641 605 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 605 m
+641 595 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 595 m
+641 585 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 585 m
+641 575 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 575 m
+641 565 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 565 m
+641 555 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 555 m
+641 545 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 545 m
+641 535 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 535 m
+641 525 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 525 m
+641 515 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 515 m
+645.337 505.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 505.989 m
+649.673 496.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 496.978 m
+654.01 487.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 487.968 m
+658.346 478.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 478.957 m
+662.683 469.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 469.946 m
+667.02 460.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 460.935 m
+671.356 451.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 451.925 m
+675.693 442.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 442.914 m
+683.508 436.675 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+683.508 436.675 m
+691.323 430.436 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+691.323 430.436 m
+699.138 424.197 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+699.138 424.197 m
+706.954 417.959 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+706.954 417.959 m
+716.701 415.726 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+716.701 415.726 m
+726.449 413.494 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+726.449 413.494 m
+736.2 415.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.2 415.709 m
+744.026 421.934 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.2 415.709 m
+745.948 413.477 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.2 415.709 m
+745.952 417.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+745.952 417.925 m
+755.703 420.14 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+726.449 413.494 m
+734.264 407.255 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+734.264 407.255 m
+744.012 405.022 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+734.264 407.255 m
+738.601 398.244 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+734.264 407.255 m
+742.079 401.016 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+742.079 401.016 m
+749.894 394.777 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+726.449 413.494 m
+736.196 411.261 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.196 411.261 m
+745.944 409.029 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+745.944 409.029 m
+755.692 406.796 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+755.692 406.796 m
+765.443 409.012 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+755.692 406.796 m
+763.507 400.557 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+755.692 406.796 m
+765.439 404.564 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+765.439 404.564 m
+775.187 402.331 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+706.954 417.959 m
+711.29 408.948 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+711.29 408.948 m
+715.627 399.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 399.937 m
+723.442 393.698 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.442 393.698 m
+733.19 391.466 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.442 393.698 m
+727.779 384.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.442 393.698 m
+731.257 387.46 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+731.257 387.46 m
+739.072 381.221 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 399.937 m
+715.627 389.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 389.937 m
+719.963 380.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 389.937 m
+711.29 380.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 389.937 m
+715.627 379.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 379.937 m
+715.627 369.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+715.627 399.937 m
+719.963 390.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+719.963 390.926 m
+724.3 381.916 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+724.3 381.916 m
+728.636 372.905 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+728.636 372.905 m
+736.452 366.666 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+728.636 372.905 m
+728.636 362.905 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+728.636 372.905 m
+732.973 363.894 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+732.973 363.894 m
+737.31 354.883 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+706.954 417.959 m
+714.769 411.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+714.769 411.72 m
+722.584 405.481 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+722.584 405.481 m
+730.399 399.242 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+730.399 399.242 m
+738.214 393.003 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+738.214 393.003 m
+746.03 386.765 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+746.03 386.765 m
+753.845 380.526 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.845 380.526 m
+763.592 378.293 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+763.592 378.293 m
+773.344 380.509 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+763.592 378.293 m
+771.408 372.055 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+763.592 378.293 m
+773.34 376.061 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+773.34 376.061 m
+783.088 373.828 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.845 380.526 m
+758.181 371.515 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+758.181 371.515 m
+765.997 365.276 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+758.181 371.515 m
+758.181 361.515 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+758.181 371.515 m
+762.518 362.504 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+762.518 362.504 m
+766.855 353.494 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.845 380.526 m
+761.66 374.287 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+761.66 374.287 m
+769.475 368.048 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+769.475 368.048 m
+777.29 361.809 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+777.29 361.809 m
+787.038 359.577 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+777.29 361.809 m
+781.627 352.799 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+777.29 361.809 m
+785.106 355.571 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+785.106 355.571 m
+792.921 349.332 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 442.914 m
+675.693 432.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 432.914 m
+675.693 422.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 422.914 m
+675.693 412.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 412.914 m
+675.693 402.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 402.914 m
+680.029 393.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 393.903 m
+684.366 384.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 384.892 m
+692.181 378.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 378.654 m
+701.929 376.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 378.654 m
+696.518 369.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 378.654 m
+699.996 372.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+699.996 372.415 m
+707.812 366.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 384.892 m
+684.366 374.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 374.892 m
+688.702 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 374.892 m
+680.029 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 374.892 m
+684.366 364.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 364.892 m
+684.366 354.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 384.892 m
+688.702 375.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+688.702 375.882 m
+693.039 366.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+693.039 366.871 m
+697.376 357.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 357.86 m
+705.191 351.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 357.86 m
+697.376 347.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 357.86 m
+701.712 348.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+701.712 348.849 m
+706.049 339.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 402.914 m
+671.356 393.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 393.903 m
+667.02 384.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 384.892 m
+667.02 374.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 374.892 m
+671.356 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 374.892 m
+662.683 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 374.892 m
+667.02 364.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 364.892 m
+667.02 354.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 384.892 m
+659.204 378.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+659.204 378.654 m
+654.868 369.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+659.204 378.654 m
+649.457 376.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+659.204 378.654 m
+651.389 372.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+651.389 372.415 m
+643.574 366.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 384.892 m
+662.683 375.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 375.882 m
+658.346 366.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 366.871 m
+654.01 357.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 357.86 m
+654.01 347.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 357.86 m
+646.195 351.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 357.86 m
+649.673 348.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 348.849 m
+645.337 339.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 402.914 m
+675.693 392.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 392.914 m
+675.693 382.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 382.914 m
+675.693 372.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 372.914 m
+675.693 362.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 362.914 m
+675.693 352.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 352.914 m
+675.693 342.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 342.914 m
+680.029 333.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 333.903 m
+687.845 327.664 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 333.903 m
+680.029 323.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 333.903 m
+684.366 324.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 324.892 m
+688.702 315.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 342.914 m
+671.356 333.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 333.903 m
+671.356 323.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 333.903 m
+663.541 327.664 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 333.903 m
+667.02 324.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 324.892 m
+662.683 315.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 342.914 m
+675.693 332.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 332.914 m
+675.693 322.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 322.914 m
+675.693 312.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 312.914 m
+680.029 303.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 312.914 m
+671.356 303.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 312.914 m
+675.693 302.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 302.914 m
+675.693 292.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 442.914 m
+680.029 433.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 433.903 m
+684.366 424.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 424.892 m
+688.702 415.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+688.702 415.882 m
+693.039 406.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+693.039 406.871 m
+697.376 397.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 397.86 m
+701.712 388.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+701.712 388.849 m
+706.049 379.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+706.049 379.838 m
+710.385 370.828 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+710.385 370.828 m
+714.722 361.817 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+714.722 361.817 m
+719.059 352.806 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+719.059 352.806 m
+723.395 343.795 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.395 343.795 m
+727.732 334.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 334.785 m
+735.547 328.546 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+735.547 328.546 m
+743.362 322.307 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+743.362 322.307 m
+753.11 320.075 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.11 320.075 m
+762.861 322.29 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.11 320.075 m
+760.925 313.836 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.11 320.075 m
+762.857 317.842 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+762.857 317.842 m
+772.605 315.61 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+743.362 322.307 m
+747.699 313.296 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+747.699 313.296 m
+755.514 307.057 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+747.699 313.296 m
+747.699 303.296 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+747.699 313.296 m
+752.035 304.285 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+752.035 304.285 m
+756.372 295.275 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+743.362 322.307 m
+751.177 316.068 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+751.177 316.068 m
+758.993 309.829 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+758.993 309.829 m
+766.808 303.591 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.808 303.591 m
+776.555 301.358 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.808 303.591 m
+771.144 294.58 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.808 303.591 m
+774.623 297.352 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+774.623 297.352 m
+782.438 291.113 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 334.785 m
+727.732 324.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 324.785 m
+727.732 314.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 314.785 m
+732.068 305.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+732.068 305.774 m
+739.884 299.535 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+732.068 305.774 m
+732.068 295.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+732.068 305.774 m
+736.405 296.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.405 296.763 m
+740.742 287.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 314.785 m
+723.395 305.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.395 305.774 m
+723.395 295.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.395 305.774 m
+715.58 299.535 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+723.395 305.774 m
+719.059 296.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+719.059 296.763 m
+714.722 287.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 314.785 m
+727.732 304.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 304.785 m
+727.732 294.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 294.785 m
+727.732 284.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 284.785 m
+732.068 275.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 284.785 m
+723.395 275.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 284.785 m
+727.732 274.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 274.785 m
+727.732 264.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+727.732 334.785 m
+732.068 325.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+732.068 325.774 m
+736.405 316.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+736.405 316.763 m
+740.742 307.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+740.742 307.752 m
+745.078 298.742 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+745.078 298.742 m
+749.415 289.731 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+749.415 289.731 m
+753.751 280.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 280.72 m
+761.567 274.481 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+761.567 274.481 m
+771.314 272.249 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+761.567 274.481 m
+765.903 265.47 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+761.567 274.481 m
+769.382 268.242 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+769.382 268.242 m
+777.197 262.004 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 280.72 m
+753.751 270.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 270.72 m
+758.088 261.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 270.72 m
+749.415 261.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 270.72 m
+753.751 260.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 260.72 m
+753.751 250.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+753.751 280.72 m
+758.088 271.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+758.088 271.709 m
+762.425 262.698 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+762.425 262.698 m
+766.761 253.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.761 253.688 m
+774.576 247.449 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.761 253.688 m
+766.761 243.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+766.761 253.688 m
+771.098 244.677 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+771.098 244.677 m
+775.434 235.666 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 515 m
+636.663 505.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 505.989 m
+632.327 496.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 496.978 m
+627.99 487.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 487.968 m
+623.654 478.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 478.957 m
+619.317 469.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 469.946 m
+614.98 460.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 460.935 m
+610.644 451.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 451.925 m
+606.307 442.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 442.914 m
+606.307 432.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 432.914 m
+606.307 422.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 422.914 m
+606.307 412.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 412.914 m
+606.307 402.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 402.914 m
+610.644 393.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 393.903 m
+614.98 384.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 384.892 m
+622.796 378.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+622.796 378.654 m
+632.543 376.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+622.796 378.654 m
+627.132 369.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+622.796 378.654 m
+630.611 372.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+630.611 372.415 m
+638.426 366.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 384.892 m
+614.98 374.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 374.892 m
+619.317 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 374.892 m
+610.644 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 374.892 m
+614.98 364.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 364.892 m
+614.98 354.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 384.892 m
+619.317 375.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 375.882 m
+623.654 366.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 366.871 m
+627.99 357.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 357.86 m
+635.805 351.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 357.86 m
+627.99 347.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 357.86 m
+632.327 348.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 348.849 m
+636.663 339.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 402.914 m
+601.971 393.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 393.903 m
+597.634 384.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 384.892 m
+597.634 374.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 374.892 m
+601.971 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 374.892 m
+593.298 365.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 374.892 m
+597.634 364.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 364.892 m
+597.634 354.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 384.892 m
+589.819 378.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 378.654 m
+585.482 369.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 378.654 m
+580.071 376.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 378.654 m
+582.004 372.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+582.004 372.415 m
+574.188 366.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 384.892 m
+593.298 375.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+593.298 375.882 m
+588.961 366.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+588.961 366.871 m
+584.624 357.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 357.86 m
+584.624 347.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 357.86 m
+576.809 351.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 357.86 m
+580.288 348.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+580.288 348.849 m
+575.951 339.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 402.914 m
+606.307 392.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 392.914 m
+606.307 382.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 382.914 m
+606.307 372.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 372.914 m
+606.307 362.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 362.914 m
+606.307 352.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 352.914 m
+606.307 342.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 342.914 m
+610.644 333.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 333.903 m
+618.459 327.664 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 333.903 m
+610.644 323.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 333.903 m
+614.98 324.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 324.892 m
+619.317 315.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 342.914 m
+601.971 333.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 333.903 m
+601.971 323.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 333.903 m
+594.155 327.664 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 333.903 m
+597.634 324.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 324.892 m
+593.298 315.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 342.914 m
+606.307 332.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 332.914 m
+606.307 322.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 322.914 m
+606.307 312.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 312.914 m
+610.644 303.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 312.914 m
+601.971 303.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 312.914 m
+606.307 302.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 302.914 m
+606.307 292.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 442.914 m
+598.492 436.675 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+598.492 436.675 m
+590.677 430.436 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+590.677 430.436 m
+582.862 424.197 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+582.862 424.197 m
+575.046 417.959 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+575.046 417.959 m
+570.71 408.948 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+570.71 408.948 m
+566.373 399.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 399.937 m
+566.373 389.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 389.937 m
+570.71 380.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 389.937 m
+562.037 380.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 389.937 m
+566.373 379.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 379.937 m
+566.373 369.937 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 399.937 m
+558.558 393.698 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.558 393.698 m
+554.221 384.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.558 393.698 m
+548.81 391.466 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.558 393.698 m
+550.743 387.46 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+550.743 387.46 m
+542.928 381.221 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+566.373 399.937 m
+562.037 390.926 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+562.037 390.926 m
+557.7 381.916 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+557.7 381.916 m
+553.364 372.905 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+553.364 372.905 m
+553.364 362.905 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+553.364 372.905 m
+545.548 366.666 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+553.364 372.905 m
+549.027 363.894 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+549.027 363.894 m
+544.69 354.883 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+575.046 417.959 m
+565.299 415.726 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+565.299 415.726 m
+555.551 413.494 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+555.551 413.494 m
+547.736 407.255 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+547.736 407.255 m
+543.399 398.244 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+547.736 407.255 m
+537.988 405.022 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+547.736 407.255 m
+539.921 401.016 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+539.921 401.016 m
+532.106 394.777 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+555.551 413.494 m
+545.8 415.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.8 415.709 m
+536.052 413.477 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.8 415.709 m
+537.974 421.934 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.8 415.709 m
+536.048 417.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+536.048 417.925 m
+526.297 420.14 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+555.551 413.494 m
+545.804 411.261 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.804 411.261 m
+536.056 409.029 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+536.056 409.029 m
+526.308 406.796 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+526.308 406.796 m
+518.493 400.557 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+526.308 406.796 m
+516.557 409.012 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+526.308 406.796 m
+516.561 404.564 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+516.561 404.564 m
+506.813 402.331 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+575.046 417.959 m
+567.231 411.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+567.231 411.72 m
+559.416 405.481 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+559.416 405.481 m
+551.601 399.242 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+551.601 399.242 m
+543.786 393.003 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+543.786 393.003 m
+535.97 386.765 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+535.97 386.765 m
+528.155 380.526 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.155 380.526 m
+523.819 371.515 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+523.819 371.515 m
+523.819 361.515 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+523.819 371.515 m
+516.003 365.276 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+523.819 371.515 m
+519.482 362.504 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+519.482 362.504 m
+515.145 353.494 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.155 380.526 m
+518.408 378.293 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+518.408 378.293 m
+510.592 372.055 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+518.408 378.293 m
+508.656 380.509 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+518.408 378.293 m
+508.66 376.061 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+508.66 376.061 m
+498.912 373.828 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.155 380.526 m
+520.34 374.287 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+520.34 374.287 m
+512.525 368.048 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+512.525 368.048 m
+504.71 361.809 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+504.71 361.809 m
+500.373 352.799 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+504.71 361.809 m
+494.962 359.577 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+504.71 361.809 m
+496.894 355.571 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+496.894 355.571 m
+489.079 349.332 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 442.914 m
+601.971 433.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 433.903 m
+597.634 424.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 424.892 m
+593.298 415.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+593.298 415.882 m
+588.961 406.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+588.961 406.871 m
+584.624 397.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 397.86 m
+580.288 388.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+580.288 388.849 m
+575.951 379.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+575.951 379.838 m
+571.615 370.828 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+571.615 370.828 m
+567.278 361.817 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+567.278 361.817 m
+562.941 352.806 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+562.941 352.806 m
+558.605 343.795 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.605 343.795 m
+554.268 334.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 334.785 m
+554.268 324.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 324.785 m
+554.268 314.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 314.785 m
+558.605 305.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.605 305.774 m
+566.42 299.535 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.605 305.774 m
+558.605 295.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+558.605 305.774 m
+562.941 296.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+562.941 296.763 m
+567.278 287.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 314.785 m
+549.932 305.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+549.932 305.774 m
+549.932 295.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+549.932 305.774 m
+542.116 299.535 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+549.932 305.774 m
+545.595 296.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.595 296.763 m
+541.258 287.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 314.785 m
+554.268 304.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 304.785 m
+554.268 294.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 294.785 m
+554.268 284.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 284.785 m
+558.605 275.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 284.785 m
+549.932 275.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 284.785 m
+554.268 274.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 274.785 m
+554.268 264.785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 334.785 m
+546.453 328.546 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+546.453 328.546 m
+538.638 322.307 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+538.638 322.307 m
+534.301 313.296 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+534.301 313.296 m
+534.301 303.296 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+534.301 313.296 m
+526.486 307.057 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+534.301 313.296 m
+529.965 304.285 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+529.965 304.285 m
+525.628 295.275 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+538.638 322.307 m
+528.89 320.075 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.89 320.075 m
+521.075 313.836 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.89 320.075 m
+519.139 322.29 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.89 320.075 m
+519.143 317.842 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+519.143 317.842 m
+509.395 315.61 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+538.638 322.307 m
+530.823 316.068 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+530.823 316.068 m
+523.007 309.829 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+523.007 309.829 m
+515.192 303.591 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.192 303.591 m
+510.856 294.58 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.192 303.591 m
+505.445 301.358 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.192 303.591 m
+507.377 297.352 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+507.377 297.352 m
+499.562 291.113 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+554.268 334.785 m
+549.932 325.774 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+549.932 325.774 m
+545.595 316.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+545.595 316.763 m
+541.258 307.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+541.258 307.752 m
+536.922 298.742 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+536.922 298.742 m
+532.585 289.731 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+532.585 289.731 m
+528.249 280.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 280.72 m
+528.249 270.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 270.72 m
+532.585 261.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 270.72 m
+523.912 261.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 270.72 m
+528.249 260.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 260.72 m
+528.249 250.72 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 280.72 m
+520.433 274.481 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+520.433 274.481 m
+516.097 265.47 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+520.433 274.481 m
+510.686 272.249 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+520.433 274.481 m
+512.618 268.242 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+512.618 268.242 m
+504.803 262.004 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+528.249 280.72 m
+523.912 271.709 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+523.912 271.709 m
+519.575 262.698 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+519.575 262.698 m
+515.239 253.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.239 253.688 m
+515.239 243.688 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.239 253.688 m
+507.424 247.449 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+515.239 253.688 m
+510.902 244.677 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+510.902 244.677 m
+506.566 235.666 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 515 m
+641 505 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 505 m
+641 495 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 495 m
+641 485 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 485 m
+641 475 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 475 m
+641 465 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 465 m
+641 455 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 455 m
+641 445 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 445 m
+641 435 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 435 m
+641 425 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 425 m
+641 415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 415 m
+641 405 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 405 m
+641 395 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 395 m
+641 385 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 385 m
+641 375 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 375 m
+641 365 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 365 m
+641 355 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 355 m
+641 345 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 345 m
+641 335 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 335 m
+641 325 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 325 m
+641 315 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 315 m
+641 305 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 305 m
+641 295 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 295 m
+641 285 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 285 m
+641 275 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 275 m
+645.337 265.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 265.989 m
+649.673 256.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 256.978 m
+654.01 247.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 247.968 m
+658.346 238.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 238.957 m
+666.162 232.718 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+666.162 232.718 m
+673.977 226.479 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+673.977 226.479 m
+683.724 224.247 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+683.724 224.247 m
+693.476 226.462 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+683.724 224.247 m
+691.54 218.008 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+683.724 224.247 m
+693.472 222.014 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+693.472 222.014 m
+703.22 219.782 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+673.977 226.479 m
+678.313 217.469 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+678.313 217.469 m
+686.129 211.23 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+678.313 217.469 m
+678.313 207.469 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+678.313 217.469 m
+682.65 208.458 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+682.65 208.458 m
+686.987 199.447 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+673.977 226.479 m
+681.792 220.241 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+681.792 220.241 m
+689.607 214.002 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+689.607 214.002 m
+697.422 207.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.422 207.763 m
+707.17 205.53 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.422 207.763 m
+701.759 198.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.422 207.763 m
+705.238 201.524 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+705.238 201.524 m
+713.053 195.285 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 238.957 m
+658.346 228.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 228.957 m
+658.346 218.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 218.957 m
+662.683 209.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 209.946 m
+670.498 203.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 209.946 m
+662.683 199.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 209.946 m
+667.02 200.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 200.935 m
+671.356 191.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 218.957 m
+654.01 209.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 209.946 m
+654.01 199.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 209.946 m
+646.195 203.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 209.946 m
+649.673 200.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 200.935 m
+645.337 191.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 218.957 m
+658.346 208.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 208.957 m
+658.346 198.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 198.957 m
+658.346 188.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 188.957 m
+662.683 179.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 188.957 m
+654.01 179.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 188.957 m
+658.346 178.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 178.957 m
+658.346 168.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 238.957 m
+662.683 229.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 229.946 m
+667.02 220.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 220.935 m
+671.356 211.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+671.356 211.925 m
+675.693 202.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+675.693 202.914 m
+680.029 193.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+680.029 193.903 m
+684.366 184.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 184.892 m
+692.181 178.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 178.654 m
+701.929 176.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 178.654 m
+696.518 169.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+692.181 178.654 m
+699.996 172.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+699.996 172.415 m
+707.812 166.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 184.892 m
+684.366 174.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 174.892 m
+688.702 165.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 174.892 m
+680.029 165.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 174.892 m
+684.366 164.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 164.892 m
+684.366 154.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+684.366 184.892 m
+688.702 175.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+688.702 175.882 m
+693.039 166.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+693.039 166.871 m
+697.376 157.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 157.86 m
+705.191 151.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 157.86 m
+697.376 147.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+697.376 157.86 m
+701.712 148.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+701.712 148.849 m
+706.049 139.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 275 m
+636.663 265.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 265.989 m
+632.327 256.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 256.978 m
+627.99 247.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 247.968 m
+623.654 238.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 238.957 m
+623.654 228.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 228.957 m
+623.654 218.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 218.957 m
+627.99 209.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 209.946 m
+635.805 203.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 209.946 m
+627.99 199.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 209.946 m
+632.327 200.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 200.935 m
+636.663 191.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 218.957 m
+619.317 209.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 209.946 m
+619.317 199.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 209.946 m
+611.502 203.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 209.946 m
+614.98 200.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 200.935 m
+610.644 191.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 218.957 m
+623.654 208.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 208.957 m
+623.654 198.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 198.957 m
+623.654 188.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 188.957 m
+627.99 179.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 188.957 m
+619.317 179.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 188.957 m
+623.654 178.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 178.957 m
+623.654 168.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 238.957 m
+615.838 232.718 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+615.838 232.718 m
+608.023 226.479 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+608.023 226.479 m
+603.687 217.469 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+603.687 217.469 m
+603.687 207.469 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+603.687 217.469 m
+595.871 211.23 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+603.687 217.469 m
+599.35 208.458 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+599.35 208.458 m
+595.013 199.447 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+608.023 226.479 m
+598.276 224.247 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+598.276 224.247 m
+590.46 218.008 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+598.276 224.247 m
+588.524 226.462 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+598.276 224.247 m
+588.528 222.014 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+588.528 222.014 m
+578.78 219.782 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+608.023 226.479 m
+600.208 220.241 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+600.208 220.241 m
+592.393 214.002 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+592.393 214.002 m
+584.578 207.763 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.578 207.763 m
+580.241 198.752 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.578 207.763 m
+574.83 205.53 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.578 207.763 m
+576.762 201.524 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+576.762 201.524 m
+568.947 195.285 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 238.957 m
+619.317 229.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 229.946 m
+614.98 220.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 220.935 m
+610.644 211.925 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+610.644 211.925 m
+606.307 202.914 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+606.307 202.914 m
+601.971 193.903 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+601.971 193.903 m
+597.634 184.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 184.892 m
+597.634 174.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 174.892 m
+601.971 165.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 174.892 m
+593.298 165.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 174.892 m
+597.634 164.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 164.892 m
+597.634 154.892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 184.892 m
+589.819 178.654 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 178.654 m
+585.482 169.643 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 178.654 m
+580.071 176.421 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+589.819 178.654 m
+582.004 172.415 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+582.004 172.415 m
+574.188 166.176 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+597.634 184.892 m
+593.298 175.882 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+593.298 175.882 m
+588.961 166.871 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+588.961 166.871 m
+584.624 157.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 157.86 m
+584.624 147.86 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 157.86 m
+576.809 151.621 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+584.624 157.86 m
+580.288 148.849 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+580.288 148.849 m
+575.951 139.838 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 275 m
+641 265 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 265 m
+641 255 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 255 m
+641 245 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 245 m
+641 235 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 235 m
+641 225 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 225 m
+641 215 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 215 m
+641 205 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 205 m
+641 195 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 195 m
+641 185 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 185 m
+641 175 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 175 m
+641 165 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 165 m
+641 155 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 155 m
+645.337 145.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 145.989 m
+649.673 136.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 136.978 m
+657.488 130.74 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+657.488 130.74 m
+667.236 128.507 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+657.488 130.74 m
+661.825 121.729 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+657.488 130.74 m
+665.304 124.501 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+665.304 124.501 m
+673.119 118.262 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 136.978 m
+649.673 126.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 126.978 m
+654.01 117.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 126.978 m
+645.337 117.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 126.978 m
+649.673 116.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 116.978 m
+649.673 106.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 136.978 m
+654.01 127.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+654.01 127.968 m
+658.346 118.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+658.346 118.957 m
+662.683 109.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 109.946 m
+670.498 103.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 109.946 m
+662.683 99.9461 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+662.683 109.946 m
+667.02 100.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+667.02 100.935 m
+671.356 91.9246 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 155 m
+636.663 145.989 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 145.989 m
+632.327 136.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 136.978 m
+632.327 126.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 126.978 m
+636.663 117.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 126.978 m
+627.99 117.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 126.978 m
+632.327 116.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 116.978 m
+632.327 106.978 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 136.978 m
+624.512 130.74 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+624.512 130.74 m
+620.175 121.729 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+624.512 130.74 m
+614.764 128.507 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+624.512 130.74 m
+616.696 124.501 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+616.696 124.501 m
+608.881 118.262 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 136.978 m
+627.99 127.968 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+627.99 127.968 m
+623.654 118.957 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+623.654 118.957 m
+619.317 109.946 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 109.946 m
+619.317 99.9461 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 109.946 m
+611.502 103.707 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+619.317 109.946 m
+614.98 100.935 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+614.98 100.935 m
+610.644 91.9246 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 155 m
+641 145 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 145 m
+641 135 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 135 m
+641 125 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 125 m
+641 115 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 115 m
+641 105 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 105 m
+641 95 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 95 m
+645.337 85.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 85.9892 m
+653.152 79.7504 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 85.9892 m
+645.337 75.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+645.337 85.9892 m
+649.673 76.9785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+649.673 76.9785 m
+654.01 67.9677 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 95 m
+636.663 85.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 85.9892 m
+636.663 75.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 85.9892 m
+628.848 79.7504 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+636.663 85.9892 m
+632.327 76.9785 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+632.327 76.9785 m
+627.99 67.9677 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 95 m
+641 85 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 85 m
+641 75 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 75 m
+641 65 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 65 m
+645.337 55.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 65 m
+636.663 55.9892 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 65 m
+641 55 l
+</path>
+<path matrix="1 0 0 -1 -476 688" stroke="0" pen="2" cap="1">
+641 55 m
+641 45 l
+</path>
+</page>
+</ipe>

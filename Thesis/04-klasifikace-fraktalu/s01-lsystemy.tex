@@ -305,7 +305,7 @@ Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení f
     \item $\delta=\pi/8$.
 \end{itemize}
 Viz obrázek \ref{fig:fraktalni-strom}.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{bracketed-ol-1-iter4.pdf}
     \begin{center}
@@ -316,7 +316,10 @@ Viz obrázek \ref{fig:fraktalni-strom}.
 \end{figure}
 
 \subsection{Ukázky fraktálů a jejich L-systémů}\label{subsec:ukazky-fraktalu-lsystemy}
-\begin{figure}
+
+Zde naleznete některé další ukázky fraktálů a jejich L-systémů. Všechny obrázky fraktálních útvarů, které jste zde viděli a ještě uvidíte jsou vygenerovány pomocí přiloženého programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}} k tomuto textu.
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter0.pdf}\qquad
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter1.pdf}\qquad\\
@@ -329,16 +332,42 @@ Viz obrázek \ref{fig:fraktalni-strom}.
         \delta&=\pi/2
     \end{align*}
 \end{figure}
-\begin{figure}
+\newpage
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{lakes-and-islands-iter0.pdf}\qquad
     \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter1.pdf}\qquad\\
-    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter2.pdf}\qquad
-    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter3.pdf}
+    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter2.pdf}
     \begin{align*}
         \omega&=F+F+F+F\\
         F&\to F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF\\
         f&\to ffffff\\
         \delta&=\pi/2
     \end{align*}
+\end{figure}
+\newpage
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.6\textwidth]{bracketed-ol-2-iter4.pdf}
+        \begin{align*}
+            \omega&=F\\
+            F&\to F[+F]F[-F]F\\
+            \delta&=25{,}7^\circ\\
+            n&=4
+        \end{align*}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{bracketed-ol-3-iter5.pdf}
+        \begin{align*}
+            \omega&=X\\
+            X&\to F[+X][-X]FX\\
+            F&\to FF\\
+            \delta&=25{,}7^\circ\\
+            n&=5
+        \end{align*}
+    \end{subfigure}
 \end{figure}

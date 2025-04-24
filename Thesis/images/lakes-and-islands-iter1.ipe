@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70218" creator="Ipe 7.2.28">
+<info created="D:20250424080408" modified="D:20250424080408"/>
+<ipestyle>
+<opacity name="10%" value="0.1"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<layout paper="227 227" origin="0 0" frame="227 227" crop="no"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" stroke="0" pen="2" join="1">
+34 113 m
+34 133 l
+34 153 l
+14 153 l
+14 133 l
+14 113 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+74 153 m
+94 153 l
+114 153 l
+114 133 l
+94 133 l
+74 133 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+154 153 m
+154 133 l
+154 113 l
+134 113 l
+134 133 l
+134 153 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+74 73 m
+74 93 l
+74 113 l
+94 113 l
+94 93 l
+94 73 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+154 73 m
+134 73 l
+114 73 l
+114 93 l
+134 93 l
+154 93 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+114 33 m
+94 33 l
+74 33 l
+74 13 l
+94 13 l
+114 13 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+194 113 m
+194 93 l
+194 73 l
+214 73 l
+214 93 l
+214 113 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+114 193 m
+134 193 l
+154 193 l
+154 213 l
+134 213 l
+114 213 l
+h
+</path>
+<path stroke="0" pen="2" join="1">
+54 173 m
+74 173 l
+94 173 l
+114 173 l
+134 173 l
+154 173 l
+174 173 l
+174 153 l
+174 133 l
+174 113 l
+174 93 l
+174 73 l
+174 53 l
+154 53 l
+134 53 l
+114 53 l
+94 53 l
+74 53 l
+54 53 l
+54 73 l
+54 93 l
+54 113 l
+54 133 l
+54 153 l
+h
+</path>
+</page>
+</ipe>
