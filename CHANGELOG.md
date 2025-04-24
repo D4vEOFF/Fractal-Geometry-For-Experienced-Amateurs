@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 24. 4. 2025
+- Dokončena sekce o *L-systémech* kapitoly 4
+
 ## 17. 4. 2025
 - Dokončena sekce o *Hausdorffově míře a dimenzi*
 
