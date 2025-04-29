@@ -4,7 +4,7 @@ V předchozí části kapitoly viděli, jak lze fraktální objekty efektivně p
 
 Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v kapitole \ref{chapter:hausdorffuv-mp} o Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův}, který zde bude hrát významnou roli, a dále na ně budeme navazovat. Pro související matematickou teorii, kterou zde dále budeme vykládat, doporučuji knihu \cite{Barnsley1993}.
 
-\subsection{Kontrakce v Hausdorffově metrickém prostoru}\label{subsec:hausdorffuv-mp-kontrakce}
+\subsection{Kontrakce na Hausdorffově metrickém prostoru}\label{subsec:hausdorffuv-mp-kontrakce}
 
 V minulých kapitolách jsme se často zaměřovali na lipschitzovská a bilipschitzovská zobrazení. V tomto případě nás budou speciálně zajímat tzv. \emph{kontrakce}\index{kontrakce}\index{zobrazení!kontraktivní}. Těmto termínům a faktům s nimi souvisejícími jsme se krátce věnovali v podsekci \ref{subsec:lipschitzovska-zobrazeni}.
 
@@ -84,22 +84,37 @@ Dvojice lemmat \ref{lem:spojitost-a-hyperprostor} a \ref{lem:kontrakce-a-hyperpr
 \end{definition}
 Zatím není zcela zjevné, proč definujeme pro IFS kontraktivní faktor jako maximum z faktorů všech kontrakcí v něm obsažených (byť to může působit do jisté míry intuitivně). Odpověď na tuto otázku nám poskytne následující věta \ref{thm:sjednoceni-kontrakci}.
 \begin{theorem}\label{thm:sjednoceni-kontrakci}
-    Nechť $\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS na metrickém prostoru $(X,\varrho)$ s kontraktivním faktorem $0<K<1$. Pak zobrazení $\mapping{\Psi}{\hyperspace(X)}{\hyperspace(X)}$ definované předpisem
-    \[\Psi(A)=\bigcup_{i=1}^n\psi_i(A)\]
+    Nechť $\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS na metrickém prostoru $(X,\varrho)$ s kontraktivním faktorem\index{faktor}\index{kontraktivní faktor}\index{faktor!kontraktivní} $0<K<1$. Pak zobrazení $\mapping{\Psi^n}{\hyperspace(X)}{\hyperspace(X)}$ definované předpisem
+    \[\Psi^n(A)=\bigcup_{i=1}^n\psi_i(A)\]
     pro $A\in\hyperspace(X)$ je kontrakce na $(\hyperspace(X),\hausdorffmetric)$ s faktorem $K$.
 \end{theorem}
 \begin{proof}
     Důkaz tvrzení lze provést indukcí podle $n$. Pro $n=2$ zvolme množiny $A,B\in\hyperspace(X)$. Pak
     \begin{align*}
-        \hausdorffmetric(\psi_1(A)\cup\psi_2(A),\psi_1(B)\cup\psi_2(B))&\leqslant\max\set{\hausdorffmetric(\psi_1(A),\psi_1(B)),\hausdorffmetric(\psi_2(A),\psi_2(B))}\\
+        \hausdorffmetric(\Psi^2(A),\Psi^2(B))&=\hausdorffmetric(\psi_1(A)\cup\psi_2(A),\psi_1(B)\cup\psi_2(B))\\
+        &\leqslant\max\set{\hausdorffmetric(\psi_1(A),\psi_1(B)),\hausdorffmetric(\psi_2(A),\psi_2(B))}\\
         &\leqslant\max\set{K_1\hausdorffmetric(A,B),K_2\hausdorffmetric(A,B)}\\
         &\leqslant K\hausdorffmetric(A,B),
     \end{align*}
-    kde druhá nerovnost plyne z lemmatu \ref{lem:hausdorffova-metrika-odhad-sjednoceni}. Nyní ukážeme, že zobrazení $\Psi$ definované předpisem $\Psi(A)=\bigcup_{i=1}^n\psi_i(A)$ je kontrakce. Mějme opět množiny $A,B\in\hyperspace(X)$. Pak
+    kde druhá nerovnost plyne z lemmatu \ref{lem:hausdorffova-metrika-odhad-sjednoceni}. Nyní ukážeme, že zobrazení $\Psi^n$ definované předpisem $\Psi^n(A)=\bigcup_{i=1}^n\psi_i(A)$ je kontrakce. Mějme opět množiny $A,B\in\hyperspace(X)$. Pak
     \begin{align*}
-        \hausdorffmetric(\Psi(A),\Psi(B))&=\hausdorffmetric\left(\bigcup_{i=1}^n\psi_i(A),\bigcup_{j=1}^n\psi_j(B)\right)\\
-        &=\hausdorffmetric\left(\left(\bigcup_{i=1}^{n-1}\psi_i(A)\right)\cup\psi_n(A),\left(\bigcup_{j=1}^{n-1}\psi_j(B)\right)\cup\psi_n(B)\right)\\
-        &\leqslant\max\set{\hausdorffmetric\left(\bigcup_{i=1}^{n-1}\psi_i(A),\bigcup_{j=1}^{n-1}\psi_j(B)\right),\hausdorffmetric(\psi_n(A)\cup\psi_n(B))}\\
+        \hausdorffmetric(\Psi^n(A),\Psi^n(B))&=\hausdorffmetric(\Psi^{n-1}(A)\cup\psi_n(A),\Psi^{n-1}(B)\cup\psi_n(B))\\
+        &\leqslant\max\set{\hausdorffmetric(\Psi^{n-1}(A),\Psi^{n-1}(B)),\hausdorffmetric(\psi_n(A)\cup\psi_n(B))}\\
         &\stackrel{\text{I.P.}}{\leqslant}\max\set{K\hausdorffmetric(A,B),K_n\hausdorffmetric(A,B)}\leqslant K\hausdorffmetric(A,B).
     \end{align*}
 \end{proof}
+
+S kontrakcemi se pojí jedna klasická věta z matematické analýzy, která se nazývá \emph{Banachova věta o pevném bodě} (vit \ref{thm:banach}).
+\begin{definition}[Pevný bod]\label{def:pevny-bod}
+    Bod $x\in X$ se nazývá pevným bodem zobrazení $\mapping{f}{X}{X}$, pokud $f(x)=x$.
+\end{definition}
+\begin{theorem}[Banachova věta o pevném bodě]\label{thm:banach}
+    Nechť $(X,\varrho)$ je úplný metrický prostor a zobrazení $\mapping{f}{X}{X}$ je kontrakce. Pak existuje právě jeden pevný bod $x\in X$ zobrazení $f$. Navíc volíme-li $x_0\in\N$ libovolně a $x_n=f(x_{n-1})$ pro každé $n\in\N$, pak $x_n\to x$.
+\end{theorem}
+Speciálně pro zobrazení $\Psi^n$ definované ve větě \ref{thm:sjednoceni-kontrakci} nám Banachova věta \ref{thm:banach} nejen říká, že má právě jeden pevný bod $A\in\hyperspace(X)$, tzn. $\Psi^n(A)=A$, ale zároveň udává způsob, jak daný pevný bod nalézt. Stačí opakovaně iterovat dané zobrazení.
+\begin{definition}[Atraktor]\label{def:atraktor}
+    Pevný bod $A\in\hyperspace(X)$ libovolného IFS se nazývá \emph{atraktor}\index{atraktor}.
+\end{definition}
+V dalším textu budeme pracovat především s afinními zobrazeními v $\R^2$ se standardní eukleidovskou metrikou. Připomeňme si zde, že afinním zobrazením rozumíme jakékoliv zobrazení $\mapping{f}{X}{X}$, takové, že
+\[f(x)=\mat{A}x+b,\]
+kde $b\in X$ a $\mat{A}$ je regulární matice.
