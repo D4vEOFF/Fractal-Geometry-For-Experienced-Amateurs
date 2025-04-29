@@ -2,5 +2,104 @@
 
 V předchozí části kapitoly viděli, jak lze fraktální objekty efektivně popisovat pomocí L-systémů, kde struktura vzniká paralelním přepisováním symbolů a jejich vizualizace se provádí prostřednictvím želví grafiky. Tento přístup nám umožňoval popsat určitou skupinu fraktálů, nicméně pro jiné fraktály by se nám hodil vhodnější popis jejich konstrukce. Např. Sierpińského trojúhelník lze popsat pomocí L-systému, nicméně v sekci \ref{sec:sobepodobnost} o soběpodobnosti jsme si jej záváděli spíše pomocí opakované aplikace určitých geometrických transformací (ač jsme neuvedli jejich explicitní vyjádření). Ty si později zavedeme jako tzv. \emph{systémy iterovaných funkcí}\index{systém iterovaných funkcí}.
 
-Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v kapitole \ref{chapter:hausdorffuv-mp} o Hausdorffově metrickém prostoru, který zde bude hrát významnou roli, a dále na ně budeme navazovat.
+Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v kapitole \ref{chapter:hausdorffuv-mp} o Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův}, který zde bude hrát významnou roli, a dále na ně budeme navazovat. Pro související matematickou teorii, kterou zde dále budeme vykládat, doporučuji knihu \cite{Barnsley1993}.
 
+\subsection{Kontrakce v Hausdorffově metrickém prostoru}\label{subsec:hausdorffuv-mp-kontrakce}
+
+V minulých kapitolách jsme se často zaměřovali na lipschitzovská a bilipschitzovská zobrazení. V tomto případě nás budou speciálně zajímat tzv. \emph{kontrakce}\index{kontrakce}\index{zobrazení!kontraktivní}. Těmto termínům a faktům s nimi souvisejícími jsme se krátce věnovali v podsekci \ref{subsec:lipschitzovska-zobrazeni}.
+
+Připomeňme, že lipschitzovské zobrazení rovnou implikuje spojist v libovolném metrickém prostoru $(X,\varrho)$. Ještě však než začneme, podíváme se na alternativní definici Hausdorffovy metriky, která se nám dále bude hodit.
+\begin{theorem}[Alternativní definice Hausdorffovy metriky]\label{thm:alternativni-hausdorffova-metrika}
+    Nechť $(X,\varrho)$ je metrický prostor. Pro každé $A,B\in\hyperspace(X)$ platí
+    \[\hausdorffmetric(A,B)=\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
+\end{theorem}
+\begin{proof}
+    Nechť je dáno $\varepsilon>0$, takové, že $\varepsilon\geqslant\hausdorffmetric(A,B)$. Pak $A\subseteq(B)_\varepsilon$ a $B\subseteq(A)_\delta$, tzn.
+    \[\varepsilon\geqslant\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
+    Naopak zvolíme-li $0<\varepsilon\leqslant\hausdorffmetric(A,B)$, pak určitě platí alespoň jedna z nerovností:
+    \[\varepsilon\leqslant\sup_{x\in A}\varrho(x,B)\;\text{nebo}\;\varepsilon\leqslant\sup_{y\in B}\varrho(y,A).\]
+    Tedy
+    \[\varepsilon\leqslant\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
+    Z toho dostáváme závěr tvrzení.
+\end{proof}
+
+Jako první se podíváme na trojici pomocných lemmat.
+\begin{lemma}\label{lem:spojitost-a-hyperprostor}
+    Nechť $\mapping{f}{X}{X}$ je spojisté zobrazení v metrickém prostoru $(X,\varrho)$. Pak pro každé $S\in\hyperspace(X)$ platí $f(S)\in\hyperspace(X)$.
+\end{lemma}
+\begin{proof}
+    Nechť $S\in\hyperspace(X)$. Zjevně platí $f(S)\neq\emptyset$. Pro důkaz kompaktnosti $f(S)$ uvažujme posloupnost $\set{x_n}_{n=1}^\infty$, kde $x_i\in S$ pro každé $i\in\N$. Protože $S$ je kompaktní, existuje posloupnost indexů $\set{n_k}_{k=1}^\infty$, taková, že $x_{n_k}\to x\in S$. Ze spojitosti zobrazení $f$ však plyne, že pak $\set{f(x_{n_k})}_{k=1}^\infty$ je podposloupností posloupnosti $\set{f(x_n)}_{n=1}^\infty$ a $f(x_{n_k})\to f(x)$, tedy i $f(S)$ je kompaktní.
+\end{proof}
+\begin{lemma}\label{lem:kontrakce-a-hyperprostor}
+    Nechť $\mapping{f}{X}{X}$ je kontrakce na metrickém prostoru $(X,\varrho)$ s faktorem $0<K<1$. Pak $\mapping{f}{\hyperspace(X)}{\hyperspace(X)}$ je kontrakce na Hausdorffově metrickém prostoru s faktorem $K$.
+\end{lemma}
+(Převzato z \citep[str. 79]{Barnsley1993}.)
+\begin{proof}
+    Z předchozího lemmatu \ref{lem:spojitost-a-hyperprostor} víme, že $f(S)\in\hyperspace(X)$ pro každé $S\in\hyperspace(X)$. Mějme množiny $A,B\in\hyperspace(X)$. Pak
+    \begin{align*}
+        \varrho(f(A),f(B))&=\inf\set{\varrho(f(x),f(y))\mid x\in A\;,\;y\in B}\\
+        &\leqslant\inf\set{K\cdot\varrho(x,y)\mid x\in A\;,\;y\in B}\\
+        &=K\cdot\inf\set{\varrho(x,y)\mid x\in A\;,\;y\in B}\\
+        &=K\cdot\varrho(A,B).
+    \end{align*}
+    Tedy celkově
+    \begin{align*}
+        \hausdorffmetric(f(A),f(B))&=\inf\set{\delta>0\mid f(A)\subseteq(f(B))_\delta\land f(B)\subseteq(f(A))_\delta}\\
+        &=\max\set{\sup_{x\in A}\varrho(f(x),f(B)),\sup_{y\in B}\varrho(f(y),f(A))}\\
+        &=\max\set{\sup_{x\in A}\inf_{y\in B}\varrho(f(x),f(y)),\sup_{y\in B}\inf_{x\in A}\varrho(f(y),f(x))}\\
+        &\leqslant K\max\set{\sup_{x\in A}\inf_{y\in B}\varrho(f(x),f(y)),\sup_{y\in B}\inf_{x\in A}\varrho(f(y),f(x))}\\
+        &=K\hausdorffmetric(A,B).
+    \end{align*}
+    Druhá rovnost plyne z věty \ref{thm:alternativni-hausdorffova-metrika}.
+\end{proof}
+(Převzato a upraveno z \citep[str. 79]{Barnsley1993}.)
+\begin{lemma}\label{lem:hausdorffova-metrika-odhad-sjednoceni}
+    Pro každé $A,B,C,D\in\hyperspace(X)$, kde $(X,\varrho)$ je metrický prostor, platí
+    \[\hausdorffmetric(A\cup B,C\cup D)\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.\]
+\end{lemma}
+\begin{proof}
+    Budeme vycházet z alternativní definice Hausdorffovy metriky (viz věta \ref{thm:alternativni-hausdorffova-metrika}). Pro $\varrho(x,A\cup B)$ platí následující odhad:
+    \[\varrho(x,A\cup B)=\min\set{\inf_{y\in A}\varrho(x,y),\inf_{z\in B}\varrho(x,z)}\leqslant\inf_{y\in A}\varrho(x,y)=\varrho(x,A).\]
+    Z toho pak máme
+    \[\sup_{x\in A}\varrho(x,C\cup D)\leqslant\sup_{x\in A}\inf_{y\in C}\varrho(x,y)=\varrho(x,A)\leqslant\hausdorffmetric(A,C)\]
+    a tedy
+    \[\sup_{x\in A\cup B}\varrho(x,C\cup D)\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.\]
+    Stejný odhad lze získat i pro $\sup_{x\in C\cup D}\varrho(x,A\cup B)$:
+    \begin{align*}
+        \sup_{x\in C\cup D}\varrho(x,A\cup B)&=\max\set{\sup_{x\in C}\varrho(x,A\cup B),\sup_{x\in D}\varrho(x,A\cup B)}\\
+        &\leqslant\max\set{\hausdorffmetric(C,A),\hausdorffmetric(D,B)}=\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.
+    \end{align*}
+    Tedy celkově lze psát
+    \begin{align*}
+        \hausdorffmetric(A\cup B,C\cup D)&=\max\set{\sup_{x\in A\cup B}\varrho(x,C\cup D),\sup_{x\in C\cup D}\varrho(x,A\cup B)}\\
+        &\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.
+    \end{align*}
+\end{proof}
+
+Dvojice lemmat \ref{lem:spojitost-a-hyperprostor} a \ref{lem:kontrakce-a-hyperprostor} nám v podstatě říká, že obrazem kompaktní množiny v kontraktivním zobrazení\index{zobrazení!kontraktivní}\index{kontraktivní zobrazení} je opět kompaktní množina a že "kontraktivita" zobrazení definovaného na libovolném metrickém prostoru $(X,\varrho)$ se zachovává na hyperprostoru. Tento výsledek se nám bude později hodit, neboť neboť jak již bylo zmíněno na začátku, některé fraktály lze konstruovat pomocí opakované aplikace určitých geometrických tranformací. Jak lze nejspíše z dosavadního výkladu tušit, budeme pracovat právě s kontrakcemi.
+\begin{definition}[Systém iterovaných funkcí]\label{def:system-iterovanych-funkci}
+    \emph{Systém iterovaných funkcí}\index{systém iterovaných funkcí}, zkráceně IFS (z anglického \emph{iterated function system}\index{iterated function system}), na metrickém prostoru $(X,\varrho)$ je konečná množina kontrakcí
+    \[\set{\mapping{\psi_i}{X}{X}\mid 1\leqslant i\leqslant n}\]
+    s faktory $K_i$. Kontraktivním faktorem IFS je číslo $K=\max\set{K_i\mid 1\leqslant i\leqslant n}$.
+\end{definition}
+Zatím není zcela zjevné, proč definujeme pro IFS kontraktivní faktor jako maximum z faktorů všech kontrakcí v něm obsažených (byť to může působit do jisté míry intuitivně). Odpověď na tuto otázku nám poskytne následující věta \ref{thm:sjednoceni-kontrakci}.
+\begin{theorem}\label{thm:sjednoceni-kontrakci}
+    Nechť $\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS na metrickém prostoru $(X,\varrho)$ s kontraktivním faktorem $0<K<1$. Pak zobrazení $\mapping{\Psi}{\hyperspace(X)}{\hyperspace(X)}$ definované předpisem
+    \[\Psi(A)=\bigcup_{i=1}^n\psi_i(A)\]
+    pro $A\in\hyperspace(X)$ je kontrakce na $(\hyperspace(X),\hausdorffmetric)$ s faktorem $K$.
+\end{theorem}
+\begin{proof}
+    Důkaz tvrzení lze provést indukcí podle $n$. Pro $n=2$ zvolme množiny $A,B\in\hyperspace(X)$. Pak
+    \begin{align*}
+        \hausdorffmetric(\psi_1(A)\cup\psi_2(A),\psi_1(B)\cup\psi_2(B))&\leqslant\max\set{\hausdorffmetric(\psi_1(A),\psi_1(B)),\hausdorffmetric(\psi_2(A),\psi_2(B))}\\
+        &\leqslant\max\set{K_1\hausdorffmetric(A,B),K_2\hausdorffmetric(A,B)}\\
+        &\leqslant K\hausdorffmetric(A,B),
+    \end{align*}
+    kde druhá nerovnost plyne z lemmatu \ref{lem:hausdorffova-metrika-odhad-sjednoceni}. Nyní ukážeme, že zobrazení $\Psi$ definované předpisem $\Psi(A)=\bigcup_{i=1}^n\psi_i(A)$ je kontrakce. Mějme opět množiny $A,B\in\hyperspace(X)$. Pak
+    \begin{align*}
+        \hausdorffmetric(\Psi(A),\Psi(B))&=\hausdorffmetric\left(\bigcup_{i=1}^n\psi_i(A),\bigcup_{j=1}^n\psi_j(B)\right)\\
+        &=\hausdorffmetric\left(\left(\bigcup_{i=1}^{n-1}\psi_i(A)\right)\cup\psi_n(A),\left(\bigcup_{j=1}^{n-1}\psi_j(B)\right)\cup\psi_n(B)\right)\\
+        &\leqslant\max\set{\hausdorffmetric\left(\bigcup_{i=1}^{n-1}\psi_i(A),\bigcup_{j=1}^{n-1}\psi_j(B)\right),\hausdorffmetric(\psi_n(A)\cup\psi_n(B))}\\
+        &\stackrel{\text{I.P.}}{\leqslant}\max\set{K\hausdorffmetric(A,B),K_n\hausdorffmetric(A,B)}\leqslant K\hausdorffmetric(A,B).
+    \end{align*}
+\end{proof}
