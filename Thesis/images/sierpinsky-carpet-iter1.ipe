@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="753 752" frame="753 752" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -264 737">
+<path stroke="0 0 0" fill="0 0 0" join="1">
+1005 482 m
+762 482 l
+762 239 l
+1005 239 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+519 482 m
+276 482 l
+276 239 l
+519 239 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+762 725 m
+519 725 l
+519 482 l
+762 482 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+1005 725 m
+762 725 l
+762 482 l
+1005 482 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+519 239 m
+276 239 l
+276 -4 l
+519 -4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+762 239 m
+519 239 l
+519 -4 l
+762 -4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+1005 239 m
+762 239 l
+762 -4 l
+1005 -4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+519 725 m
+276 725 l
+276 482 l
+519 482 l
+h
+</path>
+</group>
+</page>
+</ipe>

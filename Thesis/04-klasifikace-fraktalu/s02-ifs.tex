@@ -152,7 +152,7 @@ kde $B\in\hyperspace(X)$. Zajímavostí je fakt, že výsledný atraktor $A$ je 
 
 V dalším textu budeme pracovat především s afinními zobrazeními v $\R^n$ se standardní eukleidovskou metrikou. Připomeňme si zde, že afinním zobrazením rozumíme jakékoliv zobrazení $\mapping{f}{X}{X}$, takové, že
 \[f(x)=\mat{A}x+b,\]
-kde $b\in X$ a $\mat{A}$ je regulární matice. O afinnitách lze též dokázat řadu zajímavých tvrzení, avšak tyto záležitosti již spadají spíše do oblasti lineární algebry. Avšak v případě každé z afinnit, které zde dále uvidíme, se čtenář může celkem snadno přesvědčit, že se skutečně jedná o kontrakci.
+kde $b\in X$ a $\mat{A}$ je regulární matice. O afinnitách lze též dokázat řadu zajímavých tvrzení, avšak tyto záležitosti již spadají spíše do oblasti lineární algebry. Nicméně v případě každé z afinnit, které zde dále uvidíme, se čtenář může celkem snadno přesvědčit, že se skutečně jedná o kontrakci.
 
 \subsection{Frakrály generované pomocí IFS}\label{subsec:fraktaly-ifs}
 
@@ -234,6 +234,40 @@ kde $B\in\hyperspace(\R^2)$. V našem případě je počítečním útvarem rovn
     \sqrt{3}/2
 \end{matrix}\right).\]
 Prvních několik iterací zobrazení $\Omega$ si lze prohlédnout na obrázku \ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik}. Sierpińského trojúhelník je tedy atraktorem zobrazení $\Omega$.
+
+Zajímavostí je, že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné, že v případě Sierpińského trojúhelníka začínáme s rovnostranným trojúhelníkem, faktem je, že je zcela lhostejné\footnote{Z formálního hlediska je třeba, aby se jednalo o kompaktní neprázdnou množinu, nicméně v $\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny, které \emph{uzavřené a omezené} (viz věta \ref{thm:heine-borel})}, se kterým útvarem začneme (viz obrázek \ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
+
+Vypisovat explicitně dané kontrakce je sice formálně žádoucí, nicméně dosti nepraktické. Dále tedy budeme hodnoty jednotlivých koeficientů $a,b,\ldots,f$ (viz \eqref{eq:afinita-v-R2}) zapisovat do tabulky.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|cccccc}
+    Kontrakce  & $a$   & $b$ & $c$ & $d$   & $e$   & $f$          \\\hline
+    $\omega_1$ & $1/2$ & $0$ & $0$ & $1/2$ & $0$   & $0$          \\
+    $\omega_2$ & $1/2$ & $0$ & $0$ & $1/2$ & $1$   & $0$          \\
+    $\omega_3$ & $1/2$ & $0$ & $0$ & $1/2$ & $1/4$ & $\sqrt{3}/2$ \\
+    \end{tabular}
+    \caption{Koeficienty IFS $\Omega$ pro Sierpińského trojúhelník}
+    \label{table:ifs-sierpinskeho-trojuhelnik}
+\end{table}
+U Waclava Sierpińského se ještě chvíli zdržíme, neboť úvahu konstrukce jeho pravděpodobně nejznámenšího fraktálu lze přenést i na další útvary. Jiným takovým příkladem je tzv. \emph{Sierpińského koberec}\index{Sierpińského koberec} jehož IFS si označíme $\Phi$ (viz tabulka \ref{table:ifs-sierpinskeho-koberec}). I v tomto případě (podobně jako u Sierpińského trojúhelníka) lze začít s libovolným útvarem. 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|cccccc}
+    Kontrakce  & $a$   & $b$ & $c$ & $d$   & $e$   & $f$          \\\hline
+    $\varphi_1$ & $1/3$ & $0$ & $0$ & $1/3$ & $0$   & $0$         \\
+    $\varphi_2$ & $1/3$ & $0$ & $0$ & $1/3$ & $0$   & $1/3$         \\
+    $\varphi_3$ & $1/3$ & $0$ & $0$ & $1/3$ & $0$   & $2/3$         \\
+    $\varphi_4$ & $1/3$ & $0$ & $0$ & $1/3$ & $1/3$   & $2/3$         \\
+    $\varphi_5$ & $1/3$ & $0$ & $0$ & $1/3$ & $1/3$   & $0$         \\
+    $\varphi_6$ & $1/3$ & $0$ & $0$ & $1/3$ & $2/3$   & $0$         \\
+    $\varphi_7$ & $1/3$ & $0$ & $0$ & $1/3$ & $2/3$   & $0$         \\
+    $\varphi_8$ & $1/3$ & $0$ & $0$ & $1/3$ & $2/3$   & $0$
+    \end{tabular}
+    \caption{Koeficienty IFS $\Phi$ pro Sierpińského koberec}
+    \label{table:ifs-sierpinskeho-koberec}
+\end{table}
+Pro ukázku viz obrázek \ref{fig:iterace-zobrazeni-fi-sierpinskeho-koberec}.
+\clearpage
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -280,8 +314,8 @@ Prvních několik iterací zobrazení $\Omega$ si lze prohlédnout na obrázku \
     \caption{Iterace zobrazení $\Omega$}
     \label{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik}
 \end{figure}
-Zajímavostí je, že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné, že v případě Sierpińského trojúhelníka začínáme s rovnostranným trojúhelníkem, faktem je, že je zcela lhostejné\footnote{Z formálního hlediska je třeba, aby se jednalo o kompaktní neprázdnou množinu, nicméně v $\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny, které \emph{uzavřené a omezené} (viz věta \ref{thm:heine-borel})}, se kterým útvarem začneme (viz obrázek \ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
-\begin{figure}[h]
+\clearpage
+\begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -332,7 +366,118 @@ Zajímavostí je, že atraktor daného IFS je zcela nezávislý na volbě počá
             $n=8$
         \end{center}
     \end{subfigure}
-    \caption{Iterace zobrazení $\Omega$ s jiným počátečním útvarem $B$.}
+    \caption{Iterace zobrazení $\Omega$ s jiným počátečním útvarem $B$}
     \label{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}
 \end{figure}
-Vypisovat explicitně dané kontrakce je sice formálně žádoucí, nicméně dosti nepraktické. Dále tedy budeme hodnoty jednotlivých koeficientů $a,b,\ldots,f$ (viz \eqref{eq:afinita-v-R2}) zapisovat do tabulky.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sierpinsky-carpet-iter0.pdf}
+        \begin{center}
+            $n=0$
+        \end{center}
+    \end{subfigure}
+    \qquad
+    \vspace{1cm}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sierpinsky-carpet-iter1.pdf}
+        \begin{center}
+            $n=1$
+        \end{center}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sierpinsky-carpet-iter2.pdf}
+        \begin{center}
+            $n=2$
+        \end{center}
+    \end{subfigure}
+    \qquad
+    \vspace{1cm}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sierpinsky-carpet-iter3.pdf}
+        \begin{center}
+            $n=3$
+        \end{center}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sierpinsky-carpet-iter5.pdf}
+        \begin{center}
+            $n=5$
+        \end{center}
+    \end{subfigure}
+    \caption{Iterace zobrazení $\Phi$}
+    \label{fig:iterace-zobrazeni-fi-sierpinskeho-koberec}
+\end{figure}
+
+\subsection{Další fraktály a jejich IFS}\label{subsec:fraktaly-a-jejich-ifs}
+
+V této podsekci se podíváme na některé další příklady fraktálů a jejich IFS. I zde jsou všechny obrázky vygenerovány pomocí přiloženého programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pythagorean-tree-iter10.pdf}
+    \begin{center}
+        $n=10$
+    \end{center}
+    \begin{tabular}{c|cccccc}
+    Kontrakce   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$          \\\hline
+    $\psi_1$    & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $0$   & $1$         \\
+    $\psi_2$    & $1/2$ & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $3/2$         \\
+    $\psi_3$    & $1$   & $0$   & $0$   & $1$   & $0$   & $0$         \\
+    \end{tabular}
+    \caption{Pythágorův strom}
+    \label{fig:pythagoruv-strom}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{levi-dragon-iter12.pdf}
+    \begin{center}
+        $n=12$
+    \end{center}
+    \begin{tabular}{c|cccccc}
+    Kontrakce   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$          \\\hline
+    $\psi_1$    & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $0$   & $0$         \\
+    $\psi_2$    & $1/2$ & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $1/2$
+    \end{tabular}
+    \caption{Lévyho drak}
+    \label{fig:levyho-drak}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{heighway-dragon-iter15.pdf}
+    \begin{center}
+        $n=15$
+    \end{center}
+    \begin{tabular}{c|cccccc}
+    Kontrakce   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$          \\\hline
+    $\psi_1$    & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $0$   & $0$         \\
+    $\psi_2$    & $-1/2$ & $-1/2$ & $1/2$ & $-1/2$ & $1$ & $0$
+    \end{tabular}
+    \caption{Dračí křivka}
+    \label{fig:draci-krivka}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sierpinsky-pentagon-iter5.pdf}
+    \begin{center}
+        $n=5$
+    \end{center}
+    \begin{tabular}{c|cccccc}
+    Kontrakce   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$                   \\\hline
+    $\psi_1$    & $0{,}382$ & $0$ & $0$ & $0{,}382$ & $0$   & $0$               \\
+    $\psi_2$    & $0{,}382$ & $0$ & $0$ & $0{,}382$ & $0{,}618$   & $0$         \\
+    $\psi_3$    & $0{,}382$ & $0$ & $0$ & $0{,}382$ & $0{,}809$   & $0{,}588$   \\
+    $\psi_4$    & $0{,}382$ & $0$ & $0$ & $0{,}382$ & $0{,}309$   & $0{,}951$   \\
+    $\psi_5$    & $0{,}382$ & $0$ & $0$ & $0{,}382$ & $-0{,}191$   & $0{,}588$  \\
+    \end{tabular}
+    \caption{Sierpińského pětiúhelník}
+    \label{fig:sierpinskeho-petiuhelnik}
+\end{figure}
+
+\subsection{IFS a výpočet dimenze}\label{subsec:ifs-vypocet-dimenze}
