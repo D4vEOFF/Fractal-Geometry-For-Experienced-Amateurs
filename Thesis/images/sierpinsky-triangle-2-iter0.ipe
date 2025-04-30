@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="454 454" frame="454 454" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -414 587">
+<path stroke="0 0 0" fill="0 0 0" join="1">
+835.56 575.4 m
+651.24 534.44 l
+425.96 309.16 l
+559.08 145.32 l
+702.44 181.16 l
+769 222.12 l
+856.04 370.6 l
+h
+</path>
+</group>
+</page>
+</ipe>

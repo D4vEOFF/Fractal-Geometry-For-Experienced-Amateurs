@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="536 467" frame="536 467" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -372 594">
+<path stroke="0 0 0" fill="0 0 0" join="1">
+672 194.021 m
+608 194.021 l
+640 138.595 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+800 415.723 m
+736 415.723 l
+768 360.297 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+544 415.723 m
+480 415.723 l
+512 360.297 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+736 304.872 m
+672 304.872 l
+704 249.446 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+864 526.574 m
+800 526.574 l
+832 471.149 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+608 526.574 m
+544 526.574 l
+576 471.149 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+608 304.872 m
+544 304.872 l
+576 249.446 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+736 526.574 m
+672 526.574 l
+704 471.149 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+480 526.574 m
+416 526.574 l
+448 471.149 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+704 249.446 m
+640 249.446 l
+672 194.021 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+832 471.149 m
+768 471.149 l
+800 415.723 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+576 471.149 m
+512 471.149 l
+544 415.723 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+768 360.297 m
+704 360.297 l
+736 304.872 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+896 582 m
+832 582 l
+864 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+640 582 m
+576 582 l
+608 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+640 360.297 m
+576 360.297 l
+608 304.872 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+768 582 m
+704 582 l
+736 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+512 582 m
+448 582 l
+480 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+640 249.446 m
+576 249.446 l
+608 194.021 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+768 471.149 m
+704 471.149 l
+736 415.723 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+512 471.149 m
+448 471.149 l
+480 415.723 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+704 360.297 m
+640 360.297 l
+672 304.872 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+832 582 m
+768 582 l
+800 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+576 582 m
+512 582 l
+544 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+576 360.297 m
+512 360.297 l
+544 304.872 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+704 582 m
+640 582 l
+672 526.574 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+448 582 m
+384 582 l
+416 526.574 l
+h
+</path>
+</group>
+</page>
+</ipe>

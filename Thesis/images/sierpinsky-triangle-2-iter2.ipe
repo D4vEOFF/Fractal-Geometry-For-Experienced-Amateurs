@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="516 463" frame="516 463" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -382 592">
+<path stroke="0 0 0" fill="0 0 0" join="1">
+688.64 248.046 m
+642.56 237.806 l
+586.24 181.486 l
+619.52 140.526 l
+655.36 149.486 l
+672 159.726 l
+693.76 196.846 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+816.64 469.749 m
+770.56 459.509 l
+714.24 403.189 l
+747.52 362.229 l
+783.36 371.189 l
+800 381.429 l
+821.76 418.549 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+560.64 469.749 m
+514.56 459.509 l
+458.24 403.189 l
+491.52 362.229 l
+527.36 371.189 l
+544 381.429 l
+565.76 418.549 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+752.64 358.897 m
+706.56 348.657 l
+650.24 292.337 l
+683.52 251.377 l
+719.36 260.337 l
+736 270.577 l
+757.76 307.697 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+880.64 580.6 m
+834.56 570.36 l
+778.24 514.04 l
+811.52 473.08 l
+847.36 482.04 l
+864 492.28 l
+885.76 529.4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+624.64 580.6 m
+578.56 570.36 l
+522.24 514.04 l
+555.52 473.08 l
+591.36 482.04 l
+608 492.28 l
+629.76 529.4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+624.64 358.897 m
+578.56 348.657 l
+522.24 292.337 l
+555.52 251.377 l
+591.36 260.337 l
+608 270.577 l
+629.76 307.697 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+752.64 580.6 m
+706.56 570.36 l
+650.24 514.04 l
+683.52 473.08 l
+719.36 482.04 l
+736 492.28 l
+757.76 529.4 l
+h
+</path>
+<path stroke="0 0 0" fill="0 0 0" join="1">
+496.64 580.6 m
+450.56 570.36 l
+394.24 514.04 l
+427.52 473.08 l
+463.36 482.04 l
+480 492.28 l
+501.76 529.4 l
+h
+</path>
+</group>
+</page>
+</ipe>
