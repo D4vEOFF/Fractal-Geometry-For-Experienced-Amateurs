@@ -311,7 +311,7 @@ Pro ukázku viz obrázek \ref{fig:iterace-zobrazeni-fi-sierpinskeho-koberec}.
             $n=8$
         \end{center}
     \end{subfigure}
-    \caption{Iterace zobrazení $\Omega$}
+    \caption{Iterace zobrazení $\Omega$  (Sierpińského trojúhelník)}
     \label{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik}
 \end{figure}
 \clearpage
@@ -412,7 +412,7 @@ Pro ukázku viz obrázek \ref{fig:iterace-zobrazeni-fi-sierpinskeho-koberec}.
             $n=5$
         \end{center}
     \end{subfigure}
-    \caption{Iterace zobrazení $\Phi$}
+    \caption{Iterace zobrazení $\Phi$ (Sierpińského koberec)}
     \label{fig:iterace-zobrazeni-fi-sierpinskeho-koberec}
 \end{figure}
 
@@ -426,7 +426,7 @@ V této podsekci se podíváme na některé další příklady fraktálů a jeji
         $n=10$
     \end{center}
     \begin{tabular}{c|cccccc}
-    Kontrakce   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$          \\\hline
+    Zobrazení   & $a$   & $b$   & $c$   & $d$   & $e$   & $f$          \\\hline
     $\psi_1$    & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $0$   & $1$         \\
     $\psi_2$    & $1/2$ & $1/2$ & $-1/2$ & $1/2$ & $1/2$ & $3/2$         \\
     $\psi_3$    & $1$   & $0$   & $0$   & $1$   & $0$   & $0$         \\
@@ -434,6 +434,7 @@ V této podsekci se podíváme na některé další příklady fraktálů a jeji
     \caption{Pythágorův strom}
     \label{fig:pythagoruv-strom}
 \end{figure}
+Zde upozorněme však na fakt, že u Pythágorova stromu na obrázku \ref{fig:pythagoruv-strom} zobrazení $\psi_3$ je identita, která není kontrakcí, čili na takový systém nelze aplikovat větu \ref{thm:sjednoceni-kontrakci}. Toto zobrazení je zde však čistě z estetických důvodů, aby původní obrazec nezměnil v další iteraci svoji pozici. Systém $\set{\psi_1,\psi_2}$ již představuje IFS s jednoznačným atraktorem.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{levi-dragon-iter12.pdf}
@@ -481,3 +482,131 @@ V této podsekci se podíváme na některé další příklady fraktálů a jeji
 \end{figure}
 
 \subsection{IFS a výpočet dimenze}\label{subsec:ifs-vypocet-dimenze}
+
+Pojďme se ještě na chvíli vrátit k tématu, které jsme již probírali v úvodní kapitole \ref{chapter:uvod_do_fraktalu} a dále jsme se mu hlouběji věnovali v kapitole \ref{chapter:teorie-miry-a-dimenze} -- dimenzi. V rámci tohoto textu jsme si ukázali dva základní typy, a to \emph{box-counting dimenzi}\index{dimenze!box-counting}\index{box-counting dimenze} a \emph{Hausdorffovu dimenzi}\index{dimenze!Hausdorffova}\index{Hausdorffova dimenze}. V této části navážeme na některé výsledky, k nimž jsme dospěli v podsekcích \ref{subsec:vlastnosti-hausdorffovy-miry} a \ref{subsec:hausdorffova-dimenze}.
+
+Ohlédněme se zpět za příkladem \ref{ex:sierpinskeho-trojuhelnik-hd-dimenze}, kde jsme počítali Hausdorffovu dimenzi Sierpińského trojúhelníka celkově dvěma způsoby. První vycházel přímo z její definice, zatímco druhý byl podstatně jednodušší, neboť pracoval s netriviálním předpokladem, že míra daného útvaru je konečná. Z onoho příkladu však nejspíše tušíme, že počítat Hausdorffovu dimenzi z definice je dosti nepraktické. Proto si zkusíme druhý způsob výpočtu trochu přiblížit.
+
+Než se však pustíme do dalšího výkladu, připomeňme si některé nám již známé výsledky. V sekci \ref{subsec:vlastnosti-bc-dimenze} jsme dokázali větu \ref{thm:bc-dimenze-bi-lipschitzovska-zobrazeni}, která říká, že box-counting dimenze je invariantní vůči lipschitzovskému a bilipschitzovskému zobrazení. Tedy speciálně zobrazení $\mapping{\Psi}{\hyperspace(X)}{\hyperspace(X)}$ z věty \ref{thm:sjednoceni-kontrakci} definované předpisem
+\[\Psi(B)=\bigcup_{i=1}^n\psi_i(B),\]
+kde $B\in\hyperspace(X)$ a $\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS, je lipschitzovské. Horní box-counting dimenze kterékoliv iterace $\Psi^{\circ n}(B)$ je tedy shora omezená horní box-counting dimenzí počátečního útvaru $B$, což plyne z věty \ref{thm:vlastnosti-bc-dimenze} bodu \ref{thm:stabilita-bc-dimenze} (resp. důsledku \ref{cor:stabilita-bc-dimenze-obecne}). Budeme-li tedy počítat např. box-couting dimenzi Cantorova diskontinua (viz příklady \ref{ex:cantorovo-diskontinuum} a \ref{ex:cantorovo-diskontinuum-potreti}), lze ihned odhadnout, že jeho dimenze bude menší než $1$. Konkrétně jsme došli k výsledku
+\[\dfrac{\ln{2}}{\ln{3}}\approx0{,}630929\ldots<1.\]
+Dále na konci sekce \ref{sec:hausdorffova-mira-dimenze} (konkrétně v podsekci \ref{subsec:hausdorffova-dimenze}) jsme dokázali fakt (viz věta \ref{thm:bc-dimenze-vs-hd-dimenze}), že pro neprázdné omezené množiny je Hausdorffova dimenze vždy shora omezena dolní box-counting dimenzí. Pro mnoho útvarů jsme sice jejich box-counting dimenzi, resp. Hausdorffovu dimenzi explicitně nepočítali, ale i tak nám to dává alepoň určitou představu o výsledku.
+
+Tyto dosavadní výsledky jsou jistě hezké, ale přesto nám poskytují pouze odhady daných dimenzí. Nicméně v případě IFS, kterým je tato sekce věnována, si zformulujeme poměrně silné tvrzení, které nám v tomto ohledu podstatně zjednoduší práci. Nejdříve si ale zavedeme jiný termín, který budeme potřebovat.
+\begin{definition}[Open set condition]\label{def:open-set-condition}
+    Nechť je dán IFS $\set{\psi_1,\psi_2,\ldots,\psi_n}$. Řekneme, že kontrakce $\psi_i$, kde $i\in\N$, splňují tzv. \emph{open set condition}\index{open set condition}\footnote{Do češtiny bychom tento název mohli volně přeložit jako \emph{"Podmínka existence otevřené množiny"}, avšak radši se budefme držet oficiálního názvu.}, pokud platí:
+    \begin{enumerate}[label=(\alph*)]
+        \item $V\supseteq\Psi(V)$
+        \item a množiny $\psi_1(V),\psi_2(V),\ldots,\psi_n(V)$ jsou po dvou disjunktní.
+    \end{enumerate}
+\end{definition}
+(Převzato z \citep[str. 139]{Falconer1989}.)
+
+V případě Cantorova diskontinua je jeho IFS $\set{\gamma_1\gamma_2}$ dán následujícími předpisy:
+\begin{align*}
+    \gamma_1(x)&=\dfrac{1}{3}x,\\
+    \gamma_2(x)&=\dfrac{1}{3}x+\dfrac{2}{3}.
+\end{align*}
+Vezmeme-li jako otevřenou množinu otevřený interval $I=(0,1)$, pak
+\[\gamma_1(I)=\left(0,\frac{1}{3}\right)\;\text{a}\;\gamma_2(I)=\left(\frac{2}{3},1\right).\]
+Tedy určitě platí
+\[I\supseteq\left(0,\frac{1}{3}\right)\cup\left(\frac{2}{3},1\right)\]
+a zároveň $\gamma_1(I)\cap\gamma_2(I)=\emptyset$. Celkově tedy IFS $\set{\gamma_1,\gamma_2}$ splňuje open set condition. Podobně si lze uvědomit, že např. IFS pro Sierpińského trojúhelník též splňuje open set condition, neboť při volbě rovnostranného trojúhelníku $T$ jako počátečního útvaru lze za hledanou otevřenou množinu vzít vnitřek $\interior{T}$. Společně s tímto konceptem máme již nástroje k formulaci následující věty.
+\begin{theorem}\label{thm:vypocet-hd}
+    Nechť $(X,\varrho)$ je metrický prostor a dále nechť je dán IFS
+    \[\set{\psi_1,\ldots,\psi_n}\]
+    splňující open set condition, kde kontrakce $\psi_i$ má faktor $r_i$ pro každé $i\in\N$. Je-li $F\in\hyperspace(X)$ atraktorem IFS $\set{\psi_1,\ldots,\psi_n}$, pak
+    \[\dimH{F}=\dimB{F}=s,\]
+    kde $s$ splňuje rovnost
+    \[\sum_{i=1}^{n}r_i^s=1.\]
+    Navíc platí $0<\hausdorffmeasure{s}(F)<\infty$. 
+\end{theorem}
+S prominutím si dovolím opět důkaz vynechat, neboť je poměrně pracný, avšak lze jej nalézt v knize \citep[str. 140]{Falconer1989}. Tato věta nejen ospravedlňuje náš předešlý "zjednodušený" výpočet Hausdorffovy dimenze v příkladu \ref{ex:sierpinskeho-trojuhelnik-hd-dimenze}, ale dokonce nám jej podstatně zlehčuje. Pojďme se proto podívat na některé další příklady výpočtu.
+\begin{example}[Sierpińského koberec]\label{ex:sierpinskeho-koberec-hd-dimenze}
+    IFS pro Sierpińského koberec $S$ jsme si uvedli v tabulce \ref{table:ifs-sierpinskeho-koberec}. Lze si snadno rozmyslet, že každá z jeho kontrakcí má faktor $r_i=1/3$ pro $i=1,2,\ldots,8$. Pak podle věty \ref{thm:vypocet-hd} lze psát
+    \[\sum_{i=1}^{8}r_i=8\left(\dfrac{1}{3}\right)^s=1.\]
+    Odtud již jednoduchou úpravou získáme výsledek
+    \[s=\dimH{S}=\dfrac{\ln{8}}{\ln{3}}\approx1{,}892789\ldots\]
+\end{example}
+V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem dojít k výsledku. Nicméně jejich IFS mají společnou jednu vlastnost, a to sice, že všechny jejich kontrakce mají stejný faktor, což nám dosti usnadňuje celý výpočet. Pojďme se proto podívat na fraktál, kde faktory kontrakcí příslušného IFS jsou různé.
+\begin{example}[Modifikovaná Kochova křivka]\label{ex:modifikovana-kochova-krivka}
+    Modifikujeme Kochovu křivku tak, že strany rovnostranného trojúhelníka sestrojného nad úsečkou bude mít stranu obecné délky $0<a<1$. Dále navíc upravíme orientaci sestrojených trojúhelníků. Definujme IFS $\set{\kappa_1,\kappa_2,\kappa_3,\kappa_4}$ následovně:
+    \begin{align*}
+        \kappa_1\left(\begin{matrix}
+            x\\
+            y
+        \end{matrix}\right)&=\dfrac{1-a}{2}\left(\begin{matrix}
+            1 & 0\\
+            0 & 1
+        \end{matrix}\right),\\
+        \kappa_2\left(\begin{matrix}
+            x\\
+            y
+        \end{matrix}\right)&=\dfrac{1-a}{2}\left(\begin{matrix}
+            1 & 0\\
+            0 & 1
+        \end{matrix}\right)+\dfrac{1+a}{2}\left(\begin{matrix}
+            1\\
+            0
+        \end{matrix}\right),\\
+        \kappa_3\left(\begin{matrix}
+            x\\
+            y
+        \end{matrix}\right)&=a\left(\begin{matrix}
+            \cos(\pi/3) & -\sin(\pi/3)\\
+            \sin(\pi/3) & \cos(\pi/3)
+        \end{matrix}\right)+\dfrac{1-a}{2}\left(\begin{matrix}
+            1\\
+            0
+        \end{matrix}\right)\\
+        &=a\left(\begin{matrix}
+            1/2 & -\sqrt{3}/2\\
+            \sqrt{3}/2 & 1/2
+        \end{matrix}\right)+\dfrac{1-a}{2}\left(\begin{matrix}
+            1\\
+            0
+        \end{matrix}\right),\\
+        \kappa_4\left(\begin{matrix}
+            x\\
+            y
+        \end{matrix}\right)&=a\left(\begin{matrix}
+            \cos(2\pi/3) & -\sin(2\pi/3)\\
+            \sin(2\pi/3) & \cos(2\pi/3)
+        \end{matrix}\right)+\dfrac{1+a}{2}\left(\begin{matrix}
+            1\\
+            0
+        \end{matrix}\right)\\
+        &=a\left(\begin{matrix}
+            -1/2 & -\sqrt{3}/2\\
+            \sqrt{3}/2 & -1/2
+        \end{matrix}\right)+\dfrac{1+a}{2}\left(\begin{matrix}
+            1\\
+            0
+        \end{matrix}\right).
+    \end{align*}
+    Pro představu viz obrázek \ref{fig:modifikovana-kochova-krivka}.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{modified-koch-curve-iter1.pdf}
+        \begin{center}
+            $n=1$
+        \end{center}
+        \includegraphics[width=\textwidth]{modified-koch-curve-iter2.pdf}
+        \begin{center}
+            $n=2$
+        \end{center}
+        \includegraphics[width=\textwidth]{modified-koch-curve-iter6.pdf}
+        \begin{center}
+            $n=6$
+        \end{center}
+        \caption{Modifikovaná Kochova křivka pro $a=1/5$.}
+        \label{fig:modifikovana-kochova-krivka}
+    \end{figure}
+    Označíme-li si opět faktory pro $\kappa_1,\kappa_2,\kappa_3$ a $\kappa_4$ po řadě $r_1,r_2,r_3,r_4$, pak je zjevně
+    \[r_1=r_2=\dfrac{1-a}{2},\;r_3=r_4=a.\]
+    Tedy Hausdorffova dimenze, resp. box-counting dimenze $s$ je řešením rovnice
+    \[2a^s+2\cdot\left(\dfrac{1-a}{2}\right)^s=1.\]
+    Tu obecně algebraicky řešit nelze s výjimkou $a=1/3$, což by byl případ standardní Kochovy křivky. Pro $a=1/5$ lze numericky dopočítat přibližné řešení $s\approx 1{,}1601$.
+\end{example}
+Příklady výpočtů pro ostatní prezentované fraktální útvary si může čtenář vyzkoušet sám, neboť nejsou nikterak složité. V některých případech může být obtížnější určit kontraktivní faktor daných zobrazení. Asi nejefektivější způsob (nechceme-li faktor počítat přímo z definice) je přes tzv. \emph{SVD rozklad}\footnote{Zkratka pro \emph{Singular Value Decomposition}}\index{SVD roklad} a \emph{singulární čísla}\index{singulární číslo} matice $\mat{A}$. Tím se zde ale již zabývat nebudeme. Pro zvídavého čtenáře však doporučuji knihu \cite{Hladik2019}.

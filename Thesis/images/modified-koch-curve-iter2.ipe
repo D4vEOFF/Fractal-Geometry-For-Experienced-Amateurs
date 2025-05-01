@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="svgtoipe 20240516">
+<ipestyle>
+<layout paper="1024 197" frame="1024 197" origin="0 0" crop="no"/>
+<opacity name="10%" value="0.10"/>
+<opacity name="20%" value="0.20"/>
+<opacity name="30%" value="0.30"/>
+<opacity name="40%" value="0.40"/>
+<opacity name="50%" value="0.50"/>
+<opacity name="60%" value="0.60"/>
+<opacity name="70%" value="0.70"/>
+<opacity name="80%" value="0.80"/>
+<opacity name="90%" value="0.90"/>
+<pathstyle cap="0" join="0" fillrule="wind"/>
+</ipestyle>
+<page>
+<group matrix="1 0 0 -1 -128 459">
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+700 377.718 m
+720 343.077 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+980 447 m
+940 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+580 377.718 m
+620 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+380 447 m
+340 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+740 447 m
+700 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+1140 447 m
+980 447 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+540 447 m
+580 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+540 447 m
+380 447 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+680 343.077 m
+720 343.077 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+900 447 m
+940 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+600 343.077 m
+620 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+300 447 m
+340 377.718 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+680 343.077 m
+640 273.795 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+900 447 m
+740 447 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+600 343.077 m
+640 273.795 l
+h
+</path>
+<path stroke="0 0 0" fill="1 0 0" pen="2" join="1">
+300 447 m
+140 447 l
+h
+</path>
+</group>
+</page>
+</ipe>
