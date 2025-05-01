@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.28">
-<info created="D:20250501171604" modified="D:20250501172314"/>
+<info created="D:20250501171604" modified="D:20250501173401"/>
 <preamble>\usepackage{amssymb}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -314,7 +314,7 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" stroke="black" fill="lightblue">
+<path layer="alpha" matrix="0.766667 0 0 0.749357 39.4667 200.391" stroke="black" fill="darkmagenta" pen="heavier">
 256 768 m
 256 736 l
 16 0 0 -16 240 736 240 720 a
@@ -326,138 +326,163 @@ h
 16 0 0 -16 240 768 256 768 a
 h
 </path>
-<path matrix="1 0 0 1 32 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 64 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 64 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 88.5333 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 96 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 113.067 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 128 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 137.6 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 160 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 162.133 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 192 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 186.667 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 224 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 211.2 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 256 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 235.733 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 288 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 260.267 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 320 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 284.8 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 384 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 333.867 164.422" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 -64 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 -9.6 164.422" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 0 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 39.4667 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 -32 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 14.9333 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<path matrix="1 0 0 1 352 -48" stroke="black" fill="lightyellow">
+<path matrix="0.766667 0 0 0.749357 309.333 164.422" stroke="black" fill="lightyellow">
 96 688 m
 96 656 l
 128 656 l
 128 688 l
 h
 </path>
-<text matrix="1 0 0 1 -2.615 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{e}</text>
-<text matrix="1 0 0 1 29.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
-<text matrix="1 0 0 1 61.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
-<text matrix="1 0 0 1 93.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{o}</text>
-<text matrix="1 0 0 1 157.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{W}</text>
-<text matrix="1 0 0 1 189.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{o}</text>
-<text matrix="1 0 0 1 221.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{r}</text>
-<text matrix="1 0 0 1 253.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
-<text matrix="1 0 0 1 285.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{d}</text>
-<text matrix="1 0 0 1 344.154 -0.6225" transformations="translations" pos="144 624" stroke="black" type="label" width="15.691" height="1.245" depth="0" valign="baseline">\texttt{\dots}</text>
-<text matrix="1 0 0 1 -103.846 -0.6225" transformations="translations" pos="144 624" stroke="black" type="label" width="15.691" height="1.245" depth="0" valign="baseline">\texttt{\dots}</text>
-<text matrix="1 0 0 1 -34.615 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{H}</text>
-<text matrix="1 0 0 1 -66.615 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.812" height="6.918" depth="0" valign="baseline" style="math">\lambda</text>
-<text matrix="1 0 0 1 317.385 -3.044" transformations="translations" pos="144 624" stroke="black" type="label" width="5.812" height="6.918" depth="0" valign="baseline" style="math">\lambda</text>
-<path stroke="black">
+<text matrix="0.766667 0 0 0.749357 37.4618 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{e}</text>
+<text matrix="0.766667 0 0 0.749357 61.9952 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
+<text matrix="0.766667 0 0 0.749357 86.5285 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
+<text matrix="0.766667 0 0 0.749357 111.062 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{o}</text>
+<text matrix="0.766667 0 0 0.749357 160.129 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{W}</text>
+<text matrix="0.766667 0 0 0.749357 184.662 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{o}</text>
+<text matrix="0.766667 0 0 0.749357 209.195 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{r}</text>
+<text matrix="0.766667 0 0 0.749357 233.728 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{l}</text>
+<text matrix="0.766667 0 0 0.749357 258.262 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{d}</text>
+<text matrix="0.766667 0 0 0.749357 303.318 199.925" transformations="translations" pos="144 624" stroke="black" type="label" width="15.691" height="1.245" depth="0" valign="baseline">\texttt{\dots}</text>
+<text matrix="0.766667 0 0 0.749357 -40.1482 199.925" transformations="translations" pos="144 624" stroke="black" type="label" width="15.691" height="1.245" depth="0" valign="baseline">\texttt{\dots}</text>
+<text matrix="0.766667 0 0 0.749357 12.9285 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="6.088" depth="0" valign="baseline">\texttt{H}</text>
+<text matrix="0.766667 0 0 0.749357 -11.6048 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.812" height="6.918" depth="0" valign="baseline" style="math">\lambda</text>
+<text matrix="0.766667 0 0 0.749357 282.795 198.11" transformations="translations" pos="144 624" stroke="black" type="label" width="5.812" height="6.918" depth="0" valign="baseline" style="math">\lambda</text>
+<path matrix="0.766667 0 0 0.749357 39.4667 200.391" stroke="black" fill="orange" pen="heavier">
 160 768 m
 160 736 l
 192 736 l
 192 768 l
 h
 </path>
-<path stroke="black">
+<path matrix="0.766667 0 0 0.749357 39.4667 200.391" stroke="black" fill="orange" pen="heavier">
 208 768 m
 208 736 l
 240 736 l
 240 768 l
 h
+</path>
+<path matrix="0.766667 0 0 0.749357 39.4667 200.391" stroke="black" pen="heavier" arrow="normal/normal">
+200.291 720 m
+208 672
+240 672
+240 640 c
+</path>
+<text matrix="0.766667 0 0 0.749357 98.7952 294.028" transformations="translations" pos="144 624" stroke="black" type="label" width="5.23" height="4.289" depth="0" valign="baseline">\texttt{o}</text>
+<text matrix="0.766667 0 0 0.749357 61.9952 294.028" transformations="translations" pos="144 624" stroke="black" type="label" width="4.805" height="4.297" depth="1.93" valign="baseline" style="math">q</text>
+<text matrix="0.766667 0 0 0.749357 20.4566 193.004" transformations="translations" pos="176 800" stroke="black" type="label" width="96.915" height="8.78" depth="2.49" valign="baseline">Čtecí/zapisovací hlava</text>
+<path matrix="0.766667 0 0 0.749357 14.9333 200.391" stroke="black">
+96 640 m
+64 640 l
+</path>
+<path matrix="0.766667 0 0 0.749357 14.9333 200.391" stroke="black">
+96 608 m
+64 608 l
+</path>
+<path matrix="0.766667 0 0 0.749357 14.9333 200.391" stroke="black">
+512 640 m
+544 640 l
+</path>
+<path matrix="0.766667 0 0 0.749357 14.9333 200.391" stroke="black">
+512 608 m
+544 608 l
 </path>
 </page>
 </ipe>
