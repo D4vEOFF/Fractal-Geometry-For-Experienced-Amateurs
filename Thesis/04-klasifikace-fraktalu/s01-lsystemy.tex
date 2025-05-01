@@ -222,7 +222,7 @@ Dále lze L-systémy rozlišovat podle toho,~zda pro každý řetězec $\alpha\i
 
 \subsection{Želví grafika}\label{subsec:zelvi-grafika}
 
-Pro neznalého čtenáře se může zdát zarážející,~že zde pracujeme celou dobu s~řetězci znaků a~nikoliv s~geometrickými útvary. Zde si ukážeme,~jak interpretovat výsledné řetězce pomocí tzv. \emph{želví grafiky}\index{želní grafika}.
+Pro neznalého čtenáře se může zdát zarážející,~že zde pracujeme celou dobu s~řetězci znaků a~nikoliv s~geometrickými útvary. Zde si ukážeme,~jak interpretovat výsledné řetězce pomocí tzv. \emph{želví grafiky}\index{želví grafika}.
 
 Představme,~že máme virtuální želvu v~$\R^2$,~jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$,~kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a~$\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a~přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů,~s níž budeme v~rámci abecedy $V$ pracovat,~které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka \ref{table:vyznam-symbolu-zelva}.
 \begin{table}[h]
@@ -350,12 +350,14 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter1.pdf}\qquad\\
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter2.pdf}\qquad
     \includegraphics[width=0.3\textwidth]{koch-curve-1-iter3.pdf}\qquad\\
-    \includegraphics[width=0.5\textwidth]{koch-curve-1-iter4.pdf}\qquad
+    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter4.pdf}\qquad
     \begin{align*}
         \omega&=F-F-F-F\\
         F&\to FF-F-F-F-FF\\
         \delta&=\pi/2
     \end{align*}
+    \caption{Varianta Kochovy křivky}
+    \label{fig:lsystem-varianta-kochovy-krivky}
 \end{figure}
 \begin{figure}
     \centering
@@ -368,6 +370,8 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
         f&\to ffffff\\
         \delta&=\pi/2
     \end{align*}
+    \caption{Jezera a ostrovy}
+    \label{fig:lsystem-jezera-a-ostrovy}
 \end{figure}
 \begin{figure}[H]
     \centering
@@ -379,6 +383,8 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
         \delta&=\pi/3\\
         n&=4
     \end{align*}
+    \caption{Prostor vyplňující křivka}
+    \label{fig:prostor-vyplnujici-krivka}
 \end{figure}
 \begin{figure}[H]
     \centering
@@ -404,10 +410,12 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
             n&=5
         \end{align*}
     \end{subfigure}
+    \caption{Fraktální stromy I a II}
+    \label{fig:lsystem-fraktalni-strom-i-ii}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{bracketed-ol-4-iter5.pdf}
+    \includegraphics[width=0.7\textwidth]{bracketed-ol-4-iter5.pdf}
     \begin{align*}
         \omega&=X\\
         X&\to F[+X][-X]FX\\
@@ -415,6 +423,8 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
         \delta&=22{,}5^\circ\\
         n&=5
     \end{align*}
+    \caption{Fraktální strom III}
+    \label{fig:lsystem-fraktalni-strom-iii}
 \end{figure}
 \begin{figure}[H]
     \centering
@@ -426,4 +436,6 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
         \delta&=\pi/3\\
         n&=8
     \end{align*}
+    \caption{L-systém pro Sierpińského trojúhelník}
+    \label{fig:lsystem-sierpinskeho-trojúhelnik}
 \end{figure}
