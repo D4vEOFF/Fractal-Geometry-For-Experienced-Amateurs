@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 1. 5. 2025
+- Dokončena sekce o *systémech iterovaných funkcí (IFS)*
+
 ## 24. 4. 2025
 - Dokončena sekce o *L-systémech* kapitoly 4
 
