@@ -1,2 +1,25 @@
-\section{Time Escape Algoritmy}\label{sec:tea}
-\todo{Doplnit sekci.}
+\section{Time Escape algoritmy}\label{sec:tea}
+
+Pokud se čtenář dostal až do této části, mohl si všimnout, že jednu kategorii fraktálů jsme zatím zcela vynechali. Přitom právě ta je z velké části zodpovědná za popularitu, které se těší toto odvětví matematiky, zejména \emph{Mandelbrotova množina}\index{Mandebrotova množina}\index{množina!Mandebrotova} (viz obrázek \ref{fig:mandebrotova-mnozina}) pojmenovaná po samotném zakladateli fraktální geometrie.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{ch01-mandelbrotova-mnozina.jpg}
+    \caption[Mandebrotova množina]{Mandebrotova množina (Převzato z Wikipedia Commons)\footnotemark}
+    \label{fig:mandebrotova-mnozina}
+\end{figure}
+Tím spíš s faktem, že její definice není v konečném důsledku nikterak složitá\footnotetext{Dostupné z \url{https://en.wikipedia.org/wiki/Mandelbrot\_set\#/media/File:Mandel\_zoom\_00\_mandelbrot\_set.jpg}}.
+
+S pravděpodobně nejznámějším fraktálem však souvisí dvojice širších termínů, se kterým začneme, a jsou jimi tzv. \emph{Juliovy množiny} a \emph{Fatouovy množiny} pojmenované po francouzských matematicích \name{Gastonovi Juliovi} (1893--1978) a \name{Pierre Fatouovi} (1878--1929). Pro jejich studium se však budeme muset ponořit do světa komplexních čísel.
+
+Lze nejspíše předpokládat, že se čtenář nejspíše s komplexními čísly již setkal. Nebudeme se tedy společně hlouběji zabývat naprostými základy. Pouze si stručně připomeňme značení.
+\begin{itemize}
+    \item \emph{Komplexním číslem}\index{komplexní číslo} rozumíme číslo $z=a+b\imag$, kde $a,b\in\R$ a $\imag^2=-1$. Množinu komplexních čísel, jak už je zvykem, budeme značit $\C$.
+    \item \emph{Komplexně sdruženým číslem}\index{Komplexně sdružerné číslo} k číslu $z=a+b\imag$ rozumíme číslo
+    \[\cconjugate{z}=a-b\imag.\]
+    \item \emph{Absolutní hodnotou komplexního čísla} $z=a+b\imag$ rozumíme vzdálenost od počátku, tj. budeme-li uvažovat metrický prostor $(\C,\varrho)$, pak
+    \[|z|=\varrho(z,0).\]
+    Nejčastěji však budeme uvažovat eukleidovskou metriku $\varrho_e$, tedy
+    \[|z|=\sqrt{a^2+b^2}.\]
+\end{itemize}
+V této sekci budeme především pracovat s komplexními polynomiálními funkcemi $\mapping{f}{\C}{\C}$, tzn. funkcemi ve tvaru
+\[f(z)=\sum_{i=1}^{n}a_iz^i=a_nz^n+a_{n-1}z^{n-1}+\dots+a_1z+a_0.\]
