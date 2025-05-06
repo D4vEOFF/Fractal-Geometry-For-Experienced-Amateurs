@@ -116,13 +116,19 @@ V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik zákla
 
 V čem je lemma \ref{lem:test-konvergence-komplexniho-polynomu} užitečné? V podstatě nám říká, že pro test "chování" posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat, zda absolutní hodnota obrazu v $k$-té iteraci není vyšší, než zvolené $r$. Pokud ano, je již jasné, že posloupnost bude divergovat. Toho využijeme hlavně při generování fraktálů (viz kapitola \ref{chapter:generovani-fraktalu}).
 \begin{example}
-    Vezměme si funkci $f(z)=z^2+c$, kde $c\in\C$. Podle věty při volbě vhodného $r\in\R$, konkrétně $|z|>r$ bude platit, že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
+    Vezměme si funkci $f(z)=z^2+c$, kde $c\in\C$. Podle věty \ref{lem:test-konvergence-komplexniho-polynomu} při volbě vhodného $r\in\R$, konkrétně $|z|>r$ bude platit, že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
     \[r^2-|c|\geqslant 2r.\]
     Aplikací známého vzorce dostaneme
     \[r\geqslant\frac{-2+2\sqrt{1+|c|}}{2}=-1+\sqrt{1+|c|}.\]
-    Je celkem jasné, že záporný kořen zde nemá smysl. Pro test divergence posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat, zda obecně v $k$-té iteraci platí, že
+    Je celkem jasné, že záporný kořen zde nemá smysl. Zároveň však potřebujeme zajistit, aby hodnota na levé straně byla kladná:
+    \begin{align*}
+        r^2-|c|&\geqslant 2r\\
+        r^2-2r&\geqslant|c|\geqslant 0\\
+        r(r-2)&\geqslant 0
+    \end{align*}
+    To platí pro $r\in\langle 2,\infty)$. Pro test divergence posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat, zda obecně v $k$-té iteraci platí, že
     \[|z^2+c|\geqslant r.\]
-    Pro funkce tohoto tvaru se často volí $r=2$.
+    Pro funkce tohoto tvaru se často volí právě $r=2$.
 \end{example}
 O Juliových množinách lze dokázat některé základní vlastnosti.
 \begin{theorem}\label{thm:vztah-kf-a-jf}
