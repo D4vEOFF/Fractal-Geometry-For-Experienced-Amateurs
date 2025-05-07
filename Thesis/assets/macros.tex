@@ -223,3 +223,16 @@
 \SetProcNameSty{\normalfont\upshape} % pro jméno procedury
 \SetProcArgSty{\normalfont\upshape}  % pro argumenty procedury
 \SetCommentSty{\normalfont\upshape}  % pro komentáře
+
+% Programy
+\newfloat{program}{htbp}{lop}%  % název prostředí, defaultní umístění, přípona seznamu
+\floatname{program}{Program}  % jak se bude číslovat a psát v caption
+\newcommand{\listofprograms}{\listof{program}{Seznam programů}}
+
+\counterwithin{algocf}{section}      % algocf je interní čítač algorithm2e
+\renewcommand{\thealgocf}{\thesection.\arabic{algocf}}
+
+\makeatletter
+  \let\c@program\c@algocf          % krok čítače program → algocf
+  \let\theprogram\thealgocf        % tisk stejného formátu
+\makeatother
