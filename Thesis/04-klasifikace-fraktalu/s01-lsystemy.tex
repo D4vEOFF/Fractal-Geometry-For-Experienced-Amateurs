@@ -280,22 +280,14 @@ Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro
 \end{figure}
 Všimněte si,~že právě onen rekurzivní "charakter" gramatik,~resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce \ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s~L-systémy kvůli modelování růstu a~vývoje rostlin. Je ovšem nejsíše jasné,~že růst rostlin není čistě deterministický proces a~hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I~takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický},~kde každému pravidlu přiřadíme pravděpodobnost aplikace v~dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a~jejich L-systémů se můžete podívat v~podsekci \ref{subsec:ukazky-fraktalu-lsystemy}.
 
-V případě modelování rostlin se nám bude hodit zavést ještě dvojici symbolů. Mnohdy se nám stane,~že se potřebujeme vrátit na určitou pozici,~kde želva již stála. To by bylo možné vyřešit např. zpětným chodem želvy do původní pozice,~nicméně velice špatně by se s~tímto pracovalo v~rámci L-systému. Nejdříve si vysvětlíme pojem tzv. \emph{zásobníku}\index{zásobník}.
+V případě modelování rostlin se nám bude hodit zavést ještě další dvojici symbolů. Mnohdy se nám stane,~že se potřebujeme vrátit na určitou pozici,~kde želva již stála. To by bylo možné vyřešit např. zpětným chodem želvy do původní pozice,~nicméně velice špatně by se s~tímto pracovalo v~rámci L-systému. Proto si nejdříve vysvětlíme pojem tzv. \emph{zásobníku}\index{zásobník}.
 
 Koncept zásobníku je programátorům nejspíše velmi dobře známý,~přesto však jej zde krátce vysvětlíme. Jedná se datovou strukturu pro dočasné ukládání dat,~přičemž jeho charakteristikou je,~že data,~která jsou zařazena do zásobníku jako poslední jsou jako první odebrána. Pro tento způsob manipulace s~daty se používá zkratka \emph{LIFO\footnote{Alternativním způsobem je \emph{FIFO\index{FIFO} -- First In,~First Out},~který je využíván u~datové struktury zvané \emph{fronta}\index{fronta}.}\index{LIFO} -- Last In,~First Out}. V~rámci zásobníku máme dvojici základních operací:
 \begin{itemize}
     \item \emph{vložení prvku na vrchol zásobníku} (tzv. operace \texttt{push}),~
     \item a~\emph{odebrání prvku z~vrcholu zásobníku} (tzv. operace \texttt{pop}).
 \end{itemize}
-Pro znázornění zásobníku viz obrázek \ref{fig:zasobnik}.
-\begin{figure}[h]
-    \centering
-    \includegraphics{ch04-zasobnik.pdf}
-    \caption{Znázornění zásobníku.}
-    \label{fig:zasobnik}
-\end{figure}
-
-Do abecedy $V$ zavedeme nové znaky uvedené v~tabulce \ref{table:vyznam-symbolu-zelva-zasobnik}. 
+Pro znázornění zásobníku viz obrázek \ref{fig:zasobnik}. Do abecedy $V$ zavedeme nové znaky uvedené v~tabulce \ref{table:vyznam-symbolu-zelva-zasobnik}. 
 \begin{table}[H]
     \centering
     \begin{tabular}{lp{0.8\textwidth}}
@@ -305,13 +297,12 @@ Do abecedy $V$ zavedeme nové znaky uvedené v~tabulce \ref{table:vyznam-symbolu
     \caption{Význam symbolů v~abecedě $V$ pro želvu.}
     \label{table:vyznam-symbolu-zelva-zasobnik}
 \end{table}
-Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení fraktálních útvarů,~jako je např. tento:
+Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení dalších fraktálních útvarů, neboť máme možnost si určitých místech ukládat stav želvy, k němuž se lze posléze vrátit. Uvažujme např. L-systém definovaný takto (viz obrázek \ref{fig:fraktalni-strom}):
 \begin{itemize}
     \item \emph{Axiom:} $\omega=F$,
     \item \emph{Pravidla $P$:} $F\to FF-[-F+F+F]+[+F-F-F]$,
     \item $\delta=\pi/8$.
 \end{itemize}
-Viz obrázek \ref{fig:fraktalni-strom}.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.3\textwidth}
@@ -330,12 +321,12 @@ Viz obrázek \ref{fig:fraktalni-strom}.
     \end{subfigure}
     \begin{subfigure}{0.3\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{bracketed-ol-1-iter3.pdf}
+        \includegraphics[width=0.9\textwidth]{bracketed-ol-1-iter3.pdf}
         \begin{center}
             $n=3$
         \end{center}
     \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
+    \begin{subfigure}{0.6\textwidth}
         \centering
         \includegraphics[width=\textwidth]{bracketed-ol-1-iter4.pdf}
         \begin{center}
@@ -345,19 +336,25 @@ Viz obrázek \ref{fig:fraktalni-strom}.
     \caption{Fraktální strom pro $n=1,2,3,4$}
     \label{fig:fraktalni-strom}
 \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch04-zasobnik.pdf}
+    \caption{Znázornění zásobníku.}
+    \label{fig:zasobnik}
+\end{figure}
 
 \subsection{Ukázky fraktálů a~jejich L-systémů}\label{subsec:ukazky-fraktalu-lsystemy}
 
 Zde naleznete některé další ukázky fraktálů a~jejich L-systémů. Všechny obrázky fraktálních útvarů,~které jste zde viděli a~ještě uvidíte jsou vygenerovány pomocí přiloženého programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}} k~tomuto textu. Všechny tyto příklady jsou převaty z~knihy \cite{Prusinkiewicz1990},~kde lze též nalézt mnoho dalších.
 
 Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~kdy potřebujeme více než jeden neterminál,~tedy kromě $F$ máme ještě jiné znaky. Obecně však platí,~že jejich interpretace v~želví grafice je stejná jako pro symbol $F$.
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter0.pdf}\qquad
-    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter1.pdf}\qquad\\
-    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter2.pdf}\qquad
-    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter3.pdf}\qquad\\
-    \includegraphics[width=0.3\textwidth]{koch-curve-1-iter4.pdf}\qquad
+    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter0.pdf}\qquad
+    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter1.pdf}\qquad\\
+    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter2.pdf}\qquad
+    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter3.pdf}\qquad\\
+    \includegraphics[width=0.4\textwidth]{koch-curve-1-iter4.pdf}\qquad
     \begin{align*}
         \omega&=F-F-F-F\\
         F&\to FF-F-F-F-FF\\
@@ -366,11 +363,11 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
     \caption{Varianta Kochovy křivky}
     \label{fig:lsystem-varianta-kochovy-krivky}
 \end{figure}
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.3\textwidth]{lakes-and-islands-iter0.pdf}\qquad
-    \includegraphics[width=0.3\textwidth]{lakes-and-islands-iter1.pdf}\qquad\\
-    \includegraphics[width=0.5\textwidth]{lakes-and-islands-iter2.pdf}
+    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter0.pdf}\qquad
+    \includegraphics[width=0.4\textwidth]{lakes-and-islands-iter1.pdf}\qquad\\
+    \includegraphics[width=0.6\textwidth]{lakes-and-islands-iter2.pdf}
     \begin{align*}
         \omega&=F+F+F+F\\
         F&\to F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF\\
@@ -393,36 +390,60 @@ Zároveň zde ještě dodejme,~že někdy se též můžeme setkat se situací,~
     \caption{Prostor vyplňující křivka}
     \label{fig:prostor-vyplnujici-krivka}
 \end{figure}
-\begin{figure}[H]
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=0.6\textwidth]{bracketed-ol-2-iter4.pdf}
+%         \begin{align*}
+%             \omega&=F\\
+%             F&\to F[+F]F[-F]F\\
+%             \delta&=25{,}7^\circ\\
+%             n&=4
+%         \end{align*}
+%     \end{subfigure}
+%     \qquad
+%     \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=0.7\textwidth]{bracketed-ol-3-iter5.pdf}
+%         \begin{align*}
+%             \omega&=X\\
+%             X&\to F[+X][-X]FX\\
+%             F&\to FF\\
+%             \delta&=25{,}7^\circ\\
+%             n&=5
+%         \end{align*}
+%     \end{subfigure}
+%     \caption{Fraktální stromy I a II}
+%     \label{fig:lsystem-fraktalni-strom-i-ii}
+% \end{figure}
+\begin{figure}[p]
     \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{bracketed-ol-2-iter4.pdf}
-        \begin{align*}
-            \omega&=F\\
-            F&\to F[+F]F[-F]F\\
-            \delta&=25{,}7^\circ\\
-            n&=4
-        \end{align*}
-    \end{subfigure}
-    \qquad
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=0.6\textwidth]{bracketed-ol-3-iter5.pdf}
-        \begin{align*}
-            \omega&=X\\
-            X&\to F[+X][-X]FX\\
-            F&\to FF\\
-            \delta&=25{,}7^\circ\\
-            n&=5
-        \end{align*}
-    \end{subfigure}
-    \caption{Fraktální stromy I a II}
-    \label{fig:lsystem-fraktalni-strom-i-ii}
+    \includegraphics[height=0.8\textheight]{bracketed-ol-2-iter4.pdf}
+    \begin{align*}
+        \omega&=F\\
+        F&\to F[+F]F[-F]F\\
+        \delta&=25{,}7^\circ\\
+        n&=4
+    \end{align*}
+    \caption{Fraktální strom I}
+    \label{fig:lsystem-fraktalni-strom-i}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.7\textwidth]{bracketed-ol-4-iter5.pdf}
+    \includegraphics[height=0.8\textheight]{bracketed-ol-3-iter5.pdf}
+    \begin{align*}
+        \omega&=F\\
+        F&\to F[+F]F[-F]F\\
+        \delta&=25{,}7^\circ\\
+        n&=4
+    \end{align*}
+    \caption{Fraktální strom II}
+    \label{fig:lsystem-fraktalni-strom-ii}
+\end{figure}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bracketed-ol-4-iter5.pdf}
     \begin{align*}
         \omega&=X\\
         X&\to F[+X][-X]FX\\

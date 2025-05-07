@@ -205,6 +205,30 @@ Vraťme se na chvíli k obrázkům \ref{fig:priklady-vyplnenych-juliovych-mnozin
 %     \label{fig:vyplnena-juliova-mnozina-2-obarveno}
 % \end{figure}
 
-Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho, kolik iterací $k$ dané polynomiální funkce $f$ proběhlo, než hodnota $|f^{\circ k}(z)|$ překročila zadanou mez $r$ (viz lemma \ref{lem:test-konvergence-komplexniho-polynomu}). Vždy volíme pevný počet iterací funkce $f$, který aplikujeme na každý bod $\C$ (resp. na nějakou její podmnožinu). Podle zvoleného počtu se pak bude odvíjet i přesnost naší aproximace, avšak je třeba zvážit i výpočetní náročnost, která (celkem očekávatelně) roste se zvyšujícím se počtem iterací.
-
+Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho, kolik iterací $k$ dané polynomiální funkce $f$ proběhlo, než hodnota $|f^{\circ k}(z)|$ překročila zadanou mez $r$ (viz lemma \ref{lem:test-konvergence-komplexniho-polynomu}). Vždy volíme pevný počet iterací funkce $f$, který aplikujeme na každý bod $\C$ (resp. na nějakou její podmnožinu). Podle zvoleného počtu se pak bude odvíjet i přesnost naší aproximace, avšak je třeba zvážit i výpočetní náročnost, která (celkem očekávatelně) roste se zvyšujícím se počtem iterací. Tomuto tématu (a mnohým dalším) se budeme věnovat v kapitole \ref{chapter:generovani-fraktalu}.
+ 
 \subsection{Mandelbrotova množina}\label{subsec:mandebrotova-mnozina}
+
+Mandebrotova množina patří patrně k jednomu z nejznáměnších fraktálů a stala se terčem nemalého množství publikací a popularizačních materiálů. Její mimořádně složitě vypadající vzhled a charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
+\[f_c(z)=z^2+c,\]
+kde $c\in\C$. Tento konkrétní tvar polynominální funkce jsme již viděli v minulé podsekci, kde jsme se zabývali tzv. \emph{Juliovými množinami}\index{Juliova množina}\index{množina!Juliova}. Ty tvořily hranici množiny všech $z\in\C$, takových, že posloupnost $\set{f^{\circ k}(z)}_{k=1}^\infty$ je omezená. Ani zde se od původní myšlenky nevzdálíme, avšak budeme nyní zkoumat proměnnou $c$.
+\begin{definition}[Mandelbrotova množina]\label{def:mandebrotova-mnozina}
+    \emph{Mandebrotovu množinu}\index{Mandebrotova množina}\index{množina!Mandelbrotova} definujeme jako
+    \[\mathfrak{M}=\set{c\in\C\mid \set{f_c^{\circ k}(0)}_{k=1}^\infty\notto\infty}.\]
+\end{definition}
+Upozorněme explicitně na fakt, že iterace vždy začínají pevně v bodě $z=0$. Mandebrotova množina je ve své podstatě konkrétní případ vyplněné Juliovy množiny. Stačí uvažovat funkci $g$ definovanou jako $g(c)=f_c(0)$. Pak zjevně $\mathfrak{M}=\filledinjulia(g)$ (viz obrázky \ref{fig:znazorneni-mandebrotovy-mnoziny} a \ref{fig:znazorneni-mandebrotovy-mnoziny-vybarveno}). Lze se však setkat i s jinými ekvivalentními definicemi. Např. $\mathfrak{M}$ lze charakterizovat i takto:
+\[\mathfrak{M}=\set{c\in\C\mid\julia(f_c)\;\text{je souvislá}}.\]
+Důkaz je opět delší, takže se znovu odkážeme na knihu \citep[str. 245]{Falconer1989}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot-set.pdf}
+    \caption{Znázornění aproximace množiny $\mathfrak{M}$.}
+    \label{fig:znazorneni-mandebrotovy-mnoziny}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot-set-colored.pdf}
+    \caption{Barevné znázornění aproximace množiny $\mathfrak{M}$.}
+    \label{fig:znazorneni-mandebrotovy-mnoziny-vybarveno}
+\end{figure}
+Jak je to s dimenzí? Tu lze odhadnout velice snadno. Zjevně platí, že $\dimH{\mathfrak{M}}\leqslant 2$. Zároveň však platí i druhá nerovnost $\dimH{\mathfrak{M}}\geqslant 2$, neboť $\mathfrak{M}$ obsahuje jako podmnožinu kouli $B_r(0)$, jejíž Hausdorffova dimenze je $2$. To zároveň silně podtrhuje naše konstatování neexistence jednotné definice termínu "fraktál", což jsme zmínili v sekci \ref{sec:co-je-to-fraktal}. Některé definice říkají, že za fraktální útvar považujeme soběpodobný útvar, jehož Hausdorffova dimenze je neceločíselná, avšak zde vidíme, že v tom případě bychom Mandebrotovu množinu nemohli považovat za fraktál.
