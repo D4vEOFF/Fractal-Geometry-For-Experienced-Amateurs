@@ -11,6 +11,7 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codebeige}{HTML}{D4A000}
 \definecolor{codepink}{HTML}{FF0055}
+\definecolor{lightgray}{HTML}{f1f1f1}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinelanguage{Rust}{
@@ -42,23 +43,22 @@
 
 % Styl pro Python
 \lstdefinestyle{python}{
-    language=Python,
-    tabsize=2,
-    extendedchars=true,
-    breaklines=true,
-    basicstyle=\footnotesize\ttfamily,
-    stringstyle=\color{codebeige}\ttfamily,
-    commentstyle=\color{codegreen}\ttfamily,
-    keywordstyle=\color{codeblue}\bfseries,
-    identifierstyle=\color{black},
-    showspaces=false,
-    showtabs=true,
-    xleftmargin=10pt,
-    framexleftmargin=17pt,
-    framexrightmargin=17pt,
-    framexbottommargin=4pt,
-    showstringspaces=false,
-    morekeywords={False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield}
+  language=Python,%
+  basicstyle=\footnotesize\ttfamily\color{black},%
+  keywordstyle=\color{codeblue}\bfseries,%
+  commentstyle=\color{codegreen},%
+  stringstyle=\color{codepink},%
+  identifierstyle=\color{black},% proměnné zůstanou černé
+  morekeywords=[2]{int,float,str,bool,list,dict,set,tuple},% datové typy
+  keywordstyle=[2]\color{codegreen},% zeleně jen typy
+  numbers=left,%
+  numberstyle=\tiny\color{codegray},%
+  numbersep=8pt,%
+  xleftmargin=2em,%
+  tabsize=4,%
+  showspaces=false, showstringspaces=false, showtabs=false,%
+  breaklines=true,%
+  backgroundcolor=\color{lightgray}% světle šedé pozadí
 }
 
 % Styl pro C#
