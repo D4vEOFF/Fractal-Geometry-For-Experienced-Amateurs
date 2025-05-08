@@ -13,7 +13,14 @@ class LSystem:
     \caption{Konstruktor třídy pro L-systém}
     \label{prog:konstruktor-lsystem}
 \end{program}
-Slovní pravidel \texttt{rules} má jednoduchou strukturu. Klíče tvaří levé strany pravidel a k nim přiřazené hodnoty naopak tvoří pravé strany pravidel. Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotlivých pravidel. Pro další výklad si však zavedeme pohodlnější zápis řetězců, který je v programování zcela běžný.
+Slovní pravidel \texttt{rules} má jednoduchou strukturu. Klíče tvaří levé strany pravidel a k nim přiřazené hodnoty naopak tvoří pravé strany pravidel. Jeho vzhled může vapadat např. takto:
+\begin{verbatim}
+rules = {
+    "X": "F-[[X]+X]+F[+FX]-X",
+    "F": "FF"
+}
+\end{verbatim}
+Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotlivých pravidel. Pro další výklad si však zavedeme pohodlnější zápis řetězců, který je v programování zcela běžný.
 \begin{definition}\label{def:index-retezce}
     Nechť $\alpha=x_1x_2\ldots x_n$ je slovo nad libovolnou abecedou $\Sigma\neq\emptyset$. Pak pro každé $1\leqslant i\leqslant n$ definujeme $\alpha[i]=x_i$.
 \end{definition}
@@ -36,7 +43,7 @@ Myšlenka je velice intuitivní. Obecně máme-li řetězec $w$ po $m$-té itera
     \caption{Algoritmus pro $k$-tou iteraci slova $w$}
     \label{alg:iterace-slova-lsystem}
 \end{algorithm}
-Implementace je, vzhledem k dostupným funkcím v Pythonu, až překvapivě jednoduchá. O tom se čtenář může přesvědčit sám v kódu \ref{prog:iterace-slova-lsystem}.
+Implementace je, vzhledem k dostupným funkcím v Pythonu, až překvapivě jednoduchá. O tom se čtenář může přesvědčit sám v případě kódu \ref{prog:iterace-slova-lsystem}.
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 def iterate(self, iteration_count: int) -> None:
@@ -46,3 +53,8 @@ def iterate(self, iteration_count: int) -> None:
     \caption{Implementace algoritmu \ref{alg:iterace-slova-lsystem}.}
     \label{prog:iterace-slova-lsystem}
 \end{program}
+Pojďme si stručně rozebrat použíté funkce, resp. metody, v programu \ref{prog:iterace-slova-lsystem}.
+\begin{itemize}
+    \item \texttt{str.maketrans} vytvoří ze zadaného slovníku překladovou tabulku pro metodu \texttt{translate}. Její struktura odpovídá slovníku obsahující dvojice \emph{(Unicode hodnota, znak)}
+    \item \texttt{translate} nahradí každý ze znaků řetězcem uvedeným v překladové tabulce.
+\end{itemize}
