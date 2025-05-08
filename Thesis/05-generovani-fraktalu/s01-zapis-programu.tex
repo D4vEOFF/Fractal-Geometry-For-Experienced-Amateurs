@@ -17,7 +17,7 @@ Zároveň bychom neměli zapomínat na zájemce používající jiné programova
 \end{algorithm}
 Implementace takového algoritmu např. právě v jazyce Python si čtenář může prohlédnout u programu \ref{prog:ukazka-implementace-pseudokodu}.
 \begin{program}[h]
-    \begin{lstlisting}[style=python]
+\begin{lstlisting}[style=python]
 def findMax(numbers: list) -> int:
     maximum = numbers[0]
     for i in range(len(numbers)):
@@ -25,8 +25,8 @@ def findMax(numbers: list) -> int:
         if number > maximum:
             maximum = number
     return maximum
-    \end{lstlisting}
+\end{lstlisting}
     \caption{Možná implementace algoritmu \ref{alg:ukazka-pseudokodu}}
     \label{prog:ukazka-implementace-pseudokodu}
 \end{program}
-Pochopitelně se v konkrétní implementaci mohou vyskytovat různé odchylky. Např. v programu \ref{prog:ukazka-implementace-pseudokodu} využíme proměnnou \texttt{number}, kterou bychom jistě mohli vypustit a pracovat přímo se seznamem \texttt{numbers}, tzn. \texttt{numbers[i]}. Nebo bychom například nemuseli program vůbec zapisovat jako funkci, či bychom mohli např. jinak pojmenovat proměnné. To jsou však v celkovém kontextu pouhé drobnosti. V rámci textu se ovšem budeme snažit držet jednotné konvence, tedy že programy budeme vždy psát jako funkce/procedury a proměnné budeme pojmenovávat vždy v angličtině, neboť je to při programování zkrátka zvyklost.
+Pochopitelně se v konkrétní implementaci mohou vyskytovat různé odchylky. Např. v programu \ref{prog:ukazka-implementace-pseudokodu} využíme proměnnou \texttt{number}, kterou bychom jistě mohli vypustit a pracovat přímo se seznamem \texttt{numbers}, resp. jeho $i$-tým prvkem \texttt{numbers[i]}. Nebo bychom například nemuseli program vůbec zapisovat jako funkci, či bychom mohli např. jinak pojmenovat proměnné. To jsou však v celkovém kontextu pouhé drobnosti. V rámci textu se ovšem budeme snažit držet jednotné konvence, tedy že programy budeme vždy psát jako funkce/procedury a proměnné budeme pojmenovávat vždy v angličtině, neboť je to při programování zkrátka zvyklost.

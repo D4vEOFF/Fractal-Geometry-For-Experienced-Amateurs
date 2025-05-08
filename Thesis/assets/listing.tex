@@ -6,6 +6,7 @@
 \definecolor{darkred}{HTML}{DA0707}
 \definecolor{lightred}{HTML}{FF5100}
 \definecolor{orange}{HTML}{FFE000}
+\definecolor{darkyellow}{HTML}{c8bd00}
 \definecolor{codeblue}{HTML}{007eed}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -43,22 +44,30 @@
 
 % Styl pro Python
 \lstdefinestyle{python}{
-  language=Python,%
-  basicstyle=\footnotesize\ttfamily\color{black},%
-  keywordstyle=\color{codeblue}\bfseries,%
-  commentstyle=\color{codegreen},%
-  stringstyle=\color{codepink},%
-  identifierstyle=\color{black},% proměnné zůstanou černé
-  morekeywords=[2]{int,float,str,bool,list,dict,set,tuple},% datové typy
-  keywordstyle=[2]\color{codegreen},% zeleně jen typy
-  numbers=left,%
-  numberstyle=\tiny\color{codegray},%
-  numbersep=8pt,%
-  xleftmargin=2em,%
-  tabsize=4,%
-  showspaces=false, showstringspaces=false, showtabs=false,%
-  breaklines=true,%
-  backgroundcolor=\color{lightgray}% světle šedé pozadí
+    language=Python,%
+    basicstyle=\footnotesize\ttfamily\color{black},%
+    % --- 1) základní klíčová slova jazyka (modrá) ---
+    %   keywords={False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, match, nonlocal, not, or, pass, raise, return, try, while, with, yield}
+    keywordstyle=\color{codeblue}\bfseries,%
+    % --- 2) třída 1: datové typy (zeleně) ---
+    keywords=[2]{int,float,str,bool,list,dict,set,tuple},%
+    keywordstyle=[2]\color{codegreen}\bfseries,%
+    % --- 3) třída 2: vestavěné funkce (oranžově) ---
+    keywords=[3]{abs,aiter,all,anext,any,ascii,bin,breakpoint,bytearray,bytes,callable,chr,classmethod,compile,complex,delattr,dir,divmod,enumerate,eval,exec,filter,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,isinstance,issubclass,iter,len,locals,map,max,memoryview,min,next,object,oct,open,ord,pow,print,property,range,repr,reversed,round,set,setattr,slice,sorted,staticmethod,sum,super,tuple,type,vars,zip},%
+    keywordstyle=[3]\color{darkyellow},%
+    % --- 4) reset pro další věci ---
+    commentstyle=\color{codegreen},%
+    stringstyle=\color{codepink},%
+    identifierstyle=\color{black},%
+    numbers=left,%
+    numberstyle=\tiny\color{codegray},%
+    numbersep=8pt,%
+    xleftmargin=2em,%
+    tabsize=4,%
+    showspaces=false,showstringspaces=false,showtabs=false,%
+    breaklines=true,%
+    backgroundcolor=\color{lightgray},%
+    numberblanklines=false
 }
 
 % Styl pro C#
