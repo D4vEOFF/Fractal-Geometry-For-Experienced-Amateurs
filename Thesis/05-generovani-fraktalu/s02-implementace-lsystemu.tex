@@ -2,7 +2,7 @@
 
 Na základní princip L-systémů\index{L-systém} jsme se podívali v části \ref{sec:L-systemy}. Jejich implementace je do jisté míry přímočará. Řešení je potřeba rozdělit na dvě části: implementace \emph{samotného L-systému} a \emph{želví grafiky}\index{želví grafika}.
 
-L-systém nepředstavuje nikterak složitou matematickou strukturu. Z definice (viz \ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a seznam přepisovacích pravidel. O to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v definici. L-systém lze tak implementovat jako jednoduchou třídu (viz program ).
+L-systém nepředstavuje nikterak složitou matematickou strukturu. Z definice (viz \ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a seznam přepisovacích pravidel. O to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v definici. L-systém lze tak implementovat jako jednoduchou třídu s atributy \texttt{word} obsahující aktuální slovo po $k$-té iteraci a slovník pravidel \texttt{rules} (viz program \ref{prog:konstruktor-lsystem}).
 \begin{program}[h]
     \begin{lstlisting}[style=python]
 class LSystem:
@@ -12,4 +12,37 @@ class LSystem:
 \end{lstlisting}
     \caption{Konstruktor třídy pro L-systém}
     \label{prog:konstruktor-lsystem}
+\end{program}
+Slovní pravidel \texttt{rules} má jednoduchou strukturu. Klíče tvaří levé strany pravidel a k nim přiřazené hodnoty naopak tvoří pravé strany pravidel. Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotlivých pravidel. Pro další výklad si však zavedeme pohodlnější zápis řetězců, který je v programování zcela běžný.
+\begin{definition}\label{def:index-retezce}
+    Nechť $\alpha=x_1x_2\ldots x_n$ je slovo nad libovolnou abecedou $\Sigma\neq\emptyset$. Pak pro každé $1\leqslant i\leqslant n$ definujeme $\alpha[i]=x_i$.
+\end{definition}
+Myšlenka je velice intuitivní. Obecně máme-li řetězec $w$ po $m$-té iteraci a množinu přepisovacích pravidel $P\subseteq\set{a\to\alpha\mid a\in V,\;\alpha\in V^*}$, kde $V$ je abeceda, pak stačí pro každý znak $w[i]$, kde $1\leqslant i\leqslant n$, pouze zkontrolovat, zda není na levé straně nějakého pravidla v $P$. Pokud ano, dojde k aplikaci příslušného pravidla\footnote{Technicky vzato jsme z formálních důvodů v definici L-systému \ref{def:lsystem} přidali i pravidla tvaru $a\to a$, aby nedošlo k situaci, že pro $a$ neexistuje pravidlo. Avšak z hlediska prakticné implementace toto není překážkou, neboť v případě absence takového pravidla jednoduše symbol přeskočíme.}. Viz pseudokód \ref{alg:iterace-slova-lsystem}.
+\begin{algorithm}[h]
+    \KwIn{Množina pravidel $P$, slovo $w$, číslo $k\in\N$}
+    $w^\prime\gets\lambda$\\
+    \For{$m=1,2,\ldots,k$}{
+        \For{$i=1,2,\ldots,|w|$}{
+            \If{\textup{existuje pravidlo tvaru $(w[i]\to\alpha)\in P$}}{
+                $w^\prime\gets w^\prime[1]\dots w^\prime[i-1]\alpha$
+            }
+            \Else{
+                $w^\prime=w^\prime w[i]$
+            }
+        }
+    }
+    \Return{$w^\prime$}\\
+    \KwOut{Slovo $w^\prime$ odvozené po $k$ iteracích ze slova $w$}
+    \caption{Algoritmus pro $k$-tou iteraci slova $w$}
+    \label{alg:iterace-slova-lsystem}
+\end{algorithm}
+Implementace je, vzhledem k dostupným funkcím v Pythonu, až překvapivě jednoduchá. O tom se čtenář může přesvědčit sám v kódu \ref{prog:iterace-slova-lsystem}.
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+def iterate(self, iteration_count: int) -> None:
+    for _ in range(iteration_count):
+        self._word = self._word.translate(str.maketrans(self._rules))
+\end{lstlisting}
+    \caption{Implementace algoritmu \ref{alg:iterace-slova-lsystem}.}
+    \label{prog:iterace-slova-lsystem}
 \end{program}

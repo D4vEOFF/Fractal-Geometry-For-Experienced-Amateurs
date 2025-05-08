@@ -15,7 +15,14 @@ Zároveň bychom neměli zapomínat na zájemce používající jiné programova
     \caption{Ukázkový pseudokód (hledání minima)}
     \label{alg:ukazka-pseudokodu}
 \end{algorithm}
-Implementace takového algoritmu např. právě v jazyce Python si čtenář může prohlédnout u programu \ref{prog:ukazka-implementace-pseudokodu}.
+
+Nejdříve si vysvětleme některé značení:
+\begin{itemize}
+    \item symbol $\gets$ používáme pro operaci přiřazení hodnoty (místo standardního $=$),
+    \item naopak symbol $=$ budeme používat ve smyslu porovnávání hodnot,
+    \item indexy (u řetězců a polí) v rámci pseudokódu budeme počítat od jedné.
+\end{itemize}
+Implementace zmíněného algoritmu např. právě v jazyce Python si čtenář může prohlédnout u programu \ref{prog:ukazka-implementace-pseudokodu}.
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 def findMax(numbers: list) -> int:
