@@ -1,1 +1,15 @@
 \section{Implementace L-systémů}\label{sec:implementace-lsystemu}
+
+Na základní princip L-systémů\index{L-systém} jsme se podívali v části \ref{sec:L-systemy}. Jejich implementace je do jisté míry přímočará. Řešení je potřeba rozdělit na dvě části: implementace \emph{samotného L-systému} a \emph{želví grafiky}\index{želví grafika}.
+
+L-systém nepředstavuje nikterak složitou matematickou strukturu. Z definice (viz \ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a seznam přepisovacích pravidel. O to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v definici. L-systém lze tak implementovat jako jednoduchou třídu (viz program ).
+\begin{program}[h]
+    \begin{lstlisting}[style=python]
+class LSystem:
+    def __init__(self, axiom: str, rules: dict) -> None:
+        self._word = axiom
+        self._rules = rules
+\end{lstlisting}
+    \caption{Konstruktor třídy pro L-systém}
+    \label{prog:konstruktor-lsystem}
+\end{program}
