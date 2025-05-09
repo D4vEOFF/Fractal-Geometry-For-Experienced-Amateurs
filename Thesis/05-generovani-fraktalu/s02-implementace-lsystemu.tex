@@ -1,6 +1,8 @@
-\section{Implementace L-systémů}\label{sec:implementace-lsystemu}
+\section{Implementace L-systémů a želví grafiky}\label{sec:implementace-lsystemu-a-zelvi-grafiky}
 
 Na základní princip L-systémů\index{L-systém} jsme se podívali v části \ref{sec:L-systemy}. Jejich implementace je do jisté míry přímočará. Řešení je potřeba rozdělit na dvě části: implementace \emph{samotného L-systému} a \emph{želví grafiky}\index{želví grafika}.
+
+\subsection{Implementace L-systémů}\label{subsec:implementace-lsystemu}
 
 L-systém nepředstavuje nikterak složitou matematickou strukturu. Z definice (viz \ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a seznam přepisovacích pravidel. O to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v definici. L-systém lze tak implementovat jako jednoduchou třídu s atributy \texttt{word} obsahující aktuální slovo po $k$-té iteraci a slovník pravidel \texttt{rules} (viz program \ref{prog:konstruktor-lsystem}).
 \begin{program}[h]
@@ -55,6 +57,40 @@ def iterate(self, iteration_count: int) -> None:
 \end{program}
 Pojďme si stručně rozebrat použíté funkce, resp. metody, v programu \ref{prog:iterace-slova-lsystem}.
 \begin{itemize}
-    \item \texttt{str.maketrans} vytvoří ze zadaného slovníku překladovou tabulku pro metodu \texttt{translate}. Její struktura odpovídá slovníku obsahující dvojice \emph{(Unicode hodnota, znak)}
+    \item \texttt{str.maketrans} vytvoří ze zadaného slovníku překladovou tabulku pro metodu \texttt{translate}. Její struktura odpovídá slovníku obsahující dvojice \emph{(Unicode\index{Unicode} hodnota, znak)}
     \item \texttt{translate} nahradí každý ze znaků řetězcem uvedeným v překladové tabulce.
 \end{itemize}
+Tímto způsobem lze implementovat třídu, kde vygenerujeme příslušný řetězec, který následně budeme interpretovat pomocí želví grafiky\index{želví grafika}.
+
+\subsection{Implementace želví grafiky}\label{subsec:implementace-zelvi-grafiky}
+
+Druhou částí je naprogramování želví grafiky. Nyní pracujeme se scénářem, že máme vygenerovaný příslušný řetězec znaků $w$, jehož znaky chceme interpretovat. Za účelem jednoduchosti se pokusíme striktně oddělit samotnou \emph{geometrickou interpretaci řetězce} od jeho \emph{grafické interpretace}.
+
+Pro připomenutí významů jednotlivých symbolů doporučuji se znovu podívat do tabulek \ref{table:vyznam-symbolu-zelva} a \ref{table:vyznam-symbolu-zelva-zasobnik}. Nejdříve si však ujasněme, jaké informace si potřebujeme o želvě uchovávat.
+\begin{itemize}
+    \item Vzdálenost $d$, o kterou se želva při každém kroku posune,
+    \item aktuální pozice želvy $(x,y)$,
+    \item úhel $\alpha\in\langle 0,2\pi)$ udávající směr želvy
+    \item přírůstek úhlu $\delta$,
+    \item seznam nakrelených úseček reprezentované jako uspořádané čtveřice
+    \[(x_0,y_0,x_1,y_1),\]
+    kde $(x_0,y_0)$ a $(x_1,y_1)$ jsou souřadnice počátečního, resp. koncového bodu.
+\end{itemize}
+Podobně jako v případě L-systému, i zde můžeme želvu reprezentovat jako třídu (viz program \ref{prog:konstruktor-zelva}).
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+class Turtle:
+    def __init__(self, step: float, position: Vector = Vector(0, 0), angle: float = 0) -> None:
+        self._position = position
+        self._step = step
+        self._angle = (angle % 360) * math.pi / 180
+        self._pen_down = False
+        self._lines = []
+
+        self._x_min, self._y_min = position.x, position.y
+        self._x_max, self._y_max = position.x, position.y
+\end{lstlisting}
+    \caption{Konstruktor třídy pro želvu}
+    \label{prog:konstruktor-zelva}
+\end{program}
+V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a \texttt{self.\_y\_max}. Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v nich budeme uchovávat minimální, resp. maximální, souřadnici $x$ a $y$ ze všech dosud vygenerovaných úseček. 
