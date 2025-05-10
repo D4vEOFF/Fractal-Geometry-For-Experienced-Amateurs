@@ -2,7 +2,7 @@
 
 Na základní princip L-systémů\index{L-systém} jsme se podívali v části \ref{sec:L-systemy}. Jejich implementace je do jisté míry přímočará. Řešení je potřeba rozdělit na dvě části: implementace \emph{samotného L-systému} a \emph{želví grafiky}\index{želví grafika}.
 
-\subsection{Implementace L-systémů}\label{subsec:implementace-lsystemu}
+\subsection{L-systémy}\label{subsec:implementace-lsystemu}
 
 L-systém nepředstavuje nikterak složitou matematickou strukturu. Z definice (viz \ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a seznam přepisovacích pravidel. O to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v definici. L-systém lze tak implementovat jako jednoduchou třídu s atributy \texttt{word} obsahující aktuální slovo po $k$-té iteraci a slovník pravidel \texttt{rules} (viz program \ref{prog:konstruktor-lsystem}).
 \begin{program}[h]
@@ -62,7 +62,7 @@ Pojďme si stručně rozebrat použíté funkce, resp. metody, v programu \ref{p
 \end{itemize}
 Tímto způsobem lze implementovat třídu, kde vygenerujeme příslušný řetězec, který následně budeme interpretovat pomocí želví grafiky\index{želví grafika}.
 
-\subsection{Implementace želví grafiky}\label{subsec:implementace-zelvi-grafiky}
+\subsection{Želví grafika}\label{subsec:implementace-zelvi-grafiky}
 
 Druhou částí je naprogramování želví grafiky. Nyní pracujeme se scénářem, že máme vygenerovaný příslušný řetězec znaků $w$, jehož znaky chceme interpretovat. Za účelem jednoduchosti se pokusíme striktně oddělit samotnou \emph{geometrickou interpretaci řetězce} od jeho \emph{grafické interpretace}.
 
@@ -115,6 +115,7 @@ kde $\varphi$ je úhel otočení želvy. Navíc v závislosti na tom, zda je per
     \If{\textup{je pero položeno na plátně}}{
         Do seznamu $L$ přidej úsečku $\ell=(x,x^\prime,y,y^\prime)$
     }
+    \Return{$(x^\prime,y^\prime,\ell)$}\\
     \KwOut{Nová pozice želvy s nakreslenou úsečkou $(x^\prime,y^\prime,\ell)$}
     \caption{Posunutí želvy ve směru a nakreslení úsečky}
     \label{alg:posunuti-zelvy-a-usecka}
@@ -137,4 +138,31 @@ def forward(self) -> None:
     \label{prog:implementace-kroku-zelvy}
 \end{program}
 
+\subsection{Zásobník}\label{subsec:zasobnik}
+
+S želví grafikou jsme kromě základní čtveřice symbolů zavedli i dvojici symbolů \texttt{[} a \texttt{]}, které složily pro uložení aktuálního stavu želvy na vrchol zásobníku.
+
+Implementace zásobníku je typicky jednou základních programovacích úloh a nejspíše není nikterak složité si jeho implementaci rozmyslet. Pro její vzorovou ukázku viz \ref{prog:implementace-zasobniku}.
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+class Stack:
+    def __init__(self, items: list = []) -> None:
+        self._items = items
+
+    def push(self, item: object) -> None:
+        self._items.insert(0, item)
+    
+    def pop(self) -> object:
+        item = self._items[0]
+        del self._items[0]
+        return item  
+\end{lstlisting}
+    \caption{Implementace zásobníku}
+    \label{prog:implementace-zasobniku}
+\end{program}
+
 \subsection{Vykreslení obrazce}\label{subsec:vykresleni-obrazce}
+
+Záverečná část implementace želví grafiky spočívá již pouze v samotné implementaci řetězce, který jsme vygenerovali pomocí našeho L-systému (viz podsekce \ref{subsec:implementace-lsystemu}). Začneme však záležitotí, která se spíše týká estetické stránky celé záležitosti, a to manipulací s výsledným obrazcem.
+
+Existují různé knihovny pro práci s grafickým rozhraním\index{grafické rozhraní}\index{rozhraní!grafické} v jazyce Python. My si pro jednoduchost zvolíme knihovnu \emph{Tkinter}\index{Tkinter}. Problém, s nímž se však potřebujeme vypořádat, je zarovnání obrázku na střed grafického okna, neboť počátek soustavy souřadnic je umístěn v levém horním rohu, tedy celé okno tvoří její \textbf{první kvadrant}. To však znamená, že bod $(x,y)$, kde např. $x<0$, nebude viditelný. Pro tento účel jsme si však uchovávali minimální a maximální hodnoty obou souřadnic.
