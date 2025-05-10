@@ -93,4 +93,15 @@ class Turtle:
     \caption{Konstruktor třídy pro želvu}
     \label{prog:konstruktor-zelva}
 \end{program}
-V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a \texttt{self.\_y\_max}. Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v nich budeme uchovávat minimální, resp. maximální, souřadnici $x$ a $y$ ze všech dosud vygenerovaných úseček. 
+
+V tomto případě zvolíme při implementaci želvy následující strategii. Představíme si ji tak, že na sobě připevněné pero a budeme si pouze pamatovat, zda je či není v danou chvíli položeno na plátně. Pokud ano a želva provede krok vpřed, nakreslí za sebou úsečku.
+
+Všechny atributy jsou vysvětleny níže.
+\begin{itemize}
+    \item \texttt{self.\_position} uchovává pozici želvy $(x,y)$,
+    \item \texttt{self.\_step} reprezentuje velikost kroku $d$,
+    \item \texttt{self.\_angle} je počáteční úhel otočení želvy přepočítaný v radiánech,
+    \item \texttt{self.\_pen\_down} udává, zda je pero položeno na plátně.
+    \item \texttt{self.\_lines} ukládá seznam dosud nakrelených úseček.
+\end{itemize}
+V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a \texttt{self.\_y\_max}. Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v nich budeme uchovávat minimální, resp. maximální, souřadnici $x$ a $y$ ze všech dosud vygenerovaných úseček.
