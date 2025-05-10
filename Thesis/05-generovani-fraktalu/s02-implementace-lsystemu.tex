@@ -104,4 +104,37 @@ Všechny atributy jsou vysvětleny níže.
     \item \texttt{self.\_pen\_down} udává, zda je pero položeno na plátně.
     \item \texttt{self.\_lines} ukládá seznam dosud nakrelených úseček.
 \end{itemize}
-V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a \texttt{self.\_y\_max}. Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v nich budeme uchovávat minimální, resp. maximální, souřadnici $x$ a $y$ ze všech dosud vygenerovaných úseček.
+V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a \texttt{self.\_y\_max}. Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v nich budeme uchovávat minimální, resp. maximální, souřadnici $x$ a $y$ ze všech dosud vygenerovaných úseček. Tyto informace se nám budou hodit pro záverečnou manipulaci s výsledným obrazcem.
+
+Jednotlivé akce želvy lze v rámci třídy naprogramovat poměrně snadno. V případě otočení se jedná o jednoduchou práci s úhly. Totéž lze říci i o posunutí želvy ve směru její orientace, neboť její novou pozici stanovíme pomocí vzorce
+\[(x^\prime,y^\prime)=d\cdot(\cos\varphi,\sin\varphi),\]
+kde $\varphi$ je úhel otočení želvy. Navíc v závislosti na tom, zda je pero položeno na plátně buď s pohybem želvy současně vytvoříme novou úsečku, nebo pouze posuneme želvu. Pseudokód si lze prohlédnout v ukázce \ref{alg:posunuti-zelvy-a-usecka} a výslednou implementaci společně s přepočítáváním minimálních a maximálních souřadnic v programu \ref{prog:implementace-kroku-zelvy}.
+\begin{algorithm}[h]
+    \KwIn{Pozice želvy $(x,y)$, úhel $\varphi$, délka kroku $d$, seznam úseček $L$}
+    $x^\prime\gets d\cos(\varphi),y^\prime\gets d\sin(\varphi)$\\
+    \If{\textup{je pero položeno na plátně}}{
+        Do seznamu $L$ přidej úsečku $\ell=(x,x^\prime,y,y^\prime)$
+    }
+    \KwOut{Nová pozice želvy s nakreslenou úsečkou $(x^\prime,y^\prime,\ell)$}
+    \caption{Posunutí želvy ve směru a nakreslení úsečky}
+    \label{alg:posunuti-zelvy-a-usecka}
+\end{algorithm}
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+def forward(self) -> None:
+    prev = self._position
+    self._position += self._step * Vector(math.cos(self._angle), math.sin(self._angle))
+
+    if self._x_min > self._position.x: self._x_min = self._position.x
+    if self._y_min > self._position.y: self._y_min = self._position.y
+    if self._x_max < self._position.x: self._x_max = self._position.x
+    if self._y_max < self._position.y: self._y_max = self._position.y
+
+    if self._pen_down:
+        self._lines.append([prev, self._position])
+\end{lstlisting}
+    \caption{Implementace kroku želvy}
+    \label{prog:implementace-kroku-zelvy}
+\end{program}
+
+\subsection{Vykreslení obrazce}\label{subsec:vykresleni-obrazce}
