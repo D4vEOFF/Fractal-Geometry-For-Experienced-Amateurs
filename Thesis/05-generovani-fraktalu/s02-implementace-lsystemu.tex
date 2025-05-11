@@ -249,8 +249,8 @@ Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. St
             $(x,y)\gets(x^\prime,y^\prime)$
         }
     }
-    \Return{$L$}\\
-    \KwOut{Seznan vzniklých úseček $L$}
+    \Return{$(x,y,\varphi,L)$}\\
+    \KwOut{Stav želvy a seznam vzniklých úseček $(x,y,\varphi,L)$}
     \caption{Simulace pohybu želvy}
     \label{alg:simulace-pohybu-zelvy}
 \end{algorithm}
@@ -259,6 +259,7 @@ Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. St
 lsystem = LSystem(axiom, rules)
 lsystem.iterate(iteration_count)
 
+# Simulate turtle movement
 stack = Stack()
 for char in lsystem.word:
     if char == '+':
@@ -278,11 +279,12 @@ for char in lsystem.word:
         turtle.pen_down = True
         turtle.forward()
 
+# Center the figure        
 turtle.center_to(window_width // 2, window_height // 2)
 
 # Draw figure
 for line in turtle.lines:
-    canvas.create_line(line[0].x, line[0].y, line[1].x, line[1].y, fill=args["stroke_color"], width=args["stroke_width"])
+    canvas.create_line(line[0].x, line[0].y, line[1].x, line[1].y)
 \end{lstlisting}
     \caption{Implementace algoritmu \ref{alg:simulace-pohybu-zelvy} s vykreslením}
     \label{prog:simulace-pohybu-zelvy-a-vykresleni}
