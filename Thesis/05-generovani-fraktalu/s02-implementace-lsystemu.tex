@@ -161,8 +161,129 @@ class Stack:
     \label{prog:implementace-zasobniku}
 \end{program}
 
-\subsection{Vykreslení obrazce}\label{subsec:vykresleni-obrazce}
+\subsection{Vykreslení obrazce pomocí knihovny \texttt{tkinter}}\label{subsec:vykresleni-obrazce}
 
 Záverečná část implementace želví grafiky spočívá již pouze v samotné implementaci řetězce, který jsme vygenerovali pomocí našeho L-systému (viz podsekce \ref{subsec:implementace-lsystemu}). Začneme však záležitotí, která se spíše týká estetické stránky celé záležitosti, a to manipulací s výsledným obrazcem.
 
-Existují různé knihovny pro práci s grafickým rozhraním\index{grafické rozhraní}\index{rozhraní!grafické} v jazyce Python. My si pro jednoduchost zvolíme knihovnu \emph{Tkinter}\index{Tkinter}. Problém, s nímž se však potřebujeme vypořádat, je zarovnání obrázku na střed grafického okna, neboť počátek soustavy souřadnic je umístěn v levém horním rohu, tedy celé okno tvoří její \textbf{první kvadrant}. To však znamená, že bod $(x,y)$, kde např. $x<0$, nebude viditelný. Pro tento účel jsme si však uchovávali minimální a maximální hodnoty obou souřadnic.
+Existují různé knihovny pro práci s grafickým rozhraním\index{grafické rozhraní}\index{rozhraní!grafické} v jazyce Python. My si pro jednoduchost zvolíme knihovnu \emph{tkinter}\index{tkinter}. S prominutím zde nebudeme rozebírat její kompletní obsah\footnote{Pokud by čtenáře zajímala dokumentace, lze ji nelézt např. zde: \url{https://docs.python.org/3/library/tkinter.html\#module-tkinter}}, využijeme pouze některé funkce. Uveďme si však alespoň nutný základ, který budeme potřebovat.
+
+Základem je vytvoření grafického okna, do něhož budeme vykreslovat výsledné obrazce. K tomu je potřeba zavolat konstruktor \texttt{Tk()}. Dále pomocí metod \texttt{geometry} a \texttt{title} lze nastavit jeho šířku a titulek.
+
+Do samotného okna však ještě nelze nic vykreslovat. K tomu je potřeba vytvořit v okně plátno (anglicky \emph{canvas}) pomocí třídy \texttt{Canvas}. Do okna jej následně vložíme zavoláním metody \texttt{pack()} (viz ukázka \ref{prog:tkinter-zaklad}).
+
+Okno nakonec spustíme pomocí metody \texttt{mainloop()}, jejíž volání skočí až po jeho uzavření.
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+import tkinter
+
+window = tkinter.Tk()
+window.geometry(f"1280x720")
+window.title(f"Ukazkove okno")
+
+canvas=tkinter.Canvas(window, width=600, height=800)
+canvas.pack()
+
+window.mainloop()
+\end{lstlisting}
+    \caption{Základní práce s knihovnou \texttt{tkinter}}
+    \label{prog:tkinter-zaklad}
+\end{program}
+
+Knihovna \texttt{tkinter} nabízí mnoho dalších funkcí a toto nebyl ani zdaleka základ v pravém slova smyslu, nicméně bude to pro naše potřeby dostačující.
+
+Problém, s nímž se však nyní potřebujeme vypořádat, je zarovnání obrázku na střed grafického okna, neboť počátek soustavy souřadnic je umístěn v levém horním rohu plátna, tedy celé plátno tvoří její \textbf{první kvadrant}. To však znamená, že např. bod $(x,y)$, kde např. $x<0$, nebude viditelný. Pro tento účel jsme si však uchovávali minimální a maximální hodnoty obou souřadnic. Díky nim můžeme následně provést posunutí celého obrazce do požadované polohy.
+
+Střed výsledného (zatím nevykresleného) obrazce dokážeme jednoduše spočítat. Známe-li minimální, resp. maximální hodnoty obou souřadnic, které označíme $x_{\text{min}},x_{\text{max}},y_{\text{min}}$ a $y_{\text{max}}$, pak střed $(x_c,y_c)$ určíme jako
+\[(x_c,y_c)=\left(\dfrac{x_{\text{max}}+x_{\text{min}}}{2},\dfrac{y_{\text{max}}+y_{\text{min}}}{2}\right).\]
+Pokud budeme tedy chtít posunout střed obrazce obecně do bodu $(x,y)$, pak vektor posunutí bude jednoduše $\vec{v}=(x,y)-(x_c,y_c)$. Každou z úseček, kterou jsme vygenerovali pomocí želví grafiky, stačí posunout o spočítaný vektor $\vec{v}$ (viz algoritmus \ref{alg:posun-obrazce}). Implementaci si lze opět prohlédnout v ukázce programu \ref{prog:posun-obrazce}.
+\begin{algorithm}[h]
+    \KwIn{Seznam úseček $L$, nový střed $(x,y)$}
+    $(x_c,y_c)\gets((x_{\text{max}}+x_{\text{min}})/2,(y_{\text{max}}+y_{\text{min}})/2)$\\
+    $\vec{v}\gets(x,y)-(x_c,y_c)$\\
+    $L^\prime\gets\emptyset$\\
+    \ForEach{\textup{úsečka $\ell=(x_0,y_0,x_1,y_1)$ v seznamu $L$}}{
+        $(x_0^\prime,y_0^\prime)\gets(x_0,y_0)+\vec{v}$\\
+        $(x_1^\prime,y_1^\prime)\gets(x_1,y_1)+\vec{v}$\\
+        Do $L^\prime$ přidej úsečku $\ell^\prime=(x_0^\prime,y_0^\prime,x_1^\prime,y_1^\prime)$
+    }
+    \Return{$L^\prime$}\\
+    \KwOut{Posunuté úsečky $L^\prime$}
+    \caption{Algoritmus pro posun obrazce}
+    \label{alg:posun-obrazce}
+\end{algorithm}
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+def center_to(self, xc: float, yc: float) -> None:
+    lines_center = Vector((self._x_min + self._x_max) // 2, (self._y_min + self._y_max) // 2)
+    translation_vector = Vector(xc, yc) - lines_center
+
+    for line in self._lines:
+        line[0] += translation_vector
+        line[1] += translation_vector
+\end{lstlisting}
+    \caption{Posunutí středu obrazce do zvoleného bodu}
+    \label{prog:posun-obrazce}
+\end{program}
+Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. Stačí procházet vygenerovaný řetězec znak po znaku a simulovat pohyb želvy, která nám bude do příslušného seznamu ukládat postupně vygenerované úsečky. Následně náš obrazec zarovnáme na střed okna a každou z úseček vykreslíme na plátno (viz algoritmus \ref{alg:simulace-pohybu-zelvy} a ukázka implementace \ref{prog:simulace-pohybu-zelvy-a-vykresleni} společně s vykreslením obrazce).
+\begin{algorithm}[h]
+    \KwIn{Vygenerované slovo $w$, pozice želvy $(x,y)$, úhel otočení $\varphi$, inkrementace úhlu $\delta$, délka kroku $d$}
+    Založ prázdný zásobník $Z$\\
+    $L\gets\emptyset$\\
+    \For{$i=1,2,\ldots,|w|$}{
+        \lIf{$w[i]=\mathtt{+}$}{$\varphi\gets\varphi+\delta$}
+        \lIf{$w[i]=\mathtt{-}$}{$\varphi\gets\varphi-\delta$}
+        \If{$w[i]=\mathtt{f}$}{
+            $(x,y)\gets(x+d\cos\delta,y+d\sin\delta)$
+        }
+        \If{$w[i]=\mathtt{[}$}{
+            Na vrchol zásobníku $Z$ ulož stav želvy $(x,y,\varphi)$
+        }
+        \If{$w[i]=\mathtt{]}$}{
+            Z vrcholu zásobníku $Z$ odstraň stav $(x_t,y_t,\varphi_t)$\\
+            $(x,y)\gets(x_t,y_t)$\\
+            $\varphi\gets\varphi_t$\\
+        }
+        \Else{
+            $(x^\prime,y^\prime)\gets(x+d\cos\varphi,y+d\sin\varphi)$\\
+            Do seznamu $L$ přidej úsečku $(x,y,x^\prime,y^\prime)$\\
+            $(x,y)\gets(x^\prime,y^\prime)$
+        }
+    }
+    \Return{$L$}\\
+    \KwOut{Seznan vzniklých úseček $L$}
+    \caption{Simulace pohybu želvy}
+    \label{alg:simulace-pohybu-zelvy}
+\end{algorithm}
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+lsystem = LSystem(axiom, rules)
+lsystem.iterate(iteration_count)
+
+stack = Stack()
+for char in lsystem.word:
+    if char == '+':
+        turtle.rotate(angle)
+    elif char == '-':
+        turtle.rotate(-angle)
+    elif char == 'f':
+        turtle.pen_down = False
+        turtle.forward()
+    elif char == '[':
+        stack.push((turtle.position, turtle.angle))
+    elif char == ']':
+        state = stack.pop()
+        turtle.position = state[0]
+        turtle.angle = state[1]
+    else:
+        turtle.pen_down = True
+        turtle.forward()
+
+turtle.center_to(window_width // 2, window_height // 2)
+
+# Draw figure
+for line in turtle.lines:
+    canvas.create_line(line[0].x, line[0].y, line[1].x, line[1].y, fill=args["stroke_color"], width=args["stroke_width"])
+\end{lstlisting}
+    \caption{Implementace algoritmu \ref{alg:simulace-pohybu-zelvy} s vykreslením}
+    \label{prog:simulace-pohybu-zelvy-a-vykresleni}
+\end{program}
