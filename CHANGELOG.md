@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 12. 5. 2025
+- Dokončena sekce o *implementaci IFS*
+- Rozšířena sekce o *implementaci TEA*
+
 ## 1. 5. 2025
 - Dokončena sekce o *systémech iterovaných funkcí (IFS)*
 
