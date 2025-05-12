@@ -2,6 +2,8 @@
 
 Poslední kategorii fraktálních útvarů tvořily tzv. \emph{Juliovy množiny}, u nichž jsme si jednoduše vysvětlili, že jejich generování probíhá pomocí tzv. \emph{Time Escape algoritmů}\index{Time Escape algoritmus}\index{algoritmus!Time Escape}. Jejich princip lze nastínit následovně: na vstupu zadáme nějakou komplexní polynomiální funkci $f$ a dále čísla $m\in\N_0$ a $r\in\R$. Čislo $m$ bude sloužit jako horní hranice počtu iterací, který pro každý bod v určitě omezené oblasti komplexní roviny provedeme (to lze pochopitelně dospecifikovat, avšak teď to není úplně podstatné). Pokud v kterékoliv iteraci nastane, že $|f^{\circ k}(z)|>r$, pak bod vyloučíme ze zkoumané množiny. Naopak v případě, že pro každé $0\leqslant k\leqslant m$ je $|f^{\circ k}(z)|\leqslant r$, pak prohlásíme, že bod náleží Juliově množině.
 
+\subsection{Aproximace vyplněné Juliovy množiny}\label{subsec:aproximace-vyplnene-juliovy-mnoziny}
+
 Podívejme se na tento algoritmus trochu blíže v pseudokódu \ref{alg:generovani-vyplnene-jf}.
 \begin{algorithm}
     \KwIn{Komplexní polynomiální funkce $f$, maximální počet iterací $m\in\N_0$, číslo $r\in\R$, konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a $Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
@@ -118,3 +120,16 @@ def iterate(self, iterations: int) -> None:
     \caption{Implementace algoritmu \ref{alg:generovani-vyplnene-jf-pole}}
     \label{prog:generovani-vyplnene-jf-pole}
 \end{program}
+
+\subsection{Aproximace Juliovy množiny}\label{subsec:aproximace-juliovy-mnoziny}
+
+S množinou $\filledinjulia(f)$ se rovněž pojí i její hranice $\boundary{\filledinjulia(f)}$. Co kdybychom chtěli vykreslit pouze hraniční body? Otázka se příliš nevzdaluje té původní, akorát je navíc potřeba o každém bodu $\filledinjulia(f)$ rozhodnout, zda je hraniční, či nikoliv\footnote{Všimněte si, že zde nám náramně hodí výsledek z věty \ref{thm:vztah-kf-a-jf}, specificky bod \ref{thm:jf-podmnozina-kf}, kde jsme dokázali, že $\julia(f)\subseteq\filledinjulia(f)$. Náš návrh je tedy v tomto ohledu oprávněný.}. Přitom myšlenka řešení se vůbec nemusí příliš vzdalovat matematickému pojetí hranice. Tu jsme si definovali pro libovolnou množinu $M$ jako množinu takových bodů, které ve svém libovolně malém okolí obsahují alespoň jeden bod, který $M$ náleží a alespoň jeden, který ji nenáleží. Toho bychom však mohli využít. Stačí zkontrolovat všechny sousední body pro každé $z\in\filledinjulia(f)$, zda alespoň jeden z nich nenáleží $\fatou(f)$. Pokud ano, pak $z$ prohlásíme za hraniční bod (viz obrázek \ref{fig:hranicni-bod}).
+\begin{figure}[h]
+    \centering
+    \includegraphics{ch05-hranicni-bod.pdf}
+    \caption{Ilustrace hraničního bodu}
+    \label{fig:hranicni-bod}
+\end{figure}
+
+\subsection{Přiřazování barev}\label{subsec:prirazovani-barev}
+
