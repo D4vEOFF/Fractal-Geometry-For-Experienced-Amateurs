@@ -1,1 +1,119 @@
 \section{Implementace Time Escape algoritmů}\label{sec:implementace-tea}
+
+Poslední kategorii fraktálních útvarů tvořily tzv. \emph{Juliovy množiny}, u nichž jsme si jednoduše vysvětlili, že jejich generování probíhá pomocí tzv. \emph{Time Escape algoritmů}\index{Time Escape algoritmus}\index{algoritmus!Time Escape}. Jejich princip lze nastínit následovně: na vstupu zadáme nějakou komplexní polynomiální funkci $f$ a dále čísla $m\in\N_0$ a $r\in\R$. Čislo $m$ bude sloužit jako horní hranice počtu iterací, který pro každý bod v určitě omezené oblasti komplexní roviny provedeme (to lze pochopitelně dospecifikovat, avšak teď to není úplně podstatné). Pokud v kterékoliv iteraci nastane, že $|f^{\circ k}(z)|>r$, pak bod vyloučíme ze zkoumané množiny. Naopak v případě, že pro každé $0\leqslant k\leqslant m$ je $|f^{\circ k}(z)|\leqslant r$, pak prohlásíme, že bod náleží Juliově množině.
+
+Podívejme se na tento algoritmus trochu blíže v pseudokódu \ref{alg:generovani-vyplnene-jf}.
+\begin{algorithm}
+    \KwIn{Komplexní polynomiální funkce $f$, maximální počet iterací $m\in\N_0$, číslo $r\in\R$, konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a $Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
+    $K\gets\emptyset$\;
+    \ForEach{\textup{$(a,b)\in X\times Y$}}{
+        $z\gets a+b\imag$\;
+        $t\gets\id$\;
+        \For{$k=0,1,\ldots,m$}{
+            $t\gets t\circ f$\;
+            \If{$|t(z)|>r$}{
+                pokračuj další iterací vnějšího cyklu\;
+            }
+        }
+        $K\gets K\cup\set{z}$\;
+    }
+    \Return{$K$}\;
+    \KwOut{Aproximace vyplněné Juliovy množiny $K(f)$}
+    \caption{Generování vyplněné Juliovy množiny při pevném počtu iterací}
+    \label{alg:generovani-vyplnene-jf}
+\end{algorithm}
+Nejspíše nikoho nepřekvapí, že při vyšších hodnotách čísla $m$ obdržíme lepší odhad Juliovy množiny příslušné polynomiální funkci $f$. Avšak vždy je potřeba zvážit náročnost výpočtu.
+
+Znázornění (vyplněné) Juliovy množiny lze provést různými způsoby. Prezentovaný algorimus \ref{alg:generovani-vyplnene-jf} pouze určuje pro každý zvolený bod $z$, zda naleží, či nenáleží množině $J$. Avšak čtenář zajímající se o tuto partii matematiky již nejspíše viděl poměrně známý způosb vyobrazení těchto množin s barevným rozlišováním bodů. Tuto záležitost jsme již zmínili ke konci části \ref{subsec:juliovy-fatouovy-mnoziny}, avšak jeho podstatné aspekty jsou především algoritmické povahy a tedy teprve v této kapitole je více rozvedeme. K tomu se však dostaneme později.
+
+Praktická implementace Time Escape algoritmů bude podstatně složitější, neboť si musíme vypořádat s konverzí samotného polynomu a rovněž vyřešit způsob vzorkování vybrané části komplexní roviny. Dále se budeme držet realizace pomocí třídy (viz ukázka \ref{prog:konstruktor-tea}).
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+class TEA:
+    def __init__(self, width: int, height: int, sequence: str, step: int = 1, escape_radius: int = 2, bounds: tuple, var: str, explore_var: str):
+        self._x_count, self._y_count = width // step, height // step
+        
+        self._iter_counts = [[0 for _ in range(self._x_count)] for _ in range(self._y_count)]
+        self._width, self._height = width, height
+        self._sequence = sequence
+        self._var = var
+        self._explore_var = explore_var
+        self._total_iterations = 0
+        self._escape_radius = escape_radius
+
+        x_min, x_max, y_min, y_max = bounds
+
+        x_vals = [x_min + step * (x_max - x_min) * j / width for j in range(self._x_count + 1)]
+        y_vals = [y_min + step * (y_max - y_min) * i / height for i in range(self._y_count + 1)]
+        self._complex_grid = [[x + 1j * y for x in x_vals] for y in y_vals]
+
+        self._point_last_values = [[0 for _ in range(self._x_count)] for _ in range(self._y_count)]
+\end{lstlisting}
+    \caption{Konstruktor třídy \texttt{TEA}}
+    \label{prog:konstruktor-tea}
+\end{program}
+Pojďme si konstruktor \ref{prog:konstruktor-tea} opět rozebrat.
+\begin{itemize}
+    \item \texttt{self.\_x\_count} a \texttt{self.\_y\_count} udávají počet bodů, které budeme prozkoumávat, ve směru reálné a imaginární osy. Jejich hodnoty jsou závislé na velikosti kroku \texttt{step}, kterou konstruktor přijímá jako parametr. Tedy např. s krokem $1$ v rámci intervalu $\langle-1,2\rangle$ budeme zkoumat celkem 4 body.
+    \item V seznamu \texttt{self.\_iter\_counts} si budeme pro každý bod uchovávat, kolik iterací zadané funkce bylo potřeba, než posloupnost začala divergovat (tedy $|f^{\circ k}(z)|>r$). Ten využijeme především později při určování barev jednotlivých bodů.
+    \item \texttt{self.\_sequence} uchovává předpis polynomální funkce, kterou budeme iterovat, jako řetězec. Předpisy budeme zadávat standardní syntaxí v Pythonu, tzn. např. pro Mandelbrotovu množinu, kde $f_c(z)=z^2+c$, bychom předpis napsali
+    \begin{center}
+        \texttt{z**2 + c}.
+    \end{center}
+    Levou stranu "\texttt{f(z) =}" pochopitelně psát netřeba.
+    \item \texttt{self.\_var} udává, která proměnná v \texttt{self.\_sequence} je argumentem zadané funkce (typicky \texttt{z}).
+    \item \texttt{self.\_explore\_var} uchovává proměnnou, za níž budeme dosazovat hodnoty zkoumaných bodů. Pro Juliovy množiny se typicky jedná přímo o argument zadané funkce $f$, ale např. pro Mandelbrotovu množinu je to \texttt{c}.
+    \item \texttt{self.\_escape\_radius} reprezentuje číslo $r$, tedy hranici absolutní hodnoty čísla $z$, po jejímž překročení prohlásíme posloupnost iterací za divergentní.
+    \item Parametr \texttt{bounds} specifikuje část komplexní roviny, z niž budeme zkoumat vybrané body. Jedná se o datový typ \texttt{tuple}, v našem případě uspořádanou čtveřici $(x_{\text{min}},x_{\text{max}},y_{\text{min}},y_{\text{max}})$.
+    \item \texttt{self.\_complex\_grid} uchovává všechny body ze zadané části komplexní roviny jako komplexní čísla, tedy v Pythonu datový typ \texttt{complex}.
+    \item Do seznamu \texttt{self.\_point\_last\_values} budeme ukládat hodnoty $f^{\circ k}(z)$ pro zadané $z$, kde $k$ je číslo poslední prozkoumané iterace (tzn. buď jsme u bodu prozkoumali maximální počet zadaných iterací, nebo výpočet skončil dříve kvůli překročení povolené absolutní hodnoty).
+\end{itemize}
+Je vidět, že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve vyjasnit, jak bychom mohli pomocí těchto informací implementovat algoritmus pro iterování zadané polynomiální funkce. Již jsme si uvedli asi nejjednodušší možnost v rámci algoritmu \ref{alg:generovani-vyplnene-jf}. Jak by se ale situace změnila, když si budeme uchovávat počty iterací, které proběhly než jsme překročili zadanou absolutní hodnotu $r$ nebo dosáhli maximálního počtu $m$? Označme si takové pole např. $T$. Podívejme se na algoritmus \ref{alg:generovani-vyplnene-jf-pole}.
+\begin{algorithm}[h]
+    \KwIn{Komplexní polynomiální funkce $f$, maximální počet iterací $m\in\N_0$, číslo $r\in\R$, konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a $Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
+    $K\gets\emptyset$\;
+    \ForEach{$(x,y)\in X\times Y$}{
+        $z\gets x+y\imag$\;
+        $t\gets\id$\;
+        \For{$k=0,1,\ldots,m$}{
+            $t\gets t\circ f$\;
+            $T[x,y]\gets k$\;
+            \lIf{$|t(z)|>r$}{opusť cyklus}
+        }
+        \lIf{$T[x,y]=m$}{$K\gets K\cup\set{z}$}
+    }
+    \Return{$K$}\;
+    \KwOut{Aproximace vyplněné Juliovy množiny $K$}
+    \caption{Generování vyplněné Juliovy množiny pomocí pole iterací $T$}
+    \label{alg:generovani-vyplnene-jf-pole}
+\end{algorithm}
+Pro implementaci algoritmu \ref{alg:generovani-vyplnene-jf-pole} si však budeme muset rozmyslet, jak budeme pomocí řetězce s předpisem pro funkci $f$ (tj. atributu \texttt{self.\_sequence}) počítat její funkční hodnoty. Jistě se nabízí možnost vytvořit funkci pro vyhodnocení obecného matematického výrazu. Ač se jedná o poměrně hezké programovací cvičení a čtenář si jej může vyzkoušet, my si poradíme trochu jinak -- funkcí \texttt{eval}. Funkce \texttt{eval} jednoduše vyhodnotí zadaný výraz a za proměnné dosadí hodnoty podle slovníku poskytnutého v příslušném parametru/parametrech.
+
+Tím se nám situace podstatně zlehčuje. Implementaci si může čtenář prohlédnout v ukázce \ref{prog:generovani-vyplnene-jf-pole}.
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+def iterate(self, iterations: int) -> None:
+    for i in range(self._y_count):
+        for j in range(self._x_count):
+            # Initialize variables
+            vars_dict = {self._var: 0, self._explore_var: self._complex_grid[i][j]}
+
+            # Iterate
+            for k in range(1, iterations + 1):
+                try:
+                    # Evaluate the next value in the sequence
+                    vars_dict[self._var] = eval(self._sequence, {"math": math}, vars_dict)
+
+                    # Check for escape condition
+                    self._iter_counts[i][j] = k
+                    if abs(vars_dict[self._var]) > self._escape_radius:
+                        break
+                except OverflowError:
+                    self._iter_counts[i][j] = k
+                    break
+            
+            self.point_last_values[i][j] = vars_dict[self._var]
+\end{lstlisting}
+    \caption{Implementace algoritmu \ref{alg:generovani-vyplnene-jf-pole}}
+    \label{prog:generovani-vyplnene-jf-pole}
+\end{program}

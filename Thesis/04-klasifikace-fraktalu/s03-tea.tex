@@ -115,6 +115,8 @@ V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik zákla
 (Převzato z \cite[str. 237]{Falconer1989}.)
 
 V čem je lemma \ref{lem:test-konvergence-komplexniho-polynomu} užitečné? V podstatě nám říká, že pro test "chování" posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat, zda absolutní hodnota obrazu v $k$-té iteraci není vyšší, než zvolené $r$. Pokud ano, je již jasné, že posloupnost bude divergovat. Toho využijeme hlavně při generování fraktálů (viz kapitola \ref{chapter:generovani-fraktalu}).
+
+Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph{Time Escape}\index{Time Escape algoritmus}\index{algoritmus!Time Escape}, neboť pro každý bod $z$ po určité době (resp. pevném počtu iterací) algoritmus zastaví a zkontroluje, zda $|z|>r$. Podle výsledku buď daný bod zařadí do koumané množiny, nebo ne.
 \begin{example}
     Vezměme si funkci $f(z)=z^2+c$, kde $c\in\C$. Podle věty \ref{lem:test-konvergence-komplexniho-polynomu} při volbě vhodného $r\in\R$, konkrétně $|z|>r$ bude platit, že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
     \[r^2-|c|\geqslant 2r.\]

@@ -71,15 +71,15 @@ V této části se zaměříme pouze na generování výsledného obrazce v jedn
 \begin{algorithm}[h]
     \KwIn{IFS $\set{\psi_1,\ldots,\psi_n}$, množina útvarů $\mathcal{F}$, číslo $k\in\N$}
     \For{$i=1,2,\ldots,k$}{
-        $\mathcal{F}^\prime\gets\emptyset$\\
+        $\mathcal{F}^\prime\gets\emptyset$\;
         \ForEach{$F\in\mathcal{F}$}{
             \ForEach{$\psi\in\set{\psi_1,\ldots,\psi_n}$}{
-                $\mathcal{F}^\prime\gets\mathcal{F}^\prime\cup\set{\psi(F)}$
+                $\mathcal{F}^\prime\gets\mathcal{F}^\prime\cup\set{\psi(F)}$\;
             }
         }
-        $\mathcal{F}\gets \mathcal{F}^\prime$
+        $\mathcal{F}\gets \mathcal{F}^\prime$\;
     }
-    \Return{$\mathcal{F}$}\\
+    \Return{$\mathcal{F}$}\;
     \KwOut{Nová množina útvarů $F$}
     \caption{$k$-tá iterace IFS}
     \label{alg:iterace-ifs}
