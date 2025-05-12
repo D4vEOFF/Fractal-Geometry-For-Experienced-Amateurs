@@ -1,1 +1,106 @@
 \section{Implementace IFS}\label{sec:implementace-ifs}
+
+Systémy iterovaných funkcí a k nim související teorii jsme si vyložili již v části \ref{sec:ifs}. Podobně jako v případě L-systémů, i zde budeme postupovat přímo z definice. Konkrétně jsme si definovali IFS jako množinu kontrakcí
+\[\set{\mapping{\psi_i}{X}{X}\mid 1\leqslant i \leqslant n},\]
+přičemž jsme následně zkoumali a pracovali se zobrazením $\Psi$ daným předpisem
+\[\Psi(B)=\bigcup_{i=1}^n\psi_i(B)\;,\;B\in\hyperspace(X).\]
+O zobrazení $\Psi$ jsme následně dokázali, že se též jedná o kontrakci (viz věta \ref{thm:sjednoceni-kontrakci}).
+
+Konkrakce, s nimiž jsme pracovali, byla tzv. \emph{afinní zobrazení}\index{zobrazení!afinní}\index{afinní zobrazení} v $\R^2$, tedy jejich předpis byl ve tvaru
+\begin{equation}\label{eq:afinni-zobrazeni}
+    f(x,y)=\left(\begin{matrix}
+        a & b\\
+        c & d
+    \end{matrix}\right)\left(\begin{matrix}
+        x\\
+        y
+    \end{matrix}\right)+\left(\begin{matrix}
+        e\\
+        f
+    \end{matrix}\right)=\left(\begin{matrix}
+        ax+by+e\\
+        cx+dy+f
+    \end{matrix}\right).
+\end{equation}
+V konečném důsledku si tedy stačilo uchovat pouze koeficienty $a,b,\ldots,f$. A přesně toho využijeme i zde. Daná afinní zobrazení budeme reprezentovat seznamem uspořádaných šestic
+\[(a,b,c,d,e,f).\]
+Dále potřebujeme již pouze znát počáteční obrazec. Ačkoliv bychom mohli jistě různými sofistikovanými způsoby reprezentovat celou řadu množin, my se omezíme pouze na mnohoúhelníky\footnote{V konečném důsledku, jak již víme z Banachovy věty \ref{thm:banach}, počáteční obrazec nehraje žádnou roli pro atraktor zobrazení $\Psi$.}, neboť jejich reprezentace je velmi jednoduchá. Stačí si pamatovat pozice jeho vrcholů
+\[(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n).\]
+I zde provedeme implementaci IFS pomocí třídy (viz ukázka \ref{prog:konstruktor-ifs}).
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+from copy import deepcopy
+
+class IFS:
+
+    def __init__(self, starting_figure: list, tr_coefs: list = []) -> None:
+        self._figures = [starting_figure]
+        self._total_iterations = 0
+
+        # Min/max coordinates (used for centering)
+        self._x_min, self._y_min, self._x_max, self._y_max = 0, 0, 0, 0
+        self.__update_min_max_coords()
+
+        self._transformations = set()
+        for tpl in tr_coefs:
+            def transformation(point, tpl=deepcopy(tpl)):
+                return Vector(
+                    tpl[0]*point.x + tpl[1]*point.y + tpl[4],
+                    tpl[2]*point.x + tpl[3]*point.y + tpl[5]
+                )
+            self._transformations.add(transformation)
+    
+    
+    def __update_min_max_coords(self) -> None:
+        self._x_min = min(point.x for figure in self._figures for point in figure)
+        self._y_min = min(point.y for figure in self._figures for point in figure)
+        self._x_max = max(point.x for figure in self._figures for point in figure)
+        self._y_max = max(point.y for figure in self._figures for point in figure)
+\end{lstlisting}
+    \caption{Konstruktor pro třídu \texttt{IFS}}
+    \label{prog:konstruktor-ifs}
+\end{program}
+Po vzoru třídy \texttt{Turtle}, kterou jsme si ukázali v minulé sekci \ref{sec:implementace-lsystemu-a-zelvi-grafiky} i zde si budeme průběžně aktualizovat minimální a maximální hodnoty souřadnic pro pozdější manipulaci s obrazcem. Dále zde máme dvojici důležitých atributů:
+\begin{itemize}
+    \item \texttt{self.\_figures} uchovává všechny vygenerované obrazce po obecně $k$-té iteraci jako seznam uspořádaných $n$-tic vrcholů.
+    \item \texttt{self.\_transformations} ukládá zadané kontrakce $\psi_1,\psi_2,\ldots,\psi_m$ jako first-class funkce\index{first-class funkce}\index{funkce!first-class}. Výpočet probíhá podle \eqref{eq:afinni-zobrazeni}.
+\end{itemize}
+Co je to \emph{first-class funkce}\footnote{Též se lze někdy setkat s českým označením funkce nebo obecněji objekty \emph{první kategorie}\index{objekty první kategorie}\index{funkce první kategorie}\index{funkce!první kategorie}.}\index{first-class funkce}\index{funkce!first-class}? Jedná se o koncept práce s funkcemi jakožto standardními objekty, na které se lze odkazovat. V praxi to znamená možnost předávat funkce jako parametry, používat je jako návratové hodnoty, nebo ukládat je do proměnných. To se nám v tomto případě velmi hodí, neboť tyto funkce potřebujeme vytvářet až za běhu programu v závislosti na zadaných koeficientech afinních zobrazení.
+
+V této části se zaměříme pouze na generování výsledného obrazce v jednotlivých iteracích. V tomto ohledu bude potřeba si uchovávat nově vygenerované útvary do nějaké struktury. To vše je shrnuto v algoritmu \ref{alg:iterace-ifs}.
+\begin{algorithm}[h]
+    \KwIn{IFS $\set{\psi_1,\ldots,\psi_n}$, množina útvarů $\mathcal{F}$, číslo $k\in\N$}
+    \For{$i=1,2,\ldots,k$}{
+        $\mathcal{F}^\prime\gets\emptyset$\\
+        \ForEach{$F\in\mathcal{F}$}{
+            \ForEach{$\psi\in\set{\psi_1,\ldots,\psi_n}$}{
+                $\mathcal{F}^\prime\gets\mathcal{F}^\prime\cup\set{\psi(F)}$
+            }
+        }
+        $\mathcal{F}\gets \mathcal{F}^\prime$
+    }
+    \Return{$\mathcal{F}$}\\
+    \KwOut{Nová množina útvarů $F$}
+    \caption{$k$-tá iterace IFS}
+    \label{alg:iterace-ifs}
+\end{algorithm}
+Speciálně, pokud bychom chtěli vygenerovat $k$-tou z počátečního obrazce $F_0$, stačí algoritmus zavolat na množinu $\set{F_0}$. Praktickou implementaci si lze prohlédnout v ukázce \ref{prog:iterace-ifs}.
+\begin{program}[h]
+\begin{lstlisting}[style=python]
+def iterate(self, iterations: int) -> None:
+    for _ in range(iterations):
+        figures_new = []
+        
+        for figure in self._figures:
+            for tr in self._transformations:
+                figure_new = []
+                for point in figure: figure_new.append(tr(point))
+
+                figures_new.append(figure_new)
+    
+        self._figures = figures_new
+\end{lstlisting}
+    \caption{Implementace algoritmu \ref{alg:iterace-ifs} ve třídě \texttt{IFS}}
+    \label{prog:iterace-ifs}
+\end{program}
+Posunutí obrazce na střed si již může čtenář samostatně rozmyslet. Provedení by však bylo obdobné jako v případě L-systémů.
