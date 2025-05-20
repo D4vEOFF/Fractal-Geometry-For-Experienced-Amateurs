@@ -29,19 +29,21 @@ Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotl
 Myšlenka je velice intuitivní. Obecně máme-li řetězec $w$ po $m$-té iteraci a~množinu přepisovacích pravidel $P\subseteq\set{a\to\alpha\mid a\in V,\;\alpha\in V^*}$,~kde $V$ je abeceda,~pak stačí pro každý znak $w[i]$,~kde $1\leqslant i\leqslant n$,~pouze zkontrolovat,~zda není na levé straně nějakého pravidla v~$P$. Pokud ano,~dojde k~aplikaci příslušného pravidla\footnote{Technicky vzato jsme z~formálních důvodů v~definici L-systému \ref{def:lsystem} přidali i~pravidla tvaru $a\to a$,~aby nedošlo k~situaci,~že pro $a$ neexistuje pravidlo. Avšak z~hlediska prakticné implementace toto není překážkou,~neboť v~případě absence takového pravidla jednoduše symbol přeskočíme.}. Viz pseudokód \ref{alg:iterace-slova-lsystem}.
 \begin{algorithm}[h]
     \KwIn{Množina pravidel $P$,~slovo $w$,~číslo $k\in\N$}
-    $w^\prime\gets\lambda$\;
+    $w_{\textup{prev}}\gets\lambda,w_{\textup{new}}\gets w$\;
     \For{$m=1,2,\ldots,k$}{
-        \For{$i=1,2,\ldots,|w|$}{
-            \If{\textup{existuje pravidlo tvaru $(w[i]\to\alpha)\in P$}}{
-                $w^\prime\gets w^\prime[1]\dots w^\prime[i-1]\alpha$\;
+        $w_{\textup{prev}}\gets w_{\textup{new}}$\;
+        $w_{\textup{new}}\gets\lambda$\;
+        \For{$i=1,2,\ldots,|w_{\textup{prev}}|$}{
+            \If{\textup{existuje pravidlo tvaru $(w_{\textup{prev}}[i]\to\alpha)\in P$}}{
+                $w_{\textup{new}}\gets w_{\textup{new}}[1]\dots w_{\textup{new}}[i-1]\alpha$\;
             }
             \Else{
-                $w^\prime\gets w^\prime w[i]$\;
+                $w_{\textup{new}}\gets w_{\textup{new}} w[i]$\;
             }
         }
     }
-    \Return{$w^\prime$}\;
-    \KwOut{Slovo $w^\prime$ odvozené po $k$ iteracích ze slova $w$}
+    \Return{$w_{\textup{new}}$}\;
+    \KwOut{Slovo $w_{\textup{new}}$ odvozené po $k$ iteracích ze slova $w$}
     \caption{Algoritmus pro $k$-tou iteraci slova $w$}
     \label{alg:iterace-slova-lsystem}
 \end{algorithm}
