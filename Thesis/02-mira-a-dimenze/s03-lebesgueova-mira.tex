@@ -60,7 +60,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
         \[J_i=\prod_{j=1}^{n}\left\langle x_j-r_j\sqrt[n]{1+\varepsilon},x_j+r_j\sqrt[n]{1+\varepsilon}\right\rangle,\]
-        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty \ref{thm:heine-borel} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
         \[I\subseteq\bigcup_{i=1}^m J_i.\]
         Celkově tedy dostáváme
         \begin{align*}
@@ -73,29 +73,6 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
     Z~kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
     \[\lebesgueoutermeasure{n}(I)=\vol_n(I).\]
 \end{proof}
-% \begin{example}[Výpočet vnější Lebesgueovy míry kvádru]\label{ex:lebegueova-mira-objem-kvadru}
-%     Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru odpovídá jeho vnější Lebesgueova míra skutečně jeho objemu,~tzn. pro kvádr $I=\prod_{i=1}^{n}\langle a_i,b_i\rangle$ je
-%     \[\lebesgueoutermeasure{n}(I)=\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
-%     \begin{itemize}
-%         \item \textbf{Důkaz $\lebesgueoutermeasure{n}(I)\leqslant \prod_{i=1}^{n}(b_i-a_i)$.} Zvolme pokrytí $\mathcal{I}=\set{I_1,I_2,\ldots}$ kvádru $I$,~tzn. $I\subseteq\bigcup_{i=1}^\infty I_i$,~tak,~aby
-%         \[\sum_{i=1}^{\infty}\vol_n(I_i)\leqslant(1+\varepsilon)\lebesgueoutermeasure{n}(I).\]
-%         pro nějaké $\varepsilon>0$. Nyní si zvolíme nové kvádry\footnote{Formálně $\mathcal{I}$ tvoří zjemnění pokrytí $\mathcal{J}$} $\mathcal{J}=\set{J_1,J_2,\ldots}$ tak,~aby pro každé $i\in\N$ platilo
-%         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
-%         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
-%         \[J_i=\prod_{j=1}^{n}\left\langle a_j\sqrt[n]{1+\varepsilon},b_j\sqrt[n]{1+\varepsilon}\right\rangle.\]
-%         Protože však $I$ je uzavřená a~omezená množina,~je podle věty \todo{doplnit odkaz} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
-%         \[I\subseteq\bigcup_{i=1}^m J_i.\]
-%         Celkově tedy dostáváme
-%         \begin{align*}
-%             \vol_n(I)&\leqslant\sum_{i=1}^{m}\vol_n(J_i)\leqslant(1+\varepsilon)\sum_{i=1}^{m}\vol_n(I_i)\leqslant(1+\varepsilon)\sum_{i=1}^{\infty}\vol_n(I_i)\\
-%             &\leqslant (1+\varepsilon)^2\lebesgueoutermeasure{n}(I)
-%         \end{align*}
-%         pro každé $\varepsilon>0$,~což jsme chtěli.
-%         \item \textbf{Důkaz $\lebesgueoutermeasure{n}(I)\geqslant \prod_{i=1}^{n}(b_i-a_i)$.} Důkaz opačné nerovnosti je oproti té předešlé naopak velmi jednoduchý. Kvádr $I$ totiž reprezentuje pokrytí sebe samotného,~tzn. lze volit $I_1=I$ a~zbylé kvádry $I_j$,~kde $j\geqslant 2$,~mohou být libovolné s~nulovým objemem.
-%     \end{itemize}
-%     Z~kombinací obou nerovností lze vidět,~že vnější Lebesgueova míra $n$-rozměrného kvádru skutečně odpovídá jeho objemu,~tj.
-%     \[\lebesgueoutermeasure{n}(I)=\prod_{i=1}^{n}(b_i-a_i).\]
-% \end{example}
 \begin{remark}
     Vraťme se na chvíli ještě k~větě \ref{thm:mira-vlastnosti} o~vlastnostech míry,~konkrétně bod \ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$,~tzn. $\lebesgueoutermeasure{n}(A_j)=\lebesgueoutermeasure{n}(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme,~že
     \[\bigcap_{i=1}^\infty A_i=\emptyset,\]
