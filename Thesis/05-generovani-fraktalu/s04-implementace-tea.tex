@@ -271,9 +271,9 @@ Ačkoliv bychom se s~výsledkem pomocí prosté lineární interpolace (viz obr�
 \end{figure}
 Nicméně zvýšením maximálního počtu iterací se podstatně zvyšuje náročnost výpočtu. Zkusme se tedy místo toho více zaměřit na způsob výpočtu výsledného odstínu. Často se při lineární interpolaci nepoužívá přímo počet iterací $k$,~nýbrž číslo
 \[k_s=k+\dfrac{\log(\log|f^{\circ k}(z)|)}{\log{2}}\]
-Tento vzorec si zde nebudeme odvozovat,~avšak vychází z~tzv. \emph{potenciálové funkce}\index{funkce!potenciálová}\index{potenciálová funkce},~která se definuje jako
+Tento vzorec si zde nebudeme odvozovat,~avšak vychází z~tzv. \emph{potenciálové funkce}\index{funkce!potenciálová}\index{potenciálová funkce} definované jako
 \[\varphi(z)=\lim_{k\to \infty }{\frac {\log|f^{\circ k}(z)|}{d^{k}}},\]
-kde $d=\deg{f}$.
+kde $d=\deg{f}$. V případě zájmu si čtenář může k této záležitosti vyhledat více informací.
 
 Díky zohlednění absolutní hodnoty $|f^{\circ k}(z)|$ budou přechody mezi barvami již daleko jemnější. Posuďte sami (viz obrázek \ref{fig:mandelbrotova-mnozina-smooth}).
 \begin{figure}[h]
