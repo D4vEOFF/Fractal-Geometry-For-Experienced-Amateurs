@@ -22,7 +22,7 @@
 \end{figure}
 
 V souvislosti s~konvergencí v~prostoru $(\hyperspace(X),\hausdorffmetric)$ nebude na škodu si připomenout jedno známé související tvrzení z~matematické analýzy.
-\begin{theorem}[Cantorova\index{Cantorova věta}]\label{thm:cantor}
+\begin{theorem}[Cantorova\index{Cantorova věta}\index{věta!Cantorova}]\label{thm:cantor}
     Následující tvrzení jsou ekvivalentní:
     \begin{enumerate}[label=(\roman*)]
         \item\label{thm:cantor-uplnost} $(X,\varrho)$ je úplný metrický prostor.
@@ -30,7 +30,7 @@ V souvislosti s~konvergencí v~prostoru $(\hyperspace(X),\hausdorffmetric)$ nebu
         \[\bigcap_{i=1}^\infty A_i=\set{x}.\]
     \end{enumerate}
 \end{theorem}
-Věta \ref{thm:cantor} je v~podstatě rozšířením Cantorova principu vnořených intervalů v~$\R$. Speciálně z~toho vyplývá,~že i~v Hausdorffově metrickém prostoru platí podmínka \ref{thm:cantor-nekl-posl-mnozin},~neboť z~věty \ref{thm:uplnost-hmp} víme,~že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
+Věta \ref{thm:cantor} je v~podstatě rozšířením Cantorova principu\index{Cantorův princip}\index{princip!Cantorův} vnořených intervalů v~$\R$. Speciálně z~toho vyplývá,~že i~v Hausdorffově metrickém prostoru platí podmínka \ref{thm:cantor-nekl-posl-mnozin},~neboť z~věty \ref{thm:uplnost-hmp} víme,~že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
 
 \begin{theorem}\label{thm:stejnometrna-konvergence-hmp}
     Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $\set{f_i}_{i=1}^\infty$,~kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$ a $f_j\rightrightarrows f$ pro $j\to\infty$.\index{konvergence!stejnoměrná} k~$f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k~$f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$.
@@ -48,7 +48,7 @@ Věta \ref{thm:cantor} je v~podstatě rozšířením Cantorova principu vnořen�
 \end{proof}
 (Převzato z~\citep[str. 74]{Edgar2008})
 \begin{remark}
-    Předpoklad stejnoměrné konvergence ve větě \ref{thm:stejnometrna-konvergence-hmp} je důležitý. Mějme např. metrický prostor $X=\langle0,1\rangle$ se standardní eukleidovskou metrikou a definujme posloupnost funkcí
+    Předpoklad stejnoměrné konvergence\index{stejnoměrná konvergence}\index{konvergence!stejnoměrná} ve větě \ref{thm:stejnometrna-konvergence-hmp} je důležitý. Mějme např. metrický prostor $X=\langle0,1\rangle$ se standardní eukleidovskou metrikou a definujme posloupnost funkcí
     \[\mapping{f_n}{\langle0,1\rangle}{\R},\;f_n(x)=x^n.\]
     Limitou je funkce $f$,~kde
     \[f(x) = \begin{cases}

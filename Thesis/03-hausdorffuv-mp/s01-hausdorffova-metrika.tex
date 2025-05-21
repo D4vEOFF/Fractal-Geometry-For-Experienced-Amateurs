@@ -2,7 +2,7 @@
 
 Jako první se podíváme na tzv. \emph{Hausdorffovu metriku}\index{Hausdorffův metrický prostor!Hausdorffova metrika}.
 \begin{definition}[Hausdorffova metrika]\label{def:hausdorffova-metrika}
-    Hausdorffovou metrikou\index{Hausdorffův metrický prostor!Hausdorffova metrika} (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmetric}{\powset{X}^2}{\langle0,\infty\rangle}$,~kde pro každé $A,B\in\powset{X}$ platí
+    Hausdorffovou metrikou\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův} (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmetric}{\powset{X}^2}{\langle0,\infty\rangle}$,~kde pro každé $A,B\in\powset{X}$ platí
     \[\hausdorffmetric(A,B)=\inf\set{\delta>0\;\middle|\;A\subseteq (B)_\delta\;,\;B\subseteq (A)_\delta}.\]
 \end{definition}
 Podobně jako v~případě Lebesgueovy míry (viz sekce \ref{sec:lebesgueova-mira},~definice \ref{def:lebesgueovska-meritelnost}) se i~zde nabízí stejná otázka: \emph{Co nás opravňuje nazývat Hausdorffovu metriku metrikou?} Odpovědí je,~že zatím nic,~neboť tato definice sama o~sobě neimplikuje,~že $\hausdorffmetric$ je metrika. V~definici povolujeme totiž případ,~kdy $\hausdorffmetric(A,B)=\infty$ a pro příklady takových množin netřeba chodit daleko. Např. v~$\R$,~když budeme počítat Hausdorffovu metriku množin $\set{0}$ a $\langle 0,\infty)$,~zjistíme,~že $\hausdorffmetric(\set{0},\langle 0,\infty))=\infty$. Podobně budeme-li počítat $\hausdorffmetric(\emptyset,\set{0})$,~dojdeme ke stejnému výsledku. Ovšem i~v případě některých neprázdných omezených množin si lze všimnout nesrovnalostí. Např. pro množiny $(0,1)$ a $(0,1\rangle$ je Hausdorffova metrika nulová,~přestože dané množiny nejsou stejné.
@@ -48,7 +48,7 @@ Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly
 \end{definition}
 Nyní si opět připomeňte něco z~terminologie metrických prostorů. Posloupnost $\set{x_n}_{n=1}^\infty$ v~metrickém prostoru $(X,\varrho)$,~se nazývá \emph{cauchyovská}\index{cauchyovská posloupnost},~pokud
 \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n,m>n_0: \varrho(x_n,x_m)<\varepsilon.\]
-Obecně neplatí,~že každá cauchyovská posloupnost je konvergentní,~avšak pokud v~$X$ všechny takové posloupnosti jsou konvergentní,~pak $(X,\varrho)$ nazýváme \emph{úplný metrický prostor}\index{metrický prostor!úplný}. O~Hausdorffově metrickém prostoru lze v~tomto ohledu dokázat následující tvrzení.
+Obecně neplatí,~že každá cauchyovská posloupnost je konvergentní,~avšak pokud v~$X$ všechny takové posloupnosti jsou konvergentní,~pak $(X,\varrho)$ nazýváme \emph{úplný metrický prostor}\index{metrický prostor!úplný}\index{úplný metrický prostor}. O~Hausdorffově metrickém prostoru lze v~tomto ohledu dokázat následující tvrzení.
 \begin{theorem}[Úplnost HMP]\label{thm:uplnost-hmp}
     Je-li $(X,\varrho)$ úplný metrický prostor,~pak $(\hyperspace(X),\hausdorffmetric)$ je také úplný metrický prostor.
 \end{theorem}

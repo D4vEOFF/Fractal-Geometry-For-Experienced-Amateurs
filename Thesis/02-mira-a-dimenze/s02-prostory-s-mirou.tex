@@ -1,19 +1,19 @@
 \section{Prostory s~mírou}\label{sec:prostory-s-mirou}
 
-Jak již bylo zmíněno v~úvodu,~klíčovým pojmem v~této kapitole (a pro studium fraktálů obecně) je takzvaná \emph{míra}. Ta pro nás představuje obecný způsob,~jak můžeme množinám přiřadit v~jistém smyslu "velikost". Konkrétněji,~byť vágně,~lze říci,~že sestává-li množina z~konečného nebo spočetného množství "rozumných" částí,~pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny,~kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
+Jak již bylo zmíněno v~úvodu,~klíčovým pojmem v~této kapitole (a pro studium fraktálů obecně) je takzvaná \emph{míra}\index{míra}. Ta pro nás představuje obecný způsob,~jak můžeme množinám přiřadit v~jistém smyslu "velikost". Konkrétněji,~byť vágně,~lze říci,~že sestává-li množina z~konečného nebo spočetného množství "rozumných" částí,~pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny,~kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
 
 Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě jiný pojem,~a to tzv. \emph{$\sigma$-algebru}.
 
 \subsection{Měřitelné prostory}\label{subsec:meritelne-prostory}
 
 \begin{definition}[$\sigma$-algebra]\label{def:sigma-algebra}
-    Nechť je dána libovolná množina $X$ a systém podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra}\index{$\sigma$-algebra} na množině $X$,~pokud:
+    Nechť je dána libovolná množina $X$ a systém\index{systém} podmnožin $\mathcal{A}\subseteq\powset{X}$. Pak $\mathcal{A}$ je \emph{$\sigma$-algebra}\index{$\sigma$-algebra} na množině $X$,~pokud:
     \begin{enumerate}[label=(\alph*)]
         \item\label{def:sigma-algebra-podm1} $X\in\mathcal{A}$.
         \item\label{def:sigma-algebra-podm2} Pro každou množinu $A\in\mathcal{A}$ platí $X\setminus A\in\mathcal{A}$.
         \item\label{def:sigma-algebra-podm3} Pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcup_{i=1}^\infty A_i\in\mathcal{A}$.
     \end{enumerate}
-    Dvojice $(X,\mathcal{A})$ se nazývá měřitelný prostor\index{prostor!měřitelný}.
+    Dvojice $(X,\mathcal{A})$ se nazývá měřitelný prostor\index{prostor!měřitelný}\index{měřitelný prostor}.
 \end{definition}
 
 \begin{example}
@@ -26,7 +26,7 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
     Sami se zkuste přesvědčit,~že všechny zmíněné příklady vyhovují definici \ref{def:sigma-algebra}.
 \end{example}
 
-Než vyslovíme něco dalšího o~$\sigma$-algebrách a jejich významu,~podíváme se na seznam některých vesměs jednoduchých pozorováních zformulovaných níže v~tvrzení \ref{thm:sigma-algebra-vlastnosti}.
+Než vyslovíme něco dalšího o~$\sigma$-algebrách a jejich významu,~podíváme se na seznam některých vesměs jednoduchých pozorování zformulovaných níže v~tvrzení \ref{thm:sigma-algebra-vlastnosti}.
 \begin{theorem}[Vlastnosti $\sigma$-algebry]\label{thm:sigma-algebra-vlastnosti}
     Nechť $(X,\mathcal{A})$ je meřitelný prostor. Pak platí:
     \begin{enumerate}[label=(\roman*)]
@@ -71,9 +71,9 @@ Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),
 \begin{example}\label{ex:mira}
     Příklady prostorů s~mírou:
     \begin{itemize}
-        \item Asi pro nás nejtypičtější způsob,~jak měřit "velikost" množiny,~je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s~mírou $(X,\powset{X},\mu)$,~kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}\index{míra!aritmetická}.
-        \item Máme libovolnou množinu $X$ a $\sigma$-algebru $\mathcal{A}$. Zvolme si pevně $x\in X$. Míru libovolné množiny $A\in\mathcal{A}$ lze definovat jako $\delta_x(A)=\chi_A(x)$,~kde $\chi_A$ je charakteristická funkce množiny $A$. Zobrazení $\delta_x$ je tzv. \emph{Diracova míra}\index{míra!Diracova}.
-        \item Zobrazení přiřazující náhodnému jevu pravděpodobnost je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a $\mathcal{F}\subseteq\powset{\Omega}$,~pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
+        \item Asi pro nás nejtypičtější způsob,~jak měřit "velikost" množiny,~je podle \emph{počtu prvků}. Pro libovolnou množinu $X$ a potenční množinu $\powset{X}$ lze definovat prostor s~mírou $(X,\powset{X},\mu)$,~kde pro libovolnou množinu $A\in\powset{X}$ položíme $\mu(A)=|A|$. Takto definované míře $\mu$ říkáme \emph{aritmetická míra}\index{míra!aritmetická}\index{aritmetická míra}.
+        \item Máme libovolnou množinu $X$ a $\sigma$-algebru $\mathcal{A}$. Zvolme si pevně $x\in X$. Míru libovolné množiny $A\in\mathcal{A}$ lze definovat jako $\delta_x(A)=\chi_A(x)$,~kde $\chi_A$ je charakteristická funkce množiny $A$. Zobrazení $\delta_x$ je tzv. \emph{Diracova míra}\index{míra!Diracova}\index{Diracova míra}.
+        \item Zobrazení přiřazující náhodnému jevu\index{náhodný jev}\index{jev!náhodný} pravděpodobnost\index{pravděpodobnost} je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a $\mathcal{F}\subseteq\powset{\Omega}$,~pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
         \[\mathsf{P}(A)=\dfrac{|A|}{|\Omega|}\]
         je mírou na $\mathcal{F}$. Speciálně $\mathsf{P}(\Omega)=1$.
     \end{itemize}
