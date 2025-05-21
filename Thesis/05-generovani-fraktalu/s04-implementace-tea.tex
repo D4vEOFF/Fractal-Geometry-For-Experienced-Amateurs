@@ -131,5 +131,142 @@ S množinou $\filledinjulia(f)$ se rovněž pojí i její hranice $\boundary{\fi
     \label{fig:hranicni-bod}
 \end{figure}
 
+Na základě této idee si lze již poměrně snad domyslet postup při generování hranice. Pracujeme opět s předpokladem, že oblast komplení roviny představuje diskrétní množinu bodů, které tvoří mřížku (tedy každá dvojice sousedních bodů má stejnou vzdálenost). 
+\begin{algorithm}[h]
+    \KwIn{Komplexní polynomiální funkce $f$, konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a $Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
+    $J\gets\emptyset$\;
+    \ForEach{$(x,y)\in X\times Y$}{
+        $z\gets x+y\imag$\;
+        \If{\textup{existují sousední body $w\in K_\in K(f)$ a $w^\prime\in F(f)$ bodu $z$}}{
+            $J\gets J\cup\set{z}$
+        }
+    }
+    \Return{$J$}\;
+    \KwOut{Aproximace Juliovy množiny $J$}
+    \caption{Generování Juliovy množiny $J$}
+    \label{alg:generovani-jf}
+\end{algorithm}
+\begin{program}
+\begin{lstlisting}[style=python]
+h_px = len(iter_counts)
+w_px = len(iter_counts[0])
+
+# List od inner points
+inside = [
+    [iter_counts[y][x] == max_iterations for x in range(w_px)]
+    for y in range(h_px)
+]
+
+# Determine boundary points
+boundary_mask = [[False]*w_px for _ in range(h_px)]
+for y in range(h_px):
+    for x in range(w_px):
+        if inside[y][x]:
+            for dx, dy in ((1,0),(-1,0),(0,1),(0,-1)):
+                nx, ny = x+dx, y+dy
+                if 0 <= nx < w_px and 0 <= ny < h_px:
+                    if not inside[ny][nx]:
+                        boundary_mask[y][x] = True
+                        break
+\end{lstlisting}
+    \caption{Implementace algoritmu \ref{alg:generovani-jf}}
+    \label{prog:generovani-jf}
+\end{program}
+
 \subsection{Přiřazování barev}\label{subsec:prirazovani-barev}
 
+Jako poslední si pojďme popovídat o barvách a jejich přiřazování jednotlivým bodům. Již jsme měli možnost vidět několik příkladů obrázků s fraktály, kde byly body barevně zvýrazněny. Zevrubně bychom mohli říci, že čím blíž se bod necházel hranici útvaru, tím výraznější byla jeho barva.
+
+\subsubsection{Stručně k barevnému modelu HSV}
+
+Ukážeme si zde celkem dvojici základních možností, jak lze přiřazovat barvy daným bodům. K tomu však budeme potřebovat pracovat s barevným modelem \emph{HSV (Hue, Saturation, Value)}\index{HSV}\index{barevný model}\index{model!barevný}\index{barevný model HSV}. S prominutím si zde opět odpustíme delší vysvětlování a budeme předpokládat, že se čtenář již s modelem HSV někdy setkal (podobně jako např. s RGB nebo s CMYK používaným u tiskáren). Avšak základem, jak název napovídá, je trojice následujících složek:
+\begin{itemize}
+    \item \textbf{hue} (česky \emph{odstín}),
+    \item \textbf{saturation} (česky \emph{saturace}, nebo též \emph{sytost})
+    \item a \textbf{value} reprezentující hodnotu jasu (tj. podílu bílé barvy).
+\end{itemize}
+Celkově tento model vychází přímo z vnímání barev lidským okem. Různé možnosti znázornění HSV modelu si lze prohlédnout na obrázcích \ref{subfig:hsv-valcova-reprezentace} a \ref{subfig:hsv-kuzelova-reprezentace}.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ch05-HSV_color_solid_cylinder.png}
+        \caption{Válcová reprezentace}
+        \label{subfig:hsv-valcova-reprezentace}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ch05-HSV_cone.png}
+        \caption{Kuželová reprezentace}
+        \label{subfig:hsv-kuzelova-reprezentace}
+    \end{subfigure}
+    \caption[Grafické znázornění HSV modelu]{Grafické znázornění HSV modelu (Převzato z~Wikipedia Commons)\footnotemark}
+    \label{fig:hsv}
+\end{figure}
+
+Existují pochopitelně metody\footnotetext{Dostupné z \url{https://cs.wikipedia.org/wiki/HSV}} pro převody mezi jednotlivými barevnými modely, ty však pro nás zde nejsou relevantní. Jednotlivé barvy budeme reprezentovat jako uspořádané trojice $(H,S,V)$, kde $0\leqslant H,S,V\leqslant 1$.
+
+\subsubsection{Lineární interpolace barev}
+
+Patrně nejjednodušším způsobem pro přiřazení barev jednotlivým bodům je tzv. \emph{lineární interpolací}\index{lineární interpolace}\index{interpolace!lineární} odstínu při pevně zvolené saturaci a jasu. Obecně jsou-li zadány body v rovině $(x_0,y_0)$ a $(x_1,y_1)$, pak lineární intepolace přiřazuje každému $x\in(x_0,x_1)$ souřadnici $y=f(x)$, takovou, že $(x,y)$ leží na spojnici bodů $(x_0,y_0)$ a $(x_1,y_1)$. Toto lze vyjádřit poměrně jednoduchým vzorcem:
+\[f(x)=y_{0}+(x-x_{0}){\frac {y_{1}-y_{0}}{x_{1}-x_{0}}}.\]
+Pojďme si nyní rozmyslet náš případ. Bodům z komplexní roviny budeme přiřazovat barvu podle počtu iterací, kterého jsme při výpočtu dosáhli, než začala samotná postupnost iterací funkce divergovat. Zde mohou tedy nastat celkově dva případy. Počet iterací pro pevně zvolený bod $z$ si označme $k$ a maximální počet iterací si označme $m$.
+\begin{itemize}
+    \item Pokud $k<m$, pak přižadíme bodu $z$ barvu na základě lineární interpolace odstínu, přičemž saturaci a jas volíme pevně, označme $S_0,V_0$.
+    \item Pokud $k=m$, pak bodu $z$ přiřadíme černou barvu, tedy prohlásíme jej za bod náležící zkoumané vyplněné Juliově množině.
+\end{itemize}
+
+Hodnoty odstínu $H$ nabývají hodnot z intervalu $\langle H_{\text{min}},H_{\text{max}}\rangle$, přičemž
+\[0\leqslant H_{\text{min}},H_{\text{max}}\leqslant 1\]
+a hodnoty $k$ jsou z množiny $\set{0,1,2,\ldots,m}$. Tedy celkový předpis lineární interpolaci odstínu bude
+\[H=H_{\text{min}}+k\cdot\frac{H_{\text{max}}-H_{\text{min}}}{m}\]
+a tudíž pro výslednou barvu bodu $z$ bude platit 
+\[(H,S,V)=\begin{cases}
+    \left(H_{\text{min}}+k(H_{\text{max}}-H_{\text{min}})/m,S_0,V_0\right) & k<m,\\
+    (0,0,0) & k=m.
+\end{cases}\]
+Pro ukázku viz obrázky \ref{fig:mandelbrotova-mnozina-lerp-1} a \ref{fig:mandelbrotova-mnozina-lerp-2} s hranicí Mandebrotovy množiny.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1_lerp.png}
+    \caption{Mandebrotova množina pomocí lineární interpolace odstínu pro hodnoty $H_{\text{min}}=0;H_{\text{max}}=0{,}87;S_0=V_0=1;m=50$}
+    \label{fig:mandelbrotova-mnozina-lerp-1}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1_lerp-2.png}
+    \caption{Mandebrotova množina pomocí lineární interpolace odstínu pro hodnoty $H_{\text{min}}=0{,}5;H_{\text{max}}=0{,}861;S_0=1;V_0=0{,}5;m=50$}
+    \label{fig:mandelbrotova-mnozina-lerp-2}
+\end{figure}
+
+Pochopitelně stejně jako odstín lze interpolovat i zbylé dvě složky. Není třeba se omezovat pouze nutně na odstín.
+\begin{align*}
+    H&=H_{\text{min}}+k\cdot\frac{H_{\text{max}}-H_{\text{min}}}{m},\\
+    S&=S_{\text{min}}+k\cdot\frac{S_{\text{max}}-S_{\text{min}}}{m},\\
+    V&=V_{\text{min}}+k\cdot\frac{V_{\text{max}}-V_{\text{min}}}{m}.
+\end{align*}
+Pokud bychom chtěli využít sofistrikovanější barvení, mohli bychom též využít obecný interpolační polynom.
+
+\subsubsection{Hladké zbarvení}
+
+Ačkoliv bychom se s výsledkem pomocí prosté lineární interpolace (viz obrázky \ref{fig:mandelbrotova-mnozina-lerp-1} a \ref{fig:mandelbrotova-mnozina-lerp-2}) mohli spokojit, lze si všimnout, že přechody mezi jednotlivými barvami (co by aproximacemi vyplněné Juliovy množiny pro zvolenou polynomiální funkci) jsou velmi ostré. Je tomu tak z důvodu, že ze zvolené lineární interpolace vzniká konečná posloupnost hodnot $H$ (funkce tedy není spojitá). Tento problém bychom mohli vyřešit zvýšením maximálního počtu iterací, tedy v konečném důsledku by mezi barvami nebyly takové rozdíly (pro porovnání s obrázkem \ref{fig:mandelbrotova-mnozina-lerp-1} viz obrázek \ref{fig:mandelbrotova-mnozina-lerp-3}, kde $m=100$).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1_lerp-3.png}
+    \caption{Mandebrotova množina pomocí lineární interpolace odstínu pro hodnoty $H_{\text{min}}=0;H_{\text{max}}=0{,}87;S_0=V_0=1;m=100$}
+    \label{fig:mandelbrotova-mnozina-lerp-3}
+\end{figure}
+Nicméně zvýšením maximálního počtu iterací se podstatně zvyšuje náročnost výpočtu. Zkusme se tedy místo toho více zaměřit na způsob výpočtu výsledného odstínu. Často se při lineární interpolaci nepoužívá přímo počet iterací $k$, nýbrž číslo
+\[k_s=k+\dfrac{\log(\log|f^{\circ k}(z)|)}{\log{2}}\]
+Tento vzorec si zde nebudeme odvozovat, avšak vychází z tzv. \emph{potenciálové funkce}\index{funkce!potenciálová}\index{potenciálová funkce}, která se definuje jako
+\[\varphi(z)=\lim_{k\to \infty }{\frac {\log|f^{\circ k}(z)|}{d^{k}}},\]
+kde $d=\deg{f}$.
+
+Díky zohlednění absolutní hodnoty $|f^{\circ k}(z)|$ budou přechody mezi barvami již daleko jemnější. Posuďte sami (viz obrázek \ref{fig:mandelbrotova-mnozina-smooth}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1-smooth.png}
+    \caption{Mandebrotova množina pomocí hladkého zbarvení pro hodnoty $H_{\text{min}}=0;H_{\text{max}}=0{,}87;S_0=V_0=1;m=50$}
+    \label{fig:mandelbrotova-mnozina-smooth}
+\end{figure}
