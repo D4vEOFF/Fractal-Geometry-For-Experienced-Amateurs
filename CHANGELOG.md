@@ -1,5 +1,11 @@
 # Záznam změn
 
+## 21. 5. 2025
+- Dokončena sekce o *implementaci TEA*
+- Upraven rejstřík
+- Odstraněny TODO poznámky
+- Doplněn abstrakt
+
 ## 12. 5. 2025
 - Dokončena sekce o *implementaci IFS*
 - Rozšířena sekce o *implementaci TEA*
