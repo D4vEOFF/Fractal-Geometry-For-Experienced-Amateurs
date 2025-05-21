@@ -231,7 +231,7 @@ def center_to(self, xc: float, yc: float) -> None:
     \label{prog:posun-obrazce}
 \end{program}
 Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. Stačí procházet vygenerovaný řetězec znak po znaku a~simulovat pohyb želvy,~která nám bude do příslušného seznamu ukládat postupně vygenerované úsečky. Následně náš obrazec zarovnáme na střed okna a~každou z~úseček vykreslíme na plátno (viz algoritmus \ref{alg:simulace-pohybu-zelvy} a~ukázka implementace \ref{prog:simulace-pohybu-zelvy-a-vykresleni} společně s~vykreslením obrazce).
-\begin{algorithm}[h]
+\begin{algorithm}[H]
     \KwIn{Vygenerované slovo $w$,~pozice želvy $(x,y)$,~úhel otočení $\varphi$,~inkrementace úhlu $\delta$,~délka kroku $d$}
     Založ prázdný zásobník $Z$\;
     $L\gets\emptyset$\;

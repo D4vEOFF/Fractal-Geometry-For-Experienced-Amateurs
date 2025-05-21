@@ -32,21 +32,21 @@ Praktická implementace Time Escape algoritmů bude podstatně složitější,~n
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 class TEA:
-    def __init__(self,~width: int,~height: int,~sequence: str,~step: int = 1,~escape_radius: int = 2,~bounds: tuple,~var: str,~explore_var: str):
-        self._x_count,~self._y_count = width // step,~height // step
+    def __init__(self, width: int, height: int, sequence: str, step: int = 1, escape_radius: int = 2, bounds: tuple, var: str, explore_var: str):
+        self._x_count, self._y_count = width // step, height // step
         
         self._iter_counts = [[0 for _ in range(self._x_count)] for _ in range(self._y_count)]
-        self._width,~self._height = width,~height
+        self._width, self._height = width, height
         self._sequence = sequence
         self._var = var
         self._explore_var = explore_var
         self._total_iterations = 0
         self._escape_radius = escape_radius
 
-        x_min,~x_max,~y_min,~y_max = bounds
+        x_min, x_max, y_min, y_max = bounds
 
         x_vals = [x_min + step * (x_max - x_min) * j / width for j in range(self._x_count + 1)]
-        y_vals = [y_min + step * (y_max - y_min) * i~/ height for i~in range(self._y_count + 1)]
+        y_vals = [y_min + step * (y_max - y_min) * i / height for i in range(self._y_count + 1)]
         self._complex_grid = [[x + 1j * y for x in x_vals] for y in y_vals]
 
         self._point_last_values = [[0 for _ in range(self._x_count)] for _ in range(self._y_count)]
@@ -95,17 +95,17 @@ Pro implementaci algoritmu \ref{alg:generovani-vyplnene-jf-pole} si však budeme
 Tím se nám situace podstatně zlehčuje. Implementaci si může čtenář prohlédnout v~ukázce \ref{prog:generovani-vyplnene-jf-pole}.
 \begin{program}[h]
 \begin{lstlisting}[style=python]
-def iterate(self,~iterations: int) -> None:
-    for i~in range(self._y_count):
+def iterate(self, iterations: int) -> None:
+    for i in range(self._y_count):
         for j in range(self._x_count):
             # Initialize variables
-            vars_dict = {self._var: 0,~self._explore_var: self._complex_grid[i][j]}
+            vars_dict = {self._var: 0, self._explore_var: self._complex_grid[i][j]}
 
             # Iterate
-            for k~in range(1,~iterations + 1):
+            for k in range(1, iterations + 1):
                 try:
                     # Evaluate the next value in the sequence
-                    vars_dict[self._var] = eval(self._sequence,~{"math": math},~vars_dict)
+                    vars_dict[self._var] = eval(self._sequence, {"math": math}, vars_dict)
 
                     # Check for escape condition
                     self._iter_counts[i][j] = k
@@ -162,8 +162,8 @@ boundary_mask = [[False]*w_px for _ in range(h_px)]
 for y in range(h_px):
     for x in range(w_px):
         if inside[y][x]:
-            for dx,~dy in ((1,0),(-1,0),(0,1),(0,-1)):
-                nx,~ny = x+dx,~y+dy
+            for dx, dy in ((1,0),(-1,0),(0,1),(0,-1)):
+                nx, ny = x+dx, y+dy
                 if 0 <= nx < w_px and 0 <= ny < h_px:
                     if not inside[ny][nx]:
                         boundary_mask[y][x] = True

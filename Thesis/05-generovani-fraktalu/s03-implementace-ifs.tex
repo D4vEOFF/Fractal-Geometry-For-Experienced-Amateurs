@@ -9,7 +9,7 @@ O zobrazení $\Psi$ jsme následně dokázali,~že se též jedná o~kontrakci (
 Konkrakce,~s nimiž jsme pracovali,~byla tzv. \emph{afinní zobrazení}\index{zobrazení!afinní}\index{afinní zobrazení} v~$\R^2$,~tedy jejich předpis byl ve tvaru
 \begin{equation}\label{eq:afinni-zobrazeni}
     f(x,y)=\left(\begin{matrix}
-        a~& b\\
+        a & b\\
         c & d
     \end{matrix}\right)\left(\begin{matrix}
         x\\
@@ -33,17 +33,17 @@ from copy import deepcopy
 
 class IFS:
 
-    def __init__(self,~starting_figure: list,~tr_coefs: list = []) -> None:
+    def __init__(self, starting_figure: list, tr_coefs: list = []) -> None:
         self._figures = [starting_figure]
         self._total_iterations = 0
 
         # Min/max coordinates (used for centering)
-        self._x_min,~self._y_min,~self._x_max,~self._y_max = 0,~0,~0,~0
+        self._x_min, self._y_min, self._x_max, self._y_max = 0, 0, 0, 0
         self.__update_min_max_coords()
 
         self._transformations = set()
         for tpl in tr_coefs:
-            def transformation(point,~tpl=deepcopy(tpl)):
+            def transformation(point, tpl=deepcopy(tpl)):
                 return Vector(
                     tpl[0]*point.x + tpl[1]*point.y + tpl[4],
                     tpl[2]*point.x + tpl[3]*point.y + tpl[5]
