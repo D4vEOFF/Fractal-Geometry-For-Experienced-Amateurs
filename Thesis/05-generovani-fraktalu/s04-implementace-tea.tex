@@ -57,7 +57,7 @@ class TEA:
 Pojďme si konstruktor \ref{prog:konstruktor-tea} opět rozebrat.
 \begin{itemize}
     \item \texttt{self.\_x\_count} a~\texttt{self.\_y\_count} udávají počet bodů,~které budeme prozkoumávat,~ve směru reálné a~imaginární osy. Jejich hodnoty jsou závislé na velikosti kroku \texttt{step},~kterou konstruktor přijímá jako parametr. Tedy např. s~krokem $1$ v~rámci intervalu $\langle-1,2\rangle$ budeme zkoumat celkem 4 body.
-    \item V~seznamu \texttt{self.\_iter\_counts} si budeme pro každý bod uchovávat,~kolik iterací zadané funkce bylo potřeba,~než posloupnost začala divergovat (tedy $|f^{\circ k}(z)|>r$). Ten využijeme především později při určování barev jednotlivých bodů.
+    \item V~seznamu \texttt{self.\_iter\_counts} si budeme pro každý bod uchovávat,~kolik iterací zadané funkce bylo potřeba,~než hodnoty posloupnosti překročily zadanou mez (tedy $|f^{\circ k}(z)|>r$). Ten využijeme především později při určování barev jednotlivých bodů.
     \item \texttt{self.\_sequence} uchovává předpis polynomální funkce,~kterou budeme iterovat,~jako řetězec. Předpisy budeme zadávat standardní syntaxí v~Pythonu,~tzn. např. pro Mandelbrotovu množinu,~kde $f_c(z)=z^2+c$,~bychom předpis napsali
     \begin{center}
         \texttt{z**2 + c}.
@@ -70,7 +70,7 @@ Pojďme si konstruktor \ref{prog:konstruktor-tea} opět rozebrat.
     \item \texttt{self.\_complex\_grid} uchovává všechny body ze zadané části komplexní roviny jako komplexní čísla,~tedy v~Pythonu datový typ \texttt{complex}.
     \item Do seznamu \texttt{self.\_point\_last\_values} budeme ukládat hodnoty $f^{\circ k}(z)$ pro zadané $z$,~kde $k$ je číslo poslední prozkoumané iterace (tzn. buď jsme u~bodu prozkoumali maximální počet zadaných iterací,~nebo výpočet skončil dříve kvůli překročení povolené absolutní hodnoty).
 \end{itemize}
-Je vidět,~že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve vyjasnit,~jak bychom mohli pomocí těchto informací implementovat algoritmus pro iterování zadané polynomiální funkce. Již jsme si uvedli asi nejjednodušší možnost v~rámci algoritmu \ref{alg:generovani-vyplnene-jf}. Jak by se ale situace změnila,~když si budeme uchovávat počty iterací,~které proběhly než jsme překročili zadanou absolutní hodnotu $r$ nebo dosáhli maximálního počtu $m$? Označme si takové pole např. $T$. Podívejme se na algoritmus \ref{alg:generovani-vyplnene-jf-pole}.
+Je vidět,~že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve vyjasnit,~jak bychom mohli pomocí těchto informací implementovat algoritmus pro iterování zadané polynomiální funkce. Již jsme si uvedli asi nejjednodušší možnost v~rámci algoritmu \ref{alg:generovani-vyplnene-jf}. Jak by se ale situace změnila,~když si budeme uchovávat počty iterací,~které proběhly než jsme překročili zadanou absolutní hodnotu $r$ nebo dosáhly maximálního počtu $m$? Označme si takové pole např. $T$. Podívejme se na algoritmus \ref{alg:generovani-vyplnene-jf-pole}.
 \begin{algorithm}[h]
     \KwIn{Komplexní polynomiální funkce $f$,~maximální počet iterací $m\in\N_0$,~číslo $r\in\R$,~konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a~$Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
     $K\gets\emptyset$\;
@@ -211,7 +211,7 @@ Existují pochopitelně metody\footnotetext{Dostupné z~\url{https://cs.wikipedi
 
 Patrně nejjednodušším způsobem pro přiřazení barev jednotlivým bodům je tzv. \emph{lineární interpolací}\index{lineární interpolace}\index{interpolace!lineární} odstínu při pevně zvolené saturaci a~jasu. Obecně jsou-li zadány body v~rovině $(x_0,y_0)$ a~$(x_1,y_1)$,~pak lineární intepolace přiřazuje každému $x\in(x_0,x_1)$ souřadnici $y=f(x)$,~takovou,~že $(x,y)$ leží na spojnici bodů $(x_0,y_0)$ a~$(x_1,y_1)$. Toto lze vyjádřit poměrně jednoduchým vzorcem:
 \[f(x)=y_{0}+(x-x_{0}){\frac {y_{1}-y_{0}}{x_{1}-x_{0}}}.\]
-Pojďme si nyní rozmyslet náš případ. Bodům z~komplexní roviny budeme přiřazovat barvu podle počtu iterací,~kterého jsme při výpočtu dosáhli,~než začala samotná postupnost iterací funkce divergovat. Zde mohou tedy nastat celkově dva případy. Počet iterací pro pevně zvolený bod $z$ si označme $k$ a~maximální počet iterací si označme $m$.
+Pojďme si nyní rozmyslet náš případ. Bodům z~komplexní roviny budeme přiřazovat barvu podle počtu iterací,~kterého jsme při výpočtu dosáhli,~než začala samotná postupnost absolutních hodnot iterací funkce divergovat (popř. oscilovat). Zde mohou tedy nastat celkově dva případy. Počet iterací pro pevně zvolený bod $z$ si označme $k$ a~maximální počet iterací si označme $m$.
 \begin{itemize}
     \item Pokud $k<m$,~pak přižadíme bodu $z$ barvu na základě lineární interpolace odstínu,~přičemž saturaci a~jas volíme pevně,~označme $S_0,V_0$.
     \item Pokud $k=m$,~pak bodu $z$ přiřadíme černou barvu,~tedy prohlásíme jej za bod náležící zkoumané vyplněné Juliově množině.
