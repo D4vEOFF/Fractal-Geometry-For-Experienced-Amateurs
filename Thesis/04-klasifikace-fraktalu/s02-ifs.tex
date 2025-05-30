@@ -58,7 +58,7 @@ Jako první se podíváme na trojici pomocných lemmat.
     \[\hausdorffmetric(A\cup B,C\cup D)\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.\]
 \end{lemma}
 \begin{proof}
-    Budeme vycházet z~alternativní definice Hausdorffovy metriky,~jejíž ekvivalenci s původní definicí jsme dokázali výše (viz věta~\ref{thm:alternativni-hausdorffova-metrika}). Pro $\varrho(x,A\cup B)$ platí následující odhad:
+    Budeme vycházet z~alternativní definice Hausdorffovy metriky,~jejíž ekvivalenci s~původní definicí jsme dokázali výše (viz věta~\ref{thm:alternativni-hausdorffova-metrika}). Pro $\varrho(x,A\cup B)$ platí následující odhad:
     \[\varrho(x,A\cup B)=\min\set{\inf_{y\in A}\varrho(x,y),\inf_{z\in B}\varrho(x,z)}\leqslant\inf_{y\in A}\varrho(x,y)=\varrho(x,A).\]
     Z~toho pak máme
     \[\sup_{x\in A}\varrho(x,C\cup D)\leqslant\sup_{x\in A}\inf_{y\in C}\varrho(x,y)=\varrho(x,A)\leqslant\hausdorffmetric(A,C)\]
@@ -609,6 +609,6 @@ V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem
     \[2a^s+2\cdot\left(\dfrac{1-a}{2}\right)^s=1.\]
     Tu obecně algebraicky řešit nelze s~výjimkou $a=1/3$,~což by byl případ standardní Kochovy křivky. Pro $a=1/5$ lze numericky dopočítat přibližné řešení $s\approx 1{,}1601$.
 \end{example}
-(Převzato a upraveno z \citep[str. 142]{Falconer1989}.)
+(Převzato a~upraveno z~\citep[str. 142]{Falconer1989}.)
 
 Příklady výpočtů pro ostatní prezentované fraktální útvary si může čtenář vyzkoušet sám,~neboť nejsou nikterak složité. V~některých případech může být obtížnější určit kontraktivní faktor daných zobrazení. Asi nejefektivější způsob (nechceme-li faktor počítat přímo z~definice) je přes tzv. \emph{SVD rozklad}\footnote{Zkratka pro \emph{Singular Value Decomposition}}\index{SVD roklad} a~\emph{singulární čísla}\footnote{Ta lze rovněž získat pomocí vlastních čísel matice $\mat{A}$.}\index{singulární číslo} matice $\mat{A}$. Tím se zde ale již zabývat nebudeme. Pro zvídavého čtenáře však doporučuji knihu \cite{Hladik2019}.

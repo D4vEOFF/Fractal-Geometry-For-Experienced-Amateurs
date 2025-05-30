@@ -1,6 +1,6 @@
 \section{Lebesgueova míra}\label{sec:lebesgueova-mira}
 
-Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a italský matematik \name{Giuseppe Peano} (1958--1932),~kteří ve svých publikacích popsali způsob měření "velikosti" množin,~který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť,~přičemž $S$ bude představovat součet obsahů všech čtverců síťě,~které jsou obsaženy ve vnitřku množiny $M$ a $S^\prime$ je součeet obsahů všech čtverců sítě,~které mají společný alespoň jeden bod s~hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě,~které obsahují body uzávěru množiny $M$. (Viz obrázek~\ref{fig:jordan-peano-mira}.)
+Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a~italský matematik \name{Giuseppe Peano} (1958--1932),~kteří ve svých publikacích popsali způsob měření "velikosti" množin,~který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť,~přičemž $S$ bude představovat součet obsahů všech čtverců síťě,~které jsou obsaženy ve vnitřku množiny $M$ a~$S^\prime$ je součeet obsahů všech čtverců sítě,~které mají společný alespoň jeden bod s~hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě,~které obsahují body uzávěru množiny $M$. (Viz obrázek~\ref{fig:jordan-peano-mira}.)
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.4\textwidth}
@@ -14,10 +14,10 @@ Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzsk
         \includegraphics{ch02-jordan-peano-vnejsi-mira.pdf}
         \caption{Součet $S+S^\prime$}
     \end{subfigure}
-    \caption{Vnitřní a vnější Jordanova-Peanova míra množiny $M$.}
+    \caption{Vnitřní a~vnější Jordanova-Peanova míra množiny $M$.}
     \label{fig:jordan-peano-mira}
 \end{figure}
-Při zjemňování čtvercové sítě konvergují součty $S$ a $S+S^\prime$ k~limitám,~které po řadě nazýváme \emph{vnitřní} a \emph{vnější Jordanova-Peanova míra}\index{Jordanova-Peanova míra}\index{míra!Jordanova-Peanova}. Tato úvaha předložila základní předpoklady právě pro vznik teorie míry. \cite{Sarmanova1996}
+Při zjemňování čtvercové sítě konvergují součty $S$ a~$S+S^\prime$ k~limitám,~které po řadě nazýváme \emph{vnitřní} a~\emph{vnější Jordanova-Peanova míra}\index{Jordanova-Peanova míra}\index{míra!Jordanova-Peanova}. Tato úvaha předložila základní předpoklady právě pro vznik teorie míry. \cite{Sarmanova1996}
 
 V předešlé sekci~\ref{sec:prostory-s-mirou} jsme si povídali o~pojmu \emph{míra} obecně a~podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů},~jejichž "velikost" umíme jednoduše určit. V~dalším textu se omezíme pouze na množinu $\R^n$.
 
@@ -60,7 +60,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
         \[J_i=\prod_{j=1}^{n}\left\langle x_j-r_j\sqrt[n]{1+\varepsilon},x_j+r_j\sqrt[n]{1+\varepsilon}\right\rangle,\]
-        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty~\ref{thm:heine-borel} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a~$r_j$ jeho poloměr,~tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty~\ref{thm:heine-borel} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
         \[I\subseteq\bigcup_{i=1}^m J_i.\]
         Celkově tedy dostáváme
         \begin{align*}
@@ -100,7 +100,7 @@ Podmínka v~definici~\ref{def:lebesgueovska-meritelnost} se někdy nazývá ří
     \caption{Ilustrace měřitelnosti množiny $A$}
     \label{fig:caratheodoryho-kriterium}
 \end{figure}
-O systému $\mathcal{L}(\R^n)$ a Lebesgueově míře $\lebesguemeasure{n}$ lze dokázat následující tvrzení.
+O systému $\mathcal{L}(\R^n)$ a~Lebesgueově míře $\lebesguemeasure{n}$ lze dokázat následující tvrzení.
 \begin{theorem}\label{thm:prostor-s-Lebesgueovou-mirou}
     Platí:
     \begin{enumerate}[label=(\roman*)]

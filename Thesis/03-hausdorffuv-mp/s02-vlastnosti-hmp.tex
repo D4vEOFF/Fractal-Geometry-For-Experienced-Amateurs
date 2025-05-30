@@ -1,4 +1,4 @@
-\section{Kompaktní množiny a konvergence}\label{sec:konvergence-hmp}
+\section{Kompaktní množiny a~konvergence}\label{sec:konvergence-hmp}
 
 \begin{theorem}\label{thm:konvergence-hmp}
     Nechť $A_1,A_2,\ldots$ je nerostoucí posloupnost množin,~kde $A_i\in\hyperspace(X)$ pro každé $i\in\N$. Pak posloupnost $A_1,A_2,\ldots$ konverguje k~množině
@@ -12,7 +12,7 @@
     \[\mathcal{F}=\set{(A_i)_\varepsilon}\cup\set{X\setminus A_i\mid i\in\N}\]
     tvoří otevřené pokrytí množiny $A_1$ pro každé $i\in\N$. Podle předpokladu je však $A_1$ kompaktní,~tedy z~$\mathcal{F}$ lze vybrat konečné podpokrytí. Specificky existuje $i_0\in\N$,~takové,~že pro všechna $i\geqslant i_0$ je systém
     \[\mathcal{G}=\set{X\setminus A_i}\cup\set{(A)_\varepsilon}\]
-    pokrytím $A_1$ a $\mathcal{G}\subseteq\mathcal{F}$ (viz obrázek~\ref{fig:konvergence-hmp}). Z~toho plyne,~že $A_i\subseteq (A)_\varepsilon$ a tedy $\hausdorffmetric(A,A_i)<\varepsilon$.
+    pokrytím $A_1$ a~$\mathcal{G}\subseteq\mathcal{F}$ (viz obrázek~\ref{fig:konvergence-hmp}). Z~toho plyne,~že $A_i\subseteq (A)_\varepsilon$ a~tedy $\hausdorffmetric(A,A_i)<\varepsilon$.
 \end{proof}
 \begin{figure}[h]
     \centering
@@ -33,14 +33,14 @@ V souvislosti s~konvergencí v~prostoru $(\hyperspace(X),\hausdorffmetric)$ nebu
 Věta~\ref{thm:cantor} je v~podstatě rozšířením Cantorova principu\index{Cantorův princip}\index{princip!Cantorův} vnořených intervalů v~$\R$. Speciálně z~toho vyplývá,~že i~v Hausdorffově metrickém prostoru platí podmínka~\ref{thm:cantor-nekl-posl-mnozin},~neboť z~věty~\ref{thm:uplnost-hmp} víme,~že $(\hyperspace(X),\hausdorffmetric)$ tvoří úplný metrický prostor.
 
 \begin{theorem}\label{thm:stejnometrna-konvergence-hmp}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a zobrazení $\set{f_i}_{i=1}^\infty$,~kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$ a $f_j\rightrightarrows f$ pro $j\to\infty$.\index{konvergence!stejnoměrná} k~$f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k~$f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$.
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a~zobrazení $\set{f_i}_{i=1}^\infty$,~kde $\mapping{f_i}{X}{Y}$ pro každé $i\in\N$ a~$f_j\rightrightarrows f$ pro $j\to\infty$.\index{konvergence!stejnoměrná} k~$f$. Pak posloupnost $f_1(X),f_2(X),\ldots$ konverguje k~$f(X)$ na metrickém prostoru $(\hyperspace(Y),\hausdorffmetric)$.
 \end{theorem}
 \begin{proof}
     Mějme $\varepsilon>0$. Ukážeme,~že $\hausdorffmetric(f(X),f_i(X))<\varepsilon$ pro $i\geqslant i_0$. Funkce $f_1,f_2,\ldots$ konvergují k~$f$ stejnoměrně,~tzn.
     \[\forall\varepsilon>0\;\exists i_0\in\N\;\forall i\geqslant i_0\;\forall x\in X:\varrho_2(f(x),f_i(x))<\varepsilon.\]
-    Tzn.~pro každé $x\in X$ a $i\geqslant i_0$ platí
+    Tzn.~pro každé $x\in X$ a~$i\geqslant i_0$ platí
     \[\varrho_2(f(x),f_i(X))\leqslant\varrho_2(f(x),f_i(x))<\varepsilon.\]
-    a též
+    a~též
     \[\varrho_2(f_i(x),f(X))\leqslant\varrho_2(f_i(x),f(x))=\varrho_2(f(x),f_i(x))<\varepsilon.\]
     Z~toho vyplývá,~že
     \[f(X)\subseteq (f_i(X))_\varepsilon\;\text{a zároveň}\;f_i(X)\subseteq (f(X))_\varepsilon\]
@@ -48,7 +48,7 @@ Věta~\ref{thm:cantor} je v~podstatě rozšířením Cantorova principu\index{Ca
 \end{proof}
 (Převzato z~\citep[str. 74]{Edgar2008})
 \begin{remark}
-    Předpoklad stejnoměrné konvergence\index{stejnoměrná konvergence}\index{konvergence!stejnoměrná} ve větě~\ref{thm:stejnometrna-konvergence-hmp} je důležitý. Mějme např. metrický prostor $X=\langle0,1\rangle$ se standardní eukleidovskou metrikou a definujme posloupnost funkcí
+    Předpoklad stejnoměrné konvergence\index{stejnoměrná konvergence}\index{konvergence!stejnoměrná} ve větě~\ref{thm:stejnometrna-konvergence-hmp} je důležitý. Mějme např. metrický prostor $X=\langle0,1\rangle$ se standardní eukleidovskou metrikou a~definujme posloupnost funkcí
     \[\mapping{f_n}{\langle0,1\rangle}{\R},\;f_n(x)=x^n.\]
     Limitou je funkce $f$,~kde
     \[f(x) = \begin{cases}
