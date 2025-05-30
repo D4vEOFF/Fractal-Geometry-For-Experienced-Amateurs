@@ -4,7 +4,7 @@ Poslední kategorii fraktálních útvarů tvořily tzv. \emph{Juliovy množiny}
 
 \subsection{Aproximace vyplněné Juliovy množiny}\label{subsec:aproximace-vyplnene-juliovy-mnoziny}
 
-Podívejme se na tento algoritmus trochu blíže v~pseudokódu \ref{alg:generovani-vyplnene-jf}.
+Podívejme se na tento algoritmus trochu blíže v~pseudokódu~\ref{alg:generovani-vyplnene-jf}.
 \begin{algorithm}
     \KwIn{Komplexní polynomiální funkce $f$,~maximální počet iterací $m\in\N_0$,~číslo $r\in\R$,~konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a~$Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
     $K\gets\emptyset$\;
@@ -26,9 +26,9 @@ Podívejme se na tento algoritmus trochu blíže v~pseudokódu \ref{alg:generova
 \end{algorithm}
 Nejspíše nikoho nepřekvapí,~že při vyšších hodnotách čísla $m$ obdržíme lepší odhad Juliovy množiny příslušné polynomiální funkci $f$. Avšak vždy je potřeba zvážit náročnost výpočtu.
 
-Znázornění (vyplněné) Juliovy množiny lze provést různými způsoby. Prezentovaný algorimus \ref{alg:generovani-vyplnene-jf} pouze určuje pro každý zvolený bod $z$,~zda naleží,~či nenáleží množině $J$. Avšak čtenář zajímající se o~tuto partii matematiky již nejspíše viděl poměrně známý způosb vyobrazení těchto množin s~barevným rozlišováním bodů. Tuto záležitost jsme již zmínili ke konci části \ref{subsec:juliovy-fatouovy-mnoziny},~avšak jeho podstatné aspekty jsou především algoritmické povahy a~tedy teprve v~této kapitole je více rozvedeme. K~tomu se však dostaneme později.
+Znázornění (vyplněné) Juliovy množiny lze provést různými způsoby. Prezentovaný algorimus~\ref{alg:generovani-vyplnene-jf} pouze určuje pro každý zvolený bod $z$,~zda naleží,~či nenáleží množině $J$. Avšak čtenář zajímající se o~tuto partii matematiky již nejspíše viděl poměrně známý způosb vyobrazení těchto množin s~barevným rozlišováním bodů. Tuto záležitost jsme již zmínili ke konci části~\ref{subsec:juliovy-fatouovy-mnoziny},~avšak jeho podstatné aspekty jsou především algoritmické povahy a~tedy teprve v~této kapitole je více rozvedeme. K~tomu se však dostaneme později.
 
-Praktická implementace Time Escape algoritmů bude podstatně složitější,~neboť si musíme vypořádat s~konverzí samotného polynomu a~rovněž vyřešit způsob vzorkování vybrané části komplexní roviny. Dále se budeme držet realizace pomocí třídy (viz ukázka \ref{prog:konstruktor-tea}).
+Praktická implementace Time Escape algoritmů bude podstatně složitější,~neboť si musíme vypořádat s~konverzí samotného polynomu a~rovněž vyřešit způsob vzorkování vybrané části komplexní roviny. Dále se budeme držet realizace pomocí třídy (viz ukázka~\ref{prog:konstruktor-tea}).
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 class TEA:
@@ -54,7 +54,7 @@ class TEA:
     \caption{Konstruktor třídy \texttt{TEA}}
     \label{prog:konstruktor-tea}
 \end{program}
-Pojďme si konstruktor \ref{prog:konstruktor-tea} opět rozebrat.
+Pojďme si konstruktor~\ref{prog:konstruktor-tea} opět rozebrat.
 \begin{itemize}
     \item \texttt{self.\_x\_count} a~\texttt{self.\_y\_count} udávají počet bodů,~které budeme prozkoumávat,~ve směru reálné a~imaginární osy. Jejich hodnoty jsou závislé na velikosti kroku \texttt{step},~kterou konstruktor přijímá jako parametr. Tedy např. s~krokem $1$ v~rámci intervalu $\langle-1,2\rangle$ budeme zkoumat celkem 4 body.
     \item V~seznamu \texttt{self.\_iter\_counts} si budeme pro každý bod uchovávat,~kolik iterací zadané funkce bylo potřeba,~než hodnoty posloupnosti překročily zadanou mez (tedy $|f^{\circ k}(z)|>r$). Ten využijeme především později při určování barev jednotlivých bodů.
@@ -70,7 +70,7 @@ Pojďme si konstruktor \ref{prog:konstruktor-tea} opět rozebrat.
     \item \texttt{self.\_complex\_grid} uchovává všechny body ze zadané části komplexní roviny jako komplexní čísla,~tedy v~Pythonu datový typ \texttt{complex}.
     \item Do seznamu \texttt{self.\_point\_last\_values} budeme ukládat hodnoty $f^{\circ k}(z)$ pro zadané $z$,~kde $k$ je číslo poslední prozkoumané iterace (tzn. buď jsme u~bodu prozkoumali maximální počet zadaných iterací,~nebo výpočet skončil dříve kvůli překročení povolené absolutní hodnoty).
 \end{itemize}
-Je vidět,~že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve vyjasnit,~jak bychom mohli pomocí těchto informací implementovat algoritmus pro iterování zadané polynomiální funkce. Již jsme si uvedli asi nejjednodušší možnost v~rámci algoritmu \ref{alg:generovani-vyplnene-jf}. Jak by se ale situace změnila,~když si budeme uchovávat počty iterací,~které proběhly než jsme překročili zadanou absolutní hodnotu $r$ nebo dosáhly maximálního počtu $m$? Označme si takové pole např. $T$. Podívejme se na algoritmus \ref{alg:generovani-vyplnene-jf-pole}.
+Je vidět,~že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve vyjasnit,~jak bychom mohli pomocí těchto informací implementovat algoritmus pro iterování zadané polynomiální funkce. Již jsme si uvedli asi nejjednodušší možnost v~rámci algoritmu~\ref{alg:generovani-vyplnene-jf}. Jak by se ale situace změnila,~když si budeme uchovávat počty iterací,~které proběhly než jsme překročili zadanou absolutní hodnotu $r$ nebo dosáhly maximálního počtu $m$? Označme si takové pole např. $T$. Podívejme se na algoritmus~\ref{alg:generovani-vyplnene-jf-pole}.
 \begin{algorithm}[h]
     \KwIn{Komplexní polynomiální funkce $f$,~maximální počet iterací $m\in\N_0$,~číslo $r\in\R$,~konečné množiny $X\subset\langle x_{\text{min}},x_{\text{max}}\rangle$ a~$Y\subset\langle y_{\text{min}},y_{\text{max}}\rangle$}
     $K\gets\emptyset$\;
@@ -90,9 +90,9 @@ Je vidět,~že atributů zde máme poměrně hodně. Zkusme si tedy nejdříve v
     \caption{Generování vyplněné Juliovy množiny pomocí pole iterací $T$}
     \label{alg:generovani-vyplnene-jf-pole}
 \end{algorithm}
-Pro implementaci algoritmu \ref{alg:generovani-vyplnene-jf-pole} si však budeme muset rozmyslet,~jak budeme pomocí řetězce s~předpisem pro funkci $f$ (tj. atributu \texttt{self.\_sequence}) počítat její funkční hodnoty. Jistě se nabízí možnost vytvořit funkci pro vyhodnocení obecného matematického výrazu. Ač se jedná o~poměrně hezké programovací cvičení a~čtenář si jej může vyzkoušet,~my si poradíme trochu jinak -- funkcí \texttt{eval}. Funkce \texttt{eval} jednoduše vyhodnotí zadaný výraz a~za proměnné dosadí hodnoty podle slovníku poskytnutého v~příslušném parametru/parametrech.
+Pro implementaci algoritmu~\ref{alg:generovani-vyplnene-jf-pole} si však budeme muset rozmyslet,~jak budeme pomocí řetězce s~předpisem pro funkci $f$ (tj. atributu \texttt{self.\_sequence}) počítat její funkční hodnoty. Jistě se nabízí možnost vytvořit funkci pro vyhodnocení obecného matematického výrazu. Ač se jedná o~poměrně hezké programovací cvičení a~čtenář si jej může vyzkoušet,~my si poradíme trochu jinak -- funkcí \texttt{eval}. Funkce \texttt{eval} jednoduše vyhodnotí zadaný výraz a~za proměnné dosadí hodnoty podle slovníku poskytnutého v~příslušném parametru/parametrech.
 
-Tím se nám situace podstatně zlehčuje. Implementaci si může čtenář prohlédnout v~ukázce \ref{prog:generovani-vyplnene-jf-pole}.
+Tím se nám situace podstatně zlehčuje. Implementaci si může čtenář prohlédnout v~ukázce~\ref{prog:generovani-vyplnene-jf-pole}.
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 def iterate(self, iterations: int) -> None:
@@ -117,13 +117,13 @@ def iterate(self, iterations: int) -> None:
             
             self.point_last_values[i][j] = vars_dict[self._var]
 \end{lstlisting}
-    \caption{Implementace algoritmu \ref{alg:generovani-vyplnene-jf-pole}}
+    \caption{Implementace algoritmu~\ref{alg:generovani-vyplnene-jf-pole}}
     \label{prog:generovani-vyplnene-jf-pole}
 \end{program}
 
 \subsection{Aproximace Juliovy množiny}\label{subsec:aproximace-juliovy-mnoziny}
 
-S množinou $\filledinjulia(f)$ se rovněž pojí i~její hranice $\boundary{\filledinjulia(f)}$. Co kdybychom chtěli vykreslit pouze hraniční body? Otázka se příliš nevzdaluje té původní,~akorát je navíc potřeba o~každém bodu $\filledinjulia(f)$ rozhodnout,~zda je hraniční,~či nikoliv\footnote{Všimněte si,~že zde nám náramně hodí výsledek z~věty \ref{thm:vztah-kf-a-jf},~specificky bod \ref{thm:jf-podmnozina-kf},~kde jsme dokázali,~že $\julia(f)\subseteq\filledinjulia(f)$. Náš návrh je tedy v~tomto ohledu oprávněný.}. Přitom myšlenka řešení se vůbec nemusí příliš vzdalovat matematickému pojetí hranice. Tu jsme si definovali pro libovolnou množinu $M$ jako množinu takových bodů,~které ve svém libovolně malém okolí obsahují alespoň jeden bod,~který $M$ náleží a~alespoň jeden,~který ji nenáleží. Toho bychom však mohli využít. Stačí zkontrolovat všechny sousední body pro každé $z\in\filledinjulia(f)$,~zda alespoň jeden z~nich nenáleží $\fatou(f)$. Pokud ano,~pak $z$ prohlásíme za hraniční bod (viz obrázek \ref{fig:hranicni-bod}).
+S množinou $\filledinjulia(f)$ se rovněž pojí i~její hranice $\boundary{\filledinjulia(f)}$. Co kdybychom chtěli vykreslit pouze hraniční body? Otázka se příliš nevzdaluje té původní,~akorát je navíc potřeba o~každém bodu $\filledinjulia(f)$ rozhodnout,~zda je hraniční,~či nikoliv\footnote{Všimněte si,~že zde nám náramně hodí výsledek z~věty~\ref{thm:vztah-kf-a-jf},~specificky bod~\ref{thm:jf-podmnozina-kf},~kde jsme dokázali,~že $\julia(f)\subseteq\filledinjulia(f)$. Náš návrh je tedy v~tomto ohledu oprávněný.}. Přitom myšlenka řešení se vůbec nemusí příliš vzdalovat matematickému pojetí hranice. Tu jsme si definovali pro libovolnou množinu $M$ jako množinu takových bodů,~které ve svém libovolně malém okolí obsahují alespoň jeden bod,~který $M$ náleží a~alespoň jeden,~který ji nenáleží. Toho bychom však mohli využít. Stačí zkontrolovat všechny sousední body pro každé $z\in\filledinjulia(f)$,~zda alespoň jeden z~nich nenáleží $\fatou(f)$. Pokud ano,~pak $z$ prohlásíme za hraniční bod (viz obrázek~\ref{fig:hranicni-bod}).
 \begin{figure}[h]
     \centering
     \includegraphics{ch05-hranicni-bod.pdf}
@@ -169,7 +169,7 @@ for y in range(h_px):
                         boundary_mask[y][x] = True
                         break
 \end{lstlisting}
-    \caption{Implementace algoritmu \ref{alg:generovani-jf}}
+    \caption{Implementace algoritmu~\ref{alg:generovani-jf}}
     \label{prog:generovani-jf}
 \end{program}
 
@@ -185,7 +185,7 @@ Ukážeme si zde celkem dvojici základních možností,~jak lze přiřazovat ba
     \item \textbf{saturation} (česky \emph{saturace},~nebo též \emph{sytost})
     \item a~\textbf{value} reprezentující hodnotu jasu (tj. podílu bílé barvy).
 \end{itemize}
-Celkově tento model vychází přímo z~vnímání barev lidským okem. Různé možnosti znázornění HSV modelu si lze prohlédnout na obrázcích \ref{subfig:hsv-valcova-reprezentace} a~\ref{subfig:hsv-kuzelova-reprezentace}.
+Celkově tento model vychází přímo z~vnímání barev lidským okem. Různé možnosti znázornění HSV modelu si lze prohlédnout na obrázcích~\ref{subfig:hsv-valcova-reprezentace} a~\ref{subfig:hsv-kuzelova-reprezentace}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -226,7 +226,7 @@ a tudíž pro výslednou barvu bodu $z$ bude platit
     \left(H_{\text{min}}+k(H_{\text{max}}-H_{\text{min}})/m,S_0,V_0\right) & k<m,\\
     (0,0,0) & k=m.
 \end{cases}\]
-Pro ukázku viz obrázky \ref{fig:mandelbrotova-mnozina-lerp-1} a~\ref{fig:mandelbrotova-mnozina-lerp-2} s~hranicí Mandebrotovy množiny.
+Pro ukázku viz obrázky~\ref{fig:mandelbrotova-mnozina-lerp-1} a~\ref{fig:mandelbrotova-mnozina-lerp-2} s~hranicí Mandebrotovy množiny.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1_lerp.png}
@@ -262,7 +262,7 @@ kde $\delta_{ij}$ je Kroneckerovo delta\footnote{Kroneckerovo delta se definuje 
 
 \subsubsection{Hladké zbarvení}
 
-Ačkoliv bychom se s~výsledkem pomocí prosté lineární interpolace (viz obrázky \ref{fig:mandelbrotova-mnozina-lerp-1} a~\ref{fig:mandelbrotova-mnozina-lerp-2}) mohli spokojit,~lze si všimnout,~že přechody mezi jednotlivými barvami (co by aproximacemi vyplněné Juliovy množiny pro zvolenou polynomiální funkci) jsou velmi ostré. Je tomu tak z~důvodu,~že ze zvolené lineární interpolace vzniká konečná posloupnost hodnot $H$ (funkce tedy není spojitá). Tento problém bychom mohli vyřešit zvýšením maximálního počtu iterací,~tedy v~konečném důsledku by mezi barvami nebyly takové rozdíly (pro porovnání s~obrázkem \ref{fig:mandelbrotova-mnozina-lerp-1} viz obrázek \ref{fig:mandelbrotova-mnozina-lerp-3},~kde $m=100$).
+Ačkoliv bychom se s~výsledkem pomocí prosté lineární interpolace (viz obrázky~\ref{fig:mandelbrotova-mnozina-lerp-1} a~\ref{fig:mandelbrotova-mnozina-lerp-2}) mohli spokojit,~lze si všimnout,~že přechody mezi jednotlivými barvami (co by aproximacemi vyplněné Juliovy množiny pro zvolenou polynomiální funkci) jsou velmi ostré. Je tomu tak z~důvodu,~že ze zvolené lineární interpolace vzniká konečná posloupnost hodnot $H$ (funkce tedy není spojitá). Tento problém bychom mohli vyřešit zvýšením maximálního počtu iterací,~tedy v~konečném důsledku by mezi barvami nebyly takové rozdíly (pro porovnání s~obrázkem~\ref{fig:mandelbrotova-mnozina-lerp-1} viz obrázek~\ref{fig:mandelbrotova-mnozina-lerp-3},~kde $m=100$).
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1_lerp-3.png}
@@ -275,7 +275,7 @@ Tento vzorec si zde nebudeme odvozovat,~avšak vychází z~tzv. \emph{potenciál
 \[\varphi(z)=\lim_{k\to \infty }{\frac {\log|f^{\circ k}(z)|}{d^{k}}},\]
 kde $d=\deg{f}$. V případě zájmu si čtenář může k této záležitosti vyhledat více informací.
 
-Díky zohlednění absolutní hodnoty $|f^{\circ k}(z)|$ budou přechody mezi barvami již daleko jemnější. Posuďte sami (viz obrázek \ref{fig:mandelbrotova-mnozina-smooth}).
+Díky zohlednění absolutní hodnoty $|f^{\circ k}(z)|$ budou přechody mezi barvami již daleko jemnější. Posuďte sami (viz obrázek~\ref{fig:mandelbrotova-mnozina-smooth}).
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{mandelbrot_set_zoom_1-smooth.png}

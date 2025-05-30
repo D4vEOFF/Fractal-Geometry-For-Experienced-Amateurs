@@ -1,6 +1,6 @@
 \section{Lebesgueova míra}\label{sec:lebesgueova-mira}
 
-Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a italský matematik \name{Giuseppe Peano} (1958--1932),~kteří ve svých publikacích popsali způsob měření "velikosti" množin,~který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť,~přičemž $S$ bude představovat součet obsahů všech čtverců síťě,~které jsou obsaženy ve vnitřku množiny $M$ a $S^\prime$ je součeet obsahů všech čtverců sítě,~které mají společný alespoň jeden bod s~hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě,~které obsahují body uzávěru množiny $M$. (Viz obrázek \ref{fig:jordan-peano-mira}.)
+Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzský matematik \name{Camille Jordan} (1832--1922) a italský matematik \name{Giuseppe Peano} (1958--1932),~kteří ve svých publikacích popsali způsob měření "velikosti" množin,~který je dnes známý jako tzv. \emph{Jordanova-Peanova míra}\index{Jordanova-Peanova míra}. Rovinu $\R^2$ si rozdělíme na čtvercovou síť,~přičemž $S$ bude představovat součet obsahů všech čtverců síťě,~které jsou obsaženy ve vnitřku množiny $M$ a $S^\prime$ je součeet obsahů všech čtverců sítě,~které mají společný alespoň jeden bod s~hranicí množiny $M$. Součet $S+S^\prime$ pak představuje obsah všech čtverců sítě,~které obsahují body uzávěru množiny $M$. (Viz obrázek~\ref{fig:jordan-peano-mira}.)
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.4\textwidth}
@@ -19,7 +19,7 @@ Jednimi z~nejznámějších průkopníků v~oblasti teorie míry byli francouzsk
 \end{figure}
 Při zjemňování čtvercové sítě konvergují součty $S$ a $S+S^\prime$ k~limitám,~které po řadě nazýváme \emph{vnitřní} a \emph{vnější Jordanova-Peanova míra}\index{Jordanova-Peanova míra}\index{míra!Jordanova-Peanova}. Tato úvaha předložila základní předpoklady právě pro vznik teorie míry. \cite{Sarmanova1996}
 
-V předešlé sekci \ref{sec:prostory-s-mirou} jsme si povídali o~pojmu \emph{míra} obecně a~podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů},~jejichž "velikost" umíme jednoduše určit. V~dalším textu se omezíme pouze na množinu $\R^n$.
+V předešlé sekci~\ref{sec:prostory-s-mirou} jsme si povídali o~pojmu \emph{míra} obecně a~podívali jsme se na několik příkladů. Obecnou ideu měření "velikosti" lze založit např. na aproximaci obecné množiny pomocí \emph{spočetných sjednocení útvarů},~jejichž "velikost" umíme jednoduše určit. V~dalším textu se omezíme pouze na množinu $\R^n$.
 
 Na zmíněné myšlence je postavena definice tzv. \emph{$n$-rozměrné Lebesgueovy míry},~kdy obecnou množinu budeme pokrývat pomocí \emph{kvádrů}. Připomeňme,~že obecně\linebreak\mbox{$n$-rozměrným} kvádrem\index{$n$-rozměrný kvádr} $I$ rozumíme kartézský součin \emph{intervalů}
 \[\langle a_1,b_1\rangle,\ldots,\langle a_n,b_n\rangle\subseteq\R,\]
@@ -36,7 +36,7 @@ Nyní si definujeme tzv. \emph{vnější Lebesgueovu míru}.
 \end{definition}
 Vnější Lebesgueova míra množiny intuitivně zachycuje informaci o~"velikosti" dané množiny.  Lze ihned vidět,~že pro libovolnou množinu $A\subseteq\R^n$ je $\lebesgueoutermeasure{n}(A)\in\R_0^+$,~protože $\vol_n(I_j)\geqslant0$ pro každé $j\in\N$.
 \begin{example}\label{ex:lebegueova-mira-trivialni-priklady}
-    Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z~definice (viz \ref{def:vnejsi-lebegueova-mira}),~tedy budeme hledat příslušné pokrytí dané množiny.
+    Ukažme si některé triviální příklady výpočtů vnější Lebesgueovy míry z~definice (viz~\ref{def:vnejsi-lebegueova-mira}),~tedy budeme hledat příslušné pokrytí dané množiny.
     \begin{itemize}
         \item Pro prázdnou množinu $\emptyset$ je $\lebesgueoutermeasure{n}(\emptyset)=0$,~neboť $\emptyset\subseteq\prod_{i=1}^{n}\langle0,0\rangle$ (prázdnou množinu lze pokrýt jakýmkoliv kvádrem nulového objemu) a
         \[\vol_n\left(\prod_{i=1}^{n}\langle0,0\rangle\right)=0.\]
@@ -60,7 +60,7 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
         \[I\subset\interior{J}\land\vol_n(J_i)\leqslant(1+\varepsilon)\vol_n(I_i).\]
         To není nikterak složité,~stačí např. pro každé $i\in\N$ položit
         \[J_i=\prod_{j=1}^{n}\left\langle x_j-r_j\sqrt[n]{1+\varepsilon},x_j+r_j\sqrt[n]{1+\varepsilon}\right\rangle,\]
-        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty \ref{thm:heine-borel} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
+        kde $x_j$ je střed $j$-tého intervalu kvádru $I_i$ a $r_j$ jeho poloměr, tzn. $r_j=(b_j-a_j)/2$. Protože však $I$ je uzavřená a~omezená množina,~je podle věty~\ref{thm:heine-borel} kompaktní,~tedy z~otevřeného pokrytí $\interior{J_1},\interior{J_2},\ldots$ lze vybrat konečné podpokrytí. Existuje tedy $m\in\N$,~takové,~že
         \[I\subseteq\bigcup_{i=1}^m J_i.\]
         Celkově tedy dostáváme
         \begin{align*}
@@ -74,14 +74,14 @@ Jako poslední si ukážeme,~že v~případě kvádru $n$-rozměrného kvádru o
     \[\lebesgueoutermeasure{n}(I)=\vol_n(I).\]
 \end{proof}
 \begin{remark}
-    Vraťme se na chvíli ještě k~větě \ref{thm:mira-vlastnosti} o~vlastnostech míry,~konkrétně bod \ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$,~tzn. $\lebesgueoutermeasure{n}(A_j)=\lebesgueoutermeasure{n}(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme,~že
+    Vraťme se na chvíli ještě k~větě~\ref{thm:mira-vlastnosti} o~vlastnostech míry,~konkrétně bod~\ref{thm:mira-nerost-posl}. Předpoklad $\mu(A_1)<\infty$ zde vynechat nelze. Stačí vzít množiny $A_j=\langle j,\infty)$,~tzn. $\lebesgueoutermeasure{n}(A_j)=\lebesgueoutermeasure{n}(\langle j,\infty))=\infty$ pro každé $j\in\N$. Snadno si rozmyslíme,~že
     \[\bigcap_{i=1}^\infty A_i=\emptyset,\]
     nicméně lze vidět,~že zatímco $\lim_{j\to\infty}\mu(A_j)=\infty$,~tak $\mu\left(\bigcap_{i=1}^\infty A_i\right)=0$.
 \end{remark}
 
-Z příkladů \ref{ex:lebegueova-mira-trivialni-priklady} a~\ref{prop:lebegueova-mira-objem-kvadru} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a~podobně např.~pro obdélník odpovídá jeho obsahu,~pro kvádr jeho objemu,~atd.
+Z příkladů~\ref{ex:lebegueova-mira-trivialni-priklady} a~\ref{prop:lebegueova-mira-objem-kvadru} můžeme vidět,~že pro rozumně zvolené množiny zachycuje vnější Lebesgueova míra jejich intuitivní "velikost". V~případě intervalu odpovídá jeho délce,~v~případě diskrétní množiny je nulová a~podobně např.~pro obdélník odpovídá jeho obsahu,~pro kvádr jeho objemu,~atd.
 
-Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle,~kdy jsme zavedli pojem vnější Lebesgueovy míry (opět viz definice \ref{def:vnejsi-lebegueova-mira}) namítat,~co nás opravňuje nazývat zobrazení $\lebesgueoutermeasure{n}$ mírou,~tj. ve smyslu definice \ref{def:prostor-s-mirou}. Jak víme,~že splňuje podmínku $\sigma$-aditivity? Odpověď na tuto otázku není zcela přímočará a~vlastně není ani jednoduchá.
+Nyní se však nabízí jedna otázka. Čtenář by mohl již od chvíle,~kdy jsme zavedli pojem vnější Lebesgueovy míry (opět viz definice~\ref{def:vnejsi-lebegueova-mira}) namítat,~co nás opravňuje nazývat zobrazení $\lebesgueoutermeasure{n}$ mírou,~tj. ve smyslu definice~\ref{def:prostor-s-mirou}. Jak víme,~že splňuje podmínku $\sigma$-aditivity? Odpověď na tuto otázku není zcela přímočará a~vlastně není ani jednoduchá.
 
 Bohužel pro libovolně zvolenou množinu $X$ a~$\sigma$-algebru $\mathcal{A}$ v~případě vnější Lebesgueovy míry obecně neplatí vlastnost aditivity,~tedy existují množiny $A,B\in\mathcal{A}$,~takové,~že
 \[\lebesgueoutermeasure{n}(A\cup B)\neq\lebesgueoutermeasure{n}(A)+\lebesgueoutermeasure{n}(B).\]
@@ -93,7 +93,7 @@ Je tedy potřeba se omezit na takové množiny,~kde je $\lebesgueoutermeasure{n}
     \[\lebesgueoutermeasure{n}(G)=\lebesgueoutermeasure{n}(G\cap A)+\lebesgueoutermeasure{n}(G\setminus A).\]
     Systém všech měřitelných množin v~$\R^n$ značíme $\mathcal{L}(\R^n)$.  Pokud $A\in\mathcal{L}(\R^n)$,~pak číslo $\lebesguemeasure{n}(A)=\lebesgueoutermeasure{n}(A)$ nazýváme $n$-rozměrnou Lebesgueovou mírou množiny $A$.
 \end{definition}
-Podmínka v~definici \ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká,~že množina $A$ je lebesgueovsky měřitelná,~když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek \ref{fig:caratheodoryho-kriterium}). Zároveň je dobré podotknout,~že kvádry,~které figurují v~definici vnější Lebesgueovy míry jsou měřitelné.
+Podmínka v~definici~\ref{def:lebesgueovska-meritelnost} se někdy nazývá říká \emph{Carathéodoryho kritérium}. Zjednodušeně říká,~že množina $A$ je lebesgueovsky měřitelná,~když při "rozdělení" \emph{libovolně} zvolené množiny $G$ na dvě části pomocí $A$ lze míru $G$ stanovit součtem měr daných částí (viz obrázek~\ref{fig:caratheodoryho-kriterium}). Zároveň je dobré podotknout,~že kvádry,~které figurují v~definici vnější Lebesgueovy míry jsou měřitelné.
 \begin{figure}[h]
     \centering
     \includegraphics{ch02-caratheodoryho-kriterium.pdf}

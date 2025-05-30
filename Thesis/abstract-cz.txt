@@ -2,4 +2,4 @@ Tato diplomová práce se zabývá fraktální geometrií s~cílem přehledně p
 
 Práce je koncipována s~ohledem na různou úroveň matematické zdatnosti čtenářů. Základní principy jsou vysvětleny v~kapitolách 1,~4 a~5,~zatímco kapitola 2 je věnována detailnímu matematickému rozboru teorie míry a~dimenzí. Praktické aspekty a~algoritmy používané pro generování fraktálů jsou popsány v~kapitole 5 především s~důrazem na obecnou srozumitelnost,~která umožňuje pochopit a~aplikovat dané postupy bez nutnosti znalosti konkrétního programovacího jazyka.
 
-Důležitou součástí práce jsou ilustrace vytvořené převážně v~programu Ipe a~pomocí doprovodného softwaru pro generování fraktálů,~který je dostupný na platformě GitHub.
+Důležitou součástí práce jsou ilustrace vytvořené převážně v~programu Ipe a~pomocí softwaru pro generování fraktálů vytvořeného k~této práci,~který je dostupný na platformě GitHub.

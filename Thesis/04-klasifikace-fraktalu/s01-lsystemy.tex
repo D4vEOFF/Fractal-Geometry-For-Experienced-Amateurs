@@ -31,7 +31,7 @@ Výpočet pak probíhá takto:
     \end{itemize}
     \item Pokud stroj nemá definovaný přechod pro aktuální stav a~čtený symbol na pásce,~zastaví se. Pokud stroj skončil ve stavu,~který je označený jako přijímající,~pak stroj slovo \textbf{přijal},~jinak jej \textbf{odmítá}.
 \end{enumerate}
-Viz obrázek \ref{fig:turinguv-stroj}.
+Viz obrázek~\ref{fig:turinguv-stroj}.
 \begin{figure}[h]
     \centering
     \includegraphics{ch04-turinguv-stroj.pdf}
@@ -108,7 +108,7 @@ V úvodu této sekce jsme si již trochu přiblížili historické pozadí teori
 \begin{remark}
     Speciálně pro prázdné slovo $\lambda$ a~libovolné slovo $u\in\Sigma^*$ platí $u\lambda=\lambda u=u$.
 \end{remark}
-Na základě definice \ref{def:operace-se-slovy} můžeme být nyní daleko konkrétnější při popisu některých slov a~jazyků. Např.
+Na základě definice~\ref{def:operace-se-slovy} můžeme být nyní daleko konkrétnější při popisu některých slov a~jazyků. Např.
 \[L=\set{0^n1^n\mid n\in\N}\]
 značí jazyk všech slov obsahující znaky $0$ a~$1$ ve tvaru
 \[\lambda,01,0011,000111,\ldots\]
@@ -148,7 +148,7 @@ Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečen
     Kupříkladu slovo $w=011110$ lze odvodit takto:
     \[S\Rightarrow 0S0\Rightarrow 01S10\Rightarrow011S110\Rightarrow011\lambda 110=011110.\]
 \end{example}
-Trochu praktičtěji zaměřený příklad nám poskytuje \ref{ex:syntax-analyza}. Gramatiky se typicky využívají (vyjma fraktální geometrie) např. v~kompilátorech\index{kompilátor} různých programovacích jazyků v~rámci tzv. \emph{syntaktické analýzy}\index{syntaktická analýza},~při níž se (jak název napovídá) kontroluje syntaktická správnost zápisu programu. Konkrétně se pro jednoduchost zaměříme pouze na matematické výrazy obsahující pouze operace \texttt{+} a~\texttt{*} (násobení).
+Trochu praktičtěji zaměřený příklad nám poskytuje~\ref{ex:syntax-analyza}. Gramatiky se typicky využívají (vyjma fraktální geometrie) např. v~kompilátorech\index{kompilátor} různých programovacích jazyků v~rámci tzv. \emph{syntaktické analýzy}\index{syntaktická analýza},~při níž se (jak název napovídá) kontroluje syntaktická správnost zápisu programu. Konkrétně se pro jednoduchost zaměříme pouze na matematické výrazy obsahující pouze operace \texttt{+} a~\texttt{*} (násobení).
 \begin{example}\label{ex:syntax-analyza}
     Mějme gramatiku $G=(V,T,P,S)$,~kde
     \[V=\set{E,I},T=\set{a,b,(,),+,*},S=E\]
@@ -167,7 +167,7 @@ Trochu praktičtěji zaměřený příklad nám poskytuje \ref{ex:syntax-analyza
         &\Rightarrow^*(a+b)+bb*(ab+bb).
     \end{align*}
 \end{example}
-S podobným přístupem se lze setkat i~např. v~lingvistice. Čtenář si možná ze základní školy vzpomíná na větný rozbor,~v jehož rámci bylo úkolem určit pro zadanou větu její strukturu. Ve skutečnosti se nejedná o~nic jiného,~než využítí určité formální gramatiky $G=(V,T,P,S)$,~jejíž pravidla v~množině $P$ jsou dána gramatickými pravidly (nyní v~lingvistickém slova smyslu) českého jazyka. Pro příklad viz obrázek\footnote{S,~NP,~VP,~ADJP představují neterminály příslušné gramatiky a~jednotlivá slova (Petr,~četl,~pěknou,~knihu) její termínály. Významy: S~\emph{(Sentence)},~NP \emph{(Noun Phrase)},~VP \emph{(Verb Phrase)},~ADJP \emph{(Adjective Phrase)}.} \ref{fig:syntax-strom-vety}.
+S podobným přístupem se lze setkat i~např. v~lingvistice. Čtenář si možná ze základní školy vzpomíná na větný rozbor,~v jehož rámci bylo úkolem určit pro zadanou větu její strukturu. Ve skutečnosti se nejedná o~nic jiného,~než využítí určité formální gramatiky $G=(V,T,P,S)$,~jejíž pravidla v~množině $P$ jsou dána gramatickými pravidly (nyní v~lingvistickém slova smyslu) českého jazyka. Pro příklad viz obrázek\footnote{S,~NP,~VP,~ADJP představují neterminály příslušné gramatiky a~jednotlivá slova (Petr,~četl,~pěknou,~knihu) její termínály. Významy: S~\emph{(Sentence)},~NP \emph{(Noun Phrase)},~VP \emph{(Verb Phrase)},~ADJP \emph{(Adjective Phrase)}.}~\ref{fig:syntax-strom-vety}.
 \begin{figure}[h]
     \centering
     \begin{tikzpicture}[
@@ -196,9 +196,9 @@ Zároveň zde můžeme vidět souvislost formální gramatiky s~gramatikou v~lin
 
 \subsection{Definice L-systému}\label{subsec:definice-lsystemu}
 
-V podsekci \ref{subsec:formalni-jazyky-a-gramatiky} jsme si udělali v~podstatě "rychloúvod" do problematiky \emph{formálních jazyků} a~\emph{gramatik},~kde jsme si především zavedli potřebné značenou terminologii a~značení. L-systémy\footnote{Pojmenovány po Aristidu Lindenmayerovi.}\index{L-systém} se v~kontextu formálních gramatik mírně,~avšak podstatně liší v~tom,~že pravidla jsou v~jednom kroku aplikována paralelně.
+V podsekci~\ref{subsec:formalni-jazyky-a-gramatiky} jsme si udělali v~podstatě "rychloúvod" do problematiky \emph{formálních jazyků} a~\emph{gramatik},~kde jsme si především zavedli potřebné značenou terminologii a~značení. L-systémy\footnote{Pojmenovány po Aristidu Lindenmayerovi.}\index{L-systém} se v~kontextu formálních gramatik mírně,~avšak podstatně liší v~tom,~že pravidla jsou v~jednom kroku aplikována paralelně.
 
-Základní idea vychází popisu fráktálů vychází z~konceptu,~který jsme si již představili v~úvodní kapitole \ref{chapter:uvod_do_fraktalu},~a to \emph{soběpodobnosti}\index{soběpodobnost}. V~každém dalším kroku jsme část útvaru nahradili jeho zmenšenou kopií. Nešlo by toto nějak zachytit pomocí postupného přepisování,~jako tomu bylo v~případě formálních gramtik? Ovšem,~že ano. Jako první se tedy podíváme na definici L-systému.
+Základní idea vychází popisu fráktálů vychází z~konceptu,~který jsme si již představili v~úvodní kapitole~\ref{chapter:uvod_do_fraktalu},~a to \emph{soběpodobnosti}\index{soběpodobnost}. V~každém dalším kroku jsme část útvaru nahradili jeho zmenšenou kopií. Nešlo by toto nějak zachytit pomocí postupného přepisování,~jako tomu bylo v~případě formálních gramtik? Ovšem,~že ano. Jako první se tedy podíváme na definici L-systému.
 \begin{definition}[L-systém]\label{def:lsystem}
     L-systémem\index{L-systém} nazveme uspořádanou trojici $G=(V,\omega,P)$,~kde:
     \begin{itemize}
@@ -208,9 +208,9 @@ Základní idea vychází popisu fráktálů vychází z~konceptu,~který jsme s
         \item Pro každé $a\in V$ platí $(a\to a)\in P$,~pokud $a$ není na levé straně žádného jiného pravidla.
     \end{itemize}
 \end{definition}
-Porovnejme na chvíli definici \ref{def:lsystem} s~definicí formální gramatiky (viz definice \ref{def:formalni-gramatika}). U~gramatik jsme rozlišovali tzv. neterminální a~terminální symboly. U~L-systému však tato dvajice druhů symbolů splývá,~resp. nerozlišujeme mezi terminály a~neterminály,~neboť v~jednom kroku přepisujeme všechny symboly. Dále začínáme rovnou s~řetězcem symbolů $\omega\in V^+$. To lze v~gramatice zařídit jednoduše tak,~že zavedeme speciální neterminál $T$,~který uvedeme jako počáteční,~a pak přidáme pravidlo $T\to\omega$,~přičemž $\omega$,~ani žádná jiná pravidla neobsahují neterminál $T$. V~tomto ohledu tedy můžeme vidět,~že L-systém je z~pohledu definice gramatiky pouze zvláštní případ.
+Porovnejme na chvíli definici~\ref{def:lsystem} s~definicí formální gramatiky uvedenou výše (viz definice~\ref{def:formalni-gramatika}). U~gramatik jsme rozlišovali tzv. neterminální a~terminální symboly. U~L-systému však tato dvajice druhů symbolů splývá,~resp. nerozlišujeme mezi terminály a~neterminály,~neboť v~jednom kroku přepisujeme všechny symboly. Dále začínáme rovnou s~řetězcem symbolů $\omega\in V^+$. To lze v~gramatice zařídit jednoduše tak,~že zavedeme speciální neterminál $T$,~který uvedeme jako počáteční,~a pak přidáme pravidlo $T\to\omega$,~přičemž $\omega$,~ani žádná jiná pravidla neobsahují neterminál $T$. V~tomto ohledu tedy můžeme vidět,~že L-systém je z~pohledu definice gramatiky pouze zvláštní případ.
 
-Jak už bylo uvedeno na začátku této podsekce,~podstatný rozdíl oproti gramatikám nastává ve způsobu přepisování,~resp. odvozování slov (pro připomenutí viz definice \ref{def:odvozeni-slova-v-gramatice}).
+Jak už bylo uvedeno na začátku této podsekce,~podstatný rozdíl oproti gramatikám nastává ve způsobu přepisování,~resp. odvozování slov (pro připomenutí viz definice~\ref{def:odvozeni-slova-v-gramatice}).
 \begin{definition}[Odvození slova v~L-systému]\label{def:odvozeni-slova-v-lsystemu}
     Nechť je dán L-systém $G=(V,\omega,P)$.
     \begin{itemize}
@@ -221,9 +221,9 @@ Jak už bylo uvedeno na začátku této podsekce,~podstatný rozdíl oproti gram
         \[\exists\beta_1,\beta_2,\ldots,\beta_n\in V^*:\alpha=\beta_1\Rightarrow\beta_2\Rightarrow\dots\Rightarrow\beta_n=\omega.\]
     \end{itemize}
 \end{definition}
-Zatím jsme se moc nepozastavili nad~poslední podmínkou v~definici \ref{def:lsystem}. Zajišťuje nám,~že každý znak lze vždy přepsat na jiný řetězec. Zkuste si schválně rozmyslet,~že právě díky této podmínce dává definice odvození slova \ref{def:odvozeni-slova-v-lsystemu} smysl.
+Zatím jsme se moc nepozastavili nad~poslední podmínkou v~definici~\ref{def:lsystem}. Zajišťuje nám,~že každý znak lze vždy přepsat na jiný řetězec. Zkuste si schválně rozmyslet,~že právě díky této podmínce dává definice odvození slova~\ref{def:odvozeni-slova-v-lsystemu} smysl.
 
-Než se posuneme dál,~zkusme ještě na chvíli prodiskutovat různé varianty L-systémů. Definice \ref{def:lsystem},~kterou jsme si uvedli,~ve skutečnosti odráží pouze jeden ze speciálních případů. Tomuto typu se říká \emph{bezkontextové}\index{bezkontextový L-systém} L-systémy (značené \emph{OL-systémy}\index{OL-systém}). Název vychází z~faktu,~že každý symbol přepisujeme zvlášť (připouštíme pouze pravidla ve tvaru $a\to\omega$,~kde $a\in V$ a~$\omega\in V^*$),~tzn. nezáleží na ostatních znacích (tedy kontextu,~v němž se nechází). Jinými typy L-systémů jsou naopak \emph{kontextové}\footnote{Tyto typy L-systémů souvisí do jisté míry s~již v~úvodu zmíněnou Chomského hierarchií\index{Chomského hierarchie},~v jejímž rámci jsou definovány podobně i~bezkontextové a~kontextové gramatiky.},~kde pracujeme s~pravidly ve tvaru $\gamma A\beta\to\gamma\omega\beta$,~kde $\gamma,\beta,\omega\in V^*$ a~$A\in V$.
+Než se posuneme dál,~zkusme ještě na chvíli prodiskutovat různé varianty L-systémů. Definice~\ref{def:lsystem},~kterou jsme si uvedli,~ve skutečnosti odráží pouze jeden ze speciálních případů. Tomuto typu se říká \emph{bezkontextové}\index{bezkontextový L-systém} L-systémy (značené \emph{OL-systémy}\index{OL-systém}). Název vychází z~faktu,~že každý symbol přepisujeme zvlášť (připouštíme pouze pravidla ve tvaru $a\to\omega$,~kde $a\in V$ a~$\omega\in V^*$),~tzn. nezáleží na ostatních znacích (tedy kontextu,~v němž se nechází). Jinými typy L-systémů jsou naopak \emph{kontextové}\footnote{Tyto typy L-systémů souvisí do jisté míry s~již v~úvodu zmíněnou Chomského hierarchií\index{Chomského hierarchie},~v jejímž rámci jsou definovány podobně i~bezkontextové a~kontextové gramatiky.},~kde pracujeme s~pravidly ve tvaru $\gamma A\beta\to\gamma\omega\beta$,~kde $\gamma,\beta,\omega\in V^*$ a~$A\in V$.
 
 Dále lze L-systémy rozlišovat podle toho,~zda pro každý řetězec $\alpha\in V^*$ existuje právě jedno pravidlo $\alpha\to\omega$,~nebo existuje více pravidel v~$P$,~které obsahují $\alpha$ na levé straně. Takový typům se říká \emph{deterministické}\footnote{Tzn. je jednoznačně určeno,~na jaký řetězec bude $\alpha$ přepsáno.}\index{L-systém!deterministický}\index{deterministický L-systém},~resp. \emph{nedeterministické}\index{L-systém!nedeterministický}\index{nedeterministický L-systém}. Pro deterministické bezkontextové L-systémy se pak užívá značení \emph{DOL-systémy}\index{DOL-systém},~což je i~případ,~kterým se budeme dále zabývat. Pokud by čtenáře tato teorie zajímala více,~doporučuji knihu \cite{Prusinkiewicz1990}.
 
@@ -231,7 +231,7 @@ Dále lze L-systémy rozlišovat podle toho,~zda pro každý řetězec $\alpha\i
 
 Pro neznalého čtenáře se může zdát zarážející,~že zde pracujeme celou dobu s~řetězci znaků a~nikoliv s~geometrickými útvary. Zde si ukážeme,~jak interpretovat výsledné řetězce pomocí tzv. \emph{želví grafiky}\index{želví grafika}.
 
-Představme,~že máme virtuální želvu v~$\R^2$,~jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$,~kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a~$\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a~přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů,~s níž budeme v~rámci abecedy $V$ pracovat,~které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka \ref{table:vyznam-symbolu-zelva}.
+Představme,~že máme virtuální želvu v~$\R^2$,~jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$,~kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a~$\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a~přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů,~s níž budeme v~rámci abecedy $V$ pracovat,~které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka~\ref{table:vyznam-symbolu-zelva}.
 \begin{table}[h]
     \centering
     \begin{tabular}{lp{0.8\textwidth}}
@@ -244,7 +244,7 @@ Představme,~že máme virtuální želvu v~$\R^2$,~jejíž stav reprezentujeme 
     \label{table:vyznam-symbolu-zelva}
 \end{table}
 
-Pracujeme tedy v~základu s~abecedou $V=\set{F,f,+,-}$ (později dodefinujeme ještě další symboly). Předpokládáme,~že počáteční stav želvy je vždy $(0,0,0)$. Začneme s~velice jednoduchou ukázkou,~kde $\delta=\pi/6$ a~krok $d$ volíme libovolně. Pro začátek se podíváme na Kochovu křivku,~kterou už jsme viděli v~sekci \ref{sec:sobepodobnost}.
+Pracujeme tedy v~základu s~abecedou $V=\set{F,f,+,-}$ (později dodefinujeme ještě další symboly). Předpokládáme,~že počáteční stav želvy je vždy $(0,0,0)$. Začneme s~velice jednoduchou ukázkou,~kde $\delta=\pi/6$ a~krok $d$ volíme libovolně. Pro začátek se podíváme na Kochovu křivku,~kterou už jsme viděli v~sekci~\ref{sec:sobepodobnost}.
 \begin{itemize}
     \item \emph{Axiom $\omega=F$}
     \item \emph{Pravidla $P$: $F\to F-F----F-F$}
@@ -256,7 +256,7 @@ Iterováním tohoto L-systému postupně dostaneme slova:
     \item $n=2$: $F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F$
     \item $n=3$: $F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F-F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F-F-F----F-F-F-F----F-F----F-F----F-F-F-F----F-F$
 \end{itemize}
-Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro ostatní fraktály,~které si zde ještě představíme. Generování vyšších iterací daných útvarů je proto často výpočetně náročné.}. Výslednou interpretaci daných řetězců můžeme vidět na obrázku \ref{fig:lsystem-kochova-krivka}.
+Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro ostatní fraktály,~které si zde ještě představíme. Generování vyšších iterací daných útvarů je proto často výpočetně náročné.}. Výslednou interpretaci daných řetězců můžeme vidět na obrázku~\ref{fig:lsystem-kochova-krivka}.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\fractalscale]{ch01-kochova-krivka-0iterace.pdf}\\\qquad\\
@@ -278,7 +278,7 @@ Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro
     \caption{Interpretace vygenerovaných řetězců pro Kochovu křivku.}
     \label{fig:lsystem-kochova-krivka}
 \end{figure}
-Všimněte si,~že právě onen rekurzivní "charakter" gramatik,~resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce \ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s~L-systémy kvůli modelování růstu a~vývoje rostlin. Je ovšem nejsíše jasné,~že růst rostlin není čistě deterministický proces a~hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I~takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický},~kde každému pravidlu přiřadíme pravděpodobnost aplikace v~dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a~jejich L-systémů se můžete podívat v~podsekci \ref{subsec:ukazky-fraktalu-lsystemy}.
+Všimněte si,~že právě onen rekurzivní "charakter" gramatik,~resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce~\ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s~L-systémy kvůli modelování růstu a~vývoje rostlin. Je ovšem nejsíše jasné,~že růst rostlin není čistě deterministický proces a~hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I~takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický},~kde každému pravidlu přiřadíme pravděpodobnost aplikace v~dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a~jejich L-systémů se můžete podívat v~podsekci~\ref{subsec:ukazky-fraktalu-lsystemy}.
 
 V případě modelování rostlin se nám bude hodit zavést ještě další dvojici symbolů. Mnohdy se nám stane,~že se potřebujeme vrátit na určitou pozici,~kde želva již stála. To by bylo možné vyřešit např. zpětným chodem želvy do původní pozice,~nicméně velice špatně by se s~tímto pracovalo v~rámci L-systému. Proto si nejdříve vysvětlíme pojem tzv. \emph{zásobníku}\index{zásobník}.
 
@@ -287,7 +287,7 @@ Koncept zásobníku je programátorům nejspíše velmi dobře známý,~přesto 
     \item \emph{vložení prvku na vrchol zásobníku} (tzv. operace \texttt{push}),~
     \item a~\emph{odebrání prvku z~vrcholu zásobníku} (tzv. operace \texttt{pop}).
 \end{itemize}
-Pro znázornění zásobníku viz obrázek \ref{fig:zasobnik}. Do abecedy $V$ zavedeme nové znaky uvedené v~tabulce \ref{table:vyznam-symbolu-zelva-zasobnik}. 
+Pro znázornění zásobníku viz obrázek~\ref{fig:zasobnik}. Do abecedy $V$ zavedeme nové znaky uvedené v~tabulce~\ref{table:vyznam-symbolu-zelva-zasobnik}. 
 \begin{table}[H]
     \centering
     \begin{tabular}{lp{0.8\textwidth}}
@@ -297,7 +297,7 @@ Pro znázornění zásobníku viz obrázek \ref{fig:zasobnik}. Do abecedy $V$ za
     \caption{Význam symbolů v~abecedě $V$ pro želvu.}
     \label{table:vyznam-symbolu-zelva-zasobnik}
 \end{table}
-Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení dalších fraktálních útvarů, neboť máme možnost si určitých místech ukládat stav želvy, k němuž se lze posléze vrátit. Uvažujme např. L-systém definovaný takto (viz obrázek \ref{fig:fraktalni-strom}):
+Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení dalších fraktálních útvarů, neboť máme možnost si určitých místech ukládat stav želvy, k němuž se lze posléze vrátit. Uvažujme např. L-systém definovaný takto (viz obrázek~\ref{fig:fraktalni-strom}):
 \begin{itemize}
     \item \emph{Axiom:} $\omega=F$,
     \item \emph{Pravidla $P$:} $F\to FF-[-F+F+F]+[+F-F-F]$,

@@ -2,4 +2,4 @@ This thesis focuses on fractal geometry with the aim of clearly presenting the f
 
 The thesis is designed to accommodate readers of varying mathematical proficiency. Basic principles are explained in Chapters 1,~4,~and 5,~while Chapter 2 provides a~detailed mathematical analysis of measure theory and dimensions. Practical aspects and algorithms used for fractal generation are described in Chapter 5,~emphasizing general comprehensibility,~allowing the reader to understand and apply the discussed methods without prior knowledge of a~specific programming language.
 
-An essential component of the thesis includes illustrations primarily created using the Ipe drawing editor and accompanying fractal generation software,~which is available on the GitHub platform.
+An important part of this thesis are the illustrations created mainly in Ipe and using the accompanying fractal generation software developed for this thesis, which is available on GitHub.

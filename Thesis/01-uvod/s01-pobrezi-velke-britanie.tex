@@ -1,5 +1,5 @@
 \section{Jak dlouhé je pobřeží Velké Británie?}\label{sec:pobrezi_velke_britanie}
-Položme si na začátek trochu jinou otázku,~kterou si z~počátku položil i~Benoît Mandelbrot: \emph{Jaká je podstata tvaru pobřeží?} Ta se stala podstatnou v~jeho práci \emph{"How Long Is the Coast of Britain?"}. Uvažme část pobřeží s~počátečním a koncovým bodem (viz obrázek \ref{fig:pobrezi}).
+Položme si na začátek trochu jinou otázku,~kterou si z~počátku položil i~Benoît Mandelbrot: \emph{Jaká je podstata tvaru pobřeží?} Ta se stala podstatnou v~jeho práci \emph{"How Long Is the Coast of Britain?"}. Uvažme část pobřeží s~počátečním a koncovým bodem (viz obrázek~\ref{fig:pobrezi}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi.pdf}
@@ -22,7 +22,7 @@ Nyní by nás mohlo napadnout,~že pro zmenšující se $\varepsilon$,~tj. $\var
 \begin{equation}\label{eq:aproximace_limita}
     L=\lim_{\varepsilon\to0^+}{\ell(\varepsilon)}.
 \end{equation}
-Jenže,~bohužel,~limita \eqref{eq:aproximace_limita} ve skutečnosti bude rovna $\infty$. Proč? Je třeba si uvědomit,~že zde pracujeme s~\emph{mapou} pobřeží,~která má určité \emph{měřítko}. Pokud bychom měli pobřeží na mapě s~měřítkem $1\,:\,100\;000$,~uvidíme méně detailů,~než kdybychom jej zkoumali na mapě s~měřítkem $1\,:\,1\;000$. (Viz obrázek \ref{fig:pobrezi_zoom}.)\par
+Jenže,~bohužel,~limita \eqref{eq:aproximace_limita} ve skutečnosti bude rovna $\infty$. Proč? Je třeba si uvědomit,~že zde pracujeme s~\emph{mapou} pobřeží,~která má určité \emph{měřítko}. Pokud bychom měli pobřeží na mapě s~měřítkem $1\,:\,100\;000$,~uvidíme méně detailů,~než kdybychom jej zkoumali na mapě s~měřítkem $1\,:\,1\;000$. (Viz obrázek~\ref{fig:pobrezi_zoom}.)\par
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi-zoom.pdf}
@@ -30,7 +30,7 @@ Jenže,~bohužel,~limita \eqref{eq:aproximace_limita} ve skutečnosti bude rovna
     \label{fig:pobrezi_zoom}
 \end{figure}
 Nově odhalené detaily (menší poloostrůvky apod.) zde přispívají k~celkové délce pobřeží $\ell(\varepsilon)$. Postupným zvětšováním měřítka mapy bychom tak odhalili další detaily. Naše původní idea tak selhává,~neboť (v "klasickém" pojetí délky) pro $\varepsilon\to0^+$ hodnota $\ell(\varepsilon)$ poroste nade všechny meze,~tj. $\lim_{\varepsilon\to0^+}{\ell(\varepsilon)}=\infty$.\par
-Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidovskou geometrií\index{geometrie!eukleidovská}\index{eukleidovská geometrie},~tento problém zde nenastává. Např. u~kružnice v~eukleidovské rovině $\mathbb{E}_2$ změnou měřítka žádné další detaily křivky neobjevíme (podobně u~jiných geometrických útvarů,~viz obrázky \ref{subfig:kruznice} a \ref{subfig:kruznice_zoom}). 
+Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidovskou geometrií\index{geometrie!eukleidovská}\index{eukleidovská geometrie},~tento problém zde nenastává. Např. u~kružnice v~eukleidovské rovině $\mathbb{E}_2$ změnou měřítka žádné další detaily křivky neobjevíme (podobně u~jiných geometrických útvarů,~viz obrázky~\ref{subfig:kruznice} a~\ref{subfig:kruznice_zoom}). 
 \begin{figure}[h]
     \centering
     \begin{subfigure}{\subfigwidth}
@@ -48,7 +48,7 @@ Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidov
     \end{subfigure}
 \end{figure}
 Díky tomu můžeme v~případě počítání obvodu kružnice použít např. Archimédovu metodu.\par
-Máme-li kružnici o~poloměru $r>0$,~pak jí můžeme vepsat libovolný pravidelný $n$-úhelník (viz obrázek \ref{subfig:archimedova_metoda}).
+Máme-li kružnici o~poloměru $r>0$,~pak jí můžeme vepsat libovolný pravidelný $n$-úhelník (viz obrázek~\ref{subfig:archimedova_metoda}).
 \begin{figure}[h]
     \centering
     \begin{subfigure}{\subfigwidth}
@@ -67,7 +67,7 @@ Máme-li kružnici o~poloměru $r>0$,~pak jí můžeme vepsat libovolný pravide
     \caption{Princip Archimédovy metody.}
     \label{fig:princip_archimedovy_metody}
 \end{figure}
-Obvod pravidelného $n$-úhelníku is označíme $O_n$ a délku jeho strany $x$ (viz obrázek \ref{subfig:archimedova_metoda_cast_nuhelniku}). Tu jsme schopni stanovit užitím elementární goniometrie,~tj.
+Obvod pravidelného $n$-úhelníku is označíme $O_n$ a délku jeho strany $x$ (viz obrázek~\ref{subfig:archimedova_metoda_cast_nuhelniku}). Tu jsme schopni stanovit užitím elementární goniometrie,~tj.
 \begin{equation*}
     x=2r\cdot\sin{\dfrac{\pi}{n}},
 \end{equation*}
@@ -75,7 +75,7 @@ a tedy obvod
 \begin{equation*}
     O_n=2rn\cdot\sin{\dfrac{\pi}{n}}.
 \end{equation*}
-Pro rostoucí $n$ bude obvod pravidelného $n$-úhelníku stále lépe aproximovat obvod původní kružnice (viz obrázek \ref{fig:archimedova_metoda_presnejsi}).
+Pro rostoucí $n$ bude obvod pravidelného $n$-úhelníku stále lépe aproximovat obvod původní kružnice (viz obrázek~\ref{fig:archimedova_metoda_presnejsi}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi-aproximace-presnejsi.pdf}
