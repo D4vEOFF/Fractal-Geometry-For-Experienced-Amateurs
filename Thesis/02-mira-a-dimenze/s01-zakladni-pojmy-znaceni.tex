@@ -6,15 +6,15 @@ Tuto část tedy vnímejte spíše jako referenční,~než rigorózní výklad.
 
 Výklad v~této kapitole a~dále v~kapitole~\ref{chapter:hausdorffuv-mp} se bude točit především okolo tzv. \emph{metrických prostorů} (viz definice~\ref{def:metricky-prostor}).
 \begin{definition}[Metrický prostor]\label{def:metricky-prostor}
-    \emph{Metrickým prostorem}\index{metrický prostor}\index{prostor!metrický} nazýváme uspořádanou dvojici $(X,\varrho)$,~kde $X\neq\emptyset$ a~$\mapping{\varrho}{X\times X}{\R_0^+}$ je zobrazení splňující:
+    \emph{Metrickým prostorem}\index{metrický prostor}\index{prostor!metrický} nazýváme uspořádanou dvojici $(X,\varrho)$,~kde $X\neq\emptyset$ a~$\mapping{\varrho}{X\times X}{\langle0,\infty)}$ je zobrazení splňující:
     \begin{enumerate}[label=(\alph*)]
         \item $\forall x,y\in X: \varrho(x,y)=0\iff x=y$,
-        \item $\forall x,y\in X: x\neq y\implies \varrho(x,y)>0$,
         \item $\forall x,y\in X: \varrho(x,y)=\varrho(y,x)$,\rightnote{symetrie}
         \item $\forall x,y,z\in X: \varrho(x,z)\leqslant\varrho(x,y)+\varrho(y,z)$.\rightnote{trojúhelníková nerovnost}
     \end{enumerate}
     Zobrazení $\varrho$ nazýváme \emph{metrika}\index{metrika}.
 \end{definition}
+Zobrazení $\varrho$ v definici \ref{def:metricky-prostor} pro nás představuje způsob měření vzdálenosti mezi prvky množiny $X$. 
 
 \subsection{Metrické pojmy}\label{subsec:metricke-pojmy}
 
@@ -22,13 +22,15 @@ Začneme některými základními pojmy sousvisejícími s~metrickými prostory.
 \begin{definition}[Otevřená/uzavřená koule]\label{def:koule-mp}
     Nechť $(X,\varrho)$ je metrický prostor. Pak definujeme
     \begin{itemize}
-        \item \emph{otevřenou kouli} se středem v~bodě $x\in X$ o~poloměru $r\geqslant 0$
+        \item \emph{otevřenou kouli} se středem v~bodě $x\in X$ o~poloměru $r>0$
         \[B_r(x)=\set{y\in X\mid\varrho(y,x)<r},\]
-        \item resp. \emph{uzavřenou kouli} se středem v~bodě $x\in X$ o~poloměru $r\geqslant 0$
+        \item resp. \emph{uzavřenou kouli} se středem v~bodě $x\in X$ o~poloměru $r>0$
         \[K_r(x)=\set{y\in X\mid\varrho(y,x)\leqslant r}.\]
     \end{itemize}
 \end{definition}
-Např. v~$\R$ představuje otevřená koule $B_r(x)$ otevřený interval $(x-r,x+r)$ a~$K_r(x)=\langle x-r,x+r\rangle$. V~$\R^2$ se jedná o~standardní kruh (s hranicí,~nebo bez ní). Nebo v~případě prostoru spojitých funkcí $X=\continuousfuncspace(\langle a,b\rangle)$ se pro libovolnou funkci $f\in X$ jedná o~pás šířky $2r$ sestrojený okolo grafu funkce $f$.
+Např. v~$\R$ představuje otevřená koule $B_r(x)$ otevřený interval $(x-r,x+r)$ a~$K_r(x)=\langle x-r,x+r\rangle$. V~$\R^2$ s eukleidovskou metrikou se jedná o~standardní kruh. Nebo jiným příkladem může být prostor všech spojitých funkcí na zadaném intervalu $\langle a,b\rangle$,~značíme $X=\continuousfuncspace(\langle a,b\rangle)$,~přičemž jako metriku lze zvolit např.
+\[\varrho(f,g)=\sup_{x\in\langle a,b\rangle}|f(x)-g(x)|.\]
+Pak pro libovolnou funkci $f\in X$ představuje $B_r(f)$ a $K_r(f)$ pás šířky $2r$ sestrojený okolo grafu funkce $f$.
 
 S otevřenými,~resp. uzavřenými koulemi se pojí další terminologie.
 \begin{definition}[Otevřená,~uzavřená a~omezená množina]\label{def:otevrena-uzavrena-omezena-mnozina}
@@ -39,12 +41,12 @@ S otevřenými,~resp. uzavřenými koulemi se pojí další terminologie.
         \item \emph{omezená}\index{množina!omezená},~pokud existuje $x\in X$ a~$r>0$,~takové,~že $M\subseteq B_r(x)$.
      \end{itemize}
 \end{definition}
-Uzavřenost a~otevřenost množiny závisí na volbě konkrétního metrického prostoru. Např. interval $(a,b)$ je v~$\R$ otevřená množina,~avšak v~$X=(a,b)$ je to uzavřená množina,~neboť její doplněk $\emptyset$ je otevřený.
+Uzavřenost a~otevřenost množiny závisí na volbě konkrétního metrického prostoru. Např. interval $(a,b)$ je v~$\R$ otevřená množina,~avšak v~$X=(a,b)$ je to otevřená i~uzavřená množina,~neboť její doplněk $\emptyset$ je otevřený.
 \begin{definition}[Průměr množiny]\label{def:prumer-mnoziny}
     Nechť $(X,\varrho)$ je metrický prostor. \emph{Průměr množiny\index{průměr množiny} $M\subseteq X$},~$M\neq\emptyset$ definujeme jako
     \[\diam{M}=\sup\set{\varrho(x,y)\mid x,y\in M}.\]
 \end{definition}
-Není těžké dokázat,~že $\R^n$ je
+Není těžké dokázat,~že v~$\R^n$ je
 \[\diam{B_r(x)}=\diam{K_r(x)}=2r.\]
 Obecně to však neplatí. Uvažme metrický prostor $(X,\varrho)$,~kde je metrika $\varrho$
 \[\varrho(x,y)=\begin{cases}

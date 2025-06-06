@@ -128,7 +128,7 @@ Obsah trojúhelníků,~na než jsme rozdělili první iteraci Kochovy vločky,~j
 \[\Delta=\dfrac{\sqrt{3}}{4}\cdot\dfrac{1}{9}\]
 a tedy celkově
 \[S=\dfrac{72}{5}\Delta=\dfrac{72}{5}\cdot\dfrac{\sqrt{3}}{4}\cdot\dfrac{1}{9}=\dfrac{2\sqrt{3}}{5}.\]
-Byl to trochu delší výpočet,~nicméně jsme zjistili,~že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)},~ale obsah má \emph{konečný}. To je ostatně zjevné, neboť celý obrazec lze obsáhnout např. v kruhu s konečným poloměrem.
+Byl to trochu delší výpočet,~nicméně jsme zjistili,~že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)},~ale obsah má \emph{konečný}. To bylo ostatně zjevné již od začátku, neboť celý obrazec lze obsáhnout např. v kruhu s konečným poloměrem.
 % Obsah vzniklého útvaru je však již zajímavější. Po první iteraci přibudou 3 nové trojúhelníky se stranou délky $1/3$,~tzn. jejich obsah bude
 % \begin{equation*}
 %     \dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3}\right)^2
@@ -167,7 +167,7 @@ Byl to trochu delší výpočet,~nicméně jsme zjistili,~že Kochova vločka m�
 % \end{align*}
 
 \subsection{Cantorovo diskontinuum}\label{subsec:cantorovo_diskontinuum}
-Podívejme se ještě na jeden typ fraktálního objektu,~kterým je tzv. \emph{Cantorovo diskontinuum}\footnote{Též se mu říká \emph{Cantorova množina} (angl. \emph{"Cantor set"})\index{Cantorovo diskontinuum}\index{diskontinuum!Cantorovo}. Dvourozměrnou variantou je pak tzv. \emph{Cantorův prach}\index{Cantorův prach}\index{prach!Cantorův} (angl. \emph{"Cantor dust"}). Slovo \emph{prach} je zde míněno v~přeneseném významu,~neboť (podobně jako v~této podsekci) lze ukázat,~že vzniklé útvary mají v~limitě nulový obsah.} Myšlenka je zde velmi jednoduchá: začínáme s~úsečkou délky $1$ (nultá iterace) a~následně odebereme prostřední třetinu,~čímž vznikne první iterace. V~dalších iteracích postupujeme analogicky pro vzniklé úsečky (viz obrázek~\ref{fig:cantorovo_diskontinuum}).
+Podívejme se ještě na jeden typ fraktálního objektu,~kterým je tzv. \emph{Cantorovo diskontinuum}\footnote{Též se mu říká \emph{Cantorova množina} (angl. \emph{"Cantor set"})\index{Cantorovo diskontinuum}\index{diskontinuum!Cantorovo}. Dvourozměrnou variantou je pak tzv. \emph{Cantorův prach}\index{Cantorův prach}\index{prach!Cantorův} (angl. \emph{"Cantor dust"}). Obšírněji, pokud je $C$ Cantorovo diskontinuum, pak množina $C\times C$ je Cantorův prach. Slovo \emph{prach} je zde míněno v~přeneseném významu,~neboť (podobně jako v~této podsekci) lze ukázat,~že vzniklé útvary mají nulový obsah.} Myšlenka konstrukce je zde velmi jednoduchá: začínáme s~úsečkou délky $1$ (nultá iterace),~kterou následně rozdělíme na trojici shodných úseček a~odebereme prostřední z~nich,~čímž vznikne první iterace. V~dalších iteracích postupujeme analogicky pro zbylé úsečky (viz obrázek~\ref{fig:cantorovo_diskontinuum}). Tímto nekonečným procesem vznikne množina známá jako Cantorovo diskontinuum.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-cantorova-mnozina.pdf}
@@ -184,7 +184,7 @@ Nově vzniklé úsečky třetinové délky jsou kopiemi původní úsečky. Stej
 \end{figure}
 Obecně počet odebraných úseků roste s~mocninou dvojky,~jejichž délky klesají s~mocninou trojky,~tedy v~$n$-té iteraci odebereme úsek délky $2^n(1/3)^{n+1}$. Označíme-li tedy délku zbylých úseků $\ell_n$ po $n$ iteracích a~$\overline{\ell_n}$ délku odebraných úseků,~pak určitě platí $\ell_n=1-\overline{\ell_n}$. Protože nás zajímá délka \emph{všech} odebraných úseků,~pak po $n$ iteracích bude celková délka rovna
 \begin{equation}
-    \overline{\ell_n}=\sum_{k=0}^{n}2^k\left(\dfrac{1}{3}\right)^{k+1}=\sum_{k=0}^{n}\dfrac{2^k}{3^{k+1}}=\dfrac{1}{3}\cdot\sum_{k=0}^{n}\left(\dfrac{2}{3}\right)^k=\dfrac{1}{3}\cdot\dfrac{1-\left(\dfrac{2}{3}\right)^{n+1}}{1-\dfrac{2}{3}}=1-\left(\dfrac{2}{3}\right)^{n+1}.
+    \overline{\ell_n}=\sum_{k=0}^{n}2^k\left(\dfrac{1}{3}\right)^{k+1}=\sum_{k=0}^{n}\dfrac{2^k}{3^{k+1}}=\dfrac{1}{3}\cdot\sum_{k=0}^{n}\left(\dfrac{2}{3}\right)^k=\dfrac{1}{3}\cdot\dfrac{1-\left(\frac{2}{3}\right)^{n+1}}{1-\frac{2}{3}}=1-\left(\dfrac{2}{3}\right)^{n+1}.
 \end{equation}
 Označíme-li si limitu výrazů posloupností $\ell_n$,~reps. $\overline{\ell_n}$,~jako $\ell$,~resp. $\overline{\ell}$,~pak dostaneme
 \begin{equation*}
@@ -194,4 +194,6 @@ Z toho již triviálně plyne,~že
 \begin{equation}
     \ell=\lim_{n\to\infty}\ell_n=\lim_{n\to\infty}(1-\overline{\ell_n})=1-\lim_{n\to\infty}\overline{\ell_n}=1-1=0,
 \end{equation}
-tzn. na konci procesu zbude Cantorovo diskontinuum délky nula.
+tzn. na konci procesu zbude Cantorovo diskontinuum "délky" nula.
+
+Všimněte si zde, že i přes to, že $\ell=0$, je výsledná množina neprázdná. Např. krajní body původní úsečky jsou součástí výsledné množiny. Dokonce není ani příliš pracné ukázat,~že Cantorovo diskontinuum je nespočetná množina,~což plyne z faktu,~že jeho dimenze je (jak dále uvidíme v~sekci \ref{sec:fraktalni_dimenze}) nenulová\footnote{Z~dalšího výkladu v~kapitole \ref{chapter:teorie-miry-a-dimenze} si čtenář bude moci rozmyslet,~že Haudorffova dimenze (viz sekce \ref{sec:hausdorffova-mira-dimenze}) spočetných množin je vždy nulová.}.
