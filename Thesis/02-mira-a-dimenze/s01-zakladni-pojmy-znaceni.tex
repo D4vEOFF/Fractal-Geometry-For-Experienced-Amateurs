@@ -53,20 +53,20 @@ Obecně to však neplatí. Uvažme metrický prostor $(X,\varrho)$,~kde je metri
     0 & x=y,\\
     1 & x\neq y.
 \end{cases}\]
-Jedná se o~takzvaný \emph{diskrétní metrický prostor}\index{metrický prostor!diskrétní} (o tom,~že $\varrho$ je metrika se lze snadno přesvědčit). Pro $x\in X$ a~$r>0$ platí,~že
+Jedná se o~takzvaný \emph{diskrétní metrický prostor}\index{metrický prostor!diskrétní}\index{diskrétní metrický prostor} (o tom,~že $\varrho$ je metrika se lze snadno přesvědčit). Pro $x\in X$ a~$r>0$ platí,~že
 \[\diam{B_r(x)}=\begin{cases}
     0 & r\leqslant 1,\\
     1 & r>1.
 \end{cases}\]
-Tedy poloměr koule $B_r(x)$ může být větší než její průměr.
+Koule $B_r(x)$ v diskrétním metrickém prostoru totiž představuje buď singleton $\set{x}$ pro $r\leqslant 1$, nebo celý prostor $X$. Tedy poloměr koule $B_r(x)$ může být větší než její průměr.
 
 \begin{definition}[Vzdálenost bodu od množiny,~vzdálenost množin]\label{def:vzdalenost-bodu-od-mnoziny-vzdalenost-mnozin}
     Nechť $(X,\varrho)$ je metrický prostor.
     \begin{itemize}
         \item \index{vzdálenost!bodu od množiny}\emph{Vzdáleností bodu $x\in X$ od množiny $M\subseteq X$} rozumíme
-        \[\varrho(x,M)=\inf\set{\varrho(x,y)\mid y\in X}.\]
+        \[\varrho(x,M)=\inf\set{\varrho(x,y)\mid y\in M}.\]
         \item \index{vzdálenost!množin}\emph{Vzdáleností množin $M,N\subseteq X$} rozumíme
-        \[\varrho(M,N)=\inf\set{\varrho(x,y)\mid x\in M\;,\;y\in N}.\]
+        \[\varrho(M,N)=\inf\set{\varrho(x,y)\mid x\in M,\;y\in N}.\]
     \end{itemize}
 \end{definition}
 
@@ -84,90 +84,94 @@ Tedy poloměr koule $B_r(x)$ může být větší než její průměr.
 V textu též budeme hodně pracovat s~pojmem $\delta$-okolí.
 \begin{definition}[$\delta$-okolí]\label{def:delta-okoli}
     Nechť $(X,\varrho)$ je metrický prostor a~$M\subseteq X$. Pak $\delta$-okolím množiny $M$ rozumíme množinu
-    \[(M)_\delta=\set{y\in X\mid \exists x\in X: \varrho(x,y)<\delta}.\]
+    \[(M)_\delta=\set{x\in X\mid\varrho(x,M)<\delta}.\]
 \end{definition}
-Zde se zvlášť hodí zmínit,~že $(M)_\delta$ je v~prostoru $\R^n$,~s nímž budeme často pracovat,~otevřená množina.
+Zde se zvlášť hodí zmínit,~že $(M)_\delta$ je v~prostoru $\R^n$,~s nímž budeme často pracovat,~otevřená množina, je-li $M$ neprázdná.
 
-Jako poslední zde zmíníme termíny,~které zejména využijeme v~sekci věnující se tzv. Lebesgueově míře a~posléze box-counting dimenzi (viz sekce~\ref{sec:lebesgueova-mira} a~\ref{sec:box-counting-dimenze}).
+Jako poslední zde zmíníme termíny,~které zejména využijeme v~sekci věnující se Lebesgueově míře a~posléze box-counting dimenzi (viz sekce~\ref{sec:lebesgueova-mira} a~\ref{sec:box-counting-dimenze}).
 \begin{definition}[Kvádr]\label{def:kvadr}
     Kvádrem\index{kvádr} v~$\R^n$ nazveme množinu
     \[I=\prod_{i=1}^{n}\langle a_i,b_i\rangle,\]
-    kde $a_i,b_i\in\R$ pro každé $i\in\N$. Objem kvádru\index{objem kvádru} $I$ definujeme jako
+    kde $a_i,b_i\in\R$ a $a_i\leqslant b_i$ pro každé $i\in\N$. Objem kvádru\index{objem kvádru} $I$ definujeme jako
     \[\vol_n(I)=\prod_{i=1}^{n}(b_i-a_i).\]
 \end{definition}
 \begin{definition}[$\delta$-mříž]\label{def:delta-mriz}
     \emph{$\delta$-mříž}\index{$\delta$-mříž} v~$\R^n$ názýváme množinu
     \[\mathcal{Q}_\delta=\set{\prod_{i=1}^{n}\langle m_j\delta,(m_j+1)\delta\rangle\;\middle|\;m_1,\ldots,m_n\in\Z}.\]
 \end{definition}
-Definice~\ref{def:delta-mriz} vlastně říká,~že $\mathcal{Q}_\delta$ představuje rozdělení $\R^n$ na krychle o~straně délky $\delta$ dotýkajících se pouze na hranici.
+Množinu $\mathcal{Q}_\delta$ si můžeme představit jako rozdělení $\R^n$ na krychle o~straně délky $\delta$ dotýkajících se pouze na hranici.
 
 \subsection{Limity posloupností}\label{subsec:limity-posl-mp}
 
-S limitou posloupnosti a~funkce jedné proměnné je čtenář nejspíše dobře seznámen. V~kontextu metrických prostorů definujeme pojem limity následovně (viz definice~\ref{def:limita-mp}).
+S limitou posloupnosti a~funkce jedné proměnné je čtenář nejspíše dobře seznámen. V~kontextu metrických prostorů definujeme pojem limity posloupnosti následovně.
 \begin{definition}[Limita posloupnosti]\label{def:limita-mp}
-    Mejme metrický prostor $(X,\varrho)$ a~posloupnost $\set{x_n}_{n=1}^\infty$,~kde $x_i\in X$ pro každé $i\in\N$. Pak posloupnost\index{limita!posloupnosti} $\set{x_n}_{n=1}^\infty$ má limitu $x\in X$,~píšeme
+    Mějme metrický prostor $(X,\varrho)$ a~posloupnost $\set{x_n}_{n=1}^\infty$,~kde $x_i\in X$ pro každé $i\in\N$. Pak posloupnost\index{limita!posloupnosti}\index{limita posloupnosti} $\set{x_n}_{n=1}^\infty$ má limitu $x\in X$,~píšeme
     \[\lim_{n\to\infty}x_n=x,\]
     nebo též $x_n\to x$,~pokud
-    \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n\geqslant n_0: \varrho(x_n,x)<\varepsilon.\]
+    \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n\geqslant n_0: \varrho(x_n,x)<\varepsilon,\quad\text{tj.}\quad\lim_{n\to\infty}\varrho(x_n,x)=0.\]
 \end{definition}
-Limita posloupnosti je vždy určena jednoznačně (pokud existuje). Ve spojitosti s~limitami pro nás bude dále relevantní i~tzv. \emph{limes superior} a~\emph{limes inferior}. Ty si však připomeneme mimo kontext metrických prostorů. Vystačíme si v~reálných číslech.
+Limita posloupnosti je vždy určena jednoznačně (pokud existuje). Ve spojitosti s~limitami pro nás bude dále relevantní i~tzv. \emph{limes superior} a~\emph{limes inferior}.
 \begin{definition}[Limes superior,~limes inferior]\label{def:limsup-liminf-mp}
     Nechť je dána posloupnost $\set{x_n}_{n=1}^\infty$,~kde $x_n\in\R$ pro každé $n\in\N$. Pak definujeme:
     \begin{itemize}
-        \item Limes superior\index{limes superior}
-        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}\sup\set{x_k\mid k\geqslant n}.\]
-        \item Limes inferior\index{limes inferior}
-        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}\inf\set{x_k\mid k\geqslant n}.\]
+        \item Limes superior\index{limes superior} posloupnosti $\set{x_n}_{n=1}^\infty$ jako
+        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}(\sup\set{x_k\mid k\geqslant n}).\]
+        \item Limes inferior\index{limes inferior} posloupnosti $\set{x_n}_{n=1}^\infty$ jako
+        \[\limsup_{n\to\infty}x_n=\lim_{n\to\infty}(\inf\set{x_k\mid k\geqslant n}).\]
     \end{itemize}
 \end{definition}
 Jinak lze definovat limes superior,~resp. limes inferior jako supremum,~resp. infimum hromadných bodů posloupnosti. Speciálně platí,~že posloupnost $\set{x_n}_{n=1}^\infty$ má limitu $L$,~právě tehdy,~když
 \[\limsup_{n\to\infty}x_n=\liminf_{n\to\infty}x_n=L.\]
 
-Čtenář již nejspíše slyšel i~o tzv. \emph{Bolzanově-Cauchyově podmínce}\index{Bolzanova-Cauchyova podmínka}. Posloupnosti ji splňující názýváme tzv. \emph{cauchyovské}.
+Čtenář již nejspíše slyšel i~o tzv. \emph{Bolzanově-Cauchyově podmínce}\index{Bolzanova-Cauchyova podmínka}. Posloupnosti ji splňující nazýváme \emph{cauchyovské}.
 \begin{definition}[Cauchyovská posloupnost]\label{def:cauchyovska-posloupnost}
     Nechť $(X,\varrho)$ je metrický prostor. Posloupnost $\set{x_n}_{n=1}^\infty$,~kde $x_i\in X$ pro každé $i\in N$,~nazveme \emph{cauchyovskou},~pokud splňuje:
     \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n,m\geqslant n_0:\varrho(x_n,x_m)<\varepsilon.\]
 \end{definition}
 Připomeňme rovněž,~že Bolzanova-Cauchyova podmínka je nutná,~nikoliv však postačující pro konvergenci posloupnosti v~$X$. Uvažme např. prostor $(\Q,|\cdot|)$ se stardardní eukleidovskou metrikou. Posloupnost $\set{x_n}_{n=1}^\infty$ je definujeme následovně:
-\[x_0>0\;\text{a}\;x_n=\dfrac{1}{2}\left(x_{n-1}+\dfrac{2}{x_{n-1}}\right)\;,\;n\in\N.\]
-Všechny její členy jsou v~$\Q$ a~lze též ověřit,~že je cauchyovská. Nicméně pro její limitu platí
+\[x_0>0\quad\text{a}\quad x_n=\dfrac{1}{2}\left(x_{n-1}+\dfrac{2}{x_{n-1}}\right)\;,\;n\in\N.\]
+Všechny její členy jsou v~$\Q$ a~lze též ověřit,~že je cauchyovská (např. proto, že má limitu v $\R$). Nicméně pro její limitu platí
 \[\lim_{n\to\infty}x_n=\sqrt{2}\notin\Q.\]
 
-V rámci metrických prostorů se tedy dává smysl mnohdy omezovat pouze na takové,~kde je Bolzanova-Cauchyova podmínka nutná i~postačující pro konvergenci. Těž říkáme úplné.
+V rámci metrických prostorů tedy mnohdy dává smysl omezovat pouze na takové prostory,~kde je Bolzanova-Cauchyova podmínka nutná i~postačující pro konvergenci. Též jim říkáme úplné.
 \begin{definition}[Úplný metrický prostor]\label{def:uplny-mp}
     Metrický prostor $(X,\varrho)$ se nazývá \emph{úplný}\index{metrický prostor!úplný},~pokud každá cauchyovská posloupnost v~$X$ má limitu v~$X$.
 \end{definition}
+Příklady úplných metrických prostorů jsou např. uzavřený interval $\langle0,1\rangle$ se standardní eukleidovskou metrikou,~nebo prostor $\continuousfuncspace(\langle0,1\rangle)$ s~již zmíněnou supremovou metrikou.
 
 \subsection{Limity funkcí}\label{subsec:limity-fci}
 
 Od posloupností se přesuneme na chvíli k~limitám funkcí.
-\begin{definition}[Limita funkce v~bodě]\label{def:limita-fce-v-bode}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ a~funkce $\mapping{f}{X}{Y}$. Řekneme,~že $f$ má limitu\index{limita!funkce v~bodě} $y\in Y$ v~bodě $x_0\in X$,~píšeme
+\begin{definition}[Limita funkce/zobrazení v~bodě]\label{def:limita-fce-v-bode}
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a~$\mapping{f}{X}{Y}$ je zobrazení. Řekneme,~že $f$ má limitu\index{limita!funkce v~bodě} $y\in Y$ v~bodě $x_0\in X$,~píšeme
     \[\lim_{x\to x_0}f(x)=y,\]
     pokud
     \[\forall \varepsilon >0\;\exists \delta >0\;\forall x\in X: x\in B_\delta(x_0)\setminus\set{x_0}\implies f(x)\in B_\varepsilon(y).\]
+    Navíc pokud platí
+    \[\lim_{x\to x_0}f(x)=f(x_0),\]
+    říkáme, že funkce $f$ je spojitá v bodě $x_0$. Je-li funkce $f$ spojitá v každém bodě množiny $M\subseteq X$, pak říkáme, že $f$ je spojitá na množině $M$.
 \end{definition}
-Podobně i~zde lze definovat limes superior a~limes inferior. Omezíme se opět jen na funkce $\mapping{f}{M}{\R}$.
+V případě, že $Y=\R$, lze definovat limes superior a~limes inferior podobně jako pro posloupnosti výše. Omezíme se opět jen na funkce $\mapping{f}{M}{\R}$.
 \begin{definition}[Limes superior a~limes inferior pro funkce]\label{def:limsup-liminf-funkce}
     Nechť $(X,\varrho)$ je metrický prostor a~funkce $\mapping{f}{M}{\R}$,~kde $M\subseteq X$. Pak definujeme
     \begin{itemize}
-        \item Limes superior v~bodě $x_0$:
+        \item Limes superior funkce $f$ v~bodě $x_0$:
         \[\limsup _{x\to x_0}f(x)=\lim _{\varepsilon \to 0}\left(\sup\set{f(x):x\in M\cap B_\varepsilon(x_0)\setminus \{x_0\}}\right)\]
-        \item Limes inferior v~bodě $x_0$:
+        \item Limes inferior funkce $f$ v~bodě $x_0$:
         \[\limsup _{x\to x_0}f(x)=\lim _{\varepsilon \to 0}\left(\inf\set{f(x):x\in M\cap B_\varepsilon(x_0)\setminus \{x_0\}}\right)\]
     \end{itemize}
 \end{definition}
 
 \subsection{Bodová a~stejnoměrná konvergence}\label{subsec:bodova-stejnomerna-konvergence}
 
-V rámci posloupností se v~matematické analýze často pracuje s~posloupnostmi funkcí. K~jejich limitám se váže dvojice důležitých termínů: \emph{bodová} a~\emph{stejnoměrná konvergence}.
+V~matematické analýze často pracuje s~posloupnostmi funkcí. K~jejich limitám se váže dvojice důležitých termínů: \emph{bodová} a~\emph{stejnoměrná konvergence}.
 \begin{definition}[Bodová a~stejnoměrná konvergence]\label{def:bodova-stejnomerna-konvergence}
-    Nechť $\set{f_n}_{n=1}^\infty$ je posloupnost funkcí z~metrického prostoru $(\continuousfuncspace(\langle a,b\rangle),\varrho)$,~kde $\varrho$ je tzv. \emph{suprémová metrika},~tj. pro každou $f,g\in \continuousfuncspace(\langle a,b\rangle)$
+    Nechť $\set{f_n}_{n=1}^\infty$ je posloupnost funkcí z~metrického prostoru $(\continuousfuncspace(\langle a,b\rangle),\varrho)$,~kde $\varrho$ je \emph{suprémová metrika},~tj. pro každou $f,g\in \continuousfuncspace(\langle a,b\rangle)$
     \[\varrho(f,g)=\sup_{x\in\langle a,b\rangle}|f_n(x)-f(x)|,\]
     přičemž $\set{f_n}_{n=1}^\infty$ konverguje k~funkci $f\in \continuousfuncspace(\langle a,b\rangle)$.
     Pak říkáme,~že posloupnost $\set{f_n}_{n=1}^\infty$ konverguje k~$f$
     \begin{itemize}
-        \item \emph{bodově}\index{konvergence!bodová},~pokud $\lim_{n\to\infty}f_n(x)=f(x)$.
+        \item \emph{bodově}\index{konvergence!bodová},~pokud pro každé $x$ platí $\lim_{n\to\infty}f_n(x)=f(x)$.
         \item \emph{stejnoměrně}\index{konvergence!stejnoměrná},~pokud
         \[\forall\varepsilon>0\;\exists n_0\in\N\;\forall n\geqslant n_0\;\forall x\in\langle a,b\rangle: \varrho(f_n,f)<\varepsilon.\]
         Píšeme $f_n\rightrightarrows f$.
@@ -175,35 +179,35 @@ V rámci posloupností se v~matematické analýze často pracuje s~posloupnostmi
 \end{definition}
 Stejnoměrná konvergence implikuje konvergenci bodovou,~opačné tvezení však neplatí. Např. posloupnost funkcí $f_n(x)=x^n$,~kde $x\in\langle 0,1\rangle$,~konverguje k~funkci 
 \[f(x)=\begin{cases}
-    0 & x < 1\\
-    1 & x = 1
+    0 & x < 1,\\
+    1 & x = 1.
 \end{cases}\]
 pouze bodově,~nikoliv stejnoměrně,~protože
 \[\sup_{x\in\langle 0,1\rangle}|f_n(x)-f(x)|=\sup_{x\in\langle 0,1\rangle}|x^n-0|=1.\]
 
 \subsection{Topologické pojmy}\label{subsec:topologicke-pojmy}
 
-Poměrně důležitým pojmem v~teorii metrických prostorů jsou tzv. kompaktní množiny. S~tím se pojí následující termíny (viz definice~\ref{def:delta-pokryti-zjemneni}).
+Důležitým pojmem v~teorii metrických prostorů jsou tzv. kompaktní množiny. S~tím se pojí následující termíny.
 \begin{definition}[Pokrytí,~$\delta$-pokrytí a~zjemnění]\label{def:delta-pokryti-zjemneni}
-    Nechť je dán metrický prostor $(X,\varrho)$,~$M\subseteq X$ a~systém množin $\mathcal{U}=\set{U_1,U_2,\ldots}\subseteq\powset{X}$.
+    Nechť je dán metrický prostor $(X,\varrho)$,~$M\subseteq X$ a~systém množin $\mathcal{U}\subseteq\powset{X}$.
     \begin{itemize}
         \item $\mathcal{U}$ tvoří tzv. \emph{pokrytí}\index{pokrytí} množiny $M$,~pokud
-        \[M\subseteq\bigcup_{i=1}^\infty U_i.\]
-        Navíc o~pokrytí $\mathcal{U}$ říkáme,~že je \emph{otevřené}\index{pokrytí!otevřené},~pokud pro každé $i\in\N$ je množina $U_i$ otevřená.
+        \[M\subseteq\bigcup_{U\in\mathcal{U}} U.\]
+        Navíc o~pokrytí $\mathcal{U}$ říkáme,~že je \emph{otevřené}\index{pokrytí!otevřené},~pokud každá množina $U\in\mathcal{U}$ je otevřená.
         \item Pokud existuje $\delta>0$,~takové,~že pro každé $i\in\N$ platí $\diam{U_i}<\delta$,~pak $\mathcal{U}$ nazýváme \emph{$\delta$-pokrytím}\index{$\delta$-pokrytí}.
-        \item Platí-li pro systém $\mathcal{G}=\set{G_1,G_2,\ldots}\subseteq\powset{X}$,~že
-        \[M\subseteq\bigcup_{i=1}^\infty G_i\subseteq\bigcup_{i=1}^\infty U_i,\]
-        pak $\mathcal{G}$ je tzv. \emph{podpokrytí}\index{podpokrytí} pokrytí $\mathcal{U}$.
-        \item Pokud navíc pro každou $G\in\mathcal{G}$ existuje množina $U\in\mathcal{U}$,~taková,~že $G\subseteq U$,~pak $\mathcal{G}$ nazýváme \emph{zjemněním}\index{zjemnění} pokrytí $\mathcal{U}$. 
+        \item Platí-li pro systém $\mathcal{G}\subseteq\powset{X}$,~že
+        \[M\subseteq\bigcup_{G\in\mathcal{G}} G,\]
+        a~zároveň $\mathcal{G}\subseteq\mathcal{U}$,~pak $\mathcal{G}$ je tzv. \emph{podpokrytí}\index{podpokrytí} pokrytí $\mathcal{U}$.
+        \item Je-li $\mathcal{G}$ pokrytí $M$ a~pro každou $G\in\mathcal{G}$ existuje množina $U\in\mathcal{U}$,~taková,~že $G\subseteq U$,~pak $\mathcal{G}$ nazýváme \emph{zjemněním}\index{zjemnění} pokrytí $\mathcal{U}$. 
     \end{itemize}
 \end{definition}
 \begin{definition}[Kompaktní množina]\label{def:kompaktni-mnozina}
-    Nechť $(X,\varrho)$ je metrický prostor. Množinu $M\subseteq X$ nazveme \emph{kompaktní}\index{množina!kompaktní},~jestliže pro každé otevřené pokrytí $\mathcal{U}=\set{U_1,U_2,\ldots}$ existují indexy $n_1,\ldots,n_k\in\N$,~takové,~že
+    Nechť $(X,\varrho)$ je metrický prostor. Množinu $M\subseteq X$ nazveme \emph{kompaktní}\index{množina!kompaktní},~jestliže pro každé otevřené pokrytí $\mathcal{U}$ existují indexy $n_1,\ldots,n_k\in I$, kde $I$ je indexová množina,~přičemž
     \[M\subseteq\bigcup_{i=1}^k U_{n_i}.\]
 \end{definition}
 Volněji řečeno,~pro kompaktní množinu lze z~jejího libovolného otevřeného pokrytí vybrat konečné podpokrytí. Dokazovat kompaktnost množiny z~definice může být mnohdy nepraktické,~nicméně vzhledem k~tomu,~že budeme často pracovat s~prostorem $\R^n$,~záležitost se nám v~tomto ohledu značně zjednodušuje.
 \begin{theorem}[Heineho-Borelova]\label{thm:heine-borel}
-    Nechť $(\R^n,\varrho_e)$ je metrický prostor,~kde $\varrho_e$ je eukleidovská metrika,~a $M\subseteq\R^n$. Následující výroky jsou ekvivalentní:
+    Nechť $\varrho_e$ je obvyklá eukleidovská metrika na $\R^n$~a $M\subseteq\R^n$. Následující výroky jsou ekvivalentní:
     \begin{enumerate}[label=(\roman*)]
         \item Množina $M$ je kompaktní.
         \item Množina $M$ je uzavřená a~omezená.
@@ -220,15 +224,15 @@ K důkazu věty~\ref{thm:kompakt-implikuje-omezenost} lze využít faktu,~že ka
 \subsection{Lipschitzovská zobrazení}\label{subsec:lipschitzovska-zobrazeni}
 
 \begin{definition}[Lipschitzovské zobrazení]\label{def:bilipschitzovske-zobrazeni}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory. Pak zobrazení $\mapping{f}{X}{Y}$ nazveme 
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a $\mapping{f}{X}{Y}$ je zobrazení.
     \begin{itemize}
-        \item \emph{lipschitzovské}\index{zobrazení!lipschitzovské},~pokud existuje konstanta $K>0$ taková,~že pro každé $x,y\in X$ platí
+        \item Zobrazení $f$ nazveme \emph{lipschitzovské}\index{zobrazení!lipschitzovské},~pokud existuje konstanta $K>0$ taková,~že pro každé $x,y\in X$ platí
         \[\varrho_2(f(x),f(y))\leqslant K\varrho_1(x,y).\]
         Navíc pokud lze volit $K<1$,~pak $f$ nazýváme \emph{kontrakcí}\index{kontrakce}
-        \item \emph{bilipschitzovské}\index{zobrazení!bilipschitzovské},~pokud existují konstanty $K_1,K_2>0$ takové,~že pro každé $x,y\in X$ platí
+        \item Zobrazení $f$ nazveme \emph{bilipschitzovské}\index{zobrazení!bilipschitzovské},~pokud existují konstanty $K_1,K_2>0$ takové,~že pro každé $x,y\in X$ platí
         \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y).\]
     \end{itemize}
 \end{definition}
 Je celkem zjevné,~že lipschitzovská zobrazení jsou vždy spojitá. Pro každé $\varepsilon>0$ stačí zvolit kouli o~poloměru $\varepsilon/K$,~tedy
-\[\varrho_2(f(x_0),f(x))\leqslant K\varrho_1(x_0,x)\leqslant K\cdot\dfrac{\varepsilon}{K}=\varepsilon\]
-implikující spojitost $f$ v~bodě $x_0$.
+\[\varrho_2(f(x_0),f(x))\leqslant K\varrho_1(x_0,x)\leqslant K\cdot\dfrac{\varepsilon}{K}=\varepsilon,\]
+což implikuje spojitost $f$ v~bodě $x_0$.
