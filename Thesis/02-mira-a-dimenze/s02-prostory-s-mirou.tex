@@ -77,8 +77,8 @@ Vzhledem k~tomu,~co míra reprezentuje (tj. zobecnění délky,~obsahu,~objemu),
             1 & x\in A,\\
             0 & x\notin A.
         \end{cases}\]
-        Zobrazení $\delta_x$ je tzv. \emph{Diracova míra}\index{míra!Diracova}\index{Diracova míra}.
-        \item Zobrazení přiřazující náhodnému jevu\index{náhodný jev}\index{jev!náhodný} pravděpodobnost\index{pravděpodobnost} je též případem míry. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a~$\sigma$-algebru $\mathcal{F}\subseteq\powset{\Omega}$,~pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
+        Zobrazení $\delta_x$ je tzv. \emph{Diracova míra}\index{míra!Diracova}\index{Diracova míra} příslušná v~bodě $x$.
+        \item V moderní teorii pravděpodobnosti je obvyklé zobrazení přiřazující náhodnému jevu\index{náhodný jev}\index{jev!náhodný} pravděpodobnost\index{pravděpodobnost} definovat jako míru. Označíme-li si $\Omega=\set{\omega_1,\omega_2,\ldots,\omega_n}$ množinu všech elementárních jevů a~$\sigma$-algebru $\mathcal{F}\subseteq\powset{\Omega}$, pak $\mapping{\mathsf{P}}{\mathcal{F}}{\langle0,1\rangle}$ definovaná pro $A\in\mathcal{F}$ jako
         \[\mathsf{P}(A)=\dfrac{|A|}{|\Omega|}\]
         je mírou na $\mathcal{F}$. Speciálně $\mathsf{P}(\Omega)=1$.
     \end{itemize}
@@ -104,7 +104,7 @@ Pojďme nyní prozkoumat vlastnosti míry trochu hlouběji.
     \end{enumerate}
 \end{theorem}
 
-Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-subaditivita}\index{$\sigma$-subaditivita}\footnote{V matematické terminologii se předpona $\sigma$ běžně týká spočetných sjednocení. \citep[str. 2]{Lukes2013}}. Oproti $\sigma$-aditivitě\index{$\sigma$-aditivita} se liší tím,~že u~množin $A_1,A_2,\dots$ se nepožaduje,~aby byly po dvou disjunktní,~tzn. mohou se "překrývat". Je však intuitivně nejspíše jasné,~že součtem měr všech těchto množin určitě nemůžeme získat míru nižší než je míra jejich sjednocení (dané "překryvy" započítáváme v~sumě vícekrát). Podobně i~monotonie dává intuitivně smysl,~neboť část větší množiny jistě nemůže mít větší míru než celek. Na formální stránku věci se podíváme nyní.
+Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-subaditivita}\index{$\sigma$-subaditivita}\footnote{V matematické terminologii se předpona "$\sigma$" běžně týká spočetných sjednocení. \citep[str. 2]{Lukes2013}}. Od $\sigma$-aditivity\index{$\sigma$-aditivita} se liší tím,~že u~množin $A_1,A_2,\dots$ se nepožaduje,~aby byly po dvou disjunktní,~tzn. mohou se "překrývat". Je však intuitivně nejspíše jasné,~že součtem měr všech těchto množin určitě nemůžeme získat míru nižší než je míra jejich sjednocení (dané "překryvy" započítáváme v~sumě vícekrát). Podobně i~monotonie dává intuitivně smysl,~neboť část větší množiny jistě nemůže mít větší míru než celek. Na formální stránku věci se podíváme nyní.
 \begin{proof}
     V~důkazu využijeme některé vlastnosti $\sigma$-algebry z~věty~\ref{thm:sigma-algebra-vlastnosti},~zejména,~že všechny množiny níže jsou opět prvky $\sigma$-algebry~$\mathcal{A}$.
     \begin{enumerate}[label=\textit{(\roman*)}]
@@ -113,7 +113,7 @@ Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
         \item Nechť jsou dány $A,B\in\mathcal{A}$,~takové,~že $A\subseteq B$. Pak $B=A\cup(B\setminus A)$,~přičemž $A$ a~$B\setminus A$ jsou disjunktní. Tedy podle bodu~\ref{def:mira-podm2} lze psát $\mu(B)=\mu(A)+\mu(B\setminus A)\geqslant\mu(A)$,~protože $\mu(B\setminus A)\geqslant 0$.
         \item Mějme neklesající posloupnost množin $A_1,A_2,\ldots$,~kde $A_i\in\mathcal{A}$ pro každé $i\in\N$ (viz obrázek~\ref{fig:nekl-posl-mnozin}).
         Definujeme posloupnost\footnote{V podstatě konstruujeme množiny $A_1,A_2,\ldots$ tak,~aby v~následující množině $A_i$ nebyl obsažen prvek,~který se nachází již v~některé z~množin $A_1,A_2,\ldots,A_{i-1}$. Podobná myšlenka je využita i~při důkazu budů~\ref{thm:mira-nerost-posl} a~\ref{thm:mira-sigma-subaditivita}.} množin $B_1,B_2,\ldots$ následovně:
-        \[B_1=A_1,\;B_2=A_2\setminus A_1,\;B_i=A_i\setminus A_{i-1},\;i\geqslant 2.\]
+        \[A_0=\emptyset,\;B_1=A_1,\;B_2=A_2\setminus A_1,\;B_i=A_i\setminus A_{i-1},\;i\geqslant 2.\]
         Množiny $B_1,B_2,\dots$ jsou po dvou disjunktní a~zároveň\\$\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty A_i$. Libovolnou množinu $A_n$ lze totiž zapsat jako
         \[A_n=\bigcup_{i=1}^n (A_i\setminus A_{i-1})=\bigcup_{i=1}^n B_i.\] 
         Podle již dokázaného bodu~\ref{thm:mira-aditivita} (aditivita míry) tedy pro každé $n$ platí $\mu(A_n)=\sum_{i=1}^{n}\mu(B_i)$.
@@ -123,7 +123,7 @@ Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
         \[B_i=A_1\setminus A_i,\;i\in\N.\]
         Zde si můžeme všimnout,~že pro každé $i$ platí $B_i\subseteq B_{i+1}$ a~splňuje tak předpoklad předešlého bodu~\ref{thm:mira-nekl-posl}. Dle De Morganových zákonů můžeme psát
         \[\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty(A_1\setminus A_i)=A_1\setminus\bigcap_{i=1}^\infty A_i.\]
-        Výraz $\lim_{j\to\infty}B_j$ lze rozepsat dvěma způsoby:
+        Výraz $\lim_{j\to\infty}\mu(B_j)$ lze rozepsat dvěma způsoby:
         \begin{align*}
             \lim\limits_{j\to\infty}\mu(B_j)&\stackrel{\ref{thm:mira-nekl-posl}}{=}\mu\left(\bigcup\limits_{i=1}^\infty B_i\right)=\mu\left(A_1\setminus\bigcap\limits_{i=1}^\infty A_i\right)\stackrel{\ref{thm:mira-monotonie}}{=}\mu(A_1)-\mu\left(\bigcap\limits_{i=1}^\infty A_i\right),\\
             \lim\limits_{j\to\infty}\mu(B_j)&=\lim_{j\to\infty}(A_1\setminus A_j)\stackrel{\ref{thm:mira-monotonie}}{=}\lim_{j\to\infty}(\mu(A_1)-\mu(A_j))=\mu(A_1)-\lim_{j\to\infty}\mu(A_j).
