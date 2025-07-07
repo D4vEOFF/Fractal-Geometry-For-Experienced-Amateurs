@@ -1,11 +1,10 @@
 \section{Hausdorffova metrika}\label{sec:hausdorffova-metrika}
 
-Jako první se podíváme na tzv. \emph{Hausdorffovu metriku}\index{Hausdorffův metrický prostor!Hausdorffova metrika}.
 \begin{definition}[Hausdorffova metrika]\label{def:hausdorffova-metrika}
-    Hausdorffovou metrikou\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův} (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmetric}{\powset{X}^2}{\langle0,\infty\rangle}$,~kde pro každé $A,B\in\powset{X}$ platí
+    Hausdorffovou metrikou\index{Hausdorffův metrický prostor!Hausdorffova metrika}\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův} (vzdálenost) nazýváme takové zobrazení $\mapping{\hausdorffmetric}{\powset{X}^2}{\langle0,\infty\rangle}$,~kde pro každé $A,B\in\powset{X}$ platí
     \[\hausdorffmetric(A,B)=\inf\set{\delta>0\;\middle|\;A\subseteq (B)_\delta\;,\;B\subseteq (A)_\delta}.\]
 \end{definition}
-Podobně jako v~případě Lebesgueovy míry (viz sekce~\ref{sec:lebesgueova-mira},~definice~\ref{def:lebesgueovska-meritelnost}) se i~zde nabízí stejná otázka: \emph{Co nás opravňuje nazývat Hausdorffovu metriku metrikou?} Odpovědí je,~že zatím nic,~neboť tato definice sama o~sobě neimplikuje,~že $\hausdorffmetric$ je metrika. V~definici povolujeme totiž případ,~kdy $\hausdorffmetric(A,B)=\infty$ a~pro příklady takových množin netřeba chodit daleko. Např. v~$\R$,~když budeme počítat Hausdorffovu metriku množin $\set{0}$ a~$\langle 0,\infty)$,~zjistíme,~že $\hausdorffmetric(\set{0},\langle 0,\infty))=\infty$. Podobně budeme-li počítat $\hausdorffmetric(\emptyset,\set{0})$,~dojdeme ke stejnému výsledku. Ovšem i~v případě některých neprázdných omezených množin si lze všimnout nesrovnalostí. Např. pro množiny $(0,1)$ a~$(0,1\rangle$ je Hausdorffova metrika nulová,~přestože dané množiny nejsou stejné.
+Zde si nyní uvědomme, že nad standardním matrickým prostorem $(X,\varrho)$ zavádíme metriku $\hausdorffmetric$ pracující se všemi podmnožinami $X$ (měříme tedy vzdálenosti množin v $X$, nikoliv samotných bodů v $X$), kde $\delta$-okolí množin $A,B\in\powset{X}$ závisí na volbě původní metriky $\varrho$. Podobně jako v~případě Lebesgueovy míry (viz sekce~\ref{sec:lebesgueova-mira},~definice~\ref{def:lebesgueovska-meritelnost}) se i~zde nabízí stejná otázka: \emph{Co nás opravňuje nazývat Hausdorffovu metriku metrikou?} Odpovědí je,~že zatím nic,~neboť tato definice sama o~sobě neimplikuje,~že $\hausdorffmetric$ je metrika. V~definici povolujeme totiž případ,~kdy $\hausdorffmetric(A,B)=\infty$ a~pro příklady takových množin netřeba chodit daleko. Např. v~$\R$,~když budeme počítat Hausdorffovu vzdálenost množin $\set{0}$ a~$\langle 0,\infty)$,~zjistíme,~že $\hausdorffmetric(\set{0},\langle 0,\infty))=\infty$. Podobně, budeme-li počítat $\hausdorffmetric(\emptyset,\set{0})$,~dojdeme ke stejnému výsledku. Ovšem i~v případě některých neprázdných omezených množin si lze všimnout nesrovnalostí. Např. pro množiny $(0,1)$ a~$(0,1\rangle$ je Hausdorffova vzdálenost nulová,~přestože dané množiny nejsou stejné.
 
 Pokud se však omezíme jen na některé množiny,~bude $\hausdorffmetric$ skutečně metrikou ve smyslu definice~\ref{def:metricky-prostor}. Proto se dále zaměříme pouze na takové podmnožiny $X$,~které jsou \emph{neprázdné} a~\emph{kompaktní}.
 \begin{definition}[Hyperprostor]\label{def:hyperprostor}
@@ -15,10 +14,10 @@ Pokud se však omezíme jen na některé množiny,~bude $\hausdorffmetric$ skute
     Nechť $A,B\in\hyperspace(X)$. Pak $A\cup B\in\hyperspace(X)$.
 \end{proposition}
 \begin{proof}
-    Neprázdnost $A\cup B$ je zjevná. Sjednocení kompaktních množin je opět kompaktní. Máme-li totiž pokrytí $\mathcal{U}\supseteq A$ a~$\mathcal{V}\supseteq B$,~pak z~kompaktnosti $A,B$ víme,~že z~každého z~nich z~nich lze vybrat konečné podpokrytí
-    \[\mathcal{U}^\prime=\set{U_{i_1},U_{i_2},\ldots,U_{i_k}}\subset\mathcal{U},\;\text{resp.}\;\mathcal{V}^\prime=\set{V_{j_1},V_{j_2},\ldots,V_{j_\ell}}\subset\mathcal{V},\]
-    kde $k,\ell\in\N$. Tedy $\mathcal{U}\cup\mathcal{V}$ tvoří pokrytí $A\cup B$,~resp.
-    \[\mathcal{U}\cup\mathcal{V}\supseteq\mathcal{U}^\prime\cup\mathcal{V}^\prime\supseteq A\cup B.\]
+    Neprázdnost $A\cup B$ je zjevná. Sjednocení kompaktních množin je opět kompaktní. Máme-li totiž pokrytí $\mathcal{G}\supseteq A\cup B$,~pak z~kompaktnosti množin $A,B$ víme,~že z~každého z~nich z~nich lze vybrat konečné podpokrytí
+    \[\mathcal{U}=\set{U_{i_1},U_{i_2},\ldots,U_{i_k}}\subset\mathcal{G},\;\text{resp.}\;\mathcal{V}=\set{V_{j_1},V_{j_2},\ldots,V_{j_\ell}}\subset\mathcal{G},\]
+    kde $k,\ell\in\N$. Tedy $\mathcal{U}\cup\mathcal{V}$ tvoří konečné pokrytí $A\cup B$,~resp.
+    \[\mathcal{G}\supseteq\mathcal{U}\cup\mathcal{V}\supseteq A\cup B.\]
 \end{proof}
 Tvrzení~\ref{prop:sjednoceni-kompaktnich-mnozin} lze opět rozšířit indukcí
 \begin{corollary}\label{cor:sjednoceni-n-kompaktnich-mnozin}
@@ -26,12 +25,12 @@ Tvrzení~\ref{prop:sjednoceni-kompaktnich-mnozin} lze opět rozšířit indukcí
 \end{corollary}
 Pro operaci průniku nebo rozdílu toto tvrzení již neplatí. Např. intervaly $\langle0,1\rangle$ a~$\langle2,3\rangle$ jsou uzavřené a~omezené,~tedy (podle Heineho-Borelovy věty~\ref{thm:heine-borel}) jsou kompaktní. Avšak jejich průnik je prázdný. Podobně pro rozdíl stačí uvážit $A\subseteq B$,~tzn. $A\setminus B=\emptyset$.
 \begin{theorem}\label{thm:hausdorffova-metrika-je-metrika}
-    Nechť $(X,\varrho)$ je metrický prostor,~kde $X\subseteq\R^n$. Pak Hausdorffova metrika $\hausdorffmetric$ je metrikou na $\hyperspace(X)$.
+    Nechť $(X,\varrho)$ je metrický prostor.. Pak Hausdorffova metrika $\hausdorffmetric$ je metrikou na $\hyperspace(X)$.
 \end{theorem}
 \begin{proof}
     Zjevně pro každé $A,B\in\hyperspace(X)$ z~definice platí $\hausdorffmetric(A,B)\geqslant 0$ a~$\hausdorffmetric(A,B)=\hausdorffmetric(B,A)$. Z~kompaktnosti množin $A,B$ plyne (podle věty~\ref{thm:kompakt-implikuje-omezenost}),~že $A,B$ jsou omezené množiny,~tedy $\hausdorffmetric(A,B)<\infty$.
     
-    Pro $A=B$ platí,~že pro každé $\delta>0$ je splňeno $A\subseteq (B)_\delta$ a~zároveň $B\subseteq (A)_\delta$,~tzn. $\hausdorffmetric(A,B)=0$. Opačná implikace také platí. Předpokládejme,~že množiny $A,B$ splňují $\hausdorffmetric(A,B)=0$. Pokud $x\in A$,~pak pro každé $\delta>0$ platí,~že $x\in (B)_\delta$,~tzn. $\varrho(x,B)=0$,~a z~uzavřenosti $B$ plyne $x\in B$. Tedy $A\subseteq B$ a~analogicky platí i~$B\subseteq A$,~tzn. $A=B$.
+    Pro $A=B$ platí,~že pro každé $\delta>0$ je splněno $A\subseteq (B)_\delta$ a~zároveň $B\subseteq (A)_\delta$,~tzn. $\hausdorffmetric(A,B)=0$. Opačná implikace také platí. Předpokládejme,~že množiny $A,B$ splňují $\hausdorffmetric(A,B)=0$. Pokud $x\in A$,~pak pro každé $\delta>0$ platí,~že $x\in (B)_\delta$,~tzn. $\varrho(x,B)=0$,~a z~uzavřenosti $B$ plyne $x\in B$. Tedy $A\subseteq B$ a~analogicky platí i~$B\subseteq A$,~tzn. $A=B$.
 
     Jako poslední je třeba ukázat platnost trojúhelníkové nerovnosti. Mějme množiny $A,B,C\in\hyperspace(X)$ a~$\varepsilon>0$. Pro libovolné $x\in A$ existuje $y\in B$,~takové,~že
     \[\varrho(x,y)<\hausdorffmetric(A,B)+\varepsilon.\]
@@ -52,4 +51,4 @@ Obecně neplatí,~že každá cauchyovská posloupnost je konvergentní,~avšak 
 \begin{theorem}[Úplnost HMP]\label{thm:uplnost-hmp}
     Je-li $(X,\varrho)$ úplný metrický prostor,~pak $(\hyperspace(X),\hausdorffmetric)$ je také úplný metrický prostor.
 \end{theorem}
-Důkaz věty je už trochu delší,~nicméně lze jej nalézt opět např. v~knize \citep[str. 72]{Edgar2008}.
+Důkaz věty je trochu delší,~nicméně lze jej nalézt opět např. v~knize \citep[str. 72]{Edgar2008}.

@@ -226,11 +226,9 @@ Lze ukázat,~že $s$ není v~tomto případě nic jiného,~než již námi zkoum
         \liminf_{\delta\to 0}\dfrac{\ln\lebesguemeasure{n}((F)_\delta)}{-\ln\delta}&\leqslant -n+\lowerdimB{F}\\
         \lowerdimB{F}&\geqslant n-\limsup_{\delta\to 0}\dfrac{\ln\lebesguemeasure{n}((F)_\delta)}{\ln\delta}.
     \end{align*}
-    K~odhadu $\upperdimB{F}$ lze dospět analogicky.
-
     Nyní uvažujme po dvou disjunktní otevřené koule $B_\delta^j(x_j)$,~kde $x_j\in F$ pro $1\leqslant j\leqslant M_\delta(F)$. Pak součtem jejich objemů získáme
     \[M_\delta(F)v_n\delta^n\leqslant\lebesguemeasure{n}((F)_\delta).\]
-    Obdobnou úpravou této nerovnosti získáme požadovanou nerovnost.
+    Obdobnou úpravou této nerovnosti získáme opačnou nerovnost. K~odhadu $\upperdimB{F}$ lze dospět analogicky.
 \end{proof}
 Zkusme si aplikaci věty ilustrovat opět na příkladu fraktálu.
 \begin{example}[Cantorovo diskontinuum potřetí]\label{ex:cantorovo-diskontinuum-potreti}
@@ -238,16 +236,16 @@ Zkusme si aplikaci věty ilustrovat opět na příkladu fraktálu.
     \[\lebesguemeasure{1}((C_k)_\delta)\geqslant 2^k(3^{-k-2}+2\delta)\leqslant2^k\cdot 3\cdot 3^{-k-2}=2^k\cdot 3^{-k-1}.\]
     Tedy podle věty~\ref{thm:bc-dimenze-lebesgueova-mira}
     \begin{align*}
-        \upperdimB{C}&=n-\liminf_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\leqslant1-\liminf_{k\to\infty}\dfrac{\ln{2^{k}\cdot 3^{-k-1}}}{\ln{3^{-k-1}}}\\
-        &=\liminf_{k\to\infty}\dfrac{k\ln{2}}{(k+1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
+        \upperdimB{C}&=n-\liminf_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\leqslant1-\liminf_{k\to\infty}\dfrac{\ln{(2^{k}\cdot 3^{-k-1})}}{\ln{3^{-k-1}}}\\
+        &=\limsup_{k\to\infty}\dfrac{k\ln{2}}{(k+1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
     \end{align*}
 
-    Podobně zvolíme-li $3^{-k-1}\leqslant\delta\leqslant 3^{-k}$,~pak
+    Podobně, zvolíme-li $3^{-k-1}\leqslant\delta\leqslant 3^{-k}$,~pak
     \[\lebesguemeasure{1}((C_k)_\delta)\leqslant 2^k(3^{-k}+2\delta)\leqslant2^k\cdot 3\cdot 3^{-k}=2^k\cdot 3^{-k+1}\]
     a~tedy
     \begin{align*}
         \lowerdimB{C}&=n-\limsup_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\geqslant 1-\limsup_{k\to\infty}\dfrac{\ln{2^{k}\cdot 3^{-k+1}}}{\ln{3^{-k+1}}}\\
-        &=\limsup_{k\to\infty}\dfrac{k\ln{2}}{(k-1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
+        &=\liminf_{k\to\infty}\dfrac{k\ln{2}}{(k-1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
     \end{align*}
 \end{example}
 
@@ -271,7 +269,7 @@ V minulé podsekci~\ref{subsec:definice-a-vypocet-bc-dimenze} jsme se bavili o~m
             &\leqslant \left|\set{J\;\middle|\;J\cap I\neq\emptyset\;,\;J\in\mathcal{Q}_\delta}\right|\\
             &=M_\delta(I)\leqslant c\delta^{-n},
         \end{align*}
-        kde $c>0$. Poslední nerovnost si lze snadno rozmyslet. Tedy podle věty~\ref{thm:ekvivalentni-def-box-counting-dimenze} a~přechozího bodu~\ref{thm:monotonie-bc-dimenze} máme
+        kde $c>0$. Poslední nerovnost v~odhadu výše. Tedy podle věty~\ref{thm:ekvivalentni-def-box-counting-dimenze} a~přechozího bodu~\ref{thm:monotonie-bc-dimenze} máme
         \[\upperdimB{F}\leqslant\upperdimB{I}=\limsup_{\delta\to 0}\dfrac{\ln{N_\delta(I)}}{-\ln{\delta}}\leqslant\limsup_{\delta\to 0}\dfrac{\ln{c\delta^{-n}}}{-\ln{\delta}}=n.\]
         \item Pro $\delta>0$ volme $\delta$-pokrytí $\mathcal{F}\supset F$ a~$\mathcal{G}\supset G$. Je celkem zjevné,~že $N_\delta(F\cup G)\leqslant N_\delta(F)+N_\delta(G)$,~neboli
         \begin{align*}
@@ -317,20 +315,20 @@ pak $f$ nazýváme bilipschitzovské.
 
 Než se však podíváme na samotný vztah box-counting dimenze a~lipschitzovských,~resp. bilipschitzovských zobrazení,~dokážeme si jedno jednoduché\linebreak{}lemma,~které později využijeme.
 \begin{lemma}\label{lem:lipschitzovska-zobrazeni-a-bijekce}
-    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a~zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f}{X}{f(X)}$ je bijekce.
+    Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a~zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f}{X}{f(X)}$ je prosté.
 \end{lemma}
 \begin{proof}
-    Podle předpokladu je $f$ bilipschitzovské zobrazení,~tedy existují pro konstanty $K_1,K_2>0$,~takové,~že
+    Podle předpokladu je $f$ bilipschitzovské zobrazení,~tedy existují konstanty $K_1,K_2>0$,~takové,~že
     \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y),\;x,y\in X.\]
-    Surjektivita zobrazení $f$ je zřejmá z~její definice. Pro spor předpokládejme,~že $f$ není injektivní,~tedy existují $x,y\in X$,~taková,~že $x\neq y$ a~$f(x)=f(y)$. Pak
-    \[0<K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))=0,\]
-    což je spor.
+    Surjektivita zobrazení $f$ je zřejmá z~její definice. Nechť existuje dvojice různých bodů $x,y\in X$. Pak
+    \[0<K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y)),\]
+    pročež $f(x)\neq f(y)$.
 \end{proof}
 
-V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na prostor $\R^n$.
+V našem případě se dále omezíme,~stejně jako předtím,~pouze na prostor $\R^n$.
 
 \begin{theorem}\label{thm:bc-dimenze-bi-lipschitzovska-zobrazeni}
-    Nechť jsou dány metrické prostory $(\R^n,\varrho_n)$ a~$(\R^m,\varrho_m)$,~$F\subseteq\R^n$ a~zobrazení $\mapping{f}{F}{\R^m}$. Platí:
+    Nechť jsou dány metrické prostory $(\R^n,\varrho_n)$ a~$(\R^m,\varrho_m)$,~kde $\varrho_n,\varrho_m$ jsou metriky,~$F\subseteq\R^n$ a~zobrazení $\mapping{f}{F}{\R^m}$. Platí:
     \begin{enumerate}[label=(\roman*)]
         \item\label{thm:bc-dimenze-lipschitz} Je-li $f$ lipschitzovské,~pak
         \[\lowerdimB{f(F)}\leqslant\lowerdimB{F}\;\text{a}\;\upperdimB{f(F)}\leqslant\upperdimB{F}.\]
@@ -356,7 +354,7 @@ V našem případě se nyní dále omezíme,~stejně jako předtím,~pouze na pr
             &=\upperdimB{F}.
         \end{align*}
         Nerovnost pro $\lowerdimB{f(F)}$ obdržíme analogicky.
-        \item Je-li $f$ bilipschitzovské,~pak podle lemmatu~\ref{lem:lipschitzovska-zobrazeni-a-bijekce} je $\mapping{f}{F}{f(F)}$ bijekce a~existuje inverzní zobrazení $\mapping{f^{-1}}{f(F)}{F}$. Volme $u,v\in f(F)$ libovolně a~položme $x=f^{-1}(u),y=f^{-1}(v)$. Pak
+        \item Je-li $f$ bilipschitzovské,~pak podle lemmatu~\ref{lem:lipschitzovska-zobrazeni-a-bijekce} je $\mapping{f}{F}{f(F)}$ prostá, a~tedy existuje inverzní zobrazení $\mapping{f^{-1}}{f(F)}{F}$. Volme $u,v\in f(F)$ libovolně a~položme $x=f^{-1}(u),y=f^{-1}(v)$. Pak
         \begin{align*}
             K_1\varrho_n(x,y)&=K_1\varrho_n(f^{-1}(u),f^{-1}(v))\leqslant\varrho_m(f(f^{-1}(u)),f(f^{-1}(v)))\\
             &=\varrho_m(u,v),
