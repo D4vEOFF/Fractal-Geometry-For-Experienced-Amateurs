@@ -1,23 +1,23 @@
 \section{Systém iterovaných funkcí}\label{sec:ifs}
 
-V předchozí části kapitoly viděli,~jak lze fraktální objekty efektivně popisovat pomocí L-systémů,~kde struktura vzniká paralelním přepisováním symbolů a~jejich vizualizace se provádí prostřednictvím želví grafiky. Tento přístup nám umožňoval popsat určitou skupinu fraktálů,~nicméně pro jiné fraktály by se nám hodil vhodnější popis jejich konstrukce. Např. Sierpińského trojúhelník lze popsat pomocí L-systému,~nicméně v~sekci~\ref{sec:sobepodobnost} o~soběpodobnosti jsme si jej záváděli spíše pomocí opakované aplikace určitých geometrických transformací (ač jsme neuvedli jejich explicitní vyjádření). Ty si později zavedeme jako tzv. \emph{systémy iterovaných funkcí}\index{systém iterovaných funkcí}.
+V předchozí části kapitoly jsme viděli,~jak lze fraktální objekty efektivně popisovat pomocí L-systémů,~kde struktura vzniká paralelním přepisováním symbolů a~jejich vizualizace se provádí prostřednictvím želví grafiky. Tento přístup nám umožňoval popsat určitou skupinu fraktálů,~nicméně pro jiné fraktály by se nám hodil vhodnější popis jejich konstrukce. Např. Sierpińského trojúhelník lze generovat pomocí L-systému,~nicméně v~sekci~\ref{sec:sobepodobnost} o~soběpodobnosti jsme si jej záváděli spíše pomocí opakované aplikace určitých geometrických transformací (ač jsme neuvedli jejich explicitní vyjádření). Ty si později zavedeme jako tzv. \emph{systémy iterovaných funkcí}\index{systém iterovaných funkcí}.
 
-Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v~kapitole~\ref{chapter:hausdorffuv-mp} o~Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův},~který zde bude hrát významnou roli,~a dále na ně budeme navazovat. Pro související matematickou teorii,~kterou zde dále budeme vykládat,~doporučuji knihu \cite{Barnsley1993}.
+Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v~kapitole~\ref{chapter:hausdorffuv-mp} o~Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův},~který zde bude hrát významnou roli. Pro související matematickou teorii,~kterou zde dále budeme vykládat,~doporučuji knihu \cite{Barnsley1993}.
 
 \subsection{Kontrakce na Hausdorffově metrickém prostoru}\label{subsec:hausdorffuv-mp-kontrakce}
 
 V minulých kapitolách jsme se často zaměřovali na lipschitzovská a~bilipschitzovská zobrazení. V~tomto případě nás budou speciálně zajímat tzv. \emph{kontrakce}\index{kontrakce}\index{zobrazení!kontraktivní}. Těmto termínům a~faktům s~nimi souvisejícími jsme se krátce věnovali v~podsekci~\ref{subsec:lipschitzovska-zobrazeni}.
 
-Připomeňme,~že lipschitzovské zobrazení rovnou implikuje spojist v~libovolném metrickém prostoru $(X,\varrho)$. Ještě však než začneme,~podíváme se na alternativní definici Hausdorffovy metriky,~která se nám dále bude hodit.
+Připomeňme,~že lipschitzovskost rovnou implikuje spojitost zobrazení v~libovolném metrickém prostoru $(X,\varrho)$. Ještě než však začneme,~podíváme se na alternativní definici Hausdorffovy metriky,~která se nám dále bude hodit.
 \begin{theorem}[Alternativní definice Hausdorffovy metriky]\label{thm:alternativni-hausdorffova-metrika}
     Nechť $(X,\varrho)$ je metrický prostor. Pro každé $A,B\in\hyperspace(X)$ platí
     \[\hausdorffmetric(A,B)=\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
 \end{theorem}
 \begin{proof}
-    Nechť je dáno $\varepsilon>0$,~takové,~že $\varepsilon\geqslant\hausdorffmetric(A,B)$. Pak $A\subseteq(B)_\varepsilon$ a~$B\subseteq(A)_\delta$,~tzn.
+    Nechť je dáno $\varepsilon>0$ takové,~že $\varepsilon\geqslant\hausdorffmetric(A,B)$. Pak $A\subseteq(B)_\varepsilon$ a~$B\subseteq(A)_\varepsilon$,~tzn.
     \[\varepsilon\geqslant\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
     Naopak zvolíme-li $0<\varepsilon\leqslant\hausdorffmetric(A,B)$,~pak určitě platí alespoň jedna z~nerovností:
-    \[\varepsilon\leqslant\sup_{x\in A}\varrho(x,B)\;\text{nebo}\;\varepsilon\leqslant\sup_{y\in B}\varrho(y,A).\]
+    \[\varepsilon\leqslant\sup_{x\in A}\varrho(x,B)\quad\text{nebo}\quad\varepsilon\leqslant\sup_{y\in B}\varrho(y,A).\]
     Tedy
     \[\varepsilon\leqslant\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
     Z~toho dostáváme závěr tvrzení.
@@ -107,14 +107,14 @@ Zatím není zcela zjevné,~proč definujeme pro IFS kontraktivní faktor jako m
 \begin{remark}
     Dodejme,~že dále v~textu budeme používat značení $\Psi^{\circ n}$ definované induktivně:
     \begin{align*}
-        \Psi^{\circ 0}=\id,\\
-        \Psi^{\circ n}=\Psi\circ\Psi^{\circ(n-1)}\;,\;n\in\N.
+        \Psi^{\circ 0}&=\id,\\
+        \Psi^{\circ n}&=\Psi\circ\Psi^{\circ(n-1)}\;,\;n\in\N.
     \end{align*}
     Tzn.~pro libovolnou množinu $B\in\hyperspace(X)$ je
-    \[\Psi^{\circ 0}(B)=B\;\text{a}\;\Psi^{\circ n}(B)=\Psi(\Psi^{\circ(n-1)}(B)).\]
+    \[\Psi^{\circ 0}(B)=B\quad\text{a}\quad\Psi^{\circ n}(B)=\Psi(\Psi^{\circ(n-1)}(B)).\]
 \end{remark}
 
-S kontrakcemi se pojí známá věta z~matematické analýzy,~která se nazývá \emph{Banachova věta o~pevném bodě} (vit~\ref{thm:banach}).
+S kontrakcemi se pojí známá věta z~matematické analýzy,~která se nazývá \emph{Banachova věta o~pevném bodě} (viz~\ref{thm:banach}).
 \begin{definition}[Pevný bod]\label{def:pevny-bod}
     Bod $x\in X$ se nazývá pevným bodem zobrazení $\mapping{f}{X}{X}$,~pokud $f(x)=x$.
 \end{definition}
@@ -220,7 +220,7 @@ Znovu se podívejme na asi jeden z~nejznáměnších fraktálů z~této kategori
 \end{align*}
 Tedy zobrazení $\mapping{\Omega}{\hyperspace(\R^2)}{\hyperspace(\R^2)}$ definujeme jako
 \[\Omega(A)=\omega_1(A)\cup\omega_2(A)\cup\omega_3(A),\]
-kde $A\in\hyperspace(\R^2)$. Připomeňme,~že takto definované $\Omega$ je (podle věty~\ref{thm:sjednoceni-kontrakci}) kontrakce a~tedy z~Banachovy věty o~pevném bodě plyne (viz věta~\ref{thm:banach}),~že má právě jeden atraktor,~tj. množina $A\in\hyperspace(\R^2)$,~že platí $A=\Omega(A)$. Kontraktivní faktor tohoto (ani jiného) IFS nás vyloženě zajímat nemusí,~avšak není těžké jej dopočítat. Např. zde je celkem zjevné,~že $K=1/2$. Užitečnější je však pro nás fakt,~že atraktor $A$ lze určit jako
+kde $A\in\hyperspace(\R^2)$. Připomeňme,~že takto definované $\Omega$ je (podle věty~\ref{thm:sjednoceni-kontrakci}) kontrakce a~tedy z~Banachovy věty o~pevném bodě plyne (viz věta~\ref{thm:banach}),~že má právě jeden atraktor,~tj. množinu $A\in\hyperspace(\R^2)$ takovou,~že platí $A=\Omega(A)$. Kontraktivní faktor tohoto (ani jiného) IFS nás vyloženě zajímat nemusí,~avšak není těžké jej dopočítat. Např. zde je celkem zjevné,~že $K=1/2$. Užitečnější je však pro nás fakt,~že atraktor $A$ lze určit jako
 \[A=\lim_{n\to\infty}\Omega^{\circ n}(B),\]
 kde $B\in\hyperspace(\R^2)$. V~našem případě je počítečním útvarem rovnostranný trojúhelník $T$,~jehož vrcholy mají souřadnice
 \[\left(\begin{matrix}
@@ -516,13 +516,13 @@ a zároveň $\gamma_1(I)\cap\gamma_2(I)=\emptyset$. Celkově tedy IFS $\set{\gam
 \begin{theorem}\label{thm:vypocet-hd}
     Nechť $(X,\varrho)$ je metrický prostor a~dále nechť je dán IFS
     \[\set{\psi_1,\ldots,\psi_n}\]
-    splňující open set condition,~kde kontrakce $\psi_i$ má faktor $r_i$ pro každé $i\in\N$. Je-li $F\in\hyperspace(X)$ atraktorem IFS $\set{\psi_1,\ldots,\psi_n}$,~pak
+    splňující open set condition,~kde kontrakce $\psi_i$ má faktor $r_i$ pro každé $1\leqslant i\leqslant n$. Je-li $F\in\hyperspace(X)$ atraktorem IFS $\set{\psi_1,\ldots,\psi_n}$,~pak
     \[\dimH{F}=\dimB{F}=s,\]
     kde $s$ splňuje rovnost
     \[\sum_{i=1}^{n}r_i^s=1.\]
     Navíc platí $0<\hausdorffmeasure{s}(F)<\infty$. 
 \end{theorem}
-S prominutím si dovolím opět důkaz vynechat,~neboť je poměrně pracný,~avšak lze jej nalézt v~knize \citep[str. 140]{Falconer1989}. Tato věta nejen ospravedlňuje náš předešlý "zjednodušený" výpočet Hausdorffovy dimenze v~příkladu~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze},~ale dokonce nám jej podstatně zlehčuje. Pojďme se proto podívat na některé další příklady výpočtu.
+S prominutím si dovolíme opět důkaz vynechat,~neboť je poměrně pracný,~avšak lze jej nalézt v~knize \citep[str. 140]{Falconer1989}. Tato věta nejen ospravedlňuje náš předešlý "zjednodušený" výpočet Hausdorffovy dimenze v~příkladu~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze},~ale dokonce nám jej podstatně zlehčuje. Pojďme se proto podívat na některé další příklady výpočtu.
 \begin{example}[Sierpińského koberec]\label{ex:sierpinskeho-koberec-hd-dimenze}
     IFS pro Sierpińského koberec $S$ jsme si uvedli v~tabulce~\ref{table:ifs-sierpinskeho-koberec}. Lze si snadno rozmyslet,~že každá z~jeho kontrakcí má faktor $r_i=1/3$ pro $i=1,2,\ldots,8$. Pak podle věty~\ref{thm:vypocet-hd} lze psát
     \[\sum_{i=1}^{8}r_i=8\left(\dfrac{1}{3}\right)^s=1.\]
