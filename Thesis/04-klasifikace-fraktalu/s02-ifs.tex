@@ -222,7 +222,7 @@ Tedy zobrazení $\mapping{\Omega}{\hyperspace(\R^2)}{\hyperspace(\R^2)}$ definuj
 \[\Omega(A)=\omega_1(A)\cup\omega_2(A)\cup\omega_3(A),\]
 kde $A\in\hyperspace(\R^2)$. Připomeňme,~že takto definované $\Omega$ je (podle věty~\ref{thm:sjednoceni-kontrakci}) kontrakce a~tedy z~Banachovy věty o~pevném bodě plyne (viz věta~\ref{thm:banach}),~že má právě jeden atraktor,~tj. množinu $A\in\hyperspace(\R^2)$ takovou,~že platí $A=\Omega(A)$. Kontraktivní faktor tohoto (ani jiného) IFS nás vyloženě zajímat nemusí,~avšak není těžké jej dopočítat. Např. zde je celkem zjevné,~že $K=1/2$. Užitečnější je však pro nás fakt,~že atraktor $A$ lze určit jako
 \[A=\lim_{n\to\infty}\Omega^{\circ n}(B),\]
-kde $B\in\hyperspace(\R^2)$. V~našem případě je počítečním útvarem rovnostranný trojúhelník $T$,~jehož vrcholy mají souřadnice
+kde $B\in\hyperspace(\R^2)$. V~našem případě je počátečním útvarem rovnostranný trojúhelník $T$,~jehož vrcholy mají souřadnice
 \[\left(\begin{matrix}
     0\\
     0
@@ -235,7 +235,7 @@ kde $B\in\hyperspace(\R^2)$. V~našem případě je počítečním útvarem rovn
 \end{matrix}\right).\]
 Prvních několik iterací zobrazení $\Omega$ si lze prohlédnout na obrázku~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik}. Sierpińského trojúhelník je tedy atraktorem zobrazení $\Omega$.
 
-Zajímavostí je,~že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné,~že v~případě Sierpińského trojúhelníka začínáme s~rovnostranným trojúhelníkem,~faktem je,~že je zcela lhostejné\footnote{Z formálního hlediska je třeba,~aby se jednalo o~kompaktní neprázdnou množinu,~nicméně v~$\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny,~které \emph{uzavřené a~omezené} (viz věta~\ref{thm:heine-borel})},~se kterým útvarem začneme (viz obrázek~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
+Zajímavostí je,~že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné,~že v~případě Sierpińského trojúhelníka začínáme s~rovnostranným trojúhelníkem,~faktem je,~že je zcela lhostejné\footnote{Z formálního hlediska je třeba,~aby se jednalo o~kompaktní neprázdnou množinu,~nicméně v~$\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny,~které jsou \emph{uzavřené a~omezené} (viz věta~\ref{thm:heine-borel})},~s jakým útvarem začneme (viz obrázek~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
 
 Vypisovat explicitně dané kontrakce je sice formálně žádoucí,~nicméně dosti nepraktické. Dále tedy budeme hodnoty jednotlivých koeficientů $a,b,\ldots,f$ (viz \eqref{eq:afinita-v-R2}) zapisovat do tabulky.
 \begin{table}[h]
@@ -249,7 +249,7 @@ Vypisovat explicitně dané kontrakce je sice formálně žádoucí,~nicméně d
     \caption{Koeficienty IFS $\Omega$ pro Sierpińského trojúhelník}
     \label{table:ifs-sierpinskeho-trojuhelnik}
 \end{table}
-U Waclava Sierpińského se ještě chvíli zdržíme,~neboť úvahu konstrukce jeho pravděpodobně nejznámenšího fraktálu lze přenést i~na další útvary. Jiným takovým příkladem je tzv. \emph{Sierpińského koberec}\index{Sierpińského koberec} jehož IFS si označíme $\Phi$ (viz tabulka~\ref{table:ifs-sierpinskeho-koberec}). I~v tomto případě (podobně jako u~Sierpińského trojúhelníka) lze začít s~libovolným útvarem. 
+U Wacłava Sierpińského se ještě chvíli zdržíme,~neboť princip konstrukce jeho pravděpodobně nejznámenšího fraktálu lze přenést i~na další útvary. Jiným takovým příkladem je tzv. \emph{Sierpińského koberec}\index{Sierpińského koberec} jehož IFS si označíme $\Phi$ (viz tabulka~\ref{table:ifs-sierpinskeho-koberec}). I~v tomto případě (podobně jako u~Sierpińského trojúhelníka) lze začít s~libovolným útvarem. 
 \begin{table}[h]
     \centering
     \begin{tabular}{c|cccccc}
@@ -489,13 +489,13 @@ Ohlédněme se zpět za příkladem~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze}
 
 Než se však pustíme do dalšího výkladu,~připomeňme si některé nám již známé výsledky. V~sekci~\ref{subsec:vlastnosti-bc-dimenze} jsme dokázali větu~\ref{thm:bc-dimenze-bi-lipschitzovska-zobrazeni},~která říká,~že box-counting dimenze je invariantní vůči lipschitzovskému a~bilipschitzovskému zobrazení. Tedy speciálně zobrazení $\mapping{\Psi}{\hyperspace(X)}{\hyperspace(X)}$ z~věty~\ref{thm:sjednoceni-kontrakci} definované předpisem
 \[\Psi(B)=\bigcup_{i=1}^n\psi_i(B),\]
-kde $B\in\hyperspace(X)$ a~$\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS,~je lipschitzovské. Horní box-counting dimenze kterékoliv iterace $\Psi^{\circ n}(B)$ je tedy shora omezená horní box-counting dimenzí počátečního útvaru $B$,~což plyne z~věty~\ref{thm:vlastnosti-bc-dimenze} bodu~\ref{thm:stabilita-bc-dimenze} (resp. důsledku~\ref{cor:stabilita-bc-dimenze-obecne}). Budeme-li tedy počítat např. box-couting dimenzi Cantorova diskontinua (viz příklady~\ref{ex:cantorovo-diskontinuum} a~\ref{ex:cantorovo-diskontinuum-potreti}),~lze ihned odhadnout,~že jeho dimenze bude menší než $1$. Konkrétně jsme došli k~výsledku
+kde $B\in\hyperspace(X)$ a~$\set{\psi_1,\psi_2,\ldots,\psi_n}$ je IFS,~je lipschitzovské. Horní box-counting dimenze kterékoliv iterace $\Psi^{\circ n}(B)$ je tedy shora omezená horní box-counting dimenzí počátečního útvaru $B$,~což plyne z~věty~\ref{thm:vlastnosti-bc-dimenze} bodu~\ref{thm:stabilita-bc-dimenze} (resp. důsledku~\ref{cor:stabilita-bc-dimenze-obecne}). Budeme-li tedy počítat např. box-couting dimenzi Cantorova diskontinua (viz příklady~\ref{ex:cantorovo-diskontinuum} a~\ref{ex:cantorovo-diskontinuum-potreti}),~lze ihned odhadnout,~že jeho dimenze bude menší než~$1$. Konkrétně jsme došli k~výsledku
 \[\dfrac{\ln{2}}{\ln{3}}\approx0{,}630929\ldots<1.\]
 Dále na konci sekce~\ref{sec:hausdorffova-mira-dimenze} (konkrétně v~podsekci~\ref{subsec:hausdorffova-dimenze}) jsme dokázali fakt (viz věta~\ref{thm:bc-dimenze-vs-hd-dimenze}),~že pro neprázdné omezené množiny je Hausdorffova dimenze vždy shora omezena dolní box-counting dimenzí. Pro mnoho útvarů jsme sice jejich box-counting dimenzi,~resp. Hausdorffovu dimenzi explicitně nepočítali,~ale i~tak nám to dává alepoň určitou představu o~výsledku.
 
 Tyto dosavadní výsledky jsou jistě hezké,~ale přesto nám poskytují pouze odhady daných dimenzí. Nicméně v~případě IFS,~kterým je tato sekce věnována,~si zformulujeme poměrně silné tvrzení,~které nám v~tomto ohledu podstatně zjednoduší práci. Nejdříve si ale zavedeme jiný termín,~který budeme potřebovat.
 \begin{definition}[Open set condition]\label{def:open-set-condition}
-    Nechť je dán IFS $\set{\psi_1,\psi_2,\ldots,\psi_n}$. Řekneme,~že kontrakce $\psi_i$,~kde $i\in\N$,~splňují tzv. \emph{open set condition}\index{open set condition}\footnote{Do češtiny bychom tento název mohli volně přeložit jako \emph{"Podmínka existence otevřené množiny"},~avšak radši se budefme držet oficiálního názvu.},~pokud platí:
+    Nechť je dán IFS $\set{\psi_1,\psi_2,\ldots,\psi_n}$. Řekneme,~že kontrakce $\psi_i$,~kde $i\in\N$,~splňují tzv. \emph{open set condition}\index{open set condition}\footnote{Do češtiny bychom tento název mohli volně přeložit jako \emph{"Podmínka existence otevřené množiny"},~avšak radši se budefme držet oficiálního názvu.},~pokud existuje neprázdná otevřená množina $V$ taková, že platí:
     \begin{enumerate}[label=(\alph*)]
         \item $V\supseteq\Psi(V)$
         \item a~množiny $\psi_1(V),\psi_2(V),\ldots,\psi_n(V)$ jsou po dvou disjunktní.
@@ -512,7 +512,7 @@ Vezmeme-li jako otevřenou množinu otevřený interval $I=(0,1)$,~pak
 \[\gamma_1(I)=\left(0,\frac{1}{3}\right)\;\text{a}\;\gamma_2(I)=\left(\frac{2}{3},1\right).\]
 Tedy určitě platí
 \[I\supseteq\left(0,\frac{1}{3}\right)\cup\left(\frac{2}{3},1\right)\]
-a zároveň $\gamma_1(I)\cap\gamma_2(I)=\emptyset$. Celkově tedy IFS $\set{\gamma_1,\gamma_2}$ splňuje open set condition. Podobně si lze uvědomit,~že např. IFS pro Sierpińského trojúhelník též splňuje open set condition,~neboť při volbě rovnostranného trojúhelníku $T$ jako počátečního útvaru lze za hledanou otevřenou množinu vzít vnitřek $\interior{T}$. Společně s~tímto konceptem máme již nástroje k~formulaci následující věty.
+a zároveň $\gamma_1(I)\cap\gamma_2(I)=\emptyset$. Celkově tedy IFS $\set{\gamma_1,\gamma_2}$ splňuje open set condition. Podobně si lze uvědomit,~že např. IFS pro Sierpińského trojúhelník též splňuje open set condition,~neboť při volbě rovnostranného trojúhelníka $T$ jako počátečního útvaru lze za hledanou otevřenou množinu vzít vnitřek $\interior{T}$. Společně s~tímto konceptem máme již nástroje k~formulaci následující věty.
 \begin{theorem}\label{thm:vypocet-hd}
     Nechť $(X,\varrho)$ je metrický prostor a~dále nechť je dán IFS
     \[\set{\psi_1,\ldots,\psi_n}\]
@@ -522,10 +522,10 @@ a zároveň $\gamma_1(I)\cap\gamma_2(I)=\emptyset$. Celkově tedy IFS $\set{\gam
     \[\sum_{i=1}^{n}r_i^s=1.\]
     Navíc platí $0<\hausdorffmeasure{s}(F)<\infty$. 
 \end{theorem}
-S prominutím si dovolíme opět důkaz vynechat,~neboť je poměrně pracný,~avšak lze jej nalézt v~knize \citep[str. 140]{Falconer1989}. Tato věta nejen ospravedlňuje náš předešlý "zjednodušený" výpočet Hausdorffovy dimenze v~příkladu~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze},~ale dokonce nám jej podstatně zlehčuje. Pojďme se proto podívat na některé další příklady výpočtu.
+Poznamejme, že je-li splněn předpoklad věty výše, pak box-counting dimenze útvaru $F$ je vždy definovaná. S~prominutím si dovolíme opět důkaz vynechat,~neboť je poměrně pracný,~avšak lze jej nalézt v~knize \citep[str. 140]{Falconer1989}. Tato věta nejen ospravedlňuje náš předešlý "zjednodušený" výpočet Hausdorffovy dimenze v~příkladu~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze},~ale dokonce nám jej podstatně zlehčuje. Pojďme se proto podívat na některé další příklady výpočtu.
 \begin{example}[Sierpińského koberec]\label{ex:sierpinskeho-koberec-hd-dimenze}
-    IFS pro Sierpińského koberec $S$ jsme si uvedli v~tabulce~\ref{table:ifs-sierpinskeho-koberec}. Lze si snadno rozmyslet,~že každá z~jeho kontrakcí má faktor $r_i=1/3$ pro $i=1,2,\ldots,8$. Pak podle věty~\ref{thm:vypocet-hd} lze psát
-    \[\sum_{i=1}^{8}r_i=8\left(\dfrac{1}{3}\right)^s=1.\]
+    IFS pro Sierpińského koberec $S$ jsme si uvedli v~tabulce~\ref{table:ifs-sierpinskeho-koberec}. Lze si snadno rozmyslet, že tento útvar splňuje open set condition a~že každá z~jeho kontrakcí má faktor $r_i=1/3$ pro $i=1,2,\ldots,8$. Tedy podle věty~\ref{thm:vypocet-hd} lze psát
+    \[\sum_{i=1}^{8}r_i^s=8\left(\dfrac{1}{3}\right)^s=1.\]
     Odtud již jednoduchou úpravou získáme výsledek
     \[s=\dimH{S}=\dfrac{\ln{8}}{\ln{3}}\approx1{,}892789\ldots\]
 \end{example}

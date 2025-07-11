@@ -9,27 +9,25 @@ Pokud se čtenář dostal až do této části,~mohl si všimnout,~že jednu kat
 \end{figure}
 Tím spíš s~faktem,~že její definice není v~konečném důsledku nikterak složitá.
 
-S pravděpodobně nejznámějším fraktálem však souvisí dvojice širších termínů,~se kterým začneme,~a jsou jimi tzv. \emph{Juliovy množiny}\index{Fatouova množina}\index{množina!Fatouova} a~\emph{Fatouovy množiny}\index{Fatouova množina}\index{množina!Fatouova} pojmenované po francouzských matematicích \name{Gastonovi Juliovi} (1893--1978)\linebreak a~\name{Pierre Fatouovi} (1878--1929). Pro jejich studium se však budeme muset ponořit do světa komplexních čísel.
+S pravděpodobně nejznámějším fraktálem však souvisí dvojice širších termínů,~se kterým začneme,~a jsou jimi tzv. \emph{Juliovy množiny}\index{Fatouova množina}\index{množina!Fatouova} a~\emph{Fatouovy množiny}\index{Fatouova množina}\index{množina!Fatouova} pojmenované po francouzských matematicích \name{Gastonu Juliovi} (1893--1978)\linebreak a~\name{Pierru Fatouovi} (1878--1929). Pro jejich studium se však budeme muset navštívit svět komplexních čísel.
 
-Lze nejspíše předpokládat,~že se čtenář nejspíše s~komplexními čísly již setkal. Nebudeme se tedy společně hlouběji zabývat naprostými základy. Pouze si stručně připomeňme značení.
+Lze nejspíše předpokládat,~že se čtenář s~komplexními čísly již setkal. Nebudeme se tedy společně hlouběji zabývat naprostými základy. Pouze si stručně připomeňme značení.
 \begin{itemize}
-    \item \emph{Komplexním číslem}\index{komplexní číslo} rozumíme číslo $z=a+b\imag$,~kde $a,b\in\R$ a~$\imag^2=-1$. Množinu komplexních čísel,~jak už je zvykem,~budeme značit $\C$.
+    \item \emph{Komplexním číslem}\index{komplexní číslo} rozumíme číslo $z=a+b\imag$,~kde $a,b\in\R$ a~$\imag^2=-1$. Množinu komplexních čísel,~jak je zvykem,~budeme značit $\C$.
     \item \emph{Komplexně sdruženým číslem}\index{Komplexně sdružerné číslo} k~číslu $z=a+b\imag$ rozumíme číslo
     \[\cconjugate{z}=a-b\imag.\]
-    \item \emph{Absolutní hodnotou komplexního čísla} $z=a+b\imag$ rozumíme vzdálenost od počátku,~tj. budeme-li uvažovat metrický prostor $(\C,\varrho)$,~pak
-    \[|z|=\varrho(z,0).\]
-    Nejčastěji však budeme uvažovat eukleidovskou metriku $\varrho_e$,~tedy
+    \item \emph{Absolutní hodnotou komplexního čísla} $z=a+b\imag$ rozumíme vzdálenost od počátku,~tj.
     \[|z|=\sqrt{a^2+b^2}.\]
 \end{itemize}
 V této sekci budeme především pracovat s~komplexními polynomiálními funkcemi $\mapping{f}{\C}{\C}$,~tzn. funkcemi ve tvaru
-\[f(z)=\sum_{i=1}^{n}a_iz^i=a_nz^n+a_{n-1}z^{n-1}+\dots+a_1z+a_0.\]
+\[f(z)=\sum_{i=1}^{n}a_iz^i=a_nz^n+a_{n-1}z^{n-1}+\dots+a_1z+a_0,\quad\text{kde $a_i\in\C$}\]
 Brzy uvidíme jejich důležitou roli.
 
 \subsection{Juliovy a~Fatouovy množiny}\label{subsec:juliovy-fatouovy-mnoziny}
 
-Jak zde již bylo řečeno,~esencí této kapitoly bude práce s~tzv. \emph{Juliovými a~Fatouovými množinami}\index{Juliova množina}\index{množina!Juliova}\index{Fatouova množina}\index{množina!Fatouova}. Většinový výklad v~této části je převzat z~knihy \cite[str. 235]{Falconer1989},~avšak řadu věcí si opět dovolíme přeskočit. Dále ještě připomeňme značení,~které jsme zavedli již v~části~\ref{subsec:hausdorffuv-mp-kontrakce} věnující se IFS na Hausdorffově metrickém prostoru,~týkající se skládání funkcí. Obecně $n$-tou iteraci funkce $\mapping{f}{\C}{\C}$ budeme značit
+Většinový výklad v~této části je převzat z~knihy \cite[str. 235]{Falconer1989},~avšak řadu věcí si opět dovolíme přeskočit. Dále ještě připomeňme značení,~které jsme zavedli již v~části~\ref{subsec:hausdorffuv-mp-kontrakce},~týkající se skládání funkcí. Obecně $n$-tou iteraci funkce $\mapping{f}{\C}{\C}$ budeme značit
 \[f^{\circ n}(z)=(f\circ f^{\circ(n-1)})(z)=f(f^{\circ n}(z))\]
-kde $z\in\C$.
+kde $z\in\C$. Speciálně $f^{\circ 0}=\id$ a $f^{\circ 1}=f\circ\id=f$.
 \begin{definition}[Juliova a~Fatouova množina]\label{juliova-fatouova-mnozina}
     Mějme polynomiálními funkci $\mapping{f}{\C}{\C}$. Pak definujeme
     \begin{enumerate}[label=(\alph*)]
@@ -48,7 +46,7 @@ Co nám definice~\ref{juliova-fatouova-mnozina} vlastně říká? U~pevně zadan
         \[\filledinjulia(f)=\set{z\in\C\mid |z|<1},\]
         resp.
         \[\julia(f)=\set{z\in\C\mid|z|=1}.\]
-        Juliova množina funkce $f$ tvoří jednotkovou kružnici umístěnou v~počátku Gaussovy roviny,~resp. vyplněná Juliova množina $\filledinjulia(f)$ tvoří jednotkový kruh.
+        Juliova množina funkce $f$ tvoří jednotkovou kružnici se středem v~počátku Gaussovy roviny,~resp. vyplněná Juliova množina $\filledinjulia(f)$ tvoří jednotkový kruh.
         \item Pro $f(z)=z^2+c$,~kde $c\in\C$ je varianta množiny $K(f)$ znázorněna na obrázku~\ref{subfig:vyplnena-juliova-mnozina-1}.
         \item Ještě jiný příklad pro složitější polynom $f(z)=z^3-z^2$ lze vidět na obrázku~\ref{subfig:vyplnena-juliova-mnozina-2}.
         \item Pro příklady Juliových množin zadaných polynomiálních funkcí viz obrázky~\ref{subfig:juliova-mnozina-1} a~\ref{subfig:juliova-mnozina-2}.
@@ -90,18 +88,20 @@ Co nám definice~\ref{juliova-fatouova-mnozina} vlastně říká? U~pevně zadan
     \caption{Příklady aproximace $\julia(f)$}
     \label{fig:priklady-juliovych-mnozin}
 \end{figure}
-Jak jsme již konstatovali,~u polynomiální funkce $f$ nás pro zadaný bod $z\in\C$ pouze zajímá,~zda posloupnost postupných iterací je omezená. To znamená,~že moho nastat dva přípustné scénáře: posloupnost iterací je buď \emph{periodická},~nebo \emph{konvergentní}.
+Jak jsme již konstatovali,~u polynomiální funkce $f$ nás pro zadaný bod $z\in\C$ pouze zajímá,~zda posloupnost postupných iterací je omezená.
 
-V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik základních poznatků. Řadu dalších však z~technických důvodů vynecháme,~především ty využívající znalostí z~komplexní analýzy. Začneme tvrzením,~které se nám později bude hodit při generování tohoto typu fraktálů.
+V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik základních poznatků. Řadu dalších však vynecháme, neboť jsou příliš technické, především ty využívající znalostí z~komplexní analýzy. Začneme tvrzením,~které se nám později bude hodit při generování tohoto typu fraktálů.
 \begin{lemma}\label{lem:test-konvergence-komplexniho-polynomu}
     Nechť je dána polynomiální funkce $\mapping{f}{\C}{\C}$ stupně $n\geqslant 2$. Pak platí následující:
     \begin{enumerate}[label=(\roman*)]
         \item Existuje $r\in\R$,~takové,~že pokud platí $|z|\geqslant r$,~pak $|f(z)|\geqslant2|z|$.
-        \item Navíc pokud existuje $m\in\N$,~takové,~že platí-li $|f^{\circ m}(z)|\geqslant r$,~pak $f^{\circ k}(z)\to\infty$.
+        \item Navíc pokud existuje $m\in\N$,~takové,~že platí-li $|f^{\circ m}(z)|\geqslant r$,~pak $f^{\circ k}(z)\to\infty$ pro $k\to\infty$.
     \end{enumerate} 
 \end{lemma}
 \begin{proof}
-    Nechť je dáno $z\in\C$. Volme $r\in\R$,~takové,~že je-li splněno $|z|\geqslant r$,~pak platí nerovnost $\frac{1}{2}|a_n||z|^n\geqslant 2|z|$ a~zároveň
+    Mějme polynomiální funkci
+    \[f(z)=\sum_{i=1}^{n}a_iz^i\]
+    kde $z\in\C$ volíme libovolně. Volme $r\in\R$,~takové,~že je-li splněno $|z|\geqslant r$,~pak platí nerovnost $\frac{1}{2}|a_n||z|^n\geqslant 2|z|$ a~zároveň
     \[|a_{n-1}||z|^{n-1}+|a_{n-2}||z|^{n-2}+\dots+|a_1||z|+|a_0|\leqslant\frac{1}{2}|a_n||z|^n.\]
     Předpokládejme tedy,~že $|z|>r$. Pak z~trojúhelníkové nerovnosti plyne
     \begin{align*}
@@ -109,30 +109,29 @@ V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik zákla
         &=\frac{1}{2}|a_n||z|^n\geqslant2|z|.
     \end{align*}
     Pokud navíc platí,~že existuje $m\in\N$,~takové,~že $|f^{\circ m}(z)|\geqslant r$,~pak indukcí lze odvodit,~že pro $m+k$,~kde $k\in\N$,~platí
-    \[|f^{m+k}(z)|\geqslant2^m|f^{\circ k}(z)|\geqslant r,\]
+    \[|f^{m+k}(z)|\geqslant2^k|f^{\circ m}(z)|\geqslant r,\]
     neboli $f^{\circ k}(z)\to\infty$.
 \end{proof}
 (Převzato z~\cite[str. 237]{Falconer1989}.)
 
-V čem je lemma~\ref{lem:test-konvergence-komplexniho-polynomu} užitečné? V~podstatě nám říká,~že pro test "chování" posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat,~zda absolutní hodnota obrazu v~$k$-té iteraci není vyšší,~než zvolené $r$. Pokud ano,~je již jasné,~že posloupnost bude divergovat. Toho využijeme hlavně při generování fraktálů (viz kapitola~\ref{chapter:generovani-fraktalu}).
+V čem je lemma~\ref{lem:test-konvergence-komplexniho-polynomu} užitečné? V~podstatě nám říká,~že pro test "chování" posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat,~zda absolutní hodnota obrazu v~$k$-té iteraci není vyšší,~než nějaké $r$, jehož existenci nám toto lemma zaručuje. Pokud ano,~je již jasné,~že posloupnost bude divergovat. Toho využijeme hlavně při generování fraktálů (viz kapitola~\ref{chapter:generovani-fraktalu}).
 
 Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph{Time Escape}\index{Time Escape algoritmus}\index{algoritmus!Time Escape},~neboť pro každý bod $z$ po určité době (resp. pevném počtu iterací) algoritmus zastaví a~zkontroluje,~zda $|z|>r$. Podle výsledku buď daný bod zařadí do koumané množiny,~nebo ne.
 \begin{example}
-    Vezměme si funkci $f(z)=z^2+c$,~kde $c\in\C$. Podle věty~\ref{lem:test-konvergence-komplexniho-polynomu} při volbě vhodného $r\in\R$,~konkrétně $|z|>r$ bude platit,~že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
+    Vezměme si funkci $f(z)=z^2+c$,~kde $c\in\C$. Podle věty~\ref{lem:test-konvergence-komplexniho-polynomu} hledáme vhodné $r\in\R$, aby pro $|z|>r$ funogvalo,~že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
     \[r^2-|c|\geqslant 2r.\]
-    Aplikací známého vzorce dostaneme
+    Výpočtem diskriminantu $D=4+4|c|$ a~aplikací známého vzorce dostaneme
     \[r\geqslant\frac{-2+2\sqrt{1+|c|}}{2}=-1+\sqrt{1+|c|}.\]
-    Je celkem jasné,~že záporný kořen zde nemá smysl. Zároveň však potřebujeme zajistit,~aby hodnota na levé straně byla kladná:
+    Je celkem jasné,~že záporný kořen zde nemá smysl. Zároveň však potřebujeme zajistit,~aby platilo
     \begin{align*}
         r^2-|c|&\geqslant 2r\\
         r^2-2r&\geqslant|c|\geqslant 0\\
         r(r-2)&\geqslant 0
     \end{align*}
-    To platí pro $r\in\langle 2,\infty)$. Pro test divergence posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat,~zda obecně v~$k$-té iteraci platí,~že
-    \[|z^2+c|\geqslant r.\]
+    To je splněno pro $r\in\langle 2,\infty)$. Pro test divergence posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat,~zda pro nějaké $k$ platí,~že
+    \[|f^{\circ k}(z)|\geqslant r.\]
     Pro funkce tohoto tvaru se často volí právě $r=2$.
 \end{example}
-O Juliových množinách lze dokázat některé základní vlastnosti.
 \begin{theorem}\label{thm:vztah-kf-a-jf}
     Nechť $f$ je komplexní polynomiální funkce. Pak
     \begin{enumerate}[label=(\roman*)]
@@ -144,7 +143,7 @@ O Juliových množinách lze dokázat některé základní vlastnosti.
 \begin{proof}
     Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} víme,~že existuje $r\in\R$,~takové,~že pokud pro nějaké $m\in\N$ platí $|f^{\circ m}(z)|\geqslant r$,~pak $f^{\circ k}\to\infty$. Tedy množiny $\filledinjulia(f)$ a~$\julia(f)$ jsou obsaženy v~kouli o~poloměru $r$ umístěné v~počátku,~tj.
     \[\filledinjulia(f),\julia(f)\subseteq B_r(0).\]
-    Volme $z\in\C\setminus\filledinjulia(f)$,~tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$,~takové,~že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce,~existuje $\varepsilon>0$,~takové,~že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená,~že množina $\C\setminus\filledinjulia(f)$ je otevřená,~tedy $\filledinjulia(f)$ je uzavřená množina. Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$,~avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení,~označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$,~kde $k\in\N$,~z čehož plyne,~že $z_0\in\filledinjulia(f)$,~tzn. $\filledinjulia(f)\neq\emptyset$. Tím jsou dokázány body~\ref{thm:kompaktnost-kf-jf} a~\ref{thm:jf-podmnozina-kf}.
+    Volme $z\in\C\setminus\filledinjulia(f)$,~tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$,~takové,~že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce,~existuje $\varepsilon>0$,~takové,~že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená,~že množina $\C\setminus\filledinjulia(f)$ je otevřená,~nebo-li $\filledinjulia(f)$ je uzavřená množina. Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$,~avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení,~označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$,~kde $k\in\N$,~z čehož plyne,~že $z_0\in\filledinjulia(f)$,~tzn. $\filledinjulia(f)\neq\emptyset$. Tím jsou dokázány body~\ref{thm:kompaktnost-kf-jf} a~\ref{thm:jf-podmnozina-kf}.
     
     Dále si zvolme $z_1\in\C\setminus\filledinjulia(f)$ a~uvažujme funkci $l(\lambda)=\lambda z_0+(1-\lambda)z_1$,~kde $0\leqslant\lambda\leqslant 1$. Tedy $l$ představuje spojnici bodů $z_0$ a~$z_1$. Položme
     \[\lambda^\prime=\sup\set{\lambda\in\langle0,1\rangle\mid l(\lambda)\in\filledinjulia(f)}.\]
@@ -158,7 +157,7 @@ O Juliových množinách lze dokázat některé základní vlastnosti.
     \[\julia(f)=f(\julia(f))=f^{-1}(\julia(f)).\]
 \end{theorem}
 \begin{proof}
-    Nechť $z\in\julia(f)$. Z~bodu~\ref{thm:jf-podmnozina-kf} tvrzení~\ref{thm:vztah-kf-a-jf} plyne,~že $f^{\circ k}(z)\notto\infty$. Najdeme posloupnost $\set{\omega_n}_{n=1}^\infty$,~takovou,~že $\omega_n\to z$ a~zároveň $f^{\circ k}(\omega_n)\to\infty$ pro všechna $n\in\N$. Ze spojitosti funkce $f$ plyne,~že $f(\omega_n)\to f(z)$,~přičemž $f^{\circ k}(f(z))=f^{\circ(k+1)}(z)\to\infty$ a~$f^{\circ k}(f(\omega_n))=f^{\circ(k+1)}(\omega_n)\to\infty$ pro každé $n\in\N$. Z~toho plyne,~že $f(z)\in\julia(f)$ a~tedy $f(\julia(f))\subseteq\julia(f)$. Dále rovněž máme
+    Nechť $z\in\julia(f)$. Z~bodu~\ref{thm:jf-podmnozina-kf} tvrzení~\ref{thm:vztah-kf-a-jf} plyne,~že $f^{\circ k}(z)\notto\infty$ (protože $z\in\filledinjulia(f)$). Najdeme posloupnost $\set{\omega_n}_{n=1}^\infty$,~takovou,~že $\omega_n\to z$ a~zároveň $f^{\circ k}(\omega_n)\to\infty$ pro všechna $n\in\N$. Ze spojitosti funkce $f$ plyne,~že $f(\omega_n)\to f(z)$,~přičemž $f^{\circ k}(f(z))=f^{\circ(k+1)}(z)\notto\infty$ a~$f^{\circ k}(f(\omega_n))=f^{\circ(k+1)}(\omega_n)\to\infty$ pro každé $n\in\N$. Z~toho plyne,~že $f(z)\in\julia(f)$ a~tedy $f(\julia(f))\subseteq\julia(f)$. Dále rovněž máme
     \[\julia(f)\subseteq f^{-1}(f(\julia(f)))\subseteq f^{-1}(\julia(f)).\]
 
     Druhou inkluzi ukážeme obdobně. Definujme posloupnost $\set{\omega_n}_{n=1}^\infty$ jako výše. Najdeme $z_0$,~takové,~že $f(z_0)=z\in\julia(f)$. Poté můžeme nalézt posloupnost $\set{v_n}_{n=1}^\infty$,~tak,~aby platilo $f(v_n)=\omega_n$ pro každé $n\in\N$,~tzn.
