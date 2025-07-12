@@ -116,7 +116,7 @@ V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik zákla
 
 V čem je lemma~\ref{lem:test-konvergence-komplexniho-polynomu} užitečné? V~podstatě nám říká,~že pro test "chování" posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat,~zda absolutní hodnota obrazu v~$k$-té iteraci není vyšší,~než nějaké $r$, jehož existenci nám toto lemma zaručuje. Pokud ano,~je již jasné,~že posloupnost bude divergovat. Toho využijeme hlavně při generování fraktálů (viz kapitola~\ref{chapter:generovani-fraktalu}).
 
-Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph{Time Escape}\index{Time Escape algoritmus}\index{algoritmus!Time Escape},~neboť pro každý bod $z$ po určité době (resp. pevném počtu iterací) algoritmus zastaví a~zkontroluje,~zda $|z|>r$. Podle výsledku buď daný bod zařadí do koumané množiny,~nebo ne.
+Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph{Time Escape}\index{Time Escape algoritmus}\index{algoritmus!Time Escape},~neboť pro každý bod $z$ po určité době (resp. pevném počtu iterací) algoritmus zastaví a~zkontroluje,~zda $|z|>r$. Podle výsledku buď daný bod zařadí do zkoumané množiny,~nebo ne.
 \begin{example}
     Vezměme si funkci $f(z)=z^2+c$,~kde $c\in\C$. Podle věty~\ref{lem:test-konvergence-komplexniho-polynomu} hledáme vhodné $r\in\R$, aby pro $|z|>r$ funogvalo,~že $|z^2+c|\geqslant|z|^2-|c|\geqslant 2|z|$. Tedy řešíme nerovnici
     \[r^2-|c|\geqslant 2r.\]
@@ -143,15 +143,17 @@ Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph
 \begin{proof}
     Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} víme,~že existuje $r\in\R$,~takové,~že pokud pro nějaké $m\in\N$ platí $|f^{\circ m}(z)|\geqslant r$,~pak $f^{\circ k}\to\infty$. Tedy množiny $\filledinjulia(f)$ a~$\julia(f)$ jsou obsaženy v~kouli o~poloměru $r$ umístěné v~počátku,~tj.
     \[\filledinjulia(f),\julia(f)\subseteq B_r(0).\]
-    Volme $z\in\C\setminus\filledinjulia(f)$,~tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$,~takové,~že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce,~existuje $\varepsilon>0$,~takové,~že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená,~že množina $\C\setminus\filledinjulia(f)$ je otevřená,~nebo-li $\filledinjulia(f)$ je uzavřená množina. Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$,~avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení,~označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$,~kde $k\in\N$,~z čehož plyne,~že $z_0\in\filledinjulia(f)$,~tzn. $\filledinjulia(f)\neq\emptyset$. Tím jsou dokázány body~\ref{thm:kompaktnost-kf-jf} a~\ref{thm:jf-podmnozina-kf}.
+    Volme $z\in\C\setminus\filledinjulia(f)$,~tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$,~takové,~že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce,~existuje $\varepsilon>0$,~takové,~že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená,~že množina $\C\setminus\filledinjulia(f)$ je otevřená,~nebo-li $\filledinjulia(f)$ je uzavřená množina (totéž platí i pro $\julia(f)$). Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$,~avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení,~označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$,~kde $k\in\N$,~z čehož plyne,~že $z_0\in\filledinjulia(f)$,~tzn. $\filledinjulia(f)\neq\emptyset$.
     
     Dále si zvolme $z_1\in\C\setminus\filledinjulia(f)$ a~uvažujme funkci $l(\lambda)=\lambda z_0+(1-\lambda)z_1$,~kde $0\leqslant\lambda\leqslant 1$. Tedy $l$ představuje spojnici bodů $z_0$ a~$z_1$. Položme
     \[\lambda^\prime=\sup\set{\lambda\in\langle0,1\rangle\mid l(\lambda)\in\filledinjulia(f)}.\]
-    Tzn.~musí ležet na její hranici,~tedy $l(\lambda^\prime)\in\boundary{\filledinjulia(f)}=\julia(f)$. Z~toho plyne,~že i~$\julia(f)$ je neprázdná množina.
+    Tzn.~musí ležet na její hranici,~tedy $l(\lambda^\prime)\in\boundary{\filledinjulia(f)}=\julia(f)$. Z~toho plyne,~že i~$\julia(f)$ je neprázdná množina. Tím jsou dokázány body~\ref{thm:kompaktnost-kf-jf} a~\ref{thm:jf-podmnozina-kf}.
 
     Poslední bod~\ref{thm:vnitrek-jf-neprazdny} dokážeme sporem. Pokud by platilo  $\interior{(\julia(f))}\neq\emptyset$,~pak by existovala neprázdná otevřená množina $U\subseteq\julia(f)\subseteq\filledinjulia(f)$. To by znamenalo,~že $U\subseteq\interior{(\filledinjulia(f))}$ a~zároveň má $U$ neprázdný průnik s~hranicí $\filledinjulia(f)$,~což je spor.
 \end{proof}
 (Převzato z~\citep[str. 237]{Falconer1989}.)
+
+Zde poznamenejme, že body \ref{thm:jf-podmnozina-kf} a \ref{thm:vnitrek-jf-neprazdny} jsou ve skutečnosti speciálními případy obecnějších tvrzení \ref{thm:neprazdna-hranice-kompaktu} a~\ref{thm:vnitrek-hranice-uz-mnoziny}.
 \begin{theorem}\label{invariance-jf}
     Je-li $f$ libovolná komplexní polynomiální funkce,~pak $\julia(f)$ je invariantní vůči $f$. Tzn.
     \[\julia(f)=f(\julia(f))=f^{-1}(\julia(f)).\]
