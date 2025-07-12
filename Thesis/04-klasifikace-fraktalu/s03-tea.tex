@@ -94,21 +94,21 @@ V souvislosti se zmíněnými záležitostmi si nyní dokážeme několik zákla
 \begin{lemma}\label{lem:test-konvergence-komplexniho-polynomu}
     Nechť je dána polynomiální funkce $\mapping{f}{\C}{\C}$ stupně $n\geqslant 2$. Pak platí následující:
     \begin{enumerate}[label=(\roman*)]
-        \item Existuje $r\in\R$, takové, že pokud platí $|z|\geqslant r$, pak $|f(z)|\geqslant2|z|$.
-        \item Navíc pokud existuje $m\in\N$, takové, že platí-li $|f^{\circ m}(z)|\geqslant r$, pak $f^{\circ k}(z)\to\infty$ pro $k\to\infty$.
+        \item Existuje $r\in\R$ takové, že pokud platí $|z|\geqslant r$, pak $|f(z)|\geqslant2|z|$.
+        \item Navíc pokud existuje $m\in\N$ takové, že platí-li $|f^{\circ m}(z)|\geqslant r$, pak $f^{\circ k}(z)\to\infty$ pro $k\to\infty$.
     \end{enumerate} 
 \end{lemma}
 \begin{proof}
     Mějme polynomiální funkci
     \[f(z)=\sum_{i=1}^{n}a_iz^i\]
-    kde $z\in\C$ volíme libovolně. Volme $r\in\R$, takové, že je-li splněno $|z|\geqslant r$, pak platí nerovnost $\frac{1}{2}|a_n||z|^n\geqslant 2|z|$ a~zároveň
+    kde $z\in\C$ volíme libovolně. Volme $r\in\R$ takové, že je-li splněno $|z|\geqslant r$, pak platí nerovnost $\frac{1}{2}|a_n||z|^n\geqslant 2|z|$ a~zároveň
     \[|a_{n-1}||z|^{n-1}+|a_{n-2}||z|^{n-2}+\dots+|a_1||z|+|a_0|\leqslant\frac{1}{2}|a_n||z|^n.\]
     Předpokládejme tedy, že $|z|>r$. Pak z~trojúhelníkové nerovnosti plyne
     \begin{align*}
         |f(z)|&=\left|\sum_{i=0}^{n}a_iz^i\right|\geqslant|a_n||z|^n-\sum_{i=0}^{n-1}|a_i||z|^i\geqslant|a_n||z|^n-\frac{1}{2}|a_n||z|^n\\
         &=\frac{1}{2}|a_n||z|^n\geqslant2|z|.
     \end{align*}
-    Pokud navíc platí, že existuje $m\in\N$, takové, že $|f^{\circ m}(z)|\geqslant r$, pak indukcí lze odvodit, že pro $m+k$, kde $k\in\N$, platí
+    Pokud navíc platí, že existuje $m\in\N$ takové, že $|f^{\circ m}(z)|\geqslant r$, pak indukcí lze odvodit, že pro $m+k$, kde $k\in\N$, platí
     \[|f^{m+k}(z)|\geqslant2^k|f^{\circ m}(z)|\geqslant r,\]
     neboli $f^{\circ k}(z)\to\infty$.
 \end{proof}
@@ -141,9 +141,9 @@ Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} víme, že existuje $r\in\R$, takové, že pokud pro nějaké $m\in\N$ platí $|f^{\circ m}(z)|\geqslant r$, pak $f^{\circ k}\to\infty$. Tedy množiny $\filledinjulia(f)$ a~$\julia(f)$ jsou obsaženy v~kouli o~poloměru $r$ umístěné v~počátku, tj.
+    Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} víme, že existuje $r\in\R$ takové, že pokud pro nějaké $m\in\N$ platí $|f^{\circ m}(z)|\geqslant r$, pak $f^{\circ k}\to\infty$. Tedy množiny $\filledinjulia(f)$ a~$\julia(f)$ jsou obsaženy v~kouli o~poloměru $r$ umístěné v~počátku, tj.
     \[\filledinjulia(f),\julia(f)\subseteq B_r(0).\]
-    Volme $z\in\C\setminus\filledinjulia(f)$, tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$, takové, že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce, existuje $\varepsilon>0$, takové, že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená, že množina $\C\setminus\filledinjulia(f)$ je otevřená, nebo-li $\filledinjulia(f)$ je uzavřená množina (totéž platí i pro $\julia(f)$). Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$, avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení, označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$, kde $k\in\N$, z čehož plyne, že $z_0\in\filledinjulia(f)$, tzn. $\filledinjulia(f)\neq\emptyset$.
+    Volme $z\in\C\setminus\filledinjulia(f)$, tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$ takové, že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce, existuje $\varepsilon>0$ takové, že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená, že množina $\C\setminus\filledinjulia(f)$ je otevřená, nebo-li $\filledinjulia(f)$ je uzavřená množina (totéž platí i pro $\julia(f)$). Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$, avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení, označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$, kde $k\in\N$, z čehož plyne, že $z_0\in\filledinjulia(f)$, tzn. $\filledinjulia(f)\neq\emptyset$.
     
     Dále si zvolme $z_1\in\C\setminus\filledinjulia(f)$ a~uvažujme funkci $l(\lambda)=\lambda z_0+(1-\lambda)z_1$, kde $0\leqslant\lambda\leqslant 1$. Tedy $l$ představuje spojnici bodů $z_0$ a~$z_1$. Položme
     \[\lambda^\prime=\sup\set{\lambda\in\langle0,1\rangle\mid l(\lambda)\in\filledinjulia(f)}.\]
@@ -163,7 +163,7 @@ Zde poznamenejme, že body \ref{thm:jf-podmnozina-kf} a \ref{thm:vnitrek-jf-nepr
     \[\julia(f)\subseteq f^{-1}(f(\julia(f)))\subseteq f^{-1}(\julia(f)),\]
     kde první inkluze platí pro obecné zobrazení a~druhá plyne z~předchozího, tj. $f(\julia(f))\subseteq\julia(f)$.
 
-    Druhou inkluzi $f^{-1}(\julia(f))\subseteq\julia(f)$ ukážeme obdobně. Najdeme $z_0$, takové, že $f(z_0)=z\in\julia(f)$ a~následně definujme posloupnost $\set{\omega_n}_{n=1}^\infty$ jako výše, tj. $\omega_n\in\C\setminus\filledinjulia(f)$ pro každé $n\in\N$ a~zároveň $\omega_n\to z$. Poté můžeme nalézt posloupnost $\set{v_n}_{n=1}^\infty$, tak, aby platilo $f(v_n)=\omega_n$ pro každé $n\in\N$, tzn.
+    Druhou inkluzi $f^{-1}(\julia(f))\subseteq\julia(f)$ ukážeme obdobně. Najdeme $z_0$ takové, že $f(z_0)=z\in\julia(f)$ a~následně definujme posloupnost $\set{\omega_n}_{n=1}^\infty$ jako výše, tj. $\omega_n\in\C\setminus\filledinjulia(f)$ pro každé $n\in\N$ a~zároveň $\omega_n\to z$. Poté můžeme nalézt posloupnost $\set{v_n}_{n=1}^\infty$, tak, aby platilo $f(v_n)=\omega_n$ pro každé $n\in\N$, tzn.
     \[f(v_n)=\omega_n\to z=f(z_0).\]
     Zároveň však platí $f^{\circ k}(z_0)=f^{\circ(k-1)}(z)\notto\infty$ a~$f^{\circ k}(v_n)=f^{\circ(k-1)}(\omega_n)\to\infty$, tedy $z_0\in\julia(f)$ (argument stejný jako výše). Z~toho plyne, že $f^{-1}(\julia(f))\subseteq\julia(f)$, neboli $\julia(f)\subseteq f(f^{-1}(\julia(f)))\subseteq f(\julia(f))$.
 \end{proof}
@@ -193,7 +193,7 @@ Vraťme se na chvíli k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin
         \caption{$f(z)=z^2 - 0{,}8 + 0{,}156\imag$}
         \label{subfig:vyplnena-juliova-mnozina-2-obarveno}
     \end{subfigure}
-    \caption{Příklady zbarvení bodů pro různé $\filledinjulia(f)$.}
+    \caption{Příklady zbarvení bodů pro různé $\filledinjulia(f)$}
     \label{fig:priklady-vyplnenych-juliovych-mnozin-obarveno}
 \end{figure}
 % \begin{figure}[H]
@@ -215,7 +215,7 @@ Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho, kolik iterací dan�
 
 Mandebrotova množina patří patrně mezi jedny z~nejznáměnších fraktálů a~stala se terčem nemalého množství publikací a~popularizačních materiálů. Její mimořádně složitě vypadající vzhled a~charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
 \[f_c(z)=z^2+c,\]
-kde $c\in\C$. Tento konkrétní tvar polynominální funkce jsme již viděli v~minulé podsekci, kde jsme se zabývali tzv. \emph{Juliovými množinami}\index{Juliova množina}\index{množina!Juliova}. Ty tvořily hranici množiny všech $z\in\C$, takových, že posloupnost $\set{f^{\circ k}(z)}_{k=1}^\infty$ je omezená. Ani zde se od původní myšlenky nevzdálíme, avšak budeme nyní zkoumat proměnnou $c$.
+kde $c\in\C$. Tento konkrétní tvar polynominální funkce jsme již viděli v~minulé podsekci, kde jsme se zabývali tzv. \emph{Juliovými množinami}\index{Juliova množina}\index{množina!Juliova}. Ty tvořily hranici množiny všech $z\in\C$ takových, že posloupnost $\set{f^{\circ k}(z)}_{k=1}^\infty$ je omezená. Ani zde se od původní myšlenky nevzdálíme, avšak budeme nyní zkoumat proměnnou $c$.
 \begin{definition}[Mandelbrotova množina]\label{def:mandebrotova-mnozina}
     \emph{Mandelbrotovu množinu}\index{Mandebrotova množina}\index{množina!Mandelbrotova} definujeme jako
     \[\mathfrak{M}=\set{c\in\C\mid \set{f_c^{\circ k}(0)}_{k=1}^\infty\notto\infty}.\]
@@ -226,13 +226,13 @@ Důkaz je opět delší, takže se znovu odkážeme na knihu \citep[str. 245]{Fa
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{mandelbrot-set.pdf}
-    \caption{Znázornění aproximace množiny $\mathfrak{M}$.}
+    \caption{Znázornění aproximace množiny $\mathfrak{M}$}
     \label{fig:znazorneni-mandebrotovy-mnoziny}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{mandelbrot-set-colored.pdf}
-    \caption{Barevné znázornění aproximace množiny $\mathfrak{M}$.}
+    \caption{Barevné znázornění aproximace množiny $\mathfrak{M}$}
     \label{fig:znazorneni-mandebrotovy-mnoziny-vybarveno}
 \end{figure}
 Jak je to s~dimenzí? Tu lze odhadnout velice snadno. Zjevně platí, že $\dimH{\mathfrak{M}}\leqslant 2$. Zároveň však platí i~druhá nerovnost $\dimH{\mathfrak{M}}\geqslant 2$, neboť $\mathfrak{M}$ obsahuje jako podmnožinu kouli $B_r(0)$, jejíž Hausdorffova dimenze je $2$. To zároveň silně podtrhuje naše konstatování neexistence jednotné definice termínu "fraktál", což jsme krátce rozebírali v~sekci~\ref{sec:co-je-to-fraktal}. Některé definice říkají, že za fraktální útvar považujeme soběpodobný útvar, jehož Hausdorffova dimenze je neceločíselná, avšak zde vidíme, že v~tom případě bychom Mandebrotovu množinu nemohli považovat za fraktál.

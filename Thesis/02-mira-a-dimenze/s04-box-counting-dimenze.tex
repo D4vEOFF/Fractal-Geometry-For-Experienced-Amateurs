@@ -1,10 +1,10 @@
 \section{Box-counting dimenze}\label{sec:box-counting-dimenze}
 
-Tomuto typu dimenze jsme se již v~základu věnovali v~kapitole~\ref{chapter:uvod_do_fraktalu}, specificky sekci~\ref{sec:fraktalni_dimenze}, kde jsme rozebrali způsob jejího výpočtu a~ukázali jsme si jej několika příkladech. V~této části si blíže rozebereme některé další vlastnosti týkající se právě \emph{box-counting dimenze}\index{box-counting dimenze}\index{dimenze!box-counting}\footnote{V kapitole~\ref{chapter:uvod_do_fraktalu} jsme pro jednoduchost používali obecnější termín \emph{fraktální dimenze}. Ten však zahrnuje daleko širší škálu možných definic, než jen tu, kterou jsme si představili. Avšak dále v~tomto textu budeme používat výhradně její skutečný název, tj. box-counting dimenze.} a~pokusíme se ji lépe zasadit do kontextu teorie míry, které jsme se samostatně až do této chvíle věnovali.
+Tomuto typu dimenze jsme se již v~základu věnovali v~sekci~\ref{sec:fraktalni_dimenze}, kde jsme rozebrali způsob jejího výpočtu a~ukázali jsme si jej na několika příkladech. V~této části si blíže rozebereme některé další vlastnosti týkající se právě \emph{box-counting dimenze}\index{box-counting dimenze}\index{dimenze!box-counting}\footnote{V kapitole~\ref{chapter:uvod_do_fraktalu} jsme pro jednoduchost používali obecnější termín \emph{fraktální dimenze}. Ten však zahrnuje daleko širší škálu možných definic než jen tu, kterou jsme si představili. Proto dále v~tomto textu budeme používat výhradně její skutečný název, tj. box-counting dimenze.} a~pokusíme se ji lépe zasadit do kontextu teorie míry, které jsme se samostatně věnovali.
 
 \subsection{Definice a~výpočet}\label{subsec:definice-a-vypocet-bc-dimenze}
 
-Jako první se podíváme na myšlenku box-counting trochu blíže a~maličko si ji zobecníme. Původně jsme nahlíželi na dimenzi jako na exponent, s nímž roste "velikost" zkoumaného útvaru. Tato myšlenka se ukázala jako rozumná, neboť pro "klasické" geometrické útvary vycházela tato dimenze vždy celočíselně, nicméně už tomu tak nebylo v~případě fraktálních útvarů. Podstata byla taková, že jsme útvar $F$ rozdělili na určitý počet stejně "velkých částí", označme je $F_1,F_2,\ldots,F_m$ v~nějakém měřítku $\varepsilon>0$. Zkusme nyní požadavek na striktně stejnou velikost (formálně vzato míru) trochu rozvolnit. Bude nám stačit, když pro každé $i$ je
+Jako první si přiblížíme myšlenku box-counting a~maličko si ji zobecníme. Původně jsme nahlíželi na dimenzi jako na exponent, s nímž roste "velikost" zkoumaného útvaru. Tato myšlenka se ukázala jako rozumná, neboť pro "klasické" geometrické útvary vycházela tato dimenze vždy celočíselně, nicméně už tomu tak nebylo v~případě fraktálních útvarů. Podstata byla taková, že jsme útvar rozdělili na určitý počet stejně "velkých částí". Mějme tedy útvar $F$ a~rozdělme jej na části $F_1,F_2,\ldots,F_m$ v~nějakém měřítku $\varepsilon>0$. Zkusme nyní požadavek na striktně stejnou velikost (formálně vzato míru) trochu rozvolnit. Bude nám stačit, když pro každé $i$ je
 \[\diam{F_i}\leqslant\delta,\;\text{kde}\;\delta>0.\]
 Zároveň nebudeme požadovat, aby množiny $F_1,F_2,\ldots,F_m$ byly všechny po dvou téměř disjunktními\footnote{Množiny $M,N$ jsou \emph{téměř disjunktní}, pokud $\interior{M}\cap\interior{N}=\emptyset$, tedy může nastat, že se na hranici mohou "dotýkat", tzn. $\boundary{M}\cap\boundary{N}\neq\emptyset$.} podmnožinami $F$, ale stačí, když budou tvořit pokrytí $F$.
 
@@ -14,7 +14,7 @@ Mějme tedy nějakou neprázdnou omezenou množinu $F\subset\R^n$, kde pro každ
 \end{equation}
 pro $c>0$, pak řekneme, že množina $F$ má box-counting dimenzi $s$. (Převzato z~\citep[str. 27]{Falconer2014}.)
 \begin{remark}
-    V~dalším textu budeme místo $\delta\to 0_+$ psát pro jednoduchost pouze $\delta\to 0$, byť by se slušilo používat první variantu. Čtenáři je však nejspíše jasné, že uvažovat záporný průměr množiny nemá smysl.
+    V~dalším textu budeme místo $\delta\to 0_+$ psát pro jednoduchost pouze $\delta\to 0$, byť by se slušelo používat první variantu. Čtenáři je však nejspíše jasné, že uvažovat záporný průměr množiny nemá smysl.
 \end{remark}
 Logaritmováním a~úpravou výrazu \eqref{eq:odhad-n-delta} dostaneme:
 \begin{align}\label{eq:odvozeni-box-counting-dimenze}
@@ -22,7 +22,7 @@ Logaritmováním a~úpravou výrazu \eqref{eq:odhad-n-delta} dostaneme:
     \ln{N_\delta(F)}&\approx\ln{c}-s\ln{\delta}\\
     s&\approx\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}+\dfrac{\ln{c}}{\ln{\delta}}.
 \end{align}
-Když porovnáme výsledek v~\eqref{eq:odvozeni-box-counting-dimenze} s~rovností \eqref{eq:fraktalni-dimenze} z~minulé kapitoly, můžeme si všimnout, že zde navíc figuruje člen $\ln{c}/\ln{\delta}$. Když však uvážíme limitu daného výrazu pro $\delta\to 0$, dostaneme původní vzorec, který jsme již viděli, tj.
+Když porovnáme výsledek v~\eqref{eq:odvozeni-box-counting-dimenze} s~rovností \eqref{eq:fraktalni-dimenze} z~minulé kapitoly, všimneme si, že zde navíc figuruje člen $\ln{c}/\ln{\delta}$. Když však uvážíme limitu daného výrazu pro $\delta\to 0$, dostaneme původní vzorec, který jsme již viděli, tj.
 \[\lim_{\delta\to 0}\left(\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}+\dfrac{\ln{c}}{\ln{\delta}}\right)=\lim_{\delta\to 0}\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}+\lim_{\delta\to 0}\dfrac{\ln{c}}{\ln{\delta}}=\lim_{\delta\to 0}\dfrac{\ln{N_\delta(F)}}{-\ln{\delta}}.\]
 % \begin{definition}[$\delta$-pokrytí]\label{def:delta-pokryti}
 %     Nechť $(X,\varrho)$ je metrický prostor, $F\subseteq X$ a~$\delta>0$. Jestliže $\mathcal{F}=\set{F_1,F_2,\ldots}\subseteq\powset{X}$ je pokrytí $F$ a~zároveň $\diam{F_j}\leqslant\delta$ pro každé $j$, pak $\mathcal{F}$ nazýváme $\delta$-pokrytí\index{$\delta$-pokrytí} množiny $F$.
@@ -61,10 +61,10 @@ pro úplnost ještě zmíníme, že box-counting dimenzi lze taktéž definovat 
     \end{enumerate}
 \end{theorem}
 
-Nyní si pojďme větu~\ref{thm:ekvivalentni-def-box-counting-dimenze} trochu rozebrat.
+Pojďme si větu~\ref{thm:ekvivalentni-def-box-counting-dimenze} trochu rozebrat.
 \begin{itemize}
-    \item Body~\ref{thm:pokryti-delta-uz-koulemi} a~\ref{thm:pokryti-delta-dis-ot-koulemi} říkají, že $M_\delta(F)$ je rovno \emph{nejmenšímu počtu uzavřených koulí o~poloměru $\delta$, které pokrývají $F$}, resp. \emph{nejvyšší počet disjunktních otevřených koulí o~poloměru $\delta$, které mají střed v~$F$}.
-    \item Podobně body~\ref{thm:pokryti-delta-kvadry} a~\ref{thm:pokryti-delta-sit} tvrdí, že $M_\delta(F)$ lze definovat jako pokrytí kvádry o~stranách délky $\delta$, resp. počet všech kvádrů z~$\delta$-mříže, které mají s~$F$ neprázdný průnik.
+    \item Body~\ref{thm:pokryti-delta-uz-koulemi} a~\ref{thm:pokryti-delta-dis-ot-koulemi} říkají, že $M_\delta(F)$ je rovno nejmenšímu počtu uzavřených koulí o~poloměru $\delta$, které pokrývají $F$, resp. nejvyšší počet disjunktních otevřených koulí o~poloměru $\delta$, které mají střed v~$F$.
+    \item Podobně body~\ref{thm:pokryti-delta-kvadry} a~\ref{thm:pokryti-delta-sit} tvrdí, že $M_\delta(F)$ lze definovat jako pokrytí kvádry o~stranách délky $\delta$, resp. jako počet všech kvádrů z~$\delta$-mříže, které mají s~$F$ neprázdný průnik.
     \item Výše zmíněné definice $M_\delta(F)$ si obecně nejsou ekvivalentní a~pevně zvolenou množinu $F$ a $\delta$ mohou dávat různé hodnoty. Hodnoty dimenzí však vyjdou (nezávisle na definici $M_\delta(F)$) vždy stejně.
 \end{itemize}
 Pro představu viz obrázek~\ref{fig:ilustrace-definic-bc-dimenze}. Důkaz věty je delší a~opět jej vynecháme, nicméně lze jej nalézt v~knize \citep[str. 30]{Falconer2014}.
@@ -126,7 +126,7 @@ Nyní se opět vrátíme k~fraktálům a~výpočtům jejich dimenze, čemuž jsm
 \begin{example}[Cantorovo diskontinuum]\label{ex:cantorovo-diskontinuum}
     Formálně můžeme popsat Cantorovo diskontinuum $C$ jako průnik množin $C_k$ pro $k=0,1,2,\ldots$, přičemž
     \[C_k=\bigcup _{j=0}^{3^{k-1}-1}\left(\left\langle{\frac {3j+0}{3^{k}}},{\frac {3j+1}{3^{k}}}\right\rangle\cup \left\langle{\frac {3j+2}{3^{k}}},{\frac {3j+3}{3^{k}}}\right\rangle\right).\]
-    Platí, že $C=\bigcap_{k=0}^\infty C_k$, přičemž $k$-tou iterací budeme rozumnět množinu $C_k=\bigcap_{i=0}^k C_i$. Již jsme měli možnost se přesvědčit, že tento fraktál má box-counting dimenzi $\ln{2}/\ln{3}$. Zkusme nyní výpočet zopakovat, avšak vzlášť vypočítáme $\lowerdimB{C}$ a~$\upperdimB{C}$. V závěru se podíváme, zda se shodují.
+    Platí, že $C=\bigcap_{k=0}^\infty C_k$, přičemž $k$-tou iterací budeme rozumnět množinu $C_k=\bigcap_{i=0}^k C_i$. Již jsme měli možnost se přesvědčit, že tento fraktál má box-counting dimenzi $\ln{2}/\ln{3}$. Zkusme nyní výpočet zopakovat, avšak zvlášť vypočítáme $\lowerdimB{C}$ a~$\upperdimB{C}$. V závěru se podíváme, zda se shodují.
 
     Jako první provedeme horní odhad. Je potřeba zvolit $\delta$ a~na jeho základě dopočítat $N_\delta(C)$. V~$k$-té iteraci, kde $k=0,1,2,\ldots$, bude obecně $2^k$ intervalů, každý o~délce $(1/3)^k$, tedy pokud zvolíme $3^{-k}<\delta\leqslant 3^{-k+1}$, pak intervaly o~délce nejvýše $\delta$ (viz věta~\ref{thm:ekvivalentni-def-box-counting-dimenze}, bod~\ref{thm:pokryti-delta-uz-koulemi}) tvoří $\delta$ pokrytí, přičemž $N_\delta(C)\leqslant 2^k$. Tedy celkově pro $\delta$-pokrytí všech intervalů bude potřeba nejvýše $N_\delta(C)\leqslant 2^k$ intervalů $I_1,I_2,\ldots,I_{N_\delta(C)}$ o~průměru, tj. délce $3^{-k}<\diam{F_i}\leqslant 3^{-k+1}$ pro každé $i$. Z~toho dostáváme
     \[\upperdimB{C}=\limsup_{\delta\to 0}\dfrac{\ln{N_\delta(C)}}{-\ln{\delta}}\leqslant\limsup_{k\to\infty}\dfrac{\ln{2^k}}{-\ln{3^{-k+1}}}=\limsup_{k\to\infty}\dfrac{k\ln{2}}{(k-1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.\]
@@ -137,7 +137,7 @@ Nyní se opět vrátíme k~fraktálům a~výpočtům jejich dimenze, čemuž jsm
 \end{example}
 Podobně bychom postupovali pro rovinné obrazce.
 \begin{example}[Kochova křivka]\label{ex:kochova-krivka}
-    Zde se zatím s~formální definicí nebudeme zatěžovat. Opět ukážene horní a~dolní odhad zvlášť. Kochovu křivku si označíme~$K$.
+    Zde se zatím s~formální definicí nebudeme zatěžovat. Opět ukážeme horní a~dolní odhad zvlášť. Kochovu křivku si označíme~$K$.
 
     Obecně $k$-tá iterace Kochovy křivky bude obsahovat $4^n$ úseček, každá o~délce $(1/3)^k$. Podobně jako v~předchozím příkladu~\ref{ex:cantorovo-diskontinuum} zvolíme $3^{-k}<\delta\leqslant 3^{-k+1}$. Pokud si pro pokrytí zvolíme uzavřené koule (v rovině se tedy jedná o kruhy)
     \[K_\delta(x_1),K_\delta(x_2),\ldots,K_\delta(x_{M_\delta(K)}),\;\text{kde}\;x_1,x_2,\ldots,x_{M_\delta(K)}\in\R^2,\]
@@ -169,7 +169,7 @@ Budeme nyní sledovat, jak "rychle" se mění objem $(F)_\delta$ pro $\delta\to 
         \lebesguemeasure{3}(I_\delta)&=2(b_1-a_1)(a_2-b_2)\delta+2(b_1-a_1)\pi\delta^2+2(b_2-a_2)\pi\delta^2+\dfrac{4}{3}\pi\delta^3\\
         &\approx 2(b_1-a_1)(a_2-b_2)\delta
     \end{align*}
-    \item Pro kouli $B_r(x)\subset\R^3$, kde $x\in\R^3$ a~$r>0$ je objem
+    \item Pro kouli $B_r(x)\subset\R^3$, kde $x\in\R^3$ a~$r>0$, je objem
     \[\lebesguemeasure{3}((B_r(x))_\delta)=\dfrac{4}{3}\pi (r+\delta)^3=\dfrac{4}{3}\pi r^3+4\pi r^2\delta+4\pi r\delta^2+\dfrac{4}{3}\pi\delta^3\approx\dfrac{4}{3}\pi r^3.\]
     Změna objemu při velmi malém $\delta$ je v~tomto případě vzhledem k~původnímu objemu zanedbatelná.
 \end{itemize}
@@ -212,13 +212,13 @@ Lze ukázat, že $s$ není v~tomto případě nic jiného, než již námi zkoum
     \[\mathcal{K}=\set{K_\delta(x_1),K_\delta(x_2),\ldots,K_\delta(x_{M_\delta(F)})}\]
     množiny $F$, kde $0<\delta<1$ a~$x_j\in\R^n0$ pro každé $1\leqslant j\leqslant M_\delta(F)$, přičemž $M_\delta(F)$ je definováno podle bodu~\ref{thm:pokryti-delta-uz-koulemi} věty~\ref{thm:ekvivalentni-def-box-counting-dimenze}. Pak lze zvolit pokrytí
     \[\mathcal{K}^\prime=\set{K_{2\delta}(x_1),K_{2\delta}(x_2),\ldots,K_{2\delta}(x_{M_\delta(F)})},\]
-    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí, že $\mathcal{K}^\prime$ je i~pokrytím $(F)_\delta$. Pro libovolné $x\in (F)_\delta$ existuje totiž $y\in F$, takové, že $\varrho(x,y)<\delta$. Ovšem pro toto $y$ existuje nějaká koule $K_\delta(x_\ell)\in\mathcal{K}$, taková, že $y\in K_\delta(x_\ell)$, což znamená, že
+    tzn.~$\mathcal{K}$ je zjemnění pokrytí $\mathcal{K}^\prime$. Zároveň však platí, že $\mathcal{K}^\prime$ je i~pokrytím $(F)_\delta$. Pro libovolné $x\in (F)_\delta$ existuje totiž $y\in F$ takové, že $\varrho(x,y)<\delta$. Ovšem pro toto $y$ existuje nějaká koule $K_\delta(x_\ell)\in\mathcal{K}$ taková, že $y\in K_\delta(x_\ell)$, což znamená, že
     \[\varrho(x_\ell,x)\leqslant\varrho(x_\ell,y)+\varrho(y,x)\leqslant\delta+\delta=2\delta.\]
-    a tedy $x\in K_{2\delta}(x_\ell)$. Tzn.~míru $F$ lze zhora odhadnout jako
+    a tedy $x\in K_{2\delta}(x_\ell)$. Tzn.~míru $F$ lze shora odhadnout jako
     \[\lebesguemeasure{n}((F)_\delta)\leqslant M_\delta(F)v_n(2\delta)^n,\]
     kde $v_n$ je (pro připomenutí) objem jednotkové koule. Úpravou získáme:
     \begin{align*}
-        \ln{\lebesguemeasure{n}((F)_\delta)}&\leqslant n\ln{\delta}+\ln{M_\delta(F)}+\ln{2^nv_n}\\
+        \ln{\lebesguemeasure{n}((F)_\delta)}&\leqslant n\ln{\delta}+\ln{M_\delta(F)}+\ln{2^nv_n},\\
         \dfrac{\ln{\lebesguemeasure{n}((F)_\delta)}}{-\ln\delta}&\leqslant -n+\dfrac{\ln{M_\delta(F)}}{-\ln\delta}+\dfrac{\ln{2^nv_n}}{-\ln\delta},
     \end{align*}
     tedy v~limitě
@@ -240,8 +240,8 @@ Zkusme si aplikaci věty ilustrovat opět na příkladu fraktálu.
         &=\limsup_{k\to\infty}\dfrac{k\ln{2}}{(k+1)\ln{3}}=\dfrac{\ln{2}}{\ln{3}}.
     \end{align*}
 
-    Podobně, zvolíme-li $3^{-k-1}\leqslant\delta\leqslant 3^{-k}$, pak
-    \[\lebesguemeasure{1}((C_k)_\delta)\leqslant 2^k(3^{-k}+2\delta)\leqslant2^k\cdot 3\cdot 3^{-k}=2^k\cdot 3^{-k+1}\]
+    Podobně zvolíme-li $3^{-k-1}\leqslant\delta\leqslant 3^{-k}$, pak
+    \[\lebesguemeasure{1}((C_k)_\delta)\leqslant 2^k(3^{-k}+2\delta)\leqslant2^k\cdot 3\cdot 3^{-k}=2^k\cdot 3^{-k+1},\]
     a~tedy
     \begin{align*}
         \lowerdimB{C}&=n-\limsup_{\delta\to 0}\dfrac{\ln{\lebesguemeasure{1}((C)_\delta)}}{\ln{\delta}}\geqslant 1-\limsup_{k\to\infty}\dfrac{\ln{2^{k}\cdot 3^{-k+1}}}{\ln{3^{-k+1}}}\\
@@ -251,7 +251,7 @@ Zkusme si aplikaci věty ilustrovat opět na příkladu fraktálu.
 
 \subsection{Vlastnosti}\label{subsec:vlastnosti-bc-dimenze}
 
-V minulé podsekci~\ref{subsec:definice-a-vypocet-bc-dimenze} jsme se bavili o~možnostech pojetí box-counting dimenze. S~tím souvisely zejména pak věty~\ref{thm:ekvivalentni-def-box-counting-dimenze} a~\ref{thm:bc-dimenze-lebesgueova-mira}. Nyní trochu blíže ještě prozkoumáme některé její vlastnosti, na něž se podíváme ve větě~\ref{thm:vlastnosti-bc-dimenze}.
+V minulé podsekci~\ref{subsec:definice-a-vypocet-bc-dimenze} jsme si povídali o~možnostech pojetí box-counting dimenze. S~tím pak souvisely zejména věty~\ref{thm:ekvivalentni-def-box-counting-dimenze} a~\ref{thm:bc-dimenze-lebesgueova-mira}. Nyní trochu ještě blíže prozkoumáme některé její vlastnosti, na něž se podíváme ve větě~\ref{thm:vlastnosti-bc-dimenze}.
 \begin{theorem}[Vlastnosti box-counting dimenze]\label{thm:vlastnosti-bc-dimenze}
     Nechť jsou dány $F,G\subseteq\R^n$.
     \begin{enumerate}[label=(\roman*)]
@@ -263,7 +263,7 @@ V minulé podsekci~\ref{subsec:definice-a-vypocet-bc-dimenze} jsme se bavili o~m
 \begin{proof}
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Plyne triviálně z~faktu, že pro libovolné $\delta>0$ je $N_\delta(G)\leqslant N_\delta(F)$, neboť každé $\delta$-pokrytí $\mathcal{F}\supset F$ je zároveň $\delta$-pokrytím $G$.
-        \item První dvojice nerovností je zjevná z~definice (viz~\ref{def:box-counting-dimenze}). Pro třetí nerovnost zvolme kvádr $I$, takový, že $F\subset I$. Zvolíme-li $\delta>0$ a~$\delta$-mříž $\mathcal{Q}_\delta$, pak
+        \item První dvojice nerovností je zjevná z~definice (viz~\ref{def:box-counting-dimenze}). Pro třetí nerovnost zvolme kvádr $I$ takový, že $F\subset I$. Zvolíme-li $\delta>0$ a~$\delta$-mříž $\mathcal{Q}_\delta$, pak
         \begin{align*}
             M_\delta(F)&=\left|\set{J\;\middle|\;J\cap F\neq\emptyset\;,\;J\in\mathcal{Q}_\delta}\right|\\
             &\leqslant \left|\set{J\;\middle|\;J\cap I\neq\emptyset\;,\;J\in\mathcal{Q}_\delta}\right|\\
@@ -307,9 +307,9 @@ Poslední bod~\ref{thm:stabilita-bc-dimenze} tvrzení~\ref{thm:vlastnosti-bc-dim
     \end{align*}
 \end{proof}
 
-Jako poslední se ještě nabízí otázka, jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{zobrazení!lipschitzovské}\index{lipschitzovské zobrazení} a~\emph{bilipschitzovská zobrazení}\index{zobrazení!bilipschitzovské}\index{bilipschitzovské zobrazení}. Připomeňme, že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\varrho_1)$ a~$(Y,\varrho_2)$, že existuje konstanta $K>0$, taková, že pro každé $x,y\in X$ platí
+Jako poslední se ještě nabízí otázka, jak se bude dimenze $\dimB$ chovat vůči zobrazením. V~tomto kontextu pro nás budou relevantní především \emph{lipschitzovská}\index{zobrazení!lipschitzovské}\index{lipschitzovské zobrazení} a~\emph{bilipschitzovská zobrazení}\index{zobrazení!bilipschitzovské}\index{bilipschitzovské zobrazení}. Připomeňme, že lipschitzovské zobrazení je takové zobrazení $\mapping{f}{X}{Y}$ mezi metrickými prostory $(X,\varrho_1)$ a~$(Y,\varrho_2)$, že existuje konstanta $K>0$ taková, že pro každé $x,y\in X$ platí
 \[\varrho_2(f(x),f(y))\leqslant K\varrho_1(x,y).\]
-Pokud navíc platí, že existují konstanty $K_1,K_2>0$, takové, že platí
+Pokud navíc platí, že existují konstanty $K_1,K_2>0$ takové, že platí
 \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y),\]
 pak $f$ nazýváme bilipschitzovské.
 
@@ -318,7 +318,7 @@ Než se však podíváme na samotný vztah box-counting dimenze a~lipschitzovsk�
     Nechť $(X,\varrho_1),(Y,\varrho_2)$ jsou metrické prostory a~zobrazení $\mapping{f}{X}{Y}$ je bilipschitzovské. Pak $\mapping{f}{X}{f(X)}$ je prosté.
 \end{lemma}
 \begin{proof}
-    Podle předpokladu je $f$ bilipschitzovské zobrazení, tedy existují konstanty $K_1,K_2>0$, takové, že
+    Podle předpokladu je $f$ bilipschitzovské zobrazení, tedy existují konstanty $K_1,K_2>0$ takové, že
     \[K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y))\leqslant K_2\varrho_1(x,y),\;x,y\in X.\]
     Surjektivita zobrazení $f$ je zřejmá z~její definice. Nechť existuje dvojice různých bodů $x,y\in X$. Pak
     \[0<K_1\varrho_1(x,y)\leqslant\varrho_2(f(x),f(y)),\]
@@ -353,7 +353,7 @@ V našem případě se dále omezíme, stejně jako předtím, pouze na prostor 
             &\leqslant\limsup_{\delta\to 0}\dfrac{\ln{N_{\delta}(f(F))}}{-\ln{\delta}}\cdot\dfrac{\ln{\delta}}{\ln{K\delta}}=\limsup_{\delta\to 0}\dfrac{\ln{N_{\delta}(f(F))}}{-\ln{\delta}}\\
             &=\upperdimB{F}.
         \end{align*}
-        Nerovnost pro $\lowerdimB{f(F)}$ obdržíme analogicky.
+        Nerovnost pro $\lowerdimB{f(F)}$ získáme analogicky.
         \item Je-li $f$ bilipschitzovské, pak podle lemmatu~\ref{lem:lipschitzovska-zobrazeni-a-bijekce} je $\mapping{f}{F}{f(F)}$ prostá, a~tedy existuje inverzní zobrazení $\mapping{f^{-1}}{f(F)}{F}$. Volme $u,v\in f(F)$ libovolně a~položme $x=f^{-1}(u),y=f^{-1}(v)$. Pak
         \begin{align*}
             K_1\varrho_n(x,y)&=K_1\varrho_n(f^{-1}(u),f^{-1}(v))\leqslant\varrho_m(f(f^{-1}(u)),f(f^{-1}(v)))\\
@@ -378,4 +378,4 @@ V našem případě se dále omezíme, stejně jako předtím, pouze na prostor 
 \end{proof}
 (Převzato z~\citep[str. 36]{Falconer2014}.)
 
-Právě dokázaná věta~\ref{thm:bc-dimenze-bi-lipschitzovska-zobrazeni} (konkrétně bod~\ref{thm:bc-dimenze-bilipschitz}) nám ve své podstatě říká, že\linebreak{}box-counting dimenze nějakého útvaru $F$ je invariantní vůči libovolnému bilipschitzovskému zobrazení $f$. Tento výsledek se nám bude hodit dále v~kapitole~\ref{chapter:klasifikace-fraktalu} u~tzv. \emph{systémů iterovaných funkcí}.
+Právě dokázaná věta~\ref{thm:bc-dimenze-bi-lipschitzovska-zobrazeni} (konkrétně bod~\ref{thm:bc-dimenze-bilipschitz}) nám ve své podstatě říká, že\linebreak{}box-counting dimenze nějakého útvaru $F$ je invariantní vůči libovolnému bilipschitzovskému zobrazení $f$. Tento výsledek se nám bude hodit dále v~kapitole~\ref{chapter:klasifikace-fraktalu} u~tzv.~\emph{systémů iterovaných funkcí}.

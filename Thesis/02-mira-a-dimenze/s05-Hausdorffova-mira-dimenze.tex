@@ -1,6 +1,6 @@
 \section{Hausdorffova míra a~Hausdorffova dimenze}\label{sec:hausdorffova-mira-dimenze}
 
-Způsobů, jak definovat dimenzi, je celá řada. Zatím jsme společně prozkoumali box-counting dimenzi (resp. některá její pojetí), avšak lze najít více způsobů, jak koncept dimenze uchopit\footnote{Některé další jsou sepsány např. v~\citep[str. 40]{Falconer2014}.}. Pravděpodobně asi nejstarším exemplářem svého druhu je tzv. \emph{Hausdorffova dimenze} a~s~ní související \emph{Hausdorffova míra}, které hrají ve fraktální geometrii velice podstatnou roli. Stále se však budeme zabývat pouze množinami v~$\R^n$. Zmíněná dimenze a~míra nesou jméno po německém matematikovi \name{Felixi Hausdorffovi} (1868--1942).
+Způsobů, jak definovat dimenzi, je celá řada. Zatím jsme společně prozkoumali box-counting dimenzi (resp. některá její pojetí), avšak lze najít více způsobů, jak koncept dimenze uchopit\footnote{Některé další jsou sepsány např. v~\citep[str. 40]{Falconer2014}.}. Pravděpodobně asi nejstarším exemplářem svého druhu je tzv. \emph{Hausdorffova dimenze} a~s~ní související \emph{Hausdorffova míra}, které hrají ve fraktální geometrii velice podstatnou roli. Stále se však budeme zabývat pouze množinami v~$\R^n$. Zmíněná dimenze a~míra nesou jméno po německém matematikovi \name{Felixi Hausdorffovi}\footnote{1868--1942}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{felix-hausdorff.jpg}
@@ -14,10 +14,10 @@ Způsobů, jak definovat dimenzi, je celá řada. Zatím jsme společně prozkou
     Nechť je dána množina $F\subseteq\R^n$ a~$s\geqslant 0$. Pak pro každé $\delta>0$ definujeme
     \[\hausdorffdeltameasure{s}{\delta}(F)=\inf\set{\sum_{i=1}^{\infty}(\diam{F_i})^s\;\middle|\;F\subseteq\bigcup_{i=1}^\infty F_i\;,\;\diam{F_j}\leqslant\delta\;\text{pro}\;j\in\N}.\]
 \end{definition}
-Infimum se zde dělá přes všechna spočetná pokrytí $F$ množinami o~průměru nejvýše $\delta$. Lze si všimnout, že pro $0<\delta_1<\delta_2$ je $\hausdorffdeltameasure{s}{\delta_1}(F)\geqslant\hausdorffdeltameasure{s}{\delta_2}(F)$. Jinými slovy, funkce $\delta\mapsto\hausdorffdeltameasure{s}{\delta}(M)$ je nerostoucí. Pro menší $\delta$ počítáme infimum z~"menší" množiny, protože kritérium na přípustná pokrytí je "přísnější". To znamená, že
+Infimum se zde dělá přes všechna spočetná pokrytí $F$ množinami o~průměru nejvýše $\delta$. Lze si všimnout, že pro $0<\delta_1<\delta_2$ je $\hausdorffdeltameasure{s}{\delta_1}(F)\geqslant\hausdorffdeltameasure{s}{\delta_2}(F)$. Jinými slovy funkce $\delta\mapsto\hausdorffdeltameasure{s}{\delta}(M)$ je nerostoucí. Pro menší $\delta$ počítáme infimum z~"menší" množiny, protože kritérium na přípustná pokrytí je "přísnější". To znamená, že
 \begin{align*}
-    \hausdorffdeltameasure{s}{\delta_1}(F)&=\inf\set{\sum_{U\in\mathcal{F}_1}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_1$ je $\delta_1$-pokrytí $\mathcal{F}$}}\\
-    &\geqslant\inf\set{\sum_{U\in\mathcal{F}_2}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_2$ je $\delta_2$-pokrytí $\mathcal{F}$}}=\hausdorffdeltameasure{s}{\delta_2}(F).
+    \hausdorffdeltameasure{s}{\delta_1}(F)&=\inf\set{\sum_{U\in\mathcal{F}_1}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_1$ je $\delta_1$-pokrytí $F$}}\\
+    &\geqslant\inf\set{\sum_{U\in\mathcal{F}_2}(\diam{U})^s\;\middle|\;\text{$\mathcal{F}_2$ je $\delta_2$-pokrytí $F$}}=\hausdorffdeltameasure{s}{\delta_2}(F).
 \end{align*}
 Zároveň je z~definice~\ref{def:hd-mira-delta} zjevné, že $\mathcal{H}_\delta^s(F)\geqslant 0$.
 \begin{definition}[Hausdorffova míra]\label{def:hausdorffova-mira}
@@ -26,14 +26,14 @@ Zároveň je z~definice~\ref{def:hd-mira-delta} zjevné, že $\mathcal{H}_\delta
 \end{definition}
 Z přechodzího je zjevné, že limita v~definici~\ref{def:hausdorffova-mira} vždy existuje, protože funkce $\delta\mapsto\hausdorffdeltameasure{s}{\delta}(F)$ je monomónní.
 
-Bude dobré se přesvědčit, že je Hausdorffova míra mírou ve smyslu definice~\ref{def:prostor-s-mirou}. Začneme však otázkou. \emph{Na jaké $\sigma$-algebře je potřeba Hausdorffovu míru $\hausdorffmeasure{s}$ uvažovat?} Odpověď nám poskytují tzv. \emph{borelovské množiny}\index{množina!borelovská}\index{borelovská množina}, které jsou pojmenovány po francouzském matematikovi \name{Émile Borelovi} (1871--1956).
+Bude dobré se přesvědčit, že je Hausdorffova míra mírou ve smyslu definice~\ref{def:prostor-s-mirou}. Začneme však otázkou. \emph{Na jaké $\sigma$-algebře je potřeba Hausdorffovu míru $\hausdorffmeasure{s}$ uvažovat?} Odpověď nám poskytují tzv.~\emph{borelovské množiny}\index{množina!borelovská}\index{borelovská množina}, které jsou pojmenovány po francouzském matematikovi \name{Émile Borelovi}\footnote{1871--1956}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Emile-Borel.jpeg}
-    \caption[Émile Borel,~1871--1956]{Émile Borel\footnote{Převzato z~\cite{OConnorBorel2025}},~1871--1956}
+    \caption[Émile Borel,~1871--1956]{Émile Borel,~1871--1956 (Převzato z~\cite{OConnorBorel2025})}
     \label{fig:emile-borel}
 \end{figure}
-Borelovské množiny jsou základním pojmem v~tzv. \emph{Deskriptivní teorii množin}. Pojďme si vysvětlit alespoň základ. Nechť $(X,\varrho)$ je metrický prostor. Pak borelovskými množinami nazýváme všechny množiny, které lze získat iteracemi operacemi spočetného sjednocení, průniku a~doplňku otevřených množin z~$X$. Označme systém takových množin jako $\mathcal{G}$. Na tomto základě pak definujeme tzv. \emph{$\sigma$-algebru borelovských množin na $X$}:
+Borelovské množiny jsou základním pojmem v~tzv. \emph{Deskriptivní teorii množin}. Pojďme si vysvětlit alespoň základ. Nechť $(X,\varrho)$ je metrický prostor. Pak borelovskými množinami nazýváme všechny množiny, které lze získat iteracemi operací spočetného sjednocení, průniku a~doplňku otevřených množin z~$X$. Označme systém takových množin jako $\mathcal{G}$. Na tomto základě pak definujeme tzv. \emph{$\sigma$-algebru borelovských množin na $X$}:
 \[\borelsigmaalgebra(X)=\bigcap_{\substack{\mathcal{F}\supseteq\mathcal{G}\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
 Jinými slovy, $\borelsigmaalgebra(X)$ je nejmenší $\sigma$-algebra generovaná\footnote{Obecně $\sigma$-algebra $\mathcal{A}$ je generovaná množinou $X$, když
 \[\mathcal{A}=\bigcap_{\substack{\mathcal{F}\supseteq X\\\text{$\mathcal{F}$ je $\sigma$-algebra}}}\mathcal{F}.\]
@@ -47,7 +47,7 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
 \begin{proof}
     Nechť $s\geqslant 0$ a~dále budiž dáno $\varepsilon>0$. Pro každé $i\in\N$ a~$\delta>0$ mějme pokrytí
     \[\mathcal{F}_i=\set{F_{i,1},F_{i,2},\dots}\]
-    množiny $A_i$, takové, že platí
+    množiny $A_i$ takové, že platí
     \[\sum_{j=1}^{\infty}(\diam{F_{i,j}})^s\leqslant\hausdorffdeltameasure{s}{\delta}(A_i)+\dfrac{\varepsilon}{2^i}.\]
     Systém $\bigcup_{i=1}^\infty\mathcal{F}_i$ tedy tvoří $\delta$-pokrytí množiny $A=\bigcup_{i=1}^\infty A_i$. Celkově
     \begin{align*}
@@ -58,7 +58,7 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
     \[f_1\leqslant f_2\leqslant\dots\]
     na prostoru $(X,\mathcal{A},\mu)$ a~zároveň $\lim_{n\to\infty}f_n(x)=f(x)$ pro každé $x\in X$, pak
     \[\lim_{n\to\infty}\int_X f_n\dx[\mu]=\int_X \lim_{n\to\infty}f_n\dx[\mu].\]
-    Zde je speciálně $\mu$ aritmetická míra, $X=\N$, a $f_n(i)$ lze volit např. $\hausdorffdeltameasure{s}{1/n}(A_i)$. Z~Heineho věty víme, že
+    Zde je speciálně $\mu$ aritmetická míra, $X=\N$ a $f_n(i)$ lze volit např. $\hausdorffdeltameasure{s}{1/n}(A_i)$. Z~Heineho věty víme, že
     \[\lim_{n\to\infty}\hausdorffdeltameasure{s}{1/n}(A_i)=\lim_{\delta\to 0}\hausdorffdeltameasure{s}{\delta}(A_i)=\hausdorffmeasure{s}(A_i).\]
     }
     dostáváme
@@ -68,13 +68,13 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
     \end{align*} 
 \end{proof}
 \begin{lemma}\label{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}
-    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$, $\varrho$ je metrika, a $A,B\subseteq X$, takové, že pro jejich vzdálenost platí $\varrho(A,B)>0$. Pak pro každé $s\geqslant 0$ platí
+    Nechť $(X,\varrho)$ je metrický prostor, kde $X\subseteq\R^n$, $\varrho$ je metrika, a $A,B\subseteq X$ takové, že pro jejich vzdálenost platí $\varrho(A,B)>0$. Pak pro každé $s\geqslant 0$ platí
     \[\hausdorffmeasure{s}(A\cup B)=\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B).\]
 \end{lemma}
 \begin{proof}
     Nerovnost $\hausdorffmeasure{s}(A\cup B)\leqslant\hausdorffmeasure{s}(A)+\hausdorffmeasure{s}(B)$ je zřejmá ze $\sigma$-subaditivity Hausdorffovy míry (viz lemma~\ref{lem:Hausdorffova-mira-subaditivita}).
 
-    Bez újmy na obecnosti předpokládejme, že $\hausdorffmeasure{s}(A\cup B)<\infty$. Mějme libovolné $\varepsilon>0$ a $\delta<\varrho(A,B)/2$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$, takové, že
+    Bez újmy na obecnosti předpokládejme, že $\hausdorffmeasure{s}(A\cup B)<\infty$. Mějme libovolné $\varepsilon>0$ a $\delta<\varrho(A,B)/2$. Zvolme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ množiny $A\cup B$ takové, že
     \[\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\hausdorffdeltameasure{s}{\delta}(A\cup B)+\varepsilon.\]
     Každá z~množin $F_i$ má neprázdný průnik s~nejvýše jednou z~množin $A,B$, tzn. z~pokrytí $\mathcal{F}$ lze vybrat dva disjunktní podsystémy $\mathcal{F}_A$ a~$\mathcal{F}_B$, přičemž $\bigcup\mathcal{F}_A\supseteq A$ a~$\bigcup\mathcal{F}_B\supseteq B$. Tedy celkově s~užitím předchozího lemmatu~\ref{lem:Hausdorffova-mira-subaditivita} máme
     \begin{align*}
@@ -90,15 +90,15 @@ Nás speciálně bude zajímat $\sigma$-algebra $\borelsigmaalgebra(\R^n)$. Nejd
     Nechť $(X,\mathcal{A})$ je měřitelný prostor. Zobrazení $\mapping{\mu^*}{\mathcal{A}}{\langle0,\infty\rangle}$ nazveme \emph{vnější mírou}\index{míra!vnější}\index{vnější míra} na $\mathcal{A}$, pokud platí:
     \begin{enumerate}[label=(\alph*)]
         \item\label{def:vnejsi-mira-prazdna-mnozina} $\mu^*(\emptyset)=0$;
-        \item\label{def:vnejsi-mira-monotonie} Pokud $A,B\in\mathcal{A}$ a~$A\subseteq B$, pak $\mu^*(A)\leqslant\mu^*(B)$.
+        \item\label{def:vnejsi-mira-monotonie} Pokud $A,B\in\mathcal{A}$ a~$A\subseteq B$, pak $\mu^*(A)\leqslant\mu^*(B)$;
         \item\label{def:vnejsi-mira-sigma-subaditivita} Je-li $A_1,A_2,\ldots$ posloupnost množin, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$, pak
         \[\mu^*\left(\bigcup_{i=1}^\infty A_i\right)\leqslant\sum_{i=1}^{\infty}\mu^*(A_i).\]
     \end{enumerate}
 \end{definition}
 
-Vnější míra představuje zobecnění toho, co jsme měli možnost vidět již v~sekci~\ref{sec:lebesgueova-mira} týkající Lebesgueovy míry\footnote{Jedná se slabší požadavek, tzn. každá míra je vnější mírou, opačné tvrzení však neplatí.}. Tu jsme definovali na základě tzv. \emph{vnější Lebesgueovy míry} (viz definice~\ref{def:vnejsi-lebegueova-mira}), která sice sama o~sobě míru nepředstavovala, nicméně při restrikci na "správný" systém množin jsme konstatovali, že se již jedná o~míru. Lze se přesvědčit, že vnější Lebesgueova míra $\lebesgueoutermeasure{n}$ je vnější mírou na $\powset{\R^n}$ ve smyslu definice~\ref{def:vnejsi-mira} výše. Podobné pozorování lze učinit i~pro Hausdorffovu míru $\hausdorffmeasure{s}$. Platnost podmínky~\ref{def:vnejsi-mira-sigma-subaditivita} jsme dokázali v~lemmatu~\ref{lem:Hausdorffova-mira-subaditivita} a~o platnosti~\ref{def:vnejsi-mira-prazdna-mnozina} a~\ref{def:vnejsi-mira-monotonie} se může čtenář velice snadno předvědčit. Tedy Hausdorffova míra na měřitelném prostoru $(\R^n,\powset{R^n})$ je vnější mírou. Navíc pokud vnější míra $\mu^*$ splňuje tvrzení lemmatu~\ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}, pak ji nazýváme \emph{metrickou vnější mírou}\index{míra!metrická}\index{metrická míra}.
+Vnější míra představuje zobecnění toho, co jsme měli možnost vidět již v~sekci~\ref{sec:lebesgueova-mira} týkající se Lebesgueovy míry\footnote{Jedná se slabší požadavek, tzn. každá míra je vnější mírou, opačné tvrzení však neplatí.}. Tu jsme definovali na základě tzv. \emph{vnější Lebesgueovy míry} (viz definice~\ref{def:vnejsi-lebegueova-mira}), která sice sama o~sobě míru nepředstavovala, nicméně při restrikci na "správný" systém množin jsme konstatovali, že se již jedná o~míru. Lze se přesvědčit, že vnější Lebesgueova míra $\lebesgueoutermeasure{n}$ je vnější mírou na $\powset{\R^n}$ ve smyslu definice~\ref{def:vnejsi-mira} výše. Podobné pozorování lze učinit i~pro Hausdorffovu míru $\hausdorffmeasure{s}$. Platnost podmínky~\ref{def:vnejsi-mira-sigma-subaditivita} jsme dokázali v~lemmatu~\ref{lem:Hausdorffova-mira-subaditivita} a~o platnosti~\ref{def:vnejsi-mira-prazdna-mnozina} a~\ref{def:vnejsi-mira-monotonie} se může čtenář velice snadno předvědčit. Tedy Hausdorffova míra na měřitelném prostoru $(\R^n,\powset{R^n})$ je vnější mírou. Navíc pokud vnější míra $\mu^*$ splňuje tvrzení lemmatu~\ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}, pak ji nazýváme \emph{metrickou vnější mírou}\index{míra!metrická}\index{metrická míra}.
 
-Při zavádění \emph{lebesgueovské měřitelnosti}\index{měřitelnost!lebesgueovská}\index{lebesgueovská měřitelnost} (viz definice~\ref{def:lebesgueovska-meritelnost}) jsme zmínili tzv. Carathéodoryho kritérium. To jednoduše říkalo, že rozdělením libovolné množiny $G$ pomocí pevně zvolené množiny $A$ lze stanovit její míru jako součet měr dílčích částí, tzn. $G\cap A$ a~$G\setminus A$. Tento koncept lze však rozšířit. Obecně jakákoliv množina je $\mu$-měřitelná, pokud splňuje Carathéodoryho kritérium.
+Při zavádění \emph{lebesgueovské měřitelnosti}\index{měřitelnost!lebesgueovská}\index{lebesgueovská měřitelnost} (viz definice~\ref{def:lebesgueovska-meritelnost}) jsme zmínili tzv. Carathéodoryho kritérium\index{Carathéodoryho kritérium}\index{kritérium!Carathéodoryho}. To jednoduše říkalo, že rozdělením libovolné množiny $G$ pomocí pevně zvolené množiny $A$ lze stanovit její míru jako součet měr dílčích částí, tzn. $G\cap A$ a~$G\setminus A$. Tento koncept lze však rozšířit. Obecně jakákoliv množina je $\mu$-měřitelná, pokud splňuje Carathéodoryho kritérium.
 \begin{definition}\label{def:meritelnost}
     Nechť $X$ je množina, $\mu$ je vnější míra na $\powset{X}$ a~$A\subseteq X$. Množina $A$ je $\mu$-měřitelná, pokud pro každé $G\subseteq X$ platí
     \[\mu(G)=\mu(G\cap A)+\mu(G\setminus A).\]
@@ -115,7 +115,7 @@ Nyní ukážeme platnost následující věty.
         P_0&=\set{x\in G\mid\varrho(x,A)\geqslant 1},\\
         P_i&=\set{x\in G\;\middle|\;\dfrac{1}{i+1}\leqslant\varrho(x,A)\leqslant\dfrac{1}{i}}\;,\;i\geqslant 1.
     \end{align*}
-    Pro libovolnou dvojici množin z~podposloupnosti $P_0,P_2,P_4,\ldots$ platí, že jejich vzdálenosti jsou kladné. Z~faktu, že $\hausdorffmeasure{s}$ je metrická (viz lemma~\ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}) a~monotonie plyne
+    Pro libovolnou dvojici množin z~podposloupnosti $P_0,P_2,P_4,\ldots$ platí, že jejich vzdálenosti jsou kladné. Z~faktu, že $\hausdorffmeasure{s}$ je metrická (viz lemma~\ref{lem:hausdorffova-mira-sigma-aditivita-kladna-vzdalenost}) a~z~monotonie plyne
     \[\sum_{i=1}^{m}\hausdorffmeasure{s}(P_{2i})=\hausdorffmeasure{s}\left(\bigcup_{i=0}^m P_{2i}\right)\leqslant\hausdorffmeasure{s}(G)\]
     pro všechna $m\in\N$. Podobně pro liché členy $\sum_{i=0}^{m}\hausdorffmeasure{s}(P_{2i+1})\leqslant\hausdorffmeasure{s}(G)$. Tzn.~řada $\sum_{i=0}^{\infty}\hausdorffmeasure{s}(P_i)$ je konvergentní. Zároveň platí
     \[\varrho\left(\bigcup_{i=0}^m P_i,G\cap A\right)>0\]
@@ -136,14 +136,14 @@ Nyní ukážeme platnost následující věty.
 
 Nyní již můžeme zobrazení $\hausdorffmeasure{s}$ nazývat mírou oprávněně. Pojďme se podívat na nějaké příklady.
 \begin{example}
-    Pro $s=0$ představuje zobrazení $\hausdorffmeasure{s}$ obyčejnou aritmetickou míru\index{míra!aritmetická}\index{aritmetická míra}, tzn. pro konečnou množinu $A\subseteq\R^n$ je $\hausdorffmeasure{0}(A)=|A|$. Toto není těžké ukázat. Mějme $n$-prvkovou množinu $A=\set{x_1,x_2,\ldots,x_n}$. Zvolíme-li
+    Pro $s=0$ představuje zobrazení $\hausdorffmeasure{s}$ obyčejnou aritmetickou míru\index{míra!aritmetická}\index{aritmetická míra}, tzn. pro konečnou množinu $A\subseteq\R^n$ je $\hausdorffmeasure{0}(A)=|A|$. Toto není těžké předvést. Mějme $n$-prvkovou množinu $A=\set{x_1,x_2,\ldots,x_n}$. Zvolíme-li
     \[\delta<\dfrac{1}{2}\cdot\min\set{\varrho_e(x_i,x_j)\mid 1\leqslant i,j\leqslant n},\]
     pak pro $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots,F_n}$ takové, že $x_i\in F_i$ pro každé $i$, máme
     \[\sum_{i=1}^{n}(\diam{F_i})^0=\sum_{i=1}^{n}1=n.\]
     Není těžké si rozmyslet, že $n$ je nejmenší počet množin o~průměru nejvýše $\delta$ potřebných pro pokrytí množiny $A$. Zároveň pro libovolné $\varepsilon>0$ je potřeba nejvýše $n$-koulí o~poloměru $\varepsilon/2$ se středy v~$x_i$ pro pokrytí $A$. Tzn.~$\hausdorffmeasure{0}(A)=|A|=n$.
 \end{example}
 
-V rámci tohoto textu jsme se již zabývali jiným typem míry, a~to tzv. \emph{Lebesgueovou mírou} (viz sekce~\ref{sec:lebesgueova-mira}). Ta pro nás hrála důležitou roli v~jednom možném pojetí \emph{box-counting dimenze} (viz sekce~\ref{sec:box-counting-dimenze}). Lze ukázat, že pro borelovskou množinu $F\subseteq\R^n$ je
+V rámci tohoto textu jsme se již zabývali jiným typem míry, a~to tzv. \emph{Lebesgueovou mírou} (viz sekce~\ref{sec:lebesgueova-mira}). Ta pro nás hrála důležitou roli v~jednom z~možných pojetí \emph{box-counting dimenze} (viz sekce~\ref{sec:box-counting-dimenze}). Lze ukázat, že pro borelovskou množinu $F\subseteq\R^n$ je
 \[\hausdorffmeasure{n}(F)=\dfrac{1}{v_n}\lebesguemeasure{n}(F),\]
 kde $v_n$ je objem (míra) jednotkové koule v~$\R^n$. Čtenář snad promine, že tento fakt zde ponecháme bez důkazu. \citep[str. 45]{Falconer2014}
 
@@ -152,7 +152,7 @@ kde $v_n$ je objem (míra) jednotkové koule v~$\R^n$. Čtenář snad promine, �
 Na chvíli se ještě zastavíme u~vlastností Hausdorffovy míry. Již jsme společně dokázali, že Hausdorffova míra je skutečně mírou, tzn. splňuje všechny základní vlastnosti, které jsme si představili ve větě~\ref{thm:mira-vlastnosti} (viz sekce~\ref{sec:prostory-s-mirou}). V~tomto ohledu tedy netřeba již nic dalšího dokazovat. Nicméně podobně jako v~případě \emph{box-counting dimenze} (viz podsekce~\ref{subsec:vlastnosti-bc-dimenze}) se i~zde podíváme, jak se Hausdorffova míra chová vůči \emph{lipschitzovským zobrazením}\index{zobrazení!lipschitzovské}\index{lipschitzovské zobrazení}.
 \begin{theorem}\label{thm:hd-dimenze-lipschitzovske-zobrazeni}
     Nechť $F\subseteq\R^n$ v~metrickém prostoru $(\R^n,\varrho)$, kde $\varrho$ je metrika, a~zobrazení $\mapping{f}{F}{\R^n}$ je lipschitzovské\footnote{Tvrzení lze zformulovat obecněji pro tzv. \emph{hölderovská zobrazení}\index{zobrazení!hölderovské}\index{hölderovské zobrazení}, tedy zobrazení $f$ splnující
-    \[\varrho(f(x),f(y))\leqslant K(\varrho(x,y))^\alpha.\]
+    \[\varrho(f(x),f(y))\leqslant K(\varrho(x,y))^\alpha,\]
     kde $\alpha\in(0,1\rangle$. Pak pro $F\subseteq\R^n$ platí
     \[\hausdorffmeasure{s/\alpha}(f(F))\leqslant K^{s/\alpha}\hausdorffmeasure{s}(F).\]
     My si však vystačíme se speciálním případem.} s~konstantou $K>0$. Pak pro každé $s\geqslant 0$ platí
@@ -176,7 +176,7 @@ Z toho speciálně plyne důsledek týkající se podobností.
 \end{corollary}
 \begin{proof}
     K~podobnosti $f$ existuje inverzní zobrazení $f^{-1}$ s~koeficientem $L=1/K$. Z~věty~\ref{thm:hd-dimenze-lipschitzovske-zobrazeni} tedy plyne, že
-    \[\hausdorffmeasure{s}(F)=\hausdorffmeasure{s}(f^{-1}(f(F)))\leqslant\dfrac{1}{K^s}\hausdorffmeasure{s}(f(F))\]
+    \[\hausdorffmeasure{s}(F)=\hausdorffmeasure{s}(f^{-1}(f(F)))\leqslant\dfrac{1}{K^s}\hausdorffmeasure{s}(f(F)),\]
     nebo-li $\hausdorffmeasure{s}(f(F))\geqslant K^s\hausdorffmeasure{s}(F)$. Opačnou nerovnost získáme aplikací věty~\ref{thm:hd-dimenze-lipschitzovske-zobrazeni} na zobrazení $f$.
 \end{proof}
 
@@ -191,7 +191,7 @@ Středobodem této sekce je tzv. \emph{Hausdorffova dimenze}\index{dimenze!Hausd
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Mějme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$, takové, že
+    Mějme $\delta$-pokrytí $\mathcal{F}=\set{F_1,F_2,\ldots}$ takové, že
     \[\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\hausdorffdeltameasure{s}{\delta}(F)+\varepsilon\;,\;\varepsilon>0.\]
     Pak
     \[\hausdorffdeltameasure{t}{\delta}(F)\leqslant\sum_{i=1}^{\infty}(\diam{F_i})^t\leqslant\delta^{t-s}\sum_{i=1}^{\infty}(\diam{F_i})^s\leqslant\delta^{t-s}(\hausdorffdeltameasure{s}{\delta}(F)+\varepsilon).\]
@@ -203,7 +203,7 @@ Z věty~\ref{thm:hodnoty-hausdorffovy-miry} lze vidět, že Hausdorffova míra j
 \begin{figure}[h]
     \centering
     \includegraphics{ch02-hausdorffova-dimenze-graf.pdf}
-    \caption{Graf funkce $f(s)=\hausdorffmeasure{s}(F)$, kde $F\subseteq\R^n$.}
+    \caption{Graf funkce $f(s)=\hausdorffmeasure{s}(F)$, kde $F\subseteq\R^n$}
     \label{fig:hausdorffova-dimenze-graf}
 \end{figure}
 Této kritické hodnotě $s$ říkáme \emph{Hausdorffova~dimenze}\index{dimenze!Hausdorffova}\index{Hausdorffova dimenze}.
@@ -213,18 +213,18 @@ Této kritické hodnotě $s$ říkáme \emph{Hausdorffova~dimenze}\index{dimenze
 \end{definition}
 Hodnota $\hausdorffmeasure{s}(F)$ se může pro různé množiny $F$ splňující $s=\dimH{F}$ lišit, tzn. může platit, že $\hausdorffmeasure{s}(F)=\infty$, $\hausdorffmeasure{s}(F)=0$ a~nebo se může jednat o~konečné nenulové číslo, tj. $0<\hausdorffmeasure{s}(F)<\infty$.
 
-Nyní se podívejme na příklad výpočtu. Podobně, jako v~případě box-counting dimenze, i zde budeme nezávisle určovat horní a~dolní odhad.
+Nyní se podívejme na příklad výpočtu. Podobně jako v~případě box-counting dimenze, i~zde budeme nezávisle určovat horní a~dolní odhad.
 \begin{example}[Sierpińského trojúhelník]\label{ex:sierpinskeho-trojuhelnik-hd-dimenze}
     V~tomto případě se podíváme na dvě možnosti, jak dojít k~výsledku. Celý Sierpińského trojúhelník si označme $S$.
     \begin{itemize}
         \item V~$k$-té iteraci $S_k$, kde $k=0,1,2,\ldots$, vzniknou 3 nové trojúhelníky o~obsahu $1/4$ obsahu původního trojúhelníka, tzn. jejich celkový počet je $t=3^k$. Uvažíme-li $\delta$-pokrytí
-        \[\mathcal{K}=\set{K_\delta(x_1),K_\delta(x_2),\ldots,K_\delta(x_t),\emptyset,\emptyset,\ldots}\]
+        \[\mathcal{K}=\set{K_\delta(x_1),K_\delta(x_2),\ldots,K_\delta(x_t),\emptyset,\emptyset,\ldots},\]
         kde $x_1,x_2,\ldots,x_t\in S_k$ a~$\delta\leqslant 2^{-k}/2=2^{-k-1}$, pak
         \[\hausdorffdeltameasure{s}{2^{-k}}(S_k)\leqslant\sum_{i=1}^{3^k}(2^{-k})^s=3^k2^{-ks}=1.\]
         Pro $k\to\infty$ je $\hausdorffmeasure{s}(S)\leqslant 1$. Poslední rovnost nastává právě pro $s=\ln{3}/\ln{2}$.
 
         Nyní ukážeme, že $\hausdorffmeasure{s}(S)\geqslant 3^{-s}=1/2$. Zvolme $\delta$-pokrytí
-        \[\mathcal{F}=\set{F_1,F_2,\ldots},\]
+        \[\mathcal{F}=\set{F_1,F_2,\ldots}\]
         takové, že
         \begin{equation}\label{eq:volba-delta-pokryti-F}
             2^{-k-1}\leqslant\diam{F_i}<2^{-k},
@@ -249,7 +249,7 @@ Nyní se podívejme na příklad výpočtu. Podobně, jako v~případě box-coun
 
 Myšlenku druhého výpočtu z~příkladu~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze} ještě rozvedeme v~kapitole~\ref{chapter:klasifikace-fraktalu}, konkrétně v~sekci~\ref{sec:ifs} věnované systémům iterovaných funkcí\index{systém iterovaných funkcí}\index{systém!iterovaných funkcí}.
 
-Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi představenou v~sekci~\ref{sec:box-counting-dimenze}. Vztah mezi nimi je docela jednoduchý a~udává jej věta~\ref{thm:bc-dimenze-vs-hd-dimenze}. Pro připomenutí doporučuji se opětovně podívat na definici~\ref{def:box-counting-dimenze}.
+Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi představenou v~sekci~\ref{sec:box-counting-dimenze}. Vztah mezi nimi je docela jednoduchý a~udává jej následující věta. Pro připomenutí doporučuji se opětovně podívat na definici~\ref{def:box-counting-dimenze}.
 \begin{theorem}\label{thm:bc-dimenze-vs-hd-dimenze}
     Nechť $F\subseteq\R^n$ je neprázdná omezená množina. Pak platí
     \[\dimH{F}\leqslant\lowerdimB{F}\leqslant\upperdimB{F}\]
@@ -269,4 +269,4 @@ Jako poslední zkusme postavit Hausdorffovu dimenzi proti box-counting dimenzi p
 
 K závěru poznamenejme, že mnoho "rozumných" útvarů $F$ je Hausdorffova dimenze $\dimH{F}$ rovna box-counting dimenzi $\dimB{F}$, ale obecná rovnost zde neplatí. Např. pro množinu $X=\Q\cap\langle0,1\rangle$ je $\dimH{X}=0$, neboť $X$ je spočetná. Nicméně v~případě box-counting dimenze je $\dimB{X}=1$. Rozmyšlení již ponecháme na čtenáři.
 
-Pro více informací si dovolím odkázat na článek \cite{Falconer1989} věnovaný přímo této otázce.
+Pro více informací si dovolíme odkázat na článek \cite{Falconer1989} věnovaný přímo této otázce.

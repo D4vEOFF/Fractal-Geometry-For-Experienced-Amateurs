@@ -1,8 +1,8 @@
 \section{Prostory s~mírou}\label{sec:prostory-s-mirou}
 
-Jak již bylo zmíněno v~úvodu, klíčovým pojmem v~této kapitole (a pro studium fraktálů obecně) je tzv. \emph{míra}\index{míra}. Ta pro nás představuje obecný způsob, jak můžeme množinám přiřadit v~jistém smyslu "velikost". Například Lebesgueova míra v $\R^2$ je zobecněním pojmu obsahu obdélníku (popř. jiných běžných geometrických útvarů) na obecnější množiny. Konkrétněji, byť vágně, lze říci, že sestává-li množina z~konečného nebo spočetného množství "rozumných" částí, pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny, kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
+Jak již bylo zmíněno v~úvodu, klíčovým pojmem v~této kapitole (a pro studium fraktálů obecně) je tzv. \emph{míra}\index{míra}. Ta pro nás představuje obecný způsob, jak můžeme množinám přiřadit v~jistém smyslu "velikost". Například Lebesgueova míra v $\R^2$ je zobecněním pojmu obsahu obdélníku (popř. jiných běžných geometrických útvarů) na obecnější množiny. Konkrétněji, byť vágně lze říci, že sestává-li množina z~konečného nebo spočetného množství "rozumných" částí, pak součet velikostí všech těchto dílčích množin je roven velikosti celé množiny, kterou nazveme její \emph{mírou}. Pro začátek celkem jednoduchá myšlenka.
 
-Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě jiný pojem, a to \emph{$\sigma$-algebru}.
+Pro formální zavedení tohoto pojmu však budeme muset nejprve definovat ještě jiný pojem, a to \emph{$\sigma$-algebru}.
 
 \subsection{Měřitelné prostory}\label{subsec:meritelne-prostory}
 
@@ -23,7 +23,7 @@ Pro formální zavedení tohoto pojmu však budeme muset nejprve zavést ještě
         \item Pro konečnou množinu $X=\set{a,b,c,d}$ je jednou možnou $\sigma$-algebrou systém množin
         \[\Sigma=\set{\emptyset,\set{a,b},\set{c,d},\set{a,b,c,d}}.\]
     \end{itemize}
-    Sami se zkuste přesvědčit, že všechny zmíněné příklady vyhovují definici~\ref{def:sigma-algebra}.
+    Sami se zkuste přesvědčit, že všechny zmíněné příklady jsou $\sigma$-algebrou ve smyslu definice~\ref{def:sigma-algebra}.
 \end{example}
 
 Než vyslovíme něco dalšího o~$\sigma$-algebrách a~jejich významu, podíváme se na seznam některých vesměs jednoduchých pozorování zformulovaných v~tvrzení níže.
@@ -34,7 +34,7 @@ Než vyslovíme něco dalšího o~$\sigma$-algebrách a~jejich významu, podív�
         \item Pro libovolné množiny $A_1,A_2,\ldots\in\mathcal{A}$ platí $\bigcap_{i=1}^\infty A_i\in\mathcal{A}$.
         \item Pro všechny množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$ platí
         \[\bigcup_{i=1}^n A_i\in\mathcal{A}\quad\text{a}\quad\bigcap_{i=1}^n A_i\in\mathcal{A}.\]
-        \item Jsou-li $A,B\in\mathcal{A}$ pak $A\setminus B\in\mathcal{A}$.
+        \item Jsou-li $A,B\in\mathcal{A}$, pak $A\setminus B\in\mathcal{A}$.
     \end{enumerate}
 \end{theorem}
 
@@ -42,7 +42,7 @@ Z tohoto tvrzení je již lépe vidět, proč jsou pro nás $\sigma$-algebry tak
 \begin{proof}
     Mějme $\sigma$-algebru $\mathcal{A}$ na množině $X$.
     \begin{enumerate}[label=\textit{(\roman*)}]
-        \item Z~podmínky~\ref{def:sigma-algebra-podm1} definice~\ref{def:sigma-algebra} víme, že $X\in\mathcal{A}$ a~z~podmínky~\ref{def:sigma-algebra-podm2} tedy plyne $\emptyset=X\setminus X\in\mathcal{A}$.
+        \item Z~podmínky~\ref{def:sigma-algebra-podm1} definice~\ref{def:sigma-algebra} víme, že $X\in\mathcal{A}$, a~z~podmínky~\ref{def:sigma-algebra-podm2} tedy plyne $\emptyset=X\setminus X\in\mathcal{A}$.
         \item Mějme množiny $A_1,A_2,\ldots\in\mathcal{A}$. Aplikací De Morganových zákonů plyne následující:
         \[\bigcap\limits_{i=1}^\infty A_i=\overbrace{X\setminus\underbrace{\bigcup\limits_{i=1}^\infty \overbrace{(X\setminus A_i)}^{\text{$\in\mathcal{A}$ podle~\ref{def:sigma-algebra-podm2}}}}_{\text{$\in\mathcal{A}$ podle~\ref{def:sigma-algebra-podm3}}}}^\text{$\in\mathcal{A}$ podle~\ref{def:sigma-algebra-podm2}}\in\mathcal{A}.\]
         \item Nechť jsou dány množiny $A_1,A_2,\ldots,A_n\in\mathcal{A}$. Když pro každé $j>n$ položíme $A_j=\emptyset\in\mathcal{A}$, pak platí
@@ -110,7 +110,7 @@ Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
     \begin{enumerate}[label=\textit{(\roman*)}]
         \item Pokud pro každé $j>n$ položíme $A_j=\emptyset$, pak z~definice míry plyne
         \[\mu\left(\bigcup_{i=1}^n A_i\right)=\mu\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^{\infty}\mu(A_i)=\sum_{i=1}^{n}\mu(A_i).\]
-        \item Nechť jsou dány $A,B\in\mathcal{A}$, takové, že $A\subseteq B$. Pak $B=A\cup(B\setminus A)$, přičemž $A$ a~$B\setminus A$ jsou disjunktní. Tedy podle bodu~\ref{def:mira-podm2} lze psát $\mu(B)=\mu(A)+\mu(B\setminus A)\geqslant\mu(A)$, protože $\mu(B\setminus A)\geqslant 0$.
+        \item Nechť jsou dány $A,B\in\mathcal{A}$ takové, že $A\subseteq B$. Pak $B=A\cup(B\setminus A)$, přičemž $A$ a~$B\setminus A$ jsou disjunktní. Tedy podle bodu~\ref{def:mira-podm2} lze psát $\mu(B)=\mu(A)+\mu(B\setminus A)\geqslant\mu(A)$, protože $\mu(B\setminus A)\geqslant 0$.
         \item Mějme neklesající posloupnost množin $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$ (viz obrázek~\ref{fig:nekl-posl-mnozin}).
         Definujeme posloupnost\footnote{V podstatě konstruujeme množiny $A_1,A_2,\ldots$ tak, aby v~následující množině $A_i$ nebyl obsažen prvek, který se nachází již v~některé z~množin $A_1,A_2,\ldots,A_{i-1}$. Podobná myšlenka je využita i~při důkazu budů~\ref{thm:mira-nerost-posl} a~\ref{thm:mira-sigma-subaditivita}.} množin $B_1,B_2,\ldots$ následovně:
         \[A_0=\emptyset,\;B_1=A_1,\;B_2=A_2\setminus A_1,\;B_i=A_i\setminus A_{i-1},\;i\geqslant 2.\]
@@ -121,7 +121,7 @@ Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
         \[\mu\left(\bigcup_{i=1}^\infty A_i\right)=\mu\left(\bigcup_{i=1}^\infty B_i\right)=\sum_{i=1}^{\infty}\mu(B_i)=\lim_{n\to\infty}\sum_{i=1}^{n}\mu(B_i)=\lim_{n\to\infty}\mu(A_n).\]
         \item Nechť je dána nerostoucí posloupnost množin $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$ (viz obrázek~\ref{fig:nerost-posl-mnozin}). Podobně jako v~předešlém bodě, i~zde definujeme novou posloupnost množin $B_1,B_2,\ldots$ takto:
         \[B_i=A_1\setminus A_i,\;i\in\N.\]
-        Zde si můžeme všimnout, že pro každé $i$ platí $B_i\subseteq B_{i+1}$ a~splňuje tak předpoklad předešlého bodu~\ref{thm:mira-nekl-posl}. Dle De Morganových zákonů můžeme psát
+        Zde si můžeme všimnout, že pro každé $i$ platí $B_i\subseteq B_{i+1}$, a~splňuje tak předpoklad předešlého bodu~\ref{thm:mira-nekl-posl}. Dle De Morganových zákonů můžeme psát
         \[\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty(A_1\setminus A_i)=A_1\setminus\bigcap_{i=1}^\infty A_i.\]
         Výraz $\lim_{j\to\infty}\mu(B_j)$ lze rozepsat dvěma způsoby:
         \begin{align*}
@@ -132,7 +132,7 @@ Poslední vlastnost~\ref{thm:mira-sigma-subaditivita} je tzv. \emph{$\sigma$-sub
         \[\lim_{j\to\infty}\mu(A_j)=\mu\left(\bigcap\limits_{i=1}^\infty A_i\right).\]
         \item Nechť jsou dány množiny $A_1,A_2,\ldots$, kde $A_i\in\mathcal{A}$ pro každé $i\in\N$. Definujeme posloupnost množin $B_1,B_2,\ldots$ takto:
         \[B_1=A_1,\;B_k=A_k\setminus\bigcup_{i=1}^{k-1} A_i,\;k\leqslant 2.\]
-        (Viz obrázek~\ref{fig:vlastnosti-miry-bod-v}.) Není složité si rozmyslet, že množiny $B_1,B_2,\ldots$ jsou po dvou disjunktní. Zároveň platí $\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty A_i$ a~$B_j\subseteq A_j$ pro každé $j\in\N$. Tím je dokázáno, že
+        Pro představu viz obrázek~\ref{fig:vlastnosti-miry-bod-v}. Není složité si rozmyslet, že množiny $B_1,B_2,\ldots$ jsou po dvou disjunktní. Zároveň platí $\bigcup_{i=1}^\infty B_i=\bigcup_{i=1}^\infty A_i$ a~$B_j\subseteq A_j$ pro každé $j\in\N$. Tím je dokázáno, že
         \[\mu\left(\bigcup_{i=1}^\infty A_i\right)=\mu\left(\bigcup_{i=1}^\infty B_i\right)=\sum_{i=1}^{\infty}\mu(B_i)\stackrel{\ref{thm:mira-monotonie}}{\leqslant}\sum_{i=1}^{\infty}\mu(A_i).\]
     \end{enumerate}
     \begin{figure}[h]

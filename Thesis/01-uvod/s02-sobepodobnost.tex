@@ -17,14 +17,14 @@ Nejdříve se podíváme na jednu z~nejznámějších křivek, kterou objevil ro
     \includegraphics[scale=\fractalscale]{ch01-kochova-krivka-3iterace.pdf}\\\qquad\\
     \includegraphics[scale=\fractalscale]{ch01-kochova-krivka-4iterace.pdf}\\\qquad\\
     \includegraphics[scale=\fractalscale]{ch01-kochova-krivka-5iterace.pdf}
-    \caption{Prvních pět iterací Kochovy křivky.}
+    \caption{Prvních pět iterací Kochovy křivky}
     \label{fig:kochova_vlocka_5iteraci}
 \end{figure}
 V první řadě si můžeme všimnout, že v~každé další iteraci jsou nově vzniklé úsečky podobné předešlé iteraci i~původnímu celku, tedy v~předešlé iteraci (viz obrázek~\ref{fig:kochova_krivka_podobnost}). Pokud by tento proces pokračoval do nekonečna, pak by každá ze čtyř částí křivky představovala \textbf{celý původní obrazec} ve zmenšeném měřítku (byla by tedy soběpodobná).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-kochova-krivka-podobnost.pdf}
-    \caption{První iterace Kochovy křivky "uvnitř" druhé v~menším měřítku.}
+    \caption{První iterace Kochovy křivky "uvnitř" druhé v~menším měřítku}
     \label{fig:kochova_krivka_podobnost}
 \end{figure}
 Zkusme se nyní podívat na délku křivky. V~první iteraci začínáme s~úsečkou délky\footnote{Mohli bychom také začít s~obecnou délkou $\ell_0$, ale ta by se však při výpočtu projevila pouze jako konstantní násobek.} $1$, která se v~druhé iteraci změní na křivku délky $4/3$. Není těžké si rozmyslet, že obecně v~$n$-té iteraci bude délka křivky $\ell_n$ rovna
@@ -66,11 +66,11 @@ Celkově tak po aplikaci vzorce z~\ref{thm:soucet_geometricke_rady} v~rovnosti \
 Posloupnost $\{O_n\}_{n=0}^\infty$ je opět geometrická s~kvocientem $q=3/2>1$, tzn. její limita je opět $\infty$. Obvod vzniklého obrazce k $k$-té iteraci pro $k\to\infty$ tedy roste nade všechny meze. (Výpočet jsme si mohli též zjednodušit pozorováním, že obvod obrazce roste s~faktorem $3/2$ a~vzorec pro $O_n$ jsme tak mohli určit ihned.)\par
 Podívejme se nyní na obsah útvaru. Zde si již výpočet trochu usnadníme. Po každé iteraci se jeho obsah zmenší na $3/4$ obsahu původního obrazce. Lze snadno odvodit, že obsah rovnostranného trojúhelníka o~straně délky $a$ je
 \begin{equation*}
-    \dfrac{\sqrt{3}}{4}a^2
+    \dfrac{\sqrt{3}}{4}a^2.
 \end{equation*}
 Na začátku je obsah útvaru $S_0=\sqrt{3}/4$. Tj. celkově po $n$-iteracích bude obsah $S_n$ roven
 \begin{equation}\label{eq:obsah_sierpinskeho_trojuhelniku}
-    \dfrac{\sqrt{3}}{4}\left(\dfrac{3}{4}\right)^n
+    \dfrac{\sqrt{3}}{4}\left(\dfrac{3}{4}\right)^n.
 \end{equation}
 Výraz \eqref{eq:obsah_sierpinskeho_trojuhelniku} má pro $n\to\infty$ limitu nulovou, tedy zatímco Sierpińského trojúhelník má \emph{nekonečný obvod}, jeho obsah je naopak \emph{nulový}.
 
@@ -101,23 +101,23 @@ Obsah vzniklého útvaru je však již zajímavější. Pro zjednodušení výpo
 \begin{figure}[h]
     \centering
     \includegraphics[scale=.4]{ch01-kochova-vlocka-rozdeleni.pdf}
-    \caption{Rozdělení první iterace Kochovy vločky.}
+    \caption{Rozdělení první iterace Kochovy vločky}
     \label{fig:kochova_vlocka_rozdeleni}
 \end{figure}
-Výsledný obsah se tedy pokusíme vyjádřit relativně vůči \emph{obsahům daných trojúhelníků}, na něž jsme obrazec rozdělili, a pak jej pouze přepočítáme. Jejich obsah si označme $\Delta$. Tedy obsah Sierpińského trojúhelníka v~nulté iteraci lze vyjádřit jako $S_0=9\Delta$. Po první iteraci vzniknou na každé ze strany 3 nové trojúhelníky o~obsahu $1/9\cdot\Delta$. V~každé další iteraci vzniknou z~jedné úsečky 4 nové. Obecně po $n$ iteracích jich tedy bude $3\cdot 4^{n}$. (Při výpočtu musíme počítat s~o jedna nižší mocninou, neboť trojúhelníky vznikají "na úsečkách" z~předešlé iterace, nikoliv té aktuální.)\par
+Výsledný obsah se tedy pokusíme vyjádřit relativně vůči \emph{obsahům daných trojúhelníků}, na něž jsme obrazec rozdělili, a pak jej pouze přepočítáme. Jejich obsah si označme $\Delta$. Tedy obsah Sierpińského trojúhelníka v~nulté iteraci lze vyjádřit jako $S_0=9\Delta$. Po první iteraci vzniknou na každé ze strany 3~nové trojúhelníky o~obsahu $1/9\cdot\Delta$. V~každé další iteraci vzniknou z~jedné úsečky 4~nové. Obecně po $n$ iteracích jich tedy bude $3\cdot 4^{n}$. (Při výpočtu musíme počítat s~o jedna nižší mocninou, neboť trojúhelníky vznikají "na úsečkách" z~předešlé iterace, nikoliv té aktuální.)\par
 Zaměřme se nyní pouze trojúhelníky, které vznikly v~aktuální iteraci (viz obrázek~\ref{fig:kochova_vlocka_2iterace_nove_trojuhelniky}). Součet jejich obsahů nám dává \emph{přírůstek obsahu} v~obecné $n$-té iteraci. Označíme-li tento přírůstek $B_n$, pak platí
 \[B_n=\underbrace{3\cdot 4^{n-1}}_{\text{počet úseček}}\cdot\overbrace{\left(\dfrac{1}{9}\right)^{n-1}\Delta}^{\text{obsah nových troj.}}=3\cdot\left(\dfrac{4}{9}\right)^{n-1}\Delta,\]
 kde $n\geqslant 1$.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\fractalscale]{ch01-kochova-vlocka-2iterace-nove-trojuhelniky.pdf}
-    \caption{Nově vzniklé trojúhelníky v~druhé iteraci.}
+    \caption{Nově vzniklé trojúhelníky v~druhé iteraci}
     \label{fig:kochova_vlocka_2iterace_nove_trojuhelniky}
 \end{figure}
-Nyní můžeme již vyšetřit obsah v~$n$-té iteraci $S_n$ a~posléze i~celkový obsah výsledného obrazce $S=\lim_{n\to\infty}{S_n}$. Pro $n\geqslant 1$ platí
+Nyní můžeme již vypočítat obsah v~$n$-té iteraci $S_n$ a~posléze i~celkový obsah výsledného obrazce $S=\lim_{n\to\infty}{S_n}$. Pro $n\geqslant 1$ platí
 \begin{align*}
     S_n&=S_0+\sum_{k=1}^{n}{B_k}=9\Delta+3\Delta\cdot\sum_{k=1}^{n}{\left(\dfrac{4}{9}\right)^{k-1}}=9\Delta+3\Delta\cdot\dfrac{1-\left(\dfrac{4}{9}\right)^{n}}{1-\dfrac{4}{9}}\\
-    &=9\Delta+\dfrac{27}{5}\Delta\cdot\left(1-\left(\dfrac{4}{9}\right)^n\right)
+    &=9\Delta+\dfrac{27}{5}\Delta\cdot\left(1-\left(\dfrac{4}{9}\right)^n\right).
 \end{align*}
 Tedy
 \begin{align*}
@@ -125,10 +125,10 @@ Tedy
     &=9\Delta+\dfrac{27}{5}\Delta=\dfrac{72}{5}\Delta.
 \end{align*}
 Obsah trojúhelníků, na než jsme rozdělili první iteraci Kochovy vločky, je
-\[\Delta=\dfrac{\sqrt{3}}{4}\cdot\dfrac{1}{9}\]
+\[\Delta=\dfrac{\sqrt{3}}{4}\cdot\dfrac{1}{9},\]
 a tedy celkově
 \[S=\dfrac{72}{5}\Delta=\dfrac{72}{5}\cdot\dfrac{\sqrt{3}}{4}\cdot\dfrac{1}{9}=\dfrac{2\sqrt{3}}{5}.\]
-Byl to trochu delší výpočet, nicméně jsme zjistili, že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)}, ale obsah má \emph{konečný}. To bylo ostatně zjevné již od začátku, neboť celý obrazec lze obsáhnout např. v kruhu s konečným poloměrem.
+Byl to trochu delší výpočet, nicméně jsme zjistili, že Kochova vločka má (stejně jako Kochova křivka) \emph{nekonečnou délku (obvod)}, ale obsah má \emph{konečný}. To bylo ostatně zjevné již od začátku, neboť celý obrazec lze obsáhnout např. v~kruhu s~konečným poloměrem.
 % Obsah vzniklého útvaru je však již zajímavější. Po první iteraci přibudou 3 nové trojúhelníky se stranou délky $1/3$, tzn. jejich obsah bude
 % \begin{equation*}
 %     \dfrac{\sqrt{3}}{4}\left(\dfrac{1}{3}\right)^2
@@ -141,7 +141,7 @@ Byl to trochu delší výpočet, nicméně jsme zjistili, že Kochova vločka m�
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[scale=\fractalscale]{ch01-kochova-vlocka-2iterace-nove-trojuhelniky.pdf}
-%     \caption{Nově vzniklé trojúhelníky v~druhé iteraci.}
+%     \caption{Nově vzniklé trojúhelníky v~druhé iteraci}
 %     \label{fig:kochova_vlocka_2iterace_nove_trojuhelniky}
 % \end{figure}
 % Délka úseček, a tedy i~stran nově vzniklých rovnostranných trojúhelníků, je $(1/3)^n$. Celkový obsah nově vzniklých trojúhelníků je tak
@@ -171,22 +171,22 @@ Podívejme se ještě na jeden typ fraktálního objektu, kterým je tzv. \emph{
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-cantorova-mnozina.pdf}
-    \caption{Nultá až čtvrtá iterace Cantorova diskontinua.}
+    \caption{Nultá až čtvrtá iterace Cantorova diskontinua}
     \label{fig:cantorovo_diskontinuum}
 \end{figure}
 
-Nově vzniklé úsečky třetinové délky jsou kopiemi původní úsečky. Stejně jako u~předešlých fraktálů nás i~zde bude zajímat limitní chování tohoto procesu. Lze očekávat, že postupným odebíráním zbudou úsečky nulové délky. O~tom se lze přesvědčit např. tak, že spočítáme limitu celkových délek všech odebraných úseků. V~první iteraci odebereme úsečku délky $1/3$, v~druhé iteraci odebereme dvě celkové délky $2\cdot(1/3)^2=2/9$, ve třetí vyjmeme čtyři celkové délky $4\cdot(1/3)^3=4/27$, atd. (viz obrázek~\ref{fig:cantorovo_diskontinuum_delky}).
+Nově vzniklé úsečky třetinové délky jsou kopiemi původní úsečky. Stejně jako u~předešlých fraktálů nás i~zde bude zajímat limitní chování tohoto procesu. Lze očekávat, že postupným odebíráním zbudou úsečky nulové délky. O~tom se lze přesvědčit např. tak, že spočítáme limitu celkových délek všech odebraných úseků. V~první iteraci odebereme úsečku délky $1/3$, v~druhé iteraci odebereme dvě celkové délky $2\cdot(1/3)^2=2/9$, ve třetí vyjmeme čtyři celkové délky $4\cdot(1/3)^3=4/27$ atd. (viz obrázek~\ref{fig:cantorovo_diskontinuum_delky}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-cantorova-mnozina-delky.pdf}
-    \caption{Znázornění délek vyjmutých úseků.}
+    \caption{Znázornění délek vyjmutých úseků}
     \label{fig:cantorovo_diskontinuum_delky}
 \end{figure}
-Obecně počet odebraných úseků roste s~mocninou dvojky, jejichž délky klesají s~mocninou trojky, tedy v~$n$-té iteraci odebereme úsek délky $2^n(1/3)^{n+1}$. Označíme-li tedy délku zbylých úseků $\ell_n$ po $n$ iteracích a~$\overline{\ell_n}$ délku odebraných úseků, pak určitě platí $\ell_n=1-\overline{\ell_n}$. Protože nás zajímá délka \emph{všech} odebraných úseků, pak po $n$ iteracích bude celková délka rovna
+Obecně počet odebraných úseků roste s~mocninou dvojky, přičemž jejich délky klesají s~mocninou trojky, tedy v~$n$-té iteraci odebereme úsek délky $2^n(1/3)^{n+1}$. Označíme-li tedy délku zbylých úseků $\ell_n$ po $n$ iteracích a~$\overline{\ell_n}$ délku odebraných úseků, pak určitě platí $\ell_n=1-\overline{\ell_n}$. Protože nás zajímá délka \emph{všech} odebraných úseků, pak po $n$ iteracích bude celková délka rovna
 \begin{equation}
     \overline{\ell_n}=\sum_{k=0}^{n}2^k\left(\dfrac{1}{3}\right)^{k+1}=\sum_{k=0}^{n}\dfrac{2^k}{3^{k+1}}=\dfrac{1}{3}\cdot\sum_{k=0}^{n}\left(\dfrac{2}{3}\right)^k=\dfrac{1}{3}\cdot\dfrac{1-\left(\frac{2}{3}\right)^{n+1}}{1-\frac{2}{3}}=1-\left(\dfrac{2}{3}\right)^{n+1}.
 \end{equation}
-Označíme-li si limitu výrazů posloupností $\ell_n$, reps. $\overline{\ell_n}$, jako $\ell$, resp. $\overline{\ell}$, pak dostaneme
+Označíme-li si limitu výrazů posloupností $\ell_n$, reps. $\overline{\ell_n}$ jako $\ell$, resp. $\overline{\ell}$, pak dostaneme
 \begin{equation*}
     \overline{\ell}=\lim_{n\to\infty}\overline{\ell_n}=\lim_{n\to\infty}\left(1-\left(\dfrac{2}{3}\right)^{n+1}\right)=1-\lim_{n\to\infty}\left(\dfrac{2}{3}\right)^{n+1}=1-0=1.
 \end{equation*}
@@ -196,4 +196,4 @@ Z toho již triviálně plyne, že
 \end{equation}
 tzn. na konci procesu zbude Cantorovo diskontinuum "délky" nula.
 
-Všimněte si zde, že i přes to, že $\ell=0$, je výsledná množina neprázdná. Např. krajní body původní úsečky jsou součástí výsledné množiny. Dokonce není ani příliš pracné ukázat, že Cantorovo diskontinuum je nespočetná množina, což plyne z faktu, že jeho dimenze je (jak dále uvidíme v~sekci \ref{sec:fraktalni_dimenze}) nenulová\footnote{Z~dalšího výkladu v~kapitole \ref{chapter:teorie-miry-a-dimenze} si čtenář bude moci rozmyslet, že Haudorffova dimenze (viz sekce \ref{sec:hausdorffova-mira-dimenze}) spočetných množin je vždy nulová.}.
+Všimněme si zde, že i přes to, že $\ell=0$, je výsledná množina neprázdná. Např. krajní body původní úsečky jsou součástí výsledné množiny. Dokonce není ani příliš pracné ukázat, že Cantorovo diskontinuum je nespočetná množina, což plyne z faktu, že jeho dimenze je (jak dále uvidíme v~sekci \ref{sec:fraktalni_dimenze}) nenulová\footnote{Z~dalšího výkladu v~kapitole \ref{chapter:teorie-miry-a-dimenze} si čtenář bude moci rozmyslet, že Haudorffova dimenze (viz sekce \ref{sec:hausdorffova-mira-dimenze}) spočetných množin je vždy nulová.}.

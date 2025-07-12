@@ -1,14 +1,14 @@
 \section{Systém iterovaných funkcí}\label{sec:ifs}
 
-V předchozí části kapitoly jsme viděli, jak lze fraktální objekty efektivně popisovat pomocí L-systémů, kde struktura vzniká paralelním přepisováním symbolů a~jejich vizualizace se provádí prostřednictvím želví grafiky. Tento přístup nám umožňoval popsat určitou skupinu fraktálů, nicméně pro jiné fraktály by se nám hodil vhodnější popis jejich konstrukce. Např. Sierpińského trojúhelník lze generovat pomocí L-systému, nicméně v~sekci~\ref{sec:sobepodobnost} o~soběpodobnosti jsme si jej záváděli spíše pomocí opakované aplikace určitých geometrických transformací (ač jsme neuvedli jejich explicitní vyjádření). Ty si později zavedeme jako tzv. \emph{systémy iterovaných funkcí}\index{systém iterovaných funkcí}.
+V předchozí části kapitoly jsme viděli, jak lze fraktální objekty efektivně popisovat pomocí L-systémů, u~nichž struktura vzniká paralelním přepisováním symbolů a~jejich vizualizace se provádí prostřednictvím želví grafiky. Tento přístup nám umožnil popsat určitou skupinu fraktálů, nicméně pro jiné fraktály by se nám hodil vhodnější popis jejich konstrukce. Např. Sierpińského trojúhelník lze generovat pomocí L-systému, nicméně v~sekci~\ref{sec:sobepodobnost} o~soběpodobnosti jsme si jej záváděli spíše pomocí opakované aplikace určitých geometrických transformací (ač jsme neuvedli jejich explicitní vyjádření). Ty si později zavedeme jako tzv. \emph{systémy iterovaných funkcí}\index{systém iterovaných funkcí}.
 
-Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v~kapitole~\ref{chapter:hausdorffuv-mp} o~Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův}, který zde bude hrát významnou roli. Pro související matematickou teorii, kterou zde dále budeme vykládat, doporučuji knihu \cite{Barnsley1993}.
+Nejdříve se podíváme trochu více na matematickou podstatu. Hodně záležitostí jsme si již rozebrali v~kapitole~\ref{chapter:hausdorffuv-mp} o~Hausdorffově metrickém prostoru\index{Hausdorffův metrický prostor}\index{metrický prostor!Hausdorffův}, který zde bude hrát významnou roli. Pro související matematickou teorii, kterou zde dále budeme vykládat, doporučujeme knihu \cite{Barnsley1993}.
 
 \subsection{Kontrakce na Hausdorffově metrickém prostoru}\label{subsec:hausdorffuv-mp-kontrakce}
 
-V minulých kapitolách jsme se často zaměřovali na lipschitzovská a~bilipschitzovská zobrazení. V~tomto případě nás budou speciálně zajímat tzv. \emph{kontrakce}\index{kontrakce}\index{zobrazení!kontraktivní}. Těmto termínům a~faktům s~nimi souvisejícími jsme se krátce věnovali v~podsekci~\ref{subsec:lipschitzovska-zobrazeni}.
+V minulých kapitolách jsme se často zaměřovali na lipschitzovská a~bilipschitzovská zobrazení. Těmto termínům a~faktům s~nimi souvisejícími jsme se krátce věnovali v~podsekci~\ref{subsec:lipschitzovska-zobrazeni}. V~tomto případě nás budou speciálně zajímat tzv. \emph{kontrakce}\index{kontrakce}\index{zobrazení!kontraktivní}.
 
-Připomeňme, že lipschitzovskost rovnou implikuje spojitost zobrazení v~libovolném metrickém prostoru $(X,\varrho)$. Ještě než však začneme, podíváme se na alternativní definici Hausdorffovy metriky, která se nám dále bude hodit.
+Připomeňme, že lipschitzovskost rovnou implikuje spojitost zobrazení v~libovolném metrickém prostoru $(X,\varrho)$. Ještě než však začneme, podíváme se na alternativní definici Hausdorffovy metriky, která se nám bude hodit.
 \begin{theorem}[Alternativní definice Hausdorffovy metriky]\label{thm:alternativni-hausdorffova-metrika}
     Nechť $(X,\varrho)$ je metrický prostor. Pro každé $A,B\in\hyperspace(X)$ platí
     \[\hausdorffmetric(A,B)=\max\set{\sup_{x\in A}\varrho(x,B),\sup_{y\in B}\varrho(y,A)}.\]
@@ -28,7 +28,9 @@ Jako první se podíváme na trojici pomocných lemmat.
     Nechť $\mapping{f}{X}{X}$ je spojisté zobrazení v~metrickém prostoru $(X,\varrho)$. Pak pro každé $S\in\hyperspace(X)$ platí $f(S)\in\hyperspace(X)$.
 \end{lemma}
 \begin{proof}
-    Nechť $S\in\hyperspace(X)$. Zjevně platí $f(S)\neq\emptyset$. Pro důkaz kompaktnosti $f(S)$ uvažujme posloupnost $\set{x_n}_{n=1}^\infty$, kde $x_i\in S$ pro každé $i\in\N$. Protože $S$ je kompaktní, existuje posloupnost indexů $\set{n_k}_{k=1}^\infty$, taková, že $x_{n_k}\to x\in S$. Ze spojitosti zobrazení $f$ však plyne, že pak $\set{f(x_{n_k})}_{k=1}^\infty$ je podposloupností posloupnosti $\set{f(x_n)}_{n=1}^\infty$ a~$f(x_{n_k})\to f(x)$, tedy i~$f(S)$ je kompaktní.
+    Nechť $S\in\hyperspace(X)$. Zjevně platí $f(S)\neq\emptyset$. Pro důkaz kompaktnosti $f(S)$ uvažujme posloupnost $\set{y_n}_{n=1}^\infty$, kde $y_i\in f(S)$ pro každé $i\in\N$. Nyní definujeme posloupnost $\set{x_n}_{n=1}^\infty$ tak, aby $x_j\in S$ a navíc $f(x_j)=y_j$ pro každé $j\in\N$. Protože $S$ je kompaktní, existuje posloupnost indexů $\set{n_k}_{k=1}^\infty$ taková, že $x_{n_k}\to x\in S$. Tzn., že $\set{f(x_{n_k})}_{k=1}^\infty=\set{y_{n_k}}_{k=1}^\infty$ je podposloupností posloupnosti $\set{y_n}_{n=1}^\infty$ a ze spojitosti $f$ plyne
+    \[y_{n_k}=f(x_{n_k})\to f(x)=y.\]
+    Tedy i~$f(S)$ je kompaktní.
 \end{proof}
 \begin{lemma}\label{lem:kontrakce-a-hyperprostor}
     Nechť $\mapping{f}{X}{X}$ je kontrakce na metrickém prostoru $(X,\varrho)$ s~faktorem $0<K<1$. Pak $\mapping{f}{\hyperspace(X)}{\hyperspace(X)}$ je kontrakce na Hausdorffově metrickém prostoru s~faktorem $K$.
@@ -42,15 +44,14 @@ Jako první se podíváme na trojici pomocných lemmat.
         &=K\cdot\inf\set{\varrho(x,y)\mid x\in A\;,\;y\in B}\\
         &=K\cdot\varrho(A,B).
     \end{align*}
-    Tedy celkově
+    Tedy celkově použitím věty \ref{thm:alternativni-hausdorffova-metrika}
     \begin{align*}
         \hausdorffmetric(f(A),f(B))&=\inf\set{\delta>0\mid f(A)\subseteq(f(B))_\delta\land f(B)\subseteq(f(A))_\delta}\\
         &=\max\set{\sup_{x\in A}\varrho(f(x),f(B)),\sup_{y\in B}\varrho(f(y),f(A))}\\
         &=\max\set{\sup_{x\in A}\inf_{y\in B}\varrho(f(x),f(y)),\sup_{y\in B}\inf_{x\in A}\varrho(f(y),f(x))}\\
-        &\leqslant K\max\set{\sup_{x\in A}\inf_{y\in B}\varrho(f(x),f(y)),\sup_{y\in B}\inf_{x\in A}\varrho(f(y),f(x))}\\
+        &\leqslant K\max\set{\sup_{x\in A}\inf_{y\in B}\varrho(x,y),\sup_{y\in B}\inf_{x\in A}\varrho(y,x)}\\
         &=K\hausdorffmetric(A,B).
     \end{align*}
-    Druhá rovnost plyne z~věty~\ref{thm:alternativni-hausdorffova-metrika}.
 \end{proof}
 (Převzato a~upraveno z~\citep[str. 79]{Barnsley1993}.)
 \begin{lemma}\label{lem:hausdorffova-metrika-odhad-sjednoceni}
@@ -62,7 +63,7 @@ Jako první se podíváme na trojici pomocných lemmat.
     \[\varrho(x,A\cup B)=\min\set{\inf_{y\in A}\varrho(x,y),\inf_{z\in B}\varrho(x,z)}\leqslant\inf_{y\in A}\varrho(x,y)=\varrho(x,A).\]
     Z~toho pak máme
     \[\sup_{x\in A}\varrho(x,C\cup D)\leqslant\sup_{x\in A}\inf_{y\in C}\varrho(x,y)=\varrho(x,A)\leqslant\hausdorffmetric(A,C)\]
-    a~tedy
+    a~tedy použitím analogického odhadu $\sup_{x\in B}\varrho(x,C\cup D)\leq \varrho_H(B,D)$ dostáváme
     \[\sup_{x\in A\cup B}\varrho(x,C\cup D)\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.\]
     Stejný odhad lze získat i~pro $\sup_{x\in C\cup D}\varrho(x,A\cup B)$:
     \begin{align*}
@@ -76,7 +77,7 @@ Jako první se podíváme na trojici pomocných lemmat.
     \end{align*}
 \end{proof}
 
-Dvojice lemmat~\ref{lem:spojitost-a-hyperprostor} a~\ref{lem:kontrakce-a-hyperprostor} nám v~podstatě říká, že obrazem kompaktní množiny v~kontraktivním zobrazení\index{zobrazení!kontraktivní}\index{kontraktivní zobrazení} je opět kompaktní množina a~že "kontraktivita" zobrazení definovaného na libovolném metrickém prostoru $(X,\varrho)$ se zachovává na hyperprostoru. Tento výsledek se nám bude později hodit, neboť neboť jak již bylo zmíněno na začátku, některé fraktály lze konstruovat pomocí opakované aplikace určitých geometrických tranformací. Jak lze nejspíše z~dosavadního výkladu tušit, budeme pracovat právě s~kontrakcemi.
+Dvojice lemmat~\ref{lem:spojitost-a-hyperprostor} a~\ref{lem:kontrakce-a-hyperprostor} nám v~podstatě říká, že obrazem kompaktní množiny v~kontraktivním zobrazení\index{zobrazení!kontraktivní}\index{kontraktivní zobrazení} je opět kompaktní množina a~že "kontraktivita" zobrazení definovaného na libovolném metrickém prostoru $(X,\varrho)$ se zachovává na hyperprostoru. Tento výsledek se nám bude později hodit, neboť jak již bylo zmíněno na začátku, některé fraktály lze konstruovat pomocí opakované aplikace určitých geometrických tranformací. Jak lze nejspíše z~dosavadního výkladu tušit, budeme pracovat právě s~kontrakcemi.
 \begin{definition}[Systém iterovaných funkcí]\label{def:system-iterovanych-funkci}
     \emph{Systém iterovaných funkcí}\index{systém iterovaných funkcí}, zkráceně IFS (z anglického \emph{iterated function system}\index{iterated function system}), na metrickém prostoru $(X,\varrho)$ je konečná množina kontrakcí
     \[\set{\mapping{\psi_i}{X}{X}\mid 1\leqslant i\leqslant n}\]
@@ -104,7 +105,7 @@ Zatím není zcela zjevné, proč definujeme pro IFS kontraktivní faktor jako m
         &\stackrel{\text{I.P.}}{\leqslant}\max\set{K\hausdorffmetric(A,B),K_n\hausdorffmetric(A,B)}\leqslant K\hausdorffmetric(A,B).
     \end{align*}
 \end{proof}
-\begin{remark}
+\begin{denotion}
     Dodejme, že dále v~textu budeme používat značení $\Psi^{\circ n}$ definované induktivně:
     \begin{align*}
         \Psi^{\circ 0}&=\id,\\
@@ -112,11 +113,11 @@ Zatím není zcela zjevné, proč definujeme pro IFS kontraktivní faktor jako m
     \end{align*}
     Tzn.~pro libovolnou množinu $B\in\hyperspace(X)$ je
     \[\Psi^{\circ 0}(B)=B\quad\text{a}\quad\Psi^{\circ n}(B)=\Psi(\Psi^{\circ(n-1)}(B)).\]
-\end{remark}
+\end{denotion}
 
 S kontrakcemi se pojí známá věta z~matematické analýzy, která se nazývá \emph{Banachova věta o~pevném bodě} (viz~\ref{thm:banach}).
 \begin{definition}[Pevný bod]\label{def:pevny-bod}
-    Bod $x\in X$ se nazývá pevným bodem zobrazení $\mapping{f}{X}{X}$, pokud $f(x)=x$.
+    Bod $x\in X$ se nazývá \emph{pevným bodem}\index{pevný bod}\index{bod!pevný} zobrazení $\mapping{f}{X}{X}$, pokud $f(x)=x$.
 \end{definition}
 \begin{theorem}[Banachova věta o~pevném bodě]\label{thm:banach}
     Nechť $(X,\varrho)$ je úplný metrický prostor a~zobrazení $\mapping{f}{X}{X}$ je kontrakce. Pak existuje právě jeden pevný bod $x\in X$ zobrazení $f$. Navíc volíme-li $x_0\in\N$ libovolně a~$x_n=f(x_{n-1})$ pro každé $n\in\N$, pak $x_n\to x$.
@@ -134,7 +135,7 @@ S kontrakcemi se pojí známá věta z~matematické analýzy, která se nazývá
     Pro odhadnutí vzdálenosti dvojice členů, které nejdou nutně bezprostředně po sobě použijeme trojúhelníkovou nerovnost. Volme $n,m\in\N$, pričemž $m>n$. Pak lze psát
     \begin{align*}
         \varrho(x_n,x_m)&\leqslant\sum_{i=n}^{m-1}\varrho(x_i,x_{i+1})\leqslant\sum_{i=n}^{m-1}K^i\varrho(x_0,x_1)=K^n\varrho(x_0,x_1)\sum_{i=1}^{m-n-1}K^i\\
-        &=K^n\varrho(x_0,x_1)\cdot\dfrac{1-K^{n-m}}{K-1}.
+        &=K^n\varrho(x_0,x_1)\cdot\dfrac{1-K^{n-m}}{1-K}.
     \end{align*}
     Výraz na pravé straně má pro $n\to\infty$ limitu $0$, tedy posloupnost $\set{x_n}_{n=1}^\infty$ je cauchyovská a~má limitu $x\in X$. Dále ze spojitosti funkce $f$ (neboť je lipschitzovská) plyne
     \[x=\lim_{n\to\infty}x_{n+1}=\lim_{n\to\infty}f(x_n)=f(x),\]
@@ -150,7 +151,7 @@ Z Banachovy věty speciálně plyne, že atraktor $A$ libovolného IFS lze urči
 \[A=\lim_{n\to\infty}\Psi^{\circ n}(B),\]
 kde $B\in\hyperspace(X)$. Zajímavostí je fakt, že výsledný atraktor $A$ je zcela nezávislý na volbě množiny $B$. Tento fakt si ještě přiblížíme v~podsekci~\ref{subsec:fraktaly-ifs}.
 
-V dalším textu budeme pracovat především s~afinními zobrazeními v~$\R^n$ se standardní eukleidovskou metrikou. Připomeňme si zde, že afinním zobrazením rozumíme jakékoliv zobrazení $\mapping{f}{X}{X}$, takové, že
+V dalším textu budeme pracovat především s~afinními zobrazeními v~$\R^n$ se standardní eukleidovskou metrikou. Připomeňme si zde, že afinním zobrazením rozumíme jakékoliv zobrazení $\mapping{f}{X}{X}$ takové, že
 \[f(x)=\mat{A}x+b,\]
 kde $b\in X$ a~$\mat{A}$ je regulární matice. O~afinnitách lze též dokázat řadu zajímavých tvrzení, avšak tyto záležitosti již spadají spíše do oblasti lineární algebry. Nicméně v~případě každé z~afinnit, které zde dále uvidíme, se čtenář může celkem snadno přesvědčit, že se skutečně jedná o~kontrakci.
 
@@ -600,7 +601,7 @@ V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem
         \begin{center}
             $n=6$
         \end{center}
-        \caption{Modifikovaná Kochova křivka pro $a=1/5$.}
+        \caption{Modifikovaná Kochova křivka pro $a=1/5$}
         \label{fig:modifikovana-kochova-krivka}
     \end{figure}
     Označíme-li si opět faktory pro $\kappa_1,\kappa_2,\kappa_3$ a~$\kappa_4$ po řadě $r_1,r_2,r_3,r_4$, pak je zjevně

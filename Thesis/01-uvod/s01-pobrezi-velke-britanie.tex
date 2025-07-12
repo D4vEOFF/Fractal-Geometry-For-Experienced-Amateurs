@@ -3,7 +3,7 @@ Položme si na začátek otázku, která byla i~na~počátku zkoumání Benoîta
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi.pdf}
-    \caption{Příklad mapy pobřeží se spojnicí bodů $A$ a~$B$.}
+    \caption{Příklad mapy pobřeží se spojnicí bodů $A$ a~$B$}
     \label{fig:pobrezi}
 \end{figure}
 Jeho délka je zjevně zdola omezena délkou spojnice koncových bodů $A$ a~$B$, nicméně typické pobřeží je velmi nepravidelné a~klikaté. Existují různé metody, které nám umožňují určit jeho délku přesněji. Několik z~nich je popsáno v~knize \citep[str. 79]{Mandelbrot1983}, pro uvedení do problematiky si zde však vystačíme s~tou nejjednodušší.
@@ -16,7 +16,7 @@ Mějme zadané libovolné $\varepsilon>0$. Podél pobřeží začneme umisťovat
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi-aproximace.pdf}
-    \caption{Odhad délky pobřeží, kde $n=10$ při zvoleném $\varepsilon$.}
+    \caption{Odhad délky pobřeží, kde $n=10$ při zvoleném $\varepsilon$}
     \label{fig:pobrezi_aproximace}
 \end{figure}
 Nyní by nás mohlo napadnout, že pro zmenšující se $\varepsilon$, tj. $\varepsilon\to0_+$, bude hodnota $\ell(\varepsilon)$ konvergovat ke skutečné délce pobřeží. Tzn.~označíme-li skutečnou délku pobřeží $L$, pak bychom mohli očekávat, že platí
@@ -27,7 +27,7 @@ Jenže v reálné situaci bude limita \eqref{eq:aproximace_limita} rovna $\infty
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi-zoom.pdf}
-    \caption{Část pobřeží od bodu $A$ v~menším měřítku.}
+    \caption{Část pobřeží od bodu $A$ v~menším měřítku}
     \label{fig:pobrezi_zoom}
 \end{figure}
 Nově odhalené detaily (menší poloostrůvky apod.) zde přispívají k~celkové délce pobřeží $\ell(\varepsilon)$. Postupným zvětšováním měřítka mapy bychom tak odhalili další detaily. Naše původní idea tak selhává, neboť (v "klasickém" pojetí délky) pro $\varepsilon\to0_+$ hodnota $\ell(\varepsilon)$ patrně poroste nade všechny meze, tj. $\lim_{\varepsilon\to0_+}{\ell(\varepsilon)}=\infty$.\par
@@ -37,14 +37,14 @@ Nabízí se otázka: Proč se toto děje? Pokud se ohlédneme zpět za eukleidov
     \begin{subfigure}{\subfigwidth}
         \centering
         \includegraphics[scale=\normalipe]{ch01-kruznice.pdf}
-        \caption{Kružnice v~menším měřítku.}
+        \caption{Kružnice v~menším měřítku}
         \label{subfig:kruznice}
     \end{subfigure}
     \quad
     \begin{subfigure}{\subfigwidth}
         \centering
         \includegraphics[scale=\normalipe]{ch01-kruznice-zoom.pdf}
-        \caption{Část kružnice ve větším měřítku.}
+        \caption{Část kružnice ve větším měřítku}
         \label{subfig:kruznice_zoom}
     \end{subfigure}
 \end{figure}
@@ -55,17 +55,17 @@ Máme-li kružnici o~poloměru $r>0$, pak jí můžeme vepsat libovolný pravide
     \begin{subfigure}{\subfigwidth}
         \centering
         \includegraphics[scale=\normalipe]{ch01-archimedova-metoda.pdf}
-        \caption{Pravidelný osmiúhelník vepsaný kružnici.}
+        \caption{Pravidelný osmiúhelník vepsaný kružnici}
         \label{subfig:archimedova_metoda}
     \end{subfigure}
     \quad
     \begin{subfigure}{\subfigwidth}
         \centering
         \includegraphics[scale=\normalipe]{ch01-archimedova-metoda-cast-nuhelniku.pdf}
-        \caption{Část vepsaného pravidelného\linebreak $n$-úhelníku.}
+        \caption{Část vepsaného pravidelného\linebreak $n$-úhelníku}
         \label{subfig:archimedova_metoda_cast_nuhelniku}
     \end{subfigure}
-    \caption{Princip Archimédovy metody.}
+    \caption{Princip Archimédovy metody}
     \label{fig:princip_archimedovy_metody}
 \end{figure}
 Obvod pravidelného $n$-úhelníku si označíme $O_n$ a~délku jeho strany $x$ (viz obrázek~\ref{subfig:archimedova_metoda_cast_nuhelniku}). Tu jsme schopni stanovit užitím elementární goniometrie, tj.
@@ -80,7 +80,7 @@ Pro rostoucí $n$ bude obvod pravidelného $n$-úhelníku stále lépe aproximov
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-pobrezi-aproximace-presnejsi.pdf}
-    \caption{Aproximace obvodu kružnice pomocí pravidelného šestnáctiúhelníku.}
+    \caption{Aproximace obvodu kružnice pomocí pravidelného šestnáctiúhelníku}
     \label{fig:archimedova_metoda_presnejsi}
 \end{figure}
 Limitním přechodem (tj. pro $n\to\infty$) tak můžeme odvodit vzorec pro obvod kružnice:

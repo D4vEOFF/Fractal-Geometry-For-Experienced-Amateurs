@@ -1,10 +1,10 @@
 \section{L-systémy}\label{sec:L-systemy}
 
-Uvedeme tuto kapitolu s~ohledem na předchozí obsah trochu netradičně a~od matematiky se (alespoň zdánlivě) na chvíli odkloníme. Podíváme se na fraktály, s jejichž způsobem popisu přišel roku 1968 maďarský biolog \name{Aristid Lindenmayer} (1925--1989) a~který (možná pro někoho i~překvapivě) má základy především v~informatice. \citep[str. 2]{Prusinkiewicz1990}
+Uvedeme tuto kapitolu s~ohledem na předchozí obsah trochu netradičně a~od matematiky se (alespoň zdánlivě) na chvíli odkloníme. Podíváme se na fraktály, s jejichž způsobem popisu přišel roku 1968 maďarský biolog \name{Aristid Lindenmayer}\footnote{1925--1989}, a~který (možná pro někoho i~překvapivě) má základy především v~informatice. \citep[str. 2]{Prusinkiewicz1990}
 
-K popisu specifického druhu fraktálů lze využít znalosti z~\emph{teorie formálních jazyků} a~\emph{teorie automatů}, na jejímž počátku stál (mj.) britský matematik a~informatik \name{Alan Turing} (1912--1954). Ten ve svém článku \emph{On Computable Numbers, with an Application to the Entscheidungsproblem} z~roku 1936 zavedl koncept abstraktního stroje dnes známého jako \emph{Turingův stroj}\index{Turingův stroj}\index{stroj!Turingův}, jednoduché zařízení s~výpočetními schopnostmi již tehdy porovnatelnými se současnými počítači. Jeho princip fungování přitom není nikterak složitý. Pomineme-li nyní matematickou definici Turingova stroje, lze říci, že sestává ze tří hlavních částí:
+K popisu specifického druhu fraktálů lze využít znalosti z~\emph{teorie formálních jazyků} a~\emph{teorie automatů}, na jejímž počátku stál (mj.) britský matematik a~informatik \name{Alan Turing}\footnote{1912--1954}. Ten ve svém článku \emph{On Computable Numbers, with an Application to the Entscheidungsproblem} z~roku 1936 zavedl koncept abstraktního stroje, dnes známého jako \emph{Turingův stroj}\index{Turingův stroj}\index{stroj!Turingův}. Jedná se o~jednoduché zařízení s~výpočetními schopnostmi již tehdy porovnatelnými se současnými počítači. Jeho princip fungování přitom není nikterak složitý. Pomineme-li nyní matematickou definici Turingova stroje, lze říci, že sestává ze tří hlavních částí:
 \begin{enumerate}
-    \item \textbf{Oboustranně nekonečná páska.} Páska je rozdělena na políčka, z nichž každé může obsahovat některý symbol z~z předem známé abecedy (formálně vzato množiny) znaků.
+    \item \textbf{Oboustranně nekonečná páska.} Páska je rozdělena na políčka, z nichž každé může obsahovat některý symbol z~předem známé abecedy (formálně vzato množiny) znaků.
     \item \textbf{Čtecí/zapisovací hlava.} Hlavu si můžeme představit jako čtecí/zapisovací "okénko", které stojí právě nad~jedním políčkem pásky. V~každém kroku stroj:
     \begin{itemize}
         \item přečte symbol pod~hlavou,
@@ -29,7 +29,7 @@ Výpočet pak probíhá takto:
         \item přesune hlavu,
         \item přejde do dalšího stavu.
     \end{itemize}
-    \item Pokud stroj nemá definovaný přechod pro aktuální stav a~čtený symbol na pásce, zastaví se. Pokud stroj skončil ve stavu, který je označený jako přijímající, pak stroj slovo \textbf{přijal}, jinak jej \textbf{odmítá}.
+    \item Pokud stroj nemá definovaný přechod pro aktuální stav a~čtený symbol na pásce, zastaví se. Pokud stroj skončil ve stavu, který je označený jako přijímající, pak stroj slovo \emph{přijal}, jinak jej \emph{odmítá}.
 \end{enumerate}
 Viz obrázek~\ref{fig:turinguv-stroj}.
 \begin{figure}[h]
@@ -44,18 +44,18 @@ Viz obrázek~\ref{fig:turinguv-stroj}.
     \caption[Alan Turing,~1912--1954]{Alan Turing,~1912--1954 (Převzato z~\cite{OConnorTuring2025})}
     \label{fig:alan-turing}
 \end{figure}
-V té době se Turing zabýval otázkou, kterou v~roce 1928 položil známý německý matematik \name{David Hilbert} (1862--1943), jež je známá pod~názvem \emph{"Entscheidungsproblem"}\index{Entscheidungsproblem}\footnote{Anglicky \emph{The Decision problem}\index{The Decision problem}, česky přeložitelné jako \emph{"rozhodovací problém"}. Zde však poznamenejme, že onem český termín se používá i~v související teorii složitosti a~vyčíslitelnosti, má však podstatně jiný význam.}. Problémem bylo, zda existuje algoritmus, který o~každém matematickém tvrzení je schopný rozhodnout (v konečném čase), zda je či není pravdivé. Později Alan Turing tento problém přeformuloval takto: \emph{Existuje program, který o~jiném programu na vstupu rozhodne, zda se zastaví, či nikoliv?} David Hilbert byl ve svých vizích optimistický, avšak nakonec Alan Turing dokázal, že \textbf{takový algoritmus nemůže existovat}. Způsob, jakým Turing došel k~onomu výsledku, byl v~konečném důsledku vlastně až překvapivě jednoduchý a~existuje pro něj velké množství popularizačních materiálů\footnote{Pokud by se chtěl čtenář dozvědět více o~této problematice a~teorii s~ní související, doporučuji např. knihu \cite{Motwani2003}}.
+V té době se Turing zabýval otázkou, kterou v~roce 1928 položil známý německý matematik \name{David Hilbert} (1862--1943). Je známá pod~názvem \emph{"Entscheidungsproblem"}\index{Entscheidungsproblem}\footnote{Anglicky \emph{The Decision problem}\index{The Decision problem}, česky přeložitelné jako \emph{"rozhodovací problém"}. Zde však poznamenejme, že onen český termín se používá i~v související teorii složitosti a~vyčíslitelnosti, má však podstatně jiný význam.}. Problémem bylo, zda existuje algoritmus, který o~každém matematickém tvrzení je schopný rozhodnout (v konečném čase), zda je, či není pravdivé. Později Alan Turing tento problém přeformuloval takto: \emph{Existuje program, který o~jiném programu na vstupu rozhodne, zda se zastaví, či nikoliv?} David Hilbert byl ve svých vizích optimistický, avšak nakonec Alan Turing dokázal, že \textbf{takový algoritmus nemůže existovat}. Způsob, jakým Turing došel k~onomu výsledku, byl v~konečném důsledku vlastně až překvapivě jednoduchý a~existuje pro něj velké množství popularizačních materiálů\footnote{Pokud by se chtěl čtenář dozvědět více o~této problematice a~teorii s~ní související, doporučujeme např. knihu \cite{Motwani2003}}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=.4\textwidth]{David-Hilbert.jpg}
     \caption[David Hilbert,~1862--1943]{David Hilbert,~1862--1943 (Převzato z~\cite{OConnorHilbert2025})}
     \label{fig:david-hilbert}
 \end{figure}
-Tím dal základ dnešní teoretické informatice. Turingův stroj, co by výpočetní model, stojí na samotném vrchlu hierarchie dalších výpočetních modelů\footnote{Mezi ně patří jmenovitě tzv. \textit{lineárně omezený automat}\index{automat!lineárně omezený}, \emph{zásobníkový automat}\index{automat!zásobníkový}, \emph{deterministický}\index{automat!deterministický} a~\emph{nedeterministický konečný automat}\index{automat!nedeterministický}.}, které jsou však související výpočetní silou slabší.  Později pak americký lingvista \name{Noam Chomsky} (1928--současnost) popsal celkem 4 základní třídy tzv. \emph{formálních jazyků}, které jsou dnes souhrně známé pod~názvem \emph{Chomského hierarchie}\index{Chomského hierarchie}. Za formální jazyk považujeme určitou množinu slov (rětězců). Chomského hierarchie zařazuje každý jazyk do jedné ze tříd podle výpočetního modelu, který jej přijímá, resp. podle typu tzv. \emph{formální gramatiky}, která slova z~daného jazyka generuje. O~gramatikách, a~obecně určitém základu teorie formálních jazyků, si ještě budeme podrobněji povídat později. O~hlubší související teorii se čtenář může více dozvědět např. v~knize \cite{Motwani2003}.
+Tím dal základ dnešní teoretické informatice. Turingův stroj, jakožto výpočetní model, stojí na samotném vrcholu hierarchie dalších výpočetních modelů\footnote{Mezi ně patří jmenovitě tzv. \textit{lineárně omezený automat}\index{automat!lineárně omezený}, \emph{zásobníkový automat}\index{automat!zásobníkový}, \emph{deterministický}\index{automat!deterministický} a~\emph{nedeterministický konečný automat}\index{automat!nedeterministický}.}, které jsou však svojí výpočetní silou slabší. Později pak americký lingvista \name{Noam Chomsky}\footnote{1928 až do současnosti (2025)} popsal celkem~4 základní třídy tzv. \emph{formálních jazyků}, které jsou dnes souhrnně známé pod~názvem \emph{Chomského hierarchie}\index{Chomského hierarchie}. Za formální jazyk považujeme určitou množinu slov (retězců). Chomského hierarchie zařazuje každý jazyk do jedné ze tříd podle typu tzv. \emph{formální gramatiky}, která slova z~daného jazyka generuje. O~gramatikách, a~obecně určitém základu teorie formálních jazyků, si ještě budeme podrobněji povídat. O~hlubší související teorii se čtenář může více dozvědět např. v~knize \cite{Motwani2003}.
 
 \subsection{Stručně k~formálním jazykům a~gramatikám}\label{subsec:formalni-jazyky-a-gramatiky}
 
-V úvodu této sekce jsme si již trochu přiblížili historické pozadí teorie formálních jazyků a~automatů (tou se již dále zabývat nebudeme, nicméně bylo by přinejmenším neslušné ji zde alespoň nezmínit vzhledem k~její přímé souvislosti s~touto problematikou). Ačkoliv tento text si neklade za cíl seznámit čtenáře se všemi podrobnostmi, byly zmíněny určité termíny, jejichž význam bude dobré si objasnit, konkrétně
+V úvodu této sekce jsme si již trochu přiblížili historické pozadí teorie formálních jazyků a~automatů (tou se již dále zabývat nebudeme, nicméně bylo by přinejmenším neslušné ji zde alespoň nezmínit vzhledem k~její přímé souvislosti s~touto problematikou). Ačkoliv tento text si neklade za cíl seznámit čtenáře se všemi podrobnostmi, byly zde zmíněny určité termíny, jejichž význam bude dobré si objasnit, konkrétně
 \begin{itemize}
     \item \emph{formální jazyk}\index{formální!jazyk}\index{jazyk}
     \item a~\emph{formální gramatika}.\index{formální!gramatika}\index{gramatika}
@@ -65,7 +65,7 @@ V úvodu této sekce jsme si již trochu přiblížili historické pozadí teori
     \begin{itemize}
         \item Libovolnou konečnou posloupnost znaků\index{znak}
         \[w=a_1a_2\ldots a_n,\]
-        kde $a_i\in\Sigma$ pro každé $1\leqslant i\leqslant n$ nazýváme \emph{slovo}, popř. \emph{řetězec}.\index{slovo}\index{řetězec}
+        kde $a_i\in\Sigma$ pro každé $1\leqslant i\leqslant n$, nazýváme \emph{slovo}, popř. \emph{řetězec}.\index{slovo}\index{řetězec}
         \item Prázdným slovem\index{prázdné slovo} nazýváme slovo neobsahující žádné znaky, značíme ho $\lambda$.
         \item Délku slova\index{délka slova} $w$ značíme $|w|$, tzn.
         \[|w|=|a_1a_2\ldots a_n|=n.\]
@@ -86,7 +86,7 @@ V úvodu této sekce jsme si již trochu přiblížili historické pozadí teori
         \[\set{0,1}^*=\set{\lambda,0,1,00,01,10,11,000,001,\ldots}\]
         \item $\Sigma=\set{a,b,c,\ldots,z}$, tj. všechna písmena anglické abecedy.
         \[\set{a,b,c,\ldots,z}^*=\set{\lambda,a,b,c,\ldots,z,aa,ab,ac,\ldots}\]
-        \item Všechny znaky ASCII\footnote{Zkratka pro \emph{American Standard Code for Information Interchange}. Stanovuje 128-bitové znakové kódování. Podoktněme, že ne všechny znaky jsou nutně tisknutelné a~mají čistě informativní charakter, avšak to nás zde z~formálního hladiska trápit vůbec nemusí.} tvoří abecedu.
+        \item Všechny znaky ASCII\footnote{Zkratka pro \emph{American Standard Code for Information Interchange}. Stanovuje 128-bitové znakové kódování. Podotkněme, že ne všechny znaky jsou nutně tisknutelné a~mají čistě informativní charakter, avšak to nás zde z~formálního hladiska trápit vůbec nemusí.} tvoří abecedu.
     \end{itemize}
 \end{example}
 \begin{definition}[Operace se slovy]\label{def:operace-se-slovy}
@@ -112,7 +112,7 @@ Na základě definice~\ref{def:operace-se-slovy} můžeme být nyní daleko konk
 \[L=\set{0^n1^n\mid n\in\N_0}\]
 značí jazyk všech slov obsahující znaky $0$ a~$1$ ve tvaru
 \[\lambda,01,0011,000111,\ldots\]
-O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo opírají o~již zmínenou teorii automatů. V~tomto ohledu si dovolíme však hodně záležitostí přeskočit. Jazyky lze popisovat několika různými způsoby, avšak nás bude zajímat popis pomocí formálních gramatik\index{formální!gramatika}\index{gramatika}.
+O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo opírají o~již zmíněnou teorii automatů. V~tomto ohledu si dovolíme však hodně záležitostí přeskočit. Jazyky lze popisovat několika různými způsoby, avšak nás bude zajímat popis pomocí formálních gramatik\index{formální!gramatika}\index{gramatika}.
 \begin{definition}[Formální gramatika]\label{def:formalni-gramatika}
     \emph{Formální gramatikou} (zkráceně jen \emph{gramatikou})\index{formální!gramatika}\index{gramatika} nazýváme uspořádanou čtveřici $G=(V,T,P,S)$, kde
     \begin{itemize}
@@ -134,7 +134,7 @@ O jazycích celkově lze dokázat řadu zajímavých tvrzení, která se přímo
 \end{definition}
 Terminální symboly gramatiky představují znaky koncové abecedy, nad níž uvažujeme výsledná slova. Neobsahuje-li tedy slovo na konci odvození žádný neterminál, jsme hotovi.
 
-Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečeno, popisuje, jak lze slova daného jazyka generovat. Pravidla z~množiny $P$ lze aplikovat v~libovolném pořadí.
+Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečeno popisuje, jak lze slova daného jazyka generovat. Pravidla z~množiny $P$ lze aplikovat v~libovolném pořadí.
 \begin{remark}
     \begin{itemize}
         \item Typicky platí, že pro neterminály používáme velká písmena abecedy $A,B,\ldots,Z$ a~pro terminály naopak malá písmena $a,b,\ldots,z$. Pro slova (řetězce) budeme využívat buď malá písmena řecké abecedy, nebo malá písmena z~konce abecedy, tj. $\dots,w,y,x,z$.
@@ -144,7 +144,7 @@ Formální gramatiky nám umožňují rekurzivní definici jazyka. Jinak řečen
 \end{remark}
 \begin{example}
     Jazyk všech palindromů nad~binární abecedou, tj.
-    \[L_\text{pal}=\set{w\in\set{0,1}^*\mid w=w^R}.\]
+    \[L_\text{pal}=\set{w\in\set{0,1}^*\mid w=w^R}\]
     lze generovat gramatikou $G=\set{\set{S},\set{0,1},P,S}$, přičemž $P$ obsahuje následující pravidla:
     \[S\to\lambda\mid 0\mid 1\mid 0S0\mid 1S1.\]
     Kupříkladu slovo $w=011110$ lze odvodit takto:
@@ -226,7 +226,7 @@ Jak už bylo uvedeno na začátku této podsekce, podstatný rozdíl oproti gram
 \end{definition}
 Zatím jsme se moc nepozastavili nad~poslední podmínkou v~definici~\ref{def:lsystem}. Zajišťuje nám, že každý znak lze vždy přepsat na jiný řetězec. Zkuste si schválně rozmyslet, že právě díky této podmínce dává definice odvození slova~\ref{def:odvozeni-slova-v-lsystemu} smysl.
 
-Než se posuneme dál, zkusme ještě na chvíli prodiskutovat různé varianty L-systémů. Definice~\ref{def:lsystem}, kterou jsme si uvedli, ve skutečnosti odráží pouze jeden ze speciálních případů. Tomuto typu se říká \emph{bezkontextové}\index{bezkontextový L-systém} L-systémy (značené \emph{OL-systémy}\index{OL-systém}). Název vychází z~faktu, že každý symbol přepisujeme zvlášť (připouštíme pouze pravidla ve tvaru $a\to\omega$, kde $a\in V$ a~$\omega\in V^*$), tzn. nezáleží na ostatních znacích (tedy kontextu, v němž se nechází). Jinými typy L-systémů jsou naopak \emph{kontextové}\footnote{Tyto typy L-systémů souvisí do jisté míry s~již v~úvodu zmíněnou Chomského hierarchií\index{Chomského hierarchie}, v jejímž rámci jsou definovány podobně i~bezkontextové a~kontextové gramatiky.}, kde pracujeme s~pravidly ve tvaru $\gamma A\beta\to\gamma\omega\beta$, kde $\gamma,\beta,\omega\in V^*$ a~$A\in V$.
+Než se posuneme dál, zkusme se ještě věnovat různým variantám\linebreak L-systémů. Definice~\ref{def:lsystem}, kterou jsme si uvedli, ve skutečnosti odráží pouze jeden ze speciálních případů. Tomuto typu se říká \emph{bezkontextové}\index{bezkontextový L-systém} L-systémy (značené \emph{OL-systémy}\index{OL-systém}). Název vychází z~faktu, že každý symbol přepisujeme zvlášť (připouštíme pouze pravidla ve tvaru $a\to\omega$, kde $a\in V$ a~$\omega\in V^*$), tzn. nezáleží na ostatních znacích (tedy kontextu, v němž se nachází). Jinými typy L-systémů jsou naopak \emph{kontextové}\footnote{Tyto typy L-systémů souvisí do jisté míry s~již v~úvodu zmíněnou Chomského hierarchií\index{Chomského hierarchie}, v~jejímž rámci jsou definovány podobně i~bezkontextové a~kontextové gramatiky.}, u~nichž pracujeme s~pravidly ve tvaru $\gamma A\beta\to\gamma\omega\beta$, kde $\gamma,\beta,\omega\in V^*$ a~$A\in V$.
 
 Dále lze L-systémy rozlišovat podle toho, zda pro každý řetězec $\alpha\in V^*$ existuje právě jedno pravidlo $\alpha\to\omega$, nebo existuje více pravidel v~$P$, které obsahují $\alpha$ na levé straně. Takový typům L-systémů se říká \emph{deterministické}\footnote{Tzn. je jednoznačně určeno, na jaký řetězec bude $\alpha$ přepsáno.}\index{L-systém!deterministický}\index{deterministický L-systém}, resp. \emph{nedeterministické}\index{L-systém!nedeterministický}\index{nedeterministický L-systém}. Pro deterministické bezkontextové L-systémy se pak užívá značení \emph{DOL-systémy}\index{DOL-systém}, což je i~případ, kterým se budeme dále zabývat. Pokud by čtenáře tato teorie zajímala více, doporučuji knihu \cite{Prusinkiewicz1990}.
 
@@ -234,7 +234,7 @@ Dále lze L-systémy rozlišovat podle toho, zda pro každý řetězec $\alpha\i
 
 Pro neznalého čtenáře se může zdát zarážející, že zde pracujeme celou dobu s~řetězci znaků a~nikoliv s~geometrickými útvary. Zde si ukážeme, jak interpretovat výsledné řetězce pomocí tzv. \emph{želví grafiky}\index{želví grafika}.
 
-Představme, že máme virtuální želvu v~$\R^2$, jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$, kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a~$\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a~přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů, s níž budeme v~rámci abecedy $V$ pracovat, které budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka~\ref{table:vyznam-symbolu-zelva}.
+Představme, že máme virtuální želvu v~$\R^2$, jejíž stav reprezentujeme pomocí trojice $(x,y,\alpha)$, kde $(x,y)$ jsou její pozice\footnote{Situaci lze pochopitelně zobecnit do $\R^n$. Ve vyšších dimenzích bychom museli zavést symboly pro rotaci okolo každé osy zvlášť.} a~$\alpha$ je orientovaný úhel udávající její směr. Dále máme pevně zadanou délku kroku $d>0$ a~přírůstek úhlu $\delta$. Definujeme základní čtveřici symbolů, s níž budeme v~rámci abecedy $V$ pracovat. Symboly budou reprezentovat jednotlivé akce pro želvu. Jejich význam udává tabulka~\ref{table:vyznam-symbolu-zelva}.
 \begin{table}[h]
     \centering
     \begin{tabular}{lp{0.8\textwidth}}
@@ -243,7 +243,7 @@ Představme, že máme virtuální želvu v~$\R^2$, jejíž stav reprezentujeme 
         $+$ & Želva se otočí doleva o~úhel $\delta$. Nový stav bude $(x,y,\alpha+\delta)$.\\
         $-$ & Želva se otočí doprava o~úhel $\delta$. Nový stav bude $(x,y,\alpha-\delta)$.
     \end{tabular}
-    \caption{Význam symbolů v~abecedě $V$ pro želvu.}
+    \caption{Význam symbolů v~abecedě $V$ pro želvu}
     \label{table:vyznam-symbolu-zelva}
 \end{table}
 
@@ -281,10 +281,10 @@ Délka řetězce poroste exponenciálně\footnote{Podobná situace nastává pro
     \begin{center}
         $n=3$
     \end{center}
-    \caption{Interpretace vygenerovaných řetězců pro Kochovu křivku.}
+    \caption{Interpretace vygenerovaných řetězců pro Kochovu křivku}
     \label{fig:lsystem-kochova-krivka}
 \end{figure}
-Všimněte si, že právě onen rekurzivní "charakter" gramatik, resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce~\ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s~L-systémy kvůli modelování růstu a~vývoje rostlin. Takový proces však není jednoduše popsatelný a~hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I~takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický}, kde každému pravidlu přiřadíme pravděpodobnost aplikace v~dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a~jejich L-systémů se můžete podívat v~podsekci~\ref{subsec:ukazky-fraktalu-lsystemy}.
+Všimněme si, že právě onen rekurzivní "charakter" gramatik, resp. L-systémů nám pomáhá dobře zachytit soběpodobnost (viz sekce~\ref{sec:sobepodobnost}) daných útvarů. Lindenmayer původně přišel s~L-systémy kvůli modelování růstu a~vývoje rostlin. Takový proces však není jednoduše popsatelný a~hraje při něm roli jistá míra náhody. \cite{Prusinkiewicz1990} I~takové případy lze modelovat\footnote{Konkrétně pomocí tzv. \emph{stochastických L-systémů}\index{stochastický L-systém}\index{L-systém!stochastický}, kde každému pravidlu přiřadíme pravděpodobnost aplikace v~dalším kroku.}. Pro zachování rozumného rozsahu tohoto textu se podíváme čistě na deterministické varianty. Na další typy fraktálů a~jejich L-systémů jsou uvedeny v~podsekci~\ref{subsec:ukazky-fraktalu-lsystemy}.
 
 V případě modelování rostlin se nám hodí zavést ještě další dvojici symbolů. Mnohdy se nám stane, že se potřebujeme vrátit na určitou pozici, kde želva již stála. To by bylo možné vyřešit např. zpětným chodem želvy do původní pozice, nicméně velice špatně by se s~tímto pracovalo v~rámci L-systému. Proto si nejdříve vysvětlíme pojem tzv. \emph{zásobníku}\index{zásobník}.
 
@@ -300,10 +300,10 @@ Pro znázornění zásobníku viz obrázek~\ref{fig:zasobnik}. Do abecedy $V$ za
         $[$ & Uložení aktuálního stavu želvy $(x,y,\alpha)$ na zásobník.\\
         $]$ & Odebere stav uložený na vrcholu zásobníku a~nastaví jej jako aktuální stav želvy.
     \end{tabular}
-    \caption{Význam symbolů v~abecedě $V$ pro želvu.}
+    \caption{Význam symbolů v~abecedě $V$ pro želvu}
     \label{table:vyznam-symbolu-zelva-zasobnik}
 \end{table}
-Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení dalších fraktálních útvarů, neboť máme možnost si určitých místech ukládat stav želvy, k němuž se lze posléze vrátit. Uvažujme např. L-systém definovaný takto (viz obrázek~\ref{fig:fraktalni-strom}):
+Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení dalších fraktálních útvarů, neboť máme možnost si určitých místech ukládat stav želvy, k~němuž se lze posléze vrátit. Uvažujme např. L-systém definovaný takto (viz obrázek~\ref{fig:fraktalni-strom}):
 \begin{itemize}
     \item \emph{Axiom:} $\omega=F$,
     \item \emph{Pravidla $P$:} $F\to FF-[-F+F+F]+[+F-F-F]$,
@@ -346,13 +346,13 @@ Tato dvojice symbolů nám umožňuje využít želví grafiku pro vykreslení d
 \begin{figure}[H]
     \centering
     \includegraphics{ch04-zasobnik.pdf}
-    \caption{Znázornění zásobníku.}
+    \caption{Znázornění zásobníku}
     \label{fig:zasobnik}
 \end{figure}
 
 \subsection{Ukázky fraktálů a~jejich L-systémů}\label{subsec:ukazky-fraktalu-lsystemy}
 
-Zde naleznete některé další ukázky fraktálů a~jejich L-systémů. Všechny obrázky fraktálních útvarů, které jste zde viděli a~ještě uvidíte jsou vygenerovány pomocí přiloženého programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}} k~tomuto textu. Všechny tyto příklady jsou převaty z~knihy \cite{Prusinkiewicz1990}, kde lze též nalézt mnoho dalších.
+Zde lze nalézt některé další ukázky fraktálů a~jejich L-systémů. Všechny obrázky fraktálních útvarů, které jste zde viděli a~ještě uvidíte jsou vygenerovány pomocí programu\footnote{viz odkaz na GitHub repozitář: \url{https://github.com/D4vEOFF/Py-Fractal-Generator}} přiloženého k~tomuto textu. Všechny tyto příklady jsou převaty z~knihy \cite{Prusinkiewicz1990}, kde lze též nalézt mnoho dalších.
 
 Zároveň zde ještě dodejme, že někdy se též můžeme setkat se situací, kdy potřebujeme více než jeden neterminál, tedy kromě $F$ máme ještě jiné znaky. Obecně však platí, že jejich interpretace v~želví grafice je stejná jako pro symbol $F$.
 \begin{figure}[p]
