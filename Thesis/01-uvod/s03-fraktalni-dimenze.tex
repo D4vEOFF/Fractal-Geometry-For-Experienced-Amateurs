@@ -2,7 +2,7 @@
 
 \subsection{Chápání konceptu dimenze}\label{subsec:koncept-dimenze}
 
-Útvary vyčtené v~sekci~\ref{sec:sobepodobnost} ilustrují vlastnost soběpodobnosti,~kterou jsme si (zatím neformálně) popsali. V~eukleidovské geometrii lze však u~mnohých základních objektů pozorovat stejnou vlastnost. Např. čtverec lze určitě prohlásit v~jistém smyslu za soběpodobný,~neboť jej lze rozdělit na podobné útvary (viz obrázek~\ref{fig:sobepodobnost-ctverce}).
+Útvary vyčtené v~sekci~\ref{sec:sobepodobnost} ilustrují vlastnost soběpodobnosti, kterou jsme si (zatím neformálně) popsali. V~eukleidovské geometrii lze však u~mnohých základních objektů pozorovat stejnou vlastnost. Např. čtverec lze určitě prohlásit v~jistém smyslu za soběpodobný, neboť jej lze rozdělit na podobné útvary (viz obrázek~\ref{fig:sobepodobnost-ctverce}).
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{\subfigwidth}
@@ -20,32 +20,32 @@
     \caption{Soběpodobnost čtverce.}
     \label{fig:sobepodobnost-ctverce}
 \end{figure}
-Podobně např. i~obyčejná úsečka je taktéž soběpodobná,~protože ji můžeme rozdělit na $k$ stejných částí (viz obrázek~\ref*{fig:sobepodobnost-usecky}).\par
+Podobně např. i~obyčejná úsečka je taktéž soběpodobná, protože ji můžeme rozdělit na $k$ stejných částí (viz obrázek~\ref*{fig:sobepodobnost-usecky}).\par
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-usecka-sobepodobnost.pdf}
     \caption{Úsečka rozdělená na šest stejných částí.}
     \label{fig:sobepodobnost-usecky}
 \end{figure}
-K čemu nám takové uvědomění vlastně je? Zmenšíme-li úsečku $k$-krát,~pak budeme potřebovat přesně $k$ těchto částí,~abychom dostali úsečku původní délky. U~čtverce (nebo obdélníku obecně) při změnšení délky strany $k$-krát budeme potřebovat $k^2$ daných útvarů pro obdržení čtverce s~původním obsahem.\footnote{Obdélník zmenšený $k$-krát bude mít strany délek $a/k,\,b/k$,~tedy jeho obsah bude
+K čemu nám takové uvědomění vlastně je? Zmenšíme-li úsečku $k$-krát, pak budeme potřebovat přesně $k$ těchto částí, abychom dostali úsečku původní délky. U~čtverce (nebo obdélníku obecně) při změnšení délky strany $k$-krát budeme potřebovat $k^2$ daných útvarů pro obdržení čtverce s~původním obsahem.\footnote{Obdélník zmenšený $k$-krát bude mít strany délek $a/k,\,b/k$, tedy jeho obsah bude
 \[\dfrac{ab}{k^2}=\dfrac{S}{k^2},\]
 kde $S$ je obsah původního obdélníka.}
-Pro krychli bude situace podobná,~$k$-krát zmenšená kopie bude potřeba $k^3$-krát,~abychom dostali krychli o~původním objemu (viz obrázek~\ref{fig:krychle-sobepodobnost}).
+Pro krychli bude situace podobná, $k$-krát zmenšená kopie bude potřeba $k^3$-krát, abychom dostali krychli o~původním objemu (viz obrázek~\ref{fig:krychle-sobepodobnost}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-krychle-sobepodobnost.pdf}
     \caption{Krychle rozdělená na 27 stejných částí.}
     \label{fig:krychle-sobepodobnost}
 \end{figure}
-Lze si všimnout,~že v~závislosti na \emph{dimenzi} objektu se mění daný exponent. Vztah lze tak zobecnit na
+Lze si všimnout, že v~závislosti na \emph{dimenzi} objektu se mění daný exponent. Vztah lze tak zobecnit na
 \begin{equation}\label{eq:pocet-utvaru}
     N(k)=k^d
 \end{equation}
-kde $N(k)$ je počet nových útvarů v~závislosti na faktoru $k$ a~číslu $d$. Intuitivně je nejspíše jasné,~že dimenze útvaru je takové číslo $d$,~pro které platí rovnost \eqref{eq:pocet-utvaru}.
+kde $N(k)$ je počet nových útvarů v~závislosti na faktoru $k$ a~číslu $d$. Intuitivně je nejspíše jasné, že dimenze útvaru je takové číslo $d$, pro které platí rovnost \eqref{eq:pocet-utvaru}.
 
-Toto je jeden z~možných způsobů,~jak lze chápat koncept dimenze. Jednoduchou úpravou rovnosti \eqref{eq:pocet-utvaru} dostaneme
+Toto je jeden z~možných způsobů, jak lze chápat koncept dimenze. Jednoduchou úpravou rovnosti \eqref{eq:pocet-utvaru} dostaneme
 \[d=\log_k{N(k)}=\dfrac{\ln{N(k)}}{\ln{k}}.\]
-(Obecně lze volit jakýkoliv přípustný základ logaritmů,~tj $d=\log_b{N(k)}/\log_b{k}$ pro $b\in\R_+\setminus\set{1}$.)
+(Obecně lze volit jakýkoliv přípustný základ logaritmů, tj $d=\log_b{N(k)}/\log_b{k}$ pro $b\in\R_+\setminus\set{1}$.)
 
 Dimenze v~tomto pojetí skutečně dává dobrý smysl. Pro "klasické" geometrické objekty vychází dimenze vždy celočíselně (viz tabulka \ref{table:eukleides-dimenze}).
 \begin{table}[h]
@@ -61,21 +61,21 @@ Dimenze v~tomto pojetí skutečně dává dobrý smysl. Pro "klasické" geometri
     \label{table:eukleides-dimenze}
 \end{table}
 
-Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\index{fraktální dimenze}\index{dimenze!fraktální}. Existuje více neekvivalentních způsobů její definice. Jedna z~nich,~které se dále nyní v~této sekci budeme držet,~se v~anglicky psané literatuře nazývá \emph{"box-counting dimension"}\index{box-counting dimenze}\index{dimenze!box-counting},~odkud plyne i~značení $\dimB$. Pro útvar $F$ (formálně vzato množinu bodů) definujeme 
+Na této myšlence je založen pojem tzv. \emph{fraktální dimenze}\index{fraktální dimenze}\index{dimenze!fraktální}. Existuje více neekvivalentních způsobů její definice. Jedna z~nich, které se dále nyní v~této sekci budeme držet, se v~anglicky psané literatuře nazývá \emph{"box-counting dimension"}\index{box-counting dimenze}\index{dimenze!box-counting}, odkud plyne i~značení $\dimB$. Pro útvar $F$ (formálně vzato množinu bodů) definujeme 
 \begin{equation}\label{eq:fraktalni-dimenze}
     \dimB{F}=\lim_{\varepsilon\to 0_+}{\dfrac{\ln{N_\varepsilon(F)}}{\ln{\left(\frac{1}{\varepsilon}\right)}}}.
 \end{equation}
-(Převzato z~\cite[str. 93]{Zelinka2006} a~\cite[str. 28]{Falconer2014}.) Výraz $1/\varepsilon$ zde představuje faktor podobnosti jako původní $k$ (samotné $\varepsilon$ tak hraje roli měřítka). Číslo $N_\varepsilon(F)$ je počet soběpodobných útvarů,~na které jsme rozdělili původní útvar $F$ v měřítku $\varepsilon$. Největší rozdíl zde však představuje zkoumání "limitního chování" daného výrazu.
+(Převzato z~\cite[str. 93]{Zelinka2006} a~\cite[str. 28]{Falconer2014}.) Výraz $1/\varepsilon$ zde představuje faktor podobnosti jako původní $k$ (samotné $\varepsilon$ tak hraje roli měřítka). Číslo $N_\varepsilon(F)$ je počet soběpodobných útvarů, na které jsme rozdělili původní útvar $F$ v měřítku $\varepsilon$. Největší rozdíl zde však představuje zkoumání "limitního chování" daného výrazu.
 
-Nejdříve poznamenejme, pro "klasické" geometrické útvary hodnota $\dimB{F}$ vychází skutečně tak, jak jsme zvyklí. Toto si ilustrujeme na příkladech~\ref{ex:fraktalni-dimenze-usecka},~\ref{ex:fraktalni-dimenze-ctverec} a~\ref{ex:fraktalni-dimenze-trojuhelnik}.
+Nejdříve poznamenejme, pro "klasické" geometrické útvary hodnota $\dimB{F}$ vychází skutečně tak, jak jsme zvyklí. Toto si ilustrujeme na příkladech~\ref{ex:fraktalni-dimenze-usecka}, \ref{ex:fraktalni-dimenze-ctverec} a~\ref{ex:fraktalni-dimenze-trojuhelnik}.
 \begin{example}[Fraktální dimenze úsečky]\label{ex:fraktalni-dimenze-usecka}
-    Začněme asi nejednodušším příkladem výpočtu fraktální dimenze,~a to u~úsečky (označme $\ell$). Představme si,~že úsečku \emph{jednotkové délky} rozdělíme na $N_\varepsilon(\ell)=n$ shodných dílů. Pak měřítko libovolného dílu je
+    Začněme asi nejednodušším příkladem výpočtu fraktální dimenze, a to u~úsečky (označme $\ell$). Představme si, že úsečku \emph{jednotkové délky} rozdělíme na $N_\varepsilon(\ell)=n$ shodných dílů. Pak měřítko libovolného dílu je
     \[\varepsilon=\dfrac{1}{n}=n^{-1}.\]
-    (Zde je dobré si uvědomit,~že pro $n\to\infty$,~tedy zjemňování dělení úsečky,~platí,~že $\varepsilon\to 0_+$.) Fraktální dimenzi úsečky vypočteme z~definice jako
+    (Zde je dobré si uvědomit, že pro $n\to\infty$, tedy zjemňování dělení úsečky, platí, že $\varepsilon\to 0_+$.) Fraktální dimenzi úsečky vypočteme z~definice jako
     \[\dimB{\ell}=\lim_{\varepsilon\to 0_+}{\dfrac{\ln{N_\varepsilon(\ell)}}{\ln{\left(\frac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n}}}=1.\]
 \end{example}
 \begin{example}[Fraktální dimenze čtverce]\label{ex:fraktalni-dimenze-ctverec}
-    Podobně,~jako v~příkladu~\ref{ex:fraktalni-dimenze-usecka}\linebreak{}výše,~můžeme stanovit i~fraktální dimenzi čtverce (označme $S$). Uvažujme tedy čtverec o~jednotkovém obsahu,~který rozdělíme $N_\varepsilon(S)=n$ shodných útvarů. Přitom víme,~že obsah mění kvadraticky vůči délce strany. Měřítko nového čtverce tak bude
+    Podobně, jako v~příkladu~\ref{ex:fraktalni-dimenze-usecka}\linebreak{}výše, můžeme stanovit i~fraktální dimenzi čtverce (označme $S$). Uvažujme tedy čtverec o~jednotkovém obsahu, který rozdělíme $N_\varepsilon(S)=n$ shodných útvarů. Přitom víme, že obsah mění kvadraticky vůči délce strany. Měřítko nového čtverce tak bude
     \[\varepsilon=\sqrt{\dfrac{1}{n}}=n^{-1/2}\]
     a~fraktální dimenze vychází
     \[\dimB{S}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\ln{n^{1/2}}}}=\lim_{n\to\infty}{\dfrac{\ln{n}}{\frac{1}{2}\ln{n}}}=2.\]
@@ -83,37 +83,37 @@ Nejdříve poznamenejme, pro "klasické" geometrické útvary hodnota $\dimB{F}$
 Pro krychli bude výpočet naprosto analogický (viz příklad~\ref{ex:fraktalni-dimenze-ctverec}). Obecně pro $d$-rozměrnou krychli bude její fraktální dimenze\footnote{Obdobnou úvahou dojmeme k~měřítku $\varepsilon=n^{-1/d}$.} rovna $d$.\par
 Zkusme se nyní oprostit od krychle k~trochu jinému útvaru.
 \begin{example}[Fraktální dimenze trojúhelníka]\label{ex:fraktalni-dimenze-trojuhelnik}
-    Podívejme se,~jak to dopadne s~fraktální dimenzí \emph{obecného trojúhelníku}. Každý trojúhelník $T$ lze rozdělit na čtveřici \emph{vzájemně shodných trojúhelníků $T_1,\dots,T_4$},~které vzniknou sestrojením středních příček v~původním trojúhelníka (viz obrázek~\ref{fig:trojuhelnik-sobepodobnost}).
+    Podívejme se, jak to dopadne s~fraktální dimenzí \emph{obecného trojúhelníku}. Každý trojúhelník $T$ lze rozdělit na čtveřici \emph{vzájemně shodných trojúhelníků $T_1,\dots,T_4$}, které vzniknou sestrojením středních příček v~původním trojúhelníka (viz obrázek~\ref{fig:trojuhelnik-sobepodobnost}).
     \begin{figure}[h]
         \centering
         \includegraphics[scale=\normalipe]{ch01-trojuhelnik-sobepodobnost.pdf}
         \caption{Trojúhelník $T$ rozdělený na trojúhelníky $T_1,\dots,T_4$.}
         \label{fig:trojuhelnik-sobepodobnost}
     \end{figure}
-    Délka každé střední příčky odpovídá polovině délky strany,~s~níž je rovnoběžná,~tedy obsah každého z~menších trojúhelníků je \emph{čtvrtina obsahu původního} trojúhelníka $T$. Tento postup můžeme opakovat pro každý z menších trojúhelníků, čímž dostaneme $4^2$ trojúhelníků. Takto můžeme postupovat libovolně dlouho,~přičemž po $n$ krocích bude počet\footnote{Výpočet bychom mohli i~zde provést ve stejném duchu jako u~úsečky,~čtverce nebo krychle. Počet částí,~na než rozdělíme trojúhelník,~označíme $N_\varepsilon(T)=n$,~přičemž měřítko pak bude $\varepsilon=n^{-1/2}$.} vzniklých trojúhelníků $N_\varepsilon(T)=4^n$,~přičemž měřítko každého z~nich bude $\varepsilon=(1/2)^n$. Fraktální dimenze tak vychází:
+    Délka každé střední příčky odpovídá polovině délky strany, s~níž je rovnoběžná, tedy obsah každého z~menších trojúhelníků je \emph{čtvrtina obsahu původního} trojúhelníka $T$. Tento postup můžeme opakovat pro každý z menších trojúhelníků, čímž dostaneme $4^2$ trojúhelníků. Takto můžeme postupovat libovolně dlouho, přičemž po $n$ krocích bude počet\footnote{Výpočet bychom mohli i~zde provést ve stejném duchu jako u~úsečky, čtverce nebo krychle. Počet částí, na než rozdělíme trojúhelník, označíme $N_\varepsilon(T)=n$, přičemž měřítko pak bude $\varepsilon=n^{-1/2}$.} vzniklých trojúhelníků $N_\varepsilon(T)=4^n$, přičemž měřítko každého z~nich bude $\varepsilon=(1/2)^n$. Fraktální dimenze tak vychází:
     \[\dimB{T}=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{2^n}}}=\lim_{n\to\infty}{\dfrac{2n\ln{2}}{n\ln{2}}}=2.\]
 \end{example}
-Pro jednoduché útvary vychází dimenze tak,~jak bychom mohli očekávat. K~zajímavějším výsledkům však dospějeme u~fraktálů,~na něž se blíže podíváme v~následující podsekci~\ref{subsec:dimenze-fraktalu}.
+Pro jednoduché útvary vychází dimenze tak, jak bychom mohli očekávat. K~zajímavějším výsledkům však dospějeme u~fraktálů, na něž se blíže podíváme v~následující podsekci~\ref{subsec:dimenze-fraktalu}.
 
 \subsection{Dimenze fraktálů}\label{subsec:dimenze-fraktalu}
 
-Co kdybychom však zkusili podobnou myšlenku aplikovat i~na \emph{fraktální objekty} jako např. Kochovu křivku, Kochovu vločku, Sierpińského trojúhelník nebo Cantorovo diskontinuum? Zkusme to. Pro připomenutí jednotlivých křivek a~výsledků k~nim si dovoluji čtenáře opětovně odkázat na sekci~\ref{sec:sobepodobnost},~kde jsou podrobněji rozebrány.
+Co kdybychom však zkusili podobnou myšlenku aplikovat i~na \emph{fraktální objekty} jako např. Kochovu křivku, Kochovu vločku, Sierpińského trojúhelník nebo Cantorovo diskontinuum? Zkusme to. Pro připomenutí jednotlivých křivek a~výsledků k~nim si dovoluji čtenáře opětovně odkázat na sekci~\ref{sec:sobepodobnost}, kde jsou podrobněji rozebrány.
 
-V tomto případě uvidíme,~že dochází na první pohled k~docela zvláštnímu jevu. Fraktální dimenze již totiž nemusí vycházet celočíselně,~jak jsme zvyklí.
+V tomto případě uvidíme, že dochází na první pohled k~docela zvláštnímu jevu. Fraktální dimenze již totiž nemusí vycházet celočíselně, jak jsme zvyklí.
 \begin{itemize}
-    \item \textbf{Kochova křivka $F_{KC}$.} V~každé iteraci nahrazujeme každou úsečku čtyřmi novými. Kompletní Kochova křivka tak obsahuje právě \emph{čtyři} kopie sebe sama zmenšené na třetinu,~tj. v~$n$-té iteraci je $N_\varepsilon(F_{KC})=4^n$,~jak jsme již odvodili (viz podsekce~\ref{subsec:kochova_krivka}).\footnote{Lze však zvolit i~jiné dělení. Např. lze na Kochovu křivku nahlížet,~že obsahuje \emph{16 kopií} sebe sama zmenšených na \emph{devítinu}.} Měřítko nově vzniklých částí je tak $\varepsilon=(1/3)^n$.
+    \item \textbf{Kochova křivka $F_{KC}$.} V~každé iteraci nahrazujeme každou úsečku čtyřmi novými. Kompletní Kochova křivka tak obsahuje právě \emph{čtyři} kopie sebe sama zmenšené na třetinu, tj. v~$n$-té iteraci je $N_\varepsilon(F_{KC})=4^n$, jak jsme již odvodili (viz podsekce~\ref{subsec:kochova_krivka}).\footnote{Lze však zvolit i~jiné dělení. Např. lze na Kochovu křivku nahlížet, že obsahuje \emph{16 kopií} sebe sama zmenšených na \emph{devítinu}.} Měřítko nově vzniklých částí je tak $\varepsilon=(1/3)^n$.
     \begin{equation}\label{eq:kochova-krivka-dimenze}
         \dimB{F_{KC}}=\lim_{\varepsilon\to 0_+}{\dfrac{\ln{N_\varepsilon(F_{KC})}}{\ln{\left(\frac{1}{\varepsilon}\right)}}}=\lim_{n\to\infty}{\dfrac{\ln{4^n}}{\ln{3^n}}}=\dfrac{\ln{4}}{\ln{3}}\approx 1{,}2618595\dots
     \end{equation}
-    \item \textbf{Kochova vločka $F_{KS}$.} Začínáme s~rovnostranným trojúhelníkem o~straně délky $1$,~na jehož stranách postupně vznikne Kochova křivka. V~$n$-té iteraci je obvod Kochovy vločky $o_n$ roven $3\cdot 4^n$,~tj. i~$N_\varepsilon(F_{KS})=3\cdot 4^n$,~kde měřítko\footnote{Měřítko se ve srovnání s~Kochovou křivkou liší v~mocnině,~neboť délku nových úseků porovnáváme s~obvodem celého trojúhelníka,~nikoliv pouze délkou jedné jeho strany. Nicméně ve výpočtu bychom se mohli omezit i~jen na jednu ze stran,~výpočet by byl tak zcela identický jako u~Kochovy křivky.} nově vzniklých úseček je $\varepsilon=1/3\cdot(1/3)^n=(1/3)^{n+1}$. Není těžké se přesvědčit,~že fraktální dimenze vychází stejně,~jako u~Kochovy křivky:
+    \item \textbf{Kochova vločka $F_{KS}$.} Začínáme s~rovnostranným trojúhelníkem o~straně délky $1$, na jehož stranách postupně vznikne Kochova křivka. V~$n$-té iteraci je obvod Kochovy vločky $o_n$ roven $3\cdot 4^n$, tj. i~$N_\varepsilon(F_{KS})=3\cdot 4^n$, kde měřítko\footnote{Měřítko se ve srovnání s~Kochovou křivkou liší v~mocnině, neboť délku nových úseků porovnáváme s~obvodem celého trojúhelníka, nikoliv pouze délkou jedné jeho strany. Nicméně ve výpočtu bychom se mohli omezit i~jen na jednu ze stran, výpočet by byl tak zcela identický jako u~Kochovy křivky.} nově vzniklých úseček je $\varepsilon=1/3\cdot(1/3)^n=(1/3)^{n+1}$. Není těžké se přesvědčit, že fraktální dimenze vychází stejně, jako u~Kochovy křivky:
     \begin{equation}\label{eq:kochova-vlocka-dimenze}
         \dimB{F_{KS}}=\lim_{n\to\infty}{\dfrac{\ln{3\cdot 4^n}}{\ln{3^{n+1}}}}=\lim_{n\to\infty}{\dfrac{\ln{4^n}\overbrace{\left(1+\frac{\ln{3}}{\ln{4^n}}\right)}^{\to 1}}{\ln{3^n}\underbrace{\left(1+\frac{\ln{3}}{\ln{3^n}}\right)}_{\to 1}}}=\dfrac{\ln{4}}{\ln{3}}
     \end{equation}
-    \item \textbf{Sierpińského trojúhelník $F_{ST}$.} V~každé iteraci vynecháme prostřední trojúhelník,~čímž vznikne \emph{trojice} nových trojúhelníků s~\emph{polovičním} měřítkem. Tzn.~$N_\varepsilon(F_{ST})=3^n$ pro $\varepsilon=(1/2)^n$,~a tedy
+    \item \textbf{Sierpińského trojúhelník $F_{ST}$.} V~každé iteraci vynecháme prostřední trojúhelník, čímž vznikne \emph{trojice} nových trojúhelníků s~\emph{polovičním} měřítkem. Tzn.~$N_\varepsilon(F_{ST})=3^n$ pro $\varepsilon=(1/2)^n$, a tedy
     \begin{equation}\label{eq:sierpinskeho-trojuhelnik-dimenze}
         \dimB{F_{ST}}=\lim_{n\to\infty}{\dfrac{\ln{3^n}}{\ln{2^{n}}}}=\dfrac{\ln{3}}{\ln{2}}\approx 1{,}5849625\dots
     \end{equation}
-    \item \textbf{Cantorovo diskontinuum $F_{CD}$.} Vždy vyjmeme prostřední třetinu\linebreak{}úsečky,~čímž obdržíme \emph{dvojici} úseček \emph{třetinové} délky,~tj. $N_\varepsilon(F_{CD})=2^n$ pro $\varepsilon=(1/3)^n$. Fraktální dimenze tak vychází
+    \item \textbf{Cantorovo diskontinuum $F_{CD}$.} Vždy vyjmeme prostřední třetinu\linebreak{}úsečky, čímž obdržíme \emph{dvojici} úseček \emph{třetinové} délky, tj. $N_\varepsilon(F_{CD})=2^n$ pro $\varepsilon=(1/3)^n$. Fraktální dimenze tak vychází
     \begin{equation}\label{eq:cantorovo-diskontinuum-dimenze}
         \dimB{F_{CD}}=\lim_{n\to\infty}{\dfrac{\ln{2^n}}{\ln{3^n}}}=\dfrac{\ln{2}}{\ln{3}}\approx 0{,}6309297\dots
     \end{equation}
@@ -137,17 +137,17 @@ Udělejme si nyní menší souhrn a~porovnání dosud získaných výsledků (vi
     \caption{Porovnání fraktálních dimenzí $d_k$ různých objektů.}
     \label{table:fraktaly-eukleides-dimenze}
 \end{table}
-Můžeme si všimnout,~že zatímco u~"klasických" objektů vychází fraktální dimenze \emph{celočíselná},~u~(zmíněných) fraktálů vychází \emph{neceločíselně},~ba dokonce i~iracionálně.
+Můžeme si všimnout, že zatímco u~"klasických" objektů vychází fraktální dimenze \emph{celočíselná}, u~(zmíněných) fraktálů vychází \emph{neceločíselně}, ba dokonce i~iracionálně.
 
 \subsection{Topologická dimenze}\label{subsec:topologicka-dimenze}
 
-Výsledky z~předešlé části~\ref{subsec:dimenze-fraktalu} se můžou zdát poněkud překvapující. Jak je vůbec možné,~že dimenze nemusí vycházet nutně celočíselná? Ač se to možná zdá jako nesmyslný výsledek,~je třeba si uvědomit,~jak vlastně koncept dimenze chápeme. Na jednu stranu na ni lze nahlížet jako na mocninu "s níž se zvyšuje" obsah/objem tělesa, měníme-li měřítko. Naopak čtenář znalý lineární algebry si možná vzpomene,~že v~této matematické disciplíně se na dimenzi nahlíží jako na \emph{mohutnost libovolné báze daného vektorového prostoru},~která naopak vychází vždy pouze celočíselně, případně nekonečná,~avšak nelze s~ní dobře zachytit hlubší detail geometrie u~objektů,~jako jsou právě fraktály.
+Výsledky z~předešlé části~\ref{subsec:dimenze-fraktalu} se můžou zdát poněkud překvapující. Jak je vůbec možné, že dimenze nemusí vycházet nutně celočíselná? Ač se to možná zdá jako nesmyslný výsledek, je třeba si uvědomit, jak vlastně koncept dimenze chápeme. Na jednu stranu na ni lze nahlížet jako na mocninu "s níž se zvyšuje" obsah/objem tělesa, měníme-li měřítko. Naopak čtenář znalý lineární algebry si možná vzpomene, že v~této matematické disciplíně se na dimenzi nahlíží jako na \emph{mohutnost libovolné báze daného vektorového prostoru}, která naopak vychází vždy pouze celočíselně, případně nekonečná, avšak nelze s~ní dobře zachytit hlubší detail geometrie u~objektů, jako jsou právě fraktály.
 
-Dalším možným pojetím pojmu dimenze nám dává tzv. \emph{topologická dimenze}\index{dimenze!topologická}\index{topologická dimenze}. Ty totiž daleko více odpovídají našemu intuitivnímu chápání tohoto pojmu,~neboť se vždy jedná o~celé číslo,~jak ho známe ze školní geometrie. Existuje více topologických dimenzí\footnote{Jiným příkladem takové dimenze je \emph{induktivní dimenze}.},~které si,~co do definice,~obecně nejsou ekvivalentní,~ačkoliv ve většině standardních případů splývají. My se zde pro ilustraci podíváme na tzv. \emph{Lebesgueovu pokrývací dimenzi}\index{dimenze!Lebesgueova pokrývací}\index{Lebesgueova pokrývací dimenze} (dále jen již "topologickou dimenzi") pojmenovanou po francouzském matematikovi \name{Henri Lebesgueovi}\index{Henri Lebesgue} (1875--1941). Myšlenka definice je založena na pokrývání objektu (formálně vzato \emph{množiny bodů}) tzv. \emph{otevřenými množinami}\index{množina!otevřená}\index{otevřená množina}.\footnote{Otevřená množina je zobecnění pojmu otevřeného intervalu reálných čísel. Neformálně řečeno je to taková množina $X$,~kde pro každý její bod $x\in X$ patří do této množiny i~nějaké $\varepsilon$-okolí tohoto bodu (patří do ní i~body,~které jsou "dostatečně blízko").} Formální definici si zde v~rámci zachování jednoduchosti odpustíme,~avšak pro hlubší matematický základ si dovolím čtenáře odkázat např. na knihu \cite{Engelking1989}. Avšak pokusíme se ji alespoň nastínit.
+Dalším možným pojetím pojmu dimenze nám dává tzv. \emph{topologická dimenze}\index{dimenze!topologická}\index{topologická dimenze}. Ty totiž daleko více odpovídají našemu intuitivnímu chápání tohoto pojmu, neboť se vždy jedná o~celé číslo, jak ho známe ze školní geometrie. Existuje více topologických dimenzí\footnote{Jiným příkladem takové dimenze je \emph{induktivní dimenze}.}, které si, co do definice, obecně nejsou ekvivalentní, ačkoliv ve většině standardních případů splývají. My se zde pro ilustraci podíváme na tzv. \emph{Lebesgueovu pokrývací dimenzi}\index{dimenze!Lebesgueova pokrývací}\index{Lebesgueova pokrývací dimenze} (dále jen již "topologickou dimenzi") pojmenovanou po francouzském matematikovi \name{Henri Lebesgueovi}\index{Henri Lebesgue} (1875--1941). Myšlenka definice je založena na pokrývání objektu (formálně vzato \emph{množiny bodů}) tzv. \emph{otevřenými množinami}\index{množina!otevřená}\index{otevřená množina}.\footnote{Otevřená množina je zobecnění pojmu otevřeného intervalu reálných čísel. Neformálně řečeno je to taková množina $X$, kde pro každý její bod $x\in X$ patří do této množiny i~nějaké $\varepsilon$-okolí tohoto bodu (patří do ní i~body, které jsou "dostatečně blízko").} Formální definici si zde v~rámci zachování jednoduchosti odpustíme, avšak pro hlubší matematický základ si dovolím čtenáře odkázat např. na knihu \cite{Engelking1989}. Avšak pokusíme se ji alespoň nastínit.
 
-Množina $X$ má topologickou dimenzi $\dimL{X}=n$,~pokud $n$ je nejmenší číslo,~takové,~že pro každé pokrytí otevřenými množinami\footnote{Formálněji to znamená,~že $A_1,\dots,A_n$ jsou otevřené množiny,~takové,~že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} $\mathcal{U}$ existuje zjemnění\footnote{Zjemněním pokrytí $\mathcal{U}$ nazýváme takové pokrytí $\mathcal{U}^\prime$ množiny $X$,~kde každá množina $A_i^\prime\in\mathcal{U}^\prime$ je \emph{podmnožinou} nějaké množiny $A_j$ původního pokrytí $\mathcal{U}$.}\index{zjemnění} $\mathcal{U}^\prime$ takové,~že každý bod $x\in X$ náleží nejvýše $n+1$ množin pokrytí $\mathcal{U}$.
+Množina $X$ má topologickou dimenzi $\dimL{X}=n$, pokud $n$ je nejmenší číslo, takové, že pro každé pokrytí otevřenými množinami\footnote{Formálněji to znamená, že $A_1,\dots,A_n$ jsou otevřené množiny, takové, že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} $\mathcal{U}$ existuje zjemnění\footnote{Zjemněním pokrytí $\mathcal{U}$ nazýváme takové pokrytí $\mathcal{U}^\prime$ množiny $X$, kde každá množina $A_i^\prime\in\mathcal{U}^\prime$ je \emph{podmnožinou} nějaké množiny $A_j$ původního pokrytí $\mathcal{U}$.}\index{zjemnění} $\mathcal{U}^\prime$ takové, že každý bod $x\in X$ náleží nejvýše $n+1$ množin pokrytí $\mathcal{U}$.
 
-% Obecně množina $X$ má topologickou dimenzi $\dimL{X}=n$,~pokud danou množinu nelze pokrýt\footnote{Formálněji to znamená,~že $A_1,\dots,A_n$ jsou otevřené množiny,~takové,~že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} lib. otevřenými množinami,~tak,~že pro každé zjemnění $\mathcal{U}$ tohoto pokrytí platí,~že každý jeho bod $x$ je obsažen v~průniku nejvýše $n+1$ množin $\mathcal{U}$.
+% Obecně množina $X$ má topologickou dimenzi $\dimL{X}=n$, pokud danou množinu nelze pokrýt\footnote{Formálněji to znamená, že $A_1,\dots,A_n$ jsou otevřené množiny, takové, že platí $X\subseteq\bigcup_{i=1}^n{A_i}$.} lib. otevřenými množinami, tak, že pro každé zjemnění $\mathcal{U}$ tohoto pokrytí platí, že každý jeho bod $x$ je obsažen v~průniku nejvýše $n+1$ množin $\mathcal{U}$.
 
 Tuto ideu si zkusíme přiblížit na příkladu topologické dimenze úsečky (viz obrázek~\ref{fig:usecka-zjemneni}).
 \begin{figure}[h]
@@ -158,14 +158,14 @@ Tuto ideu si zkusíme přiblížit na příkladu topologické dimenze úsečky (
     \caption{Různé možnosti (pod)pokrytí úsečky.}
     \label{fig:usecka-zjemneni}
 \end{figure}
-Pro libovolné pokrytí lze ukázat,~že každý bod je obsažen maximálně ve \emph{dvou množinách} vhodně zvoleného zjemnění,~tedy topologická dimenze úsečky je $1$. Podobně např. pro čtverec lze dojít k~závěru,~že pro každé pokrytí existuje zjemnění takové,~že každý bod obsažen maximálně ve \emph{třech množinách},~tedy jeho topologická dimenze je 2,~jak bychom očekávali (viz obrázek~\ref{fig:ctverec-zjemneni}).
+Pro libovolné pokrytí lze ukázat, že každý bod je obsažen maximálně ve \emph{dvou množinách} vhodně zvoleného zjemnění, tedy topologická dimenze úsečky je $1$. Podobně např. pro čtverec lze dojít k~závěru, že pro každé pokrytí existuje zjemnění takové, že každý bod obsažen maximálně ve \emph{třech množinách}, tedy jeho topologická dimenze je 2, jak bychom očekávali (viz obrázek~\ref{fig:ctverec-zjemneni}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch01-ctverec-pokryti.pdf}
     \caption{Možné (pod)pokrytí čtverce.}
     \label{fig:ctverec-zjemneni}
 \end{figure}
-Porovnejme nyní topologickou dimenzi vůči dimenzi fraktální. Jak jsme se již přesvědčili v~příkladech~\ref{ex:fraktalni-dimenze-usecka},~\ref{ex:fraktalni-dimenze-ctverec} a~\ref{ex:fraktalni-dimenze-trojuhelnik},~pro "standardní" útvary je fraktální dimenze celočíselná (ač jsou i~další,~které jsme neuvedli),~zatímco v~podsekci~\ref{subsec:dimenze-fraktalu} jsme zjistili,~že u~fraktální dimenze fraktálů tomu tak být nemusí. Přitom však topologická dimenze fraktálních útvarů je (a dokonce musí být) celočíselná (viz tabulka~\ref{table:fraktalni-topologicka-dimenze}).
+Porovnejme nyní topologickou dimenzi vůči dimenzi fraktální. Jak jsme se již přesvědčili v~příkladech~\ref{ex:fraktalni-dimenze-usecka}, \ref{ex:fraktalni-dimenze-ctverec} a~\ref{ex:fraktalni-dimenze-trojuhelnik}, pro "standardní" útvary je fraktální dimenze celočíselná (ač jsou i~další, které jsme neuvedli), zatímco v~podsekci~\ref{subsec:dimenze-fraktalu} jsme zjistili, že u~fraktální dimenze fraktálů tomu tak být nemusí. Přitom však topologická dimenze fraktálních útvarů je (a dokonce musí být) celočíselná (viz tabulka~\ref{table:fraktalni-topologicka-dimenze}).
 \begin{table}[h]
     \centering
     \begin{tabular}{r|cc}
