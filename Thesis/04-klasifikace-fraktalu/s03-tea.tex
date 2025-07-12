@@ -159,24 +159,25 @@ Zde poznamenejme, že body \ref{thm:jf-podmnozina-kf} a \ref{thm:vnitrek-jf-nepr
     \[\julia(f)=f(\julia(f))=f^{-1}(\julia(f)).\]
 \end{theorem}
 \begin{proof}
-    Nechť $z\in\julia(f)$. Z~bodu~\ref{thm:jf-podmnozina-kf} tvrzení~\ref{thm:vztah-kf-a-jf} plyne,~že $f^{\circ k}(z)\notto\infty$ (protože $z\in\filledinjulia(f)$). Najdeme posloupnost $\set{\omega_n}_{n=1}^\infty$,~takovou,~že $\omega_n\to z$ a~zároveň $f^{\circ k}(\omega_n)\to\infty$ pro všechna $n\in\N$. Ze spojitosti funkce $f$ plyne,~že $f(\omega_n)\to f(z)$,~přičemž $f^{\circ k}(f(z))=f^{\circ(k+1)}(z)\notto\infty$ a~$f^{\circ k}(f(\omega_n))=f^{\circ(k+1)}(\omega_n)\to\infty$ pro každé $n\in\N$. Z~toho plyne,~že $f(z)\in\julia(f)$ a~tedy $f(\julia(f))\subseteq\julia(f)$. Dále rovněž máme
-    \[\julia(f)\subseteq f^{-1}(f(\julia(f)))\subseteq f^{-1}(\julia(f)).\]
+    Nechť $z\in\julia(f)$. Z~bodu~\ref{thm:jf-podmnozina-kf} tvrzení~\ref{thm:vztah-kf-a-jf} plyne,~že $f^{\circ k}(z)\notto\infty$ (protože $z\in\filledinjulia(f)$). Najdeme posloupnost $\set{\omega_n}_{n=1}^\infty$,~takovou,~že $\omega_n\to z$ a~zároveň $f^{\circ k}(\omega_n)\to\infty$ pro všechna $n\in\N$ (tzn. $\set{\omega_n}_{n=1}^\infty$ je posloupnost v $\C\setminus\filledinjulia(f)$). Ze spojitosti funkce $f$ plyne,~že $f(\omega_n)\to f(z)$,~přičemž $f^{\circ k}(f(z))=f^{\circ(k+1)}(z)\notto\infty$ a~$f^{\circ k}(f(\omega_n))=f^{\circ(k+1)}(\omega_n)\to\infty$ pro každé $n\in\N$. Z~toho plyne,~že $f(z)\in\julia(f)$ (protože $f^{\circ k}(\omega_n)\to\infty$ pro každé $n\in\N$, tzn. $f(\omega_n)$ neleží ve vnitřku $\filledinjulia(f)$) a~tedy $f(\julia(f))\subseteq\julia(f)$. Dále rovněž máme
+    \[\julia(f)\subseteq f^{-1}(f(\julia(f)))\subseteq f^{-1}(\julia(f)),\]
+    kde první inkluze platí pro obecné zobrazení a~druhá plyne z~předchozího, tj. $f(\julia(f))\subseteq\julia(f)$.
 
-    Druhou inkluzi ukážeme obdobně. Definujme posloupnost $\set{\omega_n}_{n=1}^\infty$ jako výše. Najdeme $z_0$,~takové,~že $f(z_0)=z\in\julia(f)$. Poté můžeme nalézt posloupnost $\set{v_n}_{n=1}^\infty$,~tak,~aby platilo $f(v_n)=\omega_n$ pro každé $n\in\N$,~tzn.
+    Druhou inkluzi $f^{-1}(\julia(f))\subseteq\julia(f)$ ukážeme obdobně. Najdeme $z_0$,~takové,~že $f(z_0)=z\in\julia(f)$ a~následně definujme posloupnost $\set{\omega_n}_{n=1}^\infty$ jako výše, tj. $\omega_n\in\C\setminus\filledinjulia(f)$ pro každé $n\in\N$ a~zároveň $\omega_n\to z$. Poté můžeme nalézt posloupnost $\set{v_n}_{n=1}^\infty$,~tak,~aby platilo $f(v_n)=\omega_n$ pro každé $n\in\N$,~tzn.
     \[f(v_n)=\omega_n\to z=f(z_0).\]
-    Zároveň však platí $f^{\circ k}(z_0)=f^{\circ(k-1)}(z)\notto\infty$ a~$f^{\circ k}(v_n)=f^{\circ(k-1)}(\omega_n)\to\infty$,~tedy $z_0\in\julia(f)$. Z~toho plyne,~že $f^{-1}(\julia(f))\subseteq\julia(f)$,~neboli $\julia(f)=f(f^{-1}(\julia(f)))\subseteq f(\julia(f))$.
+    Zároveň však platí $f^{\circ k}(z_0)=f^{\circ(k-1)}(z)\notto\infty$ a~$f^{\circ k}(v_n)=f^{\circ(k-1)}(\omega_n)\to\infty$,~tedy $z_0\in\julia(f)$ (argument stejný jako výše). Z~toho plyne,~že $f^{-1}(\julia(f))\subseteq\julia(f)$,~neboli $\julia(f)\subseteq f(f^{-1}(\julia(f)))\subseteq f(\julia(f))$.
 \end{proof}
 \begin{theorem}\label{ekvivalence-jf-a-jfp}
     Nechť $f$ je libovolná polynomiální funkce. Pak $\julia(f)=\julia(f^{\circ p})$ pro libovolné $p\in\N$.
 \end{theorem}
 \begin{proof}
-    Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} plyne,~že $f^{\circ k}(z)\to\infty$ právě tehdy,~když $(f^{\circ p})^{\circ k}(z)=f^{\circ kp}(z)\to\infty$. Tedy $\fatou(f)=\fatou(f^{\circ p})$,~z čehož plyne $\julia(f)=\julia(f^{\circ p})$.
+    Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} plyne,~že $f^{\circ k}(z)\to\infty$ právě tehdy,~když $(f^{\circ p})^{\circ k}(z)=f^{\circ kp}(z)\to\infty$. Tedy $\filledinjulia(f)=\filledinjulia(f^{\circ p})$,~z čehož plyne $\julia(f)=\julia(f^{\circ p})$.
 \end{proof}
 (Převzato z~\citep[str. 238]{Falconer1989}.)
 
 Pro základní přehled nám tyto vlastnosti budou stačit. Pro další informace doporučuji se podívat do citované literatury.
 
-Vraťme se na chvíli k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin} a~\ref{fig:priklady-juliovych-mnozin}. Vzhledem k~rozšířenosti tohoto typu fraktálů (a to mnohdy i~mezi širší matematiky zainteresovanou veřejností) si čtenář možná mohl všimnout,~že zatímco v~těchto případech jsme body náležící příslušné (vyplněné) Juliově množině vybarvili černou barvou,~na obrázku~\ref{fig:mandebrotova-mnozina} je zbarvení podstatně sofistikovanější\footnote{A leckdo by jej nejspíše shledal i~krásnějším.}. Příklady takového způsobu znázornění si lze prohlédnout na obrázcích~\ref{subfig:vyplnena-juliova-mnozina-1-obarveno} a~\ref{subfig:vyplnena-juliova-mnozina-2-obarveno}. Obrázky jsou opět vygenerovány pomocí přiloženého programu.
+Vraťme se na chvíli k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin} a~\ref{fig:priklady-juliovych-mnozin}. Vzhledem k~rozšířenosti tohoto typu fraktálů (a to mnohdy i~mezi širší matematicky zainteresovanou veřejností) si čtenář možná mohl všimnout,~že zatímco v~těchto případech jsme body náležící příslušné (vyplněné) Juliově množině vybarvili černou barvou,~na obrázku~\ref{fig:mandebrotova-mnozina} je zbarvení podstatně sofistikovanější\footnote{A leckdo by jej nejspíše shledal i~krásnějším.}. Příklady takového způsobu znázornění si lze prohlédnout na obrázcích~\ref{subfig:vyplnena-juliova-mnozina-1-obarveno} a~\ref{subfig:vyplnena-juliova-mnozina-2-obarveno}. Obrázky jsou opět vygenerovány pomocí přiloženého programu.
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -208,18 +209,18 @@ Vraťme se na chvíli k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin
 %     \label{fig:vyplnena-juliova-mnozina-2-obarveno}
 % \end{figure}
 
-Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho,~kolik iterací $k$ dané polynomiální funkce $f$ proběhlo,~než hodnota $|f^{\circ k}(z)|$ překročila zadanou mez $r$ (viz lemma~\ref{lem:test-konvergence-komplexniho-polynomu}). Vždy volíme pevný počet iterací funkce $f$,~který aplikujeme na každý bod $\C$ (resp. na nějakou její podmnožinu). Podle zvoleného počtu se pak bude odvíjet i~přesnost naší aproximace,~avšak je třeba zvážit i~výpočetní náročnost,~která (celkem očekávatelně) roste se zvyšujícím se počtem iterací. Tomuto tématu (a mnohým dalším) se budeme věnovat v~kapitole~\ref{chapter:generovani-fraktalu}.
+Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho,~kolik iterací dané polynomiální funkce $f$ proběhlo,~než hodnota $|f^{\circ k}(z)|$ překročila zadanou mez $r$ (viz lemma~\ref{lem:test-konvergence-komplexniho-polynomu}). Vždy volíme pevný počet iterací funkce $f$,~který aplikujeme na každý bod $\C$ (resp. na nějakou její podmnožinu). Podle zvoleného počtu se pak bude odvíjet i~přesnost naší aproximace,~avšak je třeba zvážit i~výpočetní náročnost,~která (celkem očekávatelně) roste se zvyšujícím se počtem iterací. Tomuto tématu (a mnohým dalším) se budeme věnovat v~kapitole~\ref{chapter:generovani-fraktalu}.
  
 \subsection{Mandelbrotova množina}\label{subsec:mandebrotova-mnozina}
 
-Mandebrotova množina patří patrně k~jednomu z~nejznáměnších fraktálů a~stala se terčem nemalého množství publikací a~popularizačních materiálů. Její mimořádně složitě vypadající vzhled a~charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
+Mandebrotova množina patří patrně mezi jedny z~nejznáměnších fraktálů a~stala se terčem nemalého množství publikací a~popularizačních materiálů. Její mimořádně složitě vypadající vzhled a~charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
 \[f_c(z)=z^2+c,\]
 kde $c\in\C$. Tento konkrétní tvar polynominální funkce jsme již viděli v~minulé podsekci,~kde jsme se zabývali tzv. \emph{Juliovými množinami}\index{Juliova množina}\index{množina!Juliova}. Ty tvořily hranici množiny všech $z\in\C$,~takových,~že posloupnost $\set{f^{\circ k}(z)}_{k=1}^\infty$ je omezená. Ani zde se od původní myšlenky nevzdálíme,~avšak budeme nyní zkoumat proměnnou $c$.
 \begin{definition}[Mandelbrotova množina]\label{def:mandebrotova-mnozina}
-    \emph{Mandebrotovu množinu}\index{Mandebrotova množina}\index{množina!Mandelbrotova} definujeme jako
+    \emph{Mandelbrotovu množinu}\index{Mandebrotova množina}\index{množina!Mandelbrotova} definujeme jako
     \[\mathfrak{M}=\set{c\in\C\mid \set{f_c^{\circ k}(0)}_{k=1}^\infty\notto\infty}.\]
 \end{definition}
-Upozorněme explicitně na fakt,~že iterace vždy začínají pevně v~bodě $z=0$. Lze se setkat i~s jinými ekvivalentními definicemi. Např. $\mathfrak{M}$ lze charakterizovat i~takto:
+Upozorněme explicitně na fakt,~že iterace vždy začínají pevně v~bodě $z=0$ a $\mathfrak{M}$ je množina právě všech parametrů $c$, pro které tyto iterace nedivergují do nekonečna. Lze se setkat i~s jinými ekvivalentními definicemi. Např. $\mathfrak{M}$ lze charakterizovat i~takto:
 \[\mathfrak{M}=\set{c\in\C\mid\julia(f_c)\;\text{je souvislá}}.\]
 Důkaz je opět delší,~takže se znovu odkážeme na knihu \citep[str. 245]{Falconer1989}.
 \begin{figure}[h]
