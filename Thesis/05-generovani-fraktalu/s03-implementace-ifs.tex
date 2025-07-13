@@ -1,12 +1,12 @@
 \section{Implementace IFS}\label{sec:implementace-ifs}
 
-Systémy iterovaných funkcí a~k nim související teorii jsme si vyložili již v~části~\ref{sec:ifs}. Podobně jako v~případě L-systémů, i zde budeme postupovat přímo z~definice. Konkrétně jsme si definovali IFS jako množinu kontrakcí
+Systémy iterovaných funkcí a~k nim související teorii jsme si vyložili již v~části~\ref{sec:ifs}. Podobně jako v~případě L-systémů, i~zde budeme postupovat přímo z~definice. Konkrétně jsme si definovali IFS jako množinu kontrakcí
 \[\set{\mapping{\psi_i}{X}{X}\mid 1\leqslant i~\leqslant n},\]
 přičemž jsme následně zkoumali a~pracovali se zobrazením $\Psi$ daným předpisem
 \[\Psi(B)=\bigcup_{i=1}^n\psi_i(B)\;,\;B\in\hyperspace(X).\]
-O zobrazení $\Psi$ jsme následně dokázali, že se též jedná o~kontrakci (viz věta~\ref{thm:sjednoceni-kontrakci}).
+O~zobrazení $\Psi$ jsme následně dokázali, že se též jedná o~kontrakci (viz věta~\ref{thm:sjednoceni-kontrakci}).
 
-Konkrakce, s nimiž jsme pracovali, byla tzv. \emph{afinní zobrazení}\index{zobrazení!afinní}\index{afinní zobrazení} v~$\R^2$, tedy jejich předpis byl ve tvaru
+Kontrakce, s~nimiž jsme pracovali, byly tzv. \emph{afinní zobrazení}\index{zobrazení!afinní}\index{afinní zobrazení} v~$\R^2$, tedy jejich předpis byl ve tvaru
 \begin{equation}\label{eq:afinni-zobrazeni}
     f(x,y)=\left(\begin{matrix}
         a & b\\
@@ -24,7 +24,7 @@ Konkrakce, s nimiž jsme pracovali, byla tzv. \emph{afinní zobrazení}\index{zo
 \end{equation}
 V konečném důsledku si tedy stačilo uchovat pouze koeficienty $a,b,\ldots,f$. A~toho přesně využijeme i~zde. Daná afinní zobrazení budeme reprezentovat seznamem uspořádaných šestic
 \[(a,b,c,d,e,f).\]
-Dále potřebujeme již pouze znát počáteční obrazec. Ačkoliv bychom mohli jistě různými sofistikovanými způsoby reprezentovat celou řadu množin, my se omezíme pouze na mnohoúhelníky\footnote{V konečném důsledku, jak již víme z~Banachovy věty~\ref{thm:banach}, počáteční obrazec nehraje žádnou roli pro atraktor zobrazení $\Psi$.}, neboť jejich reprezentace je velmi jednoduchá. Stačí si pamatovat pozice jeho vrcholů
+Dále potřebujeme již pouze znát počáteční obrazec. Ačkoliv bychom mohli jistě různými sofistikovanými způsoby reprezentovat celou řadu množin, my se omezíme pouze na mnohoúhelníky\footnote{V konečném důsledku, jak již víme z~Banachovy věty~\ref{thm:banach}, počáteční obrazec nehraje žádnou roli pro atraktor zobrazení $\Psi$.}, neboť jejich reprezentace je velmi jednoduchá. Stačí si pamatovat pozice jejich vrcholů
 \[(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n).\]
 I zde provedeme implementaci IFS pomocí třídy (viz ukázka~\ref{prog:konstruktor-ifs}).
 \begin{program}[h]
@@ -60,7 +60,7 @@ class IFS:
     \caption{Konstruktor pro třídu \texttt{IFS}}
     \label{prog:konstruktor-ifs}
 \end{program}
-Po vzoru třídy \texttt{Turtle}, kterou jsme si ukázali v~minulé sekci~\ref{sec:implementace-lsystemu-a-zelvi-grafiky} i~zde si budeme průběžně aktualizovat minimální a~maximální hodnoty souřadnic pro pozdější manipulaci s~obrazcem. Dále zde máme dvojici důležitých atributů:
+Po vzoru třídy \texttt{Turtle}, kterou jsme si ukázali v~minulé sekci~\ref{sec:implementace-lsystemu-a-zelvi-grafiky}, i~zde si budeme průběžně aktualizovat minimální a~maximální hodnoty souřadnic pro pozdější manipulaci s~obrazcem. Dále zde máme dvojici důležitých atributů:
 \begin{itemize}
     \item \texttt{self.\_figures} uchovává všechny vygenerované obrazce po obecně $k$-té iteraci jako seznam uspořádaných $n$-tic vrcholů.
     \item \texttt{self.\_transformations} ukládá zadané kontrakce $\psi_1,\psi_2,\ldots,\psi_m$ jako first-class funkce\index{first-class funkce}\index{funkce!first-class}. Výpočet probíhá podle \eqref{eq:afinni-zobrazeni}.

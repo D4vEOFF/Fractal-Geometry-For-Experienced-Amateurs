@@ -1,15 +1,20 @@
 \section{Time Escape algoritmy}\label{sec:tea}
 
-Pokud se čtenář dostal až do této části, mohl si všimnout, že jednu kategorii fraktálů jsme zatím zcela vynechali. Přitom právě ta je z~velké části zodpovědná za popularitu, které se těší toto odvětví matematiky, zejména \emph{Mandelbrotova množina}\index{Mandebrotova množina}\index{množina!Mandebrotova} (viz obrázek~\ref{fig:mandebrotova-mnozina}) pojmenovaná po samotném zakladateli fraktální geometrie.
+Pokud se čtenář dostal až do této části, mohl si všimnout, že jednu kategorii fraktálů jsme zatím zcela vynechali. Přitom právě ta je z~velké části zodpovědná za popularitu, které se těší toto odvětví matematiky. Jedná se zejména o~\emph{Mandelbrotovu množinu}\index{Mandebrotova množina}\index{množina!Mandebrotova} (viz obrázek~\ref{fig:mandebrotova-mnozina}) pojmenovanou po samotném zakladateli fraktální geometrie.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{ch01-mandelbrotova-mnozina.jpg}
     \caption[Mandebrotova množina]{Mandebrotova množina (Převzato z~Wikipedia Commons, viz \href{https://en.wikipedia.org/wiki/Mandelbrot\_set\#/media/File:Mandel\_zoom\_00\_mandelbrot\_set.jpg}{\texttt{\textit{odkaz}}})}
     \label{fig:mandebrotova-mnozina}
 \end{figure}
-Tím spíš s~faktem, že její definice není v~konečném důsledku nikterak složitá.
+Přitom její definice není v~konečném důsledku nikterak složitá.
 
-S pravděpodobně nejznámějším fraktálem však souvisí dvojice širších termínů, se kterým začneme, a jsou jimi tzv. \emph{Juliovy množiny}\index{Fatouova množina}\index{množina!Fatouova} a~\emph{Fatouovy množiny}\index{Fatouova množina}\index{množina!Fatouova} pojmenované po francouzských matematicích \name{Gastonu Juliovi} (1893--1978)\linebreak a~\name{Pierru Fatouovi} (1878--1929). Pro jejich studium se však budeme muset navštívit svět komplexních čísel.
+S pravděpodobně nejznámějším fraktálem však souvisí dvojice širších termínů, se kterými začneme, jimiž jsou
+\begin{itemize}
+    \item \emph{Juliovy množiny}\index{Juliova množina}\index{množina!Juliova}
+    \item a~\emph{Fatouovy množiny}\index{Fatouova množina}\index{množina!Fatouova}.
+\end{itemize}
+Jsou pojmenované po francouzských matematicích \name{Gastonu Juliovi}\footnote{1893--1978}\linebreak a~\name{Pierru Fatouovi}\footnote{1878--1929}. Pro jejich studium se však budeme muset navštívit svět komplexních čísel.
 
 Lze nejspíše předpokládat, že se čtenář s~komplexními čísly již setkal. Nebudeme se tedy společně hlouběji zabývat naprostými základy. Pouze si stručně připomeňme značení.
 \begin{itemize}
@@ -21,15 +26,15 @@ Lze nejspíše předpokládat, že se čtenář s~komplexními čísly již setk
 \end{itemize}
 V této sekci budeme především pracovat s~komplexními polynomiálními funkcemi $\mapping{f}{\C}{\C}$, tzn. funkcemi ve tvaru
 \[f(z)=\sum_{i=1}^{n}a_iz^i=a_nz^n+a_{n-1}z^{n-1}+\dots+a_1z+a_0,\quad\text{kde $a_i\in\C$}\]
-Brzy uvidíme jejich důležitou roli.
+Brzy zjistíme jejich důležitou roli.
 
 \subsection{Juliovy a~Fatouovy množiny}\label{subsec:juliovy-fatouovy-mnoziny}
 
-Většinový výklad v~této části je převzat z~knihy \cite[str. 235]{Falconer1989}, avšak řadu věcí si opět dovolíme přeskočit. Dále ještě připomeňme značení, které jsme zavedli již v~části~\ref{subsec:hausdorffuv-mp-kontrakce}, týkající se skládání funkcí. Obecně $n$-tou iteraci funkce $\mapping{f}{\C}{\C}$ budeme značit
+Většinový výklad v~této části je převzat z~knihy \cite[str. 235]{Falconer1989}, avšak řadu věcí si opět dovolíme přeskočit. Dále ještě připomeňme značení, které jsme zavedli již v~části~\ref{subsec:hausdorffuv-mp-kontrakce}. Obecně $n$-tou iteraci funkce $\mapping{f}{\C}{\C}$ budeme značit
 \[f^{\circ n}(z)=(f\circ f^{\circ(n-1)})(z)=f(f^{\circ n}(z))\]
 kde $z\in\C$. Speciálně $f^{\circ 0}=\id$ a $f^{\circ 1}=f\circ\id=f$.
 \begin{definition}[Juliova a~Fatouova množina]\label{juliova-fatouova-mnozina}
-    Mějme polynomiálními funkci $\mapping{f}{\C}{\C}$. Pak definujeme
+    Mějme polynomiální funkci $\mapping{f}{\C}{\C}$. Pak definujeme
     \begin{enumerate}[label=(\alph*)]
         \item \emph{vyplněnou Juliovu množinu}\index{množina!vyplněná Juliova}\index{vyplněná Juliova množina} polynomiální funkce $f$
         \[\filledinjulia(f)=\set{z\in\C\mid f^{\circ n}(z)\notto\infty}.\]
@@ -47,7 +52,7 @@ Co nám definice~\ref{juliova-fatouova-mnozina} vlastně říká? U~pevně zadan
         resp.
         \[\julia(f)=\set{z\in\C\mid|z|=1}.\]
         Juliova množina funkce $f$ tvoří jednotkovou kružnici se středem v~počátku Gaussovy roviny, resp. vyplněná Juliova množina $\filledinjulia(f)$ tvoří jednotkový kruh.
-        \item Pro $f(z)=z^2+c$, kde $c\in\C$ je varianta množiny $K(f)$ znázorněna na obrázku~\ref{subfig:vyplnena-juliova-mnozina-1}.
+        \item Pro $f(z)=z^2+c$, kde $c\in\C$ je jedna z~možných variant množiny $K(f)$ znázorněna na obrázku~\ref{subfig:vyplnena-juliova-mnozina-1}.
         \item Ještě jiný příklad pro složitější polynom $f(z)=z^3-z^2$ lze vidět na obrázku~\ref{subfig:vyplnena-juliova-mnozina-2}.
         \item Pro příklady Juliových množin zadaných polynomiálních funkcí viz obrázky~\ref{subfig:juliova-mnozina-1} a~\ref{subfig:juliova-mnozina-2}.
     \end{itemize}
@@ -124,9 +129,9 @@ Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph
     \[r\geqslant\frac{-2+2\sqrt{1+|c|}}{2}=-1+\sqrt{1+|c|}.\]
     Je celkem jasné, že záporný kořen zde nemá smysl. Zároveň však potřebujeme zajistit, aby platilo
     \begin{align*}
-        r^2-|c|&\geqslant 2r\\
-        r^2-2r&\geqslant|c|\geqslant 0\\
-        r(r-2)&\geqslant 0
+        r^2-|c|&\geqslant 2r,\\
+        r^2-2r&\geqslant|c|\geqslant 0,\\
+        r(r-2)&\geqslant 0.
     \end{align*}
     To je splněno pro $r\in\langle 2,\infty)$. Pro test divergence posloupnosti $\set{f^{\circ k}(z)}_{n=1}^\infty$ stačí kontrolovat, zda pro nějaké $k$ platí, že
     \[|f^{\circ k}(z)|\geqslant r.\]
@@ -143,7 +148,7 @@ Algoritmům pro generování tohoto typu fraktálů se proto také říká \emph
 \begin{proof}
     Z~lemmatu~\ref{lem:test-konvergence-komplexniho-polynomu} víme, že existuje $r\in\R$ takové, že pokud pro nějaké $m\in\N$ platí $|f^{\circ m}(z)|\geqslant r$, pak $f^{\circ k}\to\infty$. Tedy množiny $\filledinjulia(f)$ a~$\julia(f)$ jsou obsaženy v~kouli o~poloměru $r$ umístěné v~počátku, tj.
     \[\filledinjulia(f),\julia(f)\subseteq B_r(0).\]
-    Volme $z\in\C\setminus\filledinjulia(f)$, tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$ takové, že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce, existuje $\varepsilon>0$ takové, že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$ a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená, že množina $\C\setminus\filledinjulia(f)$ je otevřená, nebo-li $\filledinjulia(f)$ je uzavřená množina (totéž platí i pro $\julia(f)$). Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$, avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení, označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$, kde $k\in\N$, z čehož plyne, že $z_0\in\filledinjulia(f)$, tzn. $\filledinjulia(f)\neq\emptyset$.
+    Volme $z\in\C\setminus\filledinjulia(f)$, tzn. $f^{\circ k}(z)\to\infty$. Tedy nutně existuje $m\in\N$ takové, že $|f^{\circ m}(z)|>r$. Protože však $f$ je spojitá funkce, existuje $\varepsilon>0$ takové, že pro každé $w\in B_\varepsilon(z)\setminus\set{z}$ platí $f^{\circ k}(w)\to\infty$, a~tedy $w\in\C\setminus\filledinjulia(f)$. To znamená, že množina $\C\setminus\filledinjulia(f)$ je otevřená, nebo-li $\filledinjulia(f)$ je uzavřená množina (totéž platí i pro $\julia(f)$). Podle Heineho-Borelovy věty~\ref{thm:heine-borel} jsou tedy $\filledinjulia(f)$ a~$\julia(f)$ kompaktní\footnote{Heineho-Borelovu větu jsme sice formulovali pro $\R^n$, avšak $\C\simeq\R^2$.}. Podle základní věty algebry má rovnice $f(z)=z$ alespoň jedno řešení, označme jej $z_0$. Tedy $f^{\circ k}(z_0)=z_0$, kde $k\in\N$, z čehož plyne, že $z_0\in\filledinjulia(f)$, tzn. $\filledinjulia(f)\neq\emptyset$.
     
     Dále si zvolme $z_1\in\C\setminus\filledinjulia(f)$ a~uvažujme funkci $l(\lambda)=\lambda z_0+(1-\lambda)z_1$, kde $0\leqslant\lambda\leqslant 1$. Tedy $l$ představuje spojnici bodů $z_0$ a~$z_1$. Položme
     \[\lambda^\prime=\sup\set{\lambda\in\langle0,1\rangle\mid l(\lambda)\in\filledinjulia(f)}.\]
@@ -175,9 +180,9 @@ Zde poznamenejme, že body \ref{thm:jf-podmnozina-kf} a \ref{thm:vnitrek-jf-nepr
 \end{proof}
 (Převzato z~\citep[str. 238]{Falconer1989}.)
 
-Pro základní přehled nám tyto vlastnosti budou stačit. Pro další informace doporučuji se podívat do citované literatury.
+Pro základní přehled nám tyto vlastnosti budou stačit. Pro další informace doporučujeme se podívat do citované literatury.
 
-Vraťme se na chvíli k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin} a~\ref{fig:priklady-juliovych-mnozin}. Vzhledem k~rozšířenosti tohoto typu fraktálů (a to mnohdy i~mezi širší matematicky zainteresovanou veřejností) si čtenář možná mohl všimnout, že zatímco v~těchto případech jsme body náležící příslušné (vyplněné) Juliově množině vybarvili černou barvou, na obrázku~\ref{fig:mandebrotova-mnozina} je zbarvení podstatně sofistikovanější\footnote{A leckdo by jej nejspíše shledal i~krásnějším.}. Příklady takového způsobu znázornění si lze prohlédnout na obrázcích~\ref{subfig:vyplnena-juliova-mnozina-1-obarveno} a~\ref{subfig:vyplnena-juliova-mnozina-2-obarveno}. Obrázky jsou opět vygenerovány pomocí přiloženého programu.
+Vraťme se k~obrázkům~\ref{fig:priklady-vyplnenych-juliovych-mnozin} a~\ref{fig:priklady-juliovych-mnozin}. Vzhledem k~rozšířenosti tohoto typu fraktálů (a to mnohdy i~mezi širší matematickou zainteresovanou veřejností) si čtenář možná mohl všimnout, že zatímco v~těchto případech jsme body náležící příslušné (vyplněné) Juliově množině vybarvili černou barvou, na obrázku~\ref{fig:mandebrotova-mnozina} je zbarvení podstatně sofistikovanější\footnote{A leckdo by jej nejspíše shledal i~hezčím.}. Příklady takového způsobu znázornění si lze prohlédnout na obrázcích~\ref{subfig:vyplnena-juliova-mnozina-1-obarveno} a~\ref{subfig:vyplnena-juliova-mnozina-2-obarveno}. Obrázky jsou opět vygenerovány pomocí přiloženého programu.
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -213,7 +218,7 @@ Barvu jednotlivým bodům $z\in\C$ přidělujeme podle toho, kolik iterací dan�
  
 \subsection{Mandelbrotova množina}\label{subsec:mandebrotova-mnozina}
 
-Mandebrotova množina patří patrně mezi jedny z~nejznáměnších fraktálů a~stala se terčem nemalého množství publikací a~popularizačních materiálů. Její mimořádně složitě vypadající vzhled a~charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
+Mandebrotova množina patří patrně mezi jedny z~nejznámějších fraktálů a~stala se oblíbeným motivem nemalého množství publikací a~popularizačních materiálů. Její mimořádně složitě vypadající vzhled a~charakter přitom popisuje až překvapivě jednoduché pravidlo. Nejdříve si zavedeme následující funkci:
 \[f_c(z)=z^2+c,\]
 kde $c\in\C$. Tento konkrétní tvar polynominální funkce jsme již viděli v~minulé podsekci, kde jsme se zabývali tzv. \emph{Juliovými množinami}\index{Juliova množina}\index{množina!Juliova}. Ty tvořily hranici množiny všech $z\in\C$ takových, že posloupnost $\set{f^{\circ k}(z)}_{k=1}^\infty$ je omezená. Ani zde se od původní myšlenky nevzdálíme, avšak budeme nyní zkoumat proměnnou $c$.
 \begin{definition}[Mandelbrotova množina]\label{def:mandebrotova-mnozina}

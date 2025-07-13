@@ -63,7 +63,7 @@ V následujícím lemmatu uvažujeme zobrazení $\mathit{\hat{f}}$ definované p
     Budeme vycházet z~alternativní definice Hausdorffovy metriky, jejíž ekvivalenci s~původní definicí jsme dokázali výše (viz věta~\ref{thm:alternativni-hausdorffova-metrika}). Pro $\varrho(x,A\cup B)$ platí následující odhad:
     \[\varrho(x,A\cup B)=\min\set{\inf_{y\in A}\varrho(x,y),\inf_{z\in B}\varrho(x,z)}\leqslant\inf_{y\in A}\varrho(x,y)=\varrho(x,A).\]
     Z~toho pak máme
-    \[\sup_{x\in A}\varrho(x,C\cup D)\leqslant\sup_{x\in A}\inf_{y\in C}\varrho(x,y)=\varrho(x,A)\leqslant\hausdorffmetric(A,C)\]
+    \[\sup_{x\in A}\varrho(x,C\cup D)\leqslant\sup_{x\in A}\inf_{y\in C}\varrho(x,y)=\varrho(x,A)\leqslant\hausdorffmetric(A,C),\]
     a~tedy použitím analogického odhadu $\sup_{x\in B}\varrho(x,C\cup D)\leq \varrho_H(B,D)$ dostáváme
     \[\sup_{x\in A\cup B}\varrho(x,C\cup D)\leqslant\max\set{\hausdorffmetric(A,C),\hausdorffmetric(B,D)}.\]
     Stejný odhad lze získat i~pro $\sup_{x\in C\cup D}\varrho(x,A\cup B)$:
@@ -125,7 +125,7 @@ S kontrakcemi se pojí známá věta z~matematické analýzy, která se nazývá
     Nechť $(X,\varrho)$ je úplný metrický prostor a~zobrazení $\mapping{f}{X}{X}$ je kontrakce. Pak existuje právě jeden pevný bod $x\in X$ zobrazení $f$. Navíc volíme-li $x_0\in X$ libovolně a~$x_n=f(x_{n-1})$ pro každé $n\in\N$, pak $x_n\to x$.
 \end{theorem}
 \begin{proof}
-    Podle předpokladu je $f$ kontrakce s~faktorem $K$. Zvolme $x_0\in X$ a~dále pro každé $n\in\N$ položme $x_n=f(x_{n-1})$. Ukážeme, že takto definovaná posloupnost budů má limitu. Podle předpokladu je $(X,\varrho)$ úplný metrický prostor, tedy stačí ukázat, že posloupnost $\set{x_n}_{n=1}^\infty$ je cauchyovská. Pro vzdálenosti dvou po sobě jdoucích členů platí
+    Podle předpokladu je $f$ kontrakce s~faktorem $K$. Zvolme $x_0\in X$ a~dále pro každé $n\in\N$ položme $x_n=f(x_{n-1})$. Ukážeme, že takto definovaná posloupnost bodů má limitu. Podle předpokladu je $(X,\varrho)$ úplný metrický prostor, tedy stačí ukázat, že posloupnost $\set{x_n}_{n=1}^\infty$ je cauchyovská. Pro vzdálenosti dvou po sobě jdoucích členů platí
     \begin{align*}
         \varrho(x_1,x_2)&=\varrho(f(x_0),f(x_1))\leqslant K\varrho(x_0,x_1),\\
         \varrho(x_2,x_3)&=\varrho(f(x_1),f(x_2))\leqslant K\varrho(x_1,x_2)\leqslant K^2\varrho(x_0,x_1),\\
@@ -134,7 +134,7 @@ S kontrakcemi se pojí známá věta z~matematické analýzy, která se nazývá
         \varrho(x_i,x_{i+1})&=\varrho(f(x_{i-1}),f(x_i))\leqslant K\varrho(x_{i-1},x_i)\leqslant K^i\varrho(x_0,x_1).\\
         &\vdots
     \end{align*}
-    Pro odhadnutí vzdálenosti dvojice členů, které nejdou nutně bezprostředně po sobě použijeme trojúhelníkovou nerovnost. Volme $n,m\in\N$, pričemž $m>n$. Pak lze psát
+    Pro odhadnutí vzdálenosti dvojice členů, které nejdou nutně bezprostředně po sobě použijeme trojúhelníkovou nerovnost. Volme $n,m\in\N$, přičemž $m>n$. Pak lze psát
     \begin{align*}
         \varrho(x_n,x_m)&\leqslant\sum_{i=n}^{m-1}\varrho(x_i,x_{i+1})\leqslant\sum_{i=n}^{m-1}K^i\varrho(x_0,x_1)=K^n\varrho(x_0,x_1)\sum_{i=1}^{m-n-1}K^i\\
         &=K^n\varrho(x_0,x_1)\cdot\dfrac{1-K^{n-m}}{1-K}.
@@ -155,11 +155,11 @@ kde $B\in\hyperspace(X)$. Zajímavostí je fakt, že výsledný atraktor $A$ je 
 
 V dalším textu budeme pracovat především s~afinními zobrazeními v~$\R^n$ se standardní eukleidovskou metrikou. Připomeňme si zde, že afinním zobrazením rozumíme jakékoliv zobrazení $\mapping{f}{X}{X}$ takové, že
 \[f(x)=\mat{A}x+b,\]
-kde $b\in X$ a~$\mat{A}$ je matice. V našem případě půjde vždy o afinní bijekci, čili $\mat{A}$ bude vždy regulární.
+kde $b\in X$ a~$\mat{A}$ je matice. V našem případě půjde vždy o~afinní bijekci, čili $\mat{A}$ bude vždy regulární.
 
 \subsection{Fraktály generované pomocí IFS}\label{subsec:fraktaly-ifs}
 
-V předešlé podsekci~\ref{subsec:hausdorffuv-mp-kontrakce} jsme se společně podívali na některé důležité poznatky týkající se kontrakcí a~Hausdorffova metrického prostoru (viz kapitola~\ref{chapter:hausdorffuv-mp}). Na některá dokázaná tvrzení se zde budeme odkazovat.
+V předešlé podsekci~\ref{subsec:hausdorffuv-mp-kontrakce} jsme si osvojili některé důležité poznatky týkající se kontrakcí a~Hausdorffova metrického prostoru (viz kapitola~\ref{chapter:hausdorffuv-mp}). Na některá dokázaná tvrzení se zde budeme odkazovat.
 
 Protože pracujeme s~fraktálními útvary v~rovině, tj. $\R^2$, afinní zobrazení budou mít tvar
 \begin{equation}\label{eq:afinita-v-R2}
@@ -179,7 +179,7 @@ Protože pracujeme s~fraktálními útvary v~rovině, tj. $\R^2$, afinní zobraz
 \end{equation}
 Připomeňme, že matice $\mat{A}$ je regulární. Podíváme se na některé fraktály, které jsme již viděli v~úvodní kapitole~\ref{chapter:uvod_do_fraktalu} v~sekci~\ref{sec:sobepodobnost}. Jiný způsob generování těchto a~mnohých jiných fraktálních útvarů nám poskytují L-systémy, které jsme si ilustrovali v~sekci~\ref{sec:L-systemy}.
 
-Znovu se podívejme na jeden z~nejznáměnších fraktálů z~této kategorie -- Sierpińského trojúhelník. Jeho konstrukce lze docílit pomocí IFS $\set{\omega_1,\omega_2,\omega_3}$, přičemž $\mapping{\omega_1,\omega_2,\omega_3}{\R^2}{\R^2}$ a~jednotlivé kontrakce jsou definovány následujícími předpisy:
+Znovu se podívejme na jeden z~nejznámějších fraktálů z~této kategorie -- Sierpińského trojúhelník. Jeho konstrukce lze docílit pomocí IFS $\set{\omega_1,\omega_2,\omega_3}$, přičemž $\mapping{\omega_1,\omega_2,\omega_3}{\R^2}{\R^2}$ a~jednotlivé kontrakce jsou definovány následujícími předpisy:
 \begin{align*}
     \omega_1\left(\begin{matrix}
         x\\
@@ -238,7 +238,7 @@ kde $B\in\hyperspace(\R^2)$. V~našem případě je počátečním útvarem rovn
 \end{matrix}\right).\]
 Prvních několik iterací zobrazení $\Omega$ si lze prohlédnout na obrázku~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik}. Sierpińského trojúhelník je tedy atraktorem zobrazení $\Omega$.
 
-Zajímavostí je, že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné, že v~případě Sierpińského trojúhelníka začínáme s~rovnostranným trojúhelníkem, faktem je, že je zcela lhostejné\footnote{Z formálního hlediska je třeba, aby se jednalo o~kompaktní neprázdnou množinu, nicméně v~$\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny, které jsou \emph{uzavřené a~omezené} (viz věta~\ref{thm:heine-borel})}, s jakým útvarem začneme (viz obrázek~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
+Zajímavostí je, že atraktor daného IFS je zcela nezávislý na volbě počátečního útvaru. Ač je tedy běžné, že v~případě Sierpińského trojúhelníka začínáme s~rovnostranným trojúhelníkem, je ve skutečnosti zcela lhostejné\footnote{Z formálního hlediska je třeba, aby se jednalo o~kompaktní neprázdnou množinu, nicméně v~$\R^n$ stačí pro tento účel uvažovat všechny neprázdné množiny, které jsou \emph{uzavřené a~omezené} (viz věta~\ref{thm:heine-borel})}, s jakým útvarem začneme (viz obrázek~\ref{fig:iterace-zobrazeni-omega-sierpinskeho-trojuhelnik-jiny-poc-utvar}).
 
 Vypisovat explicitně dané kontrakce je sice formálně žádoucí, nicméně dosti nepraktické. Dále tedy budeme hodnoty jednotlivých koeficientů $a,b,\ldots,f$ (viz \eqref{eq:afinita-v-R2}) zapisovat do tabulky.
 \begin{table}[h]
@@ -486,7 +486,7 @@ Zde upozorněme však na fakt, že u~Pythágorova stromu na obrázku~\ref{fig:py
 
 \subsection{IFS a~výpočet dimenze}\label{subsec:ifs-vypocet-dimenze}
 
-Pojďme se ještě na chvíli vrátit k~tématu, které jsme již probírali v~úvodní kapitole~\ref{chapter:uvod_do_fraktalu} a~dále jsme se mu hlouběji věnovali v~kapitole~\ref{chapter:teorie-miry-a-dimenze} -- dimenzi. V~rámci tohoto textu jsme si ukázali dva základní typy, a to \emph{box-counting dimenzi}\index{dimenze!box-counting}\index{box-counting dimenze} a~\emph{Hausdorffovu dimenzi}\index{dimenze!Hausdorffova}\index{Hausdorffova dimenze}. V~této části navážeme na některé výsledky, k nimž jsme dospěli v~podsekcích~\ref{subsec:vlastnosti-hausdorffovy-miry} a~\ref{subsec:hausdorffova-dimenze}.
+Pojďme se ještě vrátit k~tématu, které jsme již probírali v~úvodní kapitole~\ref{chapter:uvod_do_fraktalu} a~dále jsme se mu hlouběji věnovali v~kapitole~\ref{chapter:teorie-miry-a-dimenze} -- dimenzi. V~rámci tohoto textu jsme si ukázali dva základní typy, a to \emph{box-counting dimenzi}\index{dimenze!box-counting}\index{box-counting dimenze} a~\emph{Hausdorffovu dimenzi}\index{dimenze!Hausdorffova}\index{Hausdorffova dimenze}. V~této části navážeme na některé výsledky, k nimž jsme dospěli v~podsekcích~\ref{subsec:vlastnosti-hausdorffovy-miry} a~\ref{subsec:hausdorffova-dimenze}.
 
 Ohlédněme se zpět za příkladem~\ref{ex:sierpinskeho-trojuhelnik-hd-dimenze}, kde jsme počítali Hausdorffovu dimenzi Sierpińského trojúhelníka celkově dvěma způsoby. První vycházel přímo z~její definice, zatímco druhý byl podstatně jednodušší, neboť pracoval s~netriviálním předpokladem, že míra daného útvaru je konečná. Z~onoho příkladu však nejspíše tušíme, že počítat Hausdorffovu dimenzi z~definice je dosti nepraktické. Proto si zkusíme druhý způsob výpočtu trochu přiblížit.
 
@@ -498,7 +498,7 @@ Dále na konci sekce~\ref{sec:hausdorffova-mira-dimenze} (konkrétně v~podsekci
 
 Tyto dosavadní výsledky jsou jistě hezké, ale přesto nám poskytují pouze odhady daných dimenzí. Nicméně v~případě IFS, kterým je tato sekce věnována, si zformulujeme poměrně silné tvrzení, které nám v~tomto ohledu podstatně zjednoduší práci. Nejdříve si ale zavedeme jiný termín, který budeme potřebovat.
 \begin{definition}[Open set condition]\label{def:open-set-condition}
-    Nechť je dán IFS $\set{\psi_1,\psi_2,\ldots,\psi_n}$. Řekneme, že kontrakce $\psi_i$, kde $i\in\N$, splňují tzv. \emph{open set condition}\index{open set condition}\footnote{Do češtiny bychom tento název mohli volně přeložit jako \emph{"Podmínka existence otevřené množiny"}, avšak radši se budefme držet oficiálního názvu.}, pokud existuje neprázdná otevřená množina $V$ taková, že platí:
+    Nechť je dán IFS $\set{\psi_1,\psi_2,\ldots,\psi_n}$. Řekneme, že kontrakce $\psi_i$, kde $i\in\N$, splňují tzv. \emph{open set condition}\index{open set condition}\footnote{Do češtiny bychom tento název mohli volně přeložit jako \emph{"Podmínka existence otevřené množiny"}, avšak radši se budeme držet oficiálního názvu.}, pokud existuje neprázdná otevřená množina $V$ taková, že platí:
     \begin{enumerate}[label=(\alph*)]
         \item $V\supseteq\Psi(V)$
         \item a~množiny $\psi_1(V),\psi_2(V),\ldots,\psi_n(V)$ jsou po dvou disjunktní.
@@ -532,7 +532,7 @@ Poznamejme, že je-li splněn předpoklad věty výše, pak box-counting dimenze
     Odtud již jednoduchou úpravou získáme výsledek
     \[s=\dimH{S}=\dfrac{\ln{8}}{\ln{3}}\approx1{,}892789\ldots\]
 \end{example}
-V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem dojít k~výsledku. Nicméně jejich IFS mají společnou jednu vlastnost, a to sice, že všechny jejich kontrakce mají stejný faktor, což nám dosti usnadňuje celý výpočet. Pojďme se proto podívat na fraktál, kde faktory kontrakcí příslušného IFS jsou různé.
+V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem dojít k~výsledku. Nicméně jejich IFS mají společnou jednu vlastnost, a sice tu, že všechny jejich kontrakce mají stejný faktor, což nám dosti usnadňuje celý výpočet. Pojďme se proto podívat na fraktál, kde jsou faktory kontrakcí příslušného IFS různé.
 \begin{example}[Modifikovaná Kochova křivka]\label{ex:modifikovana-kochova-krivka}
     Modifikujeme Kochovu křivku tak, že strany rovnostranného trojúhelníka sestrojného nad~úsečkou bude mít stranu obecné délky $0<a<1$. Dále navíc upravíme orientaci sestrojených trojúhelníků. Definujme IFS $\set{\kappa_1,\kappa_2,\kappa_3,\kappa_4}$ následovně:
     \begin{align*}
@@ -614,4 +614,4 @@ V případě ostatních dosud prezentovaných fraktálů lze podobným způsobem
 \end{example}
 (Převzato a~upraveno z~\citep[str. 142]{Falconer1989}.)
 
-Příklady výpočtů pro ostatní prezentované fraktální útvary si může čtenář vyzkoušet sám, neboť nejsou nikterak složité. V~některých případech může být obtížnější určit kontraktivní faktor daných zobrazení. Asi nejefektivější způsob (nechceme-li faktor počítat přímo z~definice) je přes tzv. \emph{SVD rozklad}\footnote{Zkratka pro \emph{Singular Value Decomposition}}\index{SVD roklad} a~\emph{singulární čísla}\footnote{Ta lze rovněž získat pomocí vlastních čísel matice $\mat{A}$.}\index{singulární číslo} matice $\mat{A}$. Tím se zde ale již zabývat nebudeme. Pro zvídavého čtenáře však doporučuji knihu \cite{Hladik2019}.
+Příklady výpočtů pro ostatní prezentované fraktální útvary si může čtenář vyzkoušet sám, neboť nejsou nikterak složité. V~některých případech může být obtížnější určit kontraktivní faktor daných zobrazení. Asi nejefektivější způsob (nechceme-li faktor počítat přímo z~definice) je přes tzv. \emph{SVD rozklad}\footnote{Zkratka pro \emph{Singular Value Decomposition}}\index{SVD roklad} a~\emph{singulární čísla}\footnote{Ta lze rovněž získat pomocí vlastních čísel matice $\mat{A}$.}\index{singulární číslo} matice $\mat{A}$. Tím se zde ale již zabývat nebudeme (pro podrobnosti však doporučujeme knihu \cite{Hladik2019}).

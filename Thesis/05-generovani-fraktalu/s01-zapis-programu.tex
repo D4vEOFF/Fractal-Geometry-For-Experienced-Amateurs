@@ -1,8 +1,8 @@
-\section{Stručně k zápisu programů}\label{sec:zapis-programu}
+\section{Stručně k~zápisu programů}\label{sec:zapis-programu}
 
-V době psaní tohoto textu existuje mnoho programovacích jazyků\index{jazyk!programovací}\index{programovací jazyk} a nejspíše lze bezpečně předpokládat, že budou přibývat další. Nikoho tak nejspíše nepřekvapí, že vzhledem k současnému (dosti rychlému) vývoji v oblasti informatiky mnoho jazyků, které dříve byly považovány za nové a inovativní, postupně zastaraly a jiné pro mnoho jedinců dokonce upadly v zapomnění. Avšak jiné naopak si svoji pozici drží dodnes. Pro účely tohoto textu byl v rámci praktických ukázek, které uvidíte, zvolen jazyk \textbf{Python}\index{Python}, neboť jeho syntaxe není složitá\footnote{Složitost programovacího jazyka je, z pochopitelných důvodů, dosti subjektivní pojem, neboť závisí i na zkušenostech programátora.} a zároveň tak není příliš obtížné si v mnoha případech domyslet význam jednotlivých příkazů\footnote{Samozřejme nelze v tomto ohledu mluvit za každého (potenciálního) čtenáře. Pokud by tak kdykoliv vznikla nějaká nejasnost ohledně významu použitých příkazů, lze se podívat na stránky oficiální dokumentace jazyka Python: \url{https://docs.python.org}}. Zároveň však poznamenejme, že stejně jako v případě matematické části tohoto textu, i zde budeme pracovat s předpokladem, že čtenář je seznámen se základními koncepty programování a algoritmizace všeobecně. Nebudeme se zde tedy řešit, co je to proměnná\index{proměnná}, pole\index{pole} (resp. v Pythonu seznamem\index{seznam}), funkce, podmínky nebo základy objektově orientovaného programování.
+V době psaní tohoto textu existuje mnoho programovacích jazyků\index{jazyk!programovací}\index{programovací jazyk} a~nejspíše lze bezpečně předpokládat, že budou přibývat další. Nikoho tak nejspíše nepřekvapí, že vzhledem k~současnému (dosti rychlému) vývoji v~oblasti informatiky mnoho jazyků, které dříve byly považovány za nové a~inovativní, postupně zastaraly a~jiné pro mnoho jedinců dokonce upadly v~zapomnění. Avšak jiné si naopak svoji pozici drží dodnes. Pro účely tohoto textu byl v~rámci praktických ukázek, které uvidíte, zvolen jazyk \textbf{Python}\index{Python}, neboť jeho syntaxe není složitá\footnote{Složitost programovacího jazyka je, z~pochopitelných důvodů, dosti subjektivní pojem, neboť závisí i~na zkušenostech programátora.} a~zároveň tak není příliš obtížné si v~mnoha případech domyslet význam jednotlivých příkazů\footnote{Samozřejme nelze v~tomto ohledu mluvit za každého (potenciálního) čtenáře. Pokud by tak kdykoliv vznikla nějaká nejasnost ohledně významu použitých příkazů, lze se podívat na stránky oficiální dokumentace jazyka Python: \url{https://docs.python.org}.}. Zároveň však poznamenejme, že stejně jako v~případě matematické části tohoto textu, i~zde budeme pracovat s~předpokladem, že čtenář je seznámen se základními koncepty programování a~algoritmizace všeobecně. Nebudeme se zde tedy řešit, co je to proměnná\index{proměnná}, pole\index{pole} (resp. v~Pythonu seznamem\index{seznam}), funkce, podmínky nebo základy objektově orientovaného programování.
 
-Zároveň bychom neměli zapomínat na zájemce používající jiné programovací jazyky. Proto kromě praktických ukázek si prezentované algoritmy uvedeme i pomocí tzv. \emph{pseudokódu}\index{pseudokód}. Pseudokód nepředstavuje sám o sobě žádnou formu programovacího jazyka. Jedná se čistě o abstraktní popis psaný především pro člověka, který lze však s minimálním úsilím přepsat do libovolného programovacího jazyka. Jednoduchým příkladem pseudokódu je např.~\ref{alg:ukazka-pseudokodu}.
+Zároveň bychom neměli zapomínat na zájemce používající jiné programovací jazyky. Proto kromě praktických ukázek si prezentované algoritmy uvedeme i~pomocí tzv. \emph{pseudokódu}\index{pseudokód}. Pseudokód nepředstavuje sám o~sobě žádnou formu programovacího jazyka. Jedná se o~čistě abstraktní popis, který lze však s~minimálním úsilím přepsat do libovolného programovacího jazyka. Jednoduchým příkladem pseudokódu je např.~\ref{alg:ukazka-pseudokodu}.
 \begin{algorithm}
     \KwIn{Seznam čísel $x_1,x_2,\ldots,x_n$.}
     $\text{max}\gets x_1$\;
@@ -16,13 +16,13 @@ Zároveň bychom neměli zapomínat na zájemce používající jiné programova
     \label{alg:ukazka-pseudokodu}
 \end{algorithm}
 
-Nejdříve si vysvětleme některé značení:
+Nejdříve si vysvětleme některé použité značení:
 \begin{itemize}
     \item symbol $\gets$ používáme pro operaci přiřazení hodnoty (místo standardního $=$),
     \item naopak symbol $=$ budeme používat ve smyslu porovnávání hodnot,
-    \item indexy (u řetězců a polí) v rámci pseudokódu budeme počítat od jedné.
+    \item indexy (u řetězců a~polí) v~rámci pseudokódu budeme počítat od jedné.
 \end{itemize}
-Implementace zmíněného algoritmu např. právě v jazyce Python si čtenář může prohlédnout u programu~\ref{prog:ukazka-implementace-pseudokodu}.
+Implementace zmíněného algoritmu např. právě v~jazyce Python si čtenář může prohlédnout u~programu~\ref{prog:ukazka-implementace-pseudokodu}.
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 def findMax(numbers: list) -> int:
@@ -36,7 +36,7 @@ def findMax(numbers: list) -> int:
     \caption{Možná implementace algoritmu~\ref{alg:ukazka-pseudokodu}}
     \label{prog:ukazka-implementace-pseudokodu}
 \end{program}
-Pochopitelně se v konkrétní implementaci mohou vyskytovat různé odchylky. Např. v programu~\ref{prog:ukazka-implementace-pseudokodu} využíme proměnnou \texttt{number}, kterou bychom jistě mohli vypustit a pracovat přímo se seznamem \texttt{numbers}, resp. jeho $i$-tým prvkem \texttt{numbers[i]}. Nebo bychom například nemuseli program vůbec zapisovat jako funkci, či bychom mohli např. jinak pojmenovat proměnné (viz program~\ref{prog:ukazka-jine-implementace-pseudokodu}).
+Pochopitelně se v~konkrétní implementaci mohou vyskytovat různé odchylky. Např. v~programu~\ref{prog:ukazka-implementace-pseudokodu} využíme proměnnou \texttt{number}, kterou bychom jistě mohli vypustit a~pracovat přímo se seznamem \texttt{numbers}, resp. jeho $i$-tým prvkem \texttt{numbers[i]}. Nebo bychom například nemuseli program vůbec zapisovat jako funkci, či bychom mohli např. jinak pojmenovat proměnné (viz program~\ref{prog:ukazka-jine-implementace-pseudokodu}).
 \begin{program}[h]
 \begin{lstlisting}[style=python]
 count = int(input("Enter number count: "))
@@ -54,4 +54,4 @@ print(f"Max value: {max_value}")
     \caption{Jiná možná implementace algoritmu~\ref{alg:ukazka-pseudokodu}}
     \label{prog:ukazka-jine-implementace-pseudokodu}
     \end{program}
-To jsou však v celkovém kontextu pouhé drobnosti. V rámci textu se ovšem budeme snažit držet jednotné konvence, tedy že programy budeme vždy psát jako funkce/procedury/metody a proměnné budeme pojmenovávat vždy v angličtině, neboť je to při programování zkrátka zvyklost.
+To jsou však v~celkovém kontextu pouhé drobnosti. V~rámci textu se ovšem budeme snažit držet jednotné konvence, tedy že programy budeme vždy psát jako funkce/procedury/metody a~proměnné budeme pojmenovávat vždy v~angličtině, neboť je to při programování zkrátka zvyklost.
