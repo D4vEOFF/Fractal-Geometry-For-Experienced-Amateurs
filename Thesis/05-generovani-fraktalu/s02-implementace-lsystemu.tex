@@ -4,7 +4,7 @@ Na základní princip L-systémů\index{L-systém} jsme se podívali v~části~\
 
 \subsection{L-systémy}\label{subsec:implementace-lsystemu}
 
-L-systém nepředstavuje nikterak složitou matematickou strukturu. Z~definice (viz~\ref{def:lsystem}) je potřeba znát pouze používané \emph{neterminály}\index{neterminál}, \emph{axiom}\index{axiom} a~seznam přepisovacích pravidel. O~to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v~případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v~definici. L-systém lze tak implementovat jako jednoduchou třídu s~atributy \texttt{word} obsahující aktuální slovo po $k$-té iteraci a~slovník pravidel \texttt{rules} (viz program~\ref{prog:konstruktor-lsystem}).
+L-systém nepředstavuje nikterak složitou matematickou strukturu. Z~definice (viz~\ref{def:lsystem}) je potřeba znát pouze používanou \emph{abecedu}\index{abeceda}, \emph{axiom}\index{axiom} a~seznam přepisovacích pravidel. O~to jednodušší je situace, započítáme-li fakt, že neterminální symboly (resp. jejich význam) v~případě námi používaných L-systémů jsou pevně dané, tedy není třeba je explicitně uvádět v~definici. L-systém lze tak implementovat jako jednoduchou třídu s~atributy \texttt{word} obsahující aktuální slovo po $k$-té iteraci a~slovník pravidel \texttt{rules} (viz program~\ref{prog:konstruktor-lsystem}).
 \begin{program}[h]
     \begin{lstlisting}[style=python]
 class LSystem:
@@ -15,18 +15,18 @@ class LSystem:
     \caption{Konstruktor třídy pro L-systém}
     \label{prog:konstruktor-lsystem}
 \end{program}
-Slovní pravidel \texttt{rules} má jednoduchou strukturu. Klíče tvoří levé strany pravidel a~k nim přiřazené hodnoty naopak tvoří pravé strany pravidel. Jeho vzhled může vypadat např. takto:
+Slovník pravidel \texttt{rules} má jednoduchou strukturu. Klíče tvoří levé strany pravidel a~k nim přiřazené hodnoty naopak tvoří pravé strany pravidel. Jeho vzhled může vypadat např. takto:
 \begin{verbatim}
 rules = {
     "X": "F-[[X]+X]+F[+FX]-X",
     "F": "FF"
 }
 \end{verbatim}
-Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotlivých pravidel. Pro další výklad si však zavedeme pohodlnější zápis řetězců, který je v~programování zcela běžný.
+Poměrně zásadní pro nás však bude především metoda pro aplikaci jednotlivých pravidel. Pro další výklad si zavedeme pohodlnější zápis řetězců, který je v~programování zcela běžný.
 \begin{definition}\label{def:index-retezce}
     Nechť $\alpha=x_1x_2\ldots x_n$ je slovo nad~libovolnou abecedou $\Sigma\neq\emptyset$. Pak pro každé $1\leqslant i\leqslant n$ definujeme $\alpha[i]=x_i$.
 \end{definition}
-Myšlenka je velice intuitivní. Obecně máme-li řetězec $w$ po $m$-té iteraci a~množinu přepisovacích pravidel $P\subseteq\set{a\to\alpha\mid a\in V,\;\alpha\in V^*}$, kde $V$ je abeceda, pak stačí pro každý znak $w[i]$, kde $1\leqslant i\leqslant n$, pouze zkontrolovat, zda není na levé straně nějakého pravidla v~$P$. Pokud ano, dojde k~aplikaci příslušného pravidla\footnote{Technicky vzato jsme z~formálních důvodů v~definici L-systému~\ref{def:lsystem} přidali i~pravidla tvaru $a\to a$, aby nedošlo k~situaci, že pro $a$ neexistuje pravidlo. Avšak z~hlediska praktické implementace toto není překážkou, neboť v~případě absence takového pravidla jednoduše symbol přeskočíme.}. Viz pseudokód~\ref{alg:iterace-slova-lsystem}.
+Myšlenka je velice intuitivní. Obecně máme-li řetězec $w$ po $m$-té iteraci a~množinu přepisovacích pravidel $P\subseteq\set{a\to\alpha\mid a\in V,\;\alpha\in V^*}$, kde $V$ je abeceda, pak stačí pro každý znak $w[i]$, kde $1\leqslant i\leqslant n$, pouze zkontrolovat, zda není na levé straně nějakého pravidla v~$P$. Pokud ano, dojde k~aplikaci příslušného pravidla\footnote{Technicky vzato jsme z~formálních důvodů v~definici L-systému~\ref{def:lsystem} přidali i~pravidla tvaru $a\to a$, aby nedošlo k~situaci, že pro $a$ neexistuje pravidlo. Avšak z~hlediska praktické implementace toto není překážkou, neboť v~případě absence takového pravidla jednoduše symbol přeskočíme.}. Viz pseudokód~\ref{alg:iterace-slova-lsystem}. Připomínáme, že $\lambda$ značí prázdné slovo.
 \begin{algorithm}[h]
     \KwIn{Množina pravidel $P$, slovo $w$, číslo $k\in\N$}
     $w_{\textup{prev}}\gets\lambda,w_{\textup{new}}\gets w$\;
@@ -59,7 +59,7 @@ def iterate(self, iteration_count: int) -> None:
 \end{program}
 Pojďme si stručně rozebrat použité funkce, resp. metody, v~programu~\ref{prog:iterace-slova-lsystem}.
 \begin{itemize}
-    \item \texttt{str.maketrans} vytvoří ze zadaného slovníku překladovou tabulku pro metodu \texttt{translate}. Její struktura odpovídá slovníku obsahující dvojice \emph{(Unicode\index{Unicode} hodnota, znak)}.
+    \item \texttt{str.maketrans} vytvoří ze zadaného slovníku překladovou tabulku pro metodu \texttt{translate}. Její struktura odpovídá slovníku obsahujícímu dvojice \emph{(Unicode\index{Unicode} hodnota, řetezec)}.
     \item \texttt{translate} nahradí každý ze znaků řetězcem uvedeným v~překladové tabulce.
 \end{itemize}
 Tímto způsobem lze implementovat třídu, kde vygenerujeme příslušný řetězec na základě poskytnutých přepisovacích pravidel, a~který následně budeme interpretovat pomocí želví grafiky\index{želví grafika}.
@@ -104,25 +104,26 @@ Všechny atributy jsou vysvětleny níže.
     \item \texttt{self.\_step} reprezentuje velikost kroku $d$,
     \item \texttt{self.\_angle} je počáteční úhel otočení želvy přepočítaný v~radiánech,
     \item \texttt{self.\_pen\_down} udává, zda je pero položeno na plátně.
-    \item \texttt{self.\_lines} ukládá seznam dosud nakreslených úseček.
+    \item \texttt{self.\_lines} je seznam dosud nakreslených úseček.
 \end{itemize}
 V konstruktoru třídy \texttt{Turtle} se navíc nachází soukromé atributy
 \begin{center}
     \texttt{self.\_x\_min}, \texttt{self.\_x\_max}, \texttt{self.\_y\_min} a~\texttt{self.\_y\_max}.
 \end{center}
-Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v~nich budeme uchovávat minimální, resp. maximální souřadnici $x$ a~$y$ ze všech dosud vygenerovaných úseček. Tyto informace se nám budou hodit pro záverečnou manipulaci s~výsledným obrazcem.
+Ty nám budou sloužit pro pozdější vykreslování výsledného útvaru. Průběžně si v~nich budeme uchovávat minimální, resp. maximální souřadnici $x$ a~$y$ ze všech dosud vygenerovaných úseček.
 
 Jednotlivé akce želvy lze v~rámci třídy naprogramovat poměrně snadno. V~případě otočení se jedná o~jednoduchou práci s~úhly. Totéž lze říci i~o posunutí želvy ve směru její orientace, neboť její novou pozici stanovíme pomocí vzorce
-\[(x^\prime,y^\prime)=d\cdot(\cos\varphi,\sin\varphi),\]
+\[(x^\prime,y^\prime)=(x,y)+d\cdot(\cos\varphi,\sin\varphi),\]
 kde $\varphi$ je úhel otočení želvy. Navíc v~závislosti na tom, zda je pero položeno na plátně, buď s~pohybem želvy současně vytvoříme novou úsečku, nebo pouze posuneme želvu. Pseudokód si lze prohlédnout v~ukázce~\ref{alg:posunuti-zelvy-a-usecka} a~výslednou implementaci společně s~přepočítáváním minimálních a~maximálních souřadnic v~programu~\ref{prog:implementace-kroku-zelvy}.
 \begin{algorithm}[h]
     \KwIn{Pozice želvy $(x,y)$, úhel $\varphi$, délka kroku $d$, seznam úseček $L$}
-    $x^\prime\gets d\cos(\varphi),y^\prime\gets d\sin(\varphi)$\;
+    $x^\prime\gets x+d\cos(\varphi),y^\prime\gets y+d\sin(\varphi)$\;
     \If{\textup{je pero položeno na plátně}}{
         Do seznamu $L$ přidej úsečku $\ell=(x,x^\prime,y,y^\prime)$\;
+        \Return{$(x^\prime,y^\prime,\ell)$}
     }
-    \Return{$(x^\prime,y^\prime,\ell)$}\;
-    \KwOut{Nová pozice želvy s~nakreslenou úsečkou $(x^\prime,y^\prime,\ell)$}
+    \Return{$(x^\prime,y^\prime)$}\;
+    \KwOut{Nová pozice želvy $(x^\prime,y^\prime)$, nakreslená úsečka $\ell$ bylo-li položeno pero na plátně}
     \caption{Posunutí želvy ve směru a~nakreslení úsečky}
     \label{alg:posunuti-zelvy-a-usecka}
 \end{algorithm}
@@ -169,11 +170,11 @@ class Stack:
 
 \subsection{Vykreslení obrazce pomocí knihovny \texttt{tkinter}}\label{subsec:vykresleni-obrazce}
 
-Záverečná část implementace želví grafiky spočívá již pouze v~samotné implementaci řetězce, který jsme vygenerovali pomocí našeho L-systému (viz podsekce~\ref{subsec:implementace-lsystemu}). Začneme však záležitotí, která se spíše týká estetické stránky, a~to manipulací s~výsledným obrazcem.
+Závěrečná část implementace želví grafiky spočívá již pouze v~samotné interpretaci řetězce, který jsme vygenerovali pomocí našeho L-systému (viz podsekce~\ref{subsec:implementace-lsystemu}). Začneme však záležitostí, která se spíše týká estetické stránky, a~to manipulací s~výsledným obrazcem.
 
 Existují různé knihovny pro práci s~grafickým rozhraním\index{grafické rozhraní}\index{rozhraní!grafické} v~jazyce Python. My si pro jednoduchost zvolíme knihovnu \emph{tkinter}\index{tkinter}. S~prominutím zde nebudeme rozebírat její kompletní obsah\footnote{Pokud by čtenáře zajímala dokumentace, lze ji nalézt např. zde: \url{https://docs.python.org/3/library/tkinter.html\#module-tkinter}.}, využijeme pouze některé funkce. Uveďme si však alespoň nutný základ, který budeme potřebovat.
 
-Základem je vytvoření grafického okna, do něhož budeme vykreslovat výsledné obrazce. K~tomu je potřeba zavolat konstruktor \texttt{Tk()}. Dále pomocí metod \texttt{geometry} a~\texttt{title} lze nastavit jeho šířku a~titulek.
+Základem je vytvoření grafického okna, do něhož budeme vykreslovat výsledné obrazce. K~tomu je potřeba zavolat konstruktor \texttt{Tk()}. Dále pomocí metod \texttt{geometry} a~\texttt{title} lze nastavit jeho rozměry a~titulek.
 
 Do samotného okna však ještě nelze nic vykreslovat. K~tomu je potřeba vytvořit v~okně plátno (anglicky \emph{canvas}) pomocí třídy \texttt{Canvas}. Do okna jej následně vložíme zavoláním metody \texttt{pack()} (viz ukázka~\ref{prog:tkinter-zaklad}).
 
@@ -195,13 +196,11 @@ window.mainloop()
     \label{prog:tkinter-zaklad}
 \end{program}
 
-Knihovna \texttt{tkinter} nabízí mnoho dalších funkcí a~toto nebyl ani zdaleka základ v~pravém slova smyslu, nicméně bude to pro naše potřeby dostačující.
-
 Problém, s~nímž se však nyní potřebujeme vypořádat, je zarovnání obrázku na střed grafického okna, neboť počátek soustavy souřadnic je umístěn v~levém horním rohu plátna, tedy celé plátno tvoří její \textbf{první kvadrant}. To však znamená, že např. bod $(x,y)$, kde např. $x<0$, nebude viditelný. Pro tento účel jsme si však uchovávali minimální a~maximální hodnoty obou souřadnic. Díky nim můžeme následně provést posunutí celého obrazce do požadované polohy.
 
 Střed výsledného (zatím nevykresleného) obrazce dokážeme jednoduše spočítat. Známe-li minimální, resp. maximální hodnoty obou souřadnic, které označíme $x_{\text{min}},x_{\text{max}},y_{\text{min}}$ a~$y_{\text{max}}$, pak střed $(x_c,y_c)$ určíme jako
 \[(x_c,y_c)=\left(\dfrac{x_{\text{max}}+x_{\text{min}}}{2},\dfrac{y_{\text{max}}+y_{\text{min}}}{2}\right).\]
-Pokud budeme tedy chtít posunout střed obrazce obecně do bodu $(x,y)$, pak vektor posunutí bude jednoduše $\vec{v}=(x,y)-(x_c,y_c)$. Každou z~úseček, kterou jsme vygenerovali pomocí želví grafiky, stačí posunout o~spočítaný vektor $\vec{v}$ (viz algoritmus~\ref{alg:posun-obrazce}). Implementaci si lze opět prohlédnout v~ukázce programu~\ref{prog:posun-obrazce}.
+Pokud budeme tedy chtít posunout střed obrazce obecně do bodu $(x,y)$, pak vektor posunutí bude jednoduše $\vec{v}=(x,y)-(x_c,y_c)$. Každou z~úseček, které jsme vygenerovali pomocí želví grafiky, stačí posunout o~spočítaný vektor $\vec{v}$ (viz algoritmus~\ref{alg:posun-obrazce}). Implementaci si lze opět prohlédnout v~ukázce programu~\ref{prog:posun-obrazce}.
 \begin{algorithm}[h]
     \KwIn{Seznam úseček $L$, nový střed $(x,y)$}
     $(x_c,y_c)\gets((x_{\text{max}}+x_{\text{min}})/2,(y_{\text{max}}+y_{\text{min}})/2)$\;
@@ -239,7 +238,12 @@ Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. St
         \lIf{$w[i]=\mathtt{+}$}{$\varphi\gets\varphi+\delta$}
         \lIf{$w[i]=\mathtt{-}$}{$\varphi\gets\varphi-\delta$}
         \If{$w[i]=\mathtt{f}$}{
-            $(x,y)\gets(x+d\cos\delta,y+d\sin\delta)$\;
+            $(x,y)\gets(x+d\cos\varphi,y+d\sin\varphi)$\;
+        }
+        \If{$w[i]=\mathtt{F}$}{
+            $(x^\prime,y^\prime)\gets(x+d\cos\varphi,y+d\sin\varphi)$\;
+            Do seznamu $L$ přidej úsečku $(x,y,x^\prime,y^\prime)$\;
+            $(x,y)\gets(x^\prime,y^\prime)$\;
         }
         \If{$w[i]=\mathtt{[}$}{
             Na vrchol zásobníku $Z$ ulož stav želvy $(x,y,\varphi)$\;
@@ -248,11 +252,6 @@ Nyní jsme již zcela připraveni provést závěrečné vykreslení obrazce. St
             Z~vrcholu zásobníku $Z$ odstraň stav $(x_t,y_t,\varphi_t)$\;
             $(x,y)\gets(x_t,y_t)$\;
             $\varphi\gets\varphi_t$\;
-        }
-        \Else{
-            $(x^\prime,y^\prime)\gets(x+d\cos\varphi,y+d\sin\varphi)$\;
-            Do seznamu $L$ přidej úsečku $(x,y,x^\prime,y^\prime)$\;
-            $(x,y)\gets(x^\prime,y^\prime)$\;
         }
     }
     \Return{$(x,y,\varphi,L)$}\;
